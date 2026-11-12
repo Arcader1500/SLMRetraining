@@ -1,0 +1,13 @@
+[project]
+name = "slmretraining"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "datasets>=5.2.0",
+    "peft>=0.21.2",
+    "torch>=2.15.0",
+    "transformers>=5.22.2",
+    "trl>=1.17.1",
+]
