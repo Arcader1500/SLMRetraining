@@ -1,0 +1,10 @@
+{
+  "model": "google/gemma-3-270m-it",
+  "model_revision": "ac82b4e820549b854eebf28ce6dedaf9fdfa17b3",
+  "dataset_revision": "4ca20e0a38cc9235045c973b5503d49952fd1fac",
+  "seed": 42,
+  "max_new_tokens": 512,
+  "do_sample": false,
+  "transformers": "4.57.6",
+  "torch": "2.14.1+cu130"
+}

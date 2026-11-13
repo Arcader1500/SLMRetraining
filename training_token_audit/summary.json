@@ -1,0 +1,93 @@
+{
+  "rows": 1500,
+  "invalid_reference_json": 387,
+  "non_object_references": 387,
+  "length_percentiles": {
+    "prompt_tokens_in_full_text": {
+      "0": 387.0,
+      "0.5": 444.0,
+      "0.9": 466.0,
+      "0.95": 472.0,
+      "0.99": 489.0,
+      "1": 513.0
+    },
+    "answer_tokens": {
+      "0": 363.0,
+      "0.5": 974.0,
+      "0.9": 1268.1000000000001,
+      "0.95": 1358.2499999999998,
+      "0.99": 1596.02,
+      "1": 2037.0
+    },
+    "full_tokens": {
+      "0": 782.0,
+      "0.5": 1421.5,
+      "0.9": 1725.1000000000001,
+      "0.95": 1813.2499999999998,
+      "0.99": 2050.2999999999997,
+      "1": 2512.0
+    }
+  },
+  "context_limits": [
+    {
+      "context_limit": 512,
+      "examples": 1500,
+      "full_sequence_fits": 0,
+      "no_answer_supervision": 1,
+      "partial_answer": 1499,
+      "complete_answer_content": 0,
+      "mean_retained_answer_fraction": 0.07131917716780352,
+      "answer_token_retention_fraction": 0.0673240346943498
+    },
+    {
+      "context_limit": 1024,
+      "examples": 1500,
+      "full_sequence_fits": 13,
+      "no_answer_supervision": 0,
+      "partial_answer": 1487,
+      "complete_answer_content": 13,
+      "mean_retained_answer_fraction": 0.6004329695475867,
+      "answer_token_retention_fraction": 0.5771626118110802
+    },
+    {
+      "context_limit": 2048,
+      "examples": 1500,
+      "full_sequence_fits": 1483,
+      "no_answer_supervision": 0,
+      "partial_answer": 15,
+      "complete_answer_content": 1485,
+      "mean_retained_answer_fraction": 0.9991584753646754,
+      "answer_token_retention_fraction": 0.9984500051865979
+    },
+    {
+      "context_limit": 4096,
+      "examples": 1500,
+      "full_sequence_fits": 1500,
+      "no_answer_supervision": 0,
+      "partial_answer": 0,
+      "complete_answer_content": 1500,
+      "mean_retained_answer_fraction": 1.0,
+      "answer_token_retention_fraction": 1.0
+    },
+    {
+      "context_limit": 8192,
+      "examples": 1500,
+      "full_sequence_fits": 1500,
+      "no_answer_supervision": 0,
+      "partial_answer": 0,
+      "complete_answer_content": 1500,
+      "mean_retained_answer_fraction": 1.0,
+      "answer_token_retention_fraction": 1.0
+    }
+  ],
+  "reference_output_budgets": [
+    {
+      "max_new_tokens": 512,
+      "references_fitting_including_end_marker": 7
+    },
+    {
+      "max_new_tokens": 2048,
+      "references_fitting_including_end_marker": 1500
+    }
+  ]
+}

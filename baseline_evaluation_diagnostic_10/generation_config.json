@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-3-270m-it",
+  "model_revision": "ac82b4e820549b854eebf28ce6dedaf9fdfa17b3",
+  "dataset_revision": "4ca20e0a38cc9235045c973b5503d49952fd1fac",
+  "seed": 42,
+  "max_new_tokens": 2048,
+  "do_sample": false,
+  "transformers": "4.57.6",
+  "torch": "2.14.1+cu130",
+  "dtype": "torch.bfloat16",
+  "device": "cuda",
+  "gpu": "Tesla T4",
+  "prompt_version": 2,
+  "format_instruction": "Return only one valid JSON object, without markdown or commentary. Use exactly the keys and nesting in the following schema. Use strings for values, the string 'None' for missing information, and repeat array entries when needed. Do not invent facts. Schema:\n{\"visit motivation\": \"None\", \"admission\": [{\"reason\": \"None\", \"date\": \"None\", \"duration\": \"None\", \"care center details\": \"None\"}], \"patient information\": {\"age\": \"None\", \"sex\": \"None\", \"ethnicity\": \"None\", \"weight\": \"None\", \"height\": \"None\", \"family medical history\": \"None\", \"recent travels\": \"None\", \"socio economic context\": \"None\", \"occupation\": \"None\"}, \"patient medical history\": {\"physiological context\": \"None\", \"psychological context\": \"None\", \"vaccination history\": \"None\", \"allergies\": \"None\", \"exercise frequency\": \"None\", \"nutrition\": \"None\", \"sexual history\": \"None\", \"alcohol consumption\": \"None\", \"drug usage\": \"None\", \"smoking status\": \"None\"}, \"surgeries\": [{\"reason\": \"None\", \"Type\": \"None\", \"time\": \"None\", \"outcome\": \"None\", \"details\": \"None\"}], \"symptoms\": [{\"name of symptom\": \"None\", \"intensity of symptom\": \"None\", \"location\": \"None\", \"time\": \"None\", \"temporalisation\": \"None\", \"behaviours affecting the symptom\": \"None\", \"details\": \"None\"}], \"medical examinations\": [{\"name\": \"None\", \"result\": \"None\", \"details\": \"None\"}], \"diagnosis tests\": [{\"test\": \"None\", \"severity\": \"None\", \"result\": \"None\", \"condition\": \"None\", \"time\": \"None\", \"details\": \"None\"}], \"treatments\": [{\"name\": \"None\", \"related condition\": \"None\", \"dosage\": \"None\", \"time\": \"None\", \"frequency\": \"None\", \"duration\": \"None\", \"reason for taking\": \"None\", \"reaction to treatment\": \"None\", \"details\": \"None\"}], \"discharge\": {\"reason\": \"None\", \"referral\": \"None\", \"follow up\": \"None\", \"discharge summary\": \"None\"}}",
+  "selection_sha256": "2ad59d65dc0f778deda516ec43e81d78351aabc5ff54ac0cf55f4db557aa5eff"
+}

@@ -1,0 +1,15 @@
+{
+  "generated_cases_checked": 10,
+  "empty_output_cases": 0,
+  "invalid_reference_cases": 2,
+  "valid_json_cases": 5,
+  "exact_key_match_cases": 3,
+  "reference_word_recall": {
+    "count": 10,
+    "mean": 0.21135305353507308
+  },
+  "generated_word_precision": {
+    "count": 10,
+    "mean": 0.8825427905427905
+  }
+}

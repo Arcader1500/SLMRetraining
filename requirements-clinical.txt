@@ -1,0 +1,6 @@
+# Install into a separate environment; these match the audited Transformers API.
+torch>=2.6,<3
+transformers==4.57.6
+datasets>=3,<5
+peft>=0.17,<0.19
+accelerate>=1,<2

@@ -1,0 +1,20 @@
+{
+  "model": "google/gemma-3-270m-it",
+  "model_revision": "ac82b4e820549b854eebf28ce6dedaf9fdfa17b3",
+  "dataset": "AmareshHebbar/clinical-summarizer-sft",
+  "dataset_revision": "4ca20e0a38cc9235045c973b5503d49952fd1fac",
+  "split": "train[:1500]",
+  "rows_loaded": 1500,
+  "context_limits": [
+    512,
+    1024,
+    2048,
+    4096,
+    8192
+  ],
+  "truncation_side": "right",
+  "tokenization": "formatted text, tokenizer defaults; no packing",
+  "transformers": "4.57.6",
+  "datasets": "4.8.5",
+  "python": "3.13.18"
+}

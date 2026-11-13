@@ -8,3 +8,10 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Clinical pilot outputs (model adapters and clinical text)
+runs/
+
+# env
+.env.local
+

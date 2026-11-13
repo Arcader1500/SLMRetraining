@@ -1,0 +1,46 @@
+{
+  "config": {
+    "schema_version": 1,
+    "model": "google/gemma-3-270m-it",
+    "model_revision": "ac82b4e820549b854eebf28ce6dedaf9fdfa17b3",
+    "dataset": "AmareshHebbar/clinical-summarizer-sft",
+    "dataset_revision": "4ca20e0a38cc9235045c973b5503d49952fd1fac",
+    "candidate_train_rows": 1500,
+    "eval_cases": 10,
+    "seed": 42,
+    "max_sequence_length": 4096,
+    "format_instruction": "Extract the clinical facts stated in the note into one JSON object. Return JSON only, without markdown or commentary. Use these top-level fields: visit motivation, admission, patient information, patient medical history, surgeries, symptoms, medical examinations, diagnosis tests, treatments, discharge. Use the string None only for information absent from the note. Do not invent facts or repeat identical entries.",
+    "transformers": "4.57.6",
+    "datasets": "4.8.5",
+    "tokenizer_add_special_tokens": false,
+    "loss": "assistant and closing tokens only"
+  },
+  "split_sha256": {
+    "train": "1c270692d1ab82cde939941400e61b744a19b9a0f52ca6684a0a3e8c7920bf19",
+    "validation": "dc3e8a315a88322fb583a28319f0a4e894729a4a70820da86ec91e1a0df0dc7a"
+  },
+  "counts": {
+    "train": 1325,
+    "validation": 10
+  },
+  "eligible_validation_pool": 2834,
+  "repair_counts_saved": {
+    "none": 1006,
+    "escaped_control_characters": 329
+  },
+  "log_status_counts": {
+    "accepted": 4266,
+    "rejected": 234,
+    "excluded_cross_split_duplicate": 107
+  },
+  "lengths": {
+    "train": {
+      "max": 1949,
+      "mean": 1211.0558490566038
+    },
+    "validation": {
+      "max": 1382,
+      "mean": 1207.0
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "selected_cases": 50,
+  "generated_cases": 50,
+  "faithfulness": {
+    "count": 0,
+    "mean": null
+  },
+  "coverage": {
+    "count": 0,
+    "mean": null
+  }
+}

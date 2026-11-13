@@ -1,0 +1,26 @@
+[
+  {
+    "index": 0,
+    "context_limit": 512,
+    "last_200_retained_tokens": "cc approx.). Also, a hematoma could be spotted in the pericardial fat.\nAfter pericardiotomy, we found a small amount of blood and noticed a small hole in the anterior wall of the left ventricle, without bleeding. Since we could not find the bullet, we decided to perform a radioscopy to determine its location, but we were unable to find it inside the thorax.\nThe cardiac lesion was repaired by separate sutures “U” with polyester suture line 2-0 and the lung segment resected with a mechanical suture. After repair of the injuries and review of<end_of_turn>\n<start_of_turn>model\n{\n\"visit motivation\": \"Injuries to the left hemithorax and a transfixing laceration in the left arm caused by a shotgun\",\n\"admission\": [\n{\n\"reason\": \"Injuries caused by a shotgun\",\n\"date\": \"None\",\n\"duration\": \"None\",\n\"care center details\": \"None\"\n}\n],",
+    "first_120_reference_tokens": "{\n\"visit motivation\": \"Injuries to the left hemithorax and a transfixing laceration in the left arm caused by a shotgun\",\n\"admission\": [\n{\n\"reason\": \"Injuries caused by a shotgun\",\n\"date\": \"None\",\n\"duration\": \"None\",\n\"care center details\": \"None\"\n}\n],\n\"patient information\": {\n\"age\": \"24\",\n\"sex\": \"male\",\n\"ethnicity\": \"None\",\n\"weight\": \"None\",\n\"height\": \"None\",",
+    "retained_answer_tokens": 77,
+    "answer_tokens": 826
+  },
+  {
+    "index": 1,
+    "context_limit": 512,
+    "last_200_retained_tokens": "ated stalks or a wide broad base, measuring up to 14.0×5.0×4.5 cm in dimensions of the largest polypoid mass (). Upon microscopic examination of the lesions, most of the polyps had long, elongated, and loose or fibrotic submucosal elongated stalks, while some were sessile. There was neither prominent cytologic atypia nor active inflammation in the mucosa. There was also proliferation of mature fat tissue, lymphoid follicles, multiple dilated blood vessels, and hypertrophied smooth muscle of the muscularis mucosae (). Immunohistochemical staining with α-smooth muscle actin revealed hypertrophied smooth muscle of the<end_of_turn>\n<start_of_turn>model\n{\n\"visit motivation\": \"Intermittent abdominal pain and anal bleeding\",\n\"admission\": [\n{\n\"reason\": \"None\",\n\"date\": \"None\",\n\"duration\": \"None\",\n\"care center details\": \"None\"\n}\n],\n\"patient information\": {\n\"age\":",
+    "first_120_reference_tokens": "{\n\"visit motivation\": \"Intermittent abdominal pain and anal bleeding\",\n\"admission\": [\n{\n\"reason\": \"None\",\n\"date\": \"None\",\n\"duration\": \"None\",\n\"care center details\": \"None\"\n}\n],\n\"patient information\": {\n\"age\": \"48\",\n\"sex\": \"Female\",\n\"ethnicity\": \"None\",\n\"weight\": \"None\",\n\"height\": \"None\",\n\"family medical history\": \"No particular family history\",\n\"recent travels\": \"None\",\n",
+    "retained_answer_tokens": 66,
+    "answer_tokens": 983
+  },
+  {
+    "index": 2,
+    "context_limit": 512,
+    "last_200_retained_tokens": "IST, version 1.1 []) to the lesion located on left foot and a complete response to metastasis on upper left leg. The response was confirmed by PET and CT scan (Figure ). In April 2012, patient underwent left leg amputation, with evidence of pathologic response to sunitinib in the surgical specimen. In May 2012, sunitinib was restarted and maintained at the same dosage till January 2013. During these months of treatment, sunitinib was repeatedly stopped due to toxicity, with evidence of rapid disease progression following treatment interruption and of a new response after restoring treatment. From January 2013, sunitinib was reduced to 12.5 mg/day due to grade 3 cardiac toxicity. After<end_of_turn>\n<start_of_turn>model\n{\n\"visit motivation\": \"Lesion on the left foot\",\n\"admission\": [\n{\n\"reason\": \"Lesion arising from the deep soft tissue of the left",
+    "first_120_reference_tokens": "{\n\"visit motivation\": \"Lesion on the left foot\",\n\"admission\": [\n{\n\"reason\": \"Lesion arising from the deep soft tissue of the left foot\",\n\"date\": \"2007\",\n\"duration\": \"None\",\n\"care center details\": \"None\"\n}\n],\n\"patient information\": {\n\"age\": \"28 years\",\n\"sex\": \"Female\",\n\"ethnicity\": \"None\",\n\"weight\": \"None\",\n\"height\": \"None\",\n\"family medical history\": \"",
+    "retained_answer_tokens": 37,
+    "answer_tokens": 1305
+  }
+]
