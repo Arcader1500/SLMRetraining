@@ -1,0 +1,51 @@
+{
+  "version": "eeff5efa1619f198",
+  "config": {
+    "schema_version": 2,
+    "cleaning": "strip_missing_leaves_unify_empty_types_dedupe_arrays",
+    "model": "google/gemma-3-270m-it",
+    "model_revision": "ac82b4e820549b854eebf28ce6dedaf9fdfa17b3",
+    "dataset": "AmareshHebbar/clinical-summarizer-sft",
+    "dataset_revision": "4ca20e0a38cc9235045c973b5503d49952fd1fac",
+    "candidate_train_rows": 1500,
+    "eval_cases": 30,
+    "seed": 42,
+    "max_sequence_length": 4096,
+    "format_instruction": "Extract the clinical facts stated in the note into one JSON object. Return JSON only, without markdown or commentary. Use these exact top-level fields: visit motivation, admission, patient information, patient medical history, surgeries, symptoms, medical examinations, diagnosis tests, treatments, discharge. For absent information, omit inner subfields, use [] for empty list sections (admission, surgeries, symptoms, medical examinations, diagnosis tests, treatments), use {} for empty object sections (patient information, patient medical history, discharge), and use \"None\" only for an absent visit motivation. Do not invent facts or repeat identical entries.",
+    "transformers": "4.57.6",
+    "datasets": "4.8.5",
+    "tokenizer_add_special_tokens": false,
+    "loss": "assistant and closing tokens only"
+  },
+  "split_sha256": {
+    "train": "f3bc7f7bfdc3fbecdefab6e238c85a75dec66548e50a127f8297e6364a808340",
+    "validation": "5a5f86399b90ade85a1d3aab5569899593d3e428c97bb2b758b09adb12e34724"
+  },
+  "counts": {
+    "train": 1325,
+    "validation": 30
+  },
+  "eligible_validation_pool": 2834,
+  "repair_counts_saved": {
+    "none": 1018,
+    "escaped_control_characters": 337
+  },
+  "log_status_counts": {
+    "accepted": 4266,
+    "rejected": 234,
+    "excluded_cross_split_duplicate": 107
+  },
+  "cleaning_char_reduction_pct": 32.6,
+  "lengths": {
+    "train": {
+      "max": 1651,
+      "mean": 1055.2596226415094,
+      "mean_supervised": 487.70716981132074
+    },
+    "validation": {
+      "max": 1271,
+      "mean": 1061.9,
+      "mean_supervised": 491.76666666666665
+    }
+  }
+}

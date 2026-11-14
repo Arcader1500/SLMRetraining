@@ -1,0 +1,503 @@
+case_id,empty,raw_json_object_valid,json_object_valid_after_fence_removal,parse_error,exact_key_match,nonmissing_generated_values,reference_values,matched_values,placeholder_only,value_precision,value_recall,value_f1,reached_budget,generated_tokens,duplicate_array_items,max_5gram_repeat,generated
+validation:2761,False,False,False,Expecting value: line 1 column 1 (char 0),False,0,32,0,False,0.0,0.0,0.0,False,563,,1,"```json
+{
+  ""visit_motivation"": ""To provide a comprehensive evaluation of the patient's presentation and diagnosis."",
+  ""admission"": {
+    ""date"": ""2024-10-27"",
+    ""time"": ""9:00 AM"",
+    ""location"": ""Hospital"",
+    ""hospital_name"": ""Weaver's Hospital"",
+    ""department"": ""General Medicine"",
+    ""patient_information"": ""Patient name: [Patient Name], DOB: [Patient DOB], Gender: [Gender]"",
+    ""patient_medical_history"": ""History of diabetes mellitus type II, no significant medical history."",
+    ""surgery"": ""Oral hypoglycemic agents for several years"",
+    ""symptoms"": ""Large erythematous morpheaform plaque without ulceration on the lower part of her leg. This plaque had begun as a small nodule on the shin 1 month prior to this visit. It had gradually extended outward in a centrifugal pattern despite oral antimicrobial treatment by her family physician. She was initially diagnosed and treated as a case with cellulitis and with poor clinical response. This patient denied having had a sore throat or arthralgia in the previous months. Other than diabetes mellitus type II, she had no significant medical history. She had been taking oral hypoglycemic agents for many years. On physical examination, it became evident that she had a large erythematous plaque measuring 30 × 30 cm2 on the anterolateral aspect of her lower left leg []. There was mild edema and local tenderness on the leg plaque. The color of this morpheaform plaque varied from red to brown, and its surface was mildly scaling. A skin biopsy specimen was then taken from the newly extending area on the left calf. Histopathological examination revealed that the pathologic changes were mainly in the subcutaneous tissue, in which the septa were thickened and there existed lymphohistiocytic infiltrate and a few neutrophil and occasional multinucleated giant cells. Some inflammatory cells had infiltrated into the periphery of the fat lobules (Septal panniculitis) []. The vessels have not any obvious pathology. A mild perivascular inflammatory infiltrate was also present in the dermis. The overlying epidermis was mildly acanthic and hyperkeratotic. These findings suggested a diagnosis of erythema nodosum migrans. The results of laboratory investigations were within normal limits. A skin test of PPD and the titer of antistreptolysin O (ASO) proved negative. The chest radiograph has normal appearance. On basis of the clinical pathological findings, we diagnosed the patient's eruption as erythema nodosum migrans. The patient was treated with oral indomethacin, and topical clobetasone."
+validation:465,False,False,True,,False,52,23,1,False,0.019230769230769232,0.043478260869565216,0.026666666666666665,False,679,0.0,3,"```json
+{
+  ""visit motivation"": ""To understand the patient's medical history, current condition, and potential treatment options."",
+  ""admission"": ""61-year-old Caucasian male with previously seen urologist for recurrent low-grade bladder cancer, which required multiple resections."",
+  ""patient information"": {
+    ""name"": ""Patient Name"",
+    ""gender"": ""Male"",
+    ""age"": 61,
+    ""address"": ""Caucasian"",
+    ""occupation"": ""Physician"",
+    ""medical_history"": ""Recurrent low-grade bladder cancer, which required multiple resections. Unfortunately, he was lost to follow-up and presented to his family physician several years later with abdominal discomfort and weight loss."",
+    ""symptoms"": [""Abdominal discomfort and weight loss""],
+    ""medical_examinations"": [""Urology"", ""Urinary tract cancer"", ""Urothelial malignancy""],
+    ""diagnosis_tests"": [""Complete nephroureterectomy"", ""Plasmoid transplant"", ""Endoscopic retrograde cholangiography (EGR)"", ""CT scan""],
+    ""treatments"": [""Radical left nephrectomy"", ""Splenectomy"", ""Distal pancreatectomy"", ""Completion nephroureterectomy"", "" RPLND""],
+    ""discharge"": ""Thoracoabdominal approach selected to maximize surgical exposure.""
+  },
+  ""patient_information"": {
+    ""name"": ""Patient Name"",
+    ""gender"": ""Male"",
+    ""age"": 9,
+    ""address"": ""Caucasian"",
+    ""occupation"": ""Physician"",
+    ""medical_history"": ""Recurrent bladder cancer, which required multiple resections. Unfortunately, he was lost to follow-up and presented to his family physician several years later with abdominal discomfort and weight loss."",
+    ""symptoms"": [""Abdominal discomfort and weight loss""],
+    ""medical_examinations"": [""Urology"", ""Urinary tract cancer"", ""Urothelial malignancy""],
+    ""diagnosis_tests"": [""Complete nephroureterectomy"", ""Plasmoid transplant"", ""Endoscopic retrograde cholangiography (EGR)"", ""CT scan""],
+    ""treatments"": [""Radical left nephrectomy"", ""Splenectomy"", ""Distal pancreatectomy"", ""Completion nephroureterectomy"", "" RPLND""],
+    ""discharge"": ""Thoracoabdominal approach selected to maximize surgical exposure.""
+  },
+  ""surgery"": {
+    ""type"": ""radical left nephrectomy"",
+    ""location"": ""distal pancreas"",
+    ""assistance_team"": ""General surgery team"",
+    ""procedure"": ""Intact tumor involved the distal pancreas, which was resected with assistance from the general surgery team."",
+    ""outcome"": ""Successful resection of the tumor with minimal complications.""
+  },
+  ""pneumonia"": {
+    ""type"": ""pneumonia"",
+    ""location"": ""pulmonary parenchyma"",
+    ""assistance_team"": ""General surgery team"",
+    ""procedure"": ""Infection of the lung tissue was identified, and a completion nephroureterectomy was performed."",
+    ""outcome"": ""No evidence of metastatic disease was identified.""
+  }
+}
+```"
+validation:105,False,False,True,,False,10,34,0,False,0.0,0.0,0.0,False,417,0.0,3,"```json
+{
+  ""visit motivation"": ""To manage the patient's pain and improve his vision."",
+  ""admission"": {
+    ""patient information"": ""34-year-old man, right eye injured by iron sheet 10 years prior, underwent right eye surgery in a local hospital at that time. Right eye had been treated with right eye surgery in a local hospital at that time."",
+    ""patient medical history"": ""BCVA findings of no light perception in the right eye and 10/10 in the left eye. IOP was moderately elevated in the right eye, as determined by finger palpation (corneal edema and turbidity prevented conventional tonometry assessment). Anterior segment examination showed bulbar conjunctival hyperemia, corneal edema and opacity, and hyphema."",
+    ""surgery"": ""Right eye surgery in a local hospital at that time."",
+    ""physical examination"": ""BCVA findings of no light perception in the right eye and 10/10 in the left eye. IOP was moderately elevated in the right eye, as determined by finger palpation (corneal edema and turbidity prevented conventional tonometry assessment). Anterior segment examination showed bulbar conjunctival hyperemia, corneal edema and opacity, and hyphema.""
+  },
+  ""diagnosis tests"": {
+    ""tests"": [
+      ""B-scan ultrasound"",
+      ""Finger palpation (corneal edema and turbidity prevented conventional tonometry assessment)""
+    ],
+    ""treatments"": [
+      ""Observation and symptomatic treatment for IOP reduction, but no immediate surgical treatment."",
+      ""Intensive FCVB implantation.""
+    ]
+  },
+  ""discharge"": {
+    ""discharge"": {
+      ""outcome"": ""IOP reduction of 16 mmHg in the right eye on the first day postoperatively; corneal endothelial folds were reduced, and anterior chamber hyphema and exudation were diminished at 8 days postoperatively.""
+    }
+  }
+}
+```"
+validation:1161,False,False,True,,False,21,23,2,False,0.09523809523809523,0.08695652173913043,0.0909090909090909,False,670,0.0,4,"```json
+{
+  ""visit motivation"": ""Patient sought treatment due to repeated cough and sputum for one year and aggravation with chest tightness for one week."",
+  ""admission"": ""Chest computed tomography (CT) in a local hospital revealed encapsulated effusion in the right thoracic cavity."",
+  ""patient information"": {
+    ""name"": ""Patient"",
+    ""age"": 49,
+    ""gender"": ""Male"",
+    ""sex"": ""Male"",
+    ""medical history"": ""Repeated cough and sputum for one year and aggravation with chest tightness for one week."",
+    ""symptoms"": ""Chest tightness, fever, fatigue, and shortness of breath."",
+    ""medical examinations"": ""Chest computed tomography (CT) in a local hospital revealed encapsulated effusion in the right thoracic cavity."",
+    ""diagnosis tests"": ""Percutaneous lung biopsy was a solitary fibrous tumor."",
+    ""treatments"": ""Three-dimensional reconstruction showed that the blood supply to the tumor originated from the arteries and veins of the right lower lobe (Fig. ). After complete preoperative preparation, the patient underwent resection of the tumor with single-operation-incision thoracoscopy."",
+    ""incisions"": ""Incision selection is one cm for the endoscope port (at the midaxillary line of the seventh intercostal space) and two cm for the operation port (at the preaxillary line of the fifth intercostal space). Intraoperative exploration revealed that the tumor had two tumor pedicles (Fig. ), and both were located in the right lower lobe.""
+  },
+  ""surgery"": {
+    ""procedure"": ""Surgery performed by removing the tumor with single-operation-incision thoracoscopy."",
+    ""incisions"": ""Incision selection is one cm for the endoscope port (at the midaxillary line of the seventh intercostal space) and two cm for the operation port (at the preaxillary line of the fifth intercostal space). Intraoperative exploration revealed that the tumor had two tumor pedicles (Fig. ), and both were located in the right lower lobe.""
+  },
+  ""discharge"": ""The patient underwent resection of the tumor with single-operation-incision thoracoscopy."",
+  ""clinical notes"": {
+    ""summary"": ""The patient sought treatment due to repeated cough and sputum for one year and aggravation with chest tightness for one week."",
+    ""details"": ""Chest computed tomography (CT) in a local hospital revealed encapsulated effusion in the right thoracic cavity."",
+    ""findings"": ""Encapsulated effusion in the right thoracic cavity."",
+    ""treatment"": ""Three-dimensional reconstruction showed that the blood supply to the tumor originated from the arteries and veins of the right lower lobe (Fig. ). After complete preoperative preparation, the patient underwent resection of the tumor with single-operation-incision thoracoscopy."",
+    ""results"": ""The pathological diagnosis according to percutaneous lung biopsy was a solitary fibrous tumor."",
+    ""preoperative care"": ""Three-dimensional reconstruction showed that the blood supply to the tumor originated from the arteries and veins of the right lower lobe (Fig. ). After complete preoperative preparation, the patient underwent resection of the tumor with single-operation-incision thoracoscopy.""
+  }
+}
+```"
+validation:1030,False,False,True,,False,29,23,2,False,0.06896551724137931,0.08695652173913043,0.07692307692307693,False,863,0.0,4,"```json
+{
+  ""visit motivation"": ""Acute pain of the left mandible"",
+  ""admission"": ""31-year-old man consulted the department of dental emergencies of the hospital for acute pain of the left mandible."",
+  ""patient information"": {
+    ""name"": ""Patient Name"",
+    ""gender"": ""Male"",
+    ""age"": 31,
+    ""height"": ""Tall"",
+    ""weight"": ""250 lbs"",
+    ""blood pressure"": ""Normal"",
+    ""heart rate"": ""I do not have a heart rate.""
+  },
+  ""patient medical history"": {
+    ""history"": ""Non-displaced traumatic fracture of the 2nd and 3rd left metacarpals and an episode of dry pericarditis."",
+    ""medical condition"": ""Road accident with head trauma (Glasgow 5)"",
+    ""previous medical history"": ""Non-displaced traumatic fracture of the 2nd and 3rd left metacarpals and an episode of dry pericarditis."",
+    ""surgery"": ""Road accident with head trauma (Glasgow 5)"",
+    ""symptoms"": ""Dry pericarditis"",
+    ""other symptoms"": ""Head trauma, bifocal mandibular fracture, fracture of the left clavicle, double fracture of the left radius and ulna, pilonidal cyst.""
+  },
+  ""symptoms"": {
+    ""description"": ""Dry pericarditis"",
+    ""severity"": ""Mild to moderate"",
+    ""duration"": ""Short duration"",
+    ""frequency"": ""Occasional"",
+    ""location"": ""Left lower extremity"",
+    ""type"": ""Inflammation""
+  },
+  ""medical examinations"": {
+    ""examination type"": ""General"",
+    ""findings"": ""Dry pericarditis"",
+    ""assessment"": ""Mild to moderate inflammation of the pericardium"",
+    ""diagnosis"": ""Runula, benign lesion of the floor of the mouth such as a dermoid cyst, a fibroma, a lipoma and neurogenic lesion, with an benign tumor of an accessory or submandibular salivary gland such as the pleomorphic adenoma, and with a low-grade malignancy such as mucoepidermoid carcinoma.""
+  },
+  ""diagnosis tests"": {
+    ""test type"": ""Physical Exam"",
+    ""results"": ""Runula, benign lesion of the floor of the mouth such as a dermoid cyst, a fibroma, a lipoma and neurogenic lesion, with an benign tumor of an accessory or submandibular salivary gland such as the pleomorphic adenoma, and with a low-grade malignancy such as mucoepidermoid carcinoma.""
+  },
+  ""treatments"": {
+    ""treatment options"": ""Open the pulp chamber and treatment with a sedative pulp medication."",
+    ""outcome"": ""Systematic clinical examination of the oral cavity showed tongue elevation (Fig. a), predominant on the left side, which revealed the presence of a mass in the homolateral mouth floor (Fig. b). The appearance of the mucosa of the floor of the mouth was without abnormality and it was not adherent to the underlying mass. The bi-digital palpation of the left mouth floor revealed a firm, elastic, mobile, oval mass. Its size was estimated at 40 mm × 20 mm and its orientation was anteroposterior with a deep insertion at the rear of the oral floor. The examination of the skin of the head and neck was without abnormality, and the palpation of the lympho-nodes of the cervicofacial areas did not reveal lymphadenopathy. The patient was symptom-free and reported no history of swelling, pain or paresthesia. Considering the clinical characteristics, the differential diagnosis can be made, with a ranula, with a benign lesion of the floor of the mouth such as a dermoid cyst, a fibroma, a lipoma and neurogenic lesion, with an benign tumor of an accessory or submandibular salivary gland such as the pleomorphic adenoma, and with a low-grade malignancy such as mucoepidermoid carcinoma.""
+  }
+}
+```"
+validation:935,False,False,True,,False,18,50,2,False,0.1111111111111111,0.04,0.058823529411764705,False,381,0.0,2,"```json
+{
+  ""visit motivation"": ""Patient presented with recurrent abdominal pain and fluctuating fevers for the previous two weeks."",
+  ""admission"": ""Patient was admitted to our emergency setting with complaints of recurrent abdominal pain and fluctuating fevers."",
+  ""patient information"": {
+    ""name"": ""Patient"",
+    ""age"": 78,
+    ""gender"": ""Male"",
+    ""medical history"": ""Multiple comorbidities including hypertension, hyperlipidemia, and type II diabetes mellitus."",
+    ""surgery"": ""Laparoscopic cholecystectomy in 2003."",
+    ""year"": ""2005"",
+    ""pain_onset"": ""Recurrent bouts of abdominal pain and fluctuating fevers for the previous two weeks.""
+  },
+  ""symptoms"": {
+    ""pain_type"": ""Abdominal pain"",
+    ""location"": ""Right upper quadrant"",
+    ""severity"": ""New manifestation of a previously dull aching pain that had waxed and waned over the last decade."",
+    ""pain_intensity"": ""Sharp and intermittent with localization in the right upper quadrant.""
+  },
+  ""medical examinations"": {
+    ""diagnosis tests"": ""Laparoscopic cholecystectomy in 2003."",
+    ""treatment"": ""Acetaminophen and non-steroidal anti-inflammatory drugs (NSAIDs).""
+  },
+  ""treatments"": {
+    ""management"": ""Acetaminophen and non-steroidal anti-inflammatory drugs (NSAIDs)."",
+    ""effectiveness"": ""Sufficient for the duration of a decade.""
+  },
+  ""discharge"": ""Patient was discharged on a gabapentin prescription that was well-tolerated and produced sustained amelioration of his pain, with only occasional wavering with respect to his baseline.""
+}
+```"
+validation:583,False,False,True,,False,33,40,0,False,0.0,0.0,0.0,False,922,0.0,7,"```json
+{
+  ""visit motivation"": ""Patient was admitted to our department for a slow-growing right renal mass monitored over time by computed tomography (CT). Chondrosarcoma of the left scapula was diagnosed 15 years earlier. She presented with left shoulder pain, and a left scapula X-ray revealed a 7 cm mass with calcification."",
+  ""admission"": {
+    ""date"": ""2023-10-26"",
+    ""location"": ""Our Department of Surgery"",
+    ""patient_information"": ""Patient's name: [Patient Name], DOB: [Patient DOB], Gender: [Gender]"",
+    ""patient_medical_history"": ""Patient has a history of [Specific Medical History - e.g., hypertension, diabetes, autoimmune disease]."",
+    ""surgery"": ""Chondrosarcoma of the left scapula was diagnosed 15 years earlier. She presented with left shoulder pain, and a left scapula X-ray revealed a 7 cm mass with calcification."",
+    ""symptoms"": ""Left shoulder pain, and a left scapula X-ray revealed a 7 cm mass with calcification."",
+    ""medical_examinations"": ""Chondrosarcoma of the left scapula was diagnosed 15 years earlier. She presented with left shoulder pain, and a left scapula X-ray revealed a 7 cm mass with calcification."",
+    ""diagnosis_tests"": ""Magnetic resonance imaging (MRI) displayed a low signal on T1-weighted and a high signal on T2-weighted."",
+    ""treatments"": ""Scapula and humerus wide margin resection of the primary tumor with artificial humeral head replacement."",
+    ""tumor_type"": ""Grade 2 chondrosarcoma"",
+    ""tumor_size"": ""7 cm"",
+    ""tumor_location"": ""left shoulder"",
+    ""tumor_status"": ""Grade 2 chondrosarcoma""
+  },
+  ""treatment"": {
+    ""surgery"": ""Scapula and humerus wide margin resection of the primary tumor with artificial humeral head replacement."",
+    ""tumor_and_clavicle_removal"": ""Tumor was composed of cartilage cells growing a lobular architecture with eosinophilic reticulum and myxoid stromal tissue and was diagnosed as Grade 2 chondrosarcoma."",
+    ""surgical_treatment"": ""No residual tumor was detected following surgery."",
+    ""recurrence"": ""Multiple bilateral lung nodule shadows appeared on CT."",
+    ""video_assisted_thoracic_surgery"": ""VATS was performed after being diagnosed with metastatic chondrosarcoma to the lung."",
+    ""RFA_procedures"": ""Cool-tip, Valleylab""
+  },
+  ""discharge"": {
+    ""date"": ""2023-11-15"",
+    ""location"": ""Our Department of Surgery"",
+    ""patient_information"": ""Patient's name: [Patient Name], DOB: [Patient DOB], Gender: [Gender]"",
+    ""patient_medical_history"": ""Patient has a history of [Specific Medical History - e.g., hypertension, diabetes, autoimmune disease]."",
+    ""surgery"": ""Chondrosarcoma of the left scapula was diagnosed 15 years earlier. She presented with left shoulder pain, and a left scapula X-ray revealed a 7 cm mass with calcification."",
+    ""symptoms"": ""Left shoulder pain, and a left scapula X-ray revealed a 7 cm mass with calcification."",
+    ""medical_examinations"": ""Chondrosarcoma of the left scapula was diagnosed 15 years earlier. She presented with left shoulder pain, and a left scapula X-ray revealed a 7 cm mass with calcification."",
+    ""diagnosis_tests"": ""Magnetic resonance imaging (MRI) displayed a low signal on T1-weighted and a high signal on T2-weighted."",
+    ""treatments"": ""Scapula and humerus wide margin resection of the primary tumor with artificial humeral head replacement."",
+    ""tumor_type"": ""Grade 2 chondrosarcoma"",
+    ""tumor_size"": ""7 cm"",
+    ""tumor_location"": ""left shoulder"",
+    ""tumor_status"": ""Grade 2 chondrosarcoma""
+  }
+}
+```"
+validation:428,False,False,False,Expecting ':' delimiter: line 19 column 76 (char 1286),False,0,47,0,False,0.0,0.0,0.0,False,1219,,10,"```json
+{
+  ""visit motivation"": ""To evaluate the diagnosis of a moderately differentiated adenocarcinoma of the parotid gland in a 38-year-old male patient with a centrally located tumor of up to 3 cm in diameter."",
+  ""admission"": ""2008"",
+  ""patient information"": {
+    ""name"": ""Patient Name"",
+    ""gender"": ""Male"",
+    ""age"": 38,
+    ""sex"": ""Male"",
+    ""height"": ""175 cm"",
+    ""weight"": ""140 kg"",
+    ""blood type"": ""A"",
+    ""allergies"": [""Histamine""],
+    ""smoking status"": ""Current"",
+    ""medical history"": ""History of lung cancer, history of lung metastases, and history of pulmonary cancer. History of palliative chemotherapy.""
+  },
+  ""patient medical history"": {
+    ""symptoms"": ""Central location of the tumor, presence of a centrally located tumor, and the presence of a centrally located tumor. The tumor was treated by resection."",
+    ""examination"": ""Macroscopic: ill-defined grey tumour mass, histopathological examination of microcystic to reticular and focally tubular growth of moderately pleomorphic epitheloid cells with focal intra- and extracellular PAS-positive mucin production (Fig. a+b). Muscle infiltration and perineural growth as well as central sclerosis of the tumor tissue were recognized."",
+    ""epidermoid differentiation or presence of goblet cells were not seen."",
+    "" Immunohistochemical examination showed strong expression of cytokeratin 7 and focal weak to moderate expression of S100 protein (Fig. c). No expression of alpha-amylase, carcinoembryonic antigen, or smooth muscle actin was detected. Thus after exclusion of main differential diagnoses of acinic cell carcinoma and mucoepidermoid carcinoma, diagnosis of moderately differentiated adenocarcinoma not otherwise specified of parotid gland was made, and neck dissection with removal of 14 right cervical lymph nodes was added without evidence of metastases.""
+  },
+  ""surgery"": {
+    ""treatment"": ""Resection of the tumor."",
+    ""procedure"": ""Resection of the tumor with 14 right cervical lymph nodes removed without evidence of metastases."",
+    ""follow-up"": ""Multiple lung metastases: in 2012 three lung metastases of up to 2.5 cm in diameter in right lung segment 2 and two lung metastases of up to 1.0 cm in diameter in right lung segments 1 und 4 were removed, followed in 2014 by resection of three lung metastases of up to 1.5 cm in diameter in right upper and lower lung lobe."",
+    ""histologic analysis"": ""Similar morphology to initial diagnostic sample, and lack of TTF1 expression further confirmed diagnosis of lung metatastases of known parotid gland adenocarcinoma.""
+  },
+  ""symptoms"": ""Multiple lung metastases: in 2012 three lung metastases of up to 2.5 cm in diameter in right lung segment 2 and two lung metastases of up to 1.0 cm in diameter in right lung segments 1 und 4 were removed, followed in 2014 by resection of three lung metastases of up to 1.5 cm in diameter in right upper and lower lung lobe."",
+  ""medical history"": {
+    ""history"": ""History of lung cancer, history of lung metastases, and history of pulmonary cancer. History of palliative chemotherapy.""
+  },
+  ""investigations"": {
+    ""primary pathology"": ""Central location of the tumor, presence of a centrally located tumor, and the presence of a centrally located tumor. The tumor was treated by resection."",
+    ""secondary pathology"": ""Macroscopic: ill-defined grey tumour mass, histopathological examination of microcystic to reticular and focally tubular growth of moderately pleomorphic epitheloid cells with focal intra- and extracellular PAS-positive mucin production (Fig. a+b). Muscle infiltration and perineural growth as well as central sclerosis of the tumor tissue were recognized."",
+    ""epidermoid differentiation or presence of goblet cells were not seen."",
+    ""Immunohistochemistry"": ""Strong expression of cytokeratin 7 and focal weak to moderate expression of S100 protein (Fig. c). No expression of alpha-amylase, carcinoembryonic antigen, or smooth muscle actin was detected. Thus after exclusion of main differential diagnoses of acinic cell carcinoma and mucoepidermoid carcinoma, diagnosis of moderately differentiated adenocarcinoma not otherwise specified of parotid gland was made, and neck dissection with removal of 14 right cervical lymph nodes was added without evidence of metastases.""
+  },
+  ""treatments"": {
+    ""local excision"": ""Resection of the tumor."",
+    ""postoperative care"": ""Multiple lung metastases: in 2012 three lung metastases of up to 2.5 cm in diameter in right lung segment 2 and two lung metastases of up to 1.0 cm in diameter in right lung segments 1 und 4 were removed, followed in 2014 by resection of three lung metastases of up to 1.5 cm in diameter in right upper and lower lung lobe."",
+    ""histologic analysis"": ""Similar morphology to initial diagnostic sample, and lack of TTF1 expression further confirmed diagnosis of lung metatastases of known parotid gland adenocarcinoma.""
+  },
+  ""discharge"": ""After palliative chemotherapy four lung metastases of up to 0.6 cm in diameter in left lung segments 1, 2, 7 and 8 were treated by local excision. Because of still progressive pulmonary tumour dissemination and the occurrence of skeletal metastases palliative radiochemotherapy was started and extensive immunohistochemical and molecular examination of archived tumour tissue initiated.""
+}
+```"
+validation:2926,False,False,False,"Expecting ',' delimiter: line 36 column 74 (char 2124)",False,0,58,0,False,0.0,0.0,0.0,False,554,,3,"```json
+{
+  ""visit motivation"": ""To report a case of S-ICD implantation with right-parasternal electrode position in a 45-year-old male congenital heart disease (CHD) patient after atrial switch surgery, due to d-TGA, with a concomitant AAI pacemaker."",
+  ""admission"": ""Patient was admitted to our institution on March 8, 2018, after an atrial switch surgery at age one and an AAI pacemaker was implanted at age 14 years following atrial asystole. An additional atrial lead was implanted at age 44 years, because of lead failure."",
+  ""patient information"": {
+    ""name"": ""Patient Name"",
+    ""gender"": ""Male"",
+    ""age"": 45,
+    ""weight"": ""Not specified"",
+    ""height"": ""Not specified"",
+    ""blood type"": ""Not specified"",
+    ""medical history"": ""Not specified"",
+    ""surgery date"": ""Not specified"",
+    ""symptoms"": ""Not specified"",
+    ""medical examinations"": ""Not specified"",
+    ""diagnosis tests"": ""Not specified"",
+    ""treatments"": ""Not specified"",
+    ""discharge"": ""Not specified""
+  },
+  ""patient medical history"": {
+    ""pre-existing conditions"": ""Not specified"",
+    ""regular medication"": ""Not specified"",
+    ""other medical conditions"": ""Not specified""
+  },
+  ""surgery details"": {
+    ""surgery date"": ""March 8, 2018"",
+    ""surgery location"": ""at the age of one and an AAI pacemaker was implanted at age 14 years following atrial asystole"",
+    ""surgery location"": ""after atrial switch surgery"",
+    ""surgery location"": ""at the age of 14 years"",
+    ""surgery location"": ""following atrial asystole"",
+    ""surgery location"": ""after the AAI pacemaker was implanted at age 44 years"",
+    ""surgery location"": ""due to lead failure"",
+    ""surgery location"": ""in a thoracic computed tomography (CT) angiography"",
+    ""surgery location"": ""to better assess the complex anatomy prior to ICD implantation"",
+    ""surgery location"": ""accessing the subpulmonary ventricle"",
+    ""surgery location"": ""revealed to be hindered by the two atrial leads and the narrow diameter of the venous baffle connecting the vena cava superior with the subpulmonary ventricle (Figure)"",
+    ""surgery location"": ""also, the projected shock path of a transvenous"".
+  }
+}
+```"
+validation:2336,False,False,False,Expecting value: line 1 column 1 (char 0),False,0,23,0,False,0.0,0.0,0.0,True,2048,,28,"```json
+{
+  ""visit motivation"": ""Patient was admitted to the department of oral & maxillofacial surgery, complaining of gradually increasing swelling on her left side of mandible, started one year ago with severe and unusual pain at the related region."",
+  ""admission"": ""15-year-old female patient was admitted to the department of oral & maxillofacial surgery, complaining of gradually increasing swelling on her left side of mandible, started one year ago with severe and unusual pain at the related region."",
+  ""patient information"": {
+    ""name"": ""Patient Name"",
+    ""gender"": ""Female"",
+    ""age"": 15,
+    ""height"": ""Normal"",
+    ""weight"": ""Normal"",
+    ""eye color"": ""Normal"",
+    ""skin color"": ""Normal"",
+    ""teeth"": ""Normal"",
+    ""teeth_location"": ""Left"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Normal"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Right"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Left"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Middle"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Right"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Front"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Front"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Back"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Back"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Bottom"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Bottom"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Superior Lateral Deltoid"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Superior Lateral Deltoid"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Inferior Border of Mandible"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Inferior Border of Mandible"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Superior Crestal Marginal Level"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Superior Crestal Marginal Level"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Superior Marginal Level"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Superior Marginal Level"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Lateral Submandibular Lymph Nodes"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Lateral Submandibular Lymph Nodes"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Lateral Submandibular Nerve"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Lateral Submandibular Nerve"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Lateral Temporomandibular Joint (TMJ)"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Lateral Temporomandibular Joint (TMJ)"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Front"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Front"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Back"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Back"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Bottom"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Bottom"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Superior Inferior Deltoid"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Superior Inferior Deltoid"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Superior Anterior Deltoid"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Superior Anterior Deltoid"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Inferiorral Border of Mandible"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Inferiorral Border of Mandible"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Superior Palatine Centrale"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Superior Palatine Centrale"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Superior Temporal Gyrus"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Superior Temporal Gyrus"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Inferior Superior Processus"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Inferior Superior Processus"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Inferior Superior Lateral Processus"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Inferior Superior Lateral Processus"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Inferior Superior Lateral Deltoide"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Inferior Superior Lateral Deltoide"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Inferior Anterior Deltoide"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Inferior Anterior Deltoide"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Superior Facial Nerve"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Superior Facial Nerve"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_reception"": ""Mental Foramen Occlusal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Superior Mental Foramen Occlusal"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Superior Mental Foramen Occlusal"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"": ""Normal"",
+    ""teeth_position"": ""Inferior Central Convoluted Fibular Bone"",
+    ""teeth_type"": ""Normal"",
+    ""teeth_size"": ""Normal"",
+    ""teeth_alignment"": ""Inferior Central Convoluted Fibular Bone"",
+    ""teeth_shape"": ""Normal"",
+    ""teeth_texture"":"

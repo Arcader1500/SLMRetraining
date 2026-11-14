@@ -1,0 +1,16 @@
+{
+  "selected_cases": 10,
+  "evaluated_cases": 10,
+  "empty_cases": 0,
+  "raw_json_object_valid_cases": 5,
+  "json_object_valid_after_fence_removal_cases": 5,
+  "exact_key_match_cases": 2,
+  "placeholder_only_cases": 0,
+  "reached_budget_cases": 4,
+  "mean_value_precision": 0.12549281291463954,
+  "mean_value_recall": 0.09718254475703325,
+  "mean_value_f1": 0.10336554621848741,
+  "matched_values": 33,
+  "reference_values": 353,
+  "generated_values": 156
+}

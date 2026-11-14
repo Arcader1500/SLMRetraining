@@ -1,0 +1,537 @@
+case_id,empty,raw_json_object_valid,json_object_valid_after_fence_removal,parse_error,exact_key_match,nonmissing_generated_values,reference_values,matched_values,placeholder_only,value_precision,value_recall,value_f1,reached_budget,generated_tokens,duplicate_array_items,max_5gram_repeat,generated
+validation:2761,False,False,True,,False,73,32,0,False,0.0,0.0,0.0,False,1091,0.0,3,"```json
+{
+  ""visit_motivation"": ""To provide a comprehensive evaluation of the patient's presentation and diagnosis."",
+  ""admission"": {
+    ""date"": ""2024-10-27"",
+    ""time"": ""9:30 AM"",
+    ""location"": ""Hospital, [City Name]"",
+    ""hospital_provider"": ""[Name of Hospital Staff]""
+  },
+  ""patient_information"": {
+    ""name"": ""Patient Name"",
+    ""gender"": ""Female"",
+    ""age"": 75,
+    ""address"": ""[Address]"",
+    ""allergies"": [""Allergens to onions""],
+    ""medical_history"": ""History of diabetes mellitus type II, no significant medical history"",
+    ""current_medications"": [""Oral hypoglycemic agents for many years""],
+    ""previous_surgery"": ""No previous surgery"",
+    ""smoking_status"": ""Current smoker"",
+    ""alcohol_consumption"": ""Moderate alcohol consumption"",
+    ""dietary_restrictions"": ""Limited dietary restrictions"",
+    ""exercise_activity"": ""Regular exercise activity"",
+    ""family_doctor"": ""[Name of Family Doctor]""
+  },
+  ""patients"": [
+    {
+      ""id"": ""1"",
+      ""name"": ""Patient A"",
+      ""gender"": ""Male"",
+      ""age"": 28,
+      ""address"": ""[Street Address]"",
+      ""allergies"": [""Allergic to onion""],
+      ""medical_history"": ""Diabetes mellitus type II, no significant medical history"",
+      ""current_medication"": ""Oral hypoglycemic agents for many years"",
+      ""previous_surgery"": ""No prior surgery"",
+      ""smoking_status"": ""Current smoker"",
+      ""alcohol_consumption"": ""Moderate alcohol consumption"",
+      ""dietary_restrictions"": ""Limited dietary restrictions"",
+      ""exercise_activity"": ""Regular exercise activity"",
+      ""family_doctor"": ""[Name of Family Doctor]""
+    },
+    {
+      ""id"": ""2"",
+      ""name"": ""Patient B"",
+      ""gender"": ""Female"",
+      ""age"": 32,
+      ""address"": ""[Street Address]"",
+      ""allergies"": [""Allergy to onion""],
+      ""medical_history"": ""History of diabetes mellitus type II, no significant medical history"",
+      ""current_medication"": ""Oral hypoglycemic agents for many years"",
+      ""previous_surgery"": ""No prior surgery"",
+      ""smoking_status"": ""Current smoker"",
+      ""alcohol_consumption"": ""Moderate alcohol consumption"",
+      ""dietary_restrictions"": ""Limited dietary restrictions"",
+      ""exercise_activity"": ""Regular exercise activity"",
+      ""family_doctor"": ""[Name of Family Doctor]""
+    }
+  ],
+  ""diagnosis_tests"": [
+    {
+      ""test_id"": ""T1"",
+      ""name"": ""Skin Biopsy"",
+      ""procedure"": ""Biopsy from the newly extending area on the left calf"",
+      ""result"": ""Positive pathologic changes in the subcutaneous tissue, including septa thickening and lymphohistiocytic infiltrate. Some inflammatory cells infiltrated into the periphery of fat lobules (Septal panniculitis)."",
+      ""details"": ""The biopsy specimen was taken from the newly extended area on the left calf.""
+    },
+    {
+      ""test_id"": ""T2"",
+      ""name"": ""Histopathological examination"",
+      ""procedure"": ""Detailed histopathological examination of the subcutaneous tissue."",
+      ""result"": ""Negative results in the standard clinical pathology report."",
+      ""details"": ""The histological findings revealed the presence of septa thickening and lymphohistiocytic infiltrate in the subcutaneous tissue. The vessels have not any obvious pathology.""
+    },
+    {
+      ""test_id"": ""T3"",
+      ""name"": ""PPD"",
+      ""procedure"": ""Standard PPD test."",
+      ""result"": ""Negative result in the standard clinical pathology report."",
+      ""details"": ""The chest radiograph has normal appearance.""
+    },
+    {
+      ""test_id"": ""T4"",
+      ""name"": ""Antistreptolysin O (ASO) Test"",
+      ""procedure"": ""Test for ASTA."",
+      ""result"": ""Negative result in the standard clinical pathology report."",
+      ""details"": ""The chest radiograph has normal appearance.""
+    }
+  ],
+  ""treatment"": {
+    ""drug_list"": [
+      ""Indomethacin"",
+      ""Topical clobetasone""
+    ],
+    ""management"": ""Treatment with indomethacin and topical clobetasone.""
+  },
+  ""discharge"": {
+    ""date"": ""2024-10-27"",
+    ""time"": ""9:30 AM"",
+    ""location"": ""Hospital, [City Name]"",
+    ""hospital_provider"": ""[Name of Hospital Staff]""
+  }
+}
+```"
+validation:465,False,False,True,,False,33,23,1,False,0.030303030303030304,0.043478260869565216,0.03571428571428572,False,559,0.0,2,"```json
+{
+  ""visit motivation"": ""To understand the patient's medical history, current condition, and potential treatment options."",
+  ""admission"": ""61-year-old Caucasian male with previously seen urologist for recurrent low-grade bladder cancer, which required multiple resections. Unfortunately, he was lost to follow-up and presented to his family physician several years later with abdominal discomfort and weight loss."",
+  ""patient information"": {
+    ""name"": ""Patient Name"",
+    ""gender"": ""Male"",
+    ""age"": 61,
+    ""address"": ""Caucasian Male"",
+    ""occupation"": ""Cubic Surgeon"",
+    ""previous surgeries"": [""Urology"", ""Bladder Cancer""],
+    ""current health status"": ""Recurrent Low-Grade Bladder Cancer"",
+    ""medical history"": [
+      ""Repeatedly seen a urologist for recurrent low-grade bladder cancer"",
+      ""Required multiple resections"",
+      ""Lost to follow-up and presents to his family doctor recently"",
+      ""Abdominal discomfort and weight loss""
+    ],
+    ""symptoms"": [
+      ""Abdominal pain"",
+      ""Weight loss"",
+      ""Fatigue"",
+      ""Decreased appetite"",
+      ""Changes in urination patterns""
+    ],
+    ""medical examinations"": [
+      ""Computed tomography scan (CT scan)"",
+      ""Full metastatic workup"",
+      ""No evidence of metastatic disease""
+    ],
+    ""diagnosis tests"": [
+      ""Leukemia with suspected splenic hilar invasion"",
+      ""Complete nephroureterectomy"",
+      ""28 Fr chest tube placed prior to closure of thoracic cavity"",
+      ""No complications during procedure""
+    ],
+    ""treatments"": [
+      ""Radical left nephrectomy"",
+      ""Splenectomy"",
+      ""Distal pancreatectomy"",
+      ""Completion nephroureterectomy"",
+      ""RPLND""
+    ],
+    ""discharge"": ""Thoroughly evaluated and discharged on postoperative day 9, once deemed physically fit for independent living by physiotherapy and occupational therapy.""
+  },
+  ""handoff"": ""Final pathological analysis confirmed high-grade transitional cell carcinoma (TCC) with extensive tumor necrosis. Tumour was found to be invading peripelvic fat, renal parenchyma, perinephric fat, and the tail of the pancreas. The resection margins, including the pancreatic margin and the bladder cuff resection margin, were involved by TCC. Two lymph nodes were included in the specimen, which were negative for malignancy. Final pathological stage was defined as T4N0M""
+}
+```"
+validation:105,False,False,False,"Expecting ',' delimiter: line 82 column 292 (char 5942)",False,0,34,0,False,0.0,0.0,0.0,False,1581,,13,"```json
+{
+  ""visit motivation"": ""To manage the patient's pain and improve his vision."",
+  ""admission"": {
+    ""patient information"": ""34-year-old man, right eye injured by iron sheet 10 years prior, underwent right eye surgery in a local hospital at that time. Right eye had been treated with right eye surgery in a local hospital at that time."",
+    ""patient medical history"": ""BCVA findings of no light perception in the right eye and 10/10 in the left eye. IOP was moderately elevated in the right eye, as determined by finger palpation (corneal edema and turbidity prevented conventional tonometry assessment). Anterior segment examination showed bulbar conjunctival hyperemia, corneal edema and opacity, and hyphema."",
+    ""surgery details"": ""Right eye surgery performed in a local hospital at that time. Right eye had been treated with right eye surgery in a local hospital at that time.""
+  },
+  ""patient information"": ""Patient is young, has a family unable to accept enucleation and refuses SO tamponade. Patient insists on surgery due to eye pain."",
+  ""patient medical history"": ""Patient is 34 years old, presents with pain in the right eye that has been present for 1 month. The patient's right eye has been injured by an iron sheet 10 years prior and undergoes right eye surgery in a local hospital at that time. Right eye has been treated with right eye surgery in a local hospital at that time."",
+  ""surgeries"": [
+    {
+      ""type"": ""right eye surgery"",
+      ""details"": ""Right eye surgery performed in a local hospital at that time.""
+    }
+  ],
+  ""symptoms"": [
+    {
+      ""description"": ""Pain in the right eye"",
+      ""severity"": ""Moderate"",
+      ""duration"": ""1 month""
+    },
+    {
+      ""description"": ""Corneal edema and turbidity prevent conventional tonometry assessment"",
+      ""severity"": ""Moderate"",
+      ""duration"": ""20 mmHg""
+    },
+    {
+      ""description"": ""It was 20 mmHg in the left eye"",
+      ""severity"": ""Moderate"",
+      ""duration"": ""10/10""
+    },
+    {
+      ""description"": ""Anterior segment examination showed bulbar conjunctival hyperemia, corneal edema and opacity, and hyphema."",
+      ""severity"": ""Moderate"",
+      ""duration"": ""8 days postoperatively""
+    },
+    {
+      ""description"": ""Preoperative B-scan ultrasound showed that most of the iris was missing from the right eye; moreover, the lens was absent, the anterior chamber and vitreous exhibited hemorrhage, and retinal detachment was evident."",
+      ""severity"": ""Moderate"",
+      ""duration"": ""1 month""
+    }
+  ],
+  ""medical examinations"": [
+    {
+      ""date"": ""First day postoperatively"",
+      ""summary"": ""Patient presented with pain in the right eye that has been present for 1 month. The patient's right eye has been injured by an iron sheet 10 years prior and undergoes right eye surgery in a local hospital at that time. Right eye has been treated with right eye surgery in a local hospital at that time."",
+      ""assessment"": ""BCVA findings of no light perception in the right eye and 10/10 in the left eye. IOP was moderately elevated in the right eye, as determined by finger palpation (corneal edema and turbidity prevented conventional tonometry assessment). Anterior segment examination showed bulbar conjunctival hyperemia, corneal edema and opacity, and hyphema.""
+    },
+    {
+      ""date"": ""8 days postoperatively"",
+      ""summary"": ""The patient presented with pain in the right eye that has been present for 1 month. The patient's right eye has been injured by an iron sheet 10 years prior and undergoes right eye surgery in a local hospital at that time. Right eye has been treated with right eye surgery in a local hospital at that time."",
+      ""assessment"": ""BCVA findings of no light perception in the right eye and 10/10 in the left eye. IOP was moderately elevated in the right eye, as determined by finger palpation (corneal edema and turbidity prevented conventional tonometry assessment). Anterior segment examination showed bulbar conjunctival hyperemia, corneal edema and opacity, and hyphema.""
+    },
+    {
+      ""date"": ""1 month postoperatively"",
+      ""summary"": ""The patient presented with pain in the right eye that has been present for 1 month. The patient's right eye has been injured by an iron sheet 10 years prior and undergoes right eye surgery in a local hospital at that time. Right eye has been treated with right eye surgery in a local hospital at that time."",
+      ""assessment"": ""BCVA findings of no light perception in the right eye and 10/10 in the left eye. IOP was moderately elevated in the right eye, as determined by finger palpation (corneal edema and turbidity prevented conventional tonometry assessment). Anterior segment examination showed bulbar conjunctival hyperemia, corneal edema and opacity, and hyphema.""
+    }
+  ],
+  ""diagnosis tests"": [
+    {
+      ""name"": ""B-scan Ultrasound"",
+      ""results"": ""No light perception in the right eye and 10/10 in the left eye. IOP was moderately elevated in the right eye, as determined by finger palpation (corneal edema and turbidity prevented conventional tonometry assessment). Anterior segment examination showed bulbar conjunctival hyperemia, corneal edema and opacity, and hyphema.""
+    },
+    {
+      ""name"": ""Finger Palpation"",
+      ""results"": ""Bulbar conjunctival hyperemia, corneal edema and opacity, and hyphema.""
+    },
+    {
+      ""name"": ""Corneal Edema and Turbidity"",
+      ""results"": ""Reduced in the right eye.""
+    },
+    {
+      ""name"": ""Intraocular Hemorrhage"",
+      ""results"": ""Decreased in the right eye.""
+    }
+  ],
+  ""treatments"": [
+    {
+      ""name"": ""Observation and Symptom Treatment"",
+      ""treatment_options"": [""OPENTreatment""],
+      ""reasoning"": ""Given the patient's serious condition and inability to tolerate enucleation, we recommend observation and symptomatic treatment for IOP reduction, but no immediate surgical treatment is necessary. However, the patient insisted that surgery was necessary due to eye pain.""]
+    },
+    {
+      ""name"": ""FCVB Implantation"",
+      ""treatment_options"": [""FCVB implantation""],
+      ""reasoning"": ""Due to the patient's preferences and surgical consent, vitrectomy combined with SO-filled FCVB implantation was performed. In accordance with the patient's preferences and surgical consent, vitrectomy combined with SO-filled FCVB implantation was performed.""]
+    }
+  ],
+  ""discharge"": {
+    ""status"": ""Symptomatic"",
+    ""notes"": ""Patient is currently recovering and requires ongoing monitoring. We are awaiting further evaluation regarding the prognosis and potential surgical intervention. Further discussion will be conducted with the patient and their family before making any decisions about follow-up care.""
+  }
+}
+```"
+validation:1161,False,False,True,,False,29,23,0,False,0.0,0.0,0.0,False,622,0.0,2,"```json
+{
+  ""visit motivation"": ""Patient sought treatment due to repeated cough and sputum for one year and aggravation with chest tightness for one week."",
+  ""admission"": {
+    ""date"": ""2024-10-27"",
+    ""location"": ""Local Hospital"",
+    ""hospital_name"": ""Central Regional Hospital"",
+    ""department"": ""General Surgery"",
+    ""patient_id"": ""1234567890""
+  },
+  ""patient_information"": {
+    ""name"": ""Patient Name"",
+    ""gender"": ""Male"",
+    ""age"": 49,
+    ""address"": ""Address of Patient"",
+    ""medical_history"": ""Repeated cough and sputum for one year and aggravation with chest tightness for one week"",
+    ""symptoms"": ""Chest tightness, fever, fatigue"",
+    ""allergies"": [],
+    ""smoking_status"": ""Not Smoking"",
+    ""medications"": [""Antihistamines""],
+    ""other_conditions"": []
+  },
+  ""surgery"": {
+    ""operation_type"": ""Thoracoscopic Illumination (TLI)"",
+    ""procedure"": ""Single-incisioned thoracoscopy"",
+    ""specific_equipment"": ""Thoracic cavity"",
+    ""operative_steps"": [
+      ""Preparation: Operating table adjusted to lower position, specimen bag inserted into thoracic cavity."",
+      ""Operation: Operating table adjusted to higher position to allow loading of specimen into the specimen bag by gravity."",
+      ""Pulling Carrot Procedure: Operation port extended to five cm. Several drawstrings intermittently sewn at smaller end of longitudinal space."",
+      ""Extraction: Operation port extended to five cm. Multiple drawswitches intermittently sewn at smaller end of longitudinal space.""
+    ],
+    ""result"": ""Tumor was removed with single-operation-incision thoracoscopy.""
+  },
+  ""incisions"": {
+    ""incisional_method"": ""Pulling Carrot"",
+    ""incision_selection"": ""One cm for the endoscope port (at the midaxillary line of the seventh intercostal space) and two cm for the operation port (at the preaxillary line of the fifth intercostal space). Intraoperatively explored tumor had two tumor pedicles (Fig. ), and both were located in the right lower lobe."",
+    ""incisional_details"": ""Tumor pedicles were intraoperatively separated using a linear stapling device.""
+  },
+  ""tumor_pedicels"": {
+    ""pedicle_size"": ""Two"",
+    ""pedicle_location"": ""Right Lower Lobe""
+  },
+  ""tumor_pedicels_intraoperatively"": {
+    ""pedicle_separation"": ""Linear Stapling Device"",
+    ""pedicle_position"": ""Midaxillary Line of Seventh Intercostal Space""
+  }
+}
+```"
+validation:1030,False,False,True,,False,15,23,1,False,0.06666666666666667,0.043478260869565216,0.052631578947368425,False,534,0.0,2,"```json
+{
+  ""visit motivation"": ""Acute pain of the left mandible"",
+  ""admission"": {
+    ""patient information"": ""31-year-old man consulted the department of dental emergencies of the hospital for acute pain of the left mandible."",
+    ""patient medical history"": ""Non-displaced traumatic fracture of the 2nd and 3rd left metacarpals and an episode of dry pericarditis."",
+    ""surgery"": ""Road accident with head trauma (Glasgow 5)"",
+    ""symptoms"": ""Dry pericarditis.""
+  },
+  ""patient information"": ""Patient's age, gender, height, weight, and other relevant details are not provided in this excerpt. The patient is currently symptomatic and experiencing a dry pericarditis."",
+  ""patient medical history"": ""A non-displaced traumatic fracture of the 2nd and 3rd left metacarpals and an episode of dry pericarditis. His surgical history was a road accident with head trauma (Glasgow 5). Bifocal mandibular fracture, a fracture of the left clavicle, a double fracture of the left radius and ulna and a pilonidal cyst."",
+  ""surgeries"": [
+    {
+      ""name"": ""opening the pulp chamber"",
+      ""description"": ""Opening the pulp chamber to relieve pressure on the dentin and pulp."",
+      ""details"": ""The pulp chamber is typically opened by a small incision or a specialized instrument. This procedure is often performed under anesthesia to minimize complications like infection and bleeding.""
+    },
+    {
+      ""name"": ""treatment with sedative pulp medication"",
+      ""description"": ""Treatment with a sedative pulp medication to reduce inflammation and promote healing."",
+      ""details"": ""Sedative pulp medications can be used to manage pain and swelling associated with the fracture. They may include acetaminophen or ibuprofen.""
+    }
+  ],
+  ""symptoms"": ""Swelling around the affected area, tenderness to the touch, and sometimes localized pain that radiates to the jaw or neck."",
+  ""medical examinations"": ""Comprehensive examination including palpation of the oral cavity, tongue elevation, mass in the homolateral mouth floor, mucosa of the floor of the mouth, bi-digital palpation of the left mouth floor, and lympho-nodes of the cervicofacial areas. Examination of the skin of the head and neck without abnormality. Lympho-node assessment revealed firm, elastic, mobile, oval mass. Assessment of the patient's overall condition and any potential signs of infection or malignancy were not noted.""
+}
+```"
+validation:935,False,False,True,,False,23,50,1,False,0.043478260869565216,0.02,0.0273972602739726,False,496,0.0,2,"```json
+{
+  ""visit motivation"": ""Patient presented with recurrent abdominal pain and fluctuating fevers for the previous two weeks."",
+  ""admission"": {
+    ""date"": ""2003"",
+    ""time"": ""2003-01-01"",
+    ""location"": ""Emergency setting"",
+    ""details"": ""Patient reported that the pain is a new manifestation of a previously dull aching pain that had waxed and waned over the last decade.""
+  },
+  ""patient information"": {
+    ""name"": ""Patient Name"",
+    ""gender"": ""Male"",
+    ""age"": 78,
+    ""medical_history"": [
+      ""Hypertension"",
+      ""Hyperlipidemia"",
+      ""Type II Diabetes Mellitus""
+    ],
+    ""symptoms"": [
+      ""Recurrent bouts of abdominal pain and fluctuating fevers for the past two weeks."",
+      ""Pain is a new manifestation of a previously dull aching pain that has waxed and waned over the last decade.""
+    ],
+    ""medical_examinations"": [
+      ""Laparoscopic cholecystectomy in 2003"",
+      ""Relatively pain-free but followed by recurrent bouts of right upper quadrant pain, albeit less upsetting than his current presentation.""
+    ],
+    ""diagnosis_tests"": [
+      ""Adherence to conservative treatment plan (acetaminophen and NSAIDs)"",
+      ""Appropriate management of fever and abdominal pain (acetaminophen and non-steroidal anti-inflammatory drugs)""
+    ],
+    ""treatments"": [
+      ""Acetaminophen"",
+      ""Non-steroidal Anti-Inflammatory Drugs (NSAIDs)""
+    ],
+    ""discharge"": {
+      ""date"": ""2005"",
+      ""time"": ""2016"",
+      ""location"": ""Clinical setup"",
+      ""details"": ""Computed tomography (CT) scan of abdomen revealed the presence of necrotic phlegmon, which was subjected to aspiration. Its composition included a combination of fibrous material, granulation tissue, and inflammatory infiltrate. The aspiration provided considerable relief of symptoms and he was discharged on a gabapentin prescription that was well-tolerated and produced sustained amelioration of his pain, with only occasional wavering with respect to his baseline.""
+    }
+  }
+}
+```"
+validation:583,False,False,True,,False,53,40,0,False,0.0,0.0,0.0,False,1342,0.0,20,"```json
+{
+  ""visit motivation"": ""Patient was admitted to our department for a slow-growing right renal mass monitored over time by computed tomography (CT). Chondrosarcoma of the left scapula was diagnosed 15 years earlier. She presented with left shoulder pain, and a left scapula X-ray revealed a 7 cm mass with calcification."",
+  ""admission"": {
+    ""date"": ""2023-10-26"",
+    ""location"": ""Our Department of Surgery"",
+    ""patient_information"": ""Woman presents with gross hematuria, slow growth of right renal mass, chondrosarcoma of the left scapula, left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification."",
+    ""patients"": [
+      {
+        ""name"": ""Sarah Jones"",
+        ""age"": 55,
+        ""gender"": ""Female"",
+        ""medical_history"": ""Gross hematuria, slow growth of right renal mass, chondrosarcoma of the left scapula, left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification."",
+        ""symptoms"": ""Gross hematuria, slow growth of right renal mass, chondrosarcoma of the left scapula, left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification.""
+      },
+      {
+        ""name"": ""David Miller"",
+        ""age"": 42,
+        ""gender"": ""Male"",
+        ""medical_history"": ""Left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification."",
+        ""symptoms"": ""Left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification.""
+      }
+    ]
+  },
+  ""patient_medical_history"": {
+    ""date"": ""2023-10-26"",
+    ""location"": ""Our Department of Surgery"",
+    ""patient_information"": ""Woman presents with gross hematuria, slow growth of right renal mass, chondrosarcoma of the left scapula, left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification."",
+    ""patients"": [
+      {
+        ""name"": ""Sarah Jones"",
+        ""age"": 55,
+        ""gender"": ""Female"",
+        ""medical_history"": ""Gross hematuria, slow growth of right renal mass, chondrosarcoma of the left scapula, left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification."",
+        ""symptoms"": ""Gross hematuria, slow growth of right renal mass, chondrosarcoma of the left scapula, left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification.""
+      },
+      {
+        ""name"": ""David Miller"",
+        ""age"": 42,
+        ""gender"": ""Male"",
+        ""medical_history"": ""Left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification."",
+        ""symptoms"": ""Left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification.""
+      }
+    ]
+  },
+  ""surgery"": {
+    ""date"": ""2023-10-26"",
+    ""location"": ""Our Department of Surgery"",
+    ""patient_information"": ""Woman presents with gross hematuria, slow growth of right renal mass, chondrosarcoma of the left scapula, left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification."",
+    ""patients"": [
+      {
+        ""name"": ""Sarah Jones"",
+        ""age"": 55,
+        ""gender"": ""Female"",
+        ""medical_history"": ""Gross hematuria, slow growth of right renal mass, chondrosarcoma of the left scapula, left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification."",
+        ""symptoms"": ""Gross hematuria, slow growth of right renal mass, chondrosarcoma of the left scapula, left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification.""
+      },
+      {
+        ""name"": ""David Miller"",
+        ""age"": 42,
+        ""gender"": ""Male"",
+        ""medical_history"": ""Left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification."",
+        ""symptoms"": ""Left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification.""
+      }
+    ]
+  },
+  ""discharge"": {
+    ""date"": ""2023-10-26"",
+    ""location"": ""Our Department of Surgery"",
+    ""patient_information"": ""Woman presents with gross hematuria, slow growth of right renal mass, chondrosarcoma of the left scapula, left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification."",
+    ""patients"": [
+      {
+        ""name"": ""Sarah Jones"",
+        ""age"": 55,
+        ""gender"": ""Female"",
+        ""medical_history"": ""Gross hematuria, slow growth of right renal mass, chondrosarcoma of the left scapula, left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification."",
+        ""symptoms"": ""Gross hematuria, slow growth of right renal mass, chondrosarcoma of the left scapula, left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification.""
+      },
+      {
+        ""name"": ""David Miller"",
+        ""age"": 42,
+        ""gender"": ""Male"",
+        ""medical_history"": ""Left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification."",
+        ""symptoms"": ""Left shoulder pain, left scapula X-ray reveals a 7cm mass with calcification.""
+      }
+    ]
+  }
+}
+```"
+validation:428,False,False,False,"Expecting ',' delimiter: line 41 column 2 (char 3561)",False,0,47,0,False,0.0,0.0,0.0,False,858,,7,"```json
+{
+  ""visit motivation"": ""To evaluate the diagnosis of a moderately differentiated adenocarcinoma of the parotid gland in a 38-year-old male patient with a centrally located tumor of up to 3 cm in diameter."",
+  ""admission"": {
+    ""date"": ""2008"",
+    ""location"": ""right parotid gland"",
+    ""description"": ""Patient presented in 2008 with a centrally located tumour of up to 3 cm in diameter of his right parotid gland, which was treated by resection.""
+  },
+  ""patient information"": {
+    ""name"": ""Patient Name"",
+    ""gender"": ""Male"",
+    ""age"": 38,
+    ""sex"": ""Male"",
+    ""height"": ""175cm"",
+    ""weight"": ""140kg"",
+    ""blood type"": ""A"",
+    ""allergies"": [""Histamine""],
+    ""medical history"": ""Presenting with a centrally located tumor of up to 3 cm in diameter of his right parotid gland. The tumor was treated by resection."",
+    ""symptoms"": [
+      ""Centralized tumor of up to 3 cm in diameter."",
+      ""Macroscopic ill-defined grey tumor mass."",
+      ""Microcystic to reticular and focally tubular growth of moderate pleomorphic epitheloid cells with focal intra- and extracellular PAS-positive mucin production (Fig. a+b). Muscle infiltration and perineural growth as well as central sclerosis of the tumor tissue were recognized."",
+      ""Epidermoid differentiation or presence of goblet cells were not seen."",
+      ""Immunohistochemical examination showed strong expression of cytokeratin 7 and focal weak to moderate expression of S100 protein (Fig. c).""
+    ],
+    ""diagnosis tests"": [
+      ""No expression of alpha-amylase, carcinoembryonic antigen, or smooth muscle actin was detected."",
+      ""After exclusion of main differential diagnoses of acinic cell carcinoma and mucoepidermoid carcinoma, diagnosis of moderately differentiated adenocarcinoma not otherwise specified of parotid gland was made, and neck dissection with removal of 14 right cervical lymph nodes was added without evidence of metastases."",
+      ""In follow-up the patient presented with multiple lung metastases: in 2012 three lung metastases of up to 2.5 cm in diameter in right lung segment 2 and two lung metastases of up to 1.0 cm in diameter in right lung segments 1 und 4 were removed, followed in 2014 by resection of three lung metastases of up to 1.5 cm in diameter in right upper and lower lung lobe.""
+    ]
+  },
+  ""treatment"": {
+    ""procedure"": ""Resection of 14 right cervical lymph nodes."",
+    ""outcome"": ""Due to still progressive pulmonary tumour dissemination and occurrence of skeletal metastases palliative radiochemotherapy was started and extensive immunohistochemical and molecular examination of archived tumour tissue initiated."",
+    ""follow-up"": ""Additional IHC stainings showed moderate expression of mammaglobin (F)""
+  },
+  ""discharge"": {
+    ""date"": ""2017"",
+    ""location"": ""after palliative chemotherapy four lung metastases of up to 0.6 cm in diameter in left lung segments 1, 2, 7 and 8 were treated by local excision."",
+    ""description"": ""Because of still progressive pulmonary tumour dissemination and the occurrence of skeletal metastases palliative radiochem therapy was started and extensive immunohistochemical and molecular examination of archived tumour tissue initiated."",
+    ""summary"": ""The patient presents with multiple lung metastases: in 2012 three lung metastases of up to 2.5 cm in diameter in right lung segment 2 and two lung metastases of up to 1.0 cm in diameter in right lung segments 1 und 4 were removed, followed in 2014 by resection of three lung metastases of up to 1.5 cm in diameter in right upper and lower lung lobe.""
+}
+```"
+validation:2926,False,False,False,Expecting value: line 1 column 1 (char 0),False,0,58,0,False,0.0,0.0,0.0,False,551,,2,"```json
+{
+  ""visit motivation"": ""To report a case of S-ICD implantation with right-parasternal electrode position in a 45-year-old male congenital heart disease (CHD) patient after atrial switch surgery, due to d-TGA, with a concomitant AAI pacemaker."",
+  ""admission"": {
+    ""date"": ""2018-03-01"",
+    ""time"": ""1:00 PM"",
+    ""location"": ""Hospital Room 7A"",
+    ""details"": ""Patient presented at the hospital for cardiac arrest due to ventricular fibrillation on March 8th, 2018. The patient was transported to our institution via ambulance.""
+  },
+  ""patient information"": {
+    ""name"": ""Patient Name"",
+    ""gender"": ""Male"",
+    ""age"": 45,
+    ""height"": ""165 cm"",
+    ""weight"": ""150 kg"",
+    ""blood type"": ""O"",
+    ""medical history"": ""Obese and not taking regular medication. Suffered an out of hospital cardiac arrest due to ventricular fibrillation on March 8th, 2018. Successfully resuscitated by emergency medical services. After spontaneous circulation was re-established by external defibrillation (360 J) of ventricular fibrillation, the patient regained consciousness. On the 12-lead ECG, the patient was in sinus rhythm and did not show signs of myocardial ischaemia. On physical examination at admission to our institution, the patient was alert and oriented without neurologic impairment. He complained of chest pain at inspiration, which could be reproduced by rib compression. Vital signs were SpO2 95% under 5 L/min O2, RR 120/70 mmHg, heart rate 70 b.p.m., and regular. Myocardial ischaemia was excluded by high-sensitive troponin T assay and pulmonary embolism and aortic dissection were excluded in a thoracic computed tomography (CT) angiography. Laboratory testing revealed no relevant electrolyte imbalances. Furthermore, coronary artery disease and coronary anomalies were excluded by coronary angiogram. As the patient did not show any neurological sequelae, secondary prevention ICD implantation was indicated. On CT coronary angiography, which was performed to better assess the complex anatomy prior to ICD implantation, access to the subpulmonary ventricle was revealed to be hindered by the two atrial leads and the narrow diameter of the venous baffle connecting the vena cava superior with the subpulmonary ventricle (Figure). Also, the projected shock path of a transvenous insertion was found to be significantly longer than the standard procedure."
+validation:2336,False,False,True,,False,11,23,0,False,0.0,0.0,0.0,False,349,0.0,1,"```json
+{
+  ""visit motivation"": ""Patient was admitted to the department of oral & maxillofacial surgery, complaining of gradually increasing swelling on her left side of mandible."",
+  ""admission"": {
+    ""date"": ""2015-12-31"",
+    ""location"": ""Department of Oral & Maxillofacial Surgery"",
+    ""patient_information"": ""Female patient with gradual increase in swelling on left side of mandible, started one year ago with severe and unusual pain at the related region."",
+    ""surgery"": ""Intraoral examination revealed bony enlargement extending from median mandible to retromolar region, and inferior border of the mandible to crestal marginal level. Depth of left vestibul sulcus was thoroughyl decreased due to hard bony expansion."",
+    ""extraoral exam"": ""Hard uniform and large expansile mass in the left side of the mandible.""
+  },
+  ""diagnosis tests"": [
+    ""Conventional radiographs and computerized tomographic scan showed diffuse increase of the lesion of mandible, with loss of normal trabecular pattern leading to classical ground glass pattern."",
+    ""CT scans were performed on a multislice spiral CT unit (Somatom Definition Edge; Siemens, Erlangen, Germany). The exposure parameters were tube voltage -120 kV, tube current -270 mA, and slice thickness -1mm.""
+  ],
+  ""treatments"": [
+    ""The patient declined to history of any previous toothache and trauma to the affected site."",
+    ""The review of systems was non-contributory.""
+  ],
+  ""discharge"": ""The past medical and dental histories were unremarkable.""
+}
+```"

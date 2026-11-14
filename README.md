@@ -11,7 +11,15 @@
    - Defaults to FP32, greedy generation, and 2,048 output tokens. No paid judge is used.
    - Saves raw outputs, token diagnostics, comparison contract, and per-case/aggregate metrics under `baseline_prepared_evaluation/`.
    - The frozen validation selection, prompt, tokenizer, generation settings, and metric definitions must also be used for the fine-tuned evaluation.
-3. Update the training notebook to consume the saved `input_ids`, `attention_mask`, and `labels` without reformatting, adding special tokens, or truncating them. Verify the real trainer's prepared labels and memory use before training.
+3. Run [train_prepared_clinical.ipynb](./train_prepared_clinical.ipynb) with `RUN_TRAINING = False` first.
+   - Set `BASELINE_DIR` to the completed numbered baseline folder on the remote runtime.
+   - Verifies the exact prepared version, baseline prompts/selection, and all saved assistant-only labels.
+   - Checks finite loss and backward gradients on the longest training row without optimizer updates.
+   - After reviewing the checks, enable `RUN_TRAINING` for the 60-step LoRA pilot. It saves the adapter, training logs, and copied baseline contract.
+4. Run [compare_pilot_clinical.ipynb](./compare_pilot_clinical.ipynb).
+   - Upload the prepared dataset, completed numbered baseline folder, and `pilot_01/` with its adapter to the same runtime.
+   - Runs inference on the same 10 validation cases using the saved baseline contract and original metric definitions.
+   - Reuses saved baseline outputs; saves adapter outputs, aggregate changes, and per-case comparisons under `pilot_01_comparison/`.
 
 The existing [main.ipynb](./main.ipynb) still contains the original 512-token training recipe and is **not yet connected to the prepared dataset**. Do not use it unchanged for the pilot.
 

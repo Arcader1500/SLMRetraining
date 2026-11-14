@@ -1,0 +1,18 @@
+{
+  "selected_cases": 10,
+  "evaluated_cases": 10,
+  "empty_cases": 0,
+  "raw_json_object_valid_cases": 2,
+  "json_object_valid_after_fence_removal_cases": 2,
+  "exact_key_match_cases": 0,
+  "placeholder_only_cases": 0,
+  "reached_budget_cases": 2,
+  "mean_value_precision": 0.038224637681159426,
+  "mean_value_recall": 0.029739130434782608,
+  "mean_value_f1": 0.03223549985426989,
+  "matched_values": 9,
+  "reference_values": 353,
+  "generated_values": 47,
+  "mean_generated_tokens": 920.3,
+  "max_5gram_repeat_ge_3_cases": 3
+}

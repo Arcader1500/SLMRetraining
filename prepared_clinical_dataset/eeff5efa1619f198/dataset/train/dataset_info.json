@@ -1,0 +1,98 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "case_id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "source_split": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "source_index": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "source_sha256": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "note_sha256": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "repair": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "system": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "note": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "reference": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "messages": {
+      "feature": {
+        "content": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "role": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      },
+      "_type": "List"
+    },
+    "prompt_text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "input_ids": {
+      "feature": {
+        "dtype": "int32",
+        "_type": "Value"
+      },
+      "_type": "List"
+    },
+    "attention_mask": {
+      "feature": {
+        "dtype": "int8",
+        "_type": "Value"
+      },
+      "_type": "List"
+    },
+    "labels": {
+      "feature": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "_type": "List"
+    },
+    "prompt_tokens": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "total_tokens": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "supervised_tokens": {
+      "dtype": "int64",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

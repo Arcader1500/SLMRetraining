@@ -1,0 +1,26 @@
+{
+  "dataset_version": "900825a06d38a006",
+  "comparison_contract_sha256": "353c8393d011c896475fba14db6d2751a609da0c8f957616f401e7ce21899db9",
+  "train_sha256": "1c270692d1ab82cde939941400e61b744a19b9a0f52ca6684a0a3e8c7920bf19",
+  "model": "google/gemma-3-270m-it",
+  "base_model_revision": "ac82b4e820549b854eebf28ce6dedaf9fdfa17b3",
+  "seed": 42,
+  "run_training": true,
+  "max_steps": 166,
+  "batch_size": 1,
+  "gradient_accumulation_steps": 8,
+  "learning_rate": 0.0002,
+  "dtype": "float32",
+  "loss": "saved assistant-only labels",
+  "packing": false,
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "versions": {
+    "torch": "2.14.1+cu130",
+    "transformers": "4.57.6",
+    "datasets": "4.8.5",
+    "peft": "0.18.1",
+    "accelerate": "1.15.0"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "dataset_version": "eeff5efa1619f198",
+  "schema_version": 2,
+  "model": "google/gemma-3-270m-it",
+  "base_model_revision": "ac82b4e820549b854eebf28ce6dedaf9fdfa17b3",
+  "train_sha256": "f3bc7f7bfdc3fbecdefab6e238c85a75dec66548e50a127f8297e6364a808340",
+  "validation_sha256": "5a5f86399b90ade85a1d3aab5569899593d3e428c97bb2b758b09adb12e34724",
+  "case_ids": [
+    "validation:2761",
+    "validation:465",
+    "validation:105",
+    "validation:1161",
+    "validation:1030",
+    "validation:935",
+    "validation:583",
+    "validation:428",
+    "validation:2926",
+    "validation:2336",
+    "validation:362",
+    "validation:2543",
+    "validation:1791",
+    "validation:133",
+    "validation:125",
+    "validation:390",
+    "validation:915",
+    "validation:978",
+    "validation:2156",
+    "validation:2593",
+    "validation:111",
+    "validation:2408",
+    "validation:833",
+    "validation:2806",
+    "validation:2335",
+    "validation:1780",
+    "validation:922",
+    "validation:1913",
+    "validation:2538",
+    "validation:1175"
+  ],
+  "prompt_sha256": "5993be1871a9187c20f86cb6ff409004fd8168355e4448f01a3d84cdab244b3e",
+  "max_new_tokens": 2048,
+  "do_sample": false,
+  "dtype": "float32",
+  "seed": 42,
+  "tokenizer_add_special_tokens": false,
+  "decoding_conditions": [
+    {
+      "tag": "rp_1.00",
+      "repetition_penalty": 1.0,
+      "generated_only": false
+    },
+    {
+      "tag": "gen_rp_1.08",
+      "repetition_penalty": 1.08,
+      "generated_only": true
+    }
+  ],
+  "metrics_version": 2,
+  "transformers": "4.57.6",
+  "torch": "2.14.1+cu130"
+}

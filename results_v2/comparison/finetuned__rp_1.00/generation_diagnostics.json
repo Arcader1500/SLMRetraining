@@ -1,0 +1,242 @@
+{
+  "validation:2761": {
+    "prompt_tokens": 570,
+    "generated_tokens": 496,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:465": {
+    "prompt_tokens": 581,
+    "generated_tokens": 2048,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": true,
+    "ended_with_eos": false
+  },
+  "validation:105": {
+    "prompt_tokens": 571,
+    "generated_tokens": 550,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:1161": {
+    "prompt_tokens": 544,
+    "generated_tokens": 627,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:1030": {
+    "prompt_tokens": 570,
+    "generated_tokens": 625,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:935": {
+    "prompt_tokens": 559,
+    "generated_tokens": 425,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:583": {
+    "prompt_tokens": 582,
+    "generated_tokens": 593,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:428": {
+    "prompt_tokens": 603,
+    "generated_tokens": 507,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:2926": {
+    "prompt_tokens": 581,
+    "generated_tokens": 517,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:2336": {
+    "prompt_tokens": 548,
+    "generated_tokens": 521,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:362": {
+    "prompt_tokens": 545,
+    "generated_tokens": 539,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:2543": {
+    "prompt_tokens": 565,
+    "generated_tokens": 336,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:1791": {
+    "prompt_tokens": 568,
+    "generated_tokens": 544,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:133": {
+    "prompt_tokens": 582,
+    "generated_tokens": 562,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:125": {
+    "prompt_tokens": 571,
+    "generated_tokens": 513,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:390": {
+    "prompt_tokens": 558,
+    "generated_tokens": 576,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:915": {
+    "prompt_tokens": 586,
+    "generated_tokens": 428,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:978": {
+    "prompt_tokens": 567,
+    "generated_tokens": 330,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:2156": {
+    "prompt_tokens": 557,
+    "generated_tokens": 551,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:2593": {
+    "prompt_tokens": 553,
+    "generated_tokens": 435,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:111": {
+    "prompt_tokens": 558,
+    "generated_tokens": 2048,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": true,
+    "ended_with_eos": false
+  },
+  "validation:2408": {
+    "prompt_tokens": 568,
+    "generated_tokens": 493,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:833": {
+    "prompt_tokens": 580,
+    "generated_tokens": 614,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:2806": {
+    "prompt_tokens": 548,
+    "generated_tokens": 372,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:2335": {
+    "prompt_tokens": 561,
+    "generated_tokens": 561,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:1780": {
+    "prompt_tokens": 568,
+    "generated_tokens": 459,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:922": {
+    "prompt_tokens": 620,
+    "generated_tokens": 679,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:1913": {
+    "prompt_tokens": 605,
+    "generated_tokens": 2048,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": true,
+    "ended_with_eos": false
+  },
+  "validation:2538": {
+    "prompt_tokens": 561,
+    "generated_tokens": 511,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  },
+  "validation:1175": {
+    "prompt_tokens": 574,
+    "generated_tokens": 510,
+    "finite_first_token_logits": true,
+    "empty_output": false,
+    "reached_budget": false,
+    "ended_with_eos": true
+  }
+}

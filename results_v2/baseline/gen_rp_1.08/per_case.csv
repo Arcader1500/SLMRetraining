@@ -1,0 +1,1226 @@
+case_id,empty,raw_json_object_valid,json_object_valid_after_fence_removal,parse_error,exact_top_level_keys,exact_key_match,nonmissing_generated_values,reference_values,matched_values,placeholder_only,value_precision,value_recall,value_f1,soft_value_precision,soft_value_recall,soft_value_f1,duplicate_array_items,max_5gram_repeat,reached_budget,generated_tokens,generated,reference
+validation:2761,False,False,True,,False,False,9,32,0,False,0.0,0.0,0.0,0.08888888888888889,0.025,0.03902439024390243,0.0,2,False,233,"```json
+{
+  ""visit motivation"": ""Patient was referred to us with a large tender erythematous morpheaform plaque without ulceration on the lower part of her leg."",
+  ""admission"": {
+    ""patient information"": ""75-year-old otherwise healthy woman was referred to us with a large tender erythematous morpheaform plaque without ulceration on the lower part of her leg."",
+    ""patient medical history"": ""No significant medical history."",
+    ""surgery"": ""Oral antimicrobial treatment by her family physician."",
+    ""symptoms"": ""Large erythematous plaque measuring 30 × 30 cm2 on the anterolateral aspect of her lower left leg."",
+    ""medical examinations"": ""Mild edema and local tenderness on the leg plaque."",
+    ""diagnosis tests"": ""Cellulitis and poor clinical response."",
+    ""treatments"": ""Poor clinical response.""
+  },
+  ""handoff"": ""Patient denied having had a sore throat or arthralgia in the previous months. Other than diabetes mellitus type II, she had no significant medical history.""
+}
+```","{""visit motivation"":""Large tender erythematous morpheaform plaque without ulceration on the lower part of her leg"",""admission"":[],""patient information"":{""age"":""75 years old"",""sex"":""Female""},""patient medical history"":{""physiological context"":""Diabetes mellitus type II""},""surgeries"":[],""symptoms"":[{""name of symptom"":""Tender erythematous morpheaform plaque"",""intensity of symptom"":""Large"",""location"":""Lower part of her leg"",""time"":""Began as a small nodule on the shin 1 month prior to this visit"",""temporalisation"":""Gradually extended outward in a centrifugal pattern"",""behaviours affecting the symptom"":""Poor clinical response to oral antimicrobial treatment"",""details"":""Initially diagnosed and treated as cellulitis""}],""medical examinations"":[{""name"":""Physical examination"",""result"":""Large erythematous plaque measuring 30 × 30 cm2 on the anterolateral aspect of her lower left leg, mild edema and local tenderness, color varied from red to brown, mildly scaling surface""}],""diagnosis tests"":[{""test"":""Skin biopsy"",""result"":""Histopathological examination revealed septal panniculitis"",""condition"":""Erythema nodosum migrans"",""details"":""Pathologic changes mainly in the subcutaneous tissue, thickened septa, lymphohistiocytic infiltrate, a few neutrophil and occasional multinucleated giant cells, mild perivascular inflammatory infiltrate in the dermis, mildly acanthotic and hyperkeratotic epidermis""},{""test"":""Laboratory investigations"",""result"":""Within normal limits""},{""test"":""Skin test of PPD"",""result"":""Negative""},{""test"":""Titer of antistreptolysin O (ASO)"",""result"":""Negative""},{""test"":""Chest radiograph"",""result"":""Normal appearance""}],""treatments"":[{""name"":""Oral indomethacin"",""related condition"":""Erythema nodosum migrans"",""reason for taking"":""Treatment for erythema nodosum migrans""},{""name"":""Topical clobetas"",""related condition"":""Erythema nodosum migrans"",""reason for taking"":""Treatment for erythema nodosum migrans"",""details"":""Prescription incomplete in the clinical note""}],""discharge"":{}}"
+validation:465,False,False,True,,False,False,11,23,0,False,0.0,0.0,0.0,0.039525691699604744,0.01890359168241966,0.02557544757033248,0.0,2,False,295,"```json
+{
+  ""visit motivation"": ""Patient was lost to follow-up and presented to his family physician with abdominal discomfort and weight loss."",
+  ""admission"": {
+    ""patient information"": ""61-year-old Caucasian male with previously seen urologist for recurrent low-grade bladder cancer, which required multiple resections."",
+    ""patient medical history"": ""Recurrent low-grade bladder cancer, requiring multiple resections."",
+    ""surgery"": ""Multiple resections."",
+    ""symptoms"": ""Abdominal discomfort and weight loss."",
+    ""medical examinations"": ""Abdominal CT scan, found a 10 cm cystic mass in the superior pole of the left kidney, concerning for malignancy with suspected splenic hilar invasion."",
+    ""diagnosis tests"": ""Complete metabolic acidosis."",
+    ""treatments"": ""Radical left nephrectomy, splenectomy, distal pancreatectomy, completion nephroureterectomy, RPLND.""
+  },
+  ""handoff"": {
+    ""discharge"": ""radical left nephrectomy, splenectomy, distal pancreatectomy, completion nephroureterectomy, RPLND."",
+    ""postoperative course"": ""slow, but uneventful."",
+    ""epidural and chest tube discontinuation"": ""on postoperative day 5, and he was discharged on postoperative day 9 once deemed physically fit for independent living by physiotherapy and occupational therapy.""
+  }
+}
+```","{""visit motivation"":""Abdominal discomfort and weight loss"",""admission"":[{""reason"":""Abdominal discomfort and weight loss, and a 10 cm cystic mass in the superior pole of the left kidney with suspected splenic hilar invasion"",""duration"":""9 days""}],""patient information"":{""age"":""61"",""sex"":""male"",""ethnicity"":""Caucasian""},""patient medical history"":{""physiological context"":""Recurrent low-grade bladder cancer with multiple resections""},""surgeries"":[{""reason"":""10 cm cystic mass in the superior pole of the left kidney concerning for malignancy with suspected splenic hilar invasion"",""Type"":""Radical left nephrectomy, splenectomy, distal pancreatectomy, completion nephroureterectomy, and RPLND"",""outcome"":""No complications encountered during the procedure"",""details"":""Thoracoabdominal approach was selected, tumour involved the distal pancreas, incidental left upper ureteric mass identified, 28 Fr chest tube placed, EBL was 4000cc, three units of packed red blood cells and 1 L of fresh frozen plasma were administered intraoperatively""}],""symptoms"":[{""name of symptom"":""Abdominal discomfort"",""location"":""Abdomen"",""time"":""Several years after last follow-up"",""details"":""Presented with abdominal discomfort and weight loss""}],""medical examinations"":[{""name"":""Abdominal CT scan"",""result"":""10 cm cystic mass in the superior pole of the left kidney, concerning for malignancy with suspected splenic hilar invasion""}],""diagnosis tests"":[{""test"":""Full metastatic workup"",""result"":""No evidence of metastatic disease"",""condition"":""High-grade transitional cell carcinoma (TCC) with extensive tumour necrosis"",""details"":""Final pathological analysis confirmed high-grade TCC invading peripelvic fat, renal parenchyma, perinephric fat, and the tail of the pancreas with involved resection margins""}],""treatments"":[],""discharge"":{""reason"":""Deemed physically fit for independent living by physiotherapy and occupational therapy"",""discharge summary"":""Postoperative course was slow, but uneventful.\nThe epidural and chest tube were discontinued on postoperative day 5, and he was discharged on postoperative day 9.""}}"
+validation:105,False,False,False,Invalid control character at: line 16 column 1875 (char 3036),False,False,0,34,0,False,0.0,0.0,0.0,0.0,0.0,0.0,,2,False,669,"```json
+{
+  ""visit motivation"": ""Patient was admitted due to pain in the right eye that had been present for 1 month."",
+  ""admission"": {
+    ""patient information"": ""34-year-old man"",
+    ""patient medical history"": ""Pain in the right eye that had been present for 1 month."",
+    ""surgery"": ""Right eye surgery in a local hospital at that time."",
+    ""physical examination"": ""BCVA findings of no light perception in the right eye and 10/10 in the left eye."",
+    "" IOP"": ""Moderately elevated in the patient's right eye, as determined by finger palpation (corneal edema and turbidity prevented conventional tonometry assessment)."",
+    ""anterior segment examination"": ""Bulbar conjunctival hyperemia, corneal edema and opacity, and hyphema.""
+  },
+  ""postoperative care"": {
+    ""preoperative B-scan ultrasound"": ""Most of the iris was missing from the right eye; moreover, the lens was absent, the anterior chamber and vitreous exhibited hemorrhage, and retinal detachment was evident."",
+    ""postoperative prognosis"": ""Not good; therefore, we recommended observation and symptomatic treatment for IOP reduction, but no immediate surgical treatment.""
+  },
+  ""ophthalmology"": {
+    ""ophthalmology"": ""Patient's right eye had been injured by an iron sheet 10 years prior and he had undergone right eye surgery in a local hospital at that time. Upon admission to our hospital, physical examination of the patient showed BCVA findings of no light perception in the right eye and 10/10 in the left eye. The IOP was moderately elevated in the patient’s right eye, as determined by finger palpation (corneal edema and turbidity prevented conventional tonometry assessment); it was 20 mmHg in the left eye. Anterior segment examination showed bulbar conjunctival hyperemia, corneal edema and opacity, and hyphema (). Preoperative B-scan ultrasound showed that most of the iris was missing from the right eye; moreover, the lens was absent, the anterior chamber and vitreous exhibited hemorrhage, and retinal detachment was evident (). Because the patient's medical condition was serious, his postoperative prognosis was not good; therefore, we recommended observation and symptomatic treatment for IOP reduction, but no immediate surgical treatment. However, the patient insisted that surgery was necessary due to eye pain. Because of his young age, he and his family could not accept enucleation and refused SO tamponade; thus, the available treatment comprised intensive FCVB implantation. In accordance with the patient's preferences and surgical consent, vitrectomy combined with SO-filled FCVB implantation was performed. The patient's IOP was 16 mmHg in the right eye on the first day postoperatively; furthermore, the corneal endothelium was wrinkled, while hyphema and exudation were observed in the anterior chamber. At 8 days postoperatively, the IOP in the right eye was 11 mmHg, corneal endothelial folds were reduced, and the anterior chamber hyphema and exudation were diminished. At 1 month postoperatively, the IOP in the right eye was 11 mmHg.
+}
+```","{""visit motivation"":""Pain in the right eye"",""admission"":[{""reason"":""Pain in the right eye that had been present for 1 month""}],""patient information"":{""age"":""34"",""sex"":""Male""},""patient medical history"":{""physiological context"":""Right eye had been injured by an iron sheet 10 years prior and had undergone right eye surgery""},""surgeries"":[{""reason"":""Right eye injury by an iron sheet"",""Type"":""Right eye surgery"",""time"":""10 years prior"",""details"":""Surgery performed in a local hospital""},{""reason"":""Eye pain and serious medical condition of the right eye"",""Type"":""Vitrectomy combined with SO-filled FCVB implantation"",""outcome"":""Postoperative IOP was 16 mmHg on the first day, 11 mmHg at 8 days, and significant reduction in corneal endothelial folds, anterior chamber hyphema, and exudation at 1 month"",""details"":""Intensive FCVB implantation was performed in accordance with the patient's preferences and surgical consent""}],""symptoms"":[{""name of symptom"":""Pain"",""location"":""Right eye"",""time"":""For 1 month"",""details"":""Pain in the right eye leading to hospital admission""}],""medical examinations"":[{""name"":""Physical examination"",""result"":""BCVA of no light perception in the right eye and 10/10 in the left eye; IOP moderately elevated in the right eye and 20 mmHg in the left eye"",""details"":""Corneal edema and turbidity prevented conventional tonometry assessment; finger palpation was used instead""},{""name"":""Anterior segment examination"",""result"":""Bulbar conjunctival hyperemia, corneal edema and opacity, and hyphema""},{""name"":""Preoperative B-scan ultrasound"",""result"":""Most of the iris missing from the right eye; the lens was absent, the anterior chamber and vitreous exhibited hemorrhage, and retinal detachment was evident""}],""diagnosis tests"":[],""treatments"":[{""name"":""Observation and symptomatic treatment for IOP reduction"",""related condition"":""Elevated IOP in the right eye"",""reason for taking"":""To manage elevated IOP and pain in the right eye"",""reaction to treatment"":""Patient insisted on surgery due to eye pain"",""details"":""No immediate surgical treatment was initially recommended due to serious medical condition and poor postoperative prognosis""},{""name"":""Vitrectomy combined with SO-filled FCVB implantation"",""related condition"":""Serious medical condition of the right eye"",""reason for taking"":""Patient insisted on surgery due to eye pain and refused enucleation and SO tamponade"",""reaction to treatment"":""Postoperative IOP was 16 mmHg on the first day, 11 mmHg at 8 days, and significant reduction in corneal endothelial folds, anterior chamber hyphema, and exudation at 1 month"",""details"":""Performed in accordance with the patient's preferences and surgical consent""}],""discharge"":{}}"
+validation:1161,False,False,True,,False,False,22,23,0,False,0.0,0.0,0.0,0.03896103896103896,0.037267080745341616,0.03809523809523809,0.0,4,False,904,"```json
+{
+  ""visit motivation"": ""Patient sought treatment due to repeated cough and sputum for one year and aggravation with chest tightness for one week."",
+  ""admission"": {
+    ""admission_date"": ""2023-10-27"",
+    ""admission_status"": ""Active"",
+    ""admission_details"": ""Patient was admitted to the hospital for a persistent cough and sputum for one year and aggravation with chest tightness for one week. The patient's chest CT revealed encapsulated effusion in the right thoracic cavity. Chest-enhanced CT after admission revealed a space-occupying lesion in the right chest.""
+  },
+  ""surgery"": {
+    ""surgery_date"": ""2023-10-28"",
+    ""surgery_status"": ""Completed"",
+    ""surgery_details"": ""The patient underwent resection of the tumor with single-operation-incision thoracoscopy. Incision selection is one cm for the endoscope port (at the midaxillary line of the seventh intercostal space) and two cm for the operation port (at the preaxillary line of the fifth intercostal space). Intraoperative exploration revealed that the tumor had two tumor pedicles (Fig. ), and both were located in the right lower lobe.""
+  },
+  ""consolidation"": {
+    ""consolidation_date"": ""2023-10-29"",
+    ""consolidation_status"": ""Complete"",
+    ""consolidation_details"": ""The patient underwent resection of the tumor with single-operation-incision thoracoscopy. Incision selection is one cm for the endoscope port (at the midaxillary line of the seventh intercostal space) and two cm for the operation port (at the preaxillary line of the fifth intercostal space). Intraoperative exploration revealed that the tumor had two tumor pedicles (Fig. ), and both were located in the right lower lobe.""
+  },
+  ""preoperative"": {
+    ""preoperative_date"": ""2023-10-26"",
+    ""preoperative_status"": ""Active"",
+    ""preoperative_details"": ""The patient was admitted to the hospital for a persistent cough and sputum for one year and aggravation with chest tightness for one week. The patient's chest CT revealed encapsulated effusion in the right thoracic cavity. Chest-enhanced CT after admission revealed a space-occupying lesion in the right chest.""
+  },
+  ""resection"": {
+    ""resection_date"": ""2023-10-27"",
+    ""resection_status"": ""Completed"",
+    ""resection_details"": ""The patient underwent resection of the tumor with single-operation-incision thoracoscopy. Incision selection is one cm for the endoscope port (at the midaxillary line of the seventh intercostal space) and two cm for the operation port (at the preaxillary line of the fifth intercostal space). Intraoperative exploration revealed that the tumor had two tumor pedicles (Fig. ), and both were located in the right lower lobe.""
+  },
+  ""treatment"": {
+    ""treatment_date"": ""2023-10-28"",
+    ""treatment_status"": ""Completed"",
+    ""treatment_details"": ""The patient underwent resection of the tumor with single-operation-incision thoracoscopy. Incision selection is one cm for the endoscope port (at the midaxillary line of the seventh intercostal space) and two cm for the operation port (at the preaxillary line of the fifth intercostal space). Intraoperative exploration revealed that the tumor had two tumor pedicles (Fig. ), and both were located in the right lower lobe.""
+  },
+  ""discharge"": {
+    ""discharge_date"": ""2023-10-29"",
+    ""discharge_status"": ""Completed"",
+    ""discharge_details"": ""The patient was discharged from the hospital for a persistent cough and sputum for one year and aggravation with chest tightness for one week. The patient's chest CT revealed encapsulated effusion in the right thoracic cavity. Chest-enhanced CT after discharge revealed a space-occupying lesion in the right chest.""
+  }
+}
+```","{""visit motivation"":""repeated cough and sputum for one year and aggravation with chest tightness for one week"",""admission"":[{""reason"":""encapsulated effusion in the right thoracic cavity and a space-occupying lesion in the right chest""}],""patient information"":{""age"":""49"",""sex"":""male""},""patient medical history"":{},""surgeries"":[{""reason"":""solitary fibrous tumor"",""Type"":""resection of the tumor with single-operation-incision thoracoscopy"",""details"":""Incision selection is one cm for the endoscope port (at the midaxillary line of the seventh intercostal space) and two cm for the operation port (at the preaxillary line of the fifth intercostal space).\nThe tumor had two tumor pedicles, both located in the right lower lobe, which were intraoperatively separated using a linear stapling device.\nThe specimen was bagged by adjusting the operating table and a special method named 'pulling carrot' was applied to remove the specimen.""}],""symptoms"":[{""name of symptom"":""cough and sputum"",""time"":""one year"",""temporalisation"":""aggravation with chest tightness for one week""}],""medical examinations"":[{""name"":""Chest computed tomography (CT)"",""result"":""encapsulated effusion in the right thoracic cavity"",""details"":""Performed in a local hospital""},{""name"":""Chest-enhanced CT"",""result"":""space-occupying lesion in the right chest"",""details"":""Performed after admission""},{""name"":""Percutaneous lung biopsy"",""result"":""solitary fibrous tumor""},{""name"":""Preoperative three-dimensional reconstruction"",""result"":""blood supply to the tumor originated from the arteries and veins of the right lower lobe""}],""diagnosis tests"":[{""test"":""Percutaneous lung biopsy"",""result"":""solitary fibrous tumor"",""condition"":""solitary fibrous tumor""}],""treatments"":[],""discharge"":{}}"
+validation:1030,False,False,False,"Expecting ',' delimiter: line 18 column 2 (char 2260)",False,False,0,23,0,False,0.0,0.0,0.0,0.0,0.0,0.0,,3,False,533,"```json
+{
+  ""visit motivation"": ""Acute pain of the left mandible"",
+  ""admission"": {
+    ""patient information"": ""31-year-old man consulted the department of dental emergencies of the hospital for acute pain of the left mandible."",
+    ""patient medical history"": ""Non-displaced traumatic fracture of the 2nd and 3rd left metacarpals and an episode of dry pericarditis."",
+    ""surgery"": ""Road accident with head trauma (Glasgow 5)"",
+    ""symptoms"": ""Dry pericarditis.""
+  },
+  ""symptoms"": {
+    ""description"": ""Dry pericarditis.""
+  },
+  ""medical examinations"": {
+    ""diagnosis tests"": ""Ranula, benign lesion of the floor of the mouth such as a dermoid cyst, a fibroma, a lipoma and neurogenic lesion, with an benign tumor of an accessory or submandibular salivary gland such as the pleomorphic adenoma, and with a low-grade malignancy such as mucoepidermoid carcinoma."",
+    ""treatments"": ""Open the pulp chamber and treatment with a sedative pulp medication.""
+  },
+  ""discharge"": {
+    ""summary"": ""Systematic clinical examination of the oral cavity showed tongue elevation (Fig. a), predominant on the left side, which revealed the presence of a mass in the homolateral mouth floor (Fig. b). The appearance of the mucosa of the floor of the mouth was without abnormality and it was not adherent to the underlying mass. The bi-digital palpation of the left mouth floor revealed a firm, elastic, mobile, oval mass. Its size was estimated at 40 mm × 20 mm and its orientation was anteroposterior with a deep insertion at the rear of the oral floor. The examination of the skin of the head and neck was without abnormality, and the palpation of the lympho-nodes of the cervicofacial areas did not reveal lymphadenopathy. The patient was symptom-free and reported no history of swelling, pain or paresthesia. Considering the clinical characteristics, the differential diagnosis can be made, with a ranula, with a benign lesion of the floor of the mouth such as a dermoid cyst, a fibroma, a lipoma and neurogenic lesion, with an benign tumor of an accessory or submandibular salivary gland such as the pleomorphic adenoma, and with a low-grade malignancy such as mucoepidermoid carcinoma. Finally, the clinical differential diagnosis with lymphadenopathy cannot be excluded.""
+}
+```","{""visit motivation"":""acute pain of the left mandible"",""admission"":[],""patient information"":{""age"":""31"",""sex"":""man""},""patient medical history"":{""physiological context"":""non-displaced traumatic fracture of the 2nd and 3rd left metacarpals, dry pericarditis""},""surgeries"":[{""reason"":""road accident with head trauma"",""Type"":""bifocal mandibular fracture, fracture of the left clavicle, double fracture of the left radius and ulna, pilonidal cyst"",""details"":""Glasgow 5""}],""symptoms"":[{""name of symptom"":""tongue elevation, presence of a mass in the homolateral mouth floor"",""location"":""left side of the oral cavity"",""details"":""mass in the homolateral mouth floor, firm, elastic, mobile, oval mass, size estimated at 40 mm × 20 mm, anteroposterior orientation, deep insertion at the rear of the oral floor""}],""medical examinations"":[{""name"":""Dental examination"",""result"":""irreversible pulpal involvement related to a carious lesion of the second premolar"",""details"":""treatment consisted of opening the pulp chamber and treatment with a sedative pulp medication""},{""name"":""Systematic clinical examination of the oral cavity"",""result"":""mass in the homolateral mouth floor"",""details"":""appearance of the mucosa of the floor of the mouth was without abnormality and it was not adherent to the underlying mass""},{""name"":""Examination of the skin of the head and neck"",""result"":""without abnormality""},{""name"":""Palpation of the lympho-nodes of the cervicofacial areas"",""result"":""did not reveal lymphadenopathy""}],""diagnosis tests"":[],""treatments"":[{""name"":""opening the pulp chamber and treatment with a sedative pulp medication"",""related condition"":""irreversible pulpal involvement related to a carious lesion of the second premolar"",""reason for taking"":""to treat acute pain of the left mandible""}],""discharge"":{}}"
+validation:935,False,False,True,,False,False,18,50,0,False,0.0,0.0,0.0,0.0303030303030303,0.010909090909090908,0.016042780748663103,0.0,2,False,400,"```json
+{
+  ""visit motivation"": ""Patient presented with recurrent abdominal pain and fluctuating fevers for the previous two weeks."",
+  ""admission"": {
+    ""date"": ""2003"",
+    ""location"": ""Clinical Setting"",
+    ""description"": ""Pain is a new manifestation of a previously dull aching pain that had waxed and waned over the last decade.""
+  },
+  ""surgery"": {
+    ""type"": ""Laparoscopic Cholecystectomy"",
+    ""year"": ""2003"",
+    ""details"": ""The ensuing year was relatively pain-free but followed by recurrent bouts of right upper quadrant pain, albeit less upsetting than his current presentation.""
+  },
+  ""symptoms"": {
+    ""description"": ""Repeated bouts of right upper quadrant pain, although less upsetting than his current presentation."",
+    ""severity"": ""Mild to moderate""
+  },
+  ""medical examinations"": {
+    ""date"": ""2005"",
+    ""location"": ""Clinical Setting"",
+    ""description"": ""Gallstone spillage was performed. Its composition included a combination of fibrous material, granulation tissue, and inflammatory infiltrate.""
+  },
+  ""diagnosis tests"": {
+    ""tests"": [
+      ""Computed Tomography (CT) scan of abdomen"",
+      ""Necrosis phlegmon"",
+      ""Aspiration""
+    ],
+    ""treatment"": ""Aparition provided considerable relief of symptoms and he was discharged on a gabapentin prescription that was well-tolerated and produced sustained amelioration of his pain, with only occasional wavering with respect to his baseline.""
+  },
+  ""treatments"": {
+    ""management"": ""Acetaminophen and NSAIDs were sufficient for the duration of a decade."",
+    ""effectiveness"": ""Treatment was effective for the duration of a decade.""
+  }
+}
+```","{""visit motivation"":""Recurrent bouts of abdominal pain and fluctuating fevers"",""admission"":[],""patient information"":{""age"":""78"",""sex"":""male""},""patient medical history"":{""physiological context"":""Hypertension, hyperlipidemia, type II diabetes mellitus""},""surgeries"":[{""reason"":""Gallstones"",""Type"":""Laparoscopic cholecystectomy"",""time"":""2003"",""outcome"":""Relatively pain-free for one year, followed by recurrent bouts of right upper quadrant pain"",""details"":""Patient underwent surgery for gallstones""}],""symptoms"":[{""name of symptom"":""Abdominal pain"",""intensity of symptom"":""Sharp and intermittent"",""location"":""Right upper quadrant"",""time"":""Recurrent bouts over the last decade, recently worsened over the previous two weeks"",""temporalisation"":""Intermittent"",""behaviours affecting the symptom"":""Could not attribute to any aggravating or relieving influences"",""details"":""Previously dull aching pain that had waxed and waned over the last decade, now sharp and intermittent""},{""name of symptom"":""Fluctuating low-grade fevers"",""intensity of symptom"":""Low-grade"",""time"":""For the previous two weeks"",""temporalisation"":""Fluctuating"",""details"":""Temperature ranging from 99°F to 100°F""},{""name of symptom"":""Anorexia"",""time"":""For the previous two weeks""},{""name of symptom"":""Weight loss"",""time"":""For the previous two weeks"",""details"":""13-pound weight loss""}],""medical examinations"":[],""diagnosis tests"":[{""test"":""CT scan of abdomen"",""result"":""Presence of a necrotic phlegmon"",""condition"":""Gallstone spillage"",""time"":""2016"",""details"":""CT scan disclosed the presence of a necrotic phlegmon which was subjected to aspiration""}],""treatments"":[{""name"":""Conservative treatment"",""related condition"":""Abdominal pain due to gallstone spillage"",""time"":""Since 2005"",""duration"":""For the duration of a decade"",""reason for taking"":""To manage abdominal pain"",""reaction to treatment"":""Sufficient for the duration of a decade"",""details"":""Included the administration of acetaminophen and non-steroidal anti-inflammatory drugs (NSAIDs)""},{""name"":""Aspiration"",""related condition"":""Necrotic phlegmon"",""time"":""2016"",""reason for taking"":""To provide relief of symptoms"",""reaction to treatment"":""Provided considerable relief of symptoms"",""details"":""Composition included a combination of fibrous material, granulation tissue, and inflammatory infiltrate""},{""name"":""Gabapentin"",""related condition"":""Abdominal pain due to necrotic phlegmon"",""time"":""Post-2016 aspiration"",""reason for taking"":""To ameliorate pain"",""reaction to treatment"":""Well-tolerated and produced sustained amelioration of his pain, with only occasional wavering with respect to his baseline"",""details"":""Prescribed post-aspiration""}],""discharge"":{}}"
+validation:583,False,False,False,Expecting value: line 1 column 1 (char 0),False,False,0,40,0,False,0.0,0.0,0.0,0.0,0.0,0.0,,3,False,637,"```json
+{
+  ""visit motivation"": ""Patient presented with a slow-growing right renal mass monitored over time by computed tomography (CT). Chondrosarcoma of the left scapula was diagnosed 15 years earlier. She presented with left shoulder pain, and a left scapula X-ray revealed a 7 cm mass with calcification."",
+  ""admission"": {
+    ""date"": ""2023-10-26"",
+    ""location"": ""Department of Internal Medicine"",
+    ""patient_information"": {
+      ""name"": ""Patient Name"",
+      ""gender"": ""Female"",
+      ""age"": 55,
+      ""address"": ""Address"",
+      ""medical_history"": ""Gross hematuria"",
+      ""symptoms"": ""Slow-growing right renal mass monitored over time by computed tomography (CT). Chondrosarcoma of the left scapula was diagnosed 15 years earlier. She presented with left shoulder pain, and a left scapula X-ray revealed a 7 cm mass with calcification."",
+      ""medical_examinations"": ""Chondrosarcoma of the left scapula was diagnosed 15 years earlier. She presented with left shoulder pain, and a left scapula X-ray revealed a 7 cm mass with calcification."",
+      ""diagnosis_tests"": ""Magnetic resonance imaging (MRI) displayed a low signal on T1-weighted and a high signal on T2-weighted. She underwent scapula and humerus wide margin resection of the primary tumor with artificial humeral head replacement. The tumor was composed of cartilage cells growing a lobular architecture with eosinophilic reticulum and myxoid stromal tissue and was diagnosed as Grade 2 chondrosarcoma (). Initial surgical treatment showed no evidence of a residual tumor in the disease area and was deemed a successful surgery. Two years after the initial resection, she developed a local recurrence in the left scapula and subsequently underwent extensive resection surgery for both the tumor and clavicle. No residual tumor was detected following surgery. In the following year, multiple bilateral lung nodule shadows appeared on CT. Video-assisted thoracic surgery (VATS) was performed after being diagnosed with metastatic chondrosarcoma to the lung. She proceeded to undergo 13 RFA procedures for lung metastatic chondrosarcoma, with the RFA procedure being performed by an experienced radiologist at our institute. Cooled RFA electrodes (Cool-tip, Valleylab) with a 2 or 3 cm exposed tip were connected to a generator (series CC-1-100, Valleylab) and were inserted into the tumor. Power was applied for a period of 10-12 min using an impedance control algorithm []. Six years after RFA treatment, following multiple treatments to the same lesion, VATS was again conducted for a left upper lobe lung metastasis refractory tumor. She then underwent six additional RFA procedures for metastatic chondrosarcoma to bilateral lower lung lobes over the next 5 years. In total, she received 19 RFA and 2","{""visit motivation"":""Gross hematuria and monitoring of a slow-growing right renal mass"",""admission"":[{""reason"":""Slow-growing right renal mass""}],""patient information"":{""age"":""55"",""sex"":""Woman""},""patient medical history"":{""physiological context"":""Chondrosarcoma of the left scapula diagnosed 15 years earlier""},""surgeries"":[{""reason"":""Primary tumor in the left scapula"",""Type"":""Wide margin resection with artificial humeral head replacement"",""outcome"":""Successful with no evidence of residual tumor"",""details"":""Tumor composed of cartilage cells with lobular architecture, eosinophilic reticulum, and myxoid stromal tissue, diagnosed as Grade 2 chondrosarcoma""},{""reason"":""Local recurrence in the left scapula"",""Type"":""Extensive resection surgery for both the tumor and clavicle"",""time"":""Two years after initial resection"",""outcome"":""No residual tumor detected following surgery""},{""reason"":""Metastatic chondrosarcoma to the lung"",""Type"":""Video-assisted thoracic surgery (VATS)"",""time"":""In the following year after the second surgery"",""details"":""Multiple bilateral lung nodule shadows appeared on CT prior to surgery""},{""reason"":""Left upper lobe lung metastasis refractory tumor"",""Type"":""VATS"",""time"":""Six years after RFA treatment"",""details"":""Following multiple treatments to the same lesion""}],""symptoms"":[{""name of symptom"":""Gross hematuria""},{""name of symptom"":""Left shoulder pain"",""location"":""Left shoulder""}],""medical examinations"":[{""name"":""X-ray"",""result"":""Revealed a 7 cm mass with calcification in the left scapula""},{""name"":""Magnetic resonance imaging (MRI)"",""result"":""Displayed a low signal on T1-weighted and a high signal on T2-weighted images""},{""name"":""Computed tomography (CT)"",""result"":""Monitoring of a slow-growing right renal mass; multiple bilateral lung nodule shadows""}],""diagnosis tests"":[{""severity"":""Grade 2"",""condition"":""Chondrosarcoma of the left scapula"",""time"":""Diagnosed 15 years earlier"",""details"":""Tumor composed of cartilage cells with lobular architecture, eosinophilic reticulum, and myxoid stromal tissue""}],""treatments"":[{""name"":""Radiofrequency ablation (RFA)"",""related condition"":""Metastatic chondrosarcoma to the lung"",""frequency"":""Total of 19 RFA procedures"",""duration"":""Over a period of years"",""reason for taking"":""Treatment for lung metastatic chondrosarcoma"",""details"":""Cooled RFA electrodes (Cool-tip, Valleylab) with a 2 or 3 cm exposed tip connected to a generator (series CC-1-100, Valleylab) were used.\nPower was applied for 10-12 min using an impedance control algorithm.""}],""discharge"":{}}"
+validation:428,False,False,True,,False,False,10,47,1,False,0.1,0.02127659574468085,0.03508771929824561,0.10800000000000001,0.02297872340425532,0.037894736842105266,0.0,4,False,494,"```json
+{
+  ""visit motivation"": ""To evaluate the diagnosis of moderately differentiated adenocarcinoma not otherwise specified (NDOS) of the parotid gland."",
+  ""admission"": {
+    ""date"": ""2008"",
+    ""location"": ""2008"",
+    ""description"": ""Patient presented in 2008 with a centrally located tumour of up to 3 cm in diameter of his right parotid gland, which was treated by resection. Macroscopically an ill-defined grey tumor mass was seen, and histologic examination showed microcystic to reticular and focally tubular growth of moderately pleomorphic epitheloid cells with focal intra- and extracellular PAS-positive mucin production (Fig. a+b). Muscle infiltration and perineural growth as well as central sclerosis of tumour tissue were recognized. Epidermoid differentiation or presence of goblet cells were not seen.""
+  },
+  ""surgery"": {
+    ""date"": ""2008"",
+    ""location"": ""2008"",
+    ""description"": ""Macroscopic removal of 14 right cervical lymph nodes without evidence of metastases. Infollow-up, the patient presented with multiple lung metastases: in 2012 three lung metastases of up to 2.5 cm in diameter in right lung segment 2 and two lung metastases of up to 1.0 cm in diameter in right lung segments 1 und 4 were removed, followed in 2014 by resection of three lung metastases of up to 1.5 cm in diameter in right upper and lower lung lobe. Histologic analysis showed comparable morphology to initial diagnostic sample, and lack of TTF1 expression further confirmed diagnosis of lung metatastases of known parotid gland adenocarcinoma.""
+  },
+  ""treatment"": {
+    ""date"": ""2012"",
+    ""location"": ""2012"",
+    ""description"": ""Palliative chemotherapy four lung metastases of up to 0.6 cm in diameter in left lung segments 1, 2, 7 and 8 were treated by local excision. Because of still progressive pulmonary tumour dissemination and the occurrence of skeletal metastases palliative radiochemotherapy was started and extensive immunohistochemical and molecular examination of archived tumour tissue initiated. Additional IHC stainings showed moderate expression of mammaglobin (F).""
+  }
+}
+```","{""visit motivation"":""Progressive pulmonary tumour dissemination and occurrence of skeletal metastases"",""admission"":[{""reason"":""Treatment of parotid gland adenocarcinoma and its metastases"",""date"":""2008""}],""patient information"":{""age"":""38"",""sex"":""male""},""patient medical history"":{},""surgeries"":[{""reason"":""Centrally located tumour of up to 3 cm in diameter of his right parotid gland"",""Type"":""Resection"",""time"":""2008"",""outcome"":""Macroscopically an ill-defined grey tumour mass was seen, and histologic examination showed characteristics of moderately differentiated adenocarcinoma not otherwise specified of parotid gland"",""details"":""Muscle infiltration and perineural growth as well as central sclerosis of tumour tissue were recognized""},{""reason"":""Multiple lung metastases"",""Type"":""Resection"",""time"":""2012"",""outcome"":""Three lung metastases of up to 2.5 cm in diameter in right lung segment 2 and two lung metastases of up to 1.0 cm in diameter in right lung segments 1 und 4 were removed""},{""reason"":""Multiple lung metastases"",""Type"":""Resection"",""time"":""2014"",""outcome"":""Three lung metastases of up to 1.5 cm in diameter in right upper and lower lung lobe"",""details"":""Histologic analysis showed comparable morphology to initial diagnostic sample, and lack of TTF1 expression further confirmed diagnosis of lung metatastases of known parotid gland adenocarcinoma""},{""reason"":""Multiple lung metastases"",""Type"":""Local excision"",""time"":""2017"",""outcome"":""Four lung metastases of up to 0.6 cm in diameter in left lung segments 1, 2, 7 and 8 were treated""}],""symptoms"":[],""medical examinations"":[{""name"":""Histologic examination"",""result"":""Microcystic to reticular and focally tubular growth of moderately pleomorphic epitheloid cells with focal intra- and extracellular PAS-positive mucin production"",""details"":""Epidermoid differentiation or presence of goblet cells were not seen""},{""name"":""Immunohistochemical examination"",""result"":""Strong expression of cytokeratin 7 and focal weak to moderate expression of S100 protein"",""details"":""No expression of alpha-amylase, carcinoembryonic antigen, or smooth muscle actin was detected""}],""diagnosis tests"":[{""test"":""Histologic analysis"",""severity"":""Moderately differentiated"",""result"":""Adenocarcinoma not otherwise specified of parotid gland"",""condition"":""Adenocarcinoma of parotid gland"",""time"":""2008"",""details"":""Neck dissection with removal of 14 right cervical lymph nodes was added without evidence of metastases""},{""test"":""Histologic analysis"",""result"":""Comparable morphology to initial diagnostic sample, lack of TTF1 expression"",""condition"":""Lung metastases of known parotid gland adenocarcinoma"",""time"":""2014""}],""treatments"":[{""name"":""Palliative chemotherapy"",""related condition"":""Parotid gland adenocarcinoma with lung metastases"",""time"":""2017"",""reason for taking"":""Progressive pulmonary tumour dissemination""},{""name"":""Palliative radiochemotherapy"",""related condition"":""Parotid gland adenocarcinoma with lung and skeletal metastases"",""reason for taking"":""Still progressive pulmonary tumour dissemination and the occurrence of skeletal metastases"",""details"":""Extensive immunohistochemical and molecular examination of archived tumour tissue initiated""}],""discharge"":{}}"
+validation:2926,False,False,True,,False,False,60,58,0,False,0.0,0.0,0.0,0.0059259259259259265,0.006130268199233717,0.0060263653483992475,0.0,4,False,1098,"```json
+{
+  ""visit motivation"": ""To report a case of S-ICD implantation with right-parasternal electrode position in a 45-year-old male congenital heart disease (CHD) patient after atrial switch surgery, due to d-TGA, with a concomitant AAI pacemaker."",
+  ""admission"": {
+    ""date"": ""2018-03-01"",
+    ""patient_information"": ""Patient's name: [Insert Patient Name Here], DOB: [Insert DOB Here], Gender: [Insert Gender Here], Age: [Insert Age Here], Weight: [Insert Weight Here], Medical History: [Insert Medical History Here], Surgical Procedure: Atrial Switch Surgery, Age: 1 and 14 years, Followed by AAI Pacemaker Implantation, Following Atrial Asystole, Additional Atrial Lead Implantation, Age: 44 years, No Other Pre-existing Conditions:"",
+    ""symptoms"": [""chest pain at inspiration"", ""rib compression""],
+    ""medical_ examinations"": [""SpO2 95% under 5 L/min O2, RR 120/70 mmHg, heart rate 70 b.p.m., regular""],
+    ""diagnosis_tests"": [""High-sensitive troponin T assay"", ""Pulmonary embolism"", ""Aortic dissection""],
+    ""treatments"": [""Emergency medical services"", ""Cardiac arrest""],
+    ""discharge"": ""Successful resuscitation by emergency medical services.""
+  },
+  ""patients"": [
+    {
+      ""name"": ""Patient 1"",
+      ""dob"": ""2018-03-01"",
+      ""gender"": ""Male"",
+      ""age"": 45,
+      ""weight"": 165,
+      ""medical_history"": ""Obese, overweight, and not taking regular medication."",
+      ""surgery"": ""Atrial Switch Surgery, Age: 1 and 14 years, Followed by AAI Pacemaker Implantation, Following Atrial Asystole, Additional Atrial Lead Implantation, Age: 44 years, No Other Pre-existing Conditions:"",
+      ""symptoms"": [""chest pain at inspiration"", ""rib compression""],
+      ""medical_examination"": [""SpO2 95% under 5 L/min O2, RR 120/70 mmHg, heart rate 70 b.p.m., regular""],
+      ""diagnosis_tests"": [""High-sensitivity troponin T assay"", ""Pulmonary embolism"", ""Aortic dissection""],
+      ""treatments"": [""Emergency medical services"", ""Cardiac arrest""],
+      ""discharge"": ""Successful resuscitation by emergency medical services.""
+    },
+    {
+      ""name"": ""Patient 2"",
+      ""dob"": ""2019-03-01"",
+      ""gender"": ""Female"",
+      ""age"": 28,
+      ""weight"": 170,
+      ""medical_history"": ""Obese, overweight, and not taking regular medication."",
+      ""surgery"": ""Atrial Switch Surgery, Age: 1 and 14 years, Followed by AAI Pacemaker Implantation, Following Atrial Asystole, Additional Atrial Lead Implantation, Age: 44 years, No Other Pre-existing Conditions:"",
+      ""symptoms"": [""chest pain at inspiration"", ""rib compression""],
+      ""medical_examination"": [""SpO2 95% under 5 L/min O2, RR 120/70 mmHg, heart rate 70 b.p.m., regular""],
+      ""diagnosis_tests"": [""High-sensitivity troponin T assay"", ""Pulmonary embolism"", ""Aortic dissection""],
+      ""treatments"": [""Emergency medical services"", ""Cardiac arrest""],
+      ""discharge"": ""Successful resuscitation by emergency medical services.""
+    },
+    {
+      ""name"": ""Patient 3"",
+      ""dob"": ""2020-03-01"",
+      ""gender"": ""Male"",
+      ""age"": 32,
+      ""weight"": 165,
+      ""medical_history"": ""Obese, overweight, and not taking regular medication."",
+      ""surgery"": ""Atrial Switch Surgery, Age: 1 and 14 years, Followed by AAI Pacemaker Implantation, Following Atrial Asystole, Additional Atrial Lead Implantation, Age: 44 years, No Other Pre-existing Conditions:"",
+      ""symptoms"": [""chest pain at inspiration"", ""rib compression""],
+      ""medical_examination"": [""SpO2 95% under 5 L/min O2, RR 120/70 mmHg, heart rate 70 b.p.m., regular""],
+      ""diagnosis_tests"": [""High-sensitivity troponin T assay"", ""Pulmonary embolism"", ""Aortic dissection""],
+      ""treatments"": [""Emergency medical services"", ""Cardiac arrest""],
+      ""discharge"": ""Successful resuscitation by emergency medical services.""
+    }
+  ]
+}
+```","{""visit motivation"":""S-ICD implantation with right-parasternal electrode position"",""admission"":[{""reason"":""Out of hospital cardiac arrest due to ventricular fibrillation"",""date"":""Date of first admission not specified"",""duration"":""Length of patient's stay not specified"",""care center details"":""Details of care center not specified""}],""patient information"":{""age"":""45 years old"",""sex"":""Male"",""weight"":""Overweight""},""patient medical history"":{""physiological context"":""Congenital heart disease (CHD) patient after atrial switch surgery, due to d-TGA, with a concomitant AAI pacemaker""},""surgeries"":[{""reason"":""d-TGA"",""Type"":""Atrial switch surgery"",""time"":""At the age of one"",""outcome"":""Outcome not specified""},{""reason"":""Atrial asystole"",""Type"":""AAI pacemaker implantation"",""time"":""At age 14 years"",""outcome"":""Outcome not specified""},{""reason"":""Lead failure"",""Type"":""Additional atrial lead implantation"",""time"":""At age 44 years"",""outcome"":""Outcome not specified""}],""symptoms"":[{""name of symptom"":""Chest pain"",""intensity of symptom"":""Intensity not specified"",""location"":""Chest"",""time"":""At inspiration"",""behaviours affecting the symptom"":""Could be reproduced by rib compression""}],""medical examinations"":[{""name"":""Physical examination at admission"",""result"":""Alert and oriented without neurologic impairment"",""details"":""Vital signs were SpO2 95% under 5 L/min O2, RR 120/70 mmHg, heart rate 70 b.p.m., and regular""}],""diagnosis tests"":[{""test"":""12-lead ECG"",""result"":""Sinus rhythm and no signs of myocardial ischaemia"",""condition"":""Myocardial ischaemia""},{""test"":""High-sensitive troponin T assay"",""result"":""Myocardial ischaemia excluded"",""condition"":""Myocardial ischaemia""},{""test"":""Thoracic CT angiography"",""result"":""Pulmonary embolism and aortic dissection excluded"",""condition"":""Pulmonary embolism and aortic dissection""},{""test"":""Laboratory testing"",""result"":""No relevant electrolyte imbalances"",""condition"":""Electrolyte imbalances""},{""test"":""Coronary angiogram"",""result"":""Coronary artery disease and coronary anomalies excluded"",""condition"":""Coronary artery disease and coronary anomalies""},{""test"":""CT coronary angiography"",""result"":""Access to the subpulmonary ventricle was hindered by the two atrial leads and the narrow diameter of the venous baffle connecting the vena cava superior with the subpulmonary ventricle"",""condition"":""Complex anatomy assessment prior to ICD implantation"",""details"":""Performed to better assess the complex anatomy prior to ICD implantation""}],""treatments"":[{""name"":""External defibrillation"",""related condition"":""Ventricular fibrillation"",""dosage"":""360 J"",""time"":""8 March 2018"",""reason for taking"":""To re-establish spontaneous circulation after cardiac arrest"",""reaction to treatment"":""Patient regained consciousness""},{""name"":""Secondary prevention ICD implantation"",""related condition"":""Cardiac arrest due to ventricular fibrillation"",""reason for taking"":""Secondary prevention after cardiac arrest"",""details"":""Right-parasternal electrode position""}],""discharge"":{}}"
+validation:2336,False,False,True,,False,False,13,23,0,False,0.0,0.0,0.0,0.05128205128205128,0.02898550724637681,0.037037037037037035,0.0,5,False,562,"```json
+{
+  ""visit motivation"": ""Patient was admitted to the department of oral & maxillofacial surgery, complaining of gradually increasing swelling on her left side of mandible, started one year ago with severe and unusual pain at the related region."",
+  ""admission"": {
+    ""admission_date"": ""2018-03-15"",
+    ""admission_details"": ""Patient presented with a gradual increase in swelling on her left side of mandible, starting one year ago with severe and unusual pain at the related region. The patient declined to history of any previous toothache and trauma to the affected site.""
+  },
+  ""surgery"": {
+    ""surgery_date"": ""2019-04-01"",
+    ""surgery_details"": ""The review of systems was non-contributory. The past medical and dental histories were unremarkable.""
+  },
+  ""symptoms"": {
+    ""symptoms_description"": ""Gradually increasing swelling on her left side of mandible, started one year ago with severe and unusual pain at the related region."",
+    ""symptoms_severity"": ""Severe and unusual pain at the related region.""
+  },
+  ""medical_ examinations"": {
+    ""medical_examination_date"": ""2020-01-26"",
+    ""medical_details"": ""The patient was moderately built and had a normal intellect.""
+  },
+  ""diagnosis_tests"": {
+    ""diagnosis_tests_description"": ""Intraoral examinaton revealed a bony enlargement extending from median mandible to the retromolar region, and inferior border of the mandible to the crestal marginal level. The depth of the left vestibul sulcus was thoroughyl decreased due to hard bony expansion. The extraoral examination revealed hard uniform and large expansile mass in the left side of the mandible. Facial asymmetry was present. Left submandibular lymph nodes were impalpable and insensitive in palpation.""
+  },
+  ""treatments"": {
+    ""treatment_description"": ""Conventional radiographs and computerized tomographic scan showed diffuse increase of the lesion of mandible, with loss of normal trabecular pattern leading to classical ground glass pattern.""
+  },
+  ""discharge"": {
+    ""discharge_date"": ""2020-04-01"",
+    ""discharge_details"": ""The patient was admitted to the department of oral & maxillofacial surgery, complaining of gradually increasing swelling on her left side of mandible, started one year ago with severe and unusual pain at the related region. The patient declined to history of any previous toothache and trauma to the affected site.""
+  }
+}
+```","{""visit motivation"":""Gradually increasing swelling on her left side of mandible, severe and unusual pain at the related region"",""admission"":[{""reason"":""Swelling on the left side of mandible and severe pain"",""care center details"":""Department of oral & maxillofacial surgery""}],""patient information"":{""age"":""15"",""sex"":""Female""},""patient medical history"":{""physiological context"":""Unremarkable"",""psychological context"":""Normal intellect""},""surgeries"":[],""symptoms"":[{""name of symptom"":""Swelling"",""intensity of symptom"":""Severe"",""location"":""Left side of mandible"",""time"":""Started one year ago"",""temporalisation"":""Gradually increasing"",""details"":""Unusual pain at the related region""}],""medical examinations"":[{""name"":""Intraoral examination"",""result"":""Bony enlargement from median mandible to the retromolar region, and inferior border of the mandible to the crestal marginal level, decreased depth of the left vestibul sulcus due to hard bony expansion""},{""name"":""Extraoral examination"",""result"":""Hard uniform and large expansile mass in the left side of the mandible, facial asymmetry"",""details"":""Left submandibular lymph nodes were impalpable and insensitive in palpation""}],""diagnosis tests"":[{""test"":""Conventional radiographs and computerized tomographic scan"",""result"":""Diffuse increase of the lesion of mandible, loss of normal trabecular pattern, classical ground glass pattern"",""details"":""CT scans performed on a multislice spiral CT unit (Somatom Definition Edge; Siemens, Erlangen, Germany) with exposure parameters: tube voltage -120 kV, tube current -270 mA, and slice thickness -1mm.\nAxial section CT image showed expansion of the body of the mandible with few lytic areas bilaterally but greater in degree on the left side and expansion of the left ramus.""},{""test"":""Laboratory investigations"",""result"":""Slight rise in erythrocyte sedimentation rate (ESR) and mild change in alkaline phosphotase level approximately 566 units""}],""treatments"":[],""discharge"":{}}"
+validation:362,False,False,True,,False,False,39,30,0,False,0.0,0.0,0.0,0.04586894586894587,0.05962962962962962,0.05185185185185184,0.0,3,False,836,"```json
+{
+  ""visit motivation"": ""He was admitted to our unit with weakness of both hands of 1 month's duration."",
+  ""admission"": {
+    ""date"": ""2024-10-27"",
+    ""hospital"": ""Local Hospital"",
+    ""location"": ""City, State"",
+    ""admission_details"": ""Weakness of both hands of 1 month's duration. He was treated for serologically confirmed dengue fever approximately 5 weeks ago at the local hospital and had made an uneventful recovery.""
+  },
+  ""patient information"": {
+    ""name"": ""Sri Lankan Male"",
+    ""gender"": ""Male"",
+    ""age"": 20,
+    ""occupation"": ""Helper in a grocery store"",
+    ""height"": ""180 cm"",
+    ""weight"": ""65 kg"",
+    ""blood_pressure"": ""130 mmHg"",
+    ""heart_rate"": ""90 bpm"",
+    ""eye_color"": ""Blue"",
+    ""skin_condition"": ""Mildly pale, lymphadenopathy, and no signs of malnutrition.""
+  },
+  ""patients"": [
+    {
+      ""name"": ""Alice"",
+      ""gender"": ""Female"",
+      ""age"": 35,
+      ""occupation"": ""Grocery Store Helper"",
+      ""height"": ""165 cm"",
+      ""weight"": ""65 kg"",
+      ""blood_pressure"": ""130 mmHg"",
+      ""heart_rate"": ""90 bpm"",
+      ""eye_color"": ""Blue"",
+      ""skin_condition"": ""Mildly pale, lymphadenopathy, and no signs of malnutrition.""
+    },
+    {
+      ""name"": ""Bob"",
+      ""gender"": ""Male"",
+      ""age"": 25,
+      ""occupation"": ""Grocery Store Helper"",
+      ""height"": ""175 cm"",
+      ""weight"": ""60 kg"",
+      ""blood_pressure"": ""130 mmHg"",
+      ""heart_rate"": ""90 bpm"",
+      ""eye_color"": ""Blue"",
+      ""skin_condition"": ""Mildly pale, lymphadenopathy, and no signs of malnutrition.""
+    }
+  ],
+  ""discharge"": {
+    ""date"": ""2024-10-28"",
+    ""hospital"": ""Local Hospital"",
+    ""location"": ""City, State"",
+    ""discharge_details"": ""He has first noticed the weakness of his right hand when he dropped a glass of water due to poor grip. Weakness was more in the right hand which was his dominant hand and it was slowly progressive over 1 month. At the time of presentation to us he could not write or button on his shirt due to the weakness of the hands. Weakness of the left hand was milder than that of the right. The weakness was confined to hands and did not involve forearms or arms. He denied any accompanying numbness, parasthesia or pain. On inquiry he admitted that there was slight weakness of both feet which did not significantly interfere with walking. There was no associated neck/back pain or bladder/bowel incontinence. He did not complain of difficulty in breathing, diplopia, dysphagia, nasal regurgitation, dysarthria or fatigability. He did not give a recent history of trauma to the spine/neck or any preceding diarrheal illness or skin rash. He had no previously diagnosed long term medical ailments and has not undergone any surgical procedures in the past. He was not on any long term medications and he denied smoking, use of alcohol or illicit drugs. He did not give a family history of any progressive neurological conditions. On general examination he had an average built with no pallor, lymphadenopathy or any signs of malnutrition. No skin rashes or hypopigmented patches were.""
+  }
+}
+```","{""visit motivation"":""Weakness of both hands"",""admission"":[{""reason"":""Weakness of both hands"",""duration"":""5 days of inward treatment"",""care center details"":""local hospital""}],""patient information"":{""age"":""20 years old"",""sex"":""male"",""ethnicity"":""Sri Lankan"",""family medical history"":""No family history of any progressive neurological conditions"",""socio economic context"":""employed as a helper in a grocery"",""occupation"":""helper in a grocery""},""patient medical history"":{""physiological context"":""Treated for serologically confirmed dengue fever approximately 5 weeks ago, made an uneventful recovery, simple dengue fever with no evidence of fluid leakage"",""alcohol consumption"":""denied use of alcohol"",""drug usage"":""denied use of illicit drugs"",""smoking status"":""denied smoking""},""surgeries"":[],""symptoms"":[{""name of symptom"":""Weakness of both hands"",""intensity of symptom"":""More in the right hand, which was his dominant hand, and milder in the left hand"",""location"":""Hands"",""time"":""1 month's duration"",""temporalisation"":""Slowly progressive over 1 month"",""details"":""Could not write or button on his shirt due to the weakness; weakness was confined to hands and did not involve forearms or arms; denied any accompanying numbness, parasthesia or pain""},{""name of symptom"":""Slight weakness of both feet"",""intensity of symptom"":""Slight"",""location"":""Feet"",""details"":""Did not significantly interfere with walking""}],""medical examinations"":[],""diagnosis tests"":[{""test"":""Dengue NS1 antigen"",""result"":""Positive"",""condition"":""Dengue fever"",""time"":""Approximately 5 weeks ago""}],""treatments"":[{""related condition"":""Dengue fever"",""reaction to treatment"":""Made an uneventful recovery""}],""discharge"":{}}"
+validation:2543,False,False,True,,False,False,69,36,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0,13,False,1354,"```json
+{
+  ""visit motivation"": ""To prevent complications from a Brugada Syndrome event."",
+  ""admission"": {
+    ""date"": ""2023-10-27"",
+    ""patient_information"": ""Age: 45, Background: Brugada Syndrome, ICD inserted 10 years previously."",
+    ""surgery"": ""Lead replacement, ICD box change."",
+    ""procedure"": ""Laser-assisted lead extraction."",
+    ""outcome"": ""Sign of tamponade and pericardiocentesis unsuccessful.""
+  },
+  ""patients"": [
+    {
+      ""name"": ""Patient A"",
+      ""age"": 45,
+      ""background"": ""Brugada Syndrome, ICD inserted 10 years previously."",
+      ""surgery"": ""Lead replacement, ICD box change."",
+      ""procedure"": ""Laser-assisted lead extraction."",
+      ""outcome"": ""Sign of tamponade and pericardiocentesis unsuccessful.""
+    },
+    {
+      ""name"": ""Patient B"",
+      ""age"": 45,
+      ""background"": ""Brugada Syndrome, ICD inserted 10 years previously."",
+      ""surgery"": ""Lead replacement, ICD box change."",
+      ""procedure"": ""Laser-assisted lead extraction."",
+      ""outcome"": ""Sign of tamponade and pericardiocentesis unsuccessful.""
+    }
+  ],
+  ""patient_medical_history"": {
+    ""date"": ""2023-10-27"",
+    ""patient_information"": ""Age: 45, Background: Brugada Syndrome, ICD inserted 10 years previously."",
+    ""surgery"": ""Lead replacement, ICD box change."",
+    ""procedure"": ""Laser-assisted lead extraction."",
+    ""outcome"": ""Sign of tamponade and pericardiocentesis unsuccessful.""
+  },
+  ""symptoms"": [
+    {
+      ""date"": ""2023-10-27"",
+      ""patient_information"": ""Age: 45, Background: Brugada Syndrome, ICD inserted 10 years previously."",
+      ""surgery"": ""Lead replacement, ICD box change."",
+      ""procedure"": ""Laser-assisted lead extraction."",
+      ""outcome"": ""Sign of tamponade and pericardiocentesis unsuccessful.""
+    },
+    {
+      ""date"": ""2023-10-28"",
+      ""patient_information"": ""Age: 45, Background: Brugada Syndrome, ICD inserted 10 years previously."",
+      ""surgery"": ""Lead replacement, ICD box change."",
+      ""procedure"": ""Laser-assisted lead extraction."",
+      ""outcome"": ""Sign of tamponade and pericardiocentesis unsuccessful.""
+    }
+  ],
+  ""medical_examinations"": [
+    {
+      ""date"": ""2023-10-27"",
+      ""patient_information"": ""Age: 45, Background: Brugada Syndrome, ICD inserted 10 years previously."",
+      ""surgery"": ""Lead replacement, ICD box change."",
+      ""procedure"": ""Laser-assisted lead extraction."",
+      ""outcome"": ""Sign of tamponade and pericardiocentesis unsuccessful.""
+    },
+    {
+      ""date"": ""2023-10-28"",
+      ""patient_information"": ""Age: 45, Background: Brugada Syndrome, ICD inserted 10 years previously."",
+      ""surgery"": ""Lead replacement, ICD box change."",
+      ""procedure"": ""Laser-assisted lead extraction."",
+      ""outcome"": ""Sign of tamponade and pericardiocentesis unsuccessful.""
+    }
+  ],
+  ""diagnosis_tests"": [
+    {
+      ""date"": ""2023-10-27"",
+      ""patient_information"": ""Age: 45, Background: Brugada Syndrome, ICD inserted 10 years previously."",
+      ""surgery"": ""Lead replacement, ICD box change."",
+      ""procedure"": ""Laser-assisted lead extraction."",
+      ""outcome"": ""Sign of tamponade and pericardiocentesis unsuccessful.""
+    },
+    {
+      ""date"": ""2023-10-28"",
+      ""patient_information"": ""Age: 45, Background: Brugada Syndrome, ICD inserted 10 years previously."",
+      ""surgery"": ""Lead replacement, ICD box change."",
+      ""procedure"": ""Laser-assisted lead extraction."",
+      ""outcome"": ""Sign of tamponade and pericardiocentesis unsuccessful.""
+    }
+  ],
+  ""treatments"": [
+    {
+      ""date"": ""2023-10-27"",
+      ""patient_information"": ""Age: 45, Background: Brugada Syndrome, ICD inserted 10 years previously."",
+      ""surgery"": ""Lead replacement, ICD box change."",
+      ""procedure"": ""Laser-assisted lead extraction."",
+      ""outcome"": ""Sign of tamponade and pericardiocentesis unsuccessful.""
+    },
+    {
+      ""date"": ""2023-10-28"",
+      ""patient_information"": ""Age: 45, Background: Brugada Syndrome, ICD inserted 10 years previously."",
+      ""surgery"": ""Lead replacement, ICD box change."",
+      ""procedure"": ""Laser-assisted lead extraction."",
+      ""outcome"": ""Sign of tamponade and pericardiocentesis unsuccessful.""
+    }
+  ],
+  ""discharge"": {
+    ""date"": ""2023-10-27"",
+    ""patient_information"": ""Age: 45, Background: Brugada Syndrome, ICD inserted 10 years previously."",
+    ""surgery"": ""Lead replacement, ICD box change."",
+    ""procedure"": ""Laser-assisted lead extraction."",
+    ""outcome"": ""Sign of tamponade and pericardiocentesis unsuccessful.""
+  },
+  ""notes"": ""The patient presented with signs of tamponade and pericardiocentesis. The procedure was successful in preventing complications. The patient is now hemodynamically unstable and requires immediate attention. Further investigation is needed to determine the cause of the event and implement appropriate management strategies.""
+}
+```","{""visit motivation"":""Lead replacement and ICD box change"",""admission"":[{""reason"":""Lead replacement and ICD box change""}],""patient information"":{""age"":""45"",""sex"":""Male""},""patient medical history"":{""physiological context"":""Brugada Syndrome, had an ICD inserted 10 years previously for secondary prevention""},""surgeries"":[{""reason"":""Failed lead replacement and ICD box change due to occlusion of the brachiocephalic vein"",""Type"":""Laser-assisted lead extraction"",""outcome"":""Complication of tamponade, followed by emergency sternotomy"",""details"":""Occlusion of the brachiocephalic vein, tamponade, hemodynamic instability, emergency sternotomy, repair of right ventricular acute margin, repair of SVC and right subclavian vein with bovine pericardium patch, emergency laparotomy""}],""symptoms"":[{""name of symptom"":""Tamponade"",""location"":""Pericardium"",""time"":""Immediately following the laser-assisted lead extraction procedure"",""details"":""Sign of tamponade, unsuccessful pericardiocentesis, hemodynamic instability""},{""name of symptom"":""Hemodynamic instability"",""time"":""After pericardiocentesis and during subsequent emergency procedures"",""details"":""Developed pulseless electrical activity, required external chest compressions""}],""medical examinations"":[{""name"":""Ultrasound"",""result"":""Free abdominal fluid"",""details"":""Abdomen was very distended""}],""diagnosis tests"":[{""details"":""CT scan dismissed due to unstable condition""}],""treatments"":[{""name"":""Pericardiocentesis"",""related condition"":""Tamponade"",""time"":""Immediately following the laser-assisted lead extraction"",""reason for taking"":""To relieve tamponade"",""reaction to treatment"":""Unsuccessful""},{""name"":""Emergency sternotomy"",""related condition"":""Tamponade and hemodynamic instability"",""time"":""Following unsuccessful pericardiocentesis"",""reason for taking"":""To address complications from tamponade"",""reaction to treatment"":""Restoration of spontaneous circulation""},{""name"":""Emergency laparotomy"",""related condition"":""Hemodynamic instability and suspected intra-abdominal bleeding"",""time"":""After hemodynamic instability persisted post sternotomy"",""reason for taking"":""To address suspected intra-abdominal bleeding"",""reaction to treatment"":""4 L of blood drained from the abdomen"",""details"":""Deep laceration in the posterior part of the abdomen""}],""discharge"":{}}"
+validation:1791,False,False,False,Invalid control character at: line 20 column 268 (char 3927),False,False,0,31,0,False,0.0,0.0,0.0,0.0,0.0,0.0,,7,False,1568,"```json
+{
+  ""visit motivation"": ""Patient is conscious, cooperative, hemodynamically stable, complaining of severe pain in the left hip, unable to stand or bear weight on the left lower limb, which appears abducted and externally rotated, with no signs of any peripheral neurovascular lesions."",
+  ""admission"": {
+    ""admission_date"": ""2024-10-27"",
+    ""admission_status"": ""Admission"",
+    ""patient_information"": ""Patient's age: 44 years old, gender: Male, height: 5'8"",
+    ""patient_medical_history"": ""History of trauma by precipitation from height (12m), presenting with severe pain in the left hip, inability to stand or bear weight on the left lower limb, which appears abducted and externally rotated, with no signs of any peripheral neurovascular lesions."",
+    ""surgery"": ""X-ray examination of pelvis () and CT scan of hip () are performed and they confirm the diagnosis of type IB Epstein anterior hip dislocation associated with displaced intertrochanteric fracture of the femur. The patient is conscious, cooperative, hemodynamically stable, complaining of severe pain in the left hip, being unable to stand or bear weight on the left lower limb, which appears abducted and externally rotated, with no signs of any peripheral neurovascular lesions."",
+    ""laboratory_examination"": ""Exclusion of other coexisting abdominal, thoracic, neurological or musculoskeletal lesions. No evidence of other coexisting abdominal, thoracic, neurological or musculoskeletal lesions."",
+    ""diagnosis_tests"": ""Type IB Epstein anterior hip dislocation associated with displaced intertrochanteric fracture of the femur."",
+    ""treatments"": ""General anesthesia, lateral approach of the hip, extended proximally and slightly anterior. After superficial layers are incised, the femoral head is identified and reduced into the acetabulum by hand. Under fluoroscopic control, the intertrochanteric fracture was also reduced and internally fixed with DHS attached to a side plate with 5 screws. At the end of surgery, the stability of the hip is checked by performing a 90 degrees flexion of the thigh, internal-external rotation and abduction-adduction."",
+    ""postoperative_care"": ""Postoperatively kept at rest in bed for 6 weeks and antithrombotic prophylaxis is initiated. Physical therapy is started immediately after surgery by predominantly isometric exercises for toning the muscles, at 3 weeks hip joint mobilization exercises and later (at 6 weeks after surgery) walking without weight bearing on the left lower limb is started. Progressive weight bearing of the injured limb is allowed at 3 months after surgery.""
+  },
+  ""suspects"": {
+    ""suspect_id"": ""1"",
+    ""suspect_name"": ""X-ray examination of pelvis () and CT scan of hip () are performed and they confirm the diagnosis of type IB Epstein anterior hip dislocation associated with displaced intertrochanteric fracture of the femur. The patient is conscious, cooperative, hemodynamically stable, complaining of severe pain in the left hip, being unable to stand or bear weight on the left lower limb, which appears abducted and externally rotated, with no signs of any peripheral neurovascular lesions."",
+    ""suspect_id"": ""2"",
+    ""suspect_name"": ""CT scan of hip () is performed and they confirm the diagnosis of type IB Epstein anterior hip dislocation associated with displaced intertrochanteric fracture of the femur. The patient is conscious, cooperative, hemodynamically stable, complaining of severe pain in the left hip, being unable to stand or bear weight on the left lower limb, which appears abducted and externally rotated, with no signs of any peripheral neurovascular lesions."",
+    ""suspect_id"": ""3"",
+    ""suspect_name"": ""Emergency surgical treatment applied in less than 3 hours since the trauma occurred. The hip dislocation was reduced under general anesthesia and the intertrochanteric fracture was also reduced and internally fixed with a dynamic hip screw (DHS).
+    ""suspect_id"": ""4"",
+    ""suspect_name"": ""Lateral approach of the hip was used, extended proximally and slightly anterior. After the superficial layers are incised, the femoral head is identified and reduced into the acetabulum by hand. Under fluoroscopic control, the intertrochanteric fracture was also reduced and internally fixed with DHS attached to a side plate with 5 screws. At the end of surgery, the stability of the hip is checked by performing a 90 degrees flexion of the thigh, internal-external rotation and abduction-adduction."",
+    ""suspect_id"": ""5"",
+    ""suspect_name"": ""Postoperative, the patient is kept at rest in bed for 6 weeks and antithrombotic prophylaxis is initiated. Physical therapy is started immediately after surgery by predominantly isometric exercises for toning the muscles, at 3 weeks hip joint mobilization exercises and later (at 6 weeks after surgery) walking without weight bearing on the left lower limb is started. Progressive weight bearing of the injured limb is allowed at 3 months after surgery.""
+  },
+  ""discharge"": {
+    ""discharge_date"": ""2024-10-28"",
+    ""discharge_status"": ""Discharged"",
+    ""patient_information"": ""Patient's age: 44 years old, gender: Male, height: 5'8"",
+    ""patient_medical_history"": ""History of trauma by precipitation from height (12m), presenting with severe pain in the left hip, inability to stand or bear weight on the left lower limb, which appears abducted and externally rotated, with no signs of any peripheral neurovascular lesions."",
+    ""surgery"": ""X-ray examination of pelvis () and CT scan of hip () are performed and they confirm the diagnosis of type IB Epstein anterior hip dislocation associated with displaced intertrochanteric fracture of the femur. The patient is conscious, cooperative, hemodynamically stable, complaining of severe pain in the left hip, being unable to stand or bear weight on the left lower limb, which appears abducted and externally rotated, with no signs of any peripheral neurovascular lesions."",
+    ""laboratory_examination"": ""Exclusion of other coexisting abdominal, thoracic, neurological or musculoskeletal lesions. No evidence of other coexisting abdominal, thoracic, neurological or musculoskeletal lesions."",
+    ""diagnosis_tests"": ""Type IB Epstein anterior hip dislocation associated with displaced intertrochanteric fracture of the femur."",
+    ""treatments"": ""General anesthesia, lateral approach of the hip, extended proximally and slightly anterior. After superficial layers are incised, the femoral head is identified and reduced into the acetabulum by hand. Under fluoroscopic control, the intertrochanteric fracture was also reduced and internally fixed with DHS attached to a side plate with 5 screws. At the end of surgery, the stability of the hip is checked by performing a 90 degrees flexion of the thigh, internal-external rotation and abduction-adduction."",
+    ""postoperative_care"": ""Postoperatively kept at rest in bed for 6 weeks and antithrombotic prophylaxis is initiated. Physical therapy is started immediately after surgery by predominantly isometric exercises for toning the muscles, at 3 weeks hip joint mobilization exercises and later (at 6 weeks after surgery) walking without weight bearing on the left lower limb is started. Progressive weight bearing of the injured limb is allowed at 3 months after surgery.""
+  }
+}
+```","{""visit motivation"":""Suffered a trauma by precipitation from height"",""admission"":[{""reason"":""Trauma by precipitation from height"",""care center details"":""Emergency Room""}],""patient information"":{""age"":""44"",""sex"":""male""},""patient medical history"":{},""surgeries"":[{""reason"":""Type IB Epstein anterior hip dislocation associated with displaced intertrochanteric fracture of the femur"",""Type"":""Emergency surgical treatment"",""time"":""Less than 3 hours since the trauma occurred"",""outcome"":""Hip dislocation was reduced and intertrochanteric fracture was internally fixed with a dynamic hip screw (DHS)"",""details"":""Hip dislocation reduced under general anesthesia using a lateral approach, extended proximally and slightly anterior.\nFemoral head identified and reduced into the acetabulum by hand.\nIntertrochanteric fracture reduced and internally fixed with DHS attached to a side plate with 5 screws.\nStability of the hip checked by performing a 90 degrees flexion of the thigh, internal-external rotation and abduction-adduction.""}],""symptoms"":[{""name of symptom"":""Severe pain"",""intensity of symptom"":""Severe"",""location"":""Left hip"",""behaviours affecting the symptom"":""Unable to stand or bear weight on the left lower limb"",""details"":""Left lower limb appears abducted and externally rotated, with no signs of any peripheral neurovascular lesions.\nAn ovoid formation of hard consistency can be detected by palpation in the groin area.""}],""medical examinations"":[{""name"":""Clinical and laboratory examinations"",""result"":""Exclude other coexisting abdominal, thoracic, neurological or musculoskeletal lesions""}],""diagnosis tests"":[{""test"":""X-ray examination of the pelvis, CT scan of the hip"",""result"":""Confirm the diagnosis"",""condition"":""Type IB Epstein anterior hip dislocation associated with displaced intertrochanteric fracture of the femur""}],""treatments"":[{""name"":""Antithrombotic prophylaxis"",""time"":""Postoperatively"",""duration"":""6 weeks"",""reason for taking"":""Prevent thrombosis"",""details"":""Patient is kept at rest in bed""},{""name"":""Physical therapy"",""time"":""Immediately after surgery"",""duration"":""Progressive, starting with isometric exercises, followed by hip joint mobilization exercises at 3 weeks, and walking without weight bearing on the left lower limb at 6 weeks after surgery"",""reason for taking"":""To tone the muscles and mobilize the hip joint"",""details"":""Progressive weight bearing of the injured limb is allowed at 3 months after surgery""}],""discharge"":{""follow up"":""Post-operative follow-up was assessed""}}"
+validation:133,False,False,True,,False,False,36,35,0,False,0.0,0.0,0.0,0.018518518518518517,0.019047619047619046,0.018779342723004692,0.0,7,False,868,"```json
+{
+  ""visit motivation"": ""Patient presented with pain and swelling in the anterior vestibular region for the past 2 weeks."",
+  ""admission"": {
+    ""admission_date"": ""2023-10-27"",
+    ""admission_type"": ""Nasal Discharge"",
+    ""admission_details"": {
+      ""location"": ""anterior vestibular region"",
+      ""description"": ""Recurrent episodes of pain and swelling, spontaneous remission following nasal discharge.""
+    },
+    ""admission_notes"": ""No specific notes available.""
+  },
+  ""surgery"": {
+    ""surgery_date"": ""2023-10-28"",
+    ""surgery_type"": ""Nasal Discharge"",
+    ""surgery_details"": {
+      ""location"": ""anterior vestibular region"",
+      ""description"": ""Well-defined, fluctuant swelling obliterating the labial vestibule from 12 to 22. Swelling also extended in the midpalatal region between two central incisors posteriorly up to the premolar level []. The swelling also extended in the midpalatal region between two central incisors posteriorly up to the premolar level []. The central incisor exhibited mild Grade 1 mobility buccopalatally without any movement in the corono-apical region. Both central incisors were tender on palpation. On vitality test, the central incisors were found nonvital.""
+    },
+    ""surgery_notes"": ""No specific notes available.""
+  },
+  ""symptoms"": {
+    ""symptoms_description"": ""Pain and swelling in the anterior vestibular region for the past 2 weeks."",
+    ""symptoms_severity"": ""Mild to moderate"",
+    ""symptoms_details"": {
+      ""location"": ""anterior vestibular region"",
+      ""description"": ""Recurrent episodes of pain and swelling, spontaneous remission following nasal discharge.""
+    },
+    ""symptoms_notes"": ""No specific notes available.""
+  },
+  ""medical_examinations"": {
+    ""medical_examination_date"": ""2023-10-29"",
+    ""medical_examination_type"": ""Neurological Examination"",
+    ""medical_details"": {
+      ""location"": ""anterior vestibular region"",
+      ""description"": ""Examination of the vestibular system, including the vestibular nerve, and the cranial nerves (e.g., V1, V2, V3). Assessment of the vestibular nerve's function and potential for nerve compression or damage.""
+    },
+    ""medical_notes"": ""No specific notes available.""
+  },
+  ""diagnosis_tests"": {
+    ""diagnosis_test_date"": ""2023-10-30"",
+    ""diagnosis_type"": ""Neurovascular Assessment"",
+    ""diagnosis_details"": {
+      ""location"": ""anterior vestibular region"",
+      ""description"": ""Assessment of the vestibular system's functional status, including the vestibular nerve, and the presence of neurological deficits.""
+    },
+    ""diagnosis_notes"": ""No specific notes available.""
+  },
+  ""treatments"": {
+    ""treatment_date"": ""2023-10-31"",
+    ""treatment_type"": ""Surgical Intervention"",
+    ""treatment_details"": {
+      ""location"": ""anterior vestibular region"",
+      ""description"": ""Treatment of the acute pain and swelling, including surgical intervention to repair the labial vestibule and address the underlying cause.""
+    },
+    ""treatment_notes"": ""No specific notes available.""
+  },
+  ""discharge"": {
+    ""discharge_date"": ""2023-10-32"",
+    ""discharge_type"": ""Nasal Discharge"",
+    ""discharge_details"": {
+      ""location"": ""anterior vestibular region"",
+      ""description"": ""Nasal discharge, which is typically a relatively quick and painless process.""
+    },
+    ""discharge_notes"": ""No specific notes available.""
+  }
+}
+```","{""visit motivation"":""Pain and swelling in the anterior vestibular region"",""admission"":[],""patient information"":{""age"":""40"",""sex"":""male""},""patient medical history"":{""physiological context"":""History of recurrent episodes of pain and swelling with spontaneous remission following nasal discharge""},""surgeries"":[],""symptoms"":[{""name of symptom"":""Pain and swelling"",""location"":""Anterior vestibular region, extending in the midpalatal region"",""time"":""Past 2 weeks"",""temporalisation"":""Recurrent episodes"",""behaviours affecting the symptom"":""Followed by nasal discharge"",""details"":""Swelling obliterating the labial vestibule from 12 to 22, extended in the midpalatal region between two central incisors posteriorly up to the premolar level""},{""name of symptom"":""Mobility of central incisor"",""intensity of symptom"":""Mild Grade 1 mobility buccopalatally"",""location"":""Central incisor"",""details"":""No movement in the corono-apical region""},{""name of symptom"":""Tenderness"",""location"":""Both central incisors"",""details"":""Both central incisors were tender on palpation""},{""name of symptom"":""Nonvital teeth"",""location"":""Central incisors"",""details"":""Central incisors found nonvital on vitality test""},{""name of symptom"":""Poor oral hygiene"",""location"":""Oral cavity"",""details"":""Inflamed gingiva with 5 mm of gingival pocket in both central incisors, generalized bleeding gums""}],""medical examinations"":[{""name"":""Aspiration"",""result"":""Straw-colored fluid with mixture of blood""},{""name"":""Lymphadenopathy examination"",""result"":""No lymphadenopathy found""}],""diagnosis tests"":[{""test"":""Periapical radiograph"",""result"":""Large triangular-shaped radiolucent lesion measuring about 2 cm diameter between the two maxillary central incisors with thin radio-opaque margin and displacement of both the roots in a distal direction, mild root resorption in 21 root, lesions also involved the periapical region of the two lateral incisors"",""details"":""Bone only on the cervical region of the central incisors, remaining portion completely in the radiolucent lesion, nasal septum in the middle of the radiolucent lesion""},{""test"":""Occlusal view radiograph"",""result"":""Oval radiolucent lesion from the central incisor to the 2nd premolar region in the midpalatal region measuring about 3 cm × 2 cm""},{""test"":""Cone-beam computed tomography (CBCT) scan"",""result"":""Complete breach of both the nasal floor and hard palate with hollowing in the anterior maxillary region"",""details"":""Taken to plan for the surgical procedure""}],""treatments"":[],""discharge"":{}}"
+validation:125,False,False,True,,False,False,10,34,0,False,0.0,0.0,0.0,0.038461538461538464,0.011312217194570137,0.017482517482517484,0.0,3,False,803,"```json
+{
+  ""visit motivation"": ""To improve the patellar tendon repair and enhance the knee's functional range of motion."",
+  ""admission"": {
+    ""patient information"": ""29-year-old man, a former semiprofessional handball player, had a traumatic rupture of the proximal side of the patellar tendon of the left knee in 2016 during a match. No associated disease was reported."",
+    ""patient medical history"": ""No associated disease was reported."",
+    ""surgery"": ""Performed in another health facility through a median approach using 2 anchors for tendon repair protected by an additional ipsilateral semitendinosus graft (patellar and tibial tunnels). The patient came to our health facility following severe functional deficits after an iterative rupture without having experienced any new trauma 13 months after the initial surgery. The iterative rupture of the knee extensor mechanism was also an iatrogenic fracture of the transverse patellar tunnel (). Clinically, walking was not possible, there was a lack of active extension and hemarthrosis with pain. There were no scar problems, no signs of deep or superficial infection, and no cutaneous wound. A huge gap was clinically observed between the patella and the patellar tendon."",
+    ""treatment"": ""A revision procedure was performed. An artificial ligament (LARS® polyethylene terephthalate fibers 6 mm ref. L030307 ACFAR 32 CK) and two adjustable loops, free ends of the PULLUP® BTB (SBM SAS, France), were used to enhance the patellar tendon repair. This improved patellar tendon repair significantly enhanced the knee's functional range of motion.""
+  },
+  ""patient information"": ""A preoperative lateral standard X-ray was taken of the contralateral knee at 30° of flexion to measure the Caton-Deschamps index and patellar height (). The patient was placed in a supine position under general anesthesia with a tourniquet at the proximal part of the thigh. The previous median approach was used. The patellar fracture and the site of the previous rupture were cleaned to remove fibrous tissue and hematoma. Previous anchors were left in place."",
+  ""surgery"": ""The first step was to place the ligament advanced reinforcement system (LARS® polyethylene terephthalate fibers 6 mm ref. L030307 ACFAR 32 CK) advanced to the tibia, distally to the tibial. A new transverse tunnel was drilled in the tibia, distally to the tibial."",
+  ""clinical facts"": ""The patient was placed in a supine position under general anesthesia with a tourniquet at the proximal part of the thigh. The previous median approach was used. The patellar fracture and the site of the previous rupture were cleaned to remove fibrous tissue and hematoma. Previous anchors were left in place."",
+  ""diagnosis tests"": ""The patient presented with a significant functional deficit after an iterative rupture without experiencing new trauma. The primary surgical intervention was a revision procedure. The iterative rupture of the knee extensor mechanism was also an iatrogenic fracture of the transverse patellar tunnel (). Clinically, walking was not possible, there was a lack of active extension and hemarthrosis with pain. There were no scar problems, no signs of deep or superficial infection, and no cutaneous wound. A huge gap was clinically observed between the patella and the patellar tendon."",
+  ""treatments"": ""The patient underwent a revision procedure. An artificial ligament (LARS® polyethylene terephthalate fibers 6 mm ref. L030307 ACFAR 32 CK) and two adjustable loops, free ends of the PULLUP® BTB (SBM SAS, France), were used to enhance the patellar tendon repair. This improved patellar tendon repair significantly enhanced the knee's functional range of motion.""
+}
+```","{""visit motivation"":""Severe functional deficits after an iterative rupture of the patellar tendon"",""admission"":[{""reason"":""Iterative rupture of the knee extensor mechanism and iatrogenic fracture of the transverse patellar tunnel"",""care center details"":""Our health facility""}],""patient information"":{""age"":""29"",""sex"":""Male"",""occupation"":""Former semiprofessional handball player""},""patient medical history"":{""physiological context"":""Traumatic rupture of the proximal side of the patellar tendon of the left knee in 2016""},""surgeries"":[{""reason"":""Traumatic rupture of the patellar tendon"",""Type"":""Primary surgery"",""time"":""2016"",""details"":""Surgery performed in another health facility through a median approach using 2 anchors for tendon repair protected by an additional ipsilateral semitendinosus graft (patellar and tibial tunnels)""},{""reason"":""Iterative rupture of the knee extensor mechanism"",""Type"":""Revision procedure"",""time"":""13 months after the initial surgery"",""details"":""Use of an artificial ligament (LARS®) and two adjustable loops, free ends of the PULLUP® BTB (SBM SAS, France), to enhance the patellar tendon repair""}],""symptoms"":[{""name of symptom"":""Lack of active extension"",""intensity of symptom"":""Severe"",""location"":""Left knee"",""details"":""Walking was not possible""},{""name of symptom"":""Hemarthrosis"",""location"":""Left knee"",""details"":""Pain associated with hemarthrosis""},{""name of symptom"":""Gap between the patella and the patellar tendon"",""intensity of symptom"":""Huge"",""location"":""Left knee"",""details"":""Clinically observed""}],""medical examinations"":[{""name"":""Clinical observation"",""details"":""No scar problems, no signs of deep or superficial infection, and no cutaneous wound""},{""name"":""Preoperative lateral standard X-ray"",""details"":""Taken of the contralateral knee at 30° of flexion to measure the Caton-Deschamps index and patellar height""}],""diagnosis tests"":[],""treatments"":[{""name"":""Revision procedure"",""related condition"":""Iterative rupture of the knee extensor mechanism"",""reason for taking"":""Considering the patient's age, his preinjury sports level, and lack of active extension"",""details"":""An artificial ligament (LARS®) and two adjustable loops, free ends of the PULLUP® BTB (SBM SAS, France), were used to enhance the patellar tendon repair""}],""discharge"":{}}"
+validation:390,False,False,False,Expecting value: line 1 column 1 (char 0),False,False,0,42,0,False,0.0,0.0,0.0,0.0,0.0,0.0,,29,True,2048,"```json
+{
+  ""visit motivation"": ""To save his legs."",
+  ""admission"": {
+    ""date"": ""January 2015"",
+    ""patient_information"": ""44-year-old male, aortic dissection from the sternal notch to the bifurcation of the aorta."",
+    ""surgery"": ""Four-compartment fasciotomies of the right and lower extremities."",
+    ""wound_vac"": ""Inoperable."",
+    ""amputation_due_to_poor_motor_control"": ""Performed with poor motor control."",
+    ""wound_vac_location"": ""Operating room.""
+  },
+  ""patients"": [
+    {
+      ""name"": ""Patient A"",
+      ""age"": 44,
+      ""gender"": ""Male"",
+      ""medical_history"": ""Aortic dissection from the sternal notch to the bifurcation of the aorta. Forty-eight hours later, he developed bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+      ""symptoms"": ""Bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+      ""diagnosis_tests"": ""Amputation due to poor motor control."",
+      ""treatments"": ""Decompression, four-compartment fasciotomies of the right and lower extremities."",
+      ""discharge"": ""May 2015"",
+      ""wound_vac_location"": ""Operating room""
+    },
+    {
+      ""name"": ""Patient B"",
+      ""age"": 44,
+      ""gender"": ""Female"",
+      ""medical_history"": ""Bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+      ""symptoms"": ""Bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+      ""diagnosis_tests"": ""Amputation due to poor motor control."",
+      ""treatments"": ""Decompression, four-compartment fasciotomies of the right and lower extremities."",
+      ""discharge"": ""May 2015"",
+      ""wound_vac_location"": ""Operating room""
+    },
+    {
+      ""name"": ""Patient C"",
+      ""age"": 44,
+      ""gender"": ""Male"",
+      ""medical_history"": ""Aortic dissection from the sternal notch to the bifurcation of the aorta. Forty-eight hours later, he developed bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+      ""symptoms"": ""Bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+      ""diagnosis_tests"": ""Amputation due to poor motor control."",
+      ""treatments"": ""Decompression, four-compartment fasciotomies of the right and lower extremities."",
+      ""discharge"": ""May 2015"",
+      ""wound_vac_location"": ""Operating room""
+    }
+  ],
+  ""patient_information"": {
+    ""name"": ""Patient A"",
+    ""age"": 44,
+    ""gender"": ""Male"",
+    ""medical_history"": ""Aortic dissection from the sternal notch to the bifurcation of the aorta. Forty-eight hours later, he developed bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+    ""symptoms"": ""Bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+    ""diagnosis_tests"": ""Amputation due to poor motor control."",
+    ""treatments"": ""Decompression, four-compartment fasciotomies of the right and lower extremities."",
+    ""discharge"": ""May 2015"",
+    ""wound_vac_location"": ""Operating room""
+  },
+  ""patients"": [
+    {
+      ""name"": ""Patient A"",
+      ""age"": 44,
+      ""gender"": ""Male"",
+      ""medical_history"": ""Aortic dissection from the sternal notch to the bifurcation of the aorta. Forty-eight hours later, he developed bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+      ""symptoms"": ""Bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+      ""diagnosis_tests"": ""Amputation due to poor motor control."",
+      ""treatments"": ""Decompression, four-compartment fasciotomies of the right and lower extremities."",
+      ""discharge"": ""May 2015"",
+      ""wound_vac_location"": ""Operating room""
+    },
+    {
+      ""name"": ""Patient B"",
+      ""age"": 44,
+      ""gender"": ""Female"",
+      ""medical_history"": ""Bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+      ""symptoms"": ""Bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+      ""diagnosis_tests"": ""Amputation due to poor motor control."",
+      ""treatments"": ""Decompression, four-compartment fasciotomies of the right and lower extremities."",
+      ""discharge"": ""May 2015"",
+      ""wound_vac_location"": ""Operating room""
+    },
+    {
+      ""name"": ""Patient C"",
+      ""age"": 44,
+      ""gender"": ""Male"",
+      ""medical_history"": ""Aortic dissection from the sternal notch to the bifurcation of the aorta. Forty-eight hours later, he developed bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+      ""symptoms"": ""Bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+      ""diagnosis_tests"": ""Amputation due to poor motor control."",
+      ""treatments"": ""Decompression, four-compartment fasciotomies of the right and lower extremities."",
+      ""discharge"": ""May 2015"",
+      ""wound_vac_location"": ""Operating room""
+    }
+  ],
+  ""patient_information"": {
+    ""name"": ""Patient A"",
+    ""age"": 44,
+    ""gender"": ""Male"",
+    ""medical_history"": ""Aortic dissection from the sternal notch to the bifurcation of the aorta. Forty-eight hours later, he developed bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+    ""symptoms"": ""Bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+    ""diagnosis_tests"": ""Amputation due to poor motor control."",
+    ""treatments"": ""Decompression, four-compartment fasciotomies of the right and lower extremities."",
+    ""discharge"": ""May 2015"",
+    ""wound_vac_location"": ""Operating room""
+  },
+  ""patients"": [
+    {
+      ""name"": ""Patient A"",
+      ""age"": 44,
+      ""gender"": ""Male"",
+      ""medical_history"": ""Aortic dissection from the sternal notch to the bifurcation of the aorta. Forty-eight hours later, he developed bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+      ""symptoms"": ""Bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+      ""diagnosis_tests"": ""Amputation due to poor motor control."",
+      ""treatments"": ""Decompression, four-compartment fasciotomies of the right and lower extremities."",
+      ""discharge"": ""May 2015"",
+      ""wound_vac_location"": ""Operating room""
+    },
+    {
+      ""name"": ""Patient B"",
+      ""age"": 44,
+      ""gender"": ""Female"",
+      ""medical_history"": ""Bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies of the right and lower extremities. A wound vac was placed in the operating room."",
+      ""symptoms"": ""Bilateral lower extremity compartment syndrome requiring decompressive, four-compartment fasciotomies","{""visit motivation"":""Aortic dissection"",""admission"":[{""reason"":""Aortic dissection, bilateral lower extremity compartment syndrome, end-stage renal disease, blindness, pseudomonas infection, Stage 2 pressure ulcer, ischemic bowel, circulatory arrest, postoperative respiratory failure, pneumothorax"",""date"":""January 2015"",""duration"":""Approximately 4 months"",""care center details"":""Discharged to a skilled nursing facility in May 2015""}],""patient information"":{""age"":""44"",""sex"":""Male""},""patient medical history"":{},""surgeries"":[{""reason"":""Bilateral lower extremity compartment syndrome"",""Type"":""Decompressive, four-compartment fasciotomies of the right and lower extremities"",""time"":""48 hours after initial presentation"",""outcome"":""Required wound vac, later developed complications"",""details"":""Amputation was discussed but not pursued at patient and mother's request""},{""reason"":""Ischemic bowel"",""Type"":""Colectomy/partial small bowel resection/ileostomy"",""outcome"":""Circulatory arrest""},{""reason"":""Postoperative respiratory failure"",""Type"":""Tracheostomy""}],""symptoms"":[{""name of symptom"":""Leg pain"",""location"":""Legs"",""behaviours affecting the symptom"":""Walking with a front wheeled walker"",""details"":""Had to stop walking due to leg pain""}],""medical examinations"":[],""diagnosis tests"":[{""test"":""Wound cultures"",""result"":""Growth of klebsiella pneumonia and enterococcus species"",""condition"":""Wound infections leading to sepsis"",""time"":""Three weeks after discharge to skilled nursing facility"",""details"":""Further debridement was required""}],""treatments"":[{""name"":""Wound vac"",""related condition"":""Bilateral lower fasciotomy sites"",""time"":""Placed in the operating room initially, reapplied later"",""reason for taking"":""To aid in healing of fasciotomy sites"",""reaction to treatment"":""Required removal and replacement with wet-to-dry dressings due to leg pain, later VAC VeraFlo applied"",""details"":""VAC VeraFlo was applied to hasten granulation tissue formation""},{""name"":""Hemodialysis"",""related condition"":""End-stage renal disease"",""time"":""At discharge"",""reason for taking"":""Due to end-stage renal disease""},{""name"":""Oral antibiotics"",""related condition"":""Wound infections"",""time"":""At discharge to home"",""reason for taking"":""To treat wound infections""}],""discharge"":{""reason"":""Improvement with granulation tissue over bone"",""discharge summary"":""Patient was discharged three weeks after re-admission to his home with granulation tissue over bone, on oral antibiotics, and with a wound vac, under the care of""}}"
+validation:915,False,False,True,,False,False,22,29,0,False,0.0,0.0,0.0,0.004784688995215311,0.003629764065335753,0.00412796697626419,0.0,3,False,432,"```json
+{
+  ""visit motivation"": ""Patient with metastatic uveal melanoma with extensive experience and clinical expertise."",
+  ""admission"": {
+    ""date"": ""1984"",
+    ""location"": ""Hospital"",
+    ""patient_information"": ""Patient's name, age, gender, medical history, surgeries, symptoms, medical examinations, diagnosis tests, treatments, discharge.""
+  },
+  ""surgery"": {
+    ""date"": ""1984"",
+    ""location"": ""Hospital"",
+    ""patient_information"": ""Patient's name, age, gender, medical history, surgeries, symptoms, medical examinations, diagnosis tests, treatments, discharge.""
+  },
+  ""symptoms"": {
+    ""description"": ""Progressive abdominal distention, early satiety, weight loss of 20 pounds over a period of 6 months."",
+    ""severity"": ""Mild to moderate"",
+    ""duration"": ""6 months""
+  },
+  ""medical_examinations"": {
+    ""diagnosis_tests"": [
+      ""CT scan of the abdomen"",
+      ""Hepatic tumor biopsy"",
+      ""Metastatic melanoma consistent with his primary choroidal melanoma""
+    ],
+    ""treatment_options"": [
+      ""Radioactive Co-60 plaque"",
+      ""Radiation therapy"",
+      ""Chemotherapy""
+    ]
+  },
+  ""diagnosis_tests"": {
+    ""results"": ""Hepatic tumor biopsy revealed metastatic melanoma consistent with his primary choroidal melanoma.""
+  },
+  ""treatments"": {
+    ""therapy"": ""Radioactive Co-60 plaque"",
+    ""effectiveness"": ""Effective in reducing tumor burden""
+  },
+  ""discharge"": {
+    ""date"": ""1984"",
+    ""location"": ""Hospital"",
+    ""patient_information"": ""Patient's name, age, gender, medical history, surgeries, symptoms, medical examinations, diagnosis tests, treatments, discharge.""
+  }
+}
+```","{""visit motivation"":""Progressive abdominal distention, early satiety, and weight loss"",""admission"":[{""reason"":""Generalized weakness, acute renal failure, hyperkalemia, and spontaneous tumor lysis""}],""patient information"":{""age"":""75"",""sex"":""Male""},""patient medical history"":{""physiological context"":""History of choroidal melanoma of the right eye diagnosed in 1984, treated by radioactive Co-60 plaque""},""surgeries"":[{""reason"":""Choroidal melanoma of the right eye"",""Type"":""Radioactive Co-60 plaque treatment"",""time"":""1984""}],""symptoms"":[{""name of symptom"":""Progressive abdominal distention, early satiety, weight loss, generalized weakness"",""location"":""Abdomen"",""time"":""Over a period of 6 months"",""details"":""Weight loss of 20 pounds""}],""medical examinations"":[{""name"":""CT scan of the abdomen"",""result"":""Large hepatic mass measuring 34 cm by 26 cm"",""details"":""Replacing the majority of the liver without retroperitoneal or mesenteric lymphadenopathy""}],""diagnosis tests"":[{""test"":""Hepatic tumor biopsy"",""result"":""Metastatic melanoma consistent with primary choroidal melanoma"",""condition"":""Metastatic melanoma""}],""treatments"":[{""name"":""Hemodialysis"",""related condition"":""Acute renal failure"",""reason for taking"":""To treat acute renal failure"",""reaction to treatment"":""Patient recovered renal function, serum creatinine improved from 4.93 mg/dl to 0.69 mg/dl""},{""name"":""Nab-paclitaxel"",""related condition"":""Metastatic melanoma"",""dosage"":""Initially 150 mg/m2, reduced to 75 mg/m2"",""frequency"":""Weekly"",""reason for taking"":""Treatment for metastatic melanoma"",""reaction to treatment"":""Clinical improvement of generalized weakness, abdominal distention, and edema of the legs after three doses.\nSignificant decrease in tumor burden after one month of therapy.""}],""discharge"":{""discharge summary"":""Patient continues to have excellent functional status, ECOG performance status of I, and no signs or symptoms of disease progression for 32 months.""}}"
+validation:978,False,False,False,Duplicate JSON key: follow-up echocardiogram,False,False,0,26,0,False,0.0,0.0,0.0,0.0,0.0,0.0,,1,False,196,"```json
+{
+  ""visit motivation"": ""To manage a symptomatic patient with an aortic valve mass and a heart murmur."",
+  ""admission"": {
+    ""patient information"": ""68-year-old asymptomatic woman"",
+    ""patient medical history"": ""Free"",
+    ""surgery"": ""Aortic valve mass detected on transthoracic echocardiography"",
+    ""symptoms"": ""Mild aortic valve mass, heart murmur, routine auscultation"",
+    ""medical examinations"": ""Free"",
+    ""diagnosis tests"": ""Free"",
+    ""treatments"": ""Free""
+  },
+  ""handoff"": {
+    ""discharge"": ""6th postoperative day in optimal clinical conditions"",
+    ""follow-up echocardiogram"": ""No tumor recurrence or aortic regurgitation or dysfunction"",
+    ""follow-up echocardiogram"": ""3 months follow-up with repeat echocardiography""
+  }
+}
+```","{""visit motivation"":""Aortic valve mass detected on transthoracic echocardiography"",""admission"":[{""reason"":""Elective surgical excision of aortic valve mass"",""duration"":""6 days""}],""patient information"":{""age"":""68"",""sex"":""Female""},""patient medical history"":{""physiological context"":""Her medical history was free""},""surgeries"":[{""reason"":""Removal of aortic valve mass"",""Type"":""Valve-sparing technique with simple shave excision"",""outcome"":""Uncomplicated"",""details"":""A median sternotomy and a standard cardiopulmonary bypass were established.\nCare was taken to avoid embolization and ensure no remnants from fragmentation of the friable tumor were left behind.""}],""symptoms"":[{""name of symptom"":""Heart murmur"",""time"":""Found on routine auscultation"",""details"":""Patient was asymptomatic""}],""medical examinations"":[{""name"":""Transthoracic echocardiography"",""result"":""Aortic valve mass measuring 10.5 mm × 4.6 mm attached to the left coronary cusp, estimated left ventricular ejection fraction of 0.50"",""details"":""Mass was a pedunculated, mobile, round, echo dense, and stipple in texture structure, with well-demarcated borders, typical of a fibroelastoma.\nNo aortic insufficiency or other valvular abnormalities.""}],""diagnosis tests"":[{""test"":""Histological examination"",""result"":""Confirmed as a papillary fibroelastoma"",""condition"":""Papillary fibroelastoma"",""details"":""The resected lesion had a flower-like appearance with frond-like projections deriving from the tumor.""}],""treatments"":[{""name"":""Surgical excision"",""related condition"":""Papillary fibroelastoma"",""reason for taking"":""Potential embolic risk and possibility of further enlargement of the mass""}],""discharge"":{""reason"":""Optimal clinical conditions"",""follow up"":""Follow-up in 3 months with repeat echocardiography"",""discharge summary"":""Patient discharged on the 6th postoperative day without complications.\nA follow-up echocardiogram at 2 weeks showed no tumor recurrence or aortic regurgitation or dysfunction.""}}"
+validation:2156,False,False,True,,False,False,13,32,0,False,0.0,0.0,0.0,0.027972027972027972,0.011363636363636364,0.01616161616161616,0.0,3,False,427,"```json
+{
+  ""visit motivation"": ""Patient presented with right aural fullness and nasal obstruction that had been evident for three years. He had no juvenile history of nasal disease or otitis media."",
+  ""admission"": {
+    ""admission_date"": ""2023-10-27"",
+    ""admission_details"": ""Patient was admitted to the ENT clinic for a right aural fullness and nasal obstruction. The patient had no juvenile history of nasal disease or otitis media.""
+  },
+  ""surgery"": {
+    ""surgery_date"": ""2023-10-28"",
+    ""surgery_details"": ""The surgical procedure involved transnasal endoscopic surgery to obtain a definitive diagnosis and to relieve the nasal obstruction. A hard mass with a smooth surface was seen to arise from the pharyngeal ostium of the ET.""
+  },
+  ""diagnosis_tests"": [
+    {
+      ""test_name"": ""CT Scan"",
+      ""result"": ""Tumor occupied the nasopharynx, and a high-intensity shadow was evident within it.""
+    },
+    {
+      ""test_name"": ""CT Scan"",
+      ""result"": ""Tumor consisted of heterogeneous components with T1 enhancement (), and that the inside of the tumor appeared more contrasted with T2 enhancement.""
+    }
+  ],
+  ""treatments"": [
+    {
+      ""treatment_name"": ""Transnasal Endoscopic Surgery"",
+      ""description"": ""Performed to relieve the nasal obstruction. A hard mass with a smooth surface was seen to arise from the pharyngeal ostium of the ET.""
+    }
+  ],
+  ""discharge"": {
+    ""discharge_date"": ""2023-10-29"",
+    ""discharge_details"": ""The patient was discharged from the ENT clinic for a right aural fullness and nasal obstruction. The patient had no juvenile history of nasal disease or otitis media.""
+  }
+}
+```","{""visit motivation"":""Right aural fullness and nasal obstruction"",""admission"":[{""reason"":""Investigation of secretory otitis media (SOM) in the right ear and a tumor in the posterior part of the nasal cavity and nasopharynx""}],""patient information"":{""age"":""56"",""sex"":""Male""},""patient medical history"":{""physiological context"":""No juvenile history of nasal disease or otitis media""},""surgeries"":[{""reason"":""Partial resection of the nasopharyngeal tumor to obtain a definitive diagnosis and to relieve nasal obstruction"",""Type"":""Transnasal endoscopic surgery"",""outcome"":""Part of the tumor in the ET remained, and a tympanostomy tube was inserted into the right ear to resolve the SOM"",""details"":""A hard mass with a smooth surface was seen to arise from the pharyngeal ostium of the ET.\nThe mass was reduced piecemeal using scissors and sharp forceps, taking care to preserve the normal mucosa of the nasopharynx.\nThe tumor was not attached to the nasal and pharyngeal mucosa and protruded into the ET.\nHowever, its point of origin could not be detected precisely because the surgical devices were unable to reach the inside of the ET.""}],""symptoms"":[{""name of symptom"":""Right aural fullness"",""location"":""Right ear"",""time"":""Three years""},{""name of symptom"":""Nasal obstruction"",""location"":""Nasal cavity"",""time"":""Three years""}],""medical examinations"":[{""name"":""Physical examination"",""result"":""Detection of a solid, smooth and poorly mobile tumor in the posterior part of the nasal cavity and nasopharynx""}],""diagnosis tests"":[{""test"":""Transnasal biopsy"",""result"":""Suggested fibroma"",""condition"":""Nasopharyngeal tumor""},{""test"":""Computed tomography (CT)"",""result"":""Tumor occupied the nasopharynx, with a high-intensity shadow within it, extending in the direction of the ET"",""condition"":""Nasopharyngeal tumor"",""details"":""CT was unable to reveal the origin of the tumor""},{""test"":""Magnetic resonance imaging (MRI)"",""result"":""Heterogeneous components with T1 enhancement, more contrasted with T2 enhancement, and a smooth line of the nasopharyngeal mucosa suggesting no tumor invasion in the nasopharynx"",""condition"":""Nasopharyngeal tumor"",""details"":""Enhancement with intravenous contrast medium revealed no remarkable features by both CT and MRI""}],""treatments"":[{""name"":""Partial resection of the nasopharyngeal tumor"",""related condition"":""Nasopharyngeal tumor"",""reason for taking"":""To obtain a definitive diagnosis and to relieve nasal obstruction"",""details"":""Part of the tumor in the ET remained; a tympanostomy tube was inserted into the right ear to resolve the SOM""}],""discharge"":{}}"
+validation:2593,False,False,True,,False,False,13,22,1,False,0.07692307692307693,0.045454545454545456,0.05714285714285715,0.13286713286713286,0.07851239669421488,0.09870129870129869,0.0,3,False,542,"```json
+{
+  ""visit motivation"": ""Patient presents with sudden onset of blurry vision in left eye three days prior."",
+  ""admission"": ""Patient presents to the hospital with sudden onset of blurry vision in left eye three days prior."",
+  ""patient information"": {
+    ""name"": ""Patient Name"",
+    ""age"": 61,
+    ""gender"": ""Male"",
+    ""medical history"": ""Rheumatoid arthritis, hypertension, and diabetes mellitus"",
+    ""surgery"": ""Head CT performed at an outside facility"",
+    ""symptoms"": ""Sudden onset of blurry vision in left eye three days prior."",
+    ""medical examinations"": ""Initial examination revealed visual acuity of 20/40 on right eye; however, on the left eye, there was an apparent left-sided visual loss."",
+    ""diagnosis tests"": ""Ophthalmologic and Neurologic consultations initially revealed visual acuity was 20/40 on right eye; however, on the left eye, there was an apparent left-sided visual loss."",
+    ""treatments"": ""Intraocular pressure was normal in both eyes, pupils were equally round and reactive to light, and no afferent pupillary defect was observed. Moreover, the extraocular muscles were intact and with full range of motion. In the right eye, visual fields were full to finger count. In the left eye, the acuity in the nasal visual field was greater than that in the temporal visual field. In the nasal visual field, the patient was able to count fingers; however, in the temporal visual field, the patient could barely detect gross hand movement at one foot out. External examination was within normal limits, and pen light examination was only remarkable for nuclear sclerotic cataracts bilaterally. Dilated fundus examination demonstrated no evidence of pathology to the vitreous, optic nerve, or retina that might explain the vision loss. Four days later, repeat examination by Ophthalmology demonstrated a stable right eye; nonetheless, the left eye temporal visual field was 20/25 and patient was able to count fingers without mistake on left visual field. Pupil and retina examination were unchanged from previous examination. However, visual field mapping could not be done as this patient was seen in the inpatient setting."",
+    ""result"": ""Consequently, an initial head MRI with and without contrast was performed, which showed focal areas of restricted diffusion in the right medial temporal lobe, inferior right.""
+  },
+  ""handoff"": ""An initial head MRI with and without contrast was performed, which showed focal areas of restricted diffusion in the right medial temporal lobe, inferior right.""
+}
+```","{""visit motivation"":""Sudden onset of blurry vision in left eye"",""admission"":[{""reason"":""Sudden onset of blurry vision in left eye""}],""patient information"":{""age"":""61"",""sex"":""Male"",""ethnicity"":""Korean""},""patient medical history"":{""physiological context"":""Rheumatoid arthritis, hypertension, diabetes mellitus""},""surgeries"":[],""symptoms"":[{""name of symptom"":""Blurry vision"",""location"":""Left eye"",""time"":""Three days prior to presentation"",""temporalisation"":""Sudden onset"",""details"":""No history of similar events, denied visual complaints in right eye""}],""medical examinations"":[{""name"":""Ophthalmologic and Neurologic consultations"",""result"":""Visual acuity was 20/40 on right eye, left-sided visual loss on left eye"",""details"":""Normal intraocular pressure, pupils equally round and reactive to light, no afferent pupillary defect, intact extraocular muscles with full range of motion, full visual fields to finger count in right eye, nasal visual field acuity greater than temporal visual field in left eye, could count fingers in nasal visual field and barely detect gross hand movement at one foot out in temporal visual field, external examination within normal limits, pen light examination remarkable for nuclear sclerotic cataracts bilaterally, no evidence of pathology to vitreous, optic nerve, or retina""},{""name"":""Repeat examination by Ophthalmology"",""result"":""Stable right eye, left eye temporal visual field was 20/25"",""details"":""Patient was able to count fingers without mistake on left visual field, pupil and retina examination unchanged from previous examination, visual field mapping could not be done""}],""diagnosis tests"":[{""test"":""Head CT"",""result"":""Negative for acute ischemia, hemorrhage, midline shift, or extra-axial fluid collection"",""details"":""Performed at an outside facility""},{""test"":""Head MRI with and without contrast"",""result"":""Showed focal areas of restricted diffusion in the right medial temporal lobe, inferior right""}],""treatments"":[],""discharge"":{}}"
+validation:111,False,False,True,,False,False,22,40,0,False,0.0,0.0,0.0,0.0404040404040404,0.02222222222222222,0.02867383512544803,0.0,4,False,574,"```json
+{
+  ""visit motivation"": ""Patient presented with intermittent chest pain and progressive shortness of breath for a few weeks."",
+  ""admission"": {
+    ""admission_date"": ""2023-10-27"",
+    ""admission_details"": ""Patient was admitted to the emergency department with intermittent chest pain and progressive shortness of breath for a few weeks."",
+    ""admission_status"": ""Stable except for low saturation on a pulse oximetry of 86% on room air.""
+  },
+  ""surgery"": {
+    ""surgery_date"": ""2023-10-28"",
+    ""surgery_details"": ""Patient underwent a computed tomography angiography (CTA) of the chest to rule out pulmonary embolism."",
+    ""surgery_status"": ""Negative for pulmonary embolism, however, it displayed extensive miliary densities throughout the bilateral lung fields.""
+  },
+  ""symptoms"": {
+    ""symptoms_description"": ""Intermittent chest pain and progressive shortness of breath for a few weeks."",
+    ""symptoms_severity"": ""Mild to moderate"",
+    ""symptoms_diagnosis"": ""Possible use of recreational marijuana""
+  },
+  ""medical_ examinations"": {
+    ""medical_examinations_description"": ""Patient was admitted to the floor with a differential diagnosis of military tuberculosis versus fungal infection."",
+    ""medical_examinations_status"": ""Negative"",
+    ""medical_examinations_details"": ""Human immunodeficiency virus (HIV), fungal, and Quantiferron testing were negative.""
+  },
+  ""diagnosis_tests"": {
+    ""diagnosis_tests_description"": ""Possible use of intravenous injection of foreign material and upon further questioning the patient admitted to injecting oral opiates."",
+    ""diagnosis_tests_status"": ""Negative"",
+    ""diagnosis_tests_details"": ""Patient admitted to injecting oral opiates.""
+  },
+  ""treatments"": {
+    ""treatment_description"": ""Intravenous steroids and inhaled albuterol"",
+    ""treatment_status"": ""No improvement seen"",
+    ""treatment_details"": ""Patient remained hypoxemic despite therapy, and, therefore, underwent a bronchoscopy with a lung biopsy to find out the etiology of the disease process.""
+  },
+  ""discharge"": {
+    ""discharge_date"": ""2023-10-29"",
+    ""discharge_details"": ""Patient was discharged from the emergency department with intermittent chest pain and progressive shortness of breath for a few days."",
+    ""discharge_status"": ""Stable except for low saturation on a pulse oximetry of 86% on room air.""
+  }
+}
+```","{""visit motivation"":""Intermittent chest pain and progressive shortness of breath for a few weeks"",""admission"":[{""reason"":""Persistent hypoxia and to rule out pulmonary embolism""}],""patient information"":{""age"":""37"",""sex"":""Male"",""socio economic context"":""Homeless""},""patient medical history"":{""physiological context"":""Peripheral vascular disease, type 1 diabetes mellitus, hypertension"",""psychological context"":""Depression"",""drug usage"":""Recreational marijuana use, admitted to injecting oral opiates""},""surgeries"":[],""symptoms"":[{""name of symptom"":""Chest pain"",""intensity of symptom"":""Intermittent"",""location"":""Chest"",""time"":""Few weeks"",""temporalisation"":""Progressive""},{""name of symptom"":""Shortness of breath"",""intensity of symptom"":""Progressive"",""time"":""Few weeks"",""temporalisation"":""Progressive""}],""medical examinations"":[{""name"":""Physical examination"",""result"":""Tachypnic, fine crackles in the bilateral lung fields on auscultation""},{""name"":""Pulse oximetry"",""result"":""Low saturation of 86% on room air""}],""diagnosis tests"":[{""test"":""Urine drug screen"",""result"":""Positive for opioids""},{""test"":""D-Dimer"",""result"":""Highly elevated""},{""test"":""Computed tomography angiography (CTA) of the chest"",""result"":""Negative for pulmonary embolism, extensive miliary densities throughout the bilateral lung fields""},{""test"":""HIV, fungal, and Quantiferron testing"",""result"":""Negative""},{""test"":""Cardiac work up and autoimmune serology"",""result"":""Unremarkable""},{""test"":""Bronchoscopy with lung biopsy"",""result"":""Alveolated lung tissue with a miliary pattern of perivascular foreign body histiocytes containing refractory material suggestive of microcrystalline cellulose material"",""condition"":""Intravenous injection of foreign material"",""details"":""No evidence of malignancy, no fungal or acid fast bacilli organisms identified on special stains""}],""treatments"":[{""name"":""Intravenous steroids and inhaled albuterol"",""related condition"":""Hypoxemia and suspected etiology of lung pathology"",""reason for taking"":""To improve respiratory condition"",""reaction to treatment"":""No improvement seen""}],""discharge"":{""reason"":""The patient developed hypercapnic respiratory failure""}}"
+validation:2408,False,False,True,,False,False,12,40,0,False,0.0,0.0,0.0,0.0989010989010989,0.02967032967032967,0.04564666103127642,0.0,2,False,356,"```json
+{
+  ""visit motivation"": ""Patient presented with severe colicky epigastric pain, periumbilical right upper quadrant pain, nausea and chills, and a history of hypertension, hypothyroidism, hyperlipidemia, and endometrial cancer status post pelvic radiation and hysterectomy."",
+  ""admission"": {
+    ""date"": ""4 days prior to arrival"",
+    ""location"": ""Outside facility"",
+    ""description"": ""Patient was made NPO with NG decompression in addition to receiving empiric meropenem at the outside facility where a cholecystoduodenal fistula with large gallstone in the duodenal lumen was identified by abdominal CT.""
+  },
+  ""surgery"": {
+    ""type"": ""Endoscopic retrieval of the duodenal gallstone"",
+    ""procedure"": ""Endoscopic retrieval attempts resulted in partial fragmentation of the stone but were ultimately unsuccessful."",
+    ""result"": ""The following day repeat abdominal CT revealed migration of the stone into the proximal jejunum.""
+  },
+  ""treatment"": {
+    ""management"": ""Further distal transit of the stone may result in it becoming lodged in a bowel loop contained in the patient's incisional hernia or a pelvic loop due to previous pelvic radiation."",
+    ""outcome"": ""The abdomen was entered laparoscopically.""
+  },
+  ""discharge"": {
+    ""date"": ""4 days prior to arrival"",
+    ""location"": ""Outside facility"",
+    ""description"": ""Patient was made NPO with NG decompression in addition to receiving empiric meropenem at the outside facility where a cholecystoduodenal fistula with large gallstone in the duodenal lumen was identified by abdominal CT.""
+  }
+}
+```","{""visit motivation"":""Severe colicky epigastric, periumbilical, and right upper quadrant pain of one day duration associated with nausea and chills"",""admission"":[{""reason"":""Severe colicky epigastric, periumbilical, and right upper quadrant pain; cholecystoduodenal fistula with large gallstone in the duodenal lumen identified"",""date"":""Four days prior to arrival at our institution"",""care center details"":""Outside facility""}],""patient information"":{""age"":""80"",""sex"":""Female""},""patient medical history"":{""physiological context"":""History of hypertension, hypothyroidism, hyperlipidemia, and endometrial cancer status post pelvic radiation and hysterectomy, with previous abdominal surgery secondary to iatrogenic colonic perforation during colonoscopy""},""surgeries"":[{""reason"":""Cholecystoduodenal fistula with large gallstone in the duodenal lumen"",""Type"":""Laparoscopic surgery with adhesiolysis and enterotomy for gallstone removal"",""outcome"":""Gallstone was successfully delivered through enterotomy"",""details"":""Multiple areas of adhesions were encountered requiring adhesiolysis and the insertion of a hand port.\nTwo stay sutures were placed on the antimesenteric border, and closure of the enterotomy was achieved via two transverse layers of suture.""}],""symptoms"":[{""name of symptom"":""Severe colicky epigastric, periumbilical, and right upper quadrant pain"",""intensity of symptom"":""Severe"",""location"":""Epigastric, periumbilical, and right upper quadrant"",""time"":""One day duration"",""details"":""Associated with nausea and chills""}],""medical examinations"":[{""name"":""Intake exam"",""result"":""Vitals were stable within normal limits; no abdominal tenderness and no distention""}],""diagnosis tests"":[{""test"":""Abdominal CT"",""result"":""Cholecystoduodenal fistula with large gallstone in the duodenal lumen; migration of the stone into the proximal jejunum"",""condition"":""Cholecystoduodenal fistula"",""details"":""Initial identification at the outside facility; repeat abdominal CT at our institution""},{""test"":""Upper GI"",""result"":""Failure of stone progression"",""condition"":""Obstruction due to gallstone"",""time"":""Hospital day four at the outside facility"",""details"":""Prompted transfer to our institution for definitive management""}],""treatments"":[{""name"":""NPO with NG decompression"",""related condition"":""Severe colicky epigastric, periumbilical, and right upper quadrant pain"",""reason for taking"":""To manage symptoms and prepare for further treatment"",""details"":""Administered at the outside facility""},{""name"":""Empiric meropenem"",""related condition"":""Suspected infection or as a precaution due to the identified cholecystoduodenal fistula"",""reason for taking"":""Empiric treatment"",""details"":""Administered at the outside facility""},{""name"":""Endoscopic retrieval"",""related condition"":""Large gallstone in the duodenal lumen"",""reason for taking"":""Attempt to remove the gallstone non-surgically"",""reaction to treatment"":""Partial fragmentation of the stone but ultimately unsuccessful"",""details"":""Gastroenterology attempted endoscopic retrieval; the stone was noted to be 3.5 cm in diameter and obstructing the lumen of the bulbar duodenum""}],""discharge"":{}}"
+validation:833,False,False,True,,False,False,40,35,1,False,0.025,0.02857142857142857,0.026666666666666665,0.041,0.04685714285714286,0.04373333333333334,0.0,6,False,720,"```json
+{
+  ""visit motivation"": ""Patient presents with intermittent generalized abdominal pain radiating to the back, no comorbidities or significant social history."",
+  ""admission"": {
+    ""date"": ""2024-10-27"",
+    ""time"": ""8:00 AM"",
+    ""location"": ""Emergency Department"",
+    ""details"": ""Patient presented to emergency department with intermittent generalized abdominal pain radiating to the back. No comorbidities or significant social history.""
+  },
+  ""patient information"": {
+    ""name"": ""Patient Name"",
+    ""gender"": ""Male"",
+    ""age"": 54,
+    ""allergies"": [],
+    ""medical_history"": [
+      ""No known medical conditions or significant social history."",
+      ""No known allergies to medications or food.""
+    ],
+    ""symptoms"": [
+      ""Intermittent generalized abdominal pain radiating to the back."",
+      ""No comorbidities or significant social history."",
+      ""No known allergies to medications or food.""
+    ],
+    ""medical_examinations"": [
+      ""Hemodynamic stability."",
+      ""Soft abdomen with generalized tenderness."",
+      ""Initial lab results showed a WBC 6.77 × 109/L, serum amylase 79IU/L, urinary amylase 738IU/L, CRP 73.88 mg/L, D-dimer 13.66ug/ml, and a Lactate of 1.87 mmol/L.""
+    ],
+    ""diagnosis_tests"": [
+      ""Wound dissection."",
+      ""Intra-abdominal puncture."",
+      ""Intra-abdominal injection."",
+      ""Intra-abdominal contrast."",
+      ""IV contrast."",
+      ""Diffuse wall thickening involving multiple loops of jejunum highly suspicious of bowel ischemia.""
+    ],
+    ""treatments"": [
+      ""Heparin Infusion."",
+      ""LMWH."",
+      ""Warfarin."",
+      ""Gastric Sleeve."",
+      ""Intramuscular Injection (IM)."",
+      ""Bolus of Hep""
+    ],
+    ""discharge"": {
+      ""date"": ""2024-10-27"",
+      ""time"": ""8:00 AM"",
+      ""location"": ""Emergency Department"",
+      ""details"": ""Patient presented to emergency department with intermittent generalized abdominal pain radiating to the back. No comorbidities or significant social history.""
+    }
+  },
+  ""absence_information"": {
+    ""admission_reason"": ""Patient presents with intermittent generalized abdominal pain radiating to the back, no comorbidities or significant social history."",
+    ""surgery_reason"": ""No known medical conditions or significant social history."",
+    ""symptoms_reason"": ""No known medical conditions or significant social history."",
+    ""medical_examination_reason"": ""No known medical conditions or significant social history."",
+    ""diagnosis_test_reason"": ""No known medical conditions or significant social history."",
+    ""treatment_reason"": ""No known medical conditions or significant social history."",
+    ""discharge_reason"": ""Patient presents with intermittent generalized abdominal pain radiating to the back, no comorbidities or significant social history.""
+  },
+  ""additional_notes"": ""The patient was admitted under the gastroenterology service with the diagnosis of pancreatitis.""
+}
+```","{""visit motivation"":""Intermittent generalized abdominal pain radiating to the back"",""admission"":[{""reason"":""Diagnosis of pancreatitis"",""care center details"":""Gastroenterology service""}],""patient information"":{""age"":""54"",""sex"":""male""},""patient medical history"":{""physiological context"":""No comorbidities""},""surgeries"":[{""reason"":""Diffuse wall thickening involving multiple loops of jejunum highly suspicious of bowel ischemia"",""Type"":""Exploratory laparotomy"",""outcome"":""No evidence of full thickness necrosis but characteristics of small bowel edema secondary to SMV thrombosis"",""details"":""An ABthera vacuum dressing was applied in anticipation of a second look laparotomy.""}],""symptoms"":[{""name of symptom"":""Generalized abdominal pain"",""location"":""Radiating to the back"",""time"":""Three day history"",""temporalisation"":""Intermittent"",""details"":""Particularly in the epigastric region""}],""medical examinations"":[{""name"":""Physical examination"",""result"":""Soft abdomen with generalized tenderness""}],""diagnosis tests"":[{""test"":""CT Abdomen with oral and IV contrast"",""severity"":""Acute"",""result"":""Acute pancreatitis with superior mesenteric and portal vein thrombosis and no evidence of mesenteric small bowel involvement"",""condition"":""Pancreatitis"",""time"":""Preliminary""},{""test"":""Follow up CT abdomen with IV contrast"",""result"":""Diffuse wall thickening involving multiple loops of jejunum highly suspicious of bowel ischemia"",""condition"":""Bowel ischemia"",""time"":""A week later after initial diagnosis""}],""treatments"":[{""name"":""Heparin Infusion"",""related condition"":""Pancreatitis"",""reason for taking"":""Management of pancreatitis"",""details"":""Switched to LMWH and warfarin""},{""name"":""Direct thrombolysis"",""related condition"":""Superior mesenteric and portal vein thrombosis"",""time"":""Within 48 h after re-evaluation"",""reason for taking"":""To treat SMV thrombosis"",""details"":""An access sheath was inserted retrograde from the middle colic vein into the superior mesenteric vein and portal vein where a catheter was placed""}],""discharge"":{}}"
+validation:2806,False,False,False,Duplicate JSON key: patients,False,False,0,28,0,False,0.0,0.0,0.0,0.0,0.0,0.0,,10,False,1330,"```json
+{
+  ""visit motivation"": ""Patient was a known patient with systemic lupus erythematosus (SLE), mild persistent bronchial asthma and a history of recurrent urinary tract infections."",
+  ""admission"": {
+    ""date"": ""2018-10-26"",
+    ""patient_information"": ""31-year-old Sri Lankan woman, who was a known patient with systemic lupus erythematosus (SLE), mild persistent bronchial asthma and a history of recurrent urinary tract infections."",
+    ""surgery"": ""1 mg/kg dose of oral prednisolone initially which was subsequently tapered to a lower dose."",
+    ""consolidation"": ""She was on mycophenolate mofetil with good disease control and without any organ threatening complications, when she developed wrist pain.""
+  },
+  ""patients"": [
+    {
+      ""name"": ""Patient A"",
+      ""id"": ""A1"",
+      ""medical_history"": ""Systemic lupus erythematosus (SLE), mild persistent bronchial asthma and a history of recurrent urinary tract infections."",
+      ""symptoms"": ""Left wrist pain."",
+      ""medical_examinations"": ""Radiography and hematological investigations, which did not reveal significant abnormalities."",
+      ""diagnosis_tests"": ""X-ray and hematology investigations, which did not reveal significant abnormalities."",
+      ""treatments"": ""1 mg/kg dose of oral prednisolone initially which was subsequently tapered to a lower dose."",
+      ""discharge"": ""Subsequently tapered to a lower dose.""
+    },
+    {
+      ""name"": ""Patient B"",
+      ""id"": ""B1"",
+      ""medical_history"": ""Systemic lupus erythematosus (SLE), mild persistent bronchial asthma and a history of recurrent urinary tract infections."",
+      ""symptoms"": ""Left wrist pain."",
+      ""medical_examinations"": ""Radiography and hematological investigations, which did not reveal significant abnormalities."",
+      ""diagnosis_tests"": ""X-ray and hematology investigations, which did not reveal significant abnormalities."",
+      ""treatments"": ""1 mg/kg dose of oral prednisolone initially which was subsequently tapered to a lower dose."",
+      ""discharge"": ""Subsequently tapered to a lower dose.""
+    }
+  ],
+  ""surgery"": {
+    ""date"": ""2019-10-27"",
+    ""patient_information"": ""Patient A underwent 1 mg/kg dose of oral prednisolone initially which was subsequently tapered to a lower dose."",
+    ""consolidation"": ""She was on mycophenolate mofetil with good disease control and without any organ threatening complications, when she developed wrist pain.""
+  },
+  ""patients"": [
+    {
+      ""name"": ""Patient C"",
+      ""id"": ""C1"",
+      ""medical_history"": ""Systemic lupus erythematosus (SLE), mild persistent bronchial asthma and a history of recurrent urinary tract infections."",
+      ""symptoms"": ""Left wrist pain."",
+      ""medical_examinations"": ""Radiography and hematological investigations, which did not reveal significant abnormalities."",
+      ""diagnosis_tests"": ""X-ray and hematology investigations, which did not reveal significant abnormalities."",
+      ""treatments"": ""1 mg/kg dose of oral prednisolone initially which was subsequently tapered to a lower dose."",
+      ""discharge"": ""Subsequently tapered to a lower dose.""
+    },
+    {
+      ""name"": ""Patient D"",
+      ""id"": ""D1"",
+      ""medical_history"": ""Systemic lupus erythematosus (SLE), mild persistent bronchial asthma and a history of recurrent urinary tract infections."",
+      ""symptoms"": ""Left wrist pain."",
+      ""medical_examinations"": ""Radiography and hematological investigations, which did not reveal significant abnormalities."",
+      ""diagnosis_tests"": ""X-ray and hematology investigations, which did not reveal significant abnormalities."",
+      ""treatments"": ""1 mg/kg dose of oral prednisolone initially which was subsequently tapered to a lower dose."",
+      ""discharge"": ""Subsequently tapered to a lower dose.""
+    }
+  ],
+  ""symptoms"": {
+    ""description"": ""The symptoms worsened over time with worsening disability and limitation in wrist movements. She developed intermittent short lasting bouts of fever during the course of the illness, which was treated by her general practitioner."",
+    ""severity"": ""Moderate"",
+    ""duration"": ""Long duration"",
+    ""frequency"": ""Frequent"",
+    ""impact"": ""Significant impact on quality of life and ability to perform daily activities.""
+  },
+  ""medical_ examinations"": {
+    ""date"": ""2020-05-15"",
+    ""patient_information"": ""Patient A underwent 1 mg/kg dose of oral prednisolone initially which was subsequently tapered to a lower dose."",
+    ""consolidation"": ""She was on mycophenolate mofetil with good disease control and without any organ threatening complications, when she developed wrist pain.""
+  },
+  ""diagnosis_tests"": {
+    ""date"": ""2020-05-22"",
+    ""patient_information"": ""Patient A underwent 1 mg/kg dose of oral prednisolone initially which was subsequently tapered to a lower dose."",
+    ""consolidation"": ""She was on mycophenolate mofetil with good disease control and without any organ threatening complications, when she developed wrist pain.""
+  },
+  ""treatments"": {
+    ""date"": ""2020-05-27"",
+    ""patient_information"": ""Patient A underwent 1 mg/kg dose of oral prednisolone initially which was subsequently tapered to a lower dose."",
+    ""consolidation"": ""She was on mycophenolate mofetil with good disease control and without any organ threatening complications, when she developed wrist pain.""
+  },
+  ""discharge"": {
+    ""date"": ""2020-05-28"",
+    ""patient_information"": ""Patient A underwent 1 mg/kg dose of oral prednisolone initially which was subsequently tapered to a lower dose."",
+    ""consolidation"": ""She was on mycophenolate mofetil with good disease control and without any organ threatening complications, when she developed wrist pain.""
+  }
+}
+```","{""visit motivation"":""Left wrist pain"",""admission"":[],""patient information"":{""age"":""31"",""sex"":""Woman"",""ethnicity"":""Sri Lankan""},""patient medical history"":{""physiological context"":""Systemic lupus erythematosus (SLE), mild persistent bronchial asthma, history of recurrent urinary tract infections""},""surgeries"":[],""symptoms"":[{""name of symptom"":""Wrist pain"",""intensity of symptom"":""Worsening over time"",""location"":""Left wrist"",""time"":""More towards the end of the day and worse with activity"",""temporalisation"":""Gradually worsening over the past year"",""behaviours affecting the symptom"":""Activity"",""details"":""No morning or inactivity stiffness, no proceeding history of trauma, no other joints involved, no fever, oral ulcers or rashes, but complained of fatigue, no numbness or weakness over the hand, intermittent short lasting bouts of fever treated as urinary tract infections, worsening disability and limitation in wrist movements, persistent low-grade pyrexia for about 1 month, worsening joint pain, joint swelling over 1 week, excruciatingly painful with restriction of movements in all directions""}],""medical examinations"":[{""name"":""Physical examination"",""result"":""Mild pallor and left wrist swelling""}],""diagnosis tests"":[{""test"":""Radiography and hematological investigations"",""result"":""Did not reveal significant abnormalities"",""condition"":""SLE related synovitis""}],""treatments"":[{""name"":""Oral prednisolone"",""related condition"":""SLE"",""dosage"":""Initially 1 mg/kg"",""time"":""Diagnosed with SLE 5 years previously"",""duration"":""Tapered to a lower dose"",""reason for taking"":""Treatment for SLE"",""reaction to treatment"":""Good disease control without any organ threatening complications""},{""name"":""Mycophenolate mofetil"",""related condition"":""SLE"",""reason for taking"":""Treatment for SLE"",""reaction to treatment"":""Good disease control without any organ threatening complications""}],""discharge"":{}}"
+validation:2335,False,False,False,Expecting value: line 1 column 1 (char 0),False,False,0,25,0,False,0.0,0.0,0.0,0.0,0.0,0.0,,15,True,2048,"```json
+{
+  ""visit motivation"": ""To evaluate the extent of the mass and rule out multiple masses affecting the same nerve."",
+  ""admission"": {
+    ""patient information"": ""36-year-old right-handed female, presenting with a painful mass in her right forearm for over 7 years. Reported to be advised by her primary care provider to get an MRI to workup this lesion."",
+    ""patient medical history"": ""History of a painful mass in her right forearm for over 7 years. Reportedly advised by her primary care provider to get an MRI to workup this lesion."",
+    ""surgery"": ""MRI ordered to better characterize this tumor and rule out multiple masses affecting the same nerve."",
+    ""symptoms"": ""Intermittent pain that is associated with touch and direct palpation over the volar aspect of her forearm. On examination, there was a palpable mass about 4.0 cm distal to the elbow on the volar aspect of the forearm, measured 3.5 cm×2.0 cm. The mass was tender to palpation and was Tinel positive with pain and paresthesia radiating distally over the median nerve distribution. There was no objective sensory or a motor deficit. The patient reported no history of trauma. The patient denied any personal or family history of neurofibromatosis (NF) or schwannomatosis. MRI was ordered to better characterize this tumor and to rule out multiple masses affecting the same nerve.""
+  },
+  ""patients"": [
+    {
+      ""patient information"": ""36-year-old right-handed female, presenting with a painful mass in her right forearm for over 7 years. Reported to be advised by her primary care provider to get an MRI to workup this lesion."",
+      ""patient medical history"": ""History of a painful mass in her right forearm for over 7 years. Reportedly advised by her primary care provider to get an MRI to workup this lesion."",
+      ""surgery"": ""MRI ordered to better characterize this tumor and rule out multiple masses affecting the same nerve."",
+      ""symptoms"": ""Intermittent pain that is associated with touch and direct palpation over the volar aspect of her forearm. On examination, there was a palpable mass about 4.0 cm distal to the elbow on the volar aspect of the forearm, measured 3.5 cm×2.0 cm. The mass was tender to palpation and was Tinel positive with pain and paresthesia radiating distally over the median nerve distribution. There was no objective sensory or a motor deficit. The patient reported no history of trauma. The patient denied any personal or family history of neurofibromatosis (NF) or schwannomatosis. MRI was ordered to better characterize this tumor and to rule out multiple masses affecting the same nerve.""
+    },
+    {
+      ""patient information"": ""36-year-old right-handed female, presenting with a painful mass in her right forearm for over 7 years. Reported to be advised by her primary care provider to get an MRI to workup this lesion."",
+      ""patient medical history"": ""History of a painful mass in her right forearm for over 7 years. Reportedly advised by her primary care provider to get an MRI to workup this lesion."",
+      ""surgery"": ""MRI ordered to better characterize this tumor and rule out multiple masses affecting the same nerve."",
+      ""symptoms"": ""Intermittent pain that is associated with touch and direct palpation over the volar aspect of her forearm. On examination, there was a palpable mass about 4.0 cm distal to the elbow on the volar aspect of the forearm, measured 3.5 cm×2.0 cm. The mass was tender to palpation and was Tinel positive with pain and paresthesia radiating distally over the median nerve distribution. There was no objective sensory or a motor deficit. The patient reported no history of trauma. The patient denied any personal or family history of neurofibromatosis (NF) or schwannomatosis. MRI was ordered to better characterize this tumor and to rule out multiple masses affecting the same nerve.""
+    }
+  ],
+  ""discharge"": {
+    ""admission"": {
+      ""patient information"": ""The patient was discharged from our clinic with a pain alert and a history of a painful mass in her right forearm for over 7 years. She was advised by her primary care provider to get an MRI to workup this lesion."",
+      ""patient medical history"": ""The patient had a painful mass in her right forearm for over 7 years. Reportedly advised by her primary care provider to get an MRI to workup this lesion."",
+      ""surgery"": ""MRI ordered to better characterize this tumor and rule out multiple masses affecting the same nerve."",
+      ""symptoms"": ""The patient experienced intermittent pain that is associated with touch and direct palpation over the volar aspect of her forearm. On examination, there was a palpable mass about 4.0 cm distal to the elbow on the volar aspect of the forearm, measured 3.5 cm×2.0 cm. The mass was tender to palpation and was Tinel positive with pain and paresthesia radiating distally over the median nerve distribution. There was no objective sensory or a motor deficit. The patient reported no history of trauma. The patient denied any personal or family history of neurofibromatosis (NF) or schwannomatosis. MRI was ordered to better characterize this tumor and to rule out multiple masses affecting the same nerve.""
+    },
+    ""patients"": [
+      {
+        ""patient information"": ""The patient was discharged from our clinic with a pain alert and a history of a painful mass in her right forearm for over 7 years. She was advised by her primary care provider to get an MRI to workup this lesion."",
+        ""patient medical history"": ""The patient had a painful mass in her right forearm for over 7 years. Reportedly advised by her primary care provider to get an MRI to workup this lesion."",
+        ""surgery"": ""MRI ordered to better characterize this tumor and rule out multiple masses affecting the same nerve."",
+        ""symptoms"": ""The patient experienced intermittent pain that is associated with touch and direct palpation over the volar aspect of her forearm. On examination, there was a palpable mass about 4.0 cm distal to the elbow on the volar aspect of the forearm, measured 3.5 cm×2.0 cm. The mass was tender to palpation and was Tinel positive with pain and paresthesia radiating distally over the median nerve distribution. There was no objective sensory or a motor deficit. The patient reported no history of trauma. The patient denied any personal or family history of neurofibromosis (NF) or schwannomatosis. MRI was ordered to better characterize this tumor and to rule out multiple masses affecting the same nerve.""
+      },
+      {
+        ""patient information"": ""The patient was discharged from our clinic with a pain alert and a history of a painful mass in her right forearm for over 7 years. She was advised by her primary care provider to get an MRI to workup this lesion."",
+        ""patient medical history"": ""The patient had a painful mass in her right forearm for over 7 years. Reportedly advised by her primary care provider to get an MRI to workup this lesion."",
+        ""surgery"": ""MRI ordered to better characterize this tumor and rule out multiple masses affecting the same nerve."",
+        ""symptoms"": ""The patient experienced intermittent pain that is associated with touch and direct palpation over the volar aspect of her forearm. On examination, there was a palpable mass about 4.0 cm distal to the elbow on the volar aspect of the forearm, measured 3.5 cm×2.0 cm. The mass was tender to palpation and was Tinel positive with pain and paresthesia radiating distally over the median nerve distribution. There was no objective sensory or a motor deficit. The patient reported no history of trauma. The patient denied any personal or family history of neurofibromatosis (NF) or schwannomatosis. MRI was ordered to better characterize this tumor and to rule out multiple masses affecting the same nerve.""
+      }
+    ]
+  },
+  ""discharge"": {
+    ""admission"": {
+      ""patient information"": ""The patient was discharged from our clinic with a pain alert and a history of a painful mass in her right forearm for over 7 years. She was advised by her primary care provider to get an MRI to workup this lesion."",
+      ""patient medical history"": ""The patient had a painful mass in her right forearm for over 7 years. Reportedly advised by her primary care provider to get an MRI to workup this lesion."",
+      ""surgery"": ""MRI ordered to better characterize this tumor and rule out multiple masses affecting the same nerve."",
+      ""symptoms"": ""The patient experienced intermittent pain that is associated with touch and direct palpation over the volar aspect of her forearm. On examination, there was a palpable mass about 4.0 cm distal to the elbow on the volar aspect of the forearm, measured 3.5 cm×2.0 cm. The mass was tender to palpation and was Tinel positive with pain and paresthesia radiating distally over the median nerve distribution. There was no objective sensory or a motor deficit. The patient reported no history of trauma. The patient denied any personal or family history of neurofibromosis (NF) or schwannomatosis. MRI was ordered to better characterize this tumor and to rule out multiple masses affecting the same nerve.""
+    },
+    ""patients"": [
+      {
+        ""patient information"": ""The patient was discharged from our clinic with a pain alert and a history of a painful mass in her right forearm for over 7 years. She was advised by her primary care","{""visit motivation"":""Painful mass in her right forearm"",""admission"":[{""reason"":""Workup of a painful mass in the right forearm""}],""patient information"":{""age"":""36"",""sex"":""Female"",""family medical history"":""No history of neurofibromatosis (NF) or schwannomatosis""},""patient medical history"":{},""surgeries"":[{""reason"":""To explore the median nerve and address the painful mass"",""Type"":""Microsurgical technique"",""details"":""A curvilinear incision from the medial elbow to mid-lateral forearm, sharply through the skin, blunt dissection down onto the forearm""}],""symptoms"":[{""name of symptom"":""Intermittent pain"",""location"":""Volar aspect of the right forearm"",""time"":""Over 7 years"",""temporalisation"":""Intermittent"",""behaviours affecting the symptom"":""Associated with touch and direct palpation"",""details"":""Pain and paresthesia radiating distally over the median nerve distribution""}],""medical examinations"":[{""name"":""Physical examination"",""result"":""Palpable mass about 4.0 cm distal to the elbow on the volar aspect of the forearm, measured 3.5 cm×2.0 cm, tender to palpation, Tinel positive"",""details"":""No objective sensory or motor deficit""}],""diagnosis tests"":[{""test"":""MRI"",""result"":""Two enhancing, well-rounded lesions associated with the median nerve.\nThe main lesion measured 3.5 cm×2.0 cm and the second lesion measured approximately 1.5 cm×1.0 cm."",""condition"":""Masses affecting the median nerve"",""details"":""The main mass was deep to the pronator teres muscle and immediately medial to the brachial artery and vein.\nThe second lesion was adjacent and concurrent, located posterior to the brachial artery and vein.""}],""treatments"":[{""name"":""Surgery"",""related condition"":""Masses affecting the median nerve"",""reason for taking"":""To address the painful mass in the right forearm"",""details"":""Patient elected to proceed with surgery""}],""discharge"":{}}"
+validation:1780,False,False,True,,False,False,19,53,0,False,0.0,0.0,0.0,0.037151702786377715,0.013318534961154274,0.0196078431372549,0.0,10,False,678,"```json
+{
+  ""visit motivation"": ""Acute abdominal pain and diffuse peritonitis that lasted for 3 days."",
+  ""admission"": {
+    ""admission_date"": ""2024-10-27"",
+    ""admission_status"": ""Admission"",
+    ""patient_information"": ""Male, 57 years old, acute abdominal pain, diffuse peritonitis, severe septic shock, central venous catheter introduced through the right jugular vein during the operation to facilitate rapid fluid resuscitation and the application of vasoactive drugs."",
+    ""patient_medical_history"": ""History of acute abdominal pain, diffuse peritonitis, and severe septic shock. History of central venous catheter introduction through the right jugular vein during the operation. History of spontaneous exhaust and got out of bed with slight movement. Vasoactive agent discontinuation on day 5."",
+    ""surgery"": ""Central venous catheter insertion."",
+    ""symptoms"": ""Severe septic shock, central venous catheter introduction through the right jugular vein during the operation, spontaneous exhaust, and got out of bed with slight movement. Vasoactive agent discontinuation on day 5."",
+    ""medical_examinations"": ""Stable hemodynamics. On the third day, spontaneous exhaust and got out of bed with slight movement. Vasoactive agent discontinuation on day 5."",
+    ""diagnosis_tests"": ""Vasoactive agent discontinuation on day 5."",
+    ""treatments"": ""Vasopressor agent discontinuation on day 5."",
+    ""discharge"": ""Patient was given a small amount of liquid diet; parenteral nutrition fluid was introduced through central venous catheter, and low molecular weight heparin calcium (4100 units, once a day) was added for anticoagulation to prevent venous thromboembolism.""
+  },
+  ""patient_information"": ""Male, 57 years old, acute abdominal pain, diffuse peritonitis, severe septic shock, central venous catheter introduced through the right jugular vein during the operation to facilitate rapid fluid resuscitation and the application of vasoactive drugs."",
+  ""patient_medical_history"": ""History of acute abdominal pain, diffuse peritonitis, and severe septic shock. History of central venous catheter introduction through the right jugular vein during the operation. History of spontaneous exhaust and got out of bed with slight movement. Vasoactive agent discontinuation on day 5."",
+  ""surgery"": ""Central venous catheter insertion."",
+  ""symptoms"": ""Severe septic shock, central venous catheter introduction through the right jugular vein during the operation, spontaneous exhaust, and got out of bed with slight movement. Vasoactive agent discontinuation on day 5."",
+  ""medical_examinations"": ""Stable hemodynamics. On the third day, spontaneous exhaust and got out of bed with slight movement. Vasoactive agent discontinuation on day 5."",
+  ""diagnosis_tests"": ""Vasoactive agent discontinuation on day 5."",
+  ""treatments"": ""Vasopressor agent discontinuation on day 5."",
+  ""discharge"": ""Patient was given a small amount of liquid diet; parenteral nutrition fluid was introduced through central venous catheter, and low molecular weight heparin calcium (4100 units, once a day) was added for anticoagulation to prevent venous thromboembolism.""
+}
+```","{""visit motivation"":""acute abdominal pain and diffuse peritonitis"",""admission"":[{""reason"":""acute abdominal pain and diffuse peritonitis"",""duration"":""At least 15 days""}],""patient information"":{""age"":""57"",""sex"":""male""},""patient medical history"":{},""surgeries"":[{""reason"":""severe septic shock"",""outcome"":""stabilized hemodynamics"",""details"":""central venous catheter was introduced through the right jugular vein to facilitate rapid fluid resuscitation and the application of vasoactive drugs""}],""symptoms"":[{""name of symptom"":""acute abdominal pain"",""intensity of symptom"":""severe"",""location"":""abdomen"",""time"":""lasted for 3 days"",""details"":""accompanied by diffuse peritonitis""}],""medical examinations"":[{""name"":""bedside ultrasound"",""result"":""thrombus in the right jugular vein"",""details"":""thrombus attached to the inner wall of the vessel and drifting with the blood stream""},{""name"":""echocardiography"",""result"":""decreased systolic amplitude of the right atrium and right ventricle, widened and fixed inferior vena cava, no variation with respiration, significantly extended right ventricular outflow tract, decreased contraction amplitude of the anterior and posterior walls of the left ventricle""}],""diagnosis tests"":[{""test"":""ultrasound and echocardiography"",""result"":""thrombus in the right jugular vein, decreased systolic amplitude of the right atrium and right ventricle, widened and fixed inferior vena cava, no variation with respiration, significantly extended right ventricular outflow tract, decreased contraction amplitude of the anterior and posterior walls of the left ventricle"",""condition"":""venous thromboembolism"",""time"":""day 15"",""details"":""thrombus drifting with the blood stream""}],""treatments"":[{""name"":""central venous catheter"",""related condition"":""severe septic shock"",""time"":""during the operation"",""reason for taking"":""to facilitate rapid fluid resuscitation and the application of vasoactive drugs"",""reaction to treatment"":""hemodynamics was stable two days after surgery"",""details"":""introduced through the right jugular vein""},{""name"":""vasoactive agent"",""related condition"":""severe septic shock"",""time"":""started during the operation"",""duration"":""discontinued on day 5"",""reason for taking"":""to manage septic shock"",""reaction to treatment"":""stabilized hemodynamics""},{""name"":""liquid diet"",""dosage"":""small amount"",""time"":""day 7"",""reason for taking"":""progression of diet post-operation""},{""name"":""parenteral nutrition fluid"",""time"":""introduced through central venous catheter on day 7"",""duration"":""until day 14"",""reason for taking"":""nutritional support"",""reaction to treatment"":""able to eat normally by day 14""},{""name"":""low molecular weight heparin calcium"",""related condition"":""to prevent venous thromboembolism"",""dosage"":""4100 units"",""time"":""started on day 7"",""frequency"":""once a day"",""reason for taking"":""anticoagulation"",""reaction to treatment"":""thrombus observed on day 15""}],""discharge"":{""reason"":""cardiac arrest"",""discharge summary"":""Patient suffered cardiac arrest on day 15 during central venous catheter removal and received emergency cardiopulmonary resuscitation.""}}"
+validation:922,False,False,True,,False,False,14,43,0,False,0.0,0.0,0.0,0.057184750733137835,0.01861829093637046,0.028090754746102797,0.0,2,False,678,"```json
+{
+  ""visit motivation"": ""Patient was admitted for a large right basal ganglia hemorrhage with extension into all four ventricles requiring right decompressive craniotomy."",
+  ""admission"": {
+    ""date"": ""2023-10-26"",
+    ""hospitalization"": ""Day 23"",
+    ""details"": ""Patient presented with a large right basal ganglia hemorrhage with extension into all four ventricles requiring right decompressive craniotomy. Following a fever on day 23 of hospitalization, a head CT scan was obtained which revealed development of 3 new distinct parenchymal hemorrhages within the prior right cerebral hemorrhages.""
+  },
+  ""surgery"": {
+    ""type"": ""Right Decompression Craniotomy"",
+    ""location"": ""All four ventricles"",
+    ""details"": ""Following a fever on day 23 of hospitalization, a head CT scan was obtained which revealed development of 3 new distinct parenchymal hemorrhages within the prior right cerebral hemorrhages.""
+  },
+  ""symptoms"": {
+    ""description"": ""Patient's fever prompted initiation of empiric vancomycin and ceftazidime."",
+    ""details"": ""On day 26 of hospitalization, the parenchymal hemorrhages were managed with neurosurgical debridement of the hemorrhagic brain with partial temporal lobectomy and duraplasty with titanium mesh placement since the patient failed to improve with medical management alone.""
+  },
+  ""medical examinations"": {
+    ""description"": ""A repeat head CT scan obtained on day 28 of hospitalization identified an 18 mm subgaleal fluid collection overlying the duraplasty noted in . Given the persistent fevers, the subgaleal fluid collection was aspirated on day 30 of hospitalization which subsequently grew 2+ Enterobacter cloacae complex susceptible to TMP-SMX, gentamicin, ciprofloxacin, and ertapenem. Resistance patterns of the patient-specific E. cloacae isolated are described in .""
+  },
+  ""diagnosis tests"": {
+    ""description"": ""The patient was transitioned from vancomycin and ceftazidime to SMX-TMP (5 mg/kg of TMP) every 8 hours IV and metronidazole 500 mg IV every 12 hours. Since the patient continued to have persistent fevers, a repeat head CT scan was performed which identified an enlarging subgaleal fluid collection measuring 104 × 23 mm as noted in .""
+  },
+  ""treatments"": {
+    ""description"": ""The neurosurgical team believed the risk of removal of the titanium mesh was much greater than the benefit given her poor surgical candidacy attributed to comorbidities. Furthermore, a future procedure would be needed following removal. Repeat subgaleal collection aspirations performed on day 35 of hospitalization remained persistently.""
+  },
+  ""discharge"": {
+    ""date"": ""2023-10-28"",
+    ""details"": ""Repeat head CT scan obtained on day 35 of hospitalization identified an enlarging subgaleal fluid collection measuring 104 × 23 mm as noted in .""
+  }
+}
+```","{""visit motivation"":""Large right basal ganglia hemorrhage with extension into all four ventricles"",""admission"":[{""reason"":""Large right basal ganglia hemorrhage with extension into all four ventricles"",""duration"":""At least 35 days, as the patient was still hospitalized on day 35""}],""patient information"":{""age"":""55 years old"",""sex"":""Female""},""patient medical history"":{""physiological context"":""Hypertension"",""drug usage"":""Cocaine use""},""surgeries"":[{""reason"":""Large right basal ganglia hemorrhage with extension into all four ventricles"",""Type"":""Right decompressive craniotomy""},{""reason"":""Development of 3 new distinct parenchymal hemorrhages within the prior right cerebral hemorrhages"",""Type"":""Neurosurgical debridement of the hemorrhagic brain with partial temporal lobectomy and duraplasty with titanium mesh placement"",""time"":""Day 26 of hospitalization"",""details"":""Patient failed to improve with medical management alone""}],""symptoms"":[{""name of symptom"":""Fever"",""time"":""Day 23 of hospitalization"",""temporalisation"":""Persistent"",""details"":""Prompted initiation of empiric vancomycin and ceftazidime""}],""medical examinations"":[{""name"":""Head CT scan"",""result"":""Development of 3 new distinct parenchymal hemorrhages within the prior right cerebral hemorrhages"",""details"":""Obtained on day 23 of hospitalization""},{""name"":""Repeat head CT scan"",""result"":""An 18 mm subgaleal fluid collection overlying the duraplasty"",""details"":""Obtained on day 28 of hospitalization""},{""name"":""Repeat head CT scan"",""result"":""Enlarging subgaleal fluid collection measuring 104 × 23 mm"",""details"":""Performed due to persistent fevers""},{""name"":""Cell count of the cerebrospinal fluid (CSF)"",""result"":""17,300 nucleated cells/μL with 98% granulocytes, 35,000 red cells/μL, 980 mg/dL of protein, and an undetectable glucose level""}],""diagnosis tests"":[{""test"":""Aspiration of subgaleal fluid collection"",""result"":""Grew 2+ Enterobacter cloacae complex susceptible to TMP-SMX, gentamicin, ciprofloxacin, and ertapenem"",""condition"":""Infection"",""time"":""Day 30 of hospitalization"",""details"":""Resistance patterns of the patient-specific E.\ncloacae isolated are described in the note""}],""treatments"":[{""name"":""Empiric vancomycin and ceftazidime"",""related condition"":""Fever"",""time"":""Initiated on day 23 of hospitalization"",""reason for taking"":""Empiric treatment for fever""},{""name"":""SMX-TMP and metronidazole"",""related condition"":""Subgaleal fluid collection infection"",""dosage"":""SMX-TMP (5 mg/kg of TMP) every 8 hours IV and metronidazole 500 mg IV every 12 hours"",""frequency"":""SMX-TMP every 8 hours, metronidazole every 12 hours"",""reason for taking"":""Transitioned due to susceptibilities of Enterobacter cloacae complex"",""reaction to treatment"":""Patient continued to have persistent fevers""}],""discharge"":{}}"
+validation:1913,False,False,True,,False,False,14,70,0,False,0.0,0.0,0.0,0.011434837092731829,0.002286967418546366,0.0038116123642439434,0.0,2,False,537,"```json
+{
+  ""visit motivation"": ""Patient is a 67-year-old white man, who works as a teacher in a small city. He does not smoke tobacco; he has a history of arterial hypertension grade I to II and coronary heart disease. His mother died from myocardial infarction due to occlusive coronary artery disease."",
+  ""admission"": {
+    ""date"": ""2006"",
+    ""reason"": ""Patient was diagnosed with CML in 2006.""
+  },
+  ""surgery"": {
+    ""date"": ""2006"",
+    ""description"": ""Treatment was initially started with imatinib (Glivec, Novartis) 400 mg administered orally once daily. Imatinib 400 mg per day was taken for 53 months. He lost major molecular response (MMR) and imatinib therapy was replaced with dasatinib 100 mg orally administered once daily and after 6 months MMR was achieved. He also used torasemide 20 mg orally administered once daily and metoprolol succinate 50 mg orally administered once daily.""
+  },
+  ""symptoms"": {
+    ""date"": ""April 2015"",
+    ""description"": ""He developed increasing dyspnea on exertion, fatigue, and peripheral edema. He consulted his family physician, and a chest X-ray was done, confirming pleural effusion."",
+    ""details"": ""Pleural effusion was suspected to be caused by congestive heart failure.""
+  },
+  ""medical examinations"": {
+    ""date"": ""2015"",
+    ""description"": ""His heart rate was 97 beats per minute and blood pressure was 143/90 mmHg. Fever was not present. Peripheral edema was noted and diminished breath sounds were present. Pleural friction rub was present. Deformity of the spine accompanied by lower back pain was noted during neurological check-up.""
+  },
+  ""diagnosis tests"": {
+    ""date"": ""2015"",
+    ""description"": ""Pleural effusion was suspected to be caused by congestive heart failure.""
+  },
+  ""treatments"": {
+    ""date"": ""September 2015"",
+    ""description"": ""Dasatinib therapy was stopped in September 2015 after 42 months of treatment. A coronarography was performed in September 2015; it did not reveal any hemodynamically important stenosis.""
+  }
+}
+```","{""visit motivation"":""Increasing dyspnea on exertion, fatigue, and peripheral edema"",""admission"":[{""reason"":""Pleural effusion confirmed by chest X-ray""}],""patient information"":{""age"":""67"",""sex"":""Male"",""ethnicity"":""White"",""family medical history"":""Mother died from myocardial infarction due to occlusive coronary artery disease"",""occupation"":""Teacher""},""patient medical history"":{""physiological context"":""History of arterial hypertension grade I to II, coronary heart disease, and CML diagnosed in 2006"",""smoking status"":""Non-smoker""},""surgeries"":[],""symptoms"":[{""name of symptom"":""Dyspnea on exertion"",""intensity of symptom"":""Increasing"",""time"":""April 2015""},{""name of symptom"":""Fatigue"",""time"":""April 2015""},{""name of symptom"":""Peripheral edema"",""time"":""April 2015""},{""name of symptom"":""Diminished breath sounds""},{""name of symptom"":""Pleural friction rub""},{""name of symptom"":""Deformity of the spine"",""location"":""Spine"",""details"":""Accompanied by lower back pain""}],""medical examinations"":[{""name"":""Heart rate"",""result"":""97 beats per minute""},{""name"":""Blood pressure"",""result"":""143/90 mmHg""},{""name"":""Neurological check-up"",""result"":""Deformity of the spine and lower back pain""}],""diagnosis tests"":[{""test"":""Chest X-ray"",""result"":""Confirmed pleural effusion"",""condition"":""Pleural effusion""},{""test"":""Cytological analysis"",""result"":""Excluded malignancy"",""condition"":""Pleural effusion"",""details"":""Pleural fluid was drawn out several times via thoracentesis""},{""test"":""GeneXpert® tuberculosis test"",""result"":""Negative"",""condition"":""Tuberculosis"",""details"":""Test of a bronchial smear""},{""test"":""Complete blood count"",""result"":""Normal""},{""test"":""Creatinine levels"",""result"":""Elevated"",""details"":""Tables and details not provided""},{""test"":""Coronarography"",""result"":""Did not reveal any hemodynamically important stenosis"",""condition"":""Coronary heart disease"",""time"":""September 2015""}],""treatments"":[{""name"":""Imatinib (Glivec, Novartis)"",""related condition"":""CML"",""dosage"":""400 to 800 mg per day"",""time"":""Started in 2006"",""frequency"":""Once daily"",""duration"":""53 months"",""reason for taking"":""Initial treatment for CML"",""reaction to treatment"":""Lost major molecular response (MMR)""},{""name"":""Dasatinib"",""related condition"":""CML"",""dosage"":""100 mg"",""time"":""Started after imatinib therapy"",""frequency"":""Once daily"",""duration"":""42 months"",""reason for taking"":""Replacement for imatinib after loss of MMR"",""reaction to treatment"":""Achieved MMR after 6 months, stopped due to pleural effusion""},{""name"":""Torasemide"",""dosage"":""20 mg"",""frequency"":""Once daily""},{""name"":""Metoprolol succinate"",""dosage"":""50 mg"",""frequency"":""Once daily""}],""discharge"":{""reason"":""General condition deteriorated with multiple recurrences of pleural effusion""}}"
+validation:2538,False,False,True,,False,False,10,42,0,False,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2,False,544,"```json
+{
+  ""visit motivation"": ""To assess the patient's neurological status and determine the appropriate course of treatment."",
+  ""admission"": {
+    ""admission_date"": ""2024-10-27"",
+    ""admission_details"": ""Patient presents with altered conscious level, headache, difficulty walking, and progressive nausea/vomiting. Glasgow Coma Scale 12/15."",
+    ""admission_notes"": ""Patient left sixth cranial nerve palsy with no papilledema, facial paralysis, or other neurological deficits. Computerized topography of the brain shows a large posterior fossa nonenhancing fourth ventricular lesion containing hemorrhage and calcification and causing obstructive hydrocephalus.""
+  },
+  ""surgery"": {
+    ""surgery_date"": ""2024-10-28"",
+    ""surgery_details"": ""Emergency cerebrospinal fluid external ventricular drain (EVD) is performed as the first procedure. Magnetic resonance imaging (MRI) of the brain is performed to evaluate the midline posterior fossa cystic lesion measuring 7.2 cm in the craniocaudal plane and 5.5 cm × 4.1 cm in the axial plane."",
+    ""surgery_notes"": ""The lesion appears to have two components; an anterior portion located within the fourth ventricle and a posterior portion adjacent to the vermis extending downward through the foramen magnum reaching the level of C1. The lesion was purely intraventricular and causing a significant mass effect on the medulla and pons.""
+  },
+  ""treatment"": {
+    ""treatment_date"": ""2024-10-29"",
+    ""treatment_details"": ""Posterior fossa craniectomy and total excision of the tumor are performed. The posterior cystic component of the lesion contains yellowish turbid fluid. It has a thin wall which extends down to the level of the C1 but is easily removable. The anterior portion was partly calcified and partly solid containing muddy-like material. Although its wall was slightly adherent to the floor of the fourth ventricle, it was excised completely."",
+    ""treatment_notes"": ""The patient regained consciousness and his condition stabilized. On the following day, he underwent posterior fossa craniectomy and total excision of the tumor. The posterior cystic component of the lesion contained yellowish turbid fluid. It had a thin wall which extended down to the level of the C1 but was easily removable. The anterior portion was partly calcified and partly solid containing muddy-like material. While its wall was slightly adherent to the floor of the fourth ventricle, it was excised completely.""
+  }
+}
+```","{""visit motivation"":""Altered conscious level"",""admission"":[{""reason"":""Altered conscious level, headache, difficulty walking, nausea, vomiting, diplopia"",""care center details"":""Emergency Department""}],""patient information"":{""age"":""24"",""sex"":""male""},""patient medical history"":{""physiological context"":""Previously healthy""},""surgeries"":[{""reason"":""Large posterior fossa nonenhancing fourth ventricular lesion containing hemorrhage and calcification and causing obstructive hydrocephalus"",""Type"":""Emergency cerebrospinal fluid external ventricular drain (EVD) insertion, followed by posterior fossa craniectomy and total excision of the tumor"",""outcome"":""Patient regained consciousness and condition stabilized after EVD.\nTotal excision of the tumor was achieved."",""details"":""EVD as the first procedure.\nPosterior fossa craniectomy and total excision of the tumor on the following day.""}],""symptoms"":[{""name of symptom"":""Headache"",""intensity of symptom"":""Continued and progressive"",""location"":""Occipital region"",""time"":""3 weeks before presentation"",""details"":""Associated with nausea, vomiting, and diplopia""},{""name of symptom"":""Difficulty walking"",""time"":""3 weeks before presentation""},{""name of symptom"":""Altered conscious level"",""time"":""1-day history"",""details"":""Glasgow Coma Scale was 12/15""}],""medical examinations"":[{""name"":""Glasgow Coma Scale"",""result"":""12/15""},{""name"":""Neurological examination"",""result"":""Left sixth cranial nerve palsy with no papilledema, facial paralysis, or other neurological deficits""}],""diagnosis tests"":[{""test"":""Computerized topography of the brain"",""result"":""Large posterior fossa nonenhancing fourth ventricular lesion containing hemorrhage and calcification and causing obstructive hydrocephalus"",""condition"":""Fourth ventricular lesion""},{""test"":""Magnetic resonance imaging (MRI) of the brain"",""result"":""Midline posterior fossa cystic lesion measuring 7.2 cm in the craniocaudal plane and 5.5 cm × 4.1 cm in the axial plane"",""condition"":""Posterior fossa cystic lesion"",""details"":""Lesion had two components; an anterior portion located within the fourth ventricle and a posterior portion adjacent to the vermis extending downward through the foramen magnum reaching the level of C1.\nLesion was purely intraventricular and causing a significant mass effect on the medulla and pons.""}],""treatments"":[{""name"":""Emergency cerebrospinal fluid external ventricular drain (EVD)"",""related condition"":""Obstructive hydrocephalus"",""reason for taking"":""To stabilize patient's conscious level"",""reaction to treatment"":""Patient regained consciousness and condition stabilized"",""details"":""Inserted as the first procedure""},{""name"":""Posterior fossa craniectomy and total excision of the tumor"",""related condition"":""Posterior fossa cystic lesion"",""time"":""On the following day after EVD"",""reason for taking"":""To remove the tumor"",""reaction to treatment"":""Total excision of the tumor was achieved"",""details"":""Posterior cystic component contained yellowish turbid fluid with a thin wall extending down to the level of C1.\nAnterior portion was partly calcified and partly solid containing muddy-like material.""}],""discharge"":{}}"
+validation:1175,False,False,True,,False,False,33,36,1,False,0.030303030303030304,0.027777777777777776,0.028985507246376812,0.05138339920948617,0.04710144927536232,0.04914933837429112,0.0,3,False,579,"```json
+{
+  ""visit motivation"": ""To evaluate the extent of the bony dysplastic lesion in the left maxilla."",
+  ""admission"": ""Patient was admitted to Wonkwang Dental University Hospital for the removal of a bony dysplastic lesion in the left maxilla."",
+  ""patient information"": {
+    ""name"": ""Female"",
+    ""age"": 65,
+    ""gender"": ""Female"",
+    ""address"": ""Wonkwang Dental University Hospital"",
+    ""medical_history"": ""No significant medical history."",
+    ""surgery"": ""Removal of a bony dysplastic lesion in the left maxilla"",
+    ""symptoms"": ""Leukocytosis (elevated white blood cell count), bone swelling, palpable mucosa, intact mucosa"",
+    ""medical_examinations"": ""Computed Tomography (CT) in 2002, FD (ground-glass appearance), Bucco-lingual cortical expansion, No cortical destruction"",
+    ""diagnosis_tests"": ""Bone scintigraphy (99mTc-MDP)"",
+    ""treatments"": ""Removal surgery if pain or discomfort persisted"",
+    ""discharge"": ""Refused surgical treatment due to fear of surgery and no need for it, since there was no pain and the lesion was not increasing in size.""
+  },
+  ""staff"": {
+    ""doctor"": ""Dental Surgeon"",
+    ""nurse"": ""Dentist"",
+    ""dentist"": ""Oral Surgeon"",
+    ""radiologist"": ""Radiologist"",
+    ""chiefesthesia_doctor"": ""Chiefesthesia Doctor""
+  },
+  ""antigens"": {
+    ""location"": ""left maxilla"",
+    ""description"": ""Leukocytosis (elevated white blood cell count), bone swelling, palpable mucosa, intact mucosa"",
+    ""features"": [
+      ""Leukocytosis"",
+      ""bone swelling"",
+      ""palpable mucosa"",
+      ""intact mucosa""
+    ]
+  },
+  ""findings"": {
+    ""clinical_details"": {
+      ""location"": ""left maxilla"",
+      ""description"": ""Leukocytosis (elevated white blood cell count), bone swelling, palpable mucosa, intact mucosa"",
+      ""features"": [
+        ""Leukocytosis"",
+        ""bone swelling"",
+        ""palpable mucosa"",
+        ""intact mucosa""
+      ]
+    },
+    ""treatment_options"": [
+      ""Removal surgery if pain or discomfort persisted"",
+      ""Preferred watchful waiting""
+    ],
+    ""outcome"": ""Refused surgical treatment due to fear of surgery and no need for it, since there was no pain and the lesion was not increasing in size.""
+  }
+}
+```","{""visit motivation"":""Removal of a bony dysplastic lesion in the left maxilla"",""admission"":[{""reason"":""Regular examination of bony dysplastic lesion"",""duration"":""14 years"",""care center details"":""Wonkwang Dental University Hospital""}],""patient information"":{""age"":""65"",""sex"":""Female""},""patient medical history"":{""physiological context"":""Bony swelling on the left maxilla recognized decades ago, periodontal condition on the entire dentition in 2002"",""psychological context"":""Fear of surgery""},""surgeries"":[],""symptoms"":[{""name of symptom"":""Enlarged left maxilla, hard bone on palpation"",""location"":""Left maxilla"",""details"":""No experience of pain or fever, mucosa overlying the lesion intact""}],""medical examinations"":[{""name"":""Clinical examination"",""result"":""Enlarged left maxilla, hard bone on palpation, intact mucosa""}],""diagnosis tests"":[{""test"":""Computed tomography"",""result"":""Ground-glass appearance of the left maxilla, bucco-lingual cortical expansion without cortical destruction"",""condition"":""FD (Fibrous Dysplasia) tentatively diagnosed"",""time"":""2002"",""details"":""Lesion extended from the midline to the left maxillary tuberosity""},{""test"":""Panoramic radiography"",""result"":""Diffuse, widespread, radiopaque lesion in the left maxilla and maxillary sinus"",""time"":""2007"",""details"":""Ground-glass appearance and indistinct anterior border of the lesion, no root resorption or displacement of surrounding teeth, loss of alveolar lamina dura""},{""test"":""Periapical view"",""result"":""Ground-glass appearance and indistinct anterior border of the lesion"",""time"":""2007"",""details"":""No root resorption or displacement of surrounding teeth, loss of alveolar lamina dura""},{""test"":""Bone scintigraphy using 99mTc-methylene diphosphonate (99mTc-MDP)"",""result"":""Intense uptake of radioisotope in the left maxilla"",""time"":""2008"",""details"":""Mild uptake of radioisotope in the vascular and blood pool phase, and intense uptake in the delayed bone scan""}],""treatments"":[{""name"":""Removal surgery"",""related condition"":""Bony dysplastic lesion"",""reason for taking"":""Recommended if pain or discomfort persisted"",""reaction to treatment"":""Patient refused surgical treatment due to fear of surgery and no perceived need due to absence of pain and no increase in lesion size"",""details"":""Patient preferred watchful waiting and was advised to visit the dental hospital regularly to check changes in growth""}],""discharge"":{""follow up"":""Regular visits to the dental hospital to check changes in growth""}}"

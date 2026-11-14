@@ -1,0 +1,24 @@
+{
+  "protocol_name": "decoding_ablation_v1",
+  "comparison_contract_sha256": "353c8393d011c896475fba14db6d2751a609da0c8f957616f401e7ce21899db9",
+  "dataset_version": "900825a06d38a006",
+  "metric_source_sha256": "021d67e1183e4c5be0f1af69cedcbb73749e0388fc27033b305a25c86640790e",
+  "decoding_conditions": [
+    {
+      "tag": "gen_rp_1.08",
+      "repetition_penalty": 1.08,
+      "generated_only": true
+    },
+    {
+      "tag": "gen_rp_1.15",
+      "repetition_penalty": 1.15,
+      "generated_only": true
+    }
+  ],
+  "models": [
+    "base",
+    "pilot_01",
+    "pilot_02"
+  ],
+  "peft": "0.18.1"
+}

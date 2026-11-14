@@ -1,0 +1,11 @@
+{
+  "comparison_contract_sha256": "353c8393d011c896475fba14db6d2751a609da0c8f957616f401e7ce21899db9",
+  "adapter_file_sha256": {
+    "adapter_model.safetensors": "17473347c104cba99e317f3dc34a9512473c6bac9ebc0a51dddc55754746dbfa",
+    "adapter_config.json": "927a3227a52c60d8591a33ce55fc1e34d36ed584984bbf28638a68a425b9bc72"
+  },
+  "baseline_outputs_sha256": "56eea391bacb5ea4e6eb3e748899639aca95c37fa5b1622d016e796beafd80f7",
+  "baseline_diagnostics_sha256": "6e3b04bee400c8e1b45573becad945ee2ac3a813c5d2a58ee42dd304b8f12bd8",
+  "metric_source_sha256": "021d67e1183e4c5be0f1af69cedcbb73749e0388fc27033b305a25c86640790e",
+  "peft": "0.18.1"
+}

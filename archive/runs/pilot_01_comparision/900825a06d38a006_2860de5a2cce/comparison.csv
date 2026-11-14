@@ -1,0 +1,15 @@
+metric,baseline,finetuned,change
+selected_cases,10.0,10.0,0.0
+evaluated_cases,10.0,10.0,0.0
+empty_cases,0.0,0.0,0.0
+raw_json_object_valid_cases,0.0,6.0,6.0
+json_object_valid_after_fence_removal_cases,4.0,6.0,2.0
+exact_key_match_cases,0.0,2.0,2.0
+placeholder_only_cases,0.0,0.0,0.0
+reached_budget_cases,3.0,1.0,-2.0
+mean_value_precision,0.006666666666666666,0.16634555137844612,0.15967888471177946
+mean_value_recall,0.002,0.09635396663370441,0.0943539666337044
+mean_value_f1,0.003076923076923077,0.11874002569369495,0.11566310261677187
+matched_values,1.0,34.0,33.0
+reference_values,353.0,353.0,0.0
+generated_values,57.0,124.0,67.0

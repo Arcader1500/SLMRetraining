@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinical JSON Extraction SFT — Process & Results Dashboard</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+</head>
+<body class="bg-[var(--background)] text-[var(--foreground)] antialiased m-0 p-6">
+  <div class="max-w-7xl mx-auto space-y-6">
+
+    <!-- Header -->
+    <header class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-4 border-b border-[var(--border)]">
+      <div>
+        <div class="text-xs font-medium uppercase tracking-wider text-[var(--primary)]">
+          google/gemma-3-270m-it · FP32 LoRA (r=16, α=32) · Tesla T4
+        </div>
+        <h1 class="text-2xl font-bold mt-1">Clinical JSON Extraction Fine-Tuning Pipeline & Results</h1>
+        <p class="text-sm text-[var(--muted-foreground)] mt-1">
+          End-to-end workflow from source dataset audit and deterministic schema normalization (<span class="font-mono">v2 / eeff5efa1619f198</span>) through 3-epoch fine-tuning and 30-case frozen validation evaluation.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-2 text-xs">
+        <span class="px-2.5 py-1 rounded border border-[var(--border)] bg-[var(--card)] font-mono">1,325 Train / 30 Val</span>
+        <span class="px-2.5 py-1 rounded border border-[var(--border)] bg-[var(--card)] font-mono">498 Steps · 40.32 min</span>
+        <span class="px-2.5 py-1 rounded border border-[var(--border)] bg-[var(--card)] font-mono">Peak VRAM: 8.34 GiB</span>
+      </div>
+    </header>
+
+    <!-- Headline KPI Cards -->
+    <section class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="p-4 rounded-lg bg-[var(--card)] border border-[var(--border)]">
+        <div class="text-xs text-[var(--muted-foreground)]">Raw Valid JSON (<span class="font-mono">gen_rp_1.08</span>)</div>
+        <div class="mt-2 flex items-baseline gap-2">
+          <span class="text-2xl font-bold tabular-nums text-[var(--success)]">93.3%</span>
+          <span class="text-xs font-mono text-[var(--muted-foreground)]">28 / 30</span>
+        </div>
+        <div class="text-xs text-[var(--muted-foreground)] mt-1">Up from <span class="font-mono">0 / 30 (0.0%)</span> un-tuned base</div>
+      </div>
+
+      <div class="p-4 rounded-lg bg-[var(--card)] border border-[var(--border)]">
+        <div class="text-xs text-[var(--muted-foreground)]">Exact 10 Top-Level Schema Keys</div>
+        <div class="mt-2 flex items-baseline gap-2">
+          <span class="text-2xl font-bold tabular-nums text-[var(--success)]">93.3%</span>
+          <span class="text-xs font-mono text-[var(--muted-foreground)]">28 / 30</span>
+        </div>
+        <div class="text-xs text-[var(--muted-foreground)] mt-1">Up from <span class="font-mono">0 / 30</span> un-tuned base</div>
+      </div>
+
+      <div class="p-4 rounded-lg bg-[var(--card)] border border-[var(--border)]">
+        <div class="text-xs text-[var(--muted-foreground)]">Strict / Soft Value F1</div>
+        <div class="mt-2 flex items-baseline gap-2">
+          <span class="text-2xl font-bold tabular-nums text-[var(--primary)]">18.93%</span>
+          <span class="text-sm font-semibold tabular-nums text-[var(--muted-foreground)]">/ 30.74%</span>
+        </div>
+        <div class="text-xs text-[var(--muted-foreground)] mt-1">Base: <span class="font-mono">0.49% / 2.09%</span> · <span class="font-mono">198</span> vs <span class="font-mono">4</span> matched facts</div>
+      </div>
+
+      <div class="p-4 rounded-lg bg-[var(--card)] border border-[var(--border)]">
+        <div class="text-xs text-[var(--muted-foreground)]">Target Cleaning & Per-Case Wins</div>
+        <div class="mt-2 flex items-baseline gap-2">
+          <span class="text-2xl font-bold tabular-nums text-[var(--accent)]">28 / 30</span>
+          <span class="text-xs font-mono text-[var(--muted-foreground)]">cases won</span>
+        </div>
+        <div class="text-xs text-[var(--muted-foreground)] mt-1"><span class="font-mono">-32.6%</span> JSON chars · <span class="font-mono">764.8 → 604.9</span> mean toks</div>
+      </div>
+    </section>
+
+    <!-- Section 1: Interactive End-to-End Pipeline Flow -->
+    <section class="p-5 rounded-lg bg-[var(--card)] border border-[var(--border)] space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div>
+          <h2 class="text-base font-semibold">1. End-to-End Pipeline Architecture</h2>
+          <p class="text-xs text-[var(--muted-foreground)]">Click any stage to inspect exact design decisions, rationale, and verified counts.</p>
+        </div>
+        <span class="text-xs font-mono text-[var(--muted-foreground)]">Pinned seed=42 · dtype=float32</span>
+      </div>
+
+      <div id="pipeline-steps" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3"></div>
+      <div id="pipeline-detail" class="p-4 rounded border border-[var(--border)] bg-[var(--background)] text-sm"></div>
+    </section>
+
+    <!-- Section 2: Data Cleaning Impact & Training Loss Curve -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Left: v1 vs v2 Data Cleaning -->
+      <div class="lg:col-span-5 p-5 rounded-lg bg-[var(--card)] border border-[var(--border)] space-y-4">
+        <div>
+          <h2 class="text-base font-semibold">2. Dataset Cleaning (<span class="font-mono">v1 → v2</span>)</h2>
+          <p class="text-xs text-[var(--muted-foreground)]">Removing <span class="font-mono">"None"</span> leaf bloat and unifying empty schema containers (<span class="font-mono">[]</span> / <span class="font-mono">{}</span>).</p>
+        </div>
+
+        <div id="cleaning-bars" class="space-y-4"></div>
+
+        <div class="pt-3 border-t border-[var(--border)] grid grid-cols-2 gap-3 text-xs">
+          <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--border)]">
+            <div class="text-[var(--muted-foreground)]">Pool Scanned</div>
+            <div class="font-mono font-semibold mt-0.5">4,266 kept · 234 rejected</div>
+            <div class="text-[var(--muted-foreground)] mt-0.5">107 cross-split excluded</div>
+          </div>
+          <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--border)]">
+            <div class="text-[var(--muted-foreground)]">Syntax Repairs</div>
+            <div class="font-mono font-semibold mt-0.5">1,018 clean · 337 escaped</div>
+            <div class="text-[var(--muted-foreground)] mt-0.5">Control chars normalized</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Training & Eval Loss Curve -->
+      <div class="lg:col-span-7 p-5 rounded-lg bg-[var(--card)] border border-[var(--border)] space-y-3">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h2 class="text-base font-semibold">3. 3-Epoch Training & Validation Loss Curve (<span class="font-mono">02_finetune.ipynb</span>)</h2>
+            <p class="text-xs text-[var(--muted-foreground)]">Monotonic improvement: <span class="font-mono">eval_loss 0.5574 → 0.5192 → 0.5119</span> (best at step 498). Hover points for details.</p>
+          </div>
+          <div id="loss-hover" class="text-xs font-mono px-2.5 py-1 rounded bg-[var(--background)] border border-[var(--border)]">
+            Hover chart to inspect step
+          </div>
+        </div>
+        <div id="loss-chart-wrap" class="w-full overflow-x-auto"></div>
+      </div>
+    </section>
+
+    <!-- Section 3: 4-Way Benchmark Comparison -->
+    <section class="p-5 rounded-lg bg-[var(--card)] border border-[var(--border)] space-y-4">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+        <div>
+          <h2 class="text-base font-semibold">4. 4-Way Model & Decoding Benchmark (30 Validation Cases)</h2>
+          <p class="text-xs text-[var(--muted-foreground)]">Comparing un-tuned <span class="font-mono">base</span> vs <span class="font-mono">finetuned_v2</span> under greedy (<span class="font-mono">rp_1.00</span>) and generated-only penalty (<span class="font-mono">gen_rp_1.08</span>).</p>
+        </div>
+        <div id="metric-tabs" class="flex flex-wrap gap-1.5 text-xs"></div>
+      </div>
+      <div id="benchmark-chart" class="space-y-3"></div>
+    </section>
+
+    <!-- Section 4: Per-Case 30-Sample Explorer & Side-by-Side Showcase -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Per-case distribution -->
+      <div class="lg:col-span-7 p-5 rounded-lg bg-[var(--card)] border border-[var(--border)] space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h2 class="text-base font-semibold">5. Per-Case Performance (<span class="font-mono">gen_rp_1.08</span>, N=30)</h2>
+            <p class="text-xs text-[var(--muted-foreground)]">Click any case bar to inspect exact Base vs Fine-Tuned numbers and failure modes.</p>
+          </div>
+          <div class="flex items-center gap-2 text-xs">
+            <select id="case-metric" class="px-2 py-1 rounded bg-[var(--background)] border border-[var(--border)] text-[var(--foreground)]">
+              <option value="strict">Strict Value F1 (%)</option>
+              <option value="soft">Soft Value F1 (%)</option>
+              <option value="tokens">Generated Tokens</option>
+            </select>
+            <select id="case-sort" class="px-2 py-1 rounded bg-[var(--background)] border border-[var(--border)] text-[var(--foreground)]">
+              <option value="ft_desc">Sort: Fine-Tuned ↓</option>
+              <option value="delta_desc">Sort: Delta ↓</option>
+              <option value="order">Sort: Validation Order</option>
+            </select>
+          </div>
+        </div>
+        <div id="case-chart-wrap" class="w-full overflow-x-auto"></div>
+        <div id="case-inspector" class="p-3 rounded bg-[var(--background)] border border-[var(--border)] text-xs flex flex-wrap items-center justify-between gap-2"></div>
+      </div>
+
+      <!-- Showcase -->
+      <div class="lg:col-span-5 p-5 rounded-lg bg-[var(--card)] border border-[var(--border)] space-y-3">
+        <div>
+          <h2 class="text-base font-semibold">6. Qualitative Side-by-Side Showcase</h2>
+          <p class="text-xs text-[var(--muted-foreground)]">Excerpted outputs from <span class="font-mono">showcase_examples.md</span> under <span class="font-mono">gen_rp_1.08</span>.</p>
+        </div>
+        <div id="showcase-tabs" class="flex flex-wrap gap-1.5 text-xs"></div>
+        <div id="showcase-body" class="space-y-2.5 text-xs"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const PIPELINE_STAGES = [
+      {
+        id: "audit",
+        step: "Stage 1",
+        title: "v1 Audit & Root Cause",
+        tag: "Phase 0/1 Findings",
+        metric: "54.3% \"None\" leaves",
+        summary: "Auditing v1 (900825a06d38a006) showed zero literal loops in targets (0/1,325), proving greedy loops came from decoding attractors. However, 54.3% of leaf values were \"None\" placeholders and empty sections used 4 conflicting encodings ([] vs [all-None] vs \"None\" vs {}).",
+        bullets: [
+          "Phase 1 decoding ablation proved GeneratedOnlyRepetitionPenalty(1.08) cuts loops 4/10 -> 0/10 on v1.",
+          "FP16 on T4 triggers Gemma-3 activation overflow; FP32 fixed empty outputs cleanly."
+        ]
+      },
+      {
+        id: "clean",
+        step: "Stage 2",
+        title: "Dataset v2 Normalization",
+        tag: "prepare_v2_dataset.py",
+        metric: "-32.6% target chars",
+        summary: "Scanned 1,500 train + 3,000 validation raw candidates (AmareshHebbar/clinical-summarizer-sft). Enforced 10 canonical top-level keys, omitted inner null subfields, converted empty sections to [] / {}, removed 107 cross-split overlaps, and froze 1,325 train + 30 val cases (eeff5efa1619f198).",
+        bullets: [
+          "Leaves per train example cut 54.1% (79.5 -> 36.5), max seq len 1,949 -> 1,651 tokens.",
+          "Strict assistant-only label masking (labels = -100 on all prompt tokens)."
+        ]
+      },
+      {
+        id: "baseline",
+        step: "Stage 3",
+        title: "01_baseline_eval.ipynb",
+        tag: "Un-tuned Base",
+        metric: "0/30 Raw Valid JSON",
+        summary: "Evaluated google/gemma-3-270m-it in FP32 across all 30 frozen v2 validation cases under both greedy (rp_1.00) and gen_rp_1.08. Wrote the SHA-256 comparison_contract.json pinning model revision, prompts, and decoding flags.",
+        bullets: [
+          "Base always wrapped outputs in ```json fences (0/30 raw valid) and invented keys like admission_date or handoff.",
+          "Strict F1 stayed ~0.5% (4 exact fact matches out of 1,082 across all 30 notes)."
+        ]
+      },
+      {
+        id: "train",
+        step: "Stage 4",
+        title: "02_finetune.ipynb",
+        tag: "3-Epoch FP32 LoRA",
+        metric: "eval_loss 0.5119",
+        summary: "Trained LoRA (r=16, alpha=32, dropout=0.05 across all 7 attention + MLP linear layers) for 3 epochs (498 optimizer steps, effective batch 8, cosine lr=2e-4) in 40.32 min on Tesla T4. Disabled gradient checkpointing after benchmarking 8.34 GiB peak VRAM on the 1,651-tok longest row for a 4x speedup.",
+        bullets: [
+          "Epoch eval losses: 0.5574 (Ep 1) -> 0.5192 (Ep 2) -> 0.5119 (Ep 3, checkpoint-498).",
+          "FiniteLossTrainer asserted finite loss/gradients throughout."
+        ]
+      },
+      {
+        id: "eval",
+        step: "Stage 5",
+        title: "03_eval_and_compare",
+        tag: "28/30 Cases Won",
+        metric: "30.74% Soft F1",
+        summary: "Scored finetuned_v2 against the exact frozen baseline contract. Raw JSON validity jumped 0/30 -> 28/30 (93.3%), exact 10/10 top-level schema keys hit 28/30, and strict F1 surged 38x (0.49% -> 18.93%).",
+        bullets: [
+          "All 28 valid cases finished within budget (median 500, max 1,062 tokens).",
+          "Only 2 failures (validation:2335, 1913) truncated at the 2,048-token cap."
+        ]
+      }
+    ];
+
+    const CLEANING_COMPARISON = [
+      { label: "Mean Leaf Fields / Example", v1: 79.5, v2: 36.5, unit: "leaves", note: "-54.1% placeholder bloat removed" },
+      { label: "Max Sequence Length (Train)", v1: 1949, v2: 1651, unit: "tokens", note: "-298 tokens shorter worst case" },
+      { label: "Mean Sequence Length (Train)", v1: 1211.1, v2: 1055.3, unit: "tokens", note: "-12.9% shorter mean sequence" },
+      { label: "Target JSON Size Reduction", v1: 100.0, v2: 67.4, unit: "% rel", note: "32.6% fewer characters across pool" }
+    ];
+
+    const TRAIN_CURVE = [
+      { step: 10, epoch: 0.06, loss: 1.7043 }, { step: 20, epoch: 0.12, loss: 1.2638 },
+      { step: 30, epoch: 0.18, loss: 1.0179 }, { step: 40, epoch: 0.24, loss: 0.8070 },
+      { step: 50, epoch: 0.30, loss: 0.7060 }, { step: 60, epoch: 0.36, loss: 0.6850 },
+      { step: 70, epoch: 0.42, loss: 0.6720 }, { step: 80, epoch: 0.48, loss: 0.6778 },
+      { step: 90, epoch: 0.54, loss: 0.6309 }, { step: 100, epoch: 0.60, loss: 0.6544 },
+      { step: 110, epoch: 0.66, loss: 0.6528 }, { step: 120, epoch: 0.72, loss: 0.6282 },
+      { step: 130, epoch: 0.78, loss: 0.6283 }, { step: 140, epoch: 0.85, loss: 0.6086 },
+      { step: 150, epoch: 0.91, loss: 0.6329 }, { step: 160, epoch: 0.97, loss: 0.6224 },
+      { step: 170, epoch: 1.02, loss: 0.5692 }, { step: 180, epoch: 1.08, loss: 0.5584 },
+      { step: 190, epoch: 1.14, loss: 0.5277 }, { step: 200, epoch: 1.21, loss: 0.5519 },
+      { step: 210, epoch: 1.27, loss: 0.5575 }, { step: 220, epoch: 1.33, loss: 0.5496 },
+      { step: 230, epoch: 1.39, loss: 0.5167 }, { step: 240, epoch: 1.45, loss: 0.5297 },
+      { step: 250, epoch: 1.51, loss: 0.5282 }, { step: 260, epoch: 1.57, loss: 0.5390 },
+      { step: 270, epoch: 1.63, loss: 0.5424 }, { step: 280, epoch: 1.69, loss: 0.5096 },
+      { step: 290, epoch: 1.75, loss: 0.5509 }, { step: 300, epoch: 1.81, loss: 0.5378 },
+      { step: 310, epoch: 1.87, loss: 0.5488 }, { step: 320, epoch: 1.93, loss: 0.5480 },
+      { step: 330, epoch: 1.99, loss: 0.5249 }, { step: 340, epoch: 2.05, loss: 0.4947 },
+      { step: 350, epoch: 2.11, loss: 0.4966 }, { step: 360, epoch: 2.17, loss: 0.4861 },
+      { step: 370, epoch: 2.23, loss: 0.4832 }, { step: 380, epoch: 2.29, loss: 0.4864 },
+      { step: 390, epoch: 2.35, loss: 0.4775 }, { step: 400, epoch: 2.41, loss: 0.4838 },
+      { step: 410, epoch: 2.47, loss: 0.4848 }, { step: 420, epoch: 2.53, loss: 0.4703 },
+      { step: 430, epoch: 2.59, loss: 0.4665 }, { step: 440, epoch: 2.65, loss: 0.4742 },
+      { step: 450, epoch: 2.71, loss: 0.4622 }, { step: 460, epoch: 2.77, loss: 0.4885 },
+      { step: 470, epoch: 2.83, loss: 0.4513 }, { step: 480, epoch: 2.89, loss: 0.4644 },
+      { step: 490, epoch: 2.95, loss: 0.5023 }
+    ];
+    const EVAL_CURVE = [
+      { step: 166, epoch: 1.0, eval_loss: 0.5574 },
+      { step: 332, epoch: 2.0, eval_loss: 0.5192 },
+      { step: 498, epoch: 3.0, eval_loss: 0.5119 }
+    ];
+
+    const SUMMARY_RUNS = [
+      { id: "base_rp100", label: "base · rp_1.00 (greedy)", raw_valid: 0, fence_valid: 6, top_keys: 0, strict_f1: 0.51, soft_f1: 0.87, matched: 4, gen_vals: 129, mean_toks: 1240.3, budget: 10 },
+      { id: "base_gen108", label: "base · gen_rp_1.08", raw_valid: 0, fence_valid: 22, top_keys: 0, strict_f1: 0.49, soft_f1: 2.09, matched: 4, gen_vals: 509, mean_toks: 764.8, budget: 2 },
+      { id: "ft_rp100", label: "finetuned_v2 · rp_1.00", raw_valid: 25, fence_valid: 25, top_keys: 25, strict_f1: 18.02, soft_f1: 29.61, matched: 193, gen_vals: 916, mean_toks: 667.3, budget: 3 },
+      { id: "ft_gen108", label: "finetuned_v2 · gen_rp_1.08", raw_valid: 28, fence_valid: 28, top_keys: 28, strict_f1: 18.93, soft_f1: 30.74, matched: 198, gen_vals: 1001, mean_toks: 604.9, budget: 2 }
+    ];
+
+    const METRICS = [
+      { key: "raw_valid", label: "Raw Valid JSON (/30)", max: 30, fmt: r => `${r.raw_valid}/30 (${(r.raw_valid/30*100).toFixed(1)}%)` },
+      { key: "top_keys", label: "Exact 10 Schema Keys (/30)", max: 30, fmt: r => `${r.top_keys}/30 (${(r.top_keys/30*100).toFixed(1)}%)` },
+      { key: "strict_f1", label: "Strict Value F1 (%)", max: 35, fmt: r => `${r.strict_f1.toFixed(2)}%` },
+      { key: "soft_f1", label: "Soft Value F1 (%)", max: 35, fmt: r => `${r.soft_f1.toFixed(2)}%` },
+      { key: "matched", label: "Exact Matched Facts (/1,082)", max: 250, fmt: r => `${r.matched} / 1,082 (${r.gen_vals} gen)` },
+      { key: "mean_toks", label: "Mean Generated Tokens", max: 1300, fmt: r => `${r.mean_toks.toFixed(1)} toks (${r.budget}/30 budget hits)` }
+    ];
+
+    const CASES = [
+      { case_id: "validation:2761", base_f1: 0.0, ft_f1: 30.77, base_soft: 3.90, ft_soft: 41.11, base_toks: 233, ft_toks: 564, valid: true },
+      { case_id: "validation:465", base_f1: 0.0, ft_f1: 20.83, base_soft: 2.56, ft_soft: 43.99, base_toks: 295, ft_toks: 381, valid: true },
+      { case_id: "validation:105", base_f1: 0.0, ft_f1: 30.00, base_soft: 0.00, ft_soft: 48.76, base_toks: 669, ft_toks: 611, valid: true },
+      { case_id: "validation:1161", base_f1: 0.0, ft_f1: 50.85, base_soft: 3.81, ft_soft: 56.64, base_toks: 904, ft_toks: 426, valid: true },
+      { case_id: "validation:1030", base_f1: 0.0, ft_f1: 8.51, base_soft: 0.00, ft_soft: 20.48, base_toks: 533, ft_toks: 504, valid: true },
+      { case_id: "validation:935", base_f1: 0.0, ft_f1: 23.26, base_soft: 1.60, ft_soft: 32.01, base_toks: 400, ft_toks: 426, valid: true },
+      { case_id: "validation:583", base_f1: 0.0, ft_f1: 13.51, base_soft: 0.00, ft_soft: 30.07, base_toks: 637, ft_toks: 458, valid: true },
+      { case_id: "validation:428", base_f1: 3.51, ft_f1: 16.22, base_soft: 3.79, ft_soft: 31.20, base_toks: 494, ft_toks: 500, valid: true },
+      { case_id: "validation:2926", base_f1: 0.0, ft_f1: 15.73, base_soft: 0.60, ft_soft: 23.38, base_toks: 1098, ft_toks: 430, valid: true },
+      { case_id: "validation:2336", base_f1: 0.0, ft_f1: 25.53, base_soft: 3.70, ft_soft: 46.97, base_toks: 562, ft_toks: 447, valid: true },
+      { case_id: "validation:362", base_f1: 0.0, ft_f1: 14.81, base_soft: 5.19, ft_soft: 25.30, base_toks: 836, ft_toks: 479, valid: true },
+      { case_id: "validation:2543", base_f1: 0.0, ft_f1: 14.46, base_soft: 0.00, ft_soft: 19.29, base_toks: 1354, ft_toks: 516, valid: true },
+      { case_id: "validation:1791", base_f1: 0.0, ft_f1: 24.32, base_soft: 0.00, ft_soft: 38.28, base_toks: 1568, ft_toks: 508, valid: true },
+      { case_id: "validation:133", base_f1: 0.0, ft_f1: 22.54, base_soft: 1.88, ft_soft: 33.41, base_toks: 868, ft_toks: 543, valid: true },
+      { case_id: "validation:125", base_f1: 0.0, ft_f1: 12.12, base_soft: 1.75, ft_soft: 26.99, base_toks: 803, ft_toks: 489, valid: true },
+      { case_id: "validation:390", base_f1: 0.0, ft_f1: 14.29, base_soft: 0.00, ft_soft: 23.24, base_toks: 2048, ft_toks: 507, valid: true },
+      { case_id: "validation:915", base_f1: 0.0, ft_f1: 25.00, base_soft: 0.41, ft_soft: 42.27, base_toks: 432, ft_toks: 379, valid: true },
+      { case_id: "validation:978", base_f1: 0.0, ft_f1: 19.61, base_soft: 0.00, ft_soft: 26.43, base_toks: 196, ft_toks: 304, valid: true },
+      { case_id: "validation:2156", base_f1: 0.0, ft_f1: 21.82, base_soft: 1.62, ft_soft: 35.60, base_toks: 427, ft_toks: 499, valid: true },
+      { case_id: "validation:2593", base_f1: 5.71, ft_f1: 24.24, base_soft: 9.87, ft_soft: 37.91, base_toks: 542, ft_toks: 479, valid: true },
+      { case_id: "validation:111", base_f1: 0.0, ft_f1: 21.95, base_soft: 2.87, ft_soft: 33.36, base_toks: 574, ft_toks: 647, valid: true },
+      { case_id: "validation:2408", base_f1: 0.0, ft_f1: 8.22, base_soft: 4.56, ft_soft: 20.14, base_toks: 356, ft_toks: 503, valid: true },
+      { case_id: "validation:833", base_f1: 2.67, ft_f1: 23.53, base_soft: 4.37, ft_soft: 32.81, base_toks: 720, ft_toks: 544, valid: true },
+      { case_id: "validation:2806", base_f1: 0.0, ft_f1: 20.69, base_soft: 0.00, ft_soft: 42.90, base_toks: 1330, ft_toks: 341, valid: true },
+      { case_id: "validation:2335", base_f1: 0.0, ft_f1: 0.00, base_soft: 0.00, ft_soft: 0.00, base_toks: 2048, ft_toks: 2048, valid: false },
+      { case_id: "validation:1780", base_f1: 0.0, ft_f1: 17.28, base_soft: 1.96, ft_soft: 23.13, base_toks: 678, ft_toks: 432, valid: true },
+      { case_id: "validation:922", base_f1: 0.0, ft_f1: 11.88, base_soft: 2.81, ft_soft: 25.14, base_toks: 678, ft_toks: 1062, valid: true },
+      { case_id: "validation:1913", base_f1: 0.0, ft_f1: 0.00, base_soft: 0.38, ft_soft: 0.00, base_toks: 537, ft_toks: 2048, valid: false },
+      { case_id: "validation:2538", base_f1: 0.0, ft_f1: 18.92, base_soft: 0.00, ft_soft: 32.75, base_toks: 544, ft_toks: 500, valid: true },
+      { case_id: "validation:1175", base_f1: 2.90, ft_f1: 17.07, base_soft: 4.91, ft_soft: 28.59, base_toks: 579, ft_toks: 572, valid: true }
+    ];
+
+    const SHOWCASES = [
+      {
+        id: "validation:1161",
+        tag: "Best Win (0.508 F1)",
+        summary: "49-year-old male with solitary fibrous tumor. Base wrapped ```json fences and hallucinated keys (\"consolidation\", \"preoperative\", \"admission_date\"); Fine-tuned v2 hit all 10 canonical keys cleanly in 426 toks.",
+        base: "```json\n{\n  \"visit motivation\": \"Patient sought treatment due to repeated cough...\",\n  \"admission\": {\"admission_date\": \"2023-10-27\", \"admission_status\": \"Active\"},\n  \"surgery\": {\"surgery_date\": \"2023-10-28\"},\n  \"consolidation\": ...\n}",
+        ft: "{\"visit motivation\":\"Repeated cough and sputum for one year and aggravation with chest tightness\",\"admission\":[{\"reason\":\"Chest-enhanced CT after admission revealed a space-occupying lesion in the right chest\"}],\"patient information\":{\"age\":\"49\",\"sex\":\"male\"},\"patient medical history\":{},\"surgeries\":[{\"reason\":\"Solitary fibrous tumor\",\"Type\":\"Resection of the tumor with single-operation-incision thoracoscopy\"}],...}"
+      },
+      {
+        id: "validation:2761",
+        tag: "Clean Schema (0.308 F1)",
+        summary: "75-year-old woman with morpheaform plaque. Base nested every medical section inside \"admission\" as flat prose + invented \"handoff\". Fine-tuned v2 matched 12 exact clinical facts.",
+        base: "```json\n{\n  \"visit motivation\": \"...\",\n  \"admission\": {\n    \"patient information\": \"75-year-old...\",\n    \"surgery\": \"Oral antimicrobial treatment...\"\n  },\n  \"handoff\": \"Patient denied...\"\n}```",
+        ft: "{\"visit motivation\":\"Large tender erythematous morpheaform plaque...\",\"patient information\":{\"age\":\"75\",\"sex\":\"woman\"},\"treatments\":[{\"name\":\"Oral indomethacin\",\"related condition\":\"Erythematogenic morpheaform plaque\"},{\"name\":\"Topical clobetas\",...}],\"discharge\":{}}"
+      },
+      {
+        id: "validation:2538",
+        tag: "Complex ER (0.189 F1)",
+        summary: "24-year-old male with posterior fossa lesion and EVD. Base fabricated \"2024-10-27\" dates; Fine-tuned v2 extracted exact age, sex, visit motivation, and EVD procedure.",
+        base: "```json\n{\n  \"visit motivation\": \"To assess the patient's neurological status...\",\n  \"admission\": {\"admission_date\": \"2024-10-27\", \"admission_details\": \"...\"}\n}",
+        ft: "{\"visit motivation\":\"Altered conscious level\",\"patient information\":{\"age\":\"24\",\"sex\":\"male\"},\"surgeries\":[{\"Type\":\"Emergency cerebrospinal fluid external ventricular drain (EVD) insertion\",\"outcome\":\"Patient regained consciousness and condition stabilized\"}],...}"
+      },
+      {
+        id: "validation:1913",
+        tag: "Failure Mode (2,048 tok cap)",
+        summary: "Only remaining failure type (2/30 cases): dense multi-year CML history started extracting accurate structured fields, then hit max_new_tokens=2048 before closing the final string.",
+        base: "```json\n{\n  \"visit motivation\": \"Patient is a 67-year-old white man...\",\n  \"admission\": {\"date\": \"2006\", \"reason\": \"Patient was diagnosed with CML...\"},\n  \"surgery\": {\"date\": \"2006\", \"description\": \"Treatment...\"}\n}",
+        ft: "{\"visit motivation\":\"Increasing dyspnea on exertion, fatigue, and peripheral edema\",\"patient information\":{\"age\":\"67\",\"sex\":\"Male\",\"ethnicity\":\"White\"},\"diagnosis tests\":[...],\"treatments\":[{\"name\":\"Imatinib (Glivec, Novartis)\"... [truncated at 2,048 toks -> Unterminated string]"
+      }
+    ];
+
+    // --- Render Pipeline ---
+    let activeStage = "eval";
+    function renderPipeline() {
+      const stepsEl = document.getElementById("pipeline-steps");
+      stepsEl.innerHTML = PIPELINE_STAGES.map(s => {
+        const active = s.id === activeStage;
+        return `
+          <button onclick="activeStage='${s.id}'; renderPipeline();"
+            class="text-left p-3 rounded-lg border transition-colors ${active
+              ? 'bg-[var(--primary)] text-[var(--primary-foreground)] border-[var(--primary)]'
+              : 'bg-[var(--background)] border-[var(--border)] hover:border-[var(--primary)]'}">
+            <div class="text-xs font-mono opacity-80">${s.step} · ${s.tag}</div>
+            <div class="font-semibold text-sm mt-0.5">${s.title}</div>
+            <div class="text-xs font-mono mt-1.5 ${active ? 'opacity-95' : 'text-[var(--primary)]'}">${s.metric}</div>
+          </button>`;
+      }).join("");
+
+      const cur = PIPELINE_STAGES.find(s => s.id === activeStage);
+      document.getElementById("pipeline-detail").innerHTML = `
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+          <span class="font-semibold">${cur.step}: ${cur.title}</span>
+          <span class="text-xs font-mono px-2 py-0.5 rounded bg-[var(--card)] border border-[var(--border)]">${cur.metric}</span>
+        </div>
+        <p class="text-[var(--muted-foreground)] leading-relaxed">${cur.summary}</p>
+        <ul class="mt-2.5 space-y-1 text-xs list-disc list-inside text-[var(--foreground)]">
+          ${cur.bullets.map(b => `<li>${b}</li>`).join("")}
+        </ul>`;
+    }
+
+    // --- Render Cleaning Bars ---
+    function renderCleaning() {
+      document.getElementById("cleaning-bars").innerHTML = CLEANING_COMPARISON.map(item => {
+        const pct = Math.min(100, (item.v2 / item.v1) * 100);
+        return `
+          <div class="space-y-1.5">
+            <div class="flex justify-between text-xs">
+              <span class="font-medium">${item.label}</span>
+              <span class="font-mono text-[var(--muted-foreground)]">${item.v1} → <strong class="text-[var(--foreground)]">${item.v2}</strong> ${item.unit}</span>
+            </div>
+            <div class="h-3 rounded bg-[var(--background)] border border-[var(--border)] overflow-hidden relative">
+              <div class="h-full bg-[var(--muted-foreground)] opacity-25 w-full"></div>
+              <div class="h-full bg-[var(--chart-1)] absolute top-0 left-0 rounded-r" style="width:${pct.toFixed(1)}%"></div>
+            </div>
+            <div class="text-xs text-[var(--success)]">${item.note}</div>
+          </div>`;
+      }).join("");
+    }
+
+    // --- Render Loss Curve SVG ---
+    function renderLossChart() {
+      const W = 640, H = 240, padL = 46, padR = 20, padT = 18, padB = 34;
+      const plotW = W - padL - padR, plotH = H - padT - padB;
+      const minY = 0.40, maxY = 1.80, maxX = 505;
+      const sx = step => padL + (step / maxX) * plotW;
+      const sy = loss => padT + ((maxY - loss) / (maxY - minY)) * plotH;
+
+      const trainPath = TRAIN_CURVE.map((p, i) => `${i === 0 ? "M" : "L"}${sx(p.step).toFixed(1)},${sy(p.loss).toFixed(1)}`).join(" ");
+      const evalPath = EVAL_CURVE.map((p, i) => `${i === 0 ? "M" : "L"}${sx(p.step).toFixed(1)},${sy(p.eval_loss).toFixed(1)}`).join(" ");
+      const yTicks = [0.4, 0.7, 1.0, 1.3, 1.6];
+      const xTicks = [0, 166, 332, 498];
+
+      document.getElementById("loss-chart-wrap").innerHTML = `
+        <svg viewBox="0 0 ${W} ${H}" class="w-full min-w-[460px] h-auto select-none">
+          ${yTicks.map(v => `
+            <line x1="${padL}" y1="${sy(v)}" x2="${W - padR}" y2="${sy(v)}" stroke="var(--border)" stroke-dasharray="3,3" />
+            <text x="${padL - 8}" y="${sy(v) + 4}" text-anchor="end" fill="var(--muted-foreground)" font-size="12">${v.toFixed(1)}</text>
+          `).join("")}
+          ${xTicks.map((st, idx) => `
+            <line x1="${sx(st)}" y1="${padT}" x2="${sx(st)}" y2="${H - padB}" stroke="var(--border)" stroke-opacity="${idx===0?1:0.5}" />
+            <text x="${sx(st)}" y="${H - 10}" text-anchor="middle" fill="var(--muted-foreground)" font-size="12">${idx === 0 ? '0' : `Ep ${idx} (${st})`}</text>
+          `).join("")}
+          <path d="${trainPath}" fill="none" stroke="var(--chart-1)" stroke-width="2.2" />
+          <path d="${evalPath}" fill="none" stroke="var(--success)" stroke-width="2.2" stroke-dasharray="5,3" />
+          ${TRAIN_CURVE.map(p => `
+            <circle cx="${sx(p.step)}" cy="${sy(p.loss)}" r="3.2" fill="var(--chart-1)" class="cursor-pointer opacity-80 hover:opacity-100"
+              onmouseenter="document.getElementById('loss-hover').textContent='Train step ${p.step} (ep ${p.epoch.toFixed(2)}): loss=${p.loss.toFixed(4)}'" />
+          `).join("")}
+          ${EVAL_CURVE.map(p => `
+            <circle cx="${sx(p.step)}" cy="${sy(p.eval_loss)}" r="5.5" fill="var(--success)" stroke="var(--card)" stroke-width="1.5" class="cursor-pointer"
+              onmouseenter="document.getElementById('loss-hover').textContent='Epoch ${p.epoch} Checkpoint (step ${p.step}): eval_loss=${p.eval_loss.toFixed(4)}'" />
+            <text x="${sx(p.step) - 6}" y="${sy(p.eval_loss) - 9}" text-anchor="end" fill="var(--success)" font-size="12" font-weight="600">${p.eval_loss.toFixed(4)}</text>
+          `).join("")}
+          <g transform="translate(${W - 210}, ${padT + 6})">
+            <rect width="190" height="40" rx="6" fill="var(--background)" stroke="var(--border)" />
+            <line x1="10" y1="14" x2="30" y2="14" stroke="var(--chart-1)" stroke-width="2.5" />
+            <text x="36" y="18" fill="var(--foreground)" font-size="12">Train Loss (every 10 steps)</text>
+            <line x1="10" y1="30" x2="30" y2="30" stroke="var(--success)" stroke-width="2.5" stroke-dasharray="4,2" />
+            <text x="36" y="34" fill="var(--foreground)" font-size="12">Validation eval_loss</text>
+          </g>
+        </svg>`;
+    }
+
+    // --- Render 4-Way Benchmark ---
+    let activeMetric = "raw_valid";
+    function renderBenchmark() {
+      document.getElementById("metric-tabs").innerHTML = METRICS.map(m => `
+        <button onclick="activeMetric='${m.key}'; renderBenchmark();"
+          class="px-2.5 py-1 rounded border transition-colors ${activeMetric === m.key
+            ? 'bg-[var(--primary)] text-[var(--primary-foreground)] border-[var(--primary)]'
+            : 'bg-[var(--background)] border-[var(--border)] hover:border-[var(--primary)]'}">
+          ${m.label}
+        </button>`).join("");
+
+      const spec = METRICS.find(m => m.key === activeMetric);
+      document.getElementById("benchmark-chart").innerHTML = SUMMARY_RUNS.map(r => {
+        const val = r[activeMetric];
+        const pct = Math.min(100, (val / spec.max) * 100);
+        const isFt = r.id.startsWith("ft_");
+        const color = isFt ? (r.id === "ft_gen108" ? "var(--success)" : "var(--chart-1)") : "var(--muted-foreground)";
+        return `
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs">
+              <span class="font-mono ${r.id === 'ft_gen108' ? 'font-bold' : ''}">${r.label}</span>
+              <span class="font-mono font-semibold">${spec.fmt(r)}</span>
+            </div>
+            <div class="h-5 rounded bg-[var(--background)] border border-[var(--border)] overflow-hidden">
+              <div class="h-full rounded-r transition-all" style="width:${Math.max(1.5, pct).toFixed(1)}%; background:${color}; opacity:${isFt ? 0.92 : 0.45}"></div>
+            </div>
+          </div>`;
+      }).join("");
+    }
+
+    // --- Render Per-Case 30-Sample Chart ---
+    let selectedCaseId = "validation:1161";
+    function renderCases() {
+      const mode = document.getElementById("case-metric").value;
+      const sort = document.getElementById("case-sort").value;
+
+      const getVals = c => {
+        if (mode === "strict") return { b: c.base_f1, f: c.ft_f1, max: 55, suffix: "%" };
+        if (mode === "soft") return { b: c.base_soft, f: c.ft_soft, max: 60, suffix: "%" };
+        return { b: c.base_toks, f: c.ft_toks, max: 2100, suffix: " toks" };
+      };
+
+      let rows = [...CASES];
+      if (sort === "ft_desc") rows.sort((a, b) => getVals(b).f - getVals(a).f);
+      else if (sort === "delta_desc") rows.sort((a, b) => (getVals(b).f - getVals(b).b) - (getVals(a).f - getVals(a).b));
+
+      const W = 620, H = 200, padL = 38, padR = 12, padT = 14, padB = 28;
+      const plotW = W - padL - padR, plotH = H - padT - padB;
+      const barW = plotW / rows.length;
+      const maxY = getVals(rows[0]).max;
+      const sy = v => padT + ((maxY - v) / maxY) * plotH;
+
+      const barsSvg = rows.map((c, i) => {
+        const v = getVals(c);
+        const x = padL + i * barW;
+        const selected = c.case_id === selectedCaseId;
+        const yF = sy(v.f), hF = Math.max(2, (H - padB) - yF);
+        const yB = sy(v.b), hB = Math.max(2, (H - padB) - yB);
+        const fill = !c.valid ? "var(--error)" : "var(--chart-1)";
+        return `
+          <g class="cursor-pointer" onclick="selectedCaseId='${c.case_id}'; renderCases();">
+            <rect x="${x + 1}" y="${padT}" width="${barW - 2}" height="${plotH}" fill="${selected ? 'var(--primary)' : 'transparent'}" fill-opacity="0.10" rx="2" />
+            <rect x="${x + 2.5}" y="${yB}" width="${(barW - 5) * 0.42}" height="${hB}" fill="var(--muted-foreground)" fill-opacity="0.45" rx="1.5" />
+            <rect x="${x + 2.5 + (barW - 5) * 0.46}" y="${yF}" width="${(barW - 5) * 0.54}" height="${hF}" fill="${fill}" stroke="${selected ? 'var(--foreground)' : 'none'}" stroke-width="1.2" rx="1.5" />
+          </g>`;
+      }).join("");
+
+      const ticks = mode === "tokens" ? [0, 500, 1000, 1500, 2048] : [0, 15, 30, 45];
+      document.getElementById("case-chart-wrap").innerHTML = `
+        <svg viewBox="0 0 ${W} ${H}" class="w-full min-w-[440px] h-auto select-none">
+          ${ticks.map(t => `
+            <line x1="${padL}" y1="${sy(t)}" x2="${W - padR}" y2="${sy(t)}" stroke="var(--border)" stroke-dasharray="2,3" />
+            <text x="${padL - 5}" y="${sy(t) + 4}" text-anchor="end" fill="var(--muted-foreground)" font-size="12">${t}${mode==='tokens'?'':'%'}</text>
+          `).join("")}
+          ${barsSvg}
+          <text x="${padL}" y="${H - 7}" fill="var(--muted-foreground)" font-size="12">Grey = Base · Blue = Fine-Tuned Valid · Red = 2,048-tok Truncation (2/30)</text>
+        </svg>`;
+
+      const sel = CASES.find(c => c.case_id === selectedCaseId);
+      document.getElementById("case-inspector").innerHTML = `
+        <div>
+          <span class="font-mono font-bold">${sel.case_id}</span>
+          <span class="ml-2 px-1.5 py-0.5 rounded ${sel.valid ? 'bg-[var(--success)]/15 text-[var(--success)]' : 'bg-[var(--error)]/15 text-[var(--error)]'} font-mono">
+            ${sel.valid ? 'Raw JSON Valid · 10/10 Keys' : 'Truncated at 2,048 toks'}
+          </span>
+        </div>
+        <div class="font-mono space-x-3">
+          <span>Strict F1: ${sel.base_f1.toFixed(1)}% → <strong>${sel.ft_f1.toFixed(1)}%</strong></span>
+          <span>Soft F1: ${sel.base_soft.toFixed(1)}% → <strong>${sel.ft_soft.toFixed(1)}%</strong></span>
+          <span>Tokens: ${sel.base_toks} → ${sel.ft_toks}</span>
+        </div>`;
+    }
+
+    // --- Render Showcase ---
+    let activeShowcase = "validation:1161";
+    function renderShowcase() {
+      document.getElementById("showcase-tabs").innerHTML = SHOWCASES.map(s => `
+        <button onclick="activeShowcase='${s.id}'; renderShowcase();"
+          class="px-2 py-1 rounded border transition-colors ${activeShowcase === s.id
+            ? 'bg-[var(--primary)] text-[var(--primary-foreground)] border-[var(--primary)]'
+            : 'bg-[var(--background)] border-[var(--border)] hover:border-[var(--primary)]'}">
+          ${s.id}
+        </button>`).join("");
+
+      const cur = SHOWCASES.find(s => s.id === activeShowcase);
+      document.getElementById("showcase-body").innerHTML = `
+        <div class="font-semibold text-[var(--primary)]">${cur.tag}</div>
+        <p class="text-[var(--muted-foreground)] leading-relaxed">${cur.summary}</p>
+        <div class="space-y-1.5">
+          <div class="font-medium text-[var(--muted-foreground)]">Base (<span class="font-mono">gen_rp_1.08</span>)</div>
+          <pre class="p-2.5 rounded bg-[var(--background)] border border-[var(--border)] overflow-x-auto whitespace-pre-wrap font-mono text-xs">${cur.base.replace(/</g, '&lt;')}</pre>
+          <div class="font-medium text-[var(--success)]">Fine-Tuned v2 (<span class="font-mono">gen_rp_1.08</span>)</div>
+          <pre class="p-2.5 rounded bg-[var(--background)] border border-[var(--border)] overflow-x-auto whitespace-pre-wrap font-mono text-xs">${cur.ft.replace(/</g, '&lt;')}</pre>
+        </div>`;
+    }
+
+    document.getElementById("case-metric").addEventListener("change", renderCases);
+    document.getElementById("case-sort").addEventListener("change", renderCases);
+
+    function renderAll() {
+      renderPipeline();
+      renderCleaning();
+      renderLossChart();
+      renderBenchmark();
+      renderCases();
+      renderShowcase();
+    }
+    window.addEventListener("themechange", renderAll);
+    renderAll();
+  </script>
+</body>
+</html>

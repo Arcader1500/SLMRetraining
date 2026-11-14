@@ -1,0 +1,10 @@
+{
+  "case_id": "train:64",
+  "total_tokens": 1949,
+  "initial_loss": 1.725236177444458,
+  "backward_checked": true,
+  "finite_gradients": true,
+  "peak_allocated_gib": 6.834935188293457,
+  "gpu": "Tesla T4",
+  "dtype": "torch.float32"
+}

@@ -1,0 +1,27 @@
+{
+  "dataset_version": "900825a06d38a006",
+  "validation_sha256": "dc3e8a315a88322fb583a28319f0a4e894729a4a70820da86ec91e1a0df0dc7a",
+  "model": "google/gemma-3-270m-it",
+  "base_model_revision": "ac82b4e820549b854eebf28ce6dedaf9fdfa17b3",
+  "case_ids": [
+    "validation:2761",
+    "validation:465",
+    "validation:105",
+    "validation:1161",
+    "validation:1030",
+    "validation:935",
+    "validation:583",
+    "validation:428",
+    "validation:2926",
+    "validation:2336"
+  ],
+  "prompt_sha256": "27473a3daf3f9b00f4e40176586211f1425dd09350fe5f783375564ed0488d43",
+  "tokenizer_add_special_tokens": false,
+  "max_new_tokens": 2048,
+  "do_sample": false,
+  "seed": 42,
+  "dtype": "float32",
+  "metrics_version": 1,
+  "transformers": "4.57.6",
+  "torch": "2.14.1+cu130"
+}

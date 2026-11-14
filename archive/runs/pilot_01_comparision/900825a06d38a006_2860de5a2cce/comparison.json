@@ -1,0 +1,86 @@
+[
+  {
+    "metric": "selected_cases",
+    "baseline": 10,
+    "finetuned": 10,
+    "change": 0
+  },
+  {
+    "metric": "evaluated_cases",
+    "baseline": 10,
+    "finetuned": 10,
+    "change": 0
+  },
+  {
+    "metric": "empty_cases",
+    "baseline": 0,
+    "finetuned": 0,
+    "change": 0
+  },
+  {
+    "metric": "raw_json_object_valid_cases",
+    "baseline": 0,
+    "finetuned": 6,
+    "change": 6
+  },
+  {
+    "metric": "json_object_valid_after_fence_removal_cases",
+    "baseline": 4,
+    "finetuned": 6,
+    "change": 2
+  },
+  {
+    "metric": "exact_key_match_cases",
+    "baseline": 0,
+    "finetuned": 2,
+    "change": 2
+  },
+  {
+    "metric": "placeholder_only_cases",
+    "baseline": 0,
+    "finetuned": 0,
+    "change": 0
+  },
+  {
+    "metric": "reached_budget_cases",
+    "baseline": 3,
+    "finetuned": 1,
+    "change": -2
+  },
+  {
+    "metric": "mean_value_precision",
+    "baseline": 0.006666666666666666,
+    "finetuned": 0.16634555137844612,
+    "change": 0.15967888471177946
+  },
+  {
+    "metric": "mean_value_recall",
+    "baseline": 0.002,
+    "finetuned": 0.09635396663370441,
+    "change": 0.0943539666337044
+  },
+  {
+    "metric": "mean_value_f1",
+    "baseline": 0.003076923076923077,
+    "finetuned": 0.11874002569369495,
+    "change": 0.11566310261677187
+  },
+  {
+    "metric": "matched_values",
+    "baseline": 1,
+    "finetuned": 34,
+    "change": 33
+  },
+  {
+    "metric": "reference_values",
+    "baseline": 353,
+    "finetuned": 353,
+    "change": 0
+  },
+  {
+    "metric": "generated_values",
+    "baseline": 57,
+    "finetuned": 124,
+    "change": 67
+  }
+]

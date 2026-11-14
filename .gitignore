@@ -10,7 +10,7 @@ wheels/
 .venv
 
 # Clinical pilot outputs (model adapters and clinical text)
-runs/
+/runs/
 
 # env
 .env.local
