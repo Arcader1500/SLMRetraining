@@ -138,9 +138,9 @@ Generated directly in [results_v2/comparison/showcase_examples.md](file:///c:/Us
 ---
 
 ## 9. Deliverable Map
-- [01_baseline_eval.ipynb](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/01_baseline_eval.ipynb) — Baseline inference & evaluation on `v2` (`base` with `rp_1.00` and `gen_rp_1.08`), with saved cell outputs.
-- [02_finetune.ipynb](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/02_finetune.ipynb) — 3-epoch FP32 LoRA fine-tuning on cleaned `v2`, with saved milestone/VRAM/epoch outputs.
-- [03_eval_and_compare.ipynb](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/03_eval_and_compare.ipynb) — Fine-tuned evaluation, 4-way Base vs Fine-Tuned table, and side-by-side showcase, with saved cell outputs.
+- [notebooks/01_baseline_eval.ipynb](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/notebooks/01_baseline_eval.ipynb) — Baseline inference & evaluation on `v2` (`base` with `rp_1.00` and `gen_rp_1.08`), with saved cell outputs.
+- [notebooks/02_finetune.ipynb](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/notebooks/02_finetune.ipynb) — 3-epoch FP32 LoRA fine-tuning on cleaned `v2`, with saved milestone/VRAM/epoch outputs.
+- [notebooks/03_eval_and_compare.ipynb](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/notebooks/03_eval_and_compare.ipynb) — Fine-tuned evaluation, 4-way Base vs Fine-Tuned table, and side-by-side showcase, with saved cell outputs.
 - [prepared_clinical_dataset/eeff5efa1619f198/](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/prepared_clinical_dataset/eeff5efa1619f198/) — Frozen `v2` dataset (`1,325` train / `30` val).
 - [results_v2/](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/results_v2/) — Downloaded `baseline/`, `finetuned_v2/` (best `checkpoint-498` adapter + logs), and `comparison/` (`summary_comparison.csv`, `case_comparison.csv`, `showcase_examples.md`).
 - [archive/](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/archive/) — Preserved Phase 0/1 runs and legacy notebooks.

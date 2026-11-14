@@ -1,7 +1,7 @@
 [project]
 name = "slmretraining"
 version = "0.1.0"
-description = "Add your description here"
+description = "FP32 LoRA fine-tuning and reproducible evaluation of google/gemma-3-270m-it for structured clinical JSON extraction"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
