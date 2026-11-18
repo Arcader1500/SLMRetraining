@@ -1,0 +1,22 @@
+# Preserve frozen experiment bytes: manifests record SHA-256 of these files.
+results_v3/** -text
+prepared_clinical_dataset/e80798edebe5aba5/** -text
+prepared_clinical_dataset/latest_v3.json -text
+notebooks/v3_1325/** -text
+docs/Clinical_Extraction_Phases_1_and_2.html -text
+"docs/Clinical JSON Extraction_ Fine-Tuning Process and Results.html" -text
+
+# These execution sources also appear in saved provenance hashes.
+scripts/analyze_training_projection.py -text
+scripts/audit_training_data.py -text
+scripts/build_phase_visualizer.py -text
+scripts/check_phase_visualizer.py -text
+scripts/check_remaining_validation.py -text
+scripts/check_source_grounded_evaluation.py -text
+scripts/codex_deepeval_judge.py -text
+scripts/phase_results.py -text
+scripts/prepare_deepeval.py -text
+scripts/prepare_v3_dataset.py -text
+scripts/run_colab_notebook.py -text
+scripts/run_deepeval.py -text
+scripts/source_grounded_rubric.py -text

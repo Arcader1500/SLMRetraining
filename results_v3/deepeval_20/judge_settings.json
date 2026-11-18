@@ -1,0 +1,17 @@
+{
+  "run_judge": true,
+  "default_backend": "codex",
+  "judges": {
+    "codex": {
+      "enabled": true,
+      "model": "gpt-6-luna",
+      "timeout_seconds": 300
+    },
+    "gemini": {
+      "enabled": false,
+      "model": "gemini-3.8-flash",
+      "api_key_env": "GOOGLE_API_KEY",
+      "requires_completed_codex_run": true
+    }
+  }
+}

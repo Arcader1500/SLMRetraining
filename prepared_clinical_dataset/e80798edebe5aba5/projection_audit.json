@@ -1,0 +1,18 @@
+{
+  "train": {
+    "surgeries_unnamed_entries": 29,
+    "symptoms_unnamed_entries": 1,
+    "diagnosis tests_unnamed_entries": 2,
+    "treatments_unnamed_entries": 13,
+    "medical examinations_unnamed_entries": 0,
+    "projected_duplicate_entries": 0
+  },
+  "validation": {
+    "surgeries_unnamed_entries": 1,
+    "symptoms_unnamed_entries": 0,
+    "diagnosis tests_unnamed_entries": 1,
+    "treatments_unnamed_entries": 0,
+    "medical examinations_unnamed_entries": 0,
+    "projected_duplicate_entries": 0
+  }
+}

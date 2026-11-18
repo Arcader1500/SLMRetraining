@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Clinical JSON Extraction: Fine-Tuning Process and Results</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --ink:#141a2a; --mute:#59627a; --line:#e3e7f0;
+  --bad:#ef5b4c; --good:#0f9f86; --indigo:#4c5fe0; --violet:#9a4dd6; --amber:#f2a022;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:#fff;color:var(--ink);font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum"}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+header{background:linear-gradient(120deg,#e9edff 0%,#e3f6f1 55%,#fff1df 100%);padding:56px 0 44px}
+h1{font-size:clamp(1.9rem,4.4vw,2.9rem);line-height:1.1;margin:0 0 12px;font-weight:800;letter-spacing:-.03em;max-width:18ch}
+.lede{color:var(--mute);font-size:1.05rem;margin:0;max-width:56ch}
+.duel{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+.code{border-radius:14px;background:#fff;border:1px solid var(--line);overflow:hidden;box-shadow:0 8px 24px rgba(40,50,100,.08)}
+.code h3{margin:0;padding:10px 16px;font-size:.85rem;font-weight:600;color:#fff}
+.code.b h3{background:var(--bad)} .code.a h3{background:var(--good)}
+.code pre{margin:0;padding:14px 16px;font:12.5px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto;color:#2a3147}
+.code em{font-style:normal;background:#ffe3df;border-radius:3px;padding:0 2px}
+.code.a em{background:#d6f4ec}
+.cap{font-size:.8rem;color:var(--mute);margin:10px 2px 0}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+.kpi{background:rgba(255,255,255,.75);border-radius:14px;padding:16px}
+.kpi .l{font-size:.82rem;color:var(--mute);font-weight:500}
+.kpi .v{font-size:1.45rem;font-weight:800;letter-spacing:-.02em;margin-top:2px;white-space:nowrap}
+.kpi .v s{color:var(--bad);text-decoration:none;font-weight:600;font-size:1.05rem}
+.kpi .v b{color:var(--good)}
+.kpi .v i{font-style:normal;color:var(--mute);font-weight:500;margin:0 4px}
+
+.chap{position:relative;padding:44px 0;border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--t) 0,#fff 100%)}
+.chap:last-of-type{border:0}
+.head{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px}
+.num{flex:none;width:40px;height:40px;border-radius:50%;background:var(--c);color:#fff;font-weight:700;display:grid;place-items:center;box-shadow:0 0 0 6px var(--t)}
+.head h2{margin:0;font-size:1.5rem;line-height:1.2;letter-spacing:-.02em;font-weight:700}
+.head p{margin:4px 0 0;color:var(--mute);max-width:60ch}
+.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 4px 16px rgba(40,50,100,.05)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{background:var(--t);color:var(--c);font-weight:600;font-size:.82rem;padding:5px 12px;border-radius:999px}
+.stack{display:flex;height:44px;border-radius:10px;overflow:hidden;font-weight:700;color:#fff;font-size:.95rem}
+.stack div{display:flex;align-items:center;padding:0 14px;white-space:nowrap}
+.big{font-size:2.6rem;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--c)}
+.mini{color:var(--mute);font-size:.9rem;margin:6px 0 0}
+.row{margin-bottom:18px}.row:last-child{margin-bottom:0}
+.rl{font-size:.9rem;font-weight:500;margin-bottom:6px;display:flex;justify-content:space-between;gap:10px}
+.rl span:last-child{color:var(--mute);font-weight:400}
+.track{height:12px;background:#eef0f6;border-radius:6px;overflow:hidden;margin-bottom:4px}
+.fill{height:100%;border-radius:6px;transition:width .5s ease;background:var(--k)}
+.vals{display:flex;justify-content:space-between;font-size:.82rem;color:var(--mute)}
+.vals b{color:var(--ink)}
+.legend{display:flex;gap:16px;font-size:.84rem;color:var(--mute);margin:0 0 16px;flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.seg{display:inline-flex;background:#eef0f6;border-radius:10px;padding:3px;margin-bottom:18px}
+.seg button{border:0;background:transparent;font:inherit;font-size:.86rem;padding:7px 15px;border-radius:8px;color:var(--mute);cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--good);color:#fff;font-weight:600}
+button:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.86rem;min-width:560px}
+th,td{padding:10px;text-align:right;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--mute);font-weight:500}
+tr:last-child td{border:0}
+tr.hl td{background:#e3f6f1;font-weight:700}
+svg{width:100%;height:auto;display:block}
+svg text{font-family:inherit;font-size:11px;fill:var(--mute)}
+.note{font-size:.88rem;color:var(--mute);margin:16px 0 0;max-width:80ch}
+@media(max-width:820px){.duel,.cols{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.kpi .v{font-size:1.25rem}}
+@media(prefers-reduced-motion:reduce){.fill{transition:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>Teaching a 270M model to write clinical JSON</h1>
+  <p class="lede">gemma-3-270m-it, LoRA fine-tuned on 1,325 cleaned clinical notes and tested on 30 held-out cases.</p>
+  <div class="duel">
+    <div><div class="code b"><h3>Base model</h3><pre>```json
+{
+  <em>"admission_date"</em>: "2023-10-27",
+  <em>"surgery"</em>: { … },
+  <em>"consolidation"</em>: { … },
+  <em>"resection"</em>: { … }
+}
+```</pre></div></div>
+    <div><div class="code a"><h3>Fine-tuned</h3><pre>{
+  <em>"visit motivation"</em>: "…",
+  <em>"patient information"</em>: {"age":"49","sex":"male"},
+  <em>"patient medical history"</em>: {},
+  <em>"surgeries"</em>: [{"reason":"Solitary fibrous tumor", …}],
+  … 10 keys in total
+}</pre></div></div>
+  </div>
+  <p class="cap">Same note (validation case 1161), abridged. The base model wraps output in markdown and invents fields.</p>
+  <div class="kpis">
+    <div class="kpi"><div class="l">Valid raw JSON</div><div class="v"><s>0%</s><i>→</i><b>93.3%</b></div></div>
+    <div class="kpi"><div class="l">All 10 schema keys</div><div class="v"><s>0%</s><i>→</i><b>93.3%</b></div></div>
+    <div class="kpi"><div class="l">Strict value F1</div><div class="v"><s>0.5%</s><i>→</i><b>18.9%</b></div></div>
+    <div class="kpi"><div class="l">Soft value F1</div><div class="v"><s>2.1%</s><i>→</i><b>30.7%</b></div></div>
+  </div>
+</div></header>
+
+<section class="chap" style="--c:var(--bad);--t:#fff0ee"><div class="wrap">
+  <div class="head"><div class="num">1</div><div><h2>Audit: the training data was mostly empty</h2><p>Before training, the source dataset was checked for what could teach the model bad habits.</p></div></div>
+  <div class="panel">
+    <div class="stack"><div style="width:54.3%;background:var(--bad)">54.3% "None"</div><div style="width:45.7%;background:#c9cfdf;color:var(--ink)">45.7% real values</div></div>
+    <p class="mini">Share of leaf values in v1 training targets. Over half of the learning signal went to empty placeholders.</p>
+    <div class="chips">
+      <span class="chip">Four conflicting ways to write an empty section</span>
+      <span class="chip">0 of 1,325 targets contained loops</span>
+    </div>
+    <p class="note">The repetition loops seen in early runs came from greedy decoding, not from the data.</p>
+  </div>
+</div></section>
+
+<section class="chap" style="--c:var(--good);--t:#e3f6f1"><div class="wrap">
+  <div class="head"><div class="num">2</div><div><h2>Clean: one schema, no filler</h2><p>Rules applied deterministically to produce dataset v2. Empty lists become [], empty objects become {}, absent subfields are omitted.</p></div></div>
+  <div class="cols">
+    <div class="panel">
+      <div class="legend"><span><i style="background:var(--bad)"></i>v1</span><span><i style="background:var(--good)"></i>v2</span></div>
+      <div id="clean"></div>
+    </div>
+    <div class="panel">
+      <div class="big">32.6%</div><p class="mini">shorter target JSON across the accepted pool</p>
+      <div class="chips"><span class="chip">1,325 train</span><span class="chip">30 validation</span><span class="chip">107 cross-split duplicates removed</span></div>
+      <p class="note">Prompt tokens are masked, so loss trains only on the JSON answer. Validation grew from 10 to 30 cases to reduce noise.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="chap" style="--c:var(--indigo);--t:#eceffe"><div class="wrap">
+  <div class="head"><div class="num">3</div><div><h2>Train: three epochs of LoRA</h2><p>Validation loss fell every epoch, and the final checkpoint was selected as best.</p></div></div>
+  <div class="panel">
+    <div class="legend"><span><i style="background:var(--amber)"></i>Train loss</span><span><i style="background:var(--indigo)"></i>Validation loss</span></div>
+    <div id="loss"></div>
+    <div class="chips">
+      <span class="chip">LoRA r=16, α=32</span><span class="chip">All 7 attention and MLP projections</span><span class="chip">Learning rate 2e-4, cosine</span><span class="chip">Batch 8, 498 steps</span><span class="chip">40 min on Tesla T4</span><span class="chip">float32, 8.34 GiB peak</span>
+    </div>
+  </div>
+</div></section>
+
+<section class="chap" style="--c:var(--violet);--t:#f5ecfc"><div class="wrap">
+  <div class="head"><div class="num">4</div><div><h2>Decode: penalize only what the model generates</h2><p>A repetition penalty on generated tokens, not the note, stops loops without hurting extraction. Tested on 10 cases with an early checkpoint.</p></div></div>
+  <div class="panel">
+    <div class="legend"><span><i style="background:var(--bad)"></i>Greedy (1.00)</span><span><i style="background:var(--good)"></i>Penalty 1.08</span><span><i style="background:var(--amber)"></i>Penalty 1.15</span></div>
+    <div id="dec"></div>
+    <p class="note">At 1.08, valid JSON rose from 5 to 9 of 10 and 2,048-token loops fell from 4 to 0. At 1.15 the penalty started to break structure.</p>
+  </div>
+</div></section>
+
+<section class="chap" style="--c:var(--good);--t:#e3f6f1"><div class="wrap">
+  <div class="head"><div class="num">5</div><div><h2>Results: base versus fine-tuned</h2><p>30 held-out notes, scored on format and on extracted facts.</p></div></div>
+  <div class="panel">
+    <div class="seg" role="group" aria-label="Decoding">
+      <button id="b108" aria-pressed="true">Penalty 1.08</button>
+      <button id="b100" aria-pressed="false">Greedy (1.00)</button>
+    </div>
+    <div class="legend"><span><i style="background:var(--bad)"></i>Base</span><span><i style="background:var(--good)"></i>Fine-tuned</span></div>
+    <div class="cols" id="res"></div>
+    <p class="note" id="facts"></p>
+  </div>
+  <div class="panel scroll" style="margin-top:16px">
+    <table>
+      <thead><tr><th>Model, decoding</th><th>Raw valid</th><th>Valid after fence strip</th><th>Strict F1</th><th>Soft F1</th><th>Budget hits</th><th>Mean tokens</th></tr></thead>
+      <tbody>
+        <tr><td>Base, greedy</td><td>0/30</td><td>6/30</td><td>0.51%</td><td>0.87%</td><td>10</td><td>1,240</td></tr>
+        <tr><td>Fine-tuned, greedy</td><td>25/30</td><td>25/30</td><td>18.02%</td><td>29.61%</td><td>3</td><td>667</td></tr>
+        <tr><td>Base, penalty 1.08</td><td>0/30</td><td>22/30</td><td>0.49%</td><td>2.09%</td><td>2</td><td>765</td></tr>
+        <tr class="hl"><td>Fine-tuned, penalty 1.08</td><td>28/30</td><td>28/30</td><td>18.93%</td><td>30.74%</td><td>2</td><td>605</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">The fine-tuned model beat the base on 28 of 30 cases for both F1 scores. Its two invalid outputs (validation 2335 and 1913) hit the 2,048-token limit mid-object. Exact nested key-path match stayed at 0 of 30, since it needs the same optional subfields as the annotator everywhere.</p>
+</div></section>
+
+<script>
+const $=id=>document.getElementById(id);
+const fmt=(n,d=0)=>n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
+const bar=(l,k,w,left,right,r)=>`<div class="row"><div class="rl"><span>${l}</span><span>${r||''}</span></div>${w.map((x,i)=>`<div class="track"><div class="fill" style="width:${x}%;--k:${k[i]}"></div></div>`).join('')}<div class="vals">${left.map(t=>`<span>${t}</span>`).join('')}</div></div>`;
+
+const C=[['Average leaf values per example',79.5,36.5,1,'−54.1%'],['Mean training sequence (tokens)',1211.1,1055.3,1,'−12.9%'],['Longest training sequence (tokens)',1949,1651,0,'−298']];
+$('clean').innerHTML=C.map(([l,a,b,d,c])=>{const m=Math.max(a,b);return bar(l,['var(--bad)','var(--good)'],[a/m*100,b/m*100],[`v1 <b>${fmt(a,d)}</b>`,`v2 <b>${fmt(b,d)}</b>`],0,c)}).join('');
+
+$('dec').innerHTML=[['Valid raw JSON, out of 10',[5,9,6]],['Hit the 2,048-token limit, out of 10',[4,0,null]]].map(([l,v])=>
+  bar(l,['var(--bad)','var(--good)','var(--amber)'],v.map(x=>(x||0)*10),v.map((x,i)=>x===null?'':`${['1.00','1.08','1.15'][i]} <b>${x}/10</b>`).filter(Boolean))).join('')+'';
+
+(function(){
+  const W=640,H=290,L=46,R=18,T=14,B=44;
+  const X=s=>L+s/498*(W-L-R), Y=v=>T+(1.8-v)/1.4*(H-T-B);
+  const tr=[[0,1.7577],[10,1.7043],[160,.6224],[330,.5249],[490,.5023]],ev=[[166,.5574],[332,.5192],[498,.5119]];
+  const P=p=>p.map((q,i)=>(i?'L':'M')+X(q[0]).toFixed(1)+' '+Y(q[1]).toFixed(1)).join(' ');
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Train and validation loss over 498 steps">`;
+  [[0,166,'#f3f5ff'],[332,498,'#f3f5ff']].forEach(([a,b,c])=>s+=`<rect x="${X(a)}" y="${T}" width="${X(b)-X(a)}" height="${H-T-B}" fill="${c}"/>`);
+  [.5,1,1.5].forEach(v=>s+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="#e3e7f0"/><text x="${L-8}" y="${Y(v)+4}" text-anchor="end">${v.toFixed(1)}</text>`);
+  [['Epoch 1',0,166],['Epoch 2',166,332],['Epoch 3',332,498]].forEach(([t,a,b])=>s+=`<text x="${(X(a)+X(b))/2}" y="${H-B+18}" text-anchor="middle">${t}</text>`);
+  s+=`<text x="${(L+W-R)/2}" y="${H-6}" text-anchor="middle">Optimizer steps</text>`;
+  s+=`<path d="${P(tr)}" fill="none" stroke="#f2a022" stroke-width="2.5"/>`+tr.map(q=>`<circle cx="${X(q[0])}" cy="${Y(q[1])}" r="4" fill="#f2a022"/>`).join('');
+  s+=`<path d="${P(ev)}" fill="none" stroke="#4c5fe0" stroke-width="3"/>`+ev.map(q=>`<circle cx="${X(q[0])}" cy="${Y(q[1])}" r="5" fill="#4c5fe0"/><text x="${X(q[0])}" y="${Y(q[1])-12}" text-anchor="${q[0]===498?'end':'middle'}" style="fill:#141a2a;font-weight:700">${q[1].toFixed(4)}</text>`).join('');
+  s+=`<text x="${X(10)+12}" y="${Y(1.7043)+4}">1.76 at start</text><text x="${X(160)+10}" y="${Y(.6224)-10}">0.62 at step 160</text></svg>`;
+  $('loss').innerHTML=s;
+})();
+
+const R={
+ g108:{m:[['Valid raw JSON',0,93.3,'0/30','28/30'],['All 10 top-level keys',0,93.3,'0/30','28/30'],['Strict value F1',.49,18.93,'0.49%','18.93%'],['Soft value F1',2.09,30.74,'2.09%','30.74%']],f:'Exact fact matches rose from 4 to 198 of 1,082 reference facts. Mean output fell from 765 to 605 tokens.'},
+ g100:{m:[['Valid raw JSON',0,83.3,'0/30','25/30'],['All 10 top-level keys',0,83.3,'0/30','25/30'],['Strict value F1',.51,18.02,'0.51%','18.02%'],['Soft value F1',.87,29.61,'0.87%','29.61%']],f:'Exact fact matches rose from 4 to 193 of 1,082 reference facts. Greedy decoding left 3 fine-tuned outputs at the token limit.'}};
+function show(k){
+  $('b108').setAttribute('aria-pressed',k==='g108');$('b100').setAttribute('aria-pressed',k==='g100');
+  $('res').innerHTML=R[k].m.map(([l,a,b,ta,tb])=>bar(l,['var(--bad)','var(--good)'],[a,b],[`Base <b>${ta}</b>`,`Fine-tuned <b>${tb}</b>`])).join('');
+  $('facts').textContent=R[k].f;
+}
+$('b108').onclick=()=>show('g108');$('b100').onclick=()=>show('g100');show('g108');
+</script>
+</body>
+</html>

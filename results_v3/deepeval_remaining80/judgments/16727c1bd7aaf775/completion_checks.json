@@ -1,0 +1,33 @@
+{
+  "status": "checkpoint_verified",
+  "run_id": "16727c1bd7aaf775",
+  "saved_measurements": 320,
+  "remaining_measurements": 0,
+  "overall_source_measurements": 400,
+  "original_twenty_scores_unchanged": true,
+  "frozen_inputs_and_rubric_verified": true,
+  "unique_score_keys": true,
+  "gemini_enabled": false,
+  "complete": true,
+  "all_100_cases_verified": true,
+  "combined_measurements": 400,
+  "combined_unique_keys": 400,
+  "combined_means_and_paired_deltas_verified": true,
+  "paired_outcomes_100": {
+    "Source fidelity": {
+      "finetuned_higher": 76,
+      "equal": 15,
+      "baseline_higher": 9
+    },
+    "Source coverage": {
+      "equal": 25,
+      "finetuned_higher": 65,
+      "baseline_higher": 10
+    }
+  },
+  "offline_tests_passed": 9,
+  "restarted_from_38_saved_judgments": true,
+  "scores_sha256": "b7ab59714a4f891d181db3ccb1816b5de8ec3961aa5526b866ee955b17f88b5f",
+  "combined_scores_sha256": "0bcf0abffcd8ce325d558c2d60cb586196813ed9179d70e37c326f417e0debe4",
+  "limitation": "Source-consistency LLM rubric assessment; not clinician adjudication or exhaustive factual precision/recall."
+}

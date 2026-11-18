@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "cases": 20,
+  "probes": 160,
+  "paired_outcomes": 320,
+  "all_source_quotes_exact": true,
+  "all_evidence_ids_and_raw_excerpts_resolved": true,
+  "indexed_notes_match_frozen_notes": true,
+  "pairs_hash_matches_manifest": true,
+  "frozen_source_files_verified": 10,
+  "saved_judgments": 80,
+  "semantic_review": "All 20 manually inspected against supplied notes/raw outputs; reconciliation_log.json records draft corrections. Not independent clinical adjudication.",
+  "input_sha256": {
+    "results_v3/deepeval_20/paired_cases.json": "7c9dc43552a3df1d509518fb1e6b4cc95ffd49907650bfba9d6a7bdc5998c9e7",
+    "results_v3/source_audit_20/annotations.json": "ed82fcf283befab00b5f1a049c3ef9e7ce8b838fcb48eb002428a553c6775548",
+    "results_v3/source_audit_20/indexed_inputs.json": "13e5d67bad5a06bfbfb4e67a69aec666a7f07e963f99758326805aaad0be3c38",
+    "results_v3/source_audit_20/reviewed_annotations.json": "356f5e98c8b4155d2bc0e4a4c58b759f188f86e192501ad984e5dde8420dd64f"
+  },
+  "new_inference_calls": 0,
+  "new_training_runs": 0
+}

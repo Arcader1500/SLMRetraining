@@ -1,0 +1,34 @@
+{
+  "decision": "issues_found",
+  "supported_checks": [
+    {
+      "field_path": "/patient medical history/physiological context",
+      "label_excerpt": "Swallowed a chicken bone prior to the onset of the discomfort",
+      "source_quote": "The patient had swallowed a chicken bone prior to the onset of the discomfort.",
+      "explanation": "The note supports this history and its timing."
+    },
+    {
+      "field_path": "/symptoms/1/details",
+      "label_excerpt": "Vomited approximately 50 mL of fresh red blood prior to admission and 300 ml of bright red blood on March 29, 2011",
+      "source_quote": "He vomited approximately 300 ml of bright red blood and produced a large amount of tarry stool on March 29, 2011.",
+      "explanation": "The later episode and its date are supported; the earlier 50 mL episode is also described in the note."
+    },
+    {
+      "field_path": "/diagnosis tests/2/result",
+      "label_excerpt": "Esophageal fistula approximately 1.0 cm in diameter found 25 cm away from the incisors",
+      "source_quote": "an esophageal fistula approximately 1.0 cm in diameter was found 25 cm away from the incisors",
+      "explanation": "The endoscopy result is stated in the source note."
+    }
+  ],
+  "findings": [
+    {
+      "field_path": "/diagnosis tests/1/result",
+      "label_excerpt": "0.7 cm×0.4 cm pseudoaneurysm of the descending aorta approximately 4.5 cm below the origin of the left subclavian artery",
+      "source_quote": "This finding confirmed the diagnosis of AEF.",
+      "explanation": "The angiography result gives the pseudoaneurysm measurements but omits the source's explicit confirmation of AEF. This is a material diagnostic result that could be included with the angiography result.",
+      "category": "omission",
+      "classification": "material_omission"
+    }
+  ],
+  "summary": "The label is largely source-supported. It omits the explicit statement that angiography confirmed AEF."
+}

@@ -1,0 +1,25 @@
+{
+  "decision": "no_material_issue_found",
+  "supported_checks": [
+    {
+      "field_path": "/visit motivation",
+      "label_excerpt": "Worsening dysphagia to solids and weight loss",
+      "source_quote": "with a three week history of worsening dysphagia to solids and weight loss of 4 kilograms.",
+      "explanation": "The stated visit motivation matches the symptoms prompting the clinic presentation."
+    },
+    {
+      "field_path": "/diagnosis tests/13/result",
+      "label_excerpt": "Significantly abnormal non-specific dysmotility of the lower oesophagus",
+      "source_quote": "detected a significantly abnormal non-specific dysmotility of the lower oesophagus",
+      "explanation": "The result is explicitly reported for the solid-medium barium swallow."
+    },
+    {
+      "field_path": "/diagnosis tests/17/result",
+      "label_excerpt": "Large tumour arising from the left kidney with renal vein involvement",
+      "source_quote": "A computed tomography scan confirmed a large tumour arising from the left kidney with renal vein involvement,",
+      "explanation": "The label preserves the CT finding stated in the note."
+    }
+  ],
+  "findings": [],
+  "summary": "No material source-consistency issue identified. The label accurately captures the main symptoms, test results, and findings established in the provided note."
+}

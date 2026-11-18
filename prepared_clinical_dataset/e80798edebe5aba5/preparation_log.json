@@ -1,0 +1,790 @@
+[
+  {
+    "source_index": 35,
+    "reason": "Expecting ',' delimiter: line 57 column 39 (char 1688)"
+  },
+  {
+    "source_index": 50,
+    "reason": "Expecting ',' delimiter: line 51 column 39 (char 1550)"
+  },
+  {
+    "source_index": 59,
+    "reason": "Expecting ',' delimiter: line 52 column 22 (char 1684)"
+  },
+  {
+    "source_index": 105,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 111,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 125,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 133,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 141,
+    "reason": "Expecting ',' delimiter: line 67 column 13 (char 2060)"
+  },
+  {
+    "source_index": 173,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 219,
+    "reason": "Projected reference violates allowed keys/types"
+  },
+  {
+    "source_index": 334,
+    "reason": "Expecting ',' delimiter: line 58 column 22 (char 1980)"
+  },
+  {
+    "source_index": 362,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 377,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 390,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 393,
+    "reason": "Expecting ',' delimiter: line 38 column 27 (char 1151)"
+  },
+  {
+    "source_index": 408,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 428,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 465,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 517,
+    "reason": "Expecting ',' delimiter: line 45 column 22 (char 1481)"
+  },
+  {
+    "source_index": 534,
+    "reason": "Expecting ',' delimiter: line 94 column 14 (char 3691)"
+  },
+  {
+    "source_index": 558,
+    "reason": "Expecting ',' delimiter: line 26 column 16 (char 625)"
+  },
+  {
+    "source_index": 583,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 626,
+    "reason": "Expecting ',' delimiter: line 50 column 39 (char 1117)"
+  },
+  {
+    "source_index": 654,
+    "reason": "Expecting ',' delimiter: line 20 column 17 (char 611)"
+  },
+  {
+    "source_index": 696,
+    "reason": "Expecting ',' delimiter: line 46 column 22 (char 1306)"
+  },
+  {
+    "source_index": 751,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 782,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 811,
+    "reason": "Expecting ',' delimiter: line 46 column 22 (char 1309)"
+  },
+  {
+    "source_index": 813,
+    "reason": "Expecting ',' delimiter: line 8 column 26 (char 194)"
+  },
+  {
+    "source_index": 833,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 834,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 915,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 922,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 930,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 935,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 945,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 947,
+    "reason": "Expecting ',' delimiter: line 43 column 22 (char 986)"
+  },
+  {
+    "source_index": 955,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 967,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 969,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 978,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1007,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1030,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1035,
+    "reason": "Expecting ',' delimiter: line 138 column 13 (char 3437)"
+  },
+  {
+    "source_index": 1047,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1056,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1068,
+    "reason": "Expecting ',' delimiter: line 5 column 13 (char 227)"
+  },
+  {
+    "source_index": 1085,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1111,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1132,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1160,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1161,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1164,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1175,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1191,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1216,
+    "reason": "Expecting ',' delimiter: line 51 column 14 (char 1627)"
+  },
+  {
+    "source_index": 1303,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1313,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1318,
+    "reason": "Expecting ',' delimiter: line 38 column 27 (char 1035)"
+  },
+  {
+    "source_index": 1378,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1399,
+    "reason": "Expecting ',' delimiter: line 26 column 16 (char 745)"
+  },
+  {
+    "source_index": 1400,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1418,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1426,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1428,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1434,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1444,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1533,
+    "reason": "Expecting ',' delimiter: line 20 column 17 (char 653)"
+  },
+  {
+    "source_index": 1537,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1549,
+    "reason": "Expecting ',' delimiter: line 20 column 17 (char 570)"
+  },
+  {
+    "source_index": 1560,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1564,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1565,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1626,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1643,
+    "reason": "Expecting ',' delimiter: line 26 column 16 (char 766)"
+  },
+  {
+    "source_index": 1670,
+    "reason": "Expecting ',' delimiter: line 56 column 11 (char 1512)"
+  },
+  {
+    "source_index": 1672,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1673,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1700,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1761,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1780,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1787,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1791,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1805,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1816,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1827,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1838,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1853,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1873,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1875,
+    "reason": "Expecting ',' delimiter: line 50 column 39 (char 1109)"
+  },
+  {
+    "source_index": 1877,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1881,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1889,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1896,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1913,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1937,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1956,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 1992,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2006,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2007,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2042,
+    "reason": "Expecting ',' delimiter: line 50 column 39 (char 1351)"
+  },
+  {
+    "source_index": 2056,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2073,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2080,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2098,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2099,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2108,
+    "reason": "Expecting ',' delimiter: line 26 column 16 (char 714)"
+  },
+  {
+    "source_index": 2129,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2156,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2158,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2178,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2207,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2213,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2241,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2247,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2248,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2255,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2267,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2279,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2281,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2303,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2313,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2314,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2320,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2323,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2335,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2336,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2341,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2342,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2353,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2371,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2385,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2392,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2402,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2408,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2417,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2424,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2428,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2434,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2437,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2447,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2456,
+    "reason": "Projected reference violates allowed keys/types"
+  },
+  {
+    "source_index": 2458,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2479,
+    "reason": "Expecting ',' delimiter: line 75 column 13 (char 2267)"
+  },
+  {
+    "source_index": 2484,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2491,
+    "reason": "Expecting ',' delimiter: line 36 column 13 (char 933)"
+  },
+  {
+    "source_index": 2520,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2523,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2532,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2534,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2538,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2543,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2569,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2578,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2588,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2593,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2616,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2632,
+    "reason": "Expecting ',' delimiter: line 37 column 11 (char 745)"
+  },
+  {
+    "source_index": 2645,
+    "reason": "Expecting ',' delimiter: line 42 column 39 (char 1206)"
+  },
+  {
+    "source_index": 2661,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2663,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2666,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2668,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2688,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2691,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2713,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2728,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2732,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2742,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2750,
+    "reason": "Expecting ',' delimiter: line 86 column 14 (char 2480)"
+  },
+  {
+    "source_index": 2761,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2763,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2799,
+    "reason": "Expecting ',' delimiter: line 17 column 29 (char 379)"
+  },
+  {
+    "source_index": 2801,
+    "reason": "Expecting ',' delimiter: line 46 column 27 (char 1446)"
+  },
+  {
+    "source_index": 2806,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2860,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2861,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2865,
+    "reason": "Expecting ',' delimiter: line 91 column 11 (char 2753)"
+  },
+  {
+    "source_index": 2869,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2873,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2874,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2887,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2900,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2917,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2920,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2926,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2938,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2941,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2943,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2948,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2952,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2953,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2959,
+    "reason": "Expecting ',' delimiter: line 30 column 26 (char 754)"
+  },
+  {
+    "source_index": 2978,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2991,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2992,
+    "reason": "Duplicate note or previously inspected development case"
+  },
+  {
+    "source_index": 2993,
+    "reason": "Duplicate note or previously inspected development case"
+  }
+]

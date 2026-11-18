@@ -1,0 +1,897 @@
+{
+  "cases": 20,
+  "unique_probes": 160,
+  "model_probe_outcomes": 320,
+  "probe_outcomes": [
+    {
+      "group": "clinical",
+      "model": "baseline",
+      "status": "A",
+      "rows": 2,
+      "affected_cases": 2
+    },
+    {
+      "group": "clinical",
+      "model": "baseline",
+      "status": "C",
+      "rows": 6,
+      "affected_cases": 6
+    },
+    {
+      "group": "clinical",
+      "model": "baseline",
+      "status": "O",
+      "rows": 50,
+      "affected_cases": 19
+    },
+    {
+      "group": "clinical",
+      "model": "baseline",
+      "status": "P",
+      "rows": 13,
+      "affected_cases": 9
+    },
+    {
+      "group": "clinical",
+      "model": "baseline",
+      "status": "S",
+      "rows": 46,
+      "affected_cases": 20
+    },
+    {
+      "group": "clinical",
+      "model": "baseline",
+      "status": "X",
+      "rows": 3,
+      "affected_cases": 3
+    },
+    {
+      "group": "clinical",
+      "model": "finetuned",
+      "status": "A",
+      "rows": 3,
+      "affected_cases": 3
+    },
+    {
+      "group": "clinical",
+      "model": "finetuned",
+      "status": "C",
+      "rows": 14,
+      "affected_cases": 10
+    },
+    {
+      "group": "clinical",
+      "model": "finetuned",
+      "status": "O",
+      "rows": 35,
+      "affected_cases": 17
+    },
+    {
+      "group": "clinical",
+      "model": "finetuned",
+      "status": "P",
+      "rows": 4,
+      "affected_cases": 4
+    },
+    {
+      "group": "clinical",
+      "model": "finetuned",
+      "status": "S",
+      "rows": 60,
+      "affected_cases": 19
+    },
+    {
+      "group": "clinical",
+      "model": "finetuned",
+      "status": "X",
+      "rows": 4,
+      "affected_cases": 4
+    },
+    {
+      "group": "demographic",
+      "model": "baseline",
+      "status": "A",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "group": "demographic",
+      "model": "baseline",
+      "status": "C",
+      "rows": 2,
+      "affected_cases": 2
+    },
+    {
+      "group": "demographic",
+      "model": "baseline",
+      "status": "O",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "group": "demographic",
+      "model": "baseline",
+      "status": "S",
+      "rows": 27,
+      "affected_cases": 17
+    },
+    {
+      "group": "demographic",
+      "model": "baseline",
+      "status": "X",
+      "rows": 9,
+      "affected_cases": 8
+    },
+    {
+      "group": "demographic",
+      "model": "finetuned",
+      "status": "C",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "group": "demographic",
+      "model": "finetuned",
+      "status": "O",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "group": "demographic",
+      "model": "finetuned",
+      "status": "S",
+      "rows": 38,
+      "affected_cases": 19
+    }
+  ],
+  "by_field": [
+    {
+      "field": "admission",
+      "model": "baseline",
+      "status": "O",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "admission",
+      "model": "baseline",
+      "status": "S",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "admission",
+      "model": "finetuned",
+      "status": "P",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "admission",
+      "model": "finetuned",
+      "status": "X",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "age",
+      "model": "baseline",
+      "status": "A",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "age",
+      "model": "baseline",
+      "status": "C",
+      "rows": 2,
+      "affected_cases": 2
+    },
+    {
+      "field": "age",
+      "model": "baseline",
+      "status": "S",
+      "rows": 14,
+      "affected_cases": 14
+    },
+    {
+      "field": "age",
+      "model": "baseline",
+      "status": "X",
+      "rows": 3,
+      "affected_cases": 3
+    },
+    {
+      "field": "age",
+      "model": "finetuned",
+      "status": "C",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "age",
+      "model": "finetuned",
+      "status": "S",
+      "rows": 19,
+      "affected_cases": 19
+    },
+    {
+      "field": "chronology",
+      "model": "baseline",
+      "status": "O",
+      "rows": 2,
+      "affected_cases": 2
+    },
+    {
+      "field": "chronology",
+      "model": "finetuned",
+      "status": "C",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "chronology",
+      "model": "finetuned",
+      "status": "O",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "discharge",
+      "model": "baseline",
+      "status": "O",
+      "rows": 2,
+      "affected_cases": 2
+    },
+    {
+      "field": "discharge",
+      "model": "finetuned",
+      "status": "S",
+      "rows": 2,
+      "affected_cases": 2
+    },
+    {
+      "field": "history",
+      "model": "baseline",
+      "status": "O",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "history",
+      "model": "baseline",
+      "status": "P",
+      "rows": 3,
+      "affected_cases": 3
+    },
+    {
+      "field": "history",
+      "model": "baseline",
+      "status": "S",
+      "rows": 11,
+      "affected_cases": 11
+    },
+    {
+      "field": "history",
+      "model": "finetuned",
+      "status": "A",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "history",
+      "model": "finetuned",
+      "status": "C",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "history",
+      "model": "finetuned",
+      "status": "O",
+      "rows": 3,
+      "affected_cases": 3
+    },
+    {
+      "field": "history",
+      "model": "finetuned",
+      "status": "S",
+      "rows": 10,
+      "affected_cases": 10
+    },
+    {
+      "field": "investigation",
+      "model": "baseline",
+      "status": "A",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "investigation",
+      "model": "baseline",
+      "status": "C",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "investigation",
+      "model": "baseline",
+      "status": "O",
+      "rows": 16,
+      "affected_cases": 10
+    },
+    {
+      "field": "investigation",
+      "model": "baseline",
+      "status": "P",
+      "rows": 5,
+      "affected_cases": 4
+    },
+    {
+      "field": "investigation",
+      "model": "baseline",
+      "status": "S",
+      "rows": 9,
+      "affected_cases": 8
+    },
+    {
+      "field": "investigation",
+      "model": "finetuned",
+      "status": "C",
+      "rows": 4,
+      "affected_cases": 3
+    },
+    {
+      "field": "investigation",
+      "model": "finetuned",
+      "status": "O",
+      "rows": 9,
+      "affected_cases": 5
+    },
+    {
+      "field": "investigation",
+      "model": "finetuned",
+      "status": "S",
+      "rows": 18,
+      "affected_cases": 13
+    },
+    {
+      "field": "investigation",
+      "model": "finetuned",
+      "status": "X",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "outcome",
+      "model": "baseline",
+      "status": "O",
+      "rows": 3,
+      "affected_cases": 3
+    },
+    {
+      "field": "outcome",
+      "model": "baseline",
+      "status": "S",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "outcome",
+      "model": "finetuned",
+      "status": "O",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "outcome",
+      "model": "finetuned",
+      "status": "P",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "outcome",
+      "model": "finetuned",
+      "status": "S",
+      "rows": 2,
+      "affected_cases": 2
+    },
+    {
+      "field": "procedure",
+      "model": "baseline",
+      "status": "A",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "procedure",
+      "model": "baseline",
+      "status": "C",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "procedure",
+      "model": "baseline",
+      "status": "O",
+      "rows": 4,
+      "affected_cases": 4
+    },
+    {
+      "field": "procedure",
+      "model": "baseline",
+      "status": "S",
+      "rows": 7,
+      "affected_cases": 6
+    },
+    {
+      "field": "procedure",
+      "model": "baseline",
+      "status": "X",
+      "rows": 2,
+      "affected_cases": 2
+    },
+    {
+      "field": "procedure",
+      "model": "finetuned",
+      "status": "A",
+      "rows": 2,
+      "affected_cases": 2
+    },
+    {
+      "field": "procedure",
+      "model": "finetuned",
+      "status": "C",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "procedure",
+      "model": "finetuned",
+      "status": "O",
+      "rows": 6,
+      "affected_cases": 4
+    },
+    {
+      "field": "procedure",
+      "model": "finetuned",
+      "status": "S",
+      "rows": 5,
+      "affected_cases": 5
+    },
+    {
+      "field": "procedure",
+      "model": "finetuned",
+      "status": "X",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "sex",
+      "model": "baseline",
+      "status": "O",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "sex",
+      "model": "baseline",
+      "status": "S",
+      "rows": 13,
+      "affected_cases": 13
+    },
+    {
+      "field": "sex",
+      "model": "baseline",
+      "status": "X",
+      "rows": 6,
+      "affected_cases": 6
+    },
+    {
+      "field": "sex",
+      "model": "finetuned",
+      "status": "O",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "sex",
+      "model": "finetuned",
+      "status": "S",
+      "rows": 19,
+      "affected_cases": 19
+    },
+    {
+      "field": "symptom",
+      "model": "baseline",
+      "status": "C",
+      "rows": 3,
+      "affected_cases": 3
+    },
+    {
+      "field": "symptom",
+      "model": "baseline",
+      "status": "O",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "symptom",
+      "model": "baseline",
+      "status": "P",
+      "rows": 3,
+      "affected_cases": 2
+    },
+    {
+      "field": "symptom",
+      "model": "baseline",
+      "status": "S",
+      "rows": 7,
+      "affected_cases": 6
+    },
+    {
+      "field": "symptom",
+      "model": "finetuned",
+      "status": "O",
+      "rows": 4,
+      "affected_cases": 4
+    },
+    {
+      "field": "symptom",
+      "model": "finetuned",
+      "status": "P",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "symptom",
+      "model": "finetuned",
+      "status": "S",
+      "rows": 9,
+      "affected_cases": 8
+    },
+    {
+      "field": "treatment",
+      "model": "baseline",
+      "status": "C",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "treatment",
+      "model": "baseline",
+      "status": "O",
+      "rows": 19,
+      "affected_cases": 12
+    },
+    {
+      "field": "treatment",
+      "model": "baseline",
+      "status": "P",
+      "rows": 2,
+      "affected_cases": 2
+    },
+    {
+      "field": "treatment",
+      "model": "baseline",
+      "status": "S",
+      "rows": 10,
+      "affected_cases": 7
+    },
+    {
+      "field": "treatment",
+      "model": "baseline",
+      "status": "X",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "treatment",
+      "model": "finetuned",
+      "status": "C",
+      "rows": 7,
+      "affected_cases": 7
+    },
+    {
+      "field": "treatment",
+      "model": "finetuned",
+      "status": "O",
+      "rows": 11,
+      "affected_cases": 9
+    },
+    {
+      "field": "treatment",
+      "model": "finetuned",
+      "status": "P",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "treatment",
+      "model": "finetuned",
+      "status": "S",
+      "rows": 13,
+      "affected_cases": 9
+    },
+    {
+      "field": "treatment",
+      "model": "finetuned",
+      "status": "X",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "visit",
+      "model": "baseline",
+      "status": "O",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "field": "visit",
+      "model": "finetuned",
+      "status": "S",
+      "rows": 1,
+      "affected_cases": 1
+    }
+  ],
+  "findings": 104,
+  "findings_by_category": [
+    {
+      "model": "baseline",
+      "category": "assertion_status",
+      "rows": 2,
+      "affected_cases": 2
+    },
+    {
+      "model": "baseline",
+      "category": "chronology",
+      "rows": 4,
+      "affected_cases": 4
+    },
+    {
+      "model": "baseline",
+      "category": "contradiction",
+      "rows": 3,
+      "affected_cases": 3
+    },
+    {
+      "model": "baseline",
+      "category": "entity_assignment",
+      "rows": 2,
+      "affected_cases": 2
+    },
+    {
+      "model": "baseline",
+      "category": "format_copy",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "model": "baseline",
+      "category": "linkage",
+      "rows": 11,
+      "affected_cases": 9
+    },
+    {
+      "model": "baseline",
+      "category": "negation",
+      "rows": 2,
+      "affected_cases": 2
+    },
+    {
+      "model": "baseline",
+      "category": "placement",
+      "rows": 9,
+      "affected_cases": 7
+    },
+    {
+      "model": "baseline",
+      "category": "repetition",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "model": "baseline",
+      "category": "truncated_completion",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "model": "baseline",
+      "category": "unsupported",
+      "rows": 15,
+      "affected_cases": 12
+    },
+    {
+      "model": "finetuned",
+      "category": "assertion_status",
+      "rows": 6,
+      "affected_cases": 6
+    },
+    {
+      "model": "finetuned",
+      "category": "chronology",
+      "rows": 7,
+      "affected_cases": 7
+    },
+    {
+      "model": "finetuned",
+      "category": "contradiction",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "model": "finetuned",
+      "category": "linkage",
+      "rows": 20,
+      "affected_cases": 14
+    },
+    {
+      "model": "finetuned",
+      "category": "placement",
+      "rows": 7,
+      "affected_cases": 7
+    },
+    {
+      "model": "finetuned",
+      "category": "repetition",
+      "rows": 3,
+      "affected_cases": 3
+    },
+    {
+      "model": "finetuned",
+      "category": "truncated_completion",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "model": "finetuned",
+      "category": "unsupported",
+      "rows": 8,
+      "affected_cases": 8
+    }
+  ],
+  "reference_concerns": [
+    {
+      "category": "causal_ambiguity",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "category": "causal_certainty",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "category": "causal_overstatement",
+      "rows": 3,
+      "affected_cases": 3
+    },
+    {
+      "category": "discharge_scope",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "category": "entity_assignment",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "category": "linkage",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "category": "omission",
+      "rows": 3,
+      "affected_cases": 3
+    },
+    {
+      "category": "reference_omission",
+      "rows": 3,
+      "affected_cases": 3
+    },
+    {
+      "category": "temporal_ambiguity",
+      "rows": 4,
+      "affected_cases": 4
+    },
+    {
+      "category": "temporal_status",
+      "rows": 3,
+      "affected_cases": 3
+    },
+    {
+      "category": "timing_loss",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "category": "truncated_source_inference",
+      "rows": 1,
+      "affected_cases": 1
+    }
+  ],
+  "reference_classifications": [
+    {
+      "classification": "annotation_policy",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "classification": "clear_discrepancy",
+      "rows": 3,
+      "affected_cases": 3
+    },
+    {
+      "classification": "omission",
+      "rows": 6,
+      "affected_cases": 6
+    },
+    {
+      "classification": "temporal_or_causal_ambiguity",
+      "rows": 13,
+      "affected_cases": 12
+    }
+  ],
+  "judge_concerns": [
+    {
+      "category": "false_omission",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "category": "false_unsupported",
+      "rows": 7,
+      "affected_cases": 4
+    },
+    {
+      "category": "misread_output",
+      "rows": 2,
+      "affected_cases": 2
+    },
+    {
+      "category": "missed_readable_evidence",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "category": "overbroad_criticism",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "category": "overstated_contradiction",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "category": "placement_sensitivity",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "category": "questionable_omission",
+      "rows": 1,
+      "affected_cases": 1
+    },
+    {
+      "category": "reference_absence_not_falsehood",
+      "rows": 2,
+      "affected_cases": 2
+    },
+    {
+      "category": "reference_only_penalty",
+      "rows": 2,
+      "affected_cases": 2
+    },
+    {
+      "category": "source_supported",
+      "rows": 10,
+      "affected_cases": 7
+    }
+  ]
+}

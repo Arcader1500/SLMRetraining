@@ -1,0 +1,269 @@
+{
+  "training_rows": 1325,
+  "all_v3_labels_match_literal_v2_projection": true,
+  "dropped_field_occurrences": 17043,
+  "affected_cases": 1324,
+  "not_found_verbatim_occurrences": 13427,
+  "fields": [
+    {
+      "section": "admission",
+      "dropped_key": "care center details",
+      "occurrences": 524,
+      "affected_cases": 507,
+      "not_found_verbatim_occurrences": 502
+    },
+    {
+      "section": "admission",
+      "dropped_key": "date",
+      "occurrences": 270,
+      "affected_cases": 250,
+      "not_found_verbatim_occurrences": 176
+    },
+    {
+      "section": "admission",
+      "dropped_key": "duration",
+      "occurrences": 175,
+      "affected_cases": 169,
+      "not_found_verbatim_occurrences": 134
+    },
+    {
+      "section": "diagnosis tests",
+      "dropped_key": "condition",
+      "occurrences": 1624,
+      "affected_cases": 1034,
+      "not_found_verbatim_occurrences": 933
+    },
+    {
+      "section": "diagnosis tests",
+      "dropped_key": "details",
+      "occurrences": 1060,
+      "affected_cases": 772,
+      "not_found_verbatim_occurrences": 1042
+    },
+    {
+      "section": "diagnosis tests",
+      "dropped_key": "severity",
+      "occurrences": 200,
+      "affected_cases": 180,
+      "not_found_verbatim_occurrences": 130
+    },
+    {
+      "section": "diagnosis tests",
+      "dropped_key": "time",
+      "occurrences": 602,
+      "affected_cases": 395,
+      "not_found_verbatim_occurrences": 409
+    },
+    {
+      "section": "discharge",
+      "dropped_key": "follow up",
+      "occurrences": 144,
+      "affected_cases": 144,
+      "not_found_verbatim_occurrences": 128
+    },
+    {
+      "section": "discharge",
+      "dropped_key": "reason",
+      "occurrences": 278,
+      "affected_cases": 278,
+      "not_found_verbatim_occurrences": 248
+    },
+    {
+      "section": "discharge",
+      "dropped_key": "referral",
+      "occurrences": 126,
+      "affected_cases": 126,
+      "not_found_verbatim_occurrences": 121
+    },
+    {
+      "section": "medical examinations",
+      "dropped_key": "details",
+      "occurrences": 1376,
+      "affected_cases": 905,
+      "not_found_verbatim_occurrences": 1340
+    },
+    {
+      "section": "patient information",
+      "dropped_key": "ethnicity",
+      "occurrences": 263,
+      "affected_cases": 263,
+      "not_found_verbatim_occurrences": 260
+    },
+    {
+      "section": "patient information",
+      "dropped_key": "family medical history",
+      "occurrences": 235,
+      "affected_cases": 235,
+      "not_found_verbatim_occurrences": 235
+    },
+    {
+      "section": "patient information",
+      "dropped_key": "height",
+      "occurrences": 46,
+      "affected_cases": 46,
+      "not_found_verbatim_occurrences": 43
+    },
+    {
+      "section": "patient information",
+      "dropped_key": "occupation",
+      "occurrences": 149,
+      "affected_cases": 149,
+      "not_found_verbatim_occurrences": 148
+    },
+    {
+      "section": "patient information",
+      "dropped_key": "recent travels",
+      "occurrences": 27,
+      "affected_cases": 27,
+      "not_found_verbatim_occurrences": 27
+    },
+    {
+      "section": "patient information",
+      "dropped_key": "socio economic context",
+      "occurrences": 67,
+      "affected_cases": 67,
+      "not_found_verbatim_occurrences": 66
+    },
+    {
+      "section": "patient information",
+      "dropped_key": "weight",
+      "occurrences": 90,
+      "affected_cases": 90,
+      "not_found_verbatim_occurrences": 84
+    },
+    {
+      "section": "patient medical history",
+      "dropped_key": "alcohol consumption",
+      "occurrences": 109,
+      "affected_cases": 109,
+      "not_found_verbatim_occurrences": 102
+    },
+    {
+      "section": "patient medical history",
+      "dropped_key": "allergies",
+      "occurrences": 39,
+      "affected_cases": 39,
+      "not_found_verbatim_occurrences": 38
+    },
+    {
+      "section": "patient medical history",
+      "dropped_key": "drug usage",
+      "occurrences": 70,
+      "affected_cases": 70,
+      "not_found_verbatim_occurrences": 66
+    },
+    {
+      "section": "patient medical history",
+      "dropped_key": "exercise frequency",
+      "occurrences": 54,
+      "affected_cases": 54,
+      "not_found_verbatim_occurrences": 50
+    },
+    {
+      "section": "patient medical history",
+      "dropped_key": "nutrition",
+      "occurrences": 60,
+      "affected_cases": 60,
+      "not_found_verbatim_occurrences": 56
+    },
+    {
+      "section": "patient medical history",
+      "dropped_key": "psychological context",
+      "occurrences": 130,
+      "affected_cases": 130,
+      "not_found_verbatim_occurrences": 124
+    },
+    {
+      "section": "patient medical history",
+      "dropped_key": "sexual history",
+      "occurrences": 68,
+      "affected_cases": 68,
+      "not_found_verbatim_occurrences": 62
+    },
+    {
+      "section": "patient medical history",
+      "dropped_key": "smoking status",
+      "occurrences": 160,
+      "affected_cases": 160,
+      "not_found_verbatim_occurrences": 150
+    },
+    {
+      "section": "patient medical history",
+      "dropped_key": "vaccination history",
+      "occurrences": 18,
+      "affected_cases": 18,
+      "not_found_verbatim_occurrences": 18
+    },
+    {
+      "section": "surgeries",
+      "dropped_key": "outcome",
+      "occurrences": 748,
+      "affected_cases": 618,
+      "not_found_verbatim_occurrences": 647
+    },
+    {
+      "section": "surgeries",
+      "dropped_key": "reason",
+      "occurrences": 1226,
+      "affected_cases": 936,
+      "not_found_verbatim_occurrences": 791
+    },
+    {
+      "section": "symptoms",
+      "dropped_key": "behaviours affecting the symptom",
+      "occurrences": 384,
+      "affected_cases": 338,
+      "not_found_verbatim_occurrences": 315
+    },
+    {
+      "section": "symptoms",
+      "dropped_key": "intensity of symptom",
+      "occurrences": 769,
+      "affected_cases": 592,
+      "not_found_verbatim_occurrences": 335
+    },
+    {
+      "section": "symptoms",
+      "dropped_key": "temporalisation",
+      "occurrences": 579,
+      "affected_cases": 473,
+      "not_found_verbatim_occurrences": 428
+    },
+    {
+      "section": "treatments",
+      "dropped_key": "details",
+      "occurrences": 872,
+      "affected_cases": 678,
+      "not_found_verbatim_occurrences": 827
+    },
+    {
+      "section": "treatments",
+      "dropped_key": "duration",
+      "occurrences": 311,
+      "affected_cases": 240,
+      "not_found_verbatim_occurrences": 261
+    },
+    {
+      "section": "treatments",
+      "dropped_key": "frequency",
+      "occurrences": 418,
+      "affected_cases": 285,
+      "not_found_verbatim_occurrences": 329
+    },
+    {
+      "section": "treatments",
+      "dropped_key": "reason for taking",
+      "occurrences": 1864,
+      "affected_cases": 1024,
+      "not_found_verbatim_occurrences": 1805
+    },
+    {
+      "section": "treatments",
+      "dropped_key": "related condition",
+      "occurrences": 1908,
+      "affected_cases": 1043,
+      "not_found_verbatim_occurrences": 997
+    }
+  ],
+  "limitation": "Mechanical field drops and normalized exact-text searches only; some content survives by paraphrase or elsewhere. Old synthetic fields may be unsupported. Counts are not clinical omission rates."
+}

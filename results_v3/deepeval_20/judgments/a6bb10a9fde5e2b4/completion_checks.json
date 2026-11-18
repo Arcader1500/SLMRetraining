@@ -1,0 +1,25 @@
+{
+  "complete": true,
+  "model": "gpt-6-luna",
+  "cases": 20,
+  "paired_outputs": 40,
+  "metric_measurements": 80,
+  "unique_records": 80,
+  "means_and_paired_deltas_verified": true,
+  "all_six_notebook_code_cells_executed": true,
+  "notebook_errors": 0,
+  "gemini_enabled": false,
+  "paired_outcomes": {
+    "Reference fidelity": {
+      "finetuned_higher": 10,
+      "equal": 6,
+      "baseline_higher": 4
+    },
+    "Reference coverage": {
+      "finetuned_higher": 11,
+      "equal": 7,
+      "baseline_higher": 2
+    }
+  },
+  "scores_sha256": "7ef930319b679f6339173612bfd6cc14ca74ba62b4749f1ae65c8b1bedd32eb1"
+}

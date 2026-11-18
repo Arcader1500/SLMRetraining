@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "selected_cases": 100,
+  "assistant_reviewed_cases": 10,
+  "remaining_semantic_review_cases": 90,
+  "all_source_quotes_exact": true,
+  "all_label_evidence_paths_resolved": true,
+  "training_split_digest_unchanged": true,
+  "sample_digest_matches_frozen_selection": true,
+  "model_candidate_findings": 17,
+  "all_candidate_findings_adjudicated": true,
+  "assistant_added_findings": 5,
+  "assistant_confirmed_diagnostic_findings": 11,
+  "offline_tests_passed": 3,
+  "active_judge_process": false,
+  "source_sha256": {
+    "prepared_clinical_dataset/e80798edebe5aba5/train.jsonl": "c3670c308651e33c3c11e67b710e28391875bc85031bf761e3434def50850b46",
+    "prepared_clinical_dataset/e80798edebe5aba5/validation.jsonl": "b1643431528e973fda2aa887ae666f7e68ad2e868496a323af887f16a9ee4960",
+    "prepared_clinical_dataset/e80798edebe5aba5/manifest.json": "6774a822250f81af3d1193b9f9a05c7039caa5aa586d341e085fca239cf63ec1",
+    "results_v3/training_audit_100/sample.json": "6b8df68b2198e2894ca6d6d9e53ab6f654af89a534780ba9be07f8821c757036",
+    "results_v3/training_audit_100/pilot_adjudications.json": "0dcbabfb5c17ff1c86a2886e5c6213247e2191fcd09c4d85cf85806838204ff8",
+    "results_v3/training_audit_100/judgments/e1a7efa71d6b7cf2/run_contract.json": "c635c1383b2abdc6097e9d99d7fbd2f96e077b5bc645efac06efcee5bc844d73",
+    "results_v3/training_audit_100/judgments/e1a7efa71d6b7cf2/reviews.json": "11e489b192cc91f2baf59291d1148513fa209ebe771026d1b6b6e6e51ef20573"
+  },
+  "limitation": "Mechanical verification plus assistant source review; no clinician adjudication, no full 100-case semantic assessment."
+}

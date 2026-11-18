@@ -1,0 +1,25 @@
+{
+  "complete": true,
+  "selected_cases": 100,
+  "measurements": 400,
+  "model": "gpt-6-luna",
+  "rubric_version": "source_grounded_v2",
+  "source_runs": [
+    "d44ef976ae8d9310",
+    "16727c1bd7aaf775"
+  ],
+  "mean_scores": {
+    "Source fidelity": {
+      "baseline": 0.386,
+      "finetuned": 0.516
+    },
+    "Source coverage": {
+      "baseline": 0.40700000000000003,
+      "finetuned": 0.502
+    }
+  },
+  "mean_paired_deltas": {
+    "Source fidelity": 0.13,
+    "Source coverage": 0.09499999999999997
+  }
+}

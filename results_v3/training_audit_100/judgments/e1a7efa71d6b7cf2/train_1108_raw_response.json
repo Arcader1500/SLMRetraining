@@ -1,0 +1,40 @@
+{
+  "decision": "issues_found",
+  "supported_checks": [
+    {
+      "field_path": "/visit motivation",
+      "label_excerpt": "Reporting four episodes of hematospermia over 10 days",
+      "source_quote": "presented at a walk-in GP clinic reporting four episodes of hematospermia over 10 days.",
+      "explanation": "The visit motivation is supported by the note."
+    },
+    {
+      "field_path": "/patient medical history/physiological context",
+      "label_excerpt": "Fit and well, mild childhood asthma",
+      "source_quote": "The patient was otherwise fit and well with no past medical history apart from mild childhood asthma.",
+      "explanation": "The physiological context matches the stated history."
+    },
+    {
+      "field_path": "/symptoms/0/details",
+      "label_excerpt": "First three episodes with brown semen, fourth with red streaks",
+      "source_quote": "In the first three episodes, the patient reported the semen being brown in color. On the fourth episode, there were distinct streaks of red blood within the semen.",
+      "explanation": "The symptom details and sequence are supported."
+    },
+    {
+      "field_path": "/medical examinations/1/result",
+      "label_excerpt": "228/135 mmHg",
+      "source_quote": "His blood pressure was note to be 228/135 mmHg",
+      "explanation": "The recorded blood pressure matches the note."
+    }
+  ],
+  "findings": [
+    {
+      "field_path": "/medical examinations/0/result",
+      "label_excerpt": "Normal findings",
+      "source_quote": "A digital rectal examination was normal with no enlargement or nodularity of the prostate.",
+      "explanation": "The result generalizes several normal examination findings, but the note also explicitly records a markedly elevated blood pressure. As the label separately captures that measurement, it is unclear whether “Normal findings” is intended to cover only the physical examination apart from blood pressure; treat as a policy ambiguity rather than a definite contradiction.",
+      "category": "wrong_linkage_value",
+      "classification": "policy_ambiguity"
+    }
+  ],
+  "summary": "One candidate ambiguity: the broad normal physical-examination result appears alongside a separately captured markedly elevated blood pressure. The supplied note ends mid-sentence, so no facts beyond the cutoff were assessed."
+}

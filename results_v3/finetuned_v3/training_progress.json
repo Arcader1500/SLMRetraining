@@ -1,0 +1,12 @@
+{
+  "step": 498,
+  "max_steps": 498,
+  "epoch": 3.0,
+  "logs": {
+    "eval_loss": 0.45142605900764465,
+    "eval_runtime": 24.7582,
+    "eval_samples_per_second": 4.039,
+    "eval_steps_per_second": 4.039,
+    "epoch": 3.0
+  }
+}

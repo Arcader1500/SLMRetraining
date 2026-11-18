@@ -1,0 +1,23 @@
+{
+  "scope": "Non-exhaustive spot-check of saved reasons; not clinician calibration or a judge error-rate estimate.",
+  "scores_modified": false,
+  "observations": [
+    {
+      "case_id": "validation:593",
+      "model": "baseline",
+      "metric": "Source fidelity",
+      "reason_excerpt": "final flow result",
+      "reference_evidence": "Restoration of distal flow confirmed by final angiography",
+      "explanation": "The source-grounded fidelity reason incorrectly claims the reference omits restored flow. The reference treatment response explicitly includes it."
+    },
+    {
+      "case_id": "validation:113",
+      "model": "finetuned",
+      "metric": "Source coverage",
+      "reason_excerpt": "omits the stated postoperative prednisone dose of 20 mg/day",
+      "reference_evidence": "Tacrolimus 5 mg/day and prednisone 20 mg/day",
+      "explanation": "The source-grounded coverage reason incorrectly claims the reference omits the postoperative prednisone dose. That dose is explicit in the reference; the candidate still has a real drug-dose error."
+    }
+  ],
+  "limitation": "Some fidelity reasons also discuss omissions despite the rubric assigning omissions to coverage. Reasons alone do not establish how much this influenced scores."
+}

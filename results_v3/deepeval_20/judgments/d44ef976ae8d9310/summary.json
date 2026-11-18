@@ -1,0 +1,25 @@
+{
+  "complete": true,
+  "backend": "codex",
+  "model": "gpt-6-luna",
+  "selected_cases": 20,
+  "paired_test_cases": 40,
+  "measurements": 80,
+  "mean_scores": {
+    "Source fidelity": {
+      "baseline": 0.355,
+      "finetuned": 0.45999999999999996
+    },
+    "Source coverage": {
+      "baseline": 0.37,
+      "finetuned": 0.47000000000000003
+    }
+  },
+  "mean_paired_deltas": {
+    "Source fidelity": 0.10500000000000001,
+    "Source coverage": 0.1
+  },
+  "rubric_version": "source_grounded_v2",
+  "truth_source": "input clinical note",
+  "run_id": "d44ef976ae8d9310"
+}

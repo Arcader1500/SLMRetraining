@@ -1,0 +1,24 @@
+[
+  {
+    "started_at_utc": "2026-11-18T09:40:12.421446+00:00",
+    "pid": 35068,
+    "model": "gpt-6-luna",
+    "rubric_version": "source_grounded_v2",
+    "source_sha256": {
+      "C:\\Users\\atharva.bedekar\\PycharmProjects\\SLMRetraining\\scripts\\run_deepeval.py": "a0e8bc6e3032f05245a02fbed704dac0c2df0182768e3a80bb68893cf7032703",
+      "C:\\Users\\atharva.bedekar\\PycharmProjects\\SLMRetraining\\scripts\\codex_deepeval_judge.py": "f0545f24a542c8ac27fd85745a901040fa3d998adb4fbb7a7bf696773a5b06d5",
+      "C:\\Users\\atharva.bedekar\\PycharmProjects\\SLMRetraining\\scripts\\source_grounded_rubric.py": "469c07ed8f1aaba2226f9c7c957348c295f82080d29535e7a9f176f889c90b24"
+    }
+  },
+  {
+    "started_at_utc": "2026-11-18T10:35:19.534688+00:00",
+    "pid": 15680,
+    "model": "gpt-6-luna",
+    "rubric_version": "source_grounded_v2",
+    "source_sha256": {
+      "C:\\Users\\atharva.bedekar\\PycharmProjects\\SLMRetraining\\scripts\\run_deepeval.py": "a0e8bc6e3032f05245a02fbed704dac0c2df0182768e3a80bb68893cf7032703",
+      "C:\\Users\\atharva.bedekar\\PycharmProjects\\SLMRetraining\\scripts\\codex_deepeval_judge.py": "f0545f24a542c8ac27fd85745a901040fa3d998adb4fbb7a7bf696773a5b06d5",
+      "C:\\Users\\atharva.bedekar\\PycharmProjects\\SLMRetraining\\scripts\\source_grounded_rubric.py": "469c07ed8f1aaba2226f9c7c957348c295f82080d29535e7a9f176f889c90b24"
+    }
+  }
+]

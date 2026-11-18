@@ -1,0 +1,11 @@
+{
+  "status": "complete_assistant_source_consistency_review",
+  "reviewed_cases": 20,
+  "total_cases": 20,
+  "probe_count": 160,
+  "finding_count": 104,
+  "remaining_ids": [],
+  "semantic_annotation_validation": "All 20 manually inspected against supplied notes/raw outputs; reconciliation_log.json records draft corrections. Not independent clinical adjudication.",
+  "new_judge_calls": 0,
+  "new_training_runs": 0
+}

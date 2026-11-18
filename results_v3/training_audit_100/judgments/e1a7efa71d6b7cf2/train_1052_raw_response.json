@@ -1,0 +1,48 @@
+{
+  "decision": "issues_found",
+  "supported_checks": [
+    {
+      "field_path": "/symptoms/0/time",
+      "label_excerpt": "Past six years",
+      "source_quote": "She had been aware of the slow but steady increase in the size of the lesion over the past six years.",
+      "explanation": "Supported by the note's duration of lesion growth."
+    },
+    {
+      "field_path": "/surgeries/0/Type",
+      "label_excerpt": "Removal of the lesion using a chisel and rotary instruments via an intraoral approach, and curettage of the cavity",
+      "source_quote": "Under local anesthesia, the lesion was totally removed using a chisel and rotary instruments via an intraoral approach, and curettage of the cavity was undertaken ().",
+      "explanation": "The note explicitly reports the lesion removal and curettage as performed."
+    },
+    {
+      "field_path": "/diagnosis tests/0/result",
+      "label_excerpt": "Solitary, round, 3 × 3 cm well-defined radio-opaque lesion without a radiolucent rim of mandible",
+      "source_quote": "A solitary, round, 3 × 3 cm well-defined radio-opaque lesion without a radiolucent rim of mandible was detected with panoramic radiography and computed tomography (CT).",
+      "explanation": "Supported imaging description and size."
+    },
+    {
+      "field_path": "/treatments/0/time",
+      "label_excerpt": "Postoperatively",
+      "source_quote": "Postoperatively, the patient received systemic antibiotic, analgesic, and mouthwash for 7 days.",
+      "explanation": "Supports the listed postoperative treatments and timing."
+    }
+  ],
+  "findings": [
+    {
+      "field_path": "/patient medical history/physiological context",
+      "label_excerpt": "No previous facial trauma",
+      "source_quote": "She had no previous facial trauma, and her medical history was not contributory.",
+      "explanation": "This labels absence of facial trauma as physiological context, which is a role mismatch; the source describes it as history.",
+      "category": "inappropriate_role",
+      "classification": "policy_ambiguity"
+    },
+    {
+      "field_path": "/medical examinations/0/result",
+      "label_excerpt": "nonpalpable regional lymph nodes",
+      "source_quote": "The regional lymph nodes were nonpalpable.",
+      "explanation": "Supported negative examination finding.",
+      "category": "unsupported_addition",
+      "classification": "clear_error"
+    }
+  ],
+  "summary": "Candidate finding: the history fact is placed in a physiological-context field, though its intended historical meaning is clear. The alleged unsupported exam detail is directly stated in the note, so it is not a discrepancy."
+}

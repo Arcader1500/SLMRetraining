@@ -1,0 +1,64 @@
+{
+  "decision": "issues_found",
+  "supported_checks": [
+    {
+      "field_path": "/visit motivation",
+      "label_excerpt": "Chest pain and shortness of breath",
+      "source_quote": "presented to the emergency department at 10 am in the morning with chest pain and shortness of breath of approximately 12 hours duration.",
+      "explanation": "The stated visit motivation is supported by the presentation description."
+    },
+    {
+      "field_path": "/patient medical history/physiological context",
+      "label_excerpt": "right breast invasive ductal carcinoma with bilateral mastectomies in 2015",
+      "source_quote": "right breast invasive ductal carcinoma with bilateral mastectomies in 2015",
+      "explanation": "This medical history detail is explicitly stated."
+    },
+    {
+      "field_path": "/symptoms/0/details",
+      "label_excerpt": "Sharp pleuritic chest pain",
+      "source_quote": "she developed shortness of breath and sharp pleuritic chest pain while she was lying in bed.",
+      "explanation": "The symptom characterization is directly supported."
+    },
+    {
+      "field_path": "/treatments/0/reaction to treatment",
+      "label_excerpt": "Reduced the intensity of pain",
+      "source_quote": "She said that she had taken some ibuprofen which had reduced the intensity of pain.",
+      "explanation": "The reported response to ibuprofen is explicitly stated."
+    }
+  ],
+  "findings": [
+    {
+      "field_path": "/admission/0/reason",
+      "label_excerpt": "Chest pain and shortness of breath",
+      "source_quote": "presented to the emergency department at 10 am in the morning with chest pain and shortness of breath of approximately 12 hours duration.",
+      "explanation": "The source establishes an emergency department presentation but does not establish hospital admission. The admission section therefore asserts an event not supported by the note.",
+      "category": "event_status",
+      "classification": "clear_error"
+    },
+    {
+      "field_path": "/symptoms/0/details",
+      "label_excerpt": "Sharp pleuritic chest pain, also experiencing a less prominent pressure like sensation",
+      "source_quote": "The patient reported that her chest pain was located in the substernal region, radiating to the back, aggravated by deep breaths and by lying down, and alleviated by sitting up and leaning forward. She said that she had taken some ibuprofen which had reduced the intensity of pain. She did endorse that she was also experiencing a less prominent pressure like sensation in addition to the sharp pleuritic type of pain.",
+      "explanation": "The label omits the explicitly reported aggravating and alleviating factors, which are material symptom details expressible in the schema.",
+      "category": "omission",
+      "classification": "material_omission"
+    },
+    {
+      "field_path": "/symptoms/1/details",
+      "label_excerpt": "Developed shortness of breath while lying in bed",
+      "source_quote": "she developed shortness of breath and sharp pleuritic chest pain while she was lying in bed.",
+      "explanation": "The source gives onset while lying in bed, but the label places that context in details and omits it from the separate chest pain symptom. Since the note says both symptoms developed while lying in bed, this is a possible allocation issue; the details field for chest pain could have carried the shared context.",
+      "category": "omission",
+      "classification": "policy_ambiguity"
+    },
+    {
+      "field_path": "/patient medical history/physiological context",
+      "label_excerpt": "prothrombin G20210A mutation",
+      "source_quote": "Her medical history included right breast invasive ductal carcinoma with bilateral mastectomies in 2015, recently diagnosed bladder cancer with TURBT and intravesical mitomycin C instillation three days prior to current presentation, type 2 diabetes mellitus, hypertension, obstructive sleep apnea, chronic obstructive pulmonary disease, and prothrombin G20210A mutation.",
+      "explanation": "Supported medical history is captured.",
+      "category": "omission",
+      "classification": "clear_error"
+    }
+  ],
+  "summary": "The label captures several core reported facts, but it asserts admission without evidence of admission and omits material chest-pain aggravating and alleviating factors. The final finding is not a discrepancy because the mutation is present in the label; it should not be treated as an issue."
+}

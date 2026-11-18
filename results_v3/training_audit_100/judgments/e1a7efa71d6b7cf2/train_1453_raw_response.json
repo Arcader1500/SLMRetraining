@@ -1,0 +1,42 @@
+{
+  "decision": "issues_found",
+  "supported_checks": [
+    {
+      "field_path": "/patient information/age",
+      "label_excerpt": "35",
+      "source_quote": "A 35-year-old man",
+      "explanation": "Age and sex are stated directly in the note."
+    },
+    {
+      "field_path": "/symptoms/0/name of symptom",
+      "label_excerpt": "Epigastric pain",
+      "source_quote": "He complained of epigastric pain about 9 months before.",
+      "explanation": "The symptom is explicitly reported."
+    },
+    {
+      "field_path": "/medical examinations/4/result",
+      "label_excerpt": "No free air or niveau",
+      "source_quote": "There was no free air or niveau on the abdominal X-ray.",
+      "explanation": "The label preserves the X-ray's negative findings."
+    }
+  ],
+  "findings": [
+    {
+      "field_path": "/treatments/1/reaction to treatment",
+      "label_excerpt": "Partial clinical remission",
+      "source_quote": "He received six cycles of chemotherapy and showed a partial clinical remission.",
+      "explanation": "The note attributes remission to six cycles of chemotherapy overall, not specifically to S-1. Assigning it to S-1 alone overstates the treatment-response linkage.",
+      "category": "wrong_linkage_value",
+      "classification": "clear_error"
+    },
+    {
+      "field_path": "/treatments/2/reaction to treatment",
+      "label_excerpt": "Partial clinical remission",
+      "source_quote": "He received six cycles of chemotherapy and showed a partial clinical remission.",
+      "explanation": "The note reports remission after chemotherapy overall; it does not specifically attribute the response to cisplatin alone. This duplicates an unsupported drug-specific response linkage.",
+      "category": "wrong_linkage_value",
+      "classification": "clear_error"
+    }
+  ],
+  "summary": "The label is largely supported, but it assigns the overall chemotherapy remission specifically to each of two drugs. The source reports six chemotherapy cycles and a partial clinical remission without attributing that response to S-1 or cisplatin separately."
+}

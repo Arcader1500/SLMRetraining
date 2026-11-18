@@ -1,0 +1,11 @@
+{
+  "rows": 1325,
+  "schema_valid": 1325,
+  "supervised_masks_consistent": 1325,
+  "unique_normalized_notes": 1325,
+  "train_dev_exact_note_overlap": 0,
+  "no_terminal_punctuation": 1206,
+  "punctuation_signal_limit": "Screening cue only; not a confirmed truncation count.",
+  "projected_duplicate_entries": 0,
+  "cases_with_projected_duplicates": 0
+}

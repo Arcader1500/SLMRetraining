@@ -1,0 +1,486 @@
+[
+  {
+    "case_id": "train:983",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "review": {
+      "decision": "issues_found",
+      "supported_checks": [
+        {
+          "field_path": "/symptoms/1/details",
+          "label_excerpt": "Respiratory rate 28/min",
+          "source_quote": "She had dyspnoea at rest, respiratory rate 28/min, and pulse rate 120/min.",
+          "explanation": "The rate is documented, but the label omits that the dyspnoea was at rest."
+        },
+        {
+          "field_path": "/symptoms/3/time",
+          "label_excerpt": "Last three months",
+          "source_quote": "She had weight loss by 4 kg over the last three months, presently weighing 40 kg.",
+          "explanation": "The time is supported; the label omits the quantified 4 kg loss and current weight."
+        },
+        {
+          "field_path": "/diagnosis tests/4/result",
+          "label_excerpt": "Exudative effusion",
+          "source_quote": "Thoracentesis and the evaluation of pleural fluid showed exudative effusion but leading to no further differentiation.",
+          "explanation": "The result is supported; the label omits that evaluation yielded no further differentiation."
+        }
+      ],
+      "findings": [
+        {
+          "field_path": "/symptoms/3/time",
+          "label_excerpt": "Last three months",
+          "source_quote": "She had weight loss by 4 kg over the last three months, presently weighing 40 kg.",
+          "explanation": "The symptom entry leaves out the material amount of weight lost and the patient's current weight, both explicitly documented in the note.",
+          "category": "omission",
+          "classification": "material_omission"
+        },
+        {
+          "field_path": "/diagnosis tests/4/result",
+          "label_excerpt": "Exudative effusion",
+          "source_quote": "Thoracentesis and the evaluation of pleural fluid showed exudative effusion but leading to no further differentiation.",
+          "explanation": "The result entry omits the material qualification that the pleural-fluid evaluation did not further differentiate the effusion.",
+          "category": "omission",
+          "classification": "material_omission"
+        }
+      ],
+      "summary": "Two material omissions are candidates: the weight-loss amount/current weight and the lack of further differentiation of the pleural effusion. The other checks confirm that the quoted label details are supported."
+    }
+  },
+  {
+    "case_id": "train:119",
+    "group": "targeted",
+    "selection_reason": "drug_dose",
+    "review": {
+      "decision": "issues_found",
+      "supported_checks": [
+        {
+          "field_path": "/visit motivation",
+          "label_excerpt": "Weak radial pulses, previous symptoms of low-grade fever, arm and limb claudication, weight loss, headache, dizziness, and nausea",
+          "source_quote": "In October of 2020, the patient noticed that her radial pulses were weak and she was admitted.",
+          "explanation": "The visit motivation is supported by the presentation and the symptoms described earlier in the note."
+        },
+        {
+          "field_path": "/admission/0/reason",
+          "label_excerpt": "Weak and impalpable brachial and radial pulses, non-recordable BP",
+          "source_quote": "On examination, her brachial and radial pulses were weak, impalpable bilaterally and her BP was non-recordable manually.",
+          "explanation": "The admission reason accurately reflects the documented examination findings."
+        },
+        {
+          "field_path": "/diagnosis tests/0/result",
+          "label_excerpt": "Narrowing in right ICA and left CCA, a segment of the right subclavian artery narrowed distal to its origin from brachiocephalic artery, short segment narrowing in the celiac trunk, narrowing at origin of SMA, left superficial and deep femoral arteries markedly attenuated with collateral formation",
+          "source_quote": "Along with this, left superficial and deep femoral arteries were markedly attenuated with collateral formation.",
+          "explanation": "The angiographic result includes the vascular findings reported in the note."
+        },
+        {
+          "field_path": "/treatments/0/dosage",
+          "label_excerpt": "500 mg",
+          "source_quote": "The patient was started on methylprednisolone 500 mg IV for 3 days",
+          "explanation": "The drug and dose are explicitly documented; the label omits route and duration, but those are not necessary for this supported check."
+        }
+      ],
+      "findings": [
+        {
+          "field_path": "/treatments/3/dosage",
+          "label_excerpt": "20g",
+          "source_quote": "tablet methotrexate 20g weekly",
+          "explanation": "The label preserves the dose exactly as stated in the source, so this is source-supported; no discrepancy is identified.",
+          "category": "unsupported_addition",
+          "classification": "policy_ambiguity"
+        }
+      ],
+      "summary": "The reviewed findings are supported by the source. The methotrexate dose is explicitly stated as 20g weekly, so the label's 20g value is consistent with the note. No material source-label issue is identified."
+    }
+  },
+  {
+    "case_id": "train:1239",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "review": {
+      "decision": "issues_found",
+      "supported_checks": [
+        {
+          "field_path": "/patient information/age",
+          "label_excerpt": "54",
+          "source_quote": "A 54-year-old male patient",
+          "explanation": "The patient's age is explicitly stated."
+        },
+        {
+          "field_path": "/diagnosis tests/1/result",
+          "label_excerpt": "No bacterial growth observed",
+          "source_quote": "a pleural fluid culture study was performed every 5 days, and no bacterial growth was observed.",
+          "explanation": "The label correctly records the pleural fluid culture result."
+        },
+        {
+          "field_path": "/treatments/0/dosage",
+          "label_excerpt": "400 mg",
+          "source_quote": "(IV) ciprofloxacin (400 mg every 12 hours)",
+          "explanation": "The dose is supported, though the label omits the stated frequency."
+        }
+      ],
+      "findings": [
+        {
+          "field_path": "/admission/0/reason",
+          "label_excerpt": "Identification of Citrobacter koseri and further workup",
+          "source_quote": "The patient was admitted to the general ward for further workup",
+          "explanation": "The note says admission was for further workup; Citrobacter was identified by a swab culture before the admission sentence, but does not state it was the reason for admission. The linkage is unsupported.",
+          "category": "wrong_linkage_value",
+          "classification": "clear_error"
+        },
+        {
+          "field_path": "/treatments/0/reaction to treatment",
+          "label_excerpt": "Patient remained febrile for 36 days after the initial operation",
+          "source_quote": "However, the patient remained febrile for 36 days after the initial operation; thus, we delayed the second stage of the operation.",
+          "explanation": "This reports fever after the operation and a resulting delay, not a reaction attributed to ciprofloxacin; the label assigns the outcome to the antibiotic treatment without source support.",
+          "category": "wrong_linkage_value",
+          "classification": "clear_error"
+        },
+        {
+          "field_path": "/treatments",
+          "label_excerpt": "",
+          "source_quote": "initiated on intravenous (IV) ciprofloxacin (400 mg every 12 hours).",
+          "explanation": "The treatment leaf records the dose but omits the explicitly stated every-12-hours frequency, a material treatment-course attribute.",
+          "category": "omission",
+          "classification": "material_omission"
+        }
+      ],
+      "summary": "The label captures several explicit facts, but it links the culture result to the admission reason and post-operative fever to ciprofloxacin, and omits the antibiotic frequency."
+    },
+    "evidence_span_repairs": [
+      {
+        "before": "IV ciprofloxacin (400 mg every 12 hours)",
+        "after": "(IV) ciprofloxacin (400 mg every 12 hours)",
+        "method": "unique_contiguous_tokens_ignoring_parentheses_and_whitespace_only"
+      }
+    ],
+    "raw_response_file": "train_1239_rejected_evidence.json"
+  },
+  {
+    "case_id": "train:1045",
+    "group": "targeted",
+    "selection_reason": "investigations",
+    "review": {
+      "decision": "no_material_issue_found",
+      "supported_checks": [
+        {
+          "field_path": "/visit motivation",
+          "label_excerpt": "Worsening dysphagia to solids and weight loss",
+          "source_quote": "with a three week history of worsening dysphagia to solids and weight loss of 4 kilograms.",
+          "explanation": "The stated visit motivation matches the symptoms prompting the clinic presentation."
+        },
+        {
+          "field_path": "/diagnosis tests/13/result",
+          "label_excerpt": "Significantly abnormal non-specific dysmotility of the lower oesophagus",
+          "source_quote": "detected a significantly abnormal non-specific dysmotility of the lower oesophagus",
+          "explanation": "The result is explicitly reported for the solid-medium barium swallow."
+        },
+        {
+          "field_path": "/diagnosis tests/17/result",
+          "label_excerpt": "Large tumour arising from the left kidney with renal vein involvement",
+          "source_quote": "A computed tomography scan confirmed a large tumour arising from the left kidney with renal vein involvement,",
+          "explanation": "The label preserves the CT finding stated in the note."
+        }
+      ],
+      "findings": [],
+      "summary": "No material source-consistency issue identified. The label accurately captures the main symptoms, test results, and findings established in the provided note."
+    },
+    "evidence_span_repairs": []
+  },
+  {
+    "case_id": "train:1052",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "review": {
+      "decision": "issues_found",
+      "supported_checks": [
+        {
+          "field_path": "/symptoms/0/time",
+          "label_excerpt": "Past six years",
+          "source_quote": "She had been aware of the slow but steady increase in the size of the lesion over the past six years.",
+          "explanation": "Supported by the note's duration of lesion growth."
+        },
+        {
+          "field_path": "/surgeries/0/Type",
+          "label_excerpt": "Removal of the lesion using a chisel and rotary instruments via an intraoral approach, and curettage of the cavity",
+          "source_quote": "Under local anesthesia, the lesion was totally removed using a chisel and rotary instruments via an intraoral approach, and curettage of the cavity was undertaken ().",
+          "explanation": "The note explicitly reports the lesion removal and curettage as performed."
+        },
+        {
+          "field_path": "/diagnosis tests/0/result",
+          "label_excerpt": "Solitary, round, 3 × 3 cm well-defined radio-opaque lesion without a radiolucent rim of mandible",
+          "source_quote": "A solitary, round, 3 × 3 cm well-defined radio-opaque lesion without a radiolucent rim of mandible was detected with panoramic radiography and computed tomography (CT).",
+          "explanation": "Supported imaging description and size."
+        },
+        {
+          "field_path": "/treatments/0/time",
+          "label_excerpt": "Postoperatively",
+          "source_quote": "Postoperatively, the patient received systemic antibiotic, analgesic, and mouthwash for 7 days.",
+          "explanation": "Supports the listed postoperative treatments and timing."
+        }
+      ],
+      "findings": [
+        {
+          "field_path": "/patient medical history/physiological context",
+          "label_excerpt": "No previous facial trauma",
+          "source_quote": "She had no previous facial trauma, and her medical history was not contributory.",
+          "explanation": "This labels absence of facial trauma as physiological context, which is a role mismatch; the source describes it as history.",
+          "category": "inappropriate_role",
+          "classification": "policy_ambiguity"
+        },
+        {
+          "field_path": "/medical examinations/0/result",
+          "label_excerpt": "nonpalpable regional lymph nodes",
+          "source_quote": "The regional lymph nodes were nonpalpable.",
+          "explanation": "Supported negative examination finding.",
+          "category": "unsupported_addition",
+          "classification": "clear_error"
+        }
+      ],
+      "summary": "Candidate finding: the history fact is placed in a physiological-context field, though its intended historical meaning is clear. The alleged unsupported exam detail is directly stated in the note, so it is not a discrepancy."
+    },
+    "evidence_span_repairs": []
+  },
+  {
+    "case_id": "train:1453",
+    "group": "targeted",
+    "selection_reason": "chronology",
+    "review": {
+      "decision": "issues_found",
+      "supported_checks": [
+        {
+          "field_path": "/patient information/age",
+          "label_excerpt": "35",
+          "source_quote": "A 35-year-old man",
+          "explanation": "Age and sex are stated directly in the note."
+        },
+        {
+          "field_path": "/symptoms/0/name of symptom",
+          "label_excerpt": "Epigastric pain",
+          "source_quote": "He complained of epigastric pain about 9 months before.",
+          "explanation": "The symptom is explicitly reported."
+        },
+        {
+          "field_path": "/medical examinations/4/result",
+          "label_excerpt": "No free air or niveau",
+          "source_quote": "There was no free air or niveau on the abdominal X-ray.",
+          "explanation": "The label preserves the X-ray's negative findings."
+        }
+      ],
+      "findings": [
+        {
+          "field_path": "/treatments/1/reaction to treatment",
+          "label_excerpt": "Partial clinical remission",
+          "source_quote": "He received six cycles of chemotherapy and showed a partial clinical remission.",
+          "explanation": "The note attributes remission to six cycles of chemotherapy overall, not specifically to S-1. Assigning it to S-1 alone overstates the treatment-response linkage.",
+          "category": "wrong_linkage_value",
+          "classification": "clear_error"
+        },
+        {
+          "field_path": "/treatments/2/reaction to treatment",
+          "label_excerpt": "Partial clinical remission",
+          "source_quote": "He received six cycles of chemotherapy and showed a partial clinical remission.",
+          "explanation": "The note reports remission after chemotherapy overall; it does not specifically attribute the response to cisplatin alone. This duplicates an unsupported drug-specific response linkage.",
+          "category": "wrong_linkage_value",
+          "classification": "clear_error"
+        }
+      ],
+      "summary": "The label is largely supported, but it assigns the overall chemotherapy remission specifically to each of two drugs. The source reports six chemotherapy cycles and a partial clinical remission without attributing that response to S-1 or cisplatin separately."
+    },
+    "evidence_span_repairs": []
+  },
+  {
+    "case_id": "train:24",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "review": {
+      "decision": "issues_found",
+      "supported_checks": [
+        {
+          "field_path": "/visit motivation",
+          "label_excerpt": "Chest pain and shortness of breath",
+          "source_quote": "presented to the emergency department at 10 am in the morning with chest pain and shortness of breath of approximately 12 hours duration.",
+          "explanation": "The stated visit motivation is supported by the presentation description."
+        },
+        {
+          "field_path": "/patient medical history/physiological context",
+          "label_excerpt": "right breast invasive ductal carcinoma with bilateral mastectomies in 2015",
+          "source_quote": "right breast invasive ductal carcinoma with bilateral mastectomies in 2015",
+          "explanation": "This medical history detail is explicitly stated."
+        },
+        {
+          "field_path": "/symptoms/0/details",
+          "label_excerpt": "Sharp pleuritic chest pain",
+          "source_quote": "she developed shortness of breath and sharp pleuritic chest pain while she was lying in bed.",
+          "explanation": "The symptom characterization is directly supported."
+        },
+        {
+          "field_path": "/treatments/0/reaction to treatment",
+          "label_excerpt": "Reduced the intensity of pain",
+          "source_quote": "She said that she had taken some ibuprofen which had reduced the intensity of pain.",
+          "explanation": "The reported response to ibuprofen is explicitly stated."
+        }
+      ],
+      "findings": [
+        {
+          "field_path": "/admission/0/reason",
+          "label_excerpt": "Chest pain and shortness of breath",
+          "source_quote": "presented to the emergency department at 10 am in the morning with chest pain and shortness of breath of approximately 12 hours duration.",
+          "explanation": "The source establishes an emergency department presentation but does not establish hospital admission. The admission section therefore asserts an event not supported by the note.",
+          "category": "event_status",
+          "classification": "clear_error"
+        },
+        {
+          "field_path": "/symptoms/0/details",
+          "label_excerpt": "Sharp pleuritic chest pain, also experiencing a less prominent pressure like sensation",
+          "source_quote": "The patient reported that her chest pain was located in the substernal region, radiating to the back, aggravated by deep breaths and by lying down, and alleviated by sitting up and leaning forward. She said that she had taken some ibuprofen which had reduced the intensity of pain. She did endorse that she was also experiencing a less prominent pressure like sensation in addition to the sharp pleuritic type of pain.",
+          "explanation": "The label omits the explicitly reported aggravating and alleviating factors, which are material symptom details expressible in the schema.",
+          "category": "omission",
+          "classification": "material_omission"
+        },
+        {
+          "field_path": "/symptoms/1/details",
+          "label_excerpt": "Developed shortness of breath while lying in bed",
+          "source_quote": "she developed shortness of breath and sharp pleuritic chest pain while she was lying in bed.",
+          "explanation": "The source gives onset while lying in bed, but the label places that context in details and omits it from the separate chest pain symptom. Since the note says both symptoms developed while lying in bed, this is a possible allocation issue; the details field for chest pain could have carried the shared context.",
+          "category": "omission",
+          "classification": "policy_ambiguity"
+        },
+        {
+          "field_path": "/patient medical history/physiological context",
+          "label_excerpt": "prothrombin G20210A mutation",
+          "source_quote": "Her medical history included right breast invasive ductal carcinoma with bilateral mastectomies in 2015, recently diagnosed bladder cancer with TURBT and intravesical mitomycin C instillation three days prior to current presentation, type 2 diabetes mellitus, hypertension, obstructive sleep apnea, chronic obstructive pulmonary disease, and prothrombin G20210A mutation.",
+          "explanation": "Supported medical history is captured.",
+          "category": "omission",
+          "classification": "clear_error"
+        }
+      ],
+      "summary": "The label captures several core reported facts, but it asserts admission without evidence of admission and omits material chest-pain aggravating and alleviating factors. The final finding is not a discrepancy because the mutation is present in the label; it should not be treated as an issue."
+    },
+    "evidence_span_repairs": []
+  },
+  {
+    "case_id": "train:1108",
+    "group": "targeted",
+    "selection_reason": "negation_status",
+    "review": {
+      "decision": "issues_found",
+      "supported_checks": [
+        {
+          "field_path": "/visit motivation",
+          "label_excerpt": "Reporting four episodes of hematospermia over 10 days",
+          "source_quote": "presented at a walk-in GP clinic reporting four episodes of hematospermia over 10 days.",
+          "explanation": "The visit motivation is supported by the note."
+        },
+        {
+          "field_path": "/patient medical history/physiological context",
+          "label_excerpt": "Fit and well, mild childhood asthma",
+          "source_quote": "The patient was otherwise fit and well with no past medical history apart from mild childhood asthma.",
+          "explanation": "The physiological context matches the stated history."
+        },
+        {
+          "field_path": "/symptoms/0/details",
+          "label_excerpt": "First three episodes with brown semen, fourth with red streaks",
+          "source_quote": "In the first three episodes, the patient reported the semen being brown in color. On the fourth episode, there were distinct streaks of red blood within the semen.",
+          "explanation": "The symptom details and sequence are supported."
+        },
+        {
+          "field_path": "/medical examinations/1/result",
+          "label_excerpt": "228/135 mmHg",
+          "source_quote": "His blood pressure was note to be 228/135 mmHg",
+          "explanation": "The recorded blood pressure matches the note."
+        }
+      ],
+      "findings": [
+        {
+          "field_path": "/medical examinations/0/result",
+          "label_excerpt": "Normal findings",
+          "source_quote": "A digital rectal examination was normal with no enlargement or nodularity of the prostate.",
+          "explanation": "The result generalizes several normal examination findings, but the note also explicitly records a markedly elevated blood pressure. As the label separately captures that measurement, it is unclear whether “Normal findings” is intended to cover only the physical examination apart from blood pressure; treat as a policy ambiguity rather than a definite contradiction.",
+          "category": "wrong_linkage_value",
+          "classification": "policy_ambiguity"
+        }
+      ],
+      "summary": "One candidate ambiguity: the broad normal physical-examination result appears alongside a separately captured markedly elevated blood pressure. The supplied note ends mid-sentence, so no facts beyond the cutoff were assessed."
+    },
+    "evidence_span_repairs": []
+  },
+  {
+    "case_id": "train:177",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "review": {
+      "decision": "issues_found",
+      "supported_checks": [
+        {
+          "field_path": "/visit motivation",
+          "label_excerpt": "Laparoscopic excision of GIST in the stomach",
+          "source_quote": "A 61-year-old female patient was referred to our department for laparoscopic excision of GIST in the stomach.",
+          "explanation": "The referral motivation is directly supported."
+        },
+        {
+          "field_path": "/diagnosis tests/0/result",
+          "label_excerpt": "Scant samples of the submucosa were obtained, which precluded a histological diagnosis of the tumour",
+          "source_quote": "Unfortunately, only scant samples of the submucosa were obtained, which precluded a histological diagnosis of the tumour.",
+          "explanation": "The label accurately preserves the biopsy limitation."
+        },
+        {
+          "field_path": "/discharge/discharge summary",
+          "label_excerpt": "Patient was discharged on the fifth postoperative day after an uneventful postoperative course",
+          "source_quote": "The postoperative course was uneventful and the patient was discharged on the fifth postoperative day.",
+          "explanation": "Both the uneventful postoperative course and discharge timing are stated."
+        }
+      ],
+      "findings": [
+        {
+          "field_path": "/diagnosis tests/1/result",
+          "label_excerpt": "6.6 × 3.5 cm excision gastric wall with a gray yellowish node 15 mm in diameter",
+          "source_quote": "The tumour did not involve the resection margins. Histopathological analysis confirmed an ectopic pancreas, 15 mm in",
+          "explanation": "The source reports the histological diagnosis of ectopic pancreas and clear resection margins, but the label omits both material pathology findings. The source is cut off after “in,” so no completion is inferred.",
+          "category": "omission",
+          "classification": "material_omission"
+        }
+      ],
+      "summary": "One material omission: the histopathology result does not include the confirmed ectopic pancreas or the finding that the tumour did not involve resection margins."
+    },
+    "evidence_span_repairs": []
+  },
+  {
+    "case_id": "train:676",
+    "group": "targeted",
+    "selection_reason": "long_target",
+    "review": {
+      "decision": "issues_found",
+      "supported_checks": [
+        {
+          "field_path": "/patient medical history/physiological context",
+          "label_excerpt": "Swallowed a chicken bone prior to the onset of the discomfort",
+          "source_quote": "The patient had swallowed a chicken bone prior to the onset of the discomfort.",
+          "explanation": "The note supports this history and its timing."
+        },
+        {
+          "field_path": "/symptoms/1/details",
+          "label_excerpt": "Vomited approximately 50 mL of fresh red blood prior to admission and 300 ml of bright red blood on March 29, 2011",
+          "source_quote": "He vomited approximately 300 ml of bright red blood and produced a large amount of tarry stool on March 29, 2011.",
+          "explanation": "The later episode and its date are supported; the earlier 50 mL episode is also described in the note."
+        },
+        {
+          "field_path": "/diagnosis tests/2/result",
+          "label_excerpt": "Esophageal fistula approximately 1.0 cm in diameter found 25 cm away from the incisors",
+          "source_quote": "an esophageal fistula approximately 1.0 cm in diameter was found 25 cm away from the incisors",
+          "explanation": "The endoscopy result is stated in the source note."
+        }
+      ],
+      "findings": [
+        {
+          "field_path": "/diagnosis tests/1/result",
+          "label_excerpt": "0.7 cm×0.4 cm pseudoaneurysm of the descending aorta approximately 4.5 cm below the origin of the left subclavian artery",
+          "source_quote": "This finding confirmed the diagnosis of AEF.",
+          "explanation": "The angiography result gives the pseudoaneurysm measurements but omits the source's explicit confirmation of AEF. This is a material diagnostic result that could be included with the angiography result.",
+          "category": "omission",
+          "classification": "material_omission"
+        }
+      ],
+      "summary": "The label is largely source-supported. It omits the explicit statement that angiography confirmed AEF."
+    },
+    "evidence_span_repairs": []
+  }
+]

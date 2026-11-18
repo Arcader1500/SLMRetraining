@@ -1,0 +1,34 @@
+{
+  "decision": "issues_found",
+  "supported_checks": [
+    {
+      "field_path": "/visit motivation",
+      "label_excerpt": "Laparoscopic excision of GIST in the stomach",
+      "source_quote": "A 61-year-old female patient was referred to our department for laparoscopic excision of GIST in the stomach.",
+      "explanation": "The referral motivation is directly supported."
+    },
+    {
+      "field_path": "/diagnosis tests/0/result",
+      "label_excerpt": "Scant samples of the submucosa were obtained, which precluded a histological diagnosis of the tumour",
+      "source_quote": "Unfortunately, only scant samples of the submucosa were obtained, which precluded a histological diagnosis of the tumour.",
+      "explanation": "The label accurately preserves the biopsy limitation."
+    },
+    {
+      "field_path": "/discharge/discharge summary",
+      "label_excerpt": "Patient was discharged on the fifth postoperative day after an uneventful postoperative course",
+      "source_quote": "The postoperative course was uneventful and the patient was discharged on the fifth postoperative day.",
+      "explanation": "Both the uneventful postoperative course and discharge timing are stated."
+    }
+  ],
+  "findings": [
+    {
+      "field_path": "/diagnosis tests/1/result",
+      "label_excerpt": "6.6 × 3.5 cm excision gastric wall with a gray yellowish node 15 mm in diameter",
+      "source_quote": "The tumour did not involve the resection margins. Histopathological analysis confirmed an ectopic pancreas, 15 mm in",
+      "explanation": "The source reports the histological diagnosis of ectopic pancreas and clear resection margins, but the label omits both material pathology findings. The source is cut off after “in,” so no completion is inferred.",
+      "category": "omission",
+      "classification": "material_omission"
+    }
+  ],
+  "summary": "One material omission: the histopathology result does not include the confirmed ectopic pancreas or the finding that the tumour did not involve resection margins."
+}

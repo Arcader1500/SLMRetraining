@@ -1,0 +1,1459 @@
+{
+  "artifact_version": 1,
+  "date": "2026-11-17",
+  "status": "proposed schema and read-only projection analysis; no new dataset or generations created",
+  "scope": {
+    "training_rows": 1325,
+    "validation_rows": 30,
+    "full_24000_source_scan": false,
+    "clinical_adjudication": false,
+    "all_frozen_v2_inputs_untouched": true
+  },
+  "counting_rule": {
+    "max_distinct_schema_paths_including_parents": 30,
+    "parent_paths": 10,
+    "child_paths": 20,
+    "original_distinct_parent_paths": 10,
+    "original_distinct_child_paths_in_subset": 57,
+    "original_total_distinct_paths": 67,
+    "repeated_paths_in_arrays_count_once": true,
+    "actual_output_key_occurrences_can_exceed_30": true
+  },
+  "schema_parent_to_children": {
+    "visit motivation": null,
+    "admission": [
+      "reason"
+    ],
+    "patient information": [
+      "age",
+      "sex"
+    ],
+    "patient medical history": [
+      "physiological context"
+    ],
+    "surgeries": [
+      "Type",
+      "time",
+      "details"
+    ],
+    "symptoms": [
+      "name of symptom",
+      "location",
+      "time",
+      "details"
+    ],
+    "medical examinations": [
+      "name",
+      "result"
+    ],
+    "diagnosis tests": [
+      "test",
+      "result"
+    ],
+    "treatments": [
+      "name",
+      "dosage",
+      "time",
+      "reaction to treatment"
+    ],
+    "discharge": [
+      "discharge summary"
+    ]
+  },
+  "section_types": {
+    "visit motivation": "string",
+    "admission": "array_of_objects",
+    "patient information": "object",
+    "patient medical history": "object",
+    "surgeries": "array_of_objects",
+    "symptoms": "array_of_objects",
+    "medical examinations": "array_of_objects",
+    "diagnosis tests": "array_of_objects",
+    "treatments": "array_of_objects",
+    "discharge": "object"
+  },
+  "absence_policy": {
+    "visit motivation": "Use existing string None for absent value under current convention.",
+    "array_sections": "Use []; omit unfilled child keys and remove projected empty objects.",
+    "object_sections": "Use {}; omit unfilled child keys."
+  },
+  "projection_procedure": [
+    "Parse existing reference JSON. Preserve all ten parents in canonical order.",
+    "Retain only listed children at their existing parent; preserve retained values verbatim, including negation, units, punctuation and original key spelling.",
+    "Drop array items whose projection has no retained keys. Do not invent an identifier, relocate details into another field, rewrite facts or concatenate dropped fields.",
+    "Preserve order and multiplicity of surviving array items; no deduplication is applied in these metrics. Values may become identical after distinct contextual fields are removed.",
+    "Serialize compact JSON with ensure_ascii=False and separators comma/colon. Character lengths count Unicode characters, not bytes or tokenizer tokens. Scalar leaf counts include the top-level visit motivation string and repeated array values.",
+    "For future 5000-row preparation, group exact/near duplicate source cases and related case families before splitting. Do not treat duplicated targets or duplicated rows as new independent data. Do not collapse identical projected events without checking their original event context."
+  ],
+  "field_analysis": {
+    "admission.care center details": {
+      "keep": false,
+      "rationale": "Drop admission date/duration/facility detail to fit cap; this loses logistics and some temporal context. Duration can be attached to the wrong episode in current labels.",
+      "train": {
+        "row_count": 507,
+        "row_fraction": 0.38264150943396225,
+        "occurrences": 524,
+        "original_value_characters": 20633
+      },
+      "validation": {
+        "row_count": 10,
+        "row_fraction": 0.3333333333333333,
+        "occurrences": 10,
+        "original_value_characters": 272
+      }
+    },
+    "admission.date": {
+      "keep": false,
+      "rationale": "Drop admission date/duration/facility detail to fit cap; this loses logistics and some temporal context. Duration can be attached to the wrong episode in current labels.",
+      "train": {
+        "row_count": 250,
+        "row_fraction": 0.18867924528301888,
+        "occurrences": 270,
+        "original_value_characters": 6043
+      },
+      "validation": {
+        "row_count": 4,
+        "row_fraction": 0.13333333333333333,
+        "occurrences": 4,
+        "original_value_characters": 98
+      }
+    },
+    "admission.duration": {
+      "keep": false,
+      "rationale": "Drop admission date/duration/facility detail to fit cap; this loses logistics and some temporal context. Duration can be attached to the wrong episode in current labels.",
+      "train": {
+        "row_count": 169,
+        "row_fraction": 0.12754716981132075,
+        "occurrences": 175,
+        "original_value_characters": 4382
+      },
+      "validation": {
+        "row_count": 8,
+        "row_fraction": 0.26666666666666666,
+        "occurrences": 8,
+        "original_value_characters": 187
+      }
+    },
+    "admission.reason": {
+      "keep": true,
+      "rationale": "Keep a representative admission fact; reason often overlaps visit motivation but gives this required parent usable content.",
+      "train": {
+        "row_count": 968,
+        "row_fraction": 0.730566037735849,
+        "occurrences": 1012,
+        "original_value_characters": 61524
+      },
+      "validation": {
+        "row_count": 25,
+        "row_fraction": 0.8333333333333334,
+        "occurrences": 25,
+        "original_value_characters": 1794
+      }
+    },
+    "diagnosis tests.condition": {
+      "keep": false,
+      "rationale": "Drop condition/severity/time/details to reduce repeated inferred diagnoses and long descriptions; uncertainty, test cancellation, grade and event timing appearing only here are lost.",
+      "train": {
+        "row_count": 1034,
+        "row_fraction": 0.780377358490566,
+        "occurrences": 1624,
+        "original_value_characters": 52138
+      },
+      "validation": {
+        "row_count": 23,
+        "row_fraction": 0.7666666666666667,
+        "occurrences": 37,
+        "original_value_characters": 1081
+      }
+    },
+    "diagnosis tests.details": {
+      "keep": false,
+      "rationale": "Drop condition/severity/time/details to reduce repeated inferred diagnoses and long descriptions; uncertainty, test cancellation, grade and event timing appearing only here are lost.",
+      "train": {
+        "row_count": 772,
+        "row_fraction": 0.5826415094339623,
+        "occurrences": 1060,
+        "original_value_characters": 90327
+      },
+      "validation": {
+        "row_count": 21,
+        "row_fraction": 0.7,
+        "occurrences": 29,
+        "original_value_characters": 3141
+      }
+    },
+    "diagnosis tests.result": {
+      "keep": true,
+      "rationale": "Keep source-stated diagnostic findings; susceptibility/negation errors remain possible and require review.",
+      "train": {
+        "row_count": 1068,
+        "row_fraction": 0.8060377358490566,
+        "occurrences": 2412,
+        "original_value_characters": 197049
+      },
+      "validation": {
+        "row_count": 25,
+        "row_fraction": 0.8333333333333334,
+        "occurrences": 57,
+        "original_value_characters": 4154
+      }
+    },
+    "diagnosis tests.severity": {
+      "keep": false,
+      "rationale": "Drop condition/severity/time/details to reduce repeated inferred diagnoses and long descriptions; uncertainty, test cancellation, grade and event timing appearing only here are lost.",
+      "train": {
+        "row_count": 180,
+        "row_fraction": 0.13584905660377358,
+        "occurrences": 200,
+        "original_value_characters": 4607
+      },
+      "validation": {
+        "row_count": 3,
+        "row_fraction": 0.1,
+        "occurrences": 3,
+        "original_value_characters": 37
+      }
+    },
+    "diagnosis tests.test": {
+      "keep": true,
+      "rationale": "Keep test identifier paired with its result.",
+      "train": {
+        "row_count": 1113,
+        "row_fraction": 0.84,
+        "occurrences": 2505,
+        "original_value_characters": 63829
+      },
+      "validation": {
+        "row_count": 25,
+        "row_fraction": 0.8333333333333334,
+        "occurrences": 57,
+        "original_value_characters": 1438
+      }
+    },
+    "diagnosis tests.time": {
+      "keep": false,
+      "rationale": "Drop condition/severity/time/details to reduce repeated inferred diagnoses and long descriptions; uncertainty, test cancellation, grade and event timing appearing only here are lost.",
+      "train": {
+        "row_count": 395,
+        "row_fraction": 0.2981132075471698,
+        "occurrences": 602,
+        "original_value_characters": 15068
+      },
+      "validation": {
+        "row_count": 11,
+        "row_fraction": 0.36666666666666664,
+        "occurrences": 16,
+        "original_value_characters": 267
+      }
+    },
+    "discharge.discharge summary": {
+      "keep": true,
+      "rationale": "Keep a representative discharge field; emit only documented discharge content and never convert deterioration/death/follow-up into discharge.",
+      "train": {
+        "row_count": 279,
+        "row_fraction": 0.21056603773584906,
+        "occurrences": 279,
+        "original_value_characters": 28167
+      },
+      "validation": {
+        "row_count": 5,
+        "row_fraction": 0.16666666666666666,
+        "occurrences": 5,
+        "original_value_characters": 779
+      }
+    },
+    "discharge.follow up": {
+      "keep": false,
+      "rationale": "Drop referral/reason/follow-up fields to fit cap; disposition, discharge reason and follow-up plans not duplicated in discharge summary are lost.",
+      "train": {
+        "row_count": 144,
+        "row_fraction": 0.10867924528301887,
+        "occurrences": 144,
+        "original_value_characters": 8282
+      },
+      "validation": {
+        "row_count": 3,
+        "row_fraction": 0.1,
+        "occurrences": 3,
+        "original_value_characters": 151
+      }
+    },
+    "discharge.reason": {
+      "keep": false,
+      "rationale": "Drop referral/reason/follow-up fields to fit cap; disposition, discharge reason and follow-up plans not duplicated in discharge summary are lost.",
+      "train": {
+        "row_count": 278,
+        "row_fraction": 0.20981132075471698,
+        "occurrences": 278,
+        "original_value_characters": 11468
+      },
+      "validation": {
+        "row_count": 6,
+        "row_fraction": 0.2,
+        "occurrences": 6,
+        "original_value_characters": 301
+      }
+    },
+    "discharge.referral": {
+      "keep": false,
+      "rationale": "Drop referral/reason/follow-up fields to fit cap; disposition, discharge reason and follow-up plans not duplicated in discharge summary are lost.",
+      "train": {
+        "row_count": 126,
+        "row_fraction": 0.09509433962264151,
+        "occurrences": 126,
+        "original_value_characters": 7068
+      },
+      "validation": {
+        "row_count": 0,
+        "row_fraction": 0.0,
+        "occurrences": 0,
+        "original_value_characters": 0
+      }
+    },
+    "medical examinations.details": {
+      "keep": false,
+      "rationale": "Drop verbose details, often overlapping result; technique, caveats and negative/contextual findings appearing only here are lost.",
+      "train": {
+        "row_count": 905,
+        "row_fraction": 0.6830188679245283,
+        "occurrences": 1376,
+        "original_value_characters": 121641
+      },
+      "validation": {
+        "row_count": 14,
+        "row_fraction": 0.4666666666666667,
+        "occurrences": 21,
+        "original_value_characters": 2195
+      }
+    },
+    "medical examinations.name": {
+      "keep": true,
+      "rationale": "Keep examination identifier paired with its result.",
+      "train": {
+        "row_count": 1275,
+        "row_fraction": 0.9622641509433962,
+        "occurrences": 2955,
+        "original_value_characters": 67393
+      },
+      "validation": {
+        "row_count": 27,
+        "row_fraction": 0.9,
+        "occurrences": 50,
+        "original_value_characters": 1215
+      }
+    },
+    "medical examinations.result": {
+      "keep": true,
+      "rationale": "Keep actual examination findings, including explicit normal/negative findings and measurements.",
+      "train": {
+        "row_count": 1196,
+        "row_fraction": 0.9026415094339623,
+        "occurrences": 2797,
+        "original_value_characters": 215348
+      },
+      "validation": {
+        "row_count": 26,
+        "row_fraction": 0.8666666666666667,
+        "occurrences": 48,
+        "original_value_characters": 3728
+      }
+    },
+    "patient information.age": {
+      "keep": true,
+      "rationale": "Keep frequent, short, source-checkable demographic information; not a sufficient task by itself.",
+      "train": {
+        "row_count": 1325,
+        "row_fraction": 1.0,
+        "occurrences": 1325,
+        "original_value_characters": 5978
+      },
+      "validation": {
+        "row_count": 30,
+        "row_fraction": 1.0,
+        "occurrences": 30,
+        "original_value_characters": 100
+      }
+    },
+    "patient information.ethnicity": {
+      "keep": false,
+      "rationale": "Drop less frequent demographic/context field to fit cap; family history, occupation, ethnicity, size or social/travel information may be substantively relevant and are not guaranteed to survive elsewhere.",
+      "train": {
+        "row_count": 263,
+        "row_fraction": 0.19849056603773585,
+        "occurrences": 263,
+        "original_value_characters": 2631
+      },
+      "validation": {
+        "row_count": 5,
+        "row_fraction": 0.16666666666666666,
+        "occurrences": 5,
+        "original_value_characters": 40
+      }
+    },
+    "patient information.family medical history": {
+      "keep": false,
+      "rationale": "Drop less frequent demographic/context field to fit cap; family history, occupation, ethnicity, size or social/travel information may be substantively relevant and are not guaranteed to survive elsewhere.",
+      "train": {
+        "row_count": 235,
+        "row_fraction": 0.17735849056603772,
+        "occurrences": 235,
+        "original_value_characters": 14143
+      },
+      "validation": {
+        "row_count": 3,
+        "row_fraction": 0.1,
+        "occurrences": 3,
+        "original_value_characters": 194
+      }
+    },
+    "patient information.height": {
+      "keep": false,
+      "rationale": "Drop less frequent demographic/context field to fit cap; family history, occupation, ethnicity, size or social/travel information may be substantively relevant and are not guaranteed to survive elsewhere.",
+      "train": {
+        "row_count": 46,
+        "row_fraction": 0.03471698113207547,
+        "occurrences": 46,
+        "original_value_characters": 355
+      },
+      "validation": {
+        "row_count": 0,
+        "row_fraction": 0.0,
+        "occurrences": 0,
+        "original_value_characters": 0
+      }
+    },
+    "patient information.occupation": {
+      "keep": false,
+      "rationale": "Drop less frequent demographic/context field to fit cap; family history, occupation, ethnicity, size or social/travel information may be substantively relevant and are not guaranteed to survive elsewhere.",
+      "train": {
+        "row_count": 149,
+        "row_fraction": 0.11245283018867924,
+        "occurrences": 149,
+        "original_value_characters": 3307
+      },
+      "validation": {
+        "row_count": 3,
+        "row_fraction": 0.1,
+        "occurrences": 3,
+        "original_value_characters": 65
+      }
+    },
+    "patient information.recent travels": {
+      "keep": false,
+      "rationale": "Drop less frequent demographic/context field to fit cap; family history, occupation, ethnicity, size or social/travel information may be substantively relevant and are not guaranteed to survive elsewhere.",
+      "train": {
+        "row_count": 27,
+        "row_fraction": 0.020377358490566037,
+        "occurrences": 27,
+        "original_value_characters": 1276
+      },
+      "validation": {
+        "row_count": 0,
+        "row_fraction": 0.0,
+        "occurrences": 0,
+        "original_value_characters": 0
+      }
+    },
+    "patient information.sex": {
+      "keep": true,
+      "rationale": "Keep frequent, short demographic information; preserve source wording rather than infer gender.",
+      "train": {
+        "row_count": 1319,
+        "row_fraction": 0.9954716981132076,
+        "occurrences": 1319,
+        "original_value_characters": 6435
+      },
+      "validation": {
+        "row_count": 30,
+        "row_fraction": 1.0,
+        "occurrences": 30,
+        "original_value_characters": 135
+      }
+    },
+    "patient information.socio economic context": {
+      "keep": false,
+      "rationale": "Drop less frequent demographic/context field to fit cap; family history, occupation, ethnicity, size or social/travel information may be substantively relevant and are not guaranteed to survive elsewhere.",
+      "train": {
+        "row_count": 67,
+        "row_fraction": 0.050566037735849056,
+        "occurrences": 67,
+        "original_value_characters": 2448
+      },
+      "validation": {
+        "row_count": 2,
+        "row_fraction": 0.06666666666666667,
+        "occurrences": 2,
+        "original_value_characters": 41
+      }
+    },
+    "patient information.weight": {
+      "keep": false,
+      "rationale": "Drop less frequent demographic/context field to fit cap; family history, occupation, ethnicity, size or social/travel information may be substantively relevant and are not guaranteed to survive elsewhere.",
+      "train": {
+        "row_count": 90,
+        "row_fraction": 0.06792452830188679,
+        "occurrences": 90,
+        "original_value_characters": 933
+      },
+      "validation": {
+        "row_count": 1,
+        "row_fraction": 0.03333333333333333,
+        "occurrences": 1,
+        "original_value_characters": 10
+      }
+    },
+    "patient medical history.alcohol consumption": {
+      "keep": false,
+      "rationale": "Drop specialized history field to fit cap; allergies, exposures, habits and other history may be lost rather than summarized into physiological context.",
+      "train": {
+        "row_count": 109,
+        "row_fraction": 0.08226415094339623,
+        "occurrences": 109,
+        "original_value_characters": 3064
+      },
+      "validation": {
+        "row_count": 1,
+        "row_fraction": 0.03333333333333333,
+        "occurrences": 1,
+        "original_value_characters": 21
+      }
+    },
+    "patient medical history.allergies": {
+      "keep": false,
+      "rationale": "Drop specialized history field to fit cap; allergies, exposures, habits and other history may be lost rather than summarized into physiological context.",
+      "train": {
+        "row_count": 39,
+        "row_fraction": 0.02943396226415094,
+        "occurrences": 39,
+        "original_value_characters": 1202
+      },
+      "validation": {
+        "row_count": 0,
+        "row_fraction": 0.0,
+        "occurrences": 0,
+        "original_value_characters": 0
+      }
+    },
+    "patient medical history.drug usage": {
+      "keep": false,
+      "rationale": "Drop specialized history field to fit cap; allergies, exposures, habits and other history may be lost rather than summarized into physiological context.",
+      "train": {
+        "row_count": 70,
+        "row_fraction": 0.052830188679245285,
+        "occurrences": 70,
+        "original_value_characters": 2451
+      },
+      "validation": {
+        "row_count": 3,
+        "row_fraction": 0.1,
+        "occurrences": 3,
+        "original_value_characters": 100
+      }
+    },
+    "patient medical history.exercise frequency": {
+      "keep": false,
+      "rationale": "Drop specialized history field to fit cap; allergies, exposures, habits and other history may be lost rather than summarized into physiological context.",
+      "train": {
+        "row_count": 54,
+        "row_fraction": 0.040754716981132075,
+        "occurrences": 54,
+        "original_value_characters": 2173
+      },
+      "validation": {
+        "row_count": 0,
+        "row_fraction": 0.0,
+        "occurrences": 0,
+        "original_value_characters": 0
+      }
+    },
+    "patient medical history.nutrition": {
+      "keep": false,
+      "rationale": "Drop specialized history field to fit cap; allergies, exposures, habits and other history may be lost rather than summarized into physiological context.",
+      "train": {
+        "row_count": 60,
+        "row_fraction": 0.045283018867924525,
+        "occurrences": 60,
+        "original_value_characters": 2750
+      },
+      "validation": {
+        "row_count": 0,
+        "row_fraction": 0.0,
+        "occurrences": 0,
+        "original_value_characters": 0
+      }
+    },
+    "patient medical history.physiological context": {
+      "keep": true,
+      "rationale": "Keep the broadest existing history field; it can retain comorbidities and prior disease but still needs source review.",
+      "train": {
+        "row_count": 1055,
+        "row_fraction": 0.7962264150943397,
+        "occurrences": 1055,
+        "original_value_characters": 86958
+      },
+      "validation": {
+        "row_count": 24,
+        "row_fraction": 0.8,
+        "occurrences": 24,
+        "original_value_characters": 1826
+      }
+    },
+    "patient medical history.psychological context": {
+      "keep": false,
+      "rationale": "Drop specialized history field to fit cap; allergies, exposures, habits and other history may be lost rather than summarized into physiological context.",
+      "train": {
+        "row_count": 130,
+        "row_fraction": 0.09811320754716982,
+        "occurrences": 130,
+        "original_value_characters": 8855
+      },
+      "validation": {
+        "row_count": 3,
+        "row_fraction": 0.1,
+        "occurrences": 3,
+        "original_value_characters": 41
+      }
+    },
+    "patient medical history.sexual history": {
+      "keep": false,
+      "rationale": "Drop specialized history field to fit cap; allergies, exposures, habits and other history may be lost rather than summarized into physiological context.",
+      "train": {
+        "row_count": 68,
+        "row_fraction": 0.05132075471698113,
+        "occurrences": 68,
+        "original_value_characters": 3002
+      },
+      "validation": {
+        "row_count": 0,
+        "row_fraction": 0.0,
+        "occurrences": 0,
+        "original_value_characters": 0
+      }
+    },
+    "patient medical history.smoking status": {
+      "keep": false,
+      "rationale": "Drop specialized history field to fit cap; allergies, exposures, habits and other history may be lost rather than summarized into physiological context.",
+      "train": {
+        "row_count": 160,
+        "row_fraction": 0.12075471698113208,
+        "occurrences": 160,
+        "original_value_characters": 3971
+      },
+      "validation": {
+        "row_count": 2,
+        "row_fraction": 0.06666666666666667,
+        "occurrences": 2,
+        "original_value_characters": 24
+      }
+    },
+    "patient medical history.vaccination history": {
+      "keep": false,
+      "rationale": "Drop specialized history field to fit cap; allergies, exposures, habits and other history may be lost rather than summarized into physiological context.",
+      "train": {
+        "row_count": 18,
+        "row_fraction": 0.013584905660377358,
+        "occurrences": 18,
+        "original_value_characters": 962
+      },
+      "validation": {
+        "row_count": 0,
+        "row_fraction": 0.0,
+        "occurrences": 0,
+        "original_value_characters": 0
+      }
+    },
+    "surgeries.Type": {
+      "keep": true,
+      "rationale": "Keep the existing procedure identifier, preserving capital T; labels may be generic and require details for meaning.",
+      "train": {
+        "row_count": 915,
+        "row_fraction": 0.690566037735849,
+        "occurrences": 1208,
+        "original_value_characters": 52731
+      },
+      "validation": {
+        "row_count": 20,
+        "row_fraction": 0.6666666666666666,
+        "occurrences": 33,
+        "original_value_characters": 1435
+      }
+    },
+    "surgeries.details": {
+      "keep": true,
+      "rationale": "Keep procedure description because Type can be generic; details also retain explicit technique and context. This is a deliberate verbosity cost.",
+      "train": {
+        "row_count": 785,
+        "row_fraction": 0.5924528301886792,
+        "occurrences": 918,
+        "original_value_characters": 134155
+      },
+      "validation": {
+        "row_count": 19,
+        "row_fraction": 0.6333333333333333,
+        "occurrences": 24,
+        "original_value_characters": 3966
+      }
+    },
+    "surgeries.outcome": {
+      "keep": false,
+      "rationale": "Drop reason/outcome as distinct fields to avoid repeated rationale and unsupported causal/event linkage; explicit outcomes not present in retained details are lost.",
+      "train": {
+        "row_count": 618,
+        "row_fraction": 0.46641509433962264,
+        "occurrences": 748,
+        "original_value_characters": 51727
+      },
+      "validation": {
+        "row_count": 15,
+        "row_fraction": 0.5,
+        "occurrences": 22,
+        "original_value_characters": 1661
+      }
+    },
+    "surgeries.reason": {
+      "keep": false,
+      "rationale": "Drop reason/outcome as distinct fields to avoid repeated rationale and unsupported causal/event linkage; explicit outcomes not present in retained details are lost.",
+      "train": {
+        "row_count": 936,
+        "row_fraction": 0.7064150943396227,
+        "occurrences": 1226,
+        "original_value_characters": 57213
+      },
+      "validation": {
+        "row_count": 21,
+        "row_fraction": 0.7,
+        "occurrences": 34,
+        "original_value_characters": 1704
+      }
+    },
+    "surgeries.time": {
+      "keep": true,
+      "rationale": "Keep explicit procedure timing to distinguish repeated/historical events; do not infer a date from nearby follow-up.",
+      "train": {
+        "row_count": 428,
+        "row_fraction": 0.3230188679245283,
+        "occurrences": 588,
+        "original_value_characters": 14331
+      },
+      "validation": {
+        "row_count": 10,
+        "row_fraction": 0.3333333333333333,
+        "occurrences": 18,
+        "original_value_characters": 335
+      }
+    },
+    "symptoms.behaviours affecting the symptom": {
+      "keep": false,
+      "rationale": "Drop separate intensity/evolution/trigger fields to fit cap; qualified wording survives only if already in retained name/details/time/location.",
+      "train": {
+        "row_count": 338,
+        "row_fraction": 0.2550943396226415,
+        "occurrences": 384,
+        "original_value_characters": 14938
+      },
+      "validation": {
+        "row_count": 8,
+        "row_fraction": 0.26666666666666666,
+        "occurrences": 8,
+        "original_value_characters": 319
+      }
+    },
+    "symptoms.details": {
+      "keep": true,
+      "rationale": "Keep qualifier and negation-bearing context; stripping details can turn qualified/absent symptoms into misleading bare names.",
+      "train": {
+        "row_count": 1123,
+        "row_fraction": 0.8475471698113207,
+        "occurrences": 1622,
+        "original_value_characters": 108885
+      },
+      "validation": {
+        "row_count": 24,
+        "row_fraction": 0.8,
+        "occurrences": 35,
+        "original_value_characters": 2608
+      }
+    },
+    "symptoms.intensity of symptom": {
+      "keep": false,
+      "rationale": "Drop separate intensity/evolution/trigger fields to fit cap; qualified wording survives only if already in retained name/details/time/location.",
+      "train": {
+        "row_count": 592,
+        "row_fraction": 0.4467924528301887,
+        "occurrences": 769,
+        "original_value_characters": 11590
+      },
+      "validation": {
+        "row_count": 14,
+        "row_fraction": 0.4666666666666667,
+        "occurrences": 18,
+        "original_value_characters": 292
+      }
+    },
+    "symptoms.location": {
+      "keep": true,
+      "rationale": "Keep site/laterality independently to reduce reliance on a generic symptom label.",
+      "train": {
+        "row_count": 1033,
+        "row_fraction": 0.779622641509434,
+        "occurrences": 1494,
+        "original_value_characters": 29807
+      },
+      "validation": {
+        "row_count": 26,
+        "row_fraction": 0.8666666666666667,
+        "occurrences": 34,
+        "original_value_characters": 504
+      }
+    },
+    "symptoms.name of symptom": {
+      "keep": true,
+      "rationale": "Keep symptom identity; preserve explicit negation if already in the string, but current labels can have assertion errors.",
+      "train": {
+        "row_count": 1271,
+        "row_fraction": 0.9592452830188679,
+        "occurrences": 2366,
+        "original_value_characters": 52621
+      },
+      "validation": {
+        "row_count": 29,
+        "row_fraction": 0.9666666666666667,
+        "occurrences": 50,
+        "original_value_characters": 1050
+      }
+    },
+    "symptoms.temporalisation": {
+      "keep": false,
+      "rationale": "Drop separate intensity/evolution/trigger fields to fit cap; qualified wording survives only if already in retained name/details/time/location.",
+      "train": {
+        "row_count": 473,
+        "row_fraction": 0.3569811320754717,
+        "occurrences": 579,
+        "original_value_characters": 17630
+      },
+      "validation": {
+        "row_count": 12,
+        "row_fraction": 0.4,
+        "occurrences": 14,
+        "original_value_characters": 294
+      }
+    },
+    "symptoms.time": {
+      "keep": true,
+      "rationale": "Keep source-stated onset/duration/time, while avoiding attachment to a different episode.",
+      "train": {
+        "row_count": 980,
+        "row_fraction": 0.7396226415094339,
+        "occurrences": 1601,
+        "original_value_characters": 43199
+      },
+      "validation": {
+        "row_count": 23,
+        "row_fraction": 0.7666666666666667,
+        "occurrences": 33,
+        "original_value_characters": 839
+      }
+    },
+    "treatments.details": {
+      "keep": false,
+      "rationale": "Drop inferred/repeated indication and verbose details, plus separate frequency/duration fields; schedules, route, rationale and supportive care appearing only here are lost.",
+      "train": {
+        "row_count": 678,
+        "row_fraction": 0.5116981132075472,
+        "occurrences": 872,
+        "original_value_characters": 68981
+      },
+      "validation": {
+        "row_count": 17,
+        "row_fraction": 0.5666666666666667,
+        "occurrences": 25,
+        "original_value_characters": 2100
+      }
+    },
+    "treatments.dosage": {
+      "keep": true,
+      "rationale": "Keep source-stated dose despite lower frequency because correct drug-dose linkage is meaningful; do not transfer doses between drugs.",
+      "train": {
+        "row_count": 307,
+        "row_fraction": 0.23169811320754716,
+        "occurrences": 501,
+        "original_value_characters": 11941
+      },
+      "validation": {
+        "row_count": 6,
+        "row_fraction": 0.2,
+        "occurrences": 10,
+        "original_value_characters": 205
+      }
+    },
+    "treatments.duration": {
+      "keep": false,
+      "rationale": "Drop inferred/repeated indication and verbose details, plus separate frequency/duration fields; schedules, route, rationale and supportive care appearing only here are lost.",
+      "train": {
+        "row_count": 240,
+        "row_fraction": 0.1811320754716981,
+        "occurrences": 311,
+        "original_value_characters": 6297
+      },
+      "validation": {
+        "row_count": 6,
+        "row_fraction": 0.2,
+        "occurrences": 9,
+        "original_value_characters": 318
+      }
+    },
+    "treatments.frequency": {
+      "keep": false,
+      "rationale": "Drop inferred/repeated indication and verbose details, plus separate frequency/duration fields; schedules, route, rationale and supportive care appearing only here are lost.",
+      "train": {
+        "row_count": 285,
+        "row_fraction": 0.21509433962264152,
+        "occurrences": 418,
+        "original_value_characters": 6285
+      },
+      "validation": {
+        "row_count": 5,
+        "row_fraction": 0.16666666666666666,
+        "occurrences": 8,
+        "original_value_characters": 133
+      }
+    },
+    "treatments.name": {
+      "keep": true,
+      "rationale": "Keep treatment identity; avoid adding inferred indications.",
+      "train": {
+        "row_count": 1030,
+        "row_fraction": 0.7773584905660378,
+        "occurrences": 1942,
+        "original_value_characters": 47957
+      },
+      "validation": {
+        "row_count": 24,
+        "row_fraction": 0.8,
+        "occurrences": 49,
+        "original_value_characters": 1192
+      }
+    },
+    "treatments.reaction to treatment": {
+      "keep": true,
+      "rationale": "Keep explicit response/adverse effect; do not infer cause from adjacent events. Existing noisy labels require review.",
+      "train": {
+        "row_count": 652,
+        "row_fraction": 0.4920754716981132,
+        "occurrences": 986,
+        "original_value_characters": 51620
+      },
+      "validation": {
+        "row_count": 15,
+        "row_fraction": 0.5,
+        "occurrences": 27,
+        "original_value_characters": 1625
+      }
+    },
+    "treatments.reason for taking": {
+      "keep": false,
+      "rationale": "Drop inferred/repeated indication and verbose details, plus separate frequency/duration fields; schedules, route, rationale and supportive care appearing only here are lost.",
+      "train": {
+        "row_count": 1024,
+        "row_fraction": 0.7728301886792452,
+        "occurrences": 1864,
+        "original_value_characters": 73863
+      },
+      "validation": {
+        "row_count": 24,
+        "row_fraction": 0.8,
+        "occurrences": 47,
+        "original_value_characters": 1851
+      }
+    },
+    "treatments.related condition": {
+      "keep": false,
+      "rationale": "Drop inferred/repeated indication and verbose details, plus separate frequency/duration fields; schedules, route, rationale and supportive care appearing only here are lost.",
+      "train": {
+        "row_count": 1043,
+        "row_fraction": 0.7871698113207547,
+        "occurrences": 1908,
+        "original_value_characters": 53416
+      },
+      "validation": {
+        "row_count": 24,
+        "row_fraction": 0.8,
+        "occurrences": 44,
+        "original_value_characters": 1371
+      }
+    },
+    "treatments.time": {
+      "keep": true,
+      "rationale": "Keep source-stated temporal anchor to distinguish historical/current treatment and changes.",
+      "train": {
+        "row_count": 544,
+        "row_fraction": 0.41056603773584904,
+        "occurrences": 924,
+        "original_value_characters": 25635
+      },
+      "validation": {
+        "row_count": 12,
+        "row_fraction": 0.4,
+        "occurrences": 24,
+        "original_value_characters": 630
+      }
+    }
+  },
+  "split_metrics": {
+    "train": {
+      "rows": 1325,
+      "reference_characters": {
+        "original": {
+          "total": 3105034,
+          "mean": 2343.421886792453,
+          "median": 2319,
+          "min": 249,
+          "p90_nearest_rank": 2977,
+          "p95_nearest_rank": 3185,
+          "max": 4985
+        },
+        "projected": {
+          "total": 2045281,
+          "mean": 1543.6083018867926,
+          "median": 1548,
+          "min": 228,
+          "p90_nearest_rank": 2005,
+          "p95_nearest_rank": 2165,
+          "max": 2776
+        },
+        "total_reduction_fraction": 0.3413015767299167
+      },
+      "scalar_leaf_occurrences": {
+        "original": {
+          "total": 48177,
+          "mean": 36.36,
+          "median": 35,
+          "min": 4,
+          "p90_nearest_rank": 51,
+          "p95_nearest_rank": 58,
+          "max": 92
+        },
+        "projected": {
+          "total": 31134,
+          "mean": 23.497358490566036,
+          "median": 23,
+          "min": 3,
+          "p90_nearest_rank": 33,
+          "p95_nearest_rank": 37,
+          "max": 52
+        },
+        "total_reduction_fraction": 0.3537580173111651
+      },
+      "sections": {
+        "visit motivation": {},
+        "admission": {
+          "empty_rows_before": 295,
+          "empty_rows_after": 357,
+          "original_items": 1074,
+          "retained_nonempty_items": 1012,
+          "removed_empty_projection_items": 62,
+          "nonempty_array_rows_before": 1030,
+          "nonempty_array_rows_after": 968,
+          "exact_duplicate_item_occurrences_before": 0,
+          "exact_duplicate_item_occurrences_after": 0,
+          "items_if_deduplicated_after_projection": 1012,
+          "missing_identifier_before": 62,
+          "missing_identifier_after": 0,
+          "rows_with_item_loss": 62
+        },
+        "patient information": {
+          "empty_rows_before": 0,
+          "empty_rows_after": 0
+        },
+        "patient medical history": {
+          "empty_rows_before": 216,
+          "empty_rows_after": 270,
+          "newly_empty_rows": 54
+        },
+        "surgeries": {
+          "empty_rows_before": 379,
+          "empty_rows_after": 382,
+          "original_items": 1241,
+          "retained_nonempty_items": 1237,
+          "removed_empty_projection_items": 4,
+          "nonempty_array_rows_before": 946,
+          "nonempty_array_rows_after": 943,
+          "exact_duplicate_item_occurrences_before": 0,
+          "exact_duplicate_item_occurrences_after": 0,
+          "items_if_deduplicated_after_projection": 1237,
+          "missing_identifier_before": 33,
+          "missing_identifier_after": 29,
+          "rows_with_item_loss": 4
+        },
+        "symptoms": {
+          "empty_rows_before": 53,
+          "empty_rows_after": 53,
+          "original_items": 2367,
+          "retained_nonempty_items": 2367,
+          "removed_empty_projection_items": 0,
+          "nonempty_array_rows_before": 1272,
+          "nonempty_array_rows_after": 1272,
+          "exact_duplicate_item_occurrences_before": 0,
+          "exact_duplicate_item_occurrences_after": 0,
+          "items_if_deduplicated_after_projection": 2367,
+          "missing_identifier_before": 1,
+          "missing_identifier_after": 1
+        },
+        "medical examinations": {
+          "empty_rows_before": 47,
+          "empty_rows_after": 50,
+          "original_items": 2958,
+          "retained_nonempty_items": 2955,
+          "removed_empty_projection_items": 3,
+          "nonempty_array_rows_before": 1278,
+          "nonempty_array_rows_after": 1275,
+          "exact_duplicate_item_occurrences_before": 0,
+          "exact_duplicate_item_occurrences_after": 0,
+          "items_if_deduplicated_after_projection": 2955,
+          "missing_identifier_before": 3,
+          "missing_identifier_after": 0,
+          "missing_result_before": 161,
+          "missing_result_after": 158,
+          "rows_with_item_loss": 3
+        },
+        "diagnosis tests": {
+          "empty_rows_before": 127,
+          "empty_rows_after": 210,
+          "original_items": 2591,
+          "retained_nonempty_items": 2507,
+          "removed_empty_projection_items": 84,
+          "nonempty_array_rows_before": 1198,
+          "nonempty_array_rows_after": 1115,
+          "exact_duplicate_item_occurrences_before": 0,
+          "exact_duplicate_item_occurrences_after": 0,
+          "items_if_deduplicated_after_projection": 2507,
+          "missing_identifier_before": 86,
+          "missing_identifier_after": 2,
+          "missing_result_before": 179,
+          "missing_result_after": 95,
+          "rows_with_item_loss": 83
+        },
+        "treatments": {
+          "empty_rows_before": 266,
+          "empty_rows_after": 282,
+          "original_items": 1971,
+          "retained_nonempty_items": 1955,
+          "removed_empty_projection_items": 16,
+          "nonempty_array_rows_before": 1059,
+          "nonempty_array_rows_after": 1043,
+          "exact_duplicate_item_occurrences_before": 0,
+          "exact_duplicate_item_occurrences_after": 0,
+          "items_if_deduplicated_after_projection": 1955,
+          "missing_identifier_before": 29,
+          "missing_identifier_after": 13,
+          "rows_with_item_loss": 16
+        },
+        "discharge": {
+          "empty_rows_before": 880,
+          "empty_rows_after": 1046,
+          "newly_empty_rows": 166
+        }
+      },
+      "rows_with_any_array_item_loss": 156,
+      "visit_motivation_nonmissing_rows": 1298
+    },
+    "validation": {
+      "rows": 30,
+      "reference_characters": {
+        "original": {
+          "total": 71300,
+          "mean": 2376.6666666666665,
+          "median": 2391.5,
+          "min": 1687,
+          "p90_nearest_rank": 3094,
+          "p95_nearest_rank": 3142,
+          "max": 3219
+        },
+        "projected": {
+          "total": 46166,
+          "mean": 1538.8666666666666,
+          "median": 1512.0,
+          "min": 989,
+          "p90_nearest_rank": 1848,
+          "p95_nearest_rank": 2115,
+          "max": 2173
+        },
+        "total_reduction_fraction": 0.35251051893408136
+      },
+      "scalar_leaf_occurrences": {
+        "original": {
+          "total": 1082,
+          "mean": 36.06666666666667,
+          "median": 34.5,
+          "min": 22,
+          "p90_nearest_rank": 50,
+          "p95_nearest_rank": 58,
+          "max": 70
+        },
+        "projected": {
+          "total": 693,
+          "mean": 23.1,
+          "median": 22.0,
+          "min": 15,
+          "p90_nearest_rank": 30,
+          "p95_nearest_rank": 33,
+          "max": 46
+        },
+        "total_reduction_fraction": 0.35951940850277264
+      },
+      "sections": {
+        "visit motivation": {},
+        "admission": {
+          "empty_rows_before": 5,
+          "empty_rows_after": 5,
+          "original_items": 25,
+          "retained_nonempty_items": 25,
+          "removed_empty_projection_items": 0,
+          "nonempty_array_rows_before": 25,
+          "nonempty_array_rows_after": 25,
+          "exact_duplicate_item_occurrences_before": 0,
+          "exact_duplicate_item_occurrences_after": 0,
+          "items_if_deduplicated_after_projection": 25,
+          "missing_identifier_before": 0,
+          "missing_identifier_after": 0
+        },
+        "patient information": {
+          "empty_rows_before": 0,
+          "empty_rows_after": 0
+        },
+        "patient medical history": {
+          "empty_rows_before": 6,
+          "empty_rows_after": 6
+        },
+        "surgeries": {
+          "empty_rows_before": 9,
+          "empty_rows_after": 9,
+          "original_items": 34,
+          "retained_nonempty_items": 34,
+          "removed_empty_projection_items": 0,
+          "nonempty_array_rows_before": 21,
+          "nonempty_array_rows_after": 21,
+          "exact_duplicate_item_occurrences_before": 0,
+          "exact_duplicate_item_occurrences_after": 0,
+          "items_if_deduplicated_after_projection": 34,
+          "missing_identifier_before": 1,
+          "missing_identifier_after": 1
+        },
+        "symptoms": {
+          "empty_rows_before": 1,
+          "empty_rows_after": 1,
+          "original_items": 50,
+          "retained_nonempty_items": 50,
+          "removed_empty_projection_items": 0,
+          "nonempty_array_rows_before": 29,
+          "nonempty_array_rows_after": 29,
+          "exact_duplicate_item_occurrences_before": 0,
+          "exact_duplicate_item_occurrences_after": 0,
+          "items_if_deduplicated_after_projection": 50,
+          "missing_identifier_before": 0,
+          "missing_identifier_after": 0
+        },
+        "medical examinations": {
+          "empty_rows_before": 3,
+          "empty_rows_after": 3,
+          "original_items": 50,
+          "retained_nonempty_items": 50,
+          "removed_empty_projection_items": 0,
+          "nonempty_array_rows_before": 27,
+          "nonempty_array_rows_after": 27,
+          "exact_duplicate_item_occurrences_before": 0,
+          "exact_duplicate_item_occurrences_after": 0,
+          "items_if_deduplicated_after_projection": 50,
+          "missing_identifier_before": 0,
+          "missing_identifier_after": 0,
+          "missing_result_before": 2,
+          "missing_result_after": 2
+        },
+        "diagnosis tests": {
+          "empty_rows_before": 3,
+          "empty_rows_after": 5,
+          "original_items": 59,
+          "retained_nonempty_items": 57,
+          "removed_empty_projection_items": 2,
+          "nonempty_array_rows_before": 27,
+          "nonempty_array_rows_after": 25,
+          "exact_duplicate_item_occurrences_before": 0,
+          "exact_duplicate_item_occurrences_after": 0,
+          "items_if_deduplicated_after_projection": 57,
+          "missing_identifier_before": 2,
+          "missing_identifier_after": 0,
+          "missing_result_before": 2,
+          "missing_result_after": 0,
+          "rows_with_item_loss": 2
+        },
+        "treatments": {
+          "empty_rows_before": 5,
+          "empty_rows_after": 5,
+          "original_items": 50,
+          "retained_nonempty_items": 50,
+          "removed_empty_projection_items": 0,
+          "nonempty_array_rows_before": 25,
+          "nonempty_array_rows_after": 25,
+          "exact_duplicate_item_occurrences_before": 0,
+          "exact_duplicate_item_occurrences_after": 0,
+          "items_if_deduplicated_after_projection": 50,
+          "missing_identifier_before": 1,
+          "missing_identifier_after": 1
+        },
+        "discharge": {
+          "empty_rows_before": 21,
+          "empty_rows_after": 25,
+          "newly_empty_rows": 4
+        }
+      },
+      "rows_with_any_array_item_loss": 2,
+      "visit_motivation_nonmissing_rows": 30
+    }
+  },
+  "validation_item_examples": [
+    {
+      "case_id": "validation:583",
+      "parent": "diagnosis tests",
+      "kind": "dropped_item",
+      "original": {
+        "severity": "Grade 2",
+        "condition": "Chondrosarcoma of the left scapula",
+        "time": "Diagnosed 15 years earlier",
+        "details": "Tumor composed of cartilage cells with lobular architecture, eosinophilic reticulum, and myxoid stromal tissue"
+      },
+      "projected": {}
+    },
+    {
+      "case_id": "validation:362",
+      "parent": "treatments",
+      "kind": "preexisting_unnamed_survivor",
+      "original": {
+        "related condition": "Dengue fever",
+        "reaction to treatment": "Made an uneventful recovery"
+      },
+      "projected": {
+        "reaction to treatment": "Made an uneventful recovery"
+      }
+    },
+    {
+      "case_id": "validation:2543",
+      "parent": "diagnosis tests",
+      "kind": "dropped_item",
+      "original": {
+        "details": "CT scan dismissed due to unstable condition"
+      },
+      "projected": {}
+    },
+    {
+      "case_id": "validation:1780",
+      "parent": "surgeries",
+      "kind": "preexisting_unnamed_survivor",
+      "original": {
+        "reason": "severe septic shock",
+        "outcome": "stabilized hemodynamics",
+        "details": "central venous catheter was introduced through the right jugular vein to facilitate rapid fluid resuscitation and the application of vasoactive drugs"
+      },
+      "projected": {
+        "details": "central venous catheter was introduced through the right jugular vein to facilitate rapid fluid resuscitation and the application of vasoactive drugs"
+      }
+    }
+  ],
+  "posthoc_saved_prediction_projection": {
+    "prediction_run": "finetuned__gen_rp_1.08",
+    "cases": 30,
+    "no_predictions_regenerated": true,
+    "no_invalid_predictions_repaired": true,
+    "invalid_case_ids": [
+      "validation:2335",
+      "validation:1913"
+    ],
+    "valid_cases_before": 28,
+    "valid_cases_after": 28,
+    "metric_source": "notebooks/03_eval_and_compare.ipynb evaluator definitions executed before score_run; original scores reproduced to 1e-12",
+    "original": {
+      "mean_value_precision": 0.1887743657449633,
+      "mean_value_recall": 0.2008382854566341,
+      "mean_value_f1": 0.18932090197936796,
+      "mean_soft_value_precision": 0.30796654743672897,
+      "mean_soft_value_recall": 0.3232885709288513,
+      "mean_soft_value_f1": 0.3073836726501384,
+      "matched_values": 198,
+      "reference_values": 1082,
+      "nonmissing_generated_values": 1001
+    },
+    "projected": {
+      "mean_value_precision": 0.22876867219782734,
+      "mean_value_recall": 0.24807470997298509,
+      "mean_value_f1": 0.2316730107548575,
+      "mean_soft_value_precision": 0.35131083112825107,
+      "mean_soft_value_recall": 0.3800146313553439,
+      "mean_soft_value_f1": 0.3556971350726826,
+      "matched_values": 163,
+      "reference_values": 693,
+      "nonmissing_generated_values": 666
+    },
+    "definition": "Project both references and parseable saved predictions to the same field set. Leave the two invalid raw outputs invalid, receiving zero fact credit. Evaluate the existing multiset strict and greedy soft scores.",
+    "limitations": [
+      "Posthoc descriptive rescore only; it is not performance of a newly trained compact-schema model.",
+      "Removing fields changes the task and denominator. Higher F1 is not evidence of improved clinical correctness or factual grounding.",
+      "Metrics ignore array event association and can miss negation/chronology errors; soft token overlap can reward contradictory wording.",
+      "Projection removes some errors from scoring rather than correcting them. Saved predictions may contain unsupported assertions in retained fields.",
+      "Original v2 validation cases are development-exposed; future training-size/schema comparisons need fresh reviewed held-out data and a same-schema baseline."
+    ]
+  },
+  "important_information_loss": [
+    "Specialized history (allergies, smoking, alcohol, sexual history, nutrition, vaccination, psychological context), family/social history and other demographics are dropped unless already present in physiological context.",
+    "Admission date, duration and care center details are dropped. Surgical outcomes/reasons disappear unless already in retained details.",
+    "Separate symptom severity, evolution and aggravating/relieving behaviors are dropped; retained details can preserve some but not all assertion/temporal context.",
+    "Examination details and diagnostic-test details/condition/severity/time disappear. A negative result may survive in result, while caveats, uncertainty or canceled tests present only in details can vanish.",
+    "Treatment frequency, duration, route/supportive-care details, related condition and rationale are dropped. Dose is retained, but complete regimens cannot be reconstructed reliably from this schema.",
+    "Referral, discharge reason and follow-up plans disappear unless already in discharge summary.",
+    "No assertion/status/evidence field is added: none exists in current 57-child schema and the cap is already filled. This projection cannot establish that a symptom is present versus negated, historical, uncertain, family-related or changing over time. Review against source and annotate within retained values before accepting future samples.",
+    "Untouched original records remain the provenance source for all omitted facts. This is a compact extraction experiment, not a lossless medical record or a clinically validated summary."
+  ],
+  "source_files": [
+    {
+      "path": "prepared_clinical_dataset/eeff5efa1619f198/train.jsonl",
+      "sha256": "8cc2a9d6eec536d63d73d60073a0ec0264fe5b85e61d718b760701859bae924d",
+      "bytes": 43697985
+    },
+    {
+      "path": "prepared_clinical_dataset/eeff5efa1619f198/validation.jsonl",
+      "sha256": "457fcb01d09e8869f132626eb7bb4275ce421fa79695bc2ee388f6902ad020a2",
+      "bytes": 997549
+    },
+    {
+      "path": "prepared_clinical_dataset/eeff5efa1619f198/manifest.json",
+      "sha256": "23f55aef8c05256d0b4a33e1985a54c1853a5ab6e8d3134d1ab11d4bb1492533",
+      "bytes": 2105
+    },
+    {
+      "path": "results_v2/comparison/finetuned__gen_rp_1.08/generations.json",
+      "sha256": "b7ca2e9bdfd8c287e10dcb90de3632ea473a4a0df7cbcabf5d2f42b49e538a5e",
+      "bytes": 91057
+    },
+    {
+      "path": "results_v2/comparison/finetuned__gen_rp_1.08/aggregate.json",
+      "sha256": "0441afce866a90fe5ee455074bcdf1acbfe3d8563842c8c9a5d2a445524049e8",
+      "bytes": 711
+    },
+    {
+      "path": "notebooks/03_eval_and_compare.ipynb",
+      "sha256": "8f08f31637abdf432a2d1153860246124a39c6a791a28e4a807525bb561675eb",
+      "bytes": 40056
+    },
+    {
+      "path": "docs/EXTRACTION_AUDIT_2026-11-17.md",
+      "sha256": "acc2612d9f2671cd4bbef3b9f2e9a6cd03ffd56fd847d21dffa8552e40228089",
+      "bytes": 24459
+    }
+  ],
+  "self_checks": {
+    "ten_parents": true,
+    "twenty_children": true,
+    "all_retained_paths_observed_in_training": true,
+    "all_source_paths_exist": true,
+    "original_strict_and_soft_scores_reproduced": true,
+    "count_sums_verified": true
+  }
+}

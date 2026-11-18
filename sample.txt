@@ -1,0 +1,12 @@
+You are a clinical documentation specialist. Summarize the clinical note into a structured SOAP format.
+
+Extract the clinical facts stated in the note into one JSON object. Return JSON only, without markdown or commentary. Use these exact top-level fields: visit motivation, admission, patient information, patient medical history, surgeries, symptoms, medical examinations, diagnosis tests, treatments, discharge. For absent information, omit inner subfields, use [] for empty list sections (admission, surgeries, symptoms, medical examinations, diagnosis tests, treatments), use {} for empty object sections
+
+
+
+A 75-year-old otherwise healthy woman was referred to us with a large tender erythematous morpheaform plaque without ulceration on the lower part of her leg.
+This plaque had begun as a small nodule on the shin 1 month prior to this visit.
+It had gradually extended outward in a centrifugal pattern despite oral antimicrobial treatment by her family physician.
+She was initially diagnosed and treated as a case with cellulitis and with poor clinical response.
+This patient denied having had a sore throat or arthralgia in the previous months.
+Other than diabetes mellitus type II, she had no significant medical history.

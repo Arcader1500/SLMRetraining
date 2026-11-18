@@ -1,0 +1,9 @@
+{
+  "browser": "Chrome",
+  "phase_cards": 2,
+  "all_case_outputs": 130,
+  "paired_sample_options": 20,
+  "mobile_width": 390,
+  "page_errors": [],
+  "external_requests": 0
+}

@@ -1,0 +1,26 @@
+{
+  "recorded_at_utc": "2026-11-18T09:01:05.664135+00:00",
+  "model": "gpt-6-luna",
+  "backend": "codex",
+  "rubric_version": "source_grounded_v2",
+  "command": ".venv/deepeval-tools/Scripts/python.exe -u -m scripts.run_deepeval --run --backend codex --source-grounded",
+  "python": "3.13.9",
+  "system": "Windows",
+  "codex_cli_version": "codex-cli 0.166.0",
+  "reasoning_effort": "CLI default; user config ignored",
+  "evaluation_params": [
+    "input",
+    "actual_output",
+    "expected_output"
+  ],
+  "gemini_enabled": false,
+  "token_logprobs_available": false,
+  "source_sha256": {
+    "scripts/source_grounded_rubric.py": "469c07ed8f1aaba2226f9c7c957348c295f82080d29535e7a9f176f889c90b24",
+    "scripts/run_deepeval.py": "c802bf54e1b4efdaca9bb96d7553efa60b9d2a7fa82fe166a18fea9ea07ea034",
+    "scripts/codex_deepeval_judge.py": "a71192c43a7da619de5cb912b10d53ad1e13a724ae444ad0807b1666de91c4de",
+    "results_v3/deepeval_20/paired_cases.json": "7c9dc43552a3df1d509518fb1e6b4cc95ffd49907650bfba9d6a7bdc5998c9e7",
+    "results_v3/deepeval_20/selection_manifest.json": "d87ac067fc6a34eb3863c8bb1b153a6cdade93566dd5b25494ded6db15169ab0",
+    "results_v3/deepeval_20/judgments/a6bb10a9fde5e2b4/scores.json": "7ef930319b679f6339173612bfd6cc14ca74ba62b4749f1ae65c8b1bedd32eb1"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "complete": true,
+  "rubric_version": "source_grounded_v2",
+  "model": "gpt-6-luna",
+  "cases": 20,
+  "paired_outputs": 40,
+  "metric_measurements": 80,
+  "unique_records": 80,
+  "means_and_paired_deltas_verified": true,
+  "frozen_inputs_unchanged": true,
+  "old_scores_unchanged": true,
+  "note_in_evaluation_params": true,
+  "gemini_enabled": false,
+  "paired_outcomes": {
+    "Source fidelity": {
+      "finetuned_higher": 13,
+      "equal": 6,
+      "baseline_higher": 1
+    },
+    "Source coverage": {
+      "finetuned_higher": 13,
+      "equal": 6,
+      "baseline_higher": 1
+    }
+  },
+  "scores_sha256": "dda49d0a628c4a2b71797f8a6a576067f9b25acef53ab7fbbd1704ee782c925e",
+  "limitation": "Rubric-based LLM assessment, not clinician calibration or an exhaustive claim inventory; reasons require review."
+}

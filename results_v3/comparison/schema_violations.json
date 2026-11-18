@@ -1,0 +1,98 @@
+[
+  {
+    "case_id": "validation:593",
+    "parse_valid": true,
+    "issues": [
+      "surgeries[3]: disallowed key result"
+    ]
+  },
+  {
+    "case_id": "validation:128",
+    "parse_valid": true,
+    "issues": [
+      "symptoms[2]: disallowed key result",
+      "symptoms[3]: disallowed key result",
+      "symptoms[4]: disallowed key result",
+      "symptoms[5]: disallowed key result"
+    ]
+  },
+  {
+    "case_id": "validation:928",
+    "parse_valid": true,
+    "issues": [
+      "medical examinations[6]: disallowed key time",
+      "medical examinations[6]: disallowed key reaction to treatment"
+    ]
+  },
+  {
+    "case_id": "validation:2180",
+    "parse_valid": true,
+    "issues": [
+      "surgeries[2]: disallowed key reaction to treatment"
+    ]
+  },
+  {
+    "case_id": "validation:435",
+    "parse_valid": false,
+    "issues": [
+      "Unterminated string starting at: line 1 column 715 (char 714)"
+    ]
+  },
+  {
+    "case_id": "validation:1133",
+    "parse_valid": false,
+    "issues": [
+      "Unterminated string starting at: line 1 column 8997 (char 8996)"
+    ]
+  },
+  {
+    "case_id": "validation:332",
+    "parse_valid": false,
+    "issues": [
+      "Expecting ',' delimiter: line 1 column 2049 (char 2048)"
+    ]
+  },
+  {
+    "case_id": "validation:2394",
+    "parse_valid": true,
+    "issues": [
+      "treatments[1]: disallowed key result"
+    ]
+  },
+  {
+    "case_id": "validation:994",
+    "parse_valid": true,
+    "issues": [
+      "surgeries[1]: disallowed key reaction to treatment",
+      "surgeries[2]: disallowed key dosage"
+    ]
+  },
+  {
+    "case_id": "validation:1953",
+    "parse_valid": false,
+    "issues": [
+      "Unterminated string starting at: line 1 column 9191 (char 9190)"
+    ]
+  },
+  {
+    "case_id": "validation:2775",
+    "parse_valid": true,
+    "issues": [
+      "surgeries[3]: disallowed key reaction to treatment"
+    ]
+  },
+  {
+    "case_id": "validation:1990",
+    "parse_valid": false,
+    "issues": [
+      "Expecting ',' delimiter: line 1 column 1214 (char 1213)"
+    ]
+  },
+  {
+    "case_id": "validation:895",
+    "parse_valid": true,
+    "issues": [
+      "treatments[1]: disallowed key result"
+    ]
+  }
+]

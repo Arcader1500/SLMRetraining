@@ -1,0 +1,53 @@
+{
+  "review": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "54",
+        "source_quote": "A 54-year-old male patient",
+        "explanation": "The patient's age is explicitly stated."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "No bacterial growth observed",
+        "source_quote": "a pleural fluid culture study was performed every 5 days, and no bacterial growth was observed.",
+        "explanation": "The label correctly records the pleural fluid culture result."
+      },
+      {
+        "field_path": "/treatments/0/dosage",
+        "label_excerpt": "400 mg",
+        "source_quote": "IV ciprofloxacin (400 mg every 12 hours)",
+        "explanation": "The dose is supported, though the label omits the stated frequency."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Identification of Citrobacter koseri and further workup",
+        "source_quote": "The patient was admitted to the general ward for further workup",
+        "explanation": "The note says admission was for further workup; Citrobacter was identified by a swab culture before the admission sentence, but does not state it was the reason for admission. The linkage is unsupported.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Patient remained febrile for 36 days after the initial operation",
+        "source_quote": "However, the patient remained febrile for 36 days after the initial operation; thus, we delayed the second stage of the operation.",
+        "explanation": "This reports fever after the operation and a resulting delay, not a reaction attributed to ciprofloxacin; the label assigns the outcome to the antibiotic treatment without source support.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "initiated on intravenous (IV) ciprofloxacin (400 mg every 12 hours).",
+        "explanation": "The treatment leaf records the dose but omits the explicitly stated every-12-hours frequency, a material treatment-course attribute.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label captures several explicit facts, but it links the culture result to the admission reason and post-operative fever to ciprofloxacin, and omits the antibiotic frequency."
+  },
+  "error": "('source_quote', 'IV ciprofloxacin (400 mg every 12 hours)')"
+}

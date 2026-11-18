@@ -1,0 +1,22 @@
+{
+  "complete": true,
+  "backend": "codex",
+  "model": "gpt-6-luna",
+  "selected_cases": 20,
+  "paired_test_cases": 40,
+  "measurements": 80,
+  "mean_scores": {
+    "Reference fidelity": {
+      "baseline": 0.335,
+      "finetuned": 0.375
+    },
+    "Reference coverage": {
+      "baseline": 0.41,
+      "finetuned": 0.45499999999999996
+    }
+  },
+  "mean_paired_deltas": {
+    "Reference fidelity": 0.04,
+    "Reference coverage": 0.045
+  }
+}

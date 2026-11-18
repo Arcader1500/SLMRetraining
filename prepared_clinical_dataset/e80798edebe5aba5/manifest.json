@@ -1,0 +1,84 @@
+{
+  "version": "e80798edebe5aba5",
+  "config": {
+    "schema_version": 3,
+    "schema": {
+      "visit motivation": [],
+      "admission": [
+        "reason"
+      ],
+      "patient information": [
+        "age",
+        "sex"
+      ],
+      "patient medical history": [
+        "physiological context"
+      ],
+      "surgeries": [
+        "Type",
+        "time",
+        "details"
+      ],
+      "symptoms": [
+        "name of symptom",
+        "location",
+        "time",
+        "details"
+      ],
+      "medical examinations": [
+        "name",
+        "result"
+      ],
+      "diagnosis tests": [
+        "test",
+        "result"
+      ],
+      "treatments": [
+        "name",
+        "dosage",
+        "time",
+        "reaction to treatment"
+      ],
+      "discharge": [
+        "discharge summary"
+      ]
+    },
+    "model": "google/gemma-3-270m-it",
+    "model_revision": "ac82b4e820549b854eebf28ce6dedaf9fdfa17b3",
+    "dataset": "AmareshHebbar/clinical-summarizer-sft",
+    "dataset_revision": "4ca20e0a38cc9235045c973b5503d49952fd1fac",
+    "seed": 42,
+    "max_sequence_length": 4096,
+    "format_instruction": "Extract only clinical facts explicitly stated in the supplied note into one JSON object. Return JSON only, without markdown or commentary. Preserve negation, uncertainty, historical versus current events, and which findings or doses belong to each event or drug. Do not infer missing facts or complete cut-off text. Include all ten top-level fields. The allowed fields and types are: visit motivation is a string; admission is an array of objects with optional fields reason; patient information is an object with optional fields age, sex; patient medical history is an object with optional fields physiological context; surgeries is an array of objects with optional fields Type, time, details; symptoms is an array of objects with optional fields name of symptom, location, time, details; medical examinations is an array of objects with optional fields name, result; diagnosis tests is an array of objects with optional fields test, result; treatments is an array of objects with optional fields name, dosage, time, reaction to treatment; discharge is an object with optional fields discharge summary. Use [] for empty arrays, {} for empty objects, and \"None\" for absent visit motivation. Omit missing inner fields. Do not add other keys or repeat identical entries.\n\nClinical note:\n",
+    "transformers": "4.57.6",
+    "datasets": "4.8.5",
+    "source_v2_version": "eeff5efa1619f198",
+    "projected_collisions": "preserve separate entries",
+    "missing_identifier_policy": "retain verbatim; audit counts",
+    "loss": "assistant and closing tokens only",
+    "evaluation_role": "development; synthetic references, no clinician adjudication",
+    "leakage_limits": "Normalized exact notes checked against train and prior dev; near duplicates/patient overlap/test not established"
+  },
+  "split_sha256": {
+    "train": "6c914ef222446c5f679ba8903417611f010805b2c3d4727ceca42be7d8cab8e6",
+    "validation": "4920c42c658c9204da5e04dc34395e024f0ca464b71064cd208e8c1099deb6eb"
+  },
+  "counts": {
+    "train": 1325,
+    "validation": 100
+  },
+  "eligible_validation_pool": 2803,
+  "validation_rejections": 197,
+  "lengths": {
+    "train": {
+      "max": 1345,
+      "mean": 999.0558490566037,
+      "mean_supervised": 328.5033962264151
+    },
+    "validation": {
+      "max": 1219,
+      "mean": 1012.99,
+      "mean_supervised": 340.37
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "completed_at_utc": "2026-11-18T09:13:00.078784+00:00",
+  "offline_tests_passed": 6,
+  "browser": {
+    "browser": "Chrome",
+    "phase_cards": 2,
+    "all_case_outputs": 130,
+    "paired_sample_options": 20,
+    "mobile_width": 390,
+    "page_errors": [],
+    "external_requests": 0
+  },
+  "embedded_judge_runs": 2,
+  "embedded_metric_rows": 4,
+  "embedded_judge_measurements": 160,
+  "embedded_summaries_match_saved_results": true,
+  "html_sha256": "2e6c21c2407270c2d8a185c829d59b5419f9c9a8d186b57fcf50a3e63adec01c"
+}

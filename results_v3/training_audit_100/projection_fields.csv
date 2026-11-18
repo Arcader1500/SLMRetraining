@@ -1,0 +1,38 @@
+﻿section,dropped_key,occurrences,affected_cases,not_found_verbatim_occurrences
+admission,care center details,524,507,502
+admission,date,270,250,176
+admission,duration,175,169,134
+diagnosis tests,condition,1624,1034,933
+diagnosis tests,details,1060,772,1042
+diagnosis tests,severity,200,180,130
+diagnosis tests,time,602,395,409
+discharge,follow up,144,144,128
+discharge,reason,278,278,248
+discharge,referral,126,126,121
+medical examinations,details,1376,905,1340
+patient information,ethnicity,263,263,260
+patient information,family medical history,235,235,235
+patient information,height,46,46,43
+patient information,occupation,149,149,148
+patient information,recent travels,27,27,27
+patient information,socio economic context,67,67,66
+patient information,weight,90,90,84
+patient medical history,alcohol consumption,109,109,102
+patient medical history,allergies,39,39,38
+patient medical history,drug usage,70,70,66
+patient medical history,exercise frequency,54,54,50
+patient medical history,nutrition,60,60,56
+patient medical history,psychological context,130,130,124
+patient medical history,sexual history,68,68,62
+patient medical history,smoking status,160,160,150
+patient medical history,vaccination history,18,18,18
+surgeries,outcome,748,618,647
+surgeries,reason,1226,936,791
+symptoms,behaviours affecting the symptom,384,338,315
+symptoms,intensity of symptom,769,592,335
+symptoms,temporalisation,579,473,428
+treatments,details,872,678,827
+treatments,duration,311,240,261
+treatments,frequency,418,285,329
+treatments,reason for taking,1864,1024,1805
+treatments,related condition,1908,1043,997

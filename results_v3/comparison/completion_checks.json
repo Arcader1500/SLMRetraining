@@ -1,0 +1,18 @@
+{
+  "completed_cases": 100,
+  "cached_predictions_and_diagnostics_unchanged": 12,
+  "new_cases_completed": 88,
+  "executed_code_cells": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12
+  ],
+  "notebook_errors": 0,
+  "all_aggregate_metrics_match_local_rescoring": true,
+  "llm_evaluation": false,
+  "finite_first_token_logits_cases": 100,
+  "comparison_sha256": "4c314a78239a46ad0015e7a10f36a372c5ae7be0930d08e0d2690c5e76835549"
+}

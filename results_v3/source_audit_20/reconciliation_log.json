@@ -1,0 +1,286 @@
+[
+  {
+    "case_id": "validation:593",
+    "probe": 1,
+    "model": "baseline",
+    "before": "S:B14",
+    "after": "X:B03 B07 B10 B14",
+    "reason": "Correct age nine coexists with one and a delay used as age."
+  },
+  {
+    "case_id": "validation:593",
+    "probe": 2,
+    "model": "baseline",
+    "before": "S:B15",
+    "after": "X:B04 B08 B15",
+    "reason": "Correct female coexists with an invented male admission."
+  },
+  {
+    "case_id": "validation:593",
+    "probe": 3,
+    "model": "finetuned",
+    "before": "P:F05 F27",
+    "after": "A:F05 F27",
+    "reason": "Closed reduction is explicit; puncture fixation is an unclear rendering of percutaneous pin fixation."
+  },
+  {
+    "case_id": "validation:593",
+    "probe": 5,
+    "model": "finetuned",
+    "before": "O",
+    "after": "C:F10",
+    "reason": "Occlusion text is present, but attached to non-identification of hypothetical hematoma, without DSA attribution."
+  },
+  {
+    "case_id": "validation:1351",
+    "probe": 1,
+    "model": "baseline",
+    "before": "P:B01 B03",
+    "after": "S:B03",
+    "reason": "Age is correct in admission context; no contradictory numeric age."
+  },
+  {
+    "case_id": "validation:1351",
+    "probe": 2,
+    "model": "baseline",
+    "before": "P:B01",
+    "after": "X:B01 B04",
+    "reason": "Woman in visit text coexists with ethnicity used as sex."
+  },
+  {
+    "case_id": "validation:1351",
+    "probe": 5,
+    "model": "baseline",
+    "before": "P:B07 B17",
+    "after": "S:B07 B17",
+    "reason": "Admission prose explicitly describes palpitations with exertion."
+  },
+  {
+    "case_id": "validation:1351",
+    "probe": 5,
+    "model": "finetuned",
+    "before": "P:F09",
+    "after": "S:F09",
+    "reason": "Symptom details explicitly preserve exertional palpitations."
+  },
+  {
+    "case_id": "validation:113",
+    "probe": 3,
+    "model": "finetuned",
+    "before": "P:F02",
+    "after": "S:F02",
+    "reason": "DM clinical context survives in admission reason."
+  },
+  {
+    "case_id": "validation:937",
+    "probe": 3,
+    "model": "baseline",
+    "before": "P:B08",
+    "after": "S:B08",
+    "reason": "Medical history nested under patient information still identifies historical conditions."
+  },
+  {
+    "case_id": "validation:937",
+    "probe": 4,
+    "model": "finetuned",
+    "before": "P:F10",
+    "after": "S:F10",
+    "reason": "Baseline normal ECG remains explicitly identified in symptom details."
+  },
+  {
+    "case_id": "validation:937",
+    "probe": 7,
+    "model": "baseline",
+    "before": "P:B04",
+    "after": "S:B04",
+    "reason": "Negative biomarker assertion is explicit; added admission role is a separate placement concern."
+  },
+  {
+    "case_id": "validation:1812",
+    "probe": 1,
+    "model": "baseline",
+    "before": "C:B03 B07",
+    "after": "X:B01 B03 B07",
+    "reason": "Visit identifies infant; explicit age fields incorrectly use maternal age and repeat-test delay."
+  },
+  {
+    "case_id": "validation:1812",
+    "probe": 8,
+    "model": "baseline",
+    "before": "P:B08 B10",
+    "after": "O",
+    "reason": "One-week resolution imaging is present, but discharge event itself is absent."
+  },
+  {
+    "case_id": "validation:1812",
+    "probe": 5,
+    "model": "baseline",
+    "before": "P:B24",
+    "after": "S:B24",
+    "reason": "Dosage string explicitly names recombinant FVIII and 50 U/kg, despite wrong event name/time elsewhere."
+  },
+  {
+    "case_id": "validation:1812",
+    "probe": 5,
+    "model": "finetuned",
+    "before": "P:F21",
+    "after": "S:F21",
+    "reason": "Reaction prose explicitly says initially treated with 50 U/kg recombinant FVIII; parent relation is separately flagged."
+  },
+  {
+    "case_id": "validation:1388",
+    "probe": 2,
+    "model": "baseline",
+    "before": "P:B07",
+    "after": "X:B04 B07",
+    "reason": "Male in contextual text conflicts with ethnicity in sex field."
+  },
+  {
+    "case_id": "validation:1388",
+    "probe": 5,
+    "model": "baseline",
+    "before": "P:@two seizure-like episodes earlier that morning",
+    "after": "S:@two seizure-like episodes earlier that morning",
+    "reason": "Nested symptoms array preserves the seizure event with its correct role."
+  },
+  {
+    "case_id": "validation:128",
+    "probe": 1,
+    "model": "baseline",
+    "before": "P:B03",
+    "after": "S:B03",
+    "reason": "Correct patient age within admission details; schema placement alone is separate."
+  },
+  {
+    "case_id": "validation:128",
+    "probe": 2,
+    "model": "baseline",
+    "before": "P:B04",
+    "after": "S:B04",
+    "reason": "Correct sex within admission details."
+  },
+  {
+    "case_id": "validation:128",
+    "probe": 4,
+    "model": "baseline",
+    "before": "P:B02 B05",
+    "after": "S:B02 B05",
+    "reason": "Explicit negative symptom prose preserves negation."
+  },
+  {
+    "case_id": "validation:128",
+    "probe": 6,
+    "model": "finetuned",
+    "before": "P:F28 F29",
+    "after": "S:F28 F29",
+    "reason": "VATS biopsy is accurately named in diagnosis tests; surgery/test dual use is acceptable."
+  },
+  {
+    "case_id": "validation:128",
+    "probe": 8,
+    "model": "baseline",
+    "before": "P:B09",
+    "after": "S:B09",
+    "reason": "Bronchoscopy and negative result explicitly paired in prose."
+  },
+  {
+    "case_id": "validation:302",
+    "probe": 1,
+    "model": "baseline",
+    "before": "P:B09",
+    "after": "A:B09",
+    "reason": "Age 52 occurs in relative-history admissions; patient assignment is unclear, not a clean match."
+  },
+  {
+    "case_id": "validation:302",
+    "probe": 3,
+    "model": "baseline",
+    "before": "P:B12",
+    "after": "S:B12",
+    "reason": "Explicit was treated with dosulepin prose preserves this drug/dose subclaim."
+  },
+  {
+    "case_id": "validation:302",
+    "probe": 4,
+    "model": "baseline",
+    "before": "P:B12",
+    "after": "S:B12",
+    "reason": "Same sentence explicitly links sweating to dosulepin."
+  },
+  {
+    "case_id": "validation:302",
+    "probe": 5,
+    "model": "baseline",
+    "before": "P:B15",
+    "after": "S:B15",
+    "reason": "Prose explicitly links amitriptyline to racing heart."
+  },
+  {
+    "case_id": "validation:302",
+    "probe": 7,
+    "model": "baseline",
+    "before": "P:B16",
+    "after": "S:B16",
+    "reason": "Prose explicitly preserves venlafaxine XL 75mg."
+  },
+  {
+    "case_id": "validation:302",
+    "probe": 6,
+    "model": "finetuned",
+    "before": "P:F18",
+    "after": "S:F18",
+    "reason": "Symptom details explicitly state mirtazapine and its titration; no changed event role for this subclaim."
+  },
+  {
+    "case_id": "validation:1241",
+    "probe": 1,
+    "model": "baseline",
+    "before": "P:B03",
+    "after": "X:B03 B07",
+    "reason": "Correct age 72 coexists with history sentences in age fields."
+  },
+  {
+    "case_id": "validation:1241",
+    "probe": 2,
+    "model": "baseline",
+    "before": "P:B04",
+    "after": "S:B04",
+    "reason": "Correct sex in admission context."
+  },
+  {
+    "case_id": "validation:1241",
+    "probe": 4,
+    "model": "baseline",
+    "before": "P:B05",
+    "after": "S:B05",
+    "reason": "Historical disease and antibody treatment explicit in physiological context."
+  },
+  {
+    "case_id": "validation:1241",
+    "probe": 3,
+    "model": "finetuned",
+    "before": "X:F01 F02",
+    "after": "P:F01 F02",
+    "reason": "Correct balance-disorder motivation remains, but admission reason substitutes hemiplegia; no explicit denial of balance disorder."
+  },
+  {
+    "case_id": "validation:337",
+    "probe": 7,
+    "model": "baseline",
+    "before": "P:B41",
+    "after": "A:B41",
+    "reason": "Generic autologous reconstruction in test field does not clearly preserve LICAP choice and upper-pole reconstruction."
+  },
+  {
+    "case_id": "validation:337",
+    "probe": 7,
+    "model": "finetuned",
+    "before": "P:F06 F07",
+    "after": "A:F06 F07",
+    "reason": "Flap dissection survives as photograph finding, but LICAP choice and reconstruction target are not explicit."
+  },
+  {
+    "case_id": "validation:1388",
+    "reason": "Removed draft claim that judge conflated doubled mass with four-day return; saved reasons do not establish that criticism."
+  }
+]

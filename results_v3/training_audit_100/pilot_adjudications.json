@@ -1,0 +1,360 @@
+{
+  "status": "initial_ten_case_pilot_review_complete",
+  "run_id": "e1a7efa71d6b7cf2",
+  "summary": {
+    "assistant_reviewed_cases": 10,
+    "random_cases": 5,
+    "targeted_cases": 5,
+    "model_candidate_findings": 17,
+    "candidate_verdicts": {
+      "confirmed_omission": 5,
+      "policy_ambiguity": 6,
+      "rejected": 5,
+      "confirmed_event_status": 1
+    },
+    "additional_assistant_findings": 5,
+    "confirmed_diagnostic_findings": 11,
+    "cases_with_confirmed_issue": 8,
+    "remaining_semantic_review_cases": 90,
+    "limitation": "Selected initial pilot, not a prevalence estimate or exhaustive claim inventory; candidate findings are not confirmed without source review."
+  },
+  "adjudications": [
+    {
+      "case_id": "train:983",
+      "group": "random",
+      "reviewer": "assistant source-consistency review, not clinician adjudication",
+      "findings": [
+        {
+          "candidate_index": 1,
+          "verdict": "confirmed_omission",
+          "explanation": "The explicit 4 kg weight-loss amount is absent. Current weight is not required as a separate demographic schema field; the confirmed issue is the lost weight-loss magnitude.",
+          "original_finding": {
+            "field_path": "/symptoms/3/time",
+            "label_excerpt": "Last three months",
+            "source_quote": "She had weight loss by 4 kg over the last three months, presently weighing 40 kg.",
+            "explanation": "The symptom entry leaves out the material amount of weight lost and the patient's current weight, both explicitly documented in the note.",
+            "category": "omission",
+            "classification": "material_omission"
+          }
+        },
+        {
+          "candidate_index": 2,
+          "verdict": "policy_ambiguity",
+          "explanation": "Exudative effusion is preserved. Whether no further differentiation warrants inclusion is an optional-detail/coverage decision, not a demonstrated false label.",
+          "original_finding": {
+            "field_path": "/diagnosis tests/4/result",
+            "label_excerpt": "Exudative effusion",
+            "source_quote": "Thoracentesis and the evaluation of pleural fluid showed exudative effusion but leading to no further differentiation.",
+            "explanation": "The result entry omits the material qualification that the pleural-fluid evaluation did not further differentiate the effusion.",
+            "category": "omission",
+            "classification": "material_omission"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "train:119",
+      "group": "targeted",
+      "reviewer": "assistant source-consistency review, not clinician adjudication",
+      "findings": [
+        {
+          "candidate_index": 1,
+          "verdict": "rejected",
+          "explanation": "The 20g methotrexate dose is explicitly source-stated. Source consistency does not authorize medical correction; the judge itself says there is no discrepancy.",
+          "original_finding": {
+            "field_path": "/treatments/3/dosage",
+            "label_excerpt": "20g",
+            "source_quote": "tablet methotrexate 20g weekly",
+            "explanation": "The label preserves the dose exactly as stated in the source, so this is source-supported; no discrepancy is identified.",
+            "category": "unsupported_addition",
+            "classification": "policy_ambiguity"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "train:1239",
+      "group": "random",
+      "reviewer": "assistant source-consistency review, not clinician adjudication",
+      "findings": [
+        {
+          "candidate_index": 1,
+          "verdict": "policy_ambiguity",
+          "explanation": "Culture identification immediately precedes admission for workup. Causal admission wording is inferred but plausible; downgrade from clear error.",
+          "original_finding": {
+            "field_path": "/admission/0/reason",
+            "label_excerpt": "Identification of Citrobacter koseri and further workup",
+            "source_quote": "The patient was admitted to the general ward for further workup",
+            "explanation": "The note says admission was for further workup; Citrobacter was identified by a swab culture before the admission sentence, but does not state it was the reason for admission. The linkage is unsupported.",
+            "category": "wrong_linkage_value",
+            "classification": "clear_error"
+          }
+        },
+        {
+          "candidate_index": 2,
+          "verdict": "policy_ambiguity",
+          "explanation": "Persistent fever occurred during postoperative IV antibiotics and irrigation. The response field needs contextual qualification; it does not explicitly claim ciprofloxacin alone caused fever.",
+          "original_finding": {
+            "field_path": "/treatments/0/reaction to treatment",
+            "label_excerpt": "Patient remained febrile for 36 days after the initial operation",
+            "source_quote": "However, the patient remained febrile for 36 days after the initial operation; thus, we delayed the second stage of the operation.",
+            "explanation": "This reports fever after the operation and a resulting delay, not a reaction attributed to ciprofloxacin; the label assigns the outcome to the antibiotic treatment without source support.",
+            "category": "wrong_linkage_value",
+            "classification": "clear_error"
+          }
+        },
+        {
+          "candidate_index": 3,
+          "verdict": "confirmed_omission",
+          "explanation": "Every-12-hours ciprofloxacin frequency is source-stated and absent from retained dosage/time fields.",
+          "original_finding": {
+            "field_path": "/treatments",
+            "label_excerpt": "",
+            "source_quote": "initiated on intravenous (IV) ciprofloxacin (400 mg every 12 hours).",
+            "explanation": "The treatment leaf records the dose but omits the explicitly stated every-12-hours frequency, a material treatment-course attribute.",
+            "category": "omission",
+            "classification": "material_omission"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "train:1045",
+      "group": "targeted",
+      "reviewer": "assistant source-consistency review, not clinician adjudication",
+      "findings": []
+    },
+    {
+      "case_id": "train:1052",
+      "group": "random",
+      "reviewer": "assistant source-consistency review, not clinician adjudication",
+      "findings": [
+        {
+          "candidate_index": 1,
+          "verdict": "rejected",
+          "explanation": "The canonical patient medical history.physiological context field intentionally holds broad history. No previous facial trauma is valid history here.",
+          "original_finding": {
+            "field_path": "/patient medical history/physiological context",
+            "label_excerpt": "No previous facial trauma",
+            "source_quote": "She had no previous facial trauma, and her medical history was not contributory.",
+            "explanation": "This labels absence of facial trauma as physiological context, which is a role mismatch; the source describes it as history.",
+            "category": "inappropriate_role",
+            "classification": "policy_ambiguity"
+          }
+        },
+        {
+          "candidate_index": 2,
+          "verdict": "rejected",
+          "explanation": "Nonpalpable regional lymph nodes is explicitly present in source and label. The judge explanation and summary contradict its clear-error classification.",
+          "original_finding": {
+            "field_path": "/medical examinations/0/result",
+            "label_excerpt": "nonpalpable regional lymph nodes",
+            "source_quote": "The regional lymph nodes were nonpalpable.",
+            "explanation": "Supported negative examination finding.",
+            "category": "unsupported_addition",
+            "classification": "clear_error"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "train:1453",
+      "group": "targeted",
+      "reviewer": "assistant source-consistency review, not clinician adjudication",
+      "findings": [
+        {
+          "candidate_index": 1,
+          "verdict": "policy_ambiguity",
+          "explanation": "Both drugs were part of chemotherapy. Listing a shared remission under both is ambiguous about combination response, not proof of unsupported single-drug causation.",
+          "original_finding": {
+            "field_path": "/treatments/1/reaction to treatment",
+            "label_excerpt": "Partial clinical remission",
+            "source_quote": "He received six cycles of chemotherapy and showed a partial clinical remission.",
+            "explanation": "The note attributes remission to six cycles of chemotherapy overall, not specifically to S-1. Assigning it to S-1 alone overstates the treatment-response linkage.",
+            "category": "wrong_linkage_value",
+            "classification": "clear_error"
+          }
+        },
+        {
+          "candidate_index": 2,
+          "verdict": "policy_ambiguity",
+          "explanation": "Same shared-regimen attribution concern; this is not a second confirmed drug error.",
+          "original_finding": {
+            "field_path": "/treatments/2/reaction to treatment",
+            "label_excerpt": "Partial clinical remission",
+            "source_quote": "He received six cycles of chemotherapy and showed a partial clinical remission.",
+            "explanation": "The note reports remission after chemotherapy overall; it does not specifically attribute the response to cisplatin alone. This duplicates an unsupported drug-specific response linkage.",
+            "category": "wrong_linkage_value",
+            "classification": "clear_error"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "train:24",
+      "group": "random",
+      "reviewer": "assistant source-consistency review, not clinician adjudication",
+      "findings": [
+        {
+          "candidate_index": 1,
+          "verdict": "confirmed_event_status",
+          "explanation": "Under the explicit-admission policy, ED presentation alone does not establish inpatient admission. This is unsupported event-role labeling, not proof the patient was never admitted.",
+          "original_finding": {
+            "field_path": "/admission/0/reason",
+            "label_excerpt": "Chest pain and shortness of breath",
+            "source_quote": "presented to the emergency department at 10 am in the morning with chest pain and shortness of breath of approximately 12 hours duration.",
+            "explanation": "The source establishes an emergency department presentation but does not establish hospital admission. The admission section therefore asserts an event not supported by the note.",
+            "category": "event_status",
+            "classification": "clear_error"
+          }
+        },
+        {
+          "candidate_index": 2,
+          "verdict": "confirmed_omission",
+          "explanation": "Pleuritic/positional aggravating and relieving factors are explicitly stated and absent from the symptom details.",
+          "original_finding": {
+            "field_path": "/symptoms/0/details",
+            "label_excerpt": "Sharp pleuritic chest pain, also experiencing a less prominent pressure like sensation",
+            "source_quote": "The patient reported that her chest pain was located in the substernal region, radiating to the back, aggravated by deep breaths and by lying down, and alleviated by sitting up and leaning forward. She said that she had taken some ibuprofen which had reduced the intensity of pain. She did endorse that she was also experiencing a less prominent pressure like sensation in addition to the sharp pleuritic type of pain.",
+            "explanation": "The label omits the explicitly reported aggravating and alleviating factors, which are material symptom details expressible in the schema.",
+            "category": "omission",
+            "classification": "material_omission"
+          }
+        },
+        {
+          "candidate_index": 3,
+          "verdict": "rejected",
+          "explanation": "Shared onset while lying in bed is already partially preserved. Treat residual chest-pain detail under the confirmed modifier omission, not a separate allocation defect.",
+          "original_finding": {
+            "field_path": "/symptoms/1/details",
+            "label_excerpt": "Developed shortness of breath while lying in bed",
+            "source_quote": "she developed shortness of breath and sharp pleuritic chest pain while she was lying in bed.",
+            "explanation": "The source gives onset while lying in bed, but the label places that context in details and omits it from the separate chest pain symptom. Since the note says both symptoms developed while lying in bed, this is a possible allocation issue; the details field for chest pain could have carried the shared context.",
+            "category": "omission",
+            "classification": "policy_ambiguity"
+          }
+        },
+        {
+          "candidate_index": 4,
+          "verdict": "rejected",
+          "explanation": "The prothrombin mutation is explicitly retained in history. The judge itself calls this supported and says its own finding is not a discrepancy.",
+          "original_finding": {
+            "field_path": "/patient medical history/physiological context",
+            "label_excerpt": "prothrombin G20210A mutation",
+            "source_quote": "Her medical history included right breast invasive ductal carcinoma with bilateral mastectomies in 2015, recently diagnosed bladder cancer with TURBT and intravesical mitomycin C instillation three days prior to current presentation, type 2 diabetes mellitus, hypertension, obstructive sleep apnea, chronic obstructive pulmonary disease, and prothrombin G20210A mutation.",
+            "explanation": "Supported medical history is captured.",
+            "category": "omission",
+            "classification": "clear_error"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "train:1108",
+      "group": "targeted",
+      "reviewer": "assistant source-consistency review, not clinician adjudication",
+      "findings": [
+        {
+          "candidate_index": 1,
+          "verdict": "policy_ambiguity",
+          "explanation": "Broad normal physical examination can be read as otherwise normal because abnormal BP is separately explicit. Qualify scope; do not count as a definite contradiction.",
+          "original_finding": {
+            "field_path": "/medical examinations/0/result",
+            "label_excerpt": "Normal findings",
+            "source_quote": "A digital rectal examination was normal with no enlargement or nodularity of the prostate.",
+            "explanation": "The result generalizes several normal examination findings, but the note also explicitly records a markedly elevated blood pressure. As the label separately captures that measurement, it is unclear whether “Normal findings” is intended to cover only the physical examination apart from blood pressure; treat as a policy ambiguity rather than a definite contradiction.",
+            "category": "wrong_linkage_value",
+            "classification": "policy_ambiguity"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "train:177",
+      "group": "random",
+      "reviewer": "assistant source-consistency review, not clinician adjudication",
+      "findings": [
+        {
+          "candidate_index": 1,
+          "verdict": "confirmed_omission",
+          "explanation": "Ectopic pancreas and uninvolved margins are explicit before the cutoff. The final diagnosis and margin status are missing from retained pathology result.",
+          "original_finding": {
+            "field_path": "/diagnosis tests/1/result",
+            "label_excerpt": "6.6 × 3.5 cm excision gastric wall with a gray yellowish node 15 mm in diameter",
+            "source_quote": "The tumour did not involve the resection margins. Histopathological analysis confirmed an ectopic pancreas, 15 mm in",
+            "explanation": "The source reports the histological diagnosis of ectopic pancreas and clear resection margins, but the label omits both material pathology findings. The source is cut off after “in,” so no completion is inferred.",
+            "category": "omission",
+            "classification": "material_omission"
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "train:676",
+      "group": "targeted",
+      "reviewer": "assistant source-consistency review, not clinician adjudication",
+      "findings": [
+        {
+          "candidate_index": 1,
+          "verdict": "confirmed_omission",
+          "explanation": "Angiography explicitly confirms AEF; the retained result gives measurements without the confirmed diagnosis.",
+          "original_finding": {
+            "field_path": "/diagnosis tests/1/result",
+            "label_excerpt": "0.7 cm×0.4 cm pseudoaneurysm of the descending aorta approximately 4.5 cm below the origin of the left subclavian artery",
+            "source_quote": "This finding confirmed the diagnosis of AEF.",
+            "explanation": "The angiography result gives the pseudoaneurysm measurements but omits the source's explicit confirmation of AEF. This is a material diagnostic result that could be included with the angiography result.",
+            "category": "omission",
+            "classification": "material_omission"
+          }
+        }
+      ]
+    }
+  ],
+  "additional_findings": [
+    {
+      "case_id": "train:119",
+      "field_path": "/treatments",
+      "source_quote": "methylprednisolone 500 mg IV for 3 days, tablet prednisone 25mg BD, tablet aspirin 75 mg OD, tablet methotrexate 20g weekly, capsule gabapentin 75 mg BD, tablet folic acid 5 mg OD, and tablet atorvastatin 20 mg HS",
+      "category": "omission",
+      "verdict": "confirmed_omission",
+      "explanation": "Seven medication frequencies and the methylprednisolone route/duration are absent. Existing dosage/time strings can retain them without adding schema paths. This is one bundled regimen-coverage finding, not seven independent error counts.",
+      "origin": "v2 treatments.frequency dropped by projection"
+    },
+    {
+      "case_id": "train:1052",
+      "field_path": "/treatments",
+      "source_quote": "Postoperatively, the patient received systemic antibiotic, analgesic, and mouthwash for 7 days.",
+      "category": "omission",
+      "verdict": "confirmed_omission",
+      "explanation": "Explicit seven-day postoperative treatment duration is absent.",
+      "origin": "v2 treatments.duration dropped by projection"
+    },
+    {
+      "case_id": "train:1052",
+      "field_path": "/diagnosis tests",
+      "source_quote": "sufficiently supportive of the working diagnosis of peripheral osteoma",
+      "category": "omission",
+      "verdict": "confirmed_omission",
+      "explanation": "Imaging features survive but the source-qualified working diagnosis is absent. Retain working status rather than turning it into a definitive diagnosis.",
+      "origin": "v2 diagnosis tests.condition dropped by projection"
+    },
+    {
+      "case_id": "train:1453",
+      "field_path": "/treatments",
+      "source_quote": "S-1 50 mg, twice daily for 3 consecutive weeks, followed by a 2-week rest period",
+      "category": "omission",
+      "verdict": "confirmed_omission",
+      "explanation": "S-1 frequency and cycle schedule are absent despite the retained starting date and dose.",
+      "origin": "v2 treatments.frequency dropped by projection"
+    },
+    {
+      "case_id": "train:1453",
+      "field_path": "/treatments",
+      "source_quote": "He continued to take S-1 and the other drugs for about 1 week from the start of the renal insufficiency.",
+      "category": "omission",
+      "verdict": "confirmed_omission",
+      "explanation": "Continuation of medication after renal insufficiency is an explicit material treatment timeline absent from the retained label.",
+      "origin": "v2 treatments.details dropped by projection"
+    }
+  ]
+}

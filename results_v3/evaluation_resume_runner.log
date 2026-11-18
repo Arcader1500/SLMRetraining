@@ -1,0 +1,22 @@
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794978299.759807    1557 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794978302.368666    1557 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Exception ignored in atexit callback <function shutdown at 0x7ea14f6c8a40>:
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/logging/__init__.py", line 2255, in shutdown
+    h.close()
+  File "/usr/local/lib/python3.13/dist-packages/absl/logging/__init__.py", line 978, in close
+    self.stream.close()
+  File "/usr/local/lib/python3.13/dist-packages/ipykernel/iostream.py", line 446, in close
+    self.watch_fd_thread.join()
+AttributeError: 'OutStream' object has no attribute 'watch_fd_thread'

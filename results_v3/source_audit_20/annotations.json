@@ -1,0 +1,1395 @@
+[
+  {
+    "case_id": "validation:593",
+    "probes": [
+      [
+        "age",
+        "Age nine",
+        "A 9-year-old girl",
+        "S:B14",
+        "S:F03"
+      ],
+      [
+        "sex",
+        "Female patient",
+        "A 9-year-old girl",
+        "S:B15",
+        "S:F04"
+      ],
+      [
+        "procedure",
+        "Closed reduction and percutaneous pin fixation",
+        "closed reduction of the fracture and percutaneous pin fixation",
+        "S:B13",
+        "P:F05 F27"
+      ],
+      [
+        "investigation",
+        "Gartland IIIB fracture on X-ray",
+        "An X-ray documented a Gartland IIIB fracture",
+        "P:B12",
+        "S:F22"
+      ],
+      [
+        "investigation",
+        "Distal brachial occlusion on DSA",
+        "showing occlusion of the distal brachial artery",
+        "S:B20 B24",
+        "O"
+      ],
+      [
+        "treatment",
+        "3 x 28 mm BVS released",
+        "A 3 × 28 mm BVS",
+        "O",
+        "O"
+      ],
+      [
+        "outcome",
+        "Regular radial/ulnar pulse after intervention",
+        "A regular sphygmic pulse appeared on radial and ulnar arteries.",
+        "O",
+        "P:F34 F36"
+      ],
+      [
+        "treatment",
+        "Posterior splint after surgery",
+        "The arm was maintained with a 130° posterior splint for 40 days after surgery",
+        "O",
+        "O"
+      ]
+    ],
+    "findings": [
+      [
+        "baseline",
+        "unsupported",
+        "B06 B07 B08",
+        "A 9-year-old girl",
+        "Adds vasculitis and a one-year-old male admission unrelated to the supplied case."
+      ],
+      [
+        "baseline",
+        "linkage",
+        "B18 B22 B26",
+        "two 0.014ʺ guide wires",
+        "Turns order/numerical information into operation times, including wire size 0.014 as a time."
+      ],
+      [
+        "finetuned",
+        "assertion_status",
+        "F09 F10",
+        "an external hematoma compressing the artery, that could have been drained cutting lacertus fibrosus, was not identified",
+        "Lists the absent hypothetical drainable hematoma as an operation and invents a cause for non-identification. The wording retains not identified, so this is an event-status/role error rather than a simple positive assertion."
+      ],
+      [
+        "finetuned",
+        "chronology",
+        "F28",
+        "At the end of the procedure, the arterial pulses did not reappear.",
+        "Adds one hour post-surgery to the absence of pulses; one hour in the source is admission delay."
+      ],
+      [
+        "finetuned",
+        "placement",
+        "F11 F12 F30",
+        "digital subtraction angiography (DSA) was performed",
+        "Ultrasound is listed as surgery and DSA as a dosage."
+      ]
+    ],
+    "reference_review": [
+      [
+        "temporal_ambiguity",
+        "R11",
+        "She was admitted 1 h after the event complaining of severe pain",
+        "Reference stores admission delay as symptom time; this does not establish exact symptom-onset time."
+      ]
+    ],
+    "judge_review": [
+      [
+        "overstated_contradiction",
+        "The final angiography confirmed correct positioning and patency of the stent with restoration of distal flow",
+        "The judge treats absent pulses after fracture fixation and later regular pulses as a contradiction. They are sequential outcomes around different interventions; the real output defect is missing the stent and adding unsupported timing."
+      ]
+    ]
+  },
+  {
+    "case_id": "validation:1351",
+    "probes": [
+      [
+        "age",
+        "Age forty",
+        "A 40-year-old Caucasian woman",
+        "P:B01 B03",
+        "S:F03"
+      ],
+      [
+        "sex",
+        "Female patient",
+        "A 40-year-old Caucasian woman",
+        "P:B01",
+        "S:F04"
+      ],
+      [
+        "history",
+        "Long respiratory/allergy history",
+        "a long history of respiratory symptoms and allergies",
+        "P:B06",
+        "O"
+      ],
+      [
+        "treatment",
+        "Symptoms persisted after antibiotics",
+        "When her cough and other symptoms persisted",
+        "O",
+        "O"
+      ],
+      [
+        "symptom",
+        "Exertional palpitations",
+        "occasional palpitations with exertion",
+        "P:B07 B17",
+        "P:F09"
+      ],
+      [
+        "investigation",
+        "PFO on echocardiography",
+        "interatrial shunt consistent with a patent foramen ovale (PFO)",
+        "O",
+        "S:F22"
+      ],
+      [
+        "investigation",
+        "Most right pulmonary venous return drains to IVC",
+        "The majority of the right lung pulmonary venous return was to the inferior vena cava via the scimitar vein.",
+        "O",
+        "O"
+      ],
+      [
+        "investigation",
+        "No murmurs",
+        "she did not have any murmurs",
+        "O",
+        "S:F20"
+      ]
+    ],
+    "findings": [
+      [
+        "baseline",
+        "placement",
+        "B04",
+        "A 40-year-old Caucasian woman",
+        "Stores ethnicity as sex; age/sex/history are scattered through repeated admissions."
+      ],
+      [
+        "baseline",
+        "placement",
+        "B13 B20",
+        "She was treated with a course of antibiotics for a presumed pneumonia.",
+        "Medication and chamber dilation are assigned to surgery fields."
+      ],
+      [
+        "finetuned",
+        "placement",
+        "F10 F13",
+        "a chest X-ray was performed",
+        "Names an examination and an anatomic border as symptoms."
+      ],
+      [
+        "finetuned",
+        "unsupported",
+        "F16",
+        "worsening shortness of breath over the past year",
+        "Assigns dyspnea to left chest without source localization."
+      ],
+      [
+        "finetuned",
+        "linkage",
+        "F08",
+        "worsening shortness of breath over the past year",
+        "Attaches the one-year dyspnea history to the combined fever/chills/wheeze/cough entry."
+      ]
+    ],
+    "reference_review": [
+      [
+        "timing_loss",
+        "R09",
+        "worsening shortness of breath over the past year and occasional palpitations with exertion",
+        "Reference calls dyspnea occasional, transferring the qualifier from palpitations and losing the stated one-year worsening history."
+      ]
+    ],
+    "judge_review": [
+      [
+        "false_unsupported",
+        "She was a welder by profession",
+        "The baseline judge calls welding exposure unsupported. Occupation is explicit; a causal exposure claim would require more, but the generated leaf says welding by profession."
+      ],
+      [
+        "false_unsupported",
+        "She was treated with a course of antibiotics for a presumed pneumonia.",
+        "The fine-tuned judge calls presumed-pneumonia context unsupported. It is explicit in the note, although it is a poor replacement for the full respiratory/allergy history."
+      ]
+    ]
+  },
+  {
+    "case_id": "validation:113",
+    "probes": [
+      [
+        "age",
+        "Age forty-four",
+        "A 44-year-old female",
+        "S:B06",
+        "S:F03"
+      ],
+      [
+        "sex",
+        "Female patient",
+        "A 44-year-old female",
+        "S:B07",
+        "S:F04"
+      ],
+      [
+        "history",
+        "DM is part of the clinical context",
+        "since 2013 and was diagnosed as DM",
+        "O",
+        "P:F02"
+      ],
+      [
+        "investigation",
+        "Tumor markers not elevated",
+        "Her serum carcinoembryonic antigen and carbohydrate antigen 19-9 were not elevated",
+        "S:B30",
+        "S:F17"
+      ],
+      [
+        "procedure",
+        "Hepatic medial segmentectomy and cholecystectomy",
+        "hepatic medial segmentectomy and cholecystectomy were performed",
+        "O",
+        "S:F05"
+      ],
+      [
+        "treatment",
+        "Postoperative tacrolimus 5 mg/day",
+        "tacrolimus 5 mg/day and prednisone 20 mg/day",
+        "O",
+        "O"
+      ],
+      [
+        "treatment",
+        "Postoperative prednisone 20 mg/day",
+        "tacrolimus 5 mg/day and prednisone 20 mg/day",
+        "O",
+        "C:F28 F29"
+      ],
+      [
+        "discharge",
+        "Discharge on postoperative day 23",
+        "The patient was discharged on postoperative day 23.",
+        "O",
+        "S:F31"
+      ]
+    ],
+    "findings": [
+      [
+        "baseline",
+        "unsupported",
+        "B15",
+        "since 2013 and was diagnosed as DM",
+        "Invents a 2020 surgery date."
+      ],
+      [
+        "baseline",
+        "linkage",
+        "B37 B39",
+        "CK7 (+), CK 19 (+), and CK 20 (–)",
+        "Converts immunostain labels and polarities to grades 19 and 20."
+      ],
+      [
+        "baseline",
+        "linkage",
+        "B27",
+        "Her serum carcinoembryonic antigen and carbohydrate antigen 19-9 were not elevated",
+        "Lists enhanced CT and ultrasound results as Elevated, losing the lesion findings; the separately recorded negative tumor markers are correct."
+      ],
+      [
+        "finetuned",
+        "linkage",
+        "F28 F29",
+        "tacrolimus 5 mg/day and prednisone 20 mg/day",
+        "Assigns tacrolimus dose to prednisone."
+      ],
+      [
+        "finetuned",
+        "unsupported",
+        "F12 F13",
+        "dry cough, myalgia, and arthralgia",
+        "Adds neurological/CNS symptoms not stated."
+      ]
+    ],
+    "reference_review": [
+      [
+        "temporal_ambiguity",
+        "R09",
+        "dry cough, myalgia, and arthralgia since 2013",
+        "Reference attaches since 2013 to the later cough/pyrexia/arthralgia group; pyrexia is described at recurrence, not explicitly in the initial 2013 group."
+      ],
+      [
+        "linkage",
+        "R27",
+        "made a satisfactory recovery with no postoperative complications and was transferred",
+        "Reference associates uncomplicated surgical recovery with postoperative medication response, although recovery is stated before transfer for that medication."
+      ]
+    ],
+    "judge_review": [
+      [
+        "misread_output",
+        "Her serum carcinoembryonic antigen and carbohydrate antigen 19-9 were not elevated",
+        "The fine-tuned fidelity reason claims elevated tumor markers, but F17 correctly says Not elevated. The dose and unsupported neurological symptoms remain genuine errors."
+      ]
+    ]
+  },
+  {
+    "case_id": "validation:937",
+    "probes": [
+      [
+        "age",
+        "Age sixty-six",
+        "A 66-year-old male",
+        "S:B06",
+        "S:F03"
+      ],
+      [
+        "sex",
+        "Male patient",
+        "A 66-year-old male",
+        "S:B07",
+        "S:F04"
+      ],
+      [
+        "history",
+        "Diabetes, hypercholesterolemia and hypertension",
+        "history of diabetes, hypercholesterolemia and hypertension",
+        "P:B08",
+        "S:F05"
+      ],
+      [
+        "investigation",
+        "Normal baseline ECG",
+        "The baseline electrocardiography [] and cardiac examination were normal.",
+        "O",
+        "P:F10"
+      ],
+      [
+        "investigation",
+        "No hypokinesis on echocardiography",
+        "Echocardiography revealed no hypo kinesis of all ventricular walls",
+        "O",
+        "X:F09 F14"
+      ],
+      [
+        "investigation",
+        "EF 70 percent",
+        "ejection fraction of 70%",
+        "O",
+        "S:F14"
+      ],
+      [
+        "investigation",
+        "No significant cardiac biomarker alterations",
+        "did not show any significant alterations of cardiac biomarkers",
+        "P:B04",
+        "S:F16"
+      ],
+      [
+        "procedure",
+        "Percutaneous LAD revascularization",
+        "the patient was subjected to percutaneous revascularization of the LAD",
+        "O",
+        "S:F19"
+      ]
+    ],
+    "findings": [
+      [
+        "baseline",
+        "unsupported",
+        "B10",
+        "percutaneous revascularization of the LAD",
+        "Replaces the actual intervention with Craniovascularization."
+      ],
+      [
+        "baseline",
+        "placement",
+        "B13 B17 B21",
+        "coronary computed tomography",
+        "Represents coronary anatomy/imaging as symptom entries and MSCT as a dose."
+      ],
+      [
+        "finetuned",
+        "assertion_status",
+        "F09 F14",
+        "no hypo kinesis of all ventricular walls",
+        "Creates a positive hypokinesis symptom despite a negative echo finding elsewhere in the same output."
+      ],
+      [
+        "finetuned",
+        "chronology",
+        "F08",
+        "A 64-slice coronary computed tomography (MSCT, GE, USA) was performed two days after admission",
+        "Moves the CT timing onto the presenting chest pain."
+      ],
+      [
+        "finetuned",
+        "linkage",
+        "F20",
+        "There was a severe calcified, diffuse lesion in the proximal and middle LAD",
+        "Uses the pre-procedure coronary lesion as the reaction to revascularization."
+      ]
+    ],
+    "reference_review": [],
+    "judge_review": [
+      [
+        "false_unsupported",
+        "He was considered with probably stable angina.",
+        "The baseline judge calls stable-angina context unsupported; the note explicitly considers probable stable angina, although the output drops the uncertainty."
+      ],
+      [
+        "false_unsupported",
+        "The distal LCX proceeded into the left posterior atrioventricular groove",
+        "The fine-tuned judge calls extra coronary anatomy unsupported because it is absent from the reference. Much of that anatomy is in the source; misclassification and any altered anatomy should be assessed separately."
+      ]
+    ]
+  },
+  {
+    "case_id": "validation:1953",
+    "probes": [
+      [
+        "age",
+        "Age seventy-six",
+        "A 76-year-old woman",
+        "S:B07",
+        "S:F03"
+      ],
+      [
+        "sex",
+        "Female patient",
+        "A 76-year-old woman",
+        "S:B08",
+        "S:F04"
+      ],
+      [
+        "history",
+        "No prior ischemic heart disease or heart failure",
+        "without histories of cardiovascular risks such as ischemic heart disease and heart failure",
+        "S:B09",
+        "S:F05"
+      ],
+      [
+        "symptom",
+        "Squeezing character of chest pain",
+        "Her chest pain was characterized by a squeezing sensation",
+        "S:B17",
+        "O"
+      ],
+      [
+        "symptom",
+        "Chest pain lasts less than half an hour",
+        "lasted for less than half an hour",
+        "S:B16 B17",
+        "S:F08"
+      ],
+      [
+        "investigation",
+        "Blood pressure 110/60",
+        "initial blood pressure was 110/60 mm Hg",
+        "P:B21 B24",
+        "O"
+      ],
+      [
+        "investigation",
+        "ST depression V5/V6 and LVH",
+        "ST depression in leads V5 and V6 and left ventricular hypertrophy",
+        "P:B32 B35",
+        "O"
+      ],
+      [
+        "investigation",
+        "No significant coronary luminal stenosis",
+        "No significant luminal stenosis was observed in both the left and right coronary arteries.",
+        "O",
+        "O"
+      ]
+    ],
+    "findings": [
+      [
+        "baseline",
+        "unsupported",
+        "B06 B11",
+        "without histories of cardiovascular risks such as ischemic heart disease and heart failure and use of medications",
+        "Adds prescribed medication without a documented treatment and assigns it to surgery."
+      ],
+      [
+        "baseline",
+        "unsupported",
+        "B17",
+        "unrelated to exercise",
+        "Adds Seated to the symptom context. Duration and non-exertional character themselves are supported."
+      ],
+      [
+        "baseline",
+        "placement",
+        "B21 B25 B29 B32",
+        "Electrocardiography revealed",
+        "Vital signs, examination findings and ECG are presented as symptoms."
+      ],
+      [
+        "finetuned",
+        "unsupported",
+        "F09",
+        "Her chest pain was characterized by a squeezing sensation",
+        "Invents seizures as the details of chest pain."
+      ],
+      [
+        "finetuned",
+        "repetition",
+        "F06 F07 F09",
+        "was referred to our hospital because of chest pain",
+        "Unparsed output repeats chest-pain entries 79 times and the seizure detail 78 times, losing the examination/test sections."
+      ]
+    ],
+    "reference_review": [
+      [
+        "reference_omission",
+        "R08",
+        "unrelated to exercise and lasted for less than half an hour",
+        "Reference retains squeezing character but omits explicit non-exertional character and duration despite retained symptom fields being able to express them."
+      ]
+    ],
+    "judge_review": []
+  },
+  {
+    "case_id": "validation:1812",
+    "probes": [
+      [
+        "age",
+        "Infant patient, not mother age",
+        "A male infant",
+        "C:B03 B07",
+        "S:F03"
+      ],
+      [
+        "sex",
+        "Male infant",
+        "A male infant",
+        "S:B04",
+        "S:F04"
+      ],
+      [
+        "investigation",
+        "FVIII less than 0.01 U/mL",
+        "a FVIII level was ordered, which was very low at <0.01 U/mL",
+        "A:B20 B21 B22",
+        "S:F11 F12"
+      ],
+      [
+        "treatment",
+        "Packed red cells 20 cc/kg",
+        "a transfusion of 20 cc/kg of O Rh-negative packed red cells",
+        "O",
+        "O"
+      ],
+      [
+        "treatment",
+        "Initial recombinant FVIII 50 U/kg",
+        "initially treated with 50 U/kg of recombinant FVIII",
+        "P:B24",
+        "P:F21"
+      ],
+      [
+        "treatment",
+        "Repeat FVIII adjusted to 100 percent",
+        "His repeat doses were adjusted to bring his FVIII level to 100%.",
+        "O",
+        "O"
+      ],
+      [
+        "investigation",
+        "CT shows extensive subgaleal hematoma",
+        "CT) scan of the head revealed a large subgaleal hematoma",
+        "O",
+        "S:F14"
+      ],
+      [
+        "discharge",
+        "Discharged at one week after resolution on imaging",
+        "The infant was discharged at 1 week of age following a repeat head imaging confirming complete resolution",
+        "P:B08 B10",
+        "S:F22"
+      ]
+    ],
+    "findings": [
+      [
+        "baseline",
+        "entity_assignment",
+        "B03 B07",
+        "born via repeat caesarean section to a healthy 26-year-old woman",
+        "Uses maternal age 26 and repeat-CBC delay 12 as patient ages."
+      ],
+      [
+        "baseline",
+        "chronology",
+        "@\"time\": 1 week",
+        "Prior to the next blood test",
+        "Places pallor/tachycardia and fluid-wave findings at one week rather than before the scheduled repeat CBC."
+      ],
+      [
+        "baseline",
+        "linkage",
+        "B18 B19 B20 B21 B22",
+        "a hemoglobin level of 7.6 g/dL",
+        "Calls the abnormal repeat CBC normal and combines FVIII and CT labels/results."
+      ],
+      [
+        "finetuned",
+        "linkage",
+        "F19 F21",
+        "initially treated with 50 U/kg of recombinant FVIII",
+        "Places FVIII therapy under packed-cell transfusion reaction, losing a separate drug-dose event."
+      ],
+      [
+        "finetuned",
+        "chronology",
+        "F05 F06",
+        "Prior to the next blood test",
+        "The pallor/tachycardia symptom is paired with an initial-examination localized-hematoma detail; the later deterioration is not clearly distinguished."
+      ]
+    ],
+    "reference_review": [
+      [
+        "entity_assignment",
+        "R06 R07",
+        "was born via repeat caesarean section to a healthy 26-year-old woman",
+        "Lists maternal caesarean delivery under infant surgeries; birth context and maternal surgery should be distinguished in annotation rules."
+      ],
+      [
+        "temporal_ambiguity",
+        "R11",
+        "His examination now revealed a large palpable fluid wave",
+        "Attaches later fluid-wave progression to the initial localized-hematoma symptom without explicit timing separation."
+      ]
+    ],
+    "judge_review": [
+      [
+        "questionable_omission",
+        "was born via repeat caesarean section to a healthy 26-year-old woman",
+        "Judge counts lack of a caesarean surgery entry as an infant-model omission. The reference itself conflates maternal surgery with infant history; treat as annotation-policy issue."
+      ]
+    ]
+  },
+  {
+    "case_id": "validation:1630",
+    "probes": [
+      [
+        "age",
+        "Age seventy",
+        "A 70-year-old white man",
+        "S:B15",
+        "S:F03"
+      ],
+      [
+        "sex",
+        "Male patient",
+        "A 70-year-old white man",
+        "S:B16",
+        "S:F04"
+      ],
+      [
+        "history",
+        "Metastatic melanoma two years ago",
+        "metastatic melanoma initially diagnosed 2 years ago",
+        "S:B48",
+        "S:F05"
+      ],
+      [
+        "symptom",
+        "Joint symptoms progressed over four months",
+        "Over the next 4 months, his symptoms progressed",
+        "P:B08 B20",
+        "O"
+      ],
+      [
+        "treatment",
+        "Ibuprofen initially gave mild improvement",
+        "He initially took ibuprofen 800 mg three times daily with some mild improvement",
+        "S:B29 B32",
+        "C:F09 F27"
+      ],
+      [
+        "procedure",
+        "Prior Mohs procedure",
+        "he had a Mohs procedure with negative margins",
+        "S:B12 B49",
+        "S:F05"
+      ],
+      [
+        "treatment",
+        "Nivolumab plus ipilimumab followed by colitis hospitalization",
+        "After the second cycle of his immunotherapy he developed severe non-infectious colitis requiring hospitalization.",
+        "O",
+        "O"
+      ],
+      [
+        "treatment",
+        "Later single-agent nivolumab 240 mg",
+        "Single agent immunotherapy with nivolumab (240 mg every 2 weeks)",
+        "O",
+        "P:F22 F24"
+      ]
+    ],
+    "findings": [
+      [
+        "baseline",
+        "unsupported",
+        "B37",
+        "Dual therapy nivolumab",
+        "Replaces nivolumab with Levodopa while retaining immunotherapy dose/schedule."
+      ],
+      [
+        "baseline",
+        "placement",
+        "B08 B20 B33",
+        "his symptoms progressed to include both knees, both feet, and both hands",
+        "Symptom progression is called surgery and morning stiffness is medication."
+      ],
+      [
+        "finetuned",
+        "linkage",
+        "F16 F20",
+        "Wedge resection of the right lower lobe revealed metastatic melanoma with wild type BRAF and no C-KIT mutations.",
+        "Assigns tissue/mutation findings to PET/CT; the source PET/CT finding is nodules with FDG uptake."
+      ],
+      [
+        "finetuned",
+        "unsupported",
+        "F17 F18 F30",
+        "Wedge resection of the right lower lobe",
+        "Adds Echolithogram and epidural steroid, neither stated in this note."
+      ],
+      [
+        "finetuned",
+        "contradiction",
+        "F09 F27",
+        "with some mild improvement, but at the time of presentation, it offered no relief",
+        "Reverses initial ibuprofen benefit to no relief and adds a 1.5-year response interval."
+      ],
+      [
+        "finetuned",
+        "placement",
+        "F21 F23 F28",
+        "Single agent immunotherapy with nivolumab",
+        "Immunotherapy appears as a diagnostic test, while stiffness appears as a treatment."
+      ]
+    ],
+    "reference_review": [
+      [
+        "truncated_source_inference",
+        "R25",
+        "was started 4 months before",
+        "Reference completes the truncated relative time as before current presentation. Plausible, but the supplied text does not contain the endpoint."
+      ]
+    ],
+    "judge_review": [
+      [
+        "false_omission",
+        "Wedge resection of the right lower lobe revealed metastatic melanoma",
+        "The fine-tuned reason says expected surgeries are omitted. F05 explicitly names Mohs and wedge resection in history; this is section placement, not absent procedure content."
+      ]
+    ]
+  },
+  {
+    "case_id": "validation:1388",
+    "probes": [
+      [
+        "age",
+        "Age fifty-four",
+        "A 54-year-old Caucasian male",
+        "S:B03",
+        "S:F03"
+      ],
+      [
+        "sex",
+        "Male patient",
+        "A 54-year-old Caucasian male",
+        "P:B07",
+        "S:F04"
+      ],
+      [
+        "history",
+        "Prior astrocytoma treated with chemoradiation",
+        "anaplastic astrocytoma previously treated with chemoradiation",
+        "S:B05",
+        "S:F05"
+      ],
+      [
+        "admission",
+        "Hemorrhage prompted admission",
+        "intraparenchymal hemorrhage for which the patient was admitted",
+        "O",
+        "X:F02 F17"
+      ],
+      [
+        "symptom",
+        "Two seizure-like episodes that morning",
+        "two seizure-like episodes earlier that morning",
+        "P:@two seizure-like episodes earlier that morning",
+        "S:F01 F06"
+      ],
+      [
+        "investigation",
+        "Doppler pseudoaneurysm with bidirectional flow",
+        "left anterior temporal scalp with bidirectional flow",
+        "O",
+        "S:F22"
+      ],
+      [
+        "treatment",
+        "Discharged on seizure prophylaxis",
+        "discharged on seizure prophylaxis",
+        "O",
+        "S:F25"
+      ],
+      [
+        "chronology",
+        "Increasing pain four days after discharge",
+        "Four days following discharge, the patient represented with complaints of increasing pain",
+        "O",
+        "O"
+      ]
+    ],
+    "findings": [
+      [
+        "baseline",
+        "placement",
+        "B04 B06",
+        "A 54-year-old Caucasian male",
+        "Uses ethnicity as sex and chemoradiation as surgery. Male is present in contextual text."
+      ],
+      [
+        "baseline",
+        "repetition",
+        "@\"surgeries\": [\"chemoradiation\", \"chemoradiation\"",
+        "previously treated with chemoradiation",
+        "Loops historical chemoradiation until the unparsed output is truncated."
+      ],
+      [
+        "finetuned",
+        "linkage",
+        "F02 F17",
+        "intraparenchymal hemorrhage for which the patient was admitted",
+        "Main admission reason becomes scalp bulge, while CT result elsewhere correctly links hemorrhage to admission."
+      ],
+      [
+        "finetuned",
+        "linkage",
+        "F23 F24",
+        "previously treated with chemoradiation",
+        "Historical cancer treatment becomes a current treatment with no focal deficits as its response."
+      ]
+    ],
+    "reference_review": [
+      [
+        "causal_overstatement",
+        "R32",
+        "The patient was subsequently discharged on seizure prophylaxis in stable condition",
+        "The reference treatment-response field associates stable discharge with prophylaxis but the note does not attribute absence of deficits/pain to its effect."
+      ]
+    ],
+    "judge_review": [
+      [
+        "false_unsupported",
+        "the second episode, which occurred in the parking lot of the emergency department",
+        "The fine-tuned judge calls parking-lot chronology unsupported; the parking-lot second episode is explicit."
+      ],
+      [
+        "internal_inconsistency",
+        "The following day, a clinical examination revealed",
+        "One fidelity reason describes the next-day doubled mass as later doubled mass four days after discharge, conflating two distinct source events."
+      ]
+    ]
+  },
+  {
+    "case_id": "validation:128",
+    "probes": [
+      [
+        "age",
+        "Age forty-two",
+        "A 42 year-old woman",
+        "P:B03",
+        "S:F03"
+      ],
+      [
+        "sex",
+        "Female patient",
+        "A 42 year-old woman",
+        "P:B04",
+        "S:F04"
+      ],
+      [
+        "symptom",
+        "Dry cough for ten months",
+        "intermittent dry cough of ten months duration",
+        "O",
+        "S:F01 F07"
+      ],
+      [
+        "symptom",
+        "No fever or dyspnea on exertion",
+        "No fever, chest tightness, bone pain, anorexia, dyspnea on exertion or body weight loss",
+        "P:B02 B05",
+        "S:F08"
+      ],
+      [
+        "procedure",
+        "CT-guided biopsy refused",
+        "A CT-guided biopsy was recommended but the patient refused to undergo this procedure.",
+        "X:B12 B26 B18",
+        "C:F19 F20"
+      ],
+      [
+        "procedure",
+        "VATS biopsy performed",
+        "A biopsy through video-assisted thoracoscopic surgery (VATS) was then indicated",
+        "O",
+        "P:F28 F29"
+      ],
+      [
+        "investigation",
+        "Plasma-cell kappa-positive/lambda-negative pathology belongs to VATS tissue",
+        "These tumor cells stained positively for kappa light chains",
+        "C:B15 B18 B26",
+        "C:F19 F20"
+      ],
+      [
+        "investigation",
+        "Bronchoscopy no endobronchial lesion",
+        "a bronchoscopic examination revealed no endobronchial lesion or abnormal secretions",
+        "P:B09",
+        "S:F24"
+      ]
+    ],
+    "findings": [
+      [
+        "baseline",
+        "assertion_status",
+        "B12 B26 B27",
+        "the patient refused to undergo this procedure",
+        "Correct refusal appears in an admission fragment, but CT biopsy is also listed as performed treatment with VATS incision details."
+      ],
+      [
+        "baseline",
+        "linkage",
+        "B15 B18",
+        "microscopic examination showed a solid mass made up mostly of plasma cells",
+        "Attributes tissue staining/pathology to bronchoscopy as well as CT biopsy rather than the performed VATS wedge biopsy."
+      ],
+      [
+        "baseline",
+        "unsupported",
+        "B17 B21",
+        "A 3 cm working incision and a 1 cm scope port",
+        "Invents 15-minute and 10-minute procedure durations."
+      ],
+      [
+        "finetuned",
+        "assertion_status",
+        "F19 F20",
+        "the patient refused to undergo this procedure",
+        "Attaches positive tumor stains to refused CT biopsy."
+      ],
+      [
+        "finetuned",
+        "unsupported",
+        "F32",
+        "She took some medicines at a local clinic to control her cough.",
+        "Invents a medicine name Mucine oil; only unnamed medicines are given in the source."
+      ],
+      [
+        "finetuned",
+        "placement",
+        "F10 F12 F15 F17",
+        "A pulmonary function test showed a mild restrictive ventilatory defect.",
+        "Uses admission timing as location and diagnostic procedures as symptoms."
+      ]
+    ],
+    "reference_review": [
+      [
+        "reference_omission",
+        "@\"treatments\":[]",
+        "She took some medicines at a local clinic to control her cough.",
+        "Empty treatments excludes a documented unnamed medicine course; lack of drug name should not imply no treatment."
+      ],
+      [
+        "temporal_ambiguity",
+        "R02",
+        "blood-tinged sputum appeared one month prior to hospital admission",
+        "Reference promotes a temporal presentation detail to admission reason; plausible but no explicit causal admission statement is supplied."
+      ]
+    ],
+    "judge_review": [
+      [
+        "reference_absence_not_falsehood",
+        "She took some medicines at a local clinic to control her cough.",
+        "Expected empty treatments should not make all local-clinic medication mentions false. The invented Mucine oil identity remains unsupported."
+      ]
+    ]
+  },
+  {
+    "case_id": "validation:725",
+    "probes": [
+      [
+        "age",
+        "Age nine",
+        "B is a 9-year-old African boy",
+        "S:B07",
+        "S:F03"
+      ],
+      [
+        "sex",
+        "Male patient",
+        "B is a 9-year-old African boy",
+        "S:B08",
+        "S:F04"
+      ],
+      [
+        "history",
+        "Born at term after normal pregnancy",
+        "born at term after a normal pregnancy",
+        "P:B09 B10",
+        "S:F05"
+      ],
+      [
+        "investigation",
+        "ENT and audiometry no abnormality",
+        "ENT) exploration and audiometry were performed at the age of 4 years old without any abnormalities",
+        "P:B20 B21",
+        "O"
+      ],
+      [
+        "treatment",
+        "Risperidone 2 mg/day ineffective",
+        "Risperidone was initiated at 2 mg/day but without any efficacy.",
+        "O",
+        "O"
+      ],
+      [
+        "investigation",
+        "Extensive screen found no organic cause",
+        "no organic cause was retrieved",
+        "O",
+        "S:F17 F18"
+      ],
+      [
+        "treatment",
+        "Aripiprazole 15 mg/day",
+        "Aripiprazole was introduced at 15 mg/day",
+        "S:B32 B33",
+        "S:F19 F20"
+      ],
+      [
+        "treatment",
+        "Combination poorly tolerated with sedation and worse psychosis",
+        "severe sedation and a worsening of delusions and hallucinations",
+        "P:B24",
+        "S:F23"
+      ]
+    ],
+    "findings": [
+      [
+        "baseline",
+        "contradiction",
+        "B13 B15",
+        "He quickly presented a delay in language and motor skills.",
+        "Rapid onset of skills reverses developmental delay, although another field retains delay."
+      ],
+      [
+        "baseline",
+        "unsupported",
+        "B04 B34",
+        "Aripiprazole was introduced at 15 mg/day",
+        "Adds two-hour timing to medication/admission events."
+      ],
+      [
+        "baseline",
+        "truncated_completion",
+        "B25 B36",
+        "overdose at 835 ng/",
+        "Completes the truncated concentration unit as ng/day."
+      ],
+      [
+        "finetuned",
+        "truncated_completion",
+        "F25",
+        "overdose at 835 ng/",
+        "Completes the truncated concentration unit as ng/mL; plausible medically but unsupported by the supplied text."
+      ],
+      [
+        "finetuned",
+        "placement",
+        "F24 F25",
+        "The aripiprazole plasma level showed an overdose",
+        "Creates the laboratory plasma level as a separate treatment item."
+      ]
+    ],
+    "reference_review": [
+      [
+        "causal_overstatement",
+        "R23",
+        "Aripiprazole was introduced at 15 mg/day and associated with levomepromazine",
+        "Reference assigns sedation/worsening solely to levomepromazine although the source describes combination intolerance and an aripiprazole overdose."
+      ]
+    ],
+    "judge_review": [
+      [
+        "false_unsupported",
+        "due to severe physical and psychological violence within the family and severe neglected care",
+        "The fine-tuned judge calls neglect/violence and academic history unsupported; those facts are explicit in the note, though the current admission reason is still misassigned."
+      ],
+      [
+        "false_unsupported",
+        "His family background is marked with a psychotic disorder in one first-degree relative.",
+        "The baseline judge calls foster-care/family-history details invented; B05/B12 have direct support. Some other history values remain wrong."
+      ]
+    ]
+  },
+  {
+    "case_id": "validation:302",
+    "probes": [
+      [
+        "age",
+        "Age fifty-two",
+        "A 52-year-old married woman",
+        "P:B09",
+        "S:F03"
+      ],
+      [
+        "sex",
+        "Female patient",
+        "A 52-year-old married woman",
+        "X:B04 B07",
+        "S:F04"
+      ],
+      [
+        "treatment",
+        "Dosulepin 150 mg",
+        "dosulepin (previously called dothiepin) and she recovered with a dose of 150 mg daily",
+        "P:B12",
+        "S:F19 F20"
+      ],
+      [
+        "treatment",
+        "Sweating associated with dosulepin",
+        "she recovered with a dose of 150 mg daily, but developed sweating as a side effect",
+        "P:B12",
+        "C:F06 F07"
+      ],
+      [
+        "treatment",
+        "Amitriptyline associated with racing heart",
+        "amitriptyline, but she complained of a racing heart while taking it",
+        "P:B15",
+        "X:F09 F10 F25"
+      ],
+      [
+        "treatment",
+        "Mirtazapine titrated 15 to 45 mg",
+        "She was started on mirtazapine and the dose was increased from 15 to 45 mg nocte.",
+        "O",
+        "P:F18"
+      ],
+      [
+        "treatment",
+        "Venlafaxine XL 75 mg",
+        "venlafaxine XL 75 mg nocte",
+        "P:B16",
+        "S:F26 F27"
+      ],
+      [
+        "treatment",
+        "Lofepramine 140 mg",
+        "lofepramine 140 mg nocte",
+        "O",
+        "S:F29 F30"
+      ]
+    ],
+    "findings": [
+      [
+        "baseline",
+        "entity_assignment",
+        "B05 B06 B07 B08",
+        "the patient's mother had been hospitalized thrice",
+        "Turns mother/sister history into patient admissions and adds male sex and numeric ages unrelated to those relatives."
+      ],
+      [
+        "baseline",
+        "placement",
+        "B12 B14 B15 B16",
+        "She was treated with dosulepin",
+        "Medication histories are entire admission reasons rather than treatment events."
+      ],
+      [
+        "finetuned",
+        "linkage",
+        "F06 F07 F22 F20",
+        "she recovered with a dose of 150 mg daily, but developed sweating as a side effect",
+        "Transfers dosulepin sweating and dose/benefit to methysergide."
+      ],
+      [
+        "finetuned",
+        "linkage",
+        "F09 F10 F25",
+        "amitriptyline, but she complained of a racing heart while taking it",
+        "Gives racing heart to dosulepin in symptoms while also correctly associating it with amitriptyline in treatment."
+      ],
+      [
+        "finetuned",
+        "unsupported",
+        "F24 F12",
+        "A neurologist thought her migraine might respond to amitriptyline",
+        "Dopamine is not an amitriptyline dose; mouth pain is not stated anywhere in the note."
+      ]
+    ],
+    "reference_review": [
+      [
+        "reference_omission",
+        "R04",
+        "was suffering from recurrent depressive disorder",
+        "History retains only migraine and omits the main recurrent depressive disorder and extensive family history, though the retained physiological-context field could contain them."
+      ]
+    ],
+    "judge_review": [
+      [
+        "reference_absence_not_falsehood",
+        "was suffering from recurrent depressive disorder",
+        "Judge labels depressive-disorder history wrong because the reference history only says migraine; it is source-supported, although the output also loses/misplaces other history."
+      ],
+      [
+        "false_omission",
+        "She was started on mirtazapine and the dose was increased from 15 to 45 mg nocte.",
+        "The fine-tuned reason calls the mirtazapine course omitted, but F18 carries its name, dose escalation and response under symptom details. It is mainly a placement and time-assignment problem."
+      ]
+    ]
+  },
+  {
+    "case_id": "validation:1241",
+    "probes": [
+      [
+        "age",
+        "Age seventy-two",
+        "A 72-year-old man",
+        "P:B03",
+        "S:F03"
+      ],
+      [
+        "sex",
+        "Male patient",
+        "A 72-year-old man",
+        "P:B04",
+        "S:F04"
+      ],
+      [
+        "admission",
+        "Balance disorder prompted admission",
+        "was admitted to another hospital due to a balance disorder",
+        "S:B01 B02",
+        "X:F01 F02"
+      ],
+      [
+        "history",
+        "Bullous pemphigoid and monoclonal antibody history",
+        "history of bullous pemphigoid treated with a monoclonal antibody",
+        "P:B05",
+        "O"
+      ],
+      [
+        "treatment",
+        "Ampicillin 3 g",
+        "ampicillin 3 g/6 h",
+        "O",
+        "S:F20"
+      ],
+      [
+        "treatment",
+        "TMP/SMX 160/800 mg",
+        "Trimethoprim/sulfamethoxazole 160/800 mg/8 h was added.",
+        "O",
+        "C:F22 F23"
+      ],
+      [
+        "chronology",
+        "Afebrile after 48 hours of target therapy",
+        "Forty-eight hours after the initiation of target therapy, the patient was afebrile.",
+        "O",
+        "C:F21"
+      ],
+      [
+        "investigation",
+        "Tissue PCR identifies Listeria DNA",
+        "using PCR identified Listeria monocytogenes DNA",
+        "O",
+        "S:F17 F18"
+      ]
+    ],
+    "findings": [
+      [
+        "baseline",
+        "placement",
+        "B06 B08 B10 B12",
+        "his blood cultures grew Listeria monocytogenes",
+        "Examination, imaging and blood-culture facts are encoded as separate admission reasons."
+      ],
+      [
+        "baseline",
+        "placement",
+        "B07",
+        "history of bullous pemphigoid",
+        "Repeats a history sentence in age fields."
+      ],
+      [
+        "finetuned",
+        "linkage",
+        "F23",
+        "Trimethoprim/sulfamethoxazole 160/800 mg/8 h was added.",
+        "TMP/SMX dosage is replaced with the names of three different antibiotics."
+      ],
+      [
+        "finetuned",
+        "chronology",
+        "F07 F21 F24",
+        "Twenty days later, he showed progressive clinical and neurologic deterioration",
+        "Shifts the 20-day deterioration and TMP/SMX addition anchor from treatment to CT, and the afebrile response from 48 hours to five weeks."
+      ],
+      [
+        "finetuned",
+        "placement",
+        "F06",
+        "left hemiplegia with no sensory deficits",
+        "Uses lesion hemisphere as the location of the combined hallucination/disinhibition/hemiplegia symptom group."
+      ]
+    ],
+    "reference_review": [
+      [
+        "discharge_scope",
+        "R38",
+        "Trimethoprim/sulfamethoxazole therapy was discontinued, and the patient was",
+        "The supplied note ends before completing the patient disposition; the reference labels a treatment-course summary as discharge without documented discharge. The improvement itself is stated earlier."
+      ],
+      [
+        "causal_overstatement",
+        "R37",
+        "Ampicillin, gentamicin, and vancomycin therapy was stopped while trimethoprim/sulfamethoxazole therapy was continued.",
+        "Lesion reduction occurred during combined therapy; the reference attributes it as TMP/SMX reaction without establishing sole causation."
+      ]
+    ],
+    "judge_review": []
+  }
+]

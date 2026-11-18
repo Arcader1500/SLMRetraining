@@ -1,0 +1,14 @@
+{
+  "model": "gpt-6-luna",
+  "backend": "codex",
+  "codex_cli_version": "codex-cli 0.166.0",
+  "python": "3.13.9",
+  "system": "Windows",
+  "reasoning_effort": "CLI default; user config ignored",
+  "gemini_enabled": false,
+  "token_logprobs_available": false,
+  "source_sha256": {
+    "scripts\\codex_deepeval_judge.py": "a71192c43a7da619de5cb912b10d53ad1e13a724ae444ad0807b1666de91c4de",
+    "scripts\\run_deepeval.py": "5b9f1d008c94d408dc97f9102c961cfc6f44429ada754aa0f3977db5231cf95a"
+  }
+}

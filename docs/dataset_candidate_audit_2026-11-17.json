@@ -1,0 +1,242 @@
+{
+  "dataset": "stindardlogic/medical-clinical-reasoning-sft-100k",
+  "revision": "c01f314cb453876617c407cad1c8557be2a5d09e",
+  "file_sha256": "95625116118d5f587cfcfb31321a3c4e55a13b7219e5da1e861edbd67fb7f6ed",
+  "rows": 100000,
+  "bytes": 655694817,
+  "unique_exact_prompts": 15,
+  "unique_normalized_prompts": 15,
+  "unique_answers": 15,
+  "unique_prompt_answer_pairs": 15,
+  "categories": {
+    "clinical_documentation": 13333,
+    "clinical_reasoning": 20000,
+    "treatment_planning": 6667,
+    "mental_health": 6666,
+    "radiology_interpretation": 6667,
+    "pharmacology": 19999,
+    "preventive_medicine": 6667,
+    "emergency_medicine": 6667,
+    "cardiology": 6667,
+    "medical_coding": 6667
+  },
+  "answer_characters": {
+    "min": 4315,
+    "median": 6003.0,
+    "max": 8649
+  },
+  "prompt_frequencies": [
+    {
+      "prompt_sha256": "a0b3dc01554bc047fdf4d1afbb40985fa73d819071012b6beea690f029ddcd36",
+      "count": 6667
+    },
+    {
+      "prompt_sha256": "7bf208added18787189343ca492da57c5f8bc03a18360f65ee302269f2d231d0",
+      "count": 6667
+    },
+    {
+      "prompt_sha256": "5af8d83accff1daacc9725253c1041dff461dd88f3a12f086db0b63bef5e14d8",
+      "count": 6667
+    },
+    {
+      "prompt_sha256": "2910268c54a16ce45b2e0f0ee1de0653791a6471ec83aaca90a3c7b3c9a07f63",
+      "count": 6667
+    },
+    {
+      "prompt_sha256": "c6dc9e308522f227cb15cf23e05c9093494382f901f9b382ace84122bac7f46a",
+      "count": 6667
+    },
+    {
+      "prompt_sha256": "3d73b8a8e40a333042f7ba2bbc9c32762bea584e235a2147948f3b56cdfa2869",
+      "count": 6667
+    },
+    {
+      "prompt_sha256": "287748913329e0f31d27c68f3964b5cdbed6e62b7bb3a7776a36dce87b6d4bc7",
+      "count": 6667
+    },
+    {
+      "prompt_sha256": "74a9e15d13ece54bf8b64ab024054f02bfa7f97c73d0e852940d0896ef81a136",
+      "count": 6667
+    },
+    {
+      "prompt_sha256": "3b9723edce8572db268f7d8d5b08793b8090b608ba5c99f73d38b90d5c46c048",
+      "count": 6667
+    },
+    {
+      "prompt_sha256": "0b65bcf3c2a1eeee7cfe87893fe7d80a4b6c9ac7b483dc27703d5804fe912781",
+      "count": 6667
+    },
+    {
+      "prompt_sha256": "d442623d98db5fec213f266ce5e38ec7012fd30b546ba9f1ff8f61179168ba49",
+      "count": 6666
+    },
+    {
+      "prompt_sha256": "817112df8ecccdf55581bbff33afee8f126845eb3f5dfc7768edbd7af3338339",
+      "count": 6666
+    },
+    {
+      "prompt_sha256": "97d9a6cedbb6352564b6a6e782c93146d791636738fb299638f939ffd66c40e1",
+      "count": 6666
+    },
+    {
+      "prompt_sha256": "541f085f8d81b69fd9c3618842685838368c24ffc302e88fb36f284000b0328d",
+      "count": 6666
+    },
+    {
+      "prompt_sha256": "c16f74b88ac786a8d9ab04fa2e3d21ba32420d65bc9dae132ad390958eb9ce6a",
+      "count": 6666
+    }
+  ],
+  "examples": [
+    {
+      "metadata": {
+        "category": "clinical_documentation",
+        "context": "discharge summary writing"
+      },
+      "prompt_sha256": "d442623d98db5fec213f266ce5e38ec7012fd30b546ba9f1ff8f61179168ba49",
+      "answer_sha256": "0665faa7a8edac80909e69bf26d43f53bbea60abe31a4c76cf5ce39eded6747f",
+      "prompt_characters": 189,
+      "answer_characters": 8649
+    },
+    {
+      "metadata": {
+        "category": "clinical_reasoning",
+        "context": "pediatric fever workup"
+      },
+      "prompt_sha256": "a0b3dc01554bc047fdf4d1afbb40985fa73d819071012b6beea690f029ddcd36",
+      "answer_sha256": "e40946b4b7c53eed62e676d556bc7d6c8a99c112b0f9a30096f6f1304538bcdd",
+      "prompt_characters": 335,
+      "answer_characters": 6178
+    },
+    {
+      "metadata": {
+        "category": "treatment_planning",
+        "context": "diabetes management"
+      },
+      "prompt_sha256": "7bf208added18787189343ca492da57c5f8bc03a18360f65ee302269f2d231d0",
+      "answer_sha256": "c06ee77f81baf81aa9d9f24649ba755d509821e8683b74fb5f3a0901c0663430",
+      "prompt_characters": 229,
+      "answer_characters": 6011
+    },
+    {
+      "metadata": {
+        "category": "clinical_reasoning",
+        "context": "differential diagnosis"
+      },
+      "prompt_sha256": "5af8d83accff1daacc9725253c1041dff461dd88f3a12f086db0b63bef5e14d8",
+      "answer_sha256": "18142d73e38c07b35ccf44c7bbfef616bb88640293bd405a852a91817b25db22",
+      "prompt_characters": 394,
+      "answer_characters": 4315
+    },
+    {
+      "metadata": {
+        "category": "mental_health",
+        "context": "depression screening and management"
+      },
+      "prompt_sha256": "817112df8ecccdf55581bbff33afee8f126845eb3f5dfc7768edbd7af3338339",
+      "answer_sha256": "ca7fbed2661d58fca69990523d6c214a4db31bae46c843c119df62008af88d76",
+      "prompt_characters": 236,
+      "answer_characters": 7460
+    },
+    {
+      "metadata": {
+        "category": "radiology_interpretation",
+        "context": "chest X-ray interpretation"
+      },
+      "prompt_sha256": "2910268c54a16ce45b2e0f0ee1de0653791a6471ec83aaca90a3c7b3c9a07f63",
+      "answer_sha256": "8075f16e1ad316b9aa38301dcd0bbcddc86e27f90f41ce8766428b9cf313e254",
+      "prompt_characters": 275,
+      "answer_characters": 5469
+    },
+    {
+      "metadata": {
+        "category": "clinical_documentation",
+        "context": "SOAP note writing"
+      },
+      "prompt_sha256": "c6dc9e308522f227cb15cf23e05c9093494382f901f9b382ace84122bac7f46a",
+      "answer_sha256": "36e52fd7aa66380dc9670449ea9d5378a4eb5b08e6d375147c79b36e377a89cb",
+      "prompt_characters": 321,
+      "answer_characters": 6437
+    },
+    {
+      "metadata": {
+        "category": "pharmacology",
+        "context": "anticoagulation management"
+      },
+      "prompt_sha256": "97d9a6cedbb6352564b6a6e782c93146d791636738fb299638f939ffd66c40e1",
+      "answer_sha256": "d6941210c9cfc2fa1ebb6409e624c57d340abad7e3282717528627fbdf532ffd",
+      "prompt_characters": 207,
+      "answer_characters": 6003
+    },
+    {
+      "metadata": {
+        "category": "clinical_reasoning",
+        "context": "abdominal pain differential"
+      },
+      "prompt_sha256": "541f085f8d81b69fd9c3618842685838368c24ffc302e88fb36f284000b0328d",
+      "answer_sha256": "879b9152c60e5f9181c07cb926c4448080510ff6cd3b300700e57138958dd9d6",
+      "prompt_characters": 308,
+      "answer_characters": 4979
+    },
+    {
+      "metadata": {
+        "category": "pharmacology",
+        "context": "drug interactions and prescribing"
+      },
+      "prompt_sha256": "3d73b8a8e40a333042f7ba2bbc9c32762bea584e235a2147948f3b56cdfa2869",
+      "answer_sha256": "7ff00f19e33cfb3c7d93b373747b66a97fa980b593c509f714cda786dac22093",
+      "prompt_characters": 235,
+      "answer_characters": 4357
+    },
+    {
+      "metadata": {
+        "category": "preventive_medicine",
+        "context": "cancer screening guidelines"
+      },
+      "prompt_sha256": "287748913329e0f31d27c68f3964b5cdbed6e62b7bb3a7776a36dce87b6d4bc7",
+      "answer_sha256": "75b9cba9fa6c9eb4cbdf820cb61d6b03afbba0fb6a70af0775a0636791cf638d",
+      "prompt_characters": 235,
+      "answer_characters": 6171
+    },
+    {
+      "metadata": {
+        "category": "emergency_medicine",
+        "context": "sepsis recognition and management"
+      },
+      "prompt_sha256": "74a9e15d13ece54bf8b64ab024054f02bfa7f97c73d0e852940d0896ef81a136",
+      "answer_sha256": "caa639549a0dac4f128ffece72cff7275cb413fde981ef5b7a3a08a5974650c4",
+      "prompt_characters": 288,
+      "answer_characters": 5353
+    },
+    {
+      "metadata": {
+        "category": "cardiology",
+        "context": "EKG interpretation"
+      },
+      "prompt_sha256": "3b9723edce8572db268f7d8d5b08793b8090b608ba5c99f73d38b90d5c46c048",
+      "answer_sha256": "2319439d4fbb26783f1a4e6f9f9ef5e40d5f88950c2cc818db13c354854168a5",
+      "prompt_characters": 225,
+      "answer_characters": 4740
+    },
+    {
+      "metadata": {
+        "category": "medical_coding",
+        "context": "ICD-10 and CPT coding"
+      },
+      "prompt_sha256": "0b65bcf3c2a1eeee7cfe87893fe7d80a4b6c9ac7b483dc27703d5804fe912781",
+      "answer_sha256": "acf0a117a9990d5e068d258f3c4d72a63435da97bb150d282767bf88b589e233",
+      "prompt_characters": 276,
+      "answer_characters": 4529
+    },
+    {
+      "metadata": {
+        "category": "pharmacology",
+        "context": "opioid prescribing and pain management"
+      },
+      "prompt_sha256": "c16f74b88ac786a8d9ab04fa2e3d21ba32420d65bc9dae132ad390958eb9ce6a",
+      "answer_sha256": "9b7f2b810f1ca2067dbde10dd0c29d06e5e3e4a86802bf4996747c6283c81a05",
+      "prompt_characters": 238,
+      "answer_characters": 7426
+    }
+  ]
+}
