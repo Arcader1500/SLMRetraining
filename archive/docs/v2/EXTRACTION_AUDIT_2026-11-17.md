@@ -1,3 +1,5 @@
+> Archived historical document. For current status, read [the session handoff](../../../docs/SESSION_HANDOFF.md). Older launch instructions below are superseded.
+
 # Source-grounding audit and next-experiment decision
 
 Date: 2026-11-17. Decision: preserve the completed fine-tuning demonstration; do not extend the current ten-section task unchanged. Prefer a short, evidence-backed extraction task. Reject the proposed `stindardlogic/medical-clinical-reasoning-sft-100k` revision as a training/generalization benchmark.
@@ -8,10 +10,10 @@ This is an assistant-performed source-consistency review of **all 30** frozen v2
 
 Inputs:
 
-- [Frozen validation JSONL](../prepared_clinical_dataset/eeff5efa1619f198/validation.jsonl).
-- [Fine-tuned predictions](../results_v2/comparison/finetuned__gen_rp_1.08/generations.json), including the two invalid outputs as raw text.
-- [Generation diagnostics](../results_v2/comparison/finetuned__gen_rp_1.08/generation_diagnostics.json).
-- [Saved case scores](../results_v2/comparison/case_comparison.csv) and [aggregate scores](../results_v2/comparison/summary_comparison.csv).
+- [Frozen validation JSONL](../../../prepared_clinical_dataset/eeff5efa1619f198/validation.jsonl).
+- [Fine-tuned predictions](../../../results_v2/comparison/finetuned__gen_rp_1.08/generations.json), including the two invalid outputs as raw text.
+- [Generation diagnostics](../../../results_v2/comparison/finetuned__gen_rp_1.08/generation_diagnostics.json).
+- [Saved case scores](../../../results_v2/comparison/case_comparison.csv) and [aggregate scores](../../../results_v2/comparison/summary_comparison.csv).
 
 All 30 original validation records were independently fetched from `AmareshHebbar/clinical-summarizer-sft` at revision `4ca20e0a38cc9235045c973b5503d49952fd1fac`. Their message hashes and user-note text match the stored source hashes and notes. The incomplete endings discussed below were already present in that source dataset. No generation was repaired, and no frozen artifact was modified.
 

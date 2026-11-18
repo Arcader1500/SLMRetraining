@@ -3,7 +3,7 @@
 **Completed 18 November 2026:** the remaining 88 adapter cases were resumed
 without retraining, preserving the original 12 predictions and diagnostics.
 All 100 cases are scored; the full executed notebook and results are local, and
-the T4 runtime has been released. See [SESSION_HANDOFF.md](SESSION_HANDOFF.md).
+the T4 runtime has been released. See [SESSION_HANDOFF.md](../SESSION_HANDOFF.md).
 
 This pilot implements the 17 November 2026 handoff's reduced schema before the
 5,000-example experiment. The original v2 artifacts remain unchanged.
@@ -33,13 +33,13 @@ validity and fence-stripped validity remain separate.
 
 ## Local artifacts
 
-- [Preparation and experiment notebooks](../notebooks/v3_1325/): canonical notebooks
+- [Preparation and experiment notebooks](../../notebooks/v3_1325): canonical notebooks
   receive actual executed cell outputs; Colab MCP also saves `_output.ipynb`
   snapshots. Preparation through MCP omits execution counts; later notebooks
   executed through nbclient retain real execution counts.
-- [Prepared data](../prepared_clinical_dataset/e80798edebe5aba5/): JSONL, DatasetDict,
+- [Prepared data](../../prepared_clinical_dataset/e80798edebe5aba5): JSONL, DatasetDict,
   manifest, projection audit, rejection log and reference inspection sample.
-- [Results](../results_v3/): baseline predictions/diagnostics/scores, adapter and
+- [Results](../../results_v3): baseline predictions/diagnostics/scores, adapter and
   training checks/logs, comparison predictions/scores/showcase, execution status.
 
 Per-case outputs are saved during generation. Each completed stage is downloaded
@@ -91,11 +91,11 @@ that comparison.
 All six code cells in notebook 03 completed with real execution counts and no
 cell errors. Local rescoring matches every saved aggregate metric. The original
 12 predictions and diagnostics are unchanged. See
-[completion_checks.json](../results_v3/comparison/completion_checks.json).
+[completion_checks.json](../../results_v3/comparison/completion_checks.json).
 
 Five adapter reports fail parsing. Eight additional parseable reports place
 keys under disallowed parents; see
-[schema_violations.json](../results_v3/comparison/schema_violations.json).
+[schema_violations.json](../../results_v3/comparison/schema_violations.json).
 Thus raw JSON validity and full schema compliance remain distinct.
 Fact F1 uses the existing fence-stripped parser; invalid whole objects receive
 zero fact credit. No LLM judging or clinical adjudication was added.

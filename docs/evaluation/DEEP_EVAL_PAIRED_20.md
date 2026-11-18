@@ -48,13 +48,13 @@ Sampling does not filter on validity or score: all 20 selected baseline outputs
 and three selected fine-tuned outputs fail raw JSON validity. Outputs are saved
 verbatim. The frozen files are:
 
-- [selection_manifest.json](../results_v3/deepeval_20/selection_manifest.json): IDs,
+- [selection_manifest.json](../../results_v3/deepeval_20/selection_manifest.json): IDs,
   seed, source hashes, comparison-contract digest and metric instructions.
-- [paired_cases.json](../results_v3/deepeval_20/paired_cases.json): original notes,
+- [paired_cases.json](../../results_v3/deepeval_20/paired_cases.json): original notes,
   references, both outputs and saved deterministic format/fact metrics.
-- [judge_settings.json](../results_v3/deepeval_20/judge_settings.json): execution
+- [judge_settings.json](../../results_v3/deepeval_20/judge_settings.json): execution
   switches, enabled providers and explicit judge model names.
-- [04_deepeval_paired_20.ipynb](../notebooks/v3_1325/04_deepeval_paired_20.ipynb):
+- [04_deepeval_paired_20.ipynb](../../notebooks/v3_1325/04_deepeval_paired_20.ipynb):
   preparation and later opt-in execution.
 
 Preparation validates the saved references/prompts against the frozen dataset,

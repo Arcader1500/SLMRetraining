@@ -29,5 +29,5 @@ Verify saved results without inference:
 .venv/Scripts/python.exe -m scripts.check_remaining_validation
 ```
 
-See [the protocol](../../docs/REMAINING_VALIDATION_EVALUATION.md) for immutable
+See [the protocol](../../docs/evaluation/REMAINING_VALIDATION_EVALUATION.md) for immutable
 selection/rubric provenance, atomic checkpoint behavior and final combined files.

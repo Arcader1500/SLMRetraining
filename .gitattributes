@@ -20,3 +20,4 @@ scripts/prepare_v3_dataset.py -text
 scripts/run_colab_notebook.py -text
 scripts/run_deepeval.py -text
 scripts/source_grounded_rubric.py -text
+"archive/docs/v2/Clinical JSON Extraction_ Fine-Tuning Process and Results.html" -text

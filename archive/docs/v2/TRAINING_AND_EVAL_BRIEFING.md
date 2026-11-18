@@ -1,6 +1,8 @@
+> Archived historical document. For current status, read [the session handoff](../../../docs/SESSION_HANDOFF.md). Older launch instructions below are superseded.
+
 # Clinical JSON Extraction Fine-Tuning Briefing (`gemma-3-270m-it`)
 
-> **Status:** Complete. All three runs (`01_baseline_eval.ipynb`, `02_finetune.ipynb`, `03_eval_and_compare.ipynb`) completed on remote Colab Tesla T4 (`v2-t4`), with saved cell outputs stored locally inside each notebook and artifacts archived under [results_v2/](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/results_v2/).
+> **Status:** Complete. All three runs (`01_baseline_eval.ipynb`, `02_finetune.ipynb`, `03_eval_and_compare.ipynb`) completed on remote Colab Tesla T4 (`v2-t4`), with saved cell outputs stored locally inside each notebook and artifacts archived under [results_v2/](../../../results_v2).
 
 ---
 
@@ -36,7 +38,7 @@ Fine-tune a compact `270M`-parameter instruction model (`google/gemma-3-270m-it`
 ---
 
 ## 4. Dataset `v2` (`eeff5efa1619f198`) Cleaning & Splitting Pipeline
-Generated deterministically via [scripts/prepare_v2_dataset.py](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/scripts/prepare_v2_dataset.py) while preserving `v1` (`prepared_clinical_dataset/900825a06d38a006/`) untouched.
+Generated deterministically via [scripts/prepare_v2_dataset.py](../../../scripts/prepare_v2_dataset.py) while preserving `v1` (`prepared_clinical_dataset/900825a06d38a006/`) untouched.
 
 ### Deterministic Cleaning Rules Applied (`clean_reference_v2`)
 1. **Safe syntax normalization only:** Strip outer markdown fences if present; escape unescaped control characters (`strict=False` fallback only); reject duplicate JSON keys, `NaN`/`Infinity`, non-dict roots, or unexpected top-level keys (`no_duplicate_keys`, `reject_constant`).
@@ -77,7 +79,7 @@ Generated deterministically via [scripts/prepare_v2_dataset.py](file:///c:/Users
 
 ## 6. Three-Epoch Fine-Tuning Run (`02_finetune.ipynb` on `Tesla T4`)
 
-- **Run:** `finetuned_v2` ([results_v2/finetuned_v2/](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/results_v2/finetuned_v2/))
+- **Run:** `finetuned_v2` ([results_v2/finetuned_v2/](../../../results_v2/finetuned_v2))
 - **Training samples:** `1,325` (`v2` train split, SHA-256 `f3bc7f7bfdc3fbec...`), validated on `30` held-out cases (`min_supervised_tokens`: `59` train / `355` val)
 - **Pre-flight forward/backward check (`train:64`, `1,651` tokens):** Initial loss `1.7577`, finite gradients verified, peak VRAM `8.338 GiB` on `Tesla T4`
 - **Training runtime:** `2,419.11s` (`40.32 min`, `1.643 samples/s`, `498` optimizer steps across `3.0` epochs)
@@ -99,7 +101,7 @@ Validation loss decreased monotonically across all three epochs (`0.5574 → 0.5
 
 ## 7. Baseline vs Fine-Tuned Evaluation (`v2` 30-Case Validation Set)
 
-Full 4-way evaluation from [results_v2/comparison/summary_comparison.csv](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/results_v2/comparison/summary_comparison.csv):
+Full 4-way evaluation from [results_v2/comparison/summary_comparison.csv](../../../results_v2/comparison/summary_comparison.csv):
 
 | Model | Decoding | Raw JSON Valid | Valid (Fence-Stripped) | Exact Top-Level Keys (10/10) | Exact Key Match | Budget Hits (`2048`) | Matched / Ref (Gen) | Strict Value F1 | Soft Value F1 | Mean Tokens | `5-gram ≥ 3` |
 |---|---|---:|---:|---:|---:|---:|---|---:|---:|---:|---:|
@@ -118,7 +120,7 @@ Full 4-way evaluation from [results_v2/comparison/summary_comparison.csv](file:/
 
 ## 8. Qualitative Side-by-Side Showcase (`gen_rp_1.08`)
 
-Generated directly in [results_v2/comparison/showcase_examples.md](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/results_v2/comparison/showcase_examples.md):
+Generated directly in [results_v2/comparison/showcase_examples.md](../../../results_v2/comparison/showcase_examples.md):
 
 ### 1. Best Improvement: `validation:1161` (49-year-old male, solitary fibrous tumor)
 - **`base` (`gen_rp_1.08`):** `raw_valid=False` (markdown-fenced), `exact_keys=False`, **Strict F1 = `0.000`**, **Soft F1 = `0.038`**, `904` tokens. Hallucinated top-level keys `"surgery"`, `"consolidation"`, `"preoperative"`, `"resection"`, `"treatment"` and fabricated ISO dates (`"admission_date": "2023-10-27"`).
@@ -138,9 +140,9 @@ Generated directly in [results_v2/comparison/showcase_examples.md](file:///c:/Us
 ---
 
 ## 9. Deliverable Map
-- [notebooks/01_baseline_eval.ipynb](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/notebooks/01_baseline_eval.ipynb) — Baseline inference & evaluation on `v2` (`base` with `rp_1.00` and `gen_rp_1.08`), with saved cell outputs.
-- [notebooks/02_finetune.ipynb](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/notebooks/02_finetune.ipynb) — 3-epoch FP32 LoRA fine-tuning on cleaned `v2`, with saved milestone/VRAM/epoch outputs.
-- [notebooks/03_eval_and_compare.ipynb](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/notebooks/03_eval_and_compare.ipynb) — Fine-tuned evaluation, 4-way Base vs Fine-Tuned table, and side-by-side showcase, with saved cell outputs.
-- [prepared_clinical_dataset/eeff5efa1619f198/](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/prepared_clinical_dataset/eeff5efa1619f198/) — Frozen `v2` dataset (`1,325` train / `30` val).
-- [results_v2/](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/results_v2/) — Downloaded `baseline/`, `finetuned_v2/` (best `checkpoint-498` adapter + logs), and `comparison/` (`summary_comparison.csv`, `case_comparison.csv`, `showcase_examples.md`).
-- [archive/](file:///c:/Users/atharva.bedekar/PycharmProjects/SLMRetraining/archive/) — Preserved Phase 0/1 runs and legacy notebooks.
+- [notebooks/01_baseline_eval.ipynb](../../../notebooks/01_baseline_eval.ipynb) — Baseline inference & evaluation on `v2` (`base` with `rp_1.00` and `gen_rp_1.08`), with saved cell outputs.
+- [notebooks/02_finetune.ipynb](../../../notebooks/02_finetune.ipynb) — 3-epoch FP32 LoRA fine-tuning on cleaned `v2`, with saved milestone/VRAM/epoch outputs.
+- [notebooks/03_eval_and_compare.ipynb](../../../notebooks/03_eval_and_compare.ipynb) — Fine-tuned evaluation, 4-way Base vs Fine-Tuned table, and side-by-side showcase, with saved cell outputs.
+- [prepared_clinical_dataset/eeff5efa1619f198/](../../../prepared_clinical_dataset/eeff5efa1619f198) — Frozen `v2` dataset (`1,325` train / `30` val).
+- [results_v2/](../../../results_v2) — Downloaded `baseline/`, `finetuned_v2/` (best `checkpoint-498` adapter + logs), and `comparison/` (`summary_comparison.csv`, `case_comparison.csv`, `showcase_examples.md`).
+- [archive/](../..) — Preserved Phase 0/1 runs and legacy notebooks.

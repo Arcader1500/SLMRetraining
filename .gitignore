@@ -16,3 +16,8 @@ wheels/
 # env
 .env.local
 
+
+# Local evaluation and code-graph caches
+.deepeval/
+.code-review-graph/
+.venv-*/

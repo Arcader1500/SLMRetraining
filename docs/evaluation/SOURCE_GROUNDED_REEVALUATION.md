@@ -21,7 +21,7 @@ Verification passed: all 80 unique score keys and case IDs, recomputed means and
 paired deltas, unchanged frozen inputs and original scores, and six offline
 tests. Headless Chrome checks passed at desktop and 390px mobile widths, including
 both rubric tables and exact per-case saved reasons, with no page errors or
-external requests. The [updated HTML report](Clinical_Extraction_Phases_1_and_2.html)
+external requests. The [updated HTML report](../Clinical_Extraction_Phases_1_and_2.html)
 contains both runs and the reliability notes below.
 
 ## Protocol
@@ -31,7 +31,7 @@ contains both runs and the reliability notes below.
 - Judge: authenticated Codex CLI, `gpt-6-luna`, DeepEval 4.3.4. Gemini remains
   disabled. No extraction inference, retraining or output repair.
 - New version: `source_grounded_v2`; full instructions are in
-  [source_grounded_rubric.py](../scripts/source_grounded_rubric.py) and the saved
+  [source_grounded_rubric.py](../../scripts/source_grounded_rubric.py) and the saved
   run contract. All three evaluation parameters are explicitly included:
   `input`, `actual_output`, `expected_output`.
 - Two metrics, now named **Source fidelity** and **Source coverage** to identify
@@ -57,6 +57,8 @@ manifest retains its original reference-only preparation instructions; the new
 run contract records the new instructions and the hash of those same pairs.
 
 ## Execution and verification
+
+Current maintenance note: the historical checker below now detects a runner-source hash mismatch because later remaining-80 checkpoint/resume changes superseded the code used for this run. Original run provenance and scores remain unchanged. See the [current handoff](../SESSION_HANDOFF.md) and [full-100 evaluation](REMAINING_VALIDATION_EVALUATION.md).
 
 ```powershell
 .venv/deepeval-tools/Scripts/python.exe -u -m scripts.run_deepeval --run --backend codex --source-grounded
