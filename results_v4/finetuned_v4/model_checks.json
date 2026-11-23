@@ -1,0 +1,8 @@
+{
+  "longest_case_id": "train:1114",
+  "total_tokens": 1459,
+  "initial_loss": 1.6065199375152588,
+  "finite_gradients": true,
+  "peak_allocated_gib": 7.499,
+  "gpu": "Tesla T4"
+}

@@ -9,8 +9,10 @@ Source: `AmareshHebbar/clinical-summarizer-sft`, revision `4ca20e0a38cc9235045c9
 | V1 | [900825a06d38a006](../../prepared_clinical_dataset/900825a06d38a006/) | 1,325 / 10 | Historical pilots |
 | V2 | [eeff5efa1619f198](../../prepared_clinical_dataset/eeff5efa1619f198/) | 1,325 / 30 | Cleaned full schema |
 | V3 | [e80798edebe5aba5](../../prepared_clinical_dataset/e80798edebe5aba5/) | 1,325 / 100 | Current reduced schema and rebuilt prompts |
+| V2 / 5,000 | [3f8f10951130896b](../../prepared_clinical_dataset/3f8f10951130896b/) | 5,000 / 100 | Scaled full schema on frozen 100 validation notes |
+| V3 Regenerated | [ca7b6e90c1019441](../../prepared_clinical_dataset/ca7b6e90c1019441/) | 1,325 / 100 | Source-regenerated (`gemini-3.8-flash`), repaired & programmatically verified 30-path labels on exact V3 IDs |
 
-`latest.json`, `latest_v2.json` and `latest_v3.json` are version-specific pointers. The unqualified pointer still identifies v1; use `latest_v3.json` for v3. Each version contains JSONL, a saved DatasetDict and a manifest. Cleaning/rejection logs and projection audits belong alongside their dataset, not in a separate mutable clean copy.
+`latest.json`, `latest_v2.json`, `latest_v3.json` and `latest_v3_regenerated.json` are version-specific pointers. The unqualified pointer still identifies v1; use `latest_v3.json` for frozen v3 (`e80798edebe5aba5`) and `latest_v3_regenerated.json` for the cleaned regenerated v3 dataset (`ca7b6e90c1019441`). Each version contains JSONL, a saved DatasetDict and a manifest. Cleaning/rejection logs and projection audits belong alongside their dataset, not in a separate mutable clean copy.
 
 ## Cleaning stages
 

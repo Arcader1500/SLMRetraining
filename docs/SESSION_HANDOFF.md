@@ -1,5 +1,27 @@
 # Current session handoff
 
+## V3 regenerated & verified dataset packaged (`ca7b6e90c1019441`) — Ready for training
+
+Updated 23 November 2026. All 1,325 training rows and 100 frozen validation rows from `v3` (`e80798edebe5aba5`) have been regenerated from the raw clinical notes using `gemini-3.8-flash`, deterministically scrubbed, repaired against teacher self-talk/synonym-loop/test-result defects, and packaged into a versioned dataset ready for a controlled label-quality SFT run:
+
+- **Packaged dataset:** [prepared_clinical_dataset/ca7b6e90c1019441](../prepared_clinical_dataset/ca7b6e90c1019441/) ([manifest.json](../prepared_clinical_dataset/ca7b6e90c1019441/manifest.json); pointer in [latest_v3_regenerated.json](../prepared_clinical_dataset/latest_v3_regenerated.json)). Frozen `v3` (`e80798edebe5aba5` / `latest_v3.json`) is preserved untouched.
+  - **Split hashes (`split_sha256`):**
+    - `train` (`1,325` rows): `20586bf1b07c8268e697711c6bbbb28ea8245b51d96ca50fa2da3780d6850d31`
+    - `validation` (`100` rows, exact same IDs & order): `a331a668a35210b00a75026a9f8be9eecc8fd2532e3eb4a33a181c2d0d6167be`
+  - **Token lengths & T4 FP32 VRAM safety:**
+    - Train `total_tokens`: mean `1,136.2`, `p99 = 1,337`, **`max = 1,459`** (`0/1,425` rows exceed the `1,651`-token T4 FP32 `8.34 GiB` watermark; `0/1,425` exceed `2,048`).
+    - Train `supervised_tokens`: mean `465.7` (`max = 734`); `617,008` supervised tokens/epoch (`1,851,024` across 3 epochs / 498 steps).
+- **Tier 1 offline diagnostics & verification artifacts** (in [prepared_clinical_dataset/v3_regenerated_gemini_3_8_flash/](../prepared_clinical_dataset/v3_regenerated_gemini_3_8_flash/)):
+  - [tier1_offline_diagnostics.json](../prepared_clinical_dataset/v3_regenerated_gemini_3_8_flash/tier1_offline_diagnostics.json):
+    1. **Audit 1 (512-token window):** `29/33` (`87.9%`) audited linkage/status/chronology errors occurred at $\Delta_{\text{tokens}} \le 512$ (median `376`), while `treatments` (`51% > 512` from note midpoint) and `discharge` (`79% > 512`) cross the 512-token local window boundary.
+    2. **Audit 2 (`gen_rp=1.08` entity suppression):** Late-section entities (`medical examinations`, `diagnosis tests`, `treatments`) whose anchor token was already emitted in an early section suffer a **`~10 percentage point` recall drop** (`55.56% vs 65.22%` on `v3` refs; `47.03% vs 57.01%` on regenerated refs), and prior token emission preceded **`10/20` (`50%`)** of audited linkage swaps.
+    3. **Audit 3 (Structural token overhead):** **`34.91%`** of assistant tokens are static JSON syntax (`20.19%`) and schema keys (`14.72%`), leaving `65.09%` semantic leaf values.
+    4. **Audit 4 (Programmatic label verification & repair):** Cut unanchored `discharge` completions on truncated notes from `80 -> 8`, recovered dropped drug schedules/vitals, repaired `304` cases with teacher self-talk/synonym-stuffing or missing test/exam results ([clean_and_repair_report.json](../prepared_clinical_dataset/v3_regenerated_gemini_3_8_flash/clean_and_repair_report.json)), and unified symptom negation across `203` cases so denied symptoms are never represented as bare affirmative nouns ([final_verification_report.json](../prepared_clinical_dataset/v3_regenerated_gemini_3_8_flash/final_verification_report.json), [post_repair_catch_audit.json](../prepared_clinical_dataset/v3_regenerated_gemini_3_8_flash/post_repair_catch_audit.json)).
+- **Recommended next steps in the training session (strict variable isolation):**
+  1. **Zero-retraining decoding test on existing `v3` adapter:** Evaluate `gen_rp=1.00` (with fallback retry only on budget-hit loops) on the 100 frozen validation cases to isolate how much binding improves without `gen_rp=1.08` suppression.
+  2. **Controlled label-quality SFT run (`ca7b6e90c1019441`):** Train `google/gemma-3-270m-it` on `ca7b6e90c1019441` using the **exact same `v3` LoRA recipe** (`FP32`, `r=16`, `alpha=32`, uniform loss, 3 epochs / 498 steps) and evaluate with `source_grounded_v2` to isolate the pure supervision-quality gain over `e80798edebe5aba5`.
+  3. **Follow-up ablations:** Test leaf-value loss weighting (`0.5` syntax/key weight, `1.0` leaf weight) and Full FT vs. LoRA `r=16` as separate one-variable experiments.
+
 ## V2 / 5,000 generation and LLM evaluations complete
 
 Updated 23 November 2026. The checkpoint-1875 adapter ran on all 100 frozen

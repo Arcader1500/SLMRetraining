@@ -1,0 +1,48 @@
+{
+  "status": "training_in_progress",
+  "session": "clinical-v4-1325",
+  "runtime_endpoint": "gpu-t4-s-usw1b1-2uc6ifh6h0m37",
+  "runtime_url": "https://8080-gpu-t4-s-usw1b1-2uc6ifh6h0m37-b.us-west1.prod.r.colab.dev",
+  "remote_root": "/content/clinical_v4",
+  "dataset_version": "ca7b6e90c1019441",
+  "source_v3_version": "e80798edebe5aba5",
+  "train_examples": 1325,
+  "validation_examples": 100,
+  "epochs": 3,
+  "expected_optimizer_steps": 498,
+  "gpu": "Tesla T4",
+  "dtype": "float32",
+  "pipeline_pid": 1288,
+  "training_notebook_pid": 1583,
+  "completed_stages": [
+    "01_baseline_eval"
+  ],
+  "current_stage": "02_finetune",
+  "label_checks": {
+    "train": {
+      "rows": 1325,
+      "min_supervised_tokens": 108,
+      "max_total_tokens": 1459
+    },
+    "validation": {
+      "rows": 100,
+      "min_supervised_tokens": 146,
+      "max_total_tokens": 1363
+    }
+  },
+  "model_checks": {
+    "longest_case_id": "train:1114",
+    "total_tokens": 1459,
+    "initial_loss": 1.6065199375152588,
+    "finite_gradients": true,
+    "peak_allocated_gib": 7.499,
+    "gpu": "Tesla T4"
+  },
+  "last_observed_training_step": 110,
+  "last_observed_training_epoch": 0.6642,
+  "last_observed_training_loss": 0.4434,
+  "training_checkpoint_steps_backed_up_locally": [],
+  "ping_interval_seconds": 540,
+  "last_successful_ping_utc": "2026-11-23T09:07:09+00:00",
+  "next_check_planned_utc": "2026-11-23T09:16:09+00:00"
+}
