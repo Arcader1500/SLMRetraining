@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Abdominal pain for 1 month",
+        "source_quote": "was admitted to our hospital due to abdominal pain for 1 month.",
+        "explanation": "The visit motivation matches the stated reason for admission."
+      },
+      {
+        "field_path": "/medical examinations/3/result",
+        "label_excerpt": "Indicated mesenchymal tumor, adenomatoid tumor possible",
+        "source_quote": "The results indicated that it was a mesenchymal tumor and adenomatoid tumor was possible.",
+        "explanation": "The label preserves the preliminary examination result and its uncertainty."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Localized well-differentiated benign mesothelioma",
+        "source_quote": "The final pathology of paraffin confirmed it as localized well-differentiated benign mesothelioma",
+        "explanation": "The diagnosis test result matches the final pathology described."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Gravida 4, para 2, history of tubal ligation, history of uterine myoma diagnosed 15 years ago",
+        "source_quote": "The patient had a history of tubal ligation and denied asbestos exposure.",
+        "explanation": "The history omits the explicitly documented denial of asbestos exposure, a relevant negative history item.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Exploratory laparotomy, total hysterectomy, and bilateral adnexectomy",
+        "source_quote": "Therefore, the patient underwent exploratory laparotomy.",
+        "explanation": "Exploratory laparotomy is documented, and the note separately states that total hysterectomy and bilateral adnexectomy were performed. The combined procedure entry is supported.",
+        "category": "unsupported_addition",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "12 × 11.4 × 9.8 cm heterogeneous mass behind the uterus, with a cystic dark area of 3.4 × 2.3 cm",
+        "source_quote": "ultrasonography showed a 12 × 11.4 × 9.8 cm heterogeneous mass behind the uterus, with a cystic dark area of 3.4 × 2.3 cm",
+        "explanation": "The ultrasound result matches the source measurements and finding.",
+        "category": "wrong_linkage_value",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "Candidate issue: the physiological context omits the source-stated denial of asbestos exposure. The other reviewed items are supported; no additional material discrepancy is established."
+  }
+}

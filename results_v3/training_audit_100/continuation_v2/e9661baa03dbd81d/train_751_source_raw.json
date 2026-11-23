@@ -1,0 +1,108 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The source explicitly includes depression in the patient's health history, but the label's physiological context omits it.",
+        "source_quote": "Her health history included a patent foramen ovale, two superficial venous thrombi, and a history of depression.",
+        "field_path": "/patient medical history/physiological context"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The symptom detail preserves the sudden inability but omits the exertional activity during which it began, a relevant onset context.",
+        "source_quote": "The patient reported that she had been doing pushups during a televised total body workout and was suddenly unable to lift herself up.",
+        "field_path": "/symptoms/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/1/name",
+        "label_excerpt": "",
+        "source_quote": "She was bradycardic at 25 to 39 beats per minute.",
+        "explanation": "The clinically significant bradycardia is absent from the label's medical examinations.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/0/details",
+        "label_excerpt": "",
+        "source_quote": "Her symptoms were initially believed to be a vasovagal reaction.",
+        "explanation": "The initial diagnostic impression is a source-supported clinical interpretation that is not represented in the label.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "patent foramen ovale, two superficial venous thrombi",
+        "source_quote": "Her social history included being a former smoker for eight years, consuming two to three drinks per week, and completing high intensity exercise six times a week (mostly aerobic).",
+        "explanation": "The label omits the patient's stated smoking, alcohol, and exercise history, which are relevant background facts expressible in physiological context.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Both candidate omissions are supported. The label also omits marked bradycardia, the initial vasovagal impression, and relevant social history."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The note explicitly includes depression in the patient's health history, but it is absent from the label's physiological context.",
+        "source_quote": "Her health history included a patent foramen ovale, two superficial venous thrombi, and a history of depression.",
+        "field_path": "/patient medical history/physiological context"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The label preserves the sudden inability detail. The activity context is explicit, but its omission from the detail field is not independently material because the source does not establish that the activity caused the inability.",
+        "source_quote": "The patient reported that she had been doing pushups during a televised total body workout and was suddenly unable to lift herself up.",
+        "field_path": "/symptoms/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "patent foramen ovale, two superficial venous thrombi",
+        "source_quote": "Her social history included being a former smoker for eight years, consuming two to three drinks per week, and completing high intensity exercise six times a week (mostly aerobic).",
+        "explanation": "Relevant social history is stated in the note but absent from the physiological context label.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      },
+      {
+        "field_path": "/medical examinations/0/name",
+        "label_excerpt": "orthostatic vital signs",
+        "source_quote": "The emergency room plan was to monitor orthostatic vital signs and aggressively hydrate overnight.",
+        "explanation": "The label names the planned monitoring but omits that orthostatic vital signs were to be monitored, which is a material detail of the stated plan.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      },
+      {
+        "field_path": "/diagnosis tests/0/test",
+        "label_excerpt": "head computerized tomography (CT)",
+        "source_quote": "A head computerized tomography (CT) demonstrated that there was no acute intracranial event.",
+        "explanation": "The label omits that the initial CT occurred before the repeat CT the next day, a material chronology anchor for the changing diagnostic results.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      }
+    ],
+    "summary": "The depression omission is confirmed; the workout context candidate is downgraded because the label retains the symptom detail and causation is not established. Relevant social history and material plan and test chronology details are also missing."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "uncontrolled hypertension and new-onset seizures",
+        "source_quote": "with uncontrolled hypertension and new-onset seizures",
+        "explanation": "The stated visit motivation is supported by the note."
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "end-stage renal disease (ESRD) secondary to lupus nephritis on daily ambulatory intermittent peritoneal dialysis",
+        "source_quote": "end-stage renal disease (ESRD) secondary to lupus nephritis on daily ambulatory intermittent peritoneal dialysis",
+        "explanation": "The label preserves the source's relevant medical history."
+      },
+      {
+        "field_path": "/symptoms/1/name of symptom",
+        "label_excerpt": "tonic-clonic seizure activity",
+        "source_quote": "an episode of tonic-clonic seizure activity lasting three to four minutes",
+        "explanation": "The symptom is directly documented."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Developed after switching from clonidine to lisinopril",
+        "source_quote": "Two weeks prior to this admission the patient's hypertensive medication had been switched in a tapered fashion from clonidine to lisinopril",
+        "explanation": "This details field implies the grouped headaches, blurred vision, nausea, and confusion developed after the medication switch. The note gives distinct symptom timings: some began five days before presentation and confusion developed during treatment twenty-four hours before admission. It does not establish that the grouped symptoms all followed the switch in the asserted way.",
+        "category": "wrong_linkage_value",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "Five days before presentation; twenty-four hours before hospital admission",
+        "source_quote": "Five days before presentation she had developed generalized headache, blurred vision and nausea",
+        "explanation": "The second time anchor refers to the later recurrent severe headaches and confusion, but the label groups all symptoms under one entry and can be read as assigning both anchors to that entire group. This is a potentially misleading temporal linkage, though the timings appear in the note.",
+        "category": "chronology",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/treatments/3/reaction to treatment",
+        "label_excerpt": "developed confusion",
+        "source_quote": "while being treated, she developed confusion",
+        "explanation": "The source supports confusion during treatment at the outside facility. Because the label records this as a reaction to combined treatment, the causal implication is uncertain; the note establishes temporal sequence, not that treatment caused confusion.",
+        "category": "negation_uncertainty",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "Candidate concerns relate to grouped symptom timing and implied causal or temporal links. The source directly supports the selected factual details; interpretation of the label's grouping is policy-sensitive."
+  }
+}

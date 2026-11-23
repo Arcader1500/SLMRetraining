@@ -1,0 +1,82 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 0,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The admission reason is supported by the note; this is a supported check, not a finding of error.",
+        "source_quote": "On examination, her brachial and radial pulses were weak, impalpable bilaterally and her BP was non-recordable manually.",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label includes the bilateral narrowing but omits the explicit negative retinal finding from the same ophthalmic examination. Material examination detail is lost.",
+        "source_quote": "However, no sign of arteritis was observed in the retina.",
+        "field_path": "/medical examinations/0/result"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The treatment entries omit stated administration details across the courses, including route and duration for methylprednisolone and stated frequencies for the medications. These are material treatment-course details.",
+        "source_quote": "The patient was started on methylprednisolone 500 mg IV for 3 days, tablet prednisone 25mg BD, tablet aspirin 75 mg OD, tablet methotrexate 20g weekly, capsule gabapentin 75 mg BD, tablet folic acid 5 mg OD, and tablet atorvastatin 20 mg HS.",
+        "field_path": "/treatments"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The source supports an overall response to treatment, while separate reactions are assigned to each medication. Because the source does not specify individual responses, this is an attribution ambiguity rather than a definite factual error.",
+        "source_quote": "The patient responded well to the treatment given",
+        "field_path": "/treatments/0/reaction to treatment"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Weak and impalpable brachial and radial pulses, non-recordable BP",
+        "source_quote": "In October of 2020, the patient noticed that her radial pulses were weak and she was admitted.",
+        "explanation": "The admission entry omits the explicit October 2020 date anchor. It is a material admission detail expressible in the existing schema.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient information/sex",
+        "label_excerpt": "female",
+        "source_quote": "negative family history for any autoimmune disease",
+        "explanation": "The label's patient information omits the explicit negative autoimmune family history, a relevant history fact that fits the existing patient information section.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "3 months starting in August 2019",
+        "source_quote": "started experiencing low-grade undocumented fever for 3 months in August 2019 which was continuous",
+        "explanation": "The symptom timing preserves the duration and start month but omits that the fever was continuous, a material temporal detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/1/time",
+        "label_excerpt": "Lasted 30 days and reoccurred 10 months later",
+        "source_quote": "This lasted 30 days and was relieved on its own, only to reoccur 10 months later.",
+        "explanation": "The claudication timing omits that the first episode resolved on its own. This is a source-stated symptom course detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Confirmed material omissions include the negative retinal finding, treatment-course details, admission timing, relevant negative family history, fever continuity, and spontaneous relief of the initial claudication episode. The overall treatment response is applied to individual medications, which is an attribution ambiguity."
+  },
+  "error": ""
+}

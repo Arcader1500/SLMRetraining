@@ -1,0 +1,53 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The source also reports a distinct neutrophil count that is absent from the white blood cell count result.",
+        "source_quote": "with white blood cell count at 20.4 cells/mm3 and neutrophils at 17.4 bil/L.",
+        "field_path": "/diagnosis tests/0/result"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The label omits the source-stated differential for the hemorrhagic occipital lesion, preserving less of its diagnostic uncertainty.",
+        "source_quote": "the differential diagnosis consisted of neoplasm, vascular malformation, or embolic infarction with hemorrhagic conversion.",
+        "field_path": "/diagnosis tests/4/result"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The reaction entry accurately records pain relief after ibuprofen. The noncardiac interpretation and ECG context relate to the troponin result and are assessed as a separate omission.",
+        "source_quote": "this was deemed to be noncardiac in nature as the patient's pain was relieved with ibuprofen and her EKG showed no acute findings.",
+        "field_path": "/treatments/0/reaction to treatment"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Elevated at 1.85",
+        "source_quote": "Troponin was elevated at 1.85; this was deemed to be noncardiac in nature as the patient's pain was relieved with ibuprofen and her EKG showed no acute findings.",
+        "explanation": "The result omits the source's interpretation of the troponin elevation as noncardiac and the stated pain-relief and ECG context.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/symptoms/0/location",
+        "label_excerpt": "Right knee, left shoulder, and bilateral thighs",
+        "source_quote": "arthralgias, most notably in her right knee, left shoulder, and bilateral thighs that made it difficult for her to ambulate.",
+        "explanation": "The label omits the reported functional impact of the arthralgias, which materially describes their severity.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      }
+    ],
+    "summary": "The neutrophil count and MRI differential are supported omissions. The treatment reaction is correctly represented; troponin interpretation and context belong with the troponin result. The arthralgias' impact on ambulation is also omitted."
+  }
+}

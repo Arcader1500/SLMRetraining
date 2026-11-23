@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Best-corrected visual acuity (BCVA) was 6/60 in the right eye",
+        "source_quote": "his best-corrected visual acuity (BCVA) was 6/60 in the right eye and 6/6 in the left.",
+        "explanation": "The right-eye acuity is supported; the label omits the left-eye acuity."
+      },
+      {
+        "field_path": "/medical examinations/2/result",
+        "label_excerpt": "Recent cilioretinal artery occlusion on the right, normal left fundus, white retinal oedema along the artery course leading into the fovea, no thrombi within the artery lumen, healthy optic discs bilaterally, no other peripheral retinal or vascular lesions",
+        "source_quote": "On fundoscopy, we found a recent cilioretinal artery occlusion on the right and a normal left fundus. White retinal oedema was present along the artery course leading into the fovea. No thrombi were seen within the artery lumen. The optic discs were healthy bilaterally and there were no other peripheral retinal or vascular lesions.",
+        "explanation": "The listed fundoscopy findings are supported by the note."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Confirmed neuroretinal thickening in the distribution of the cilioretinal artery of the right eye",
+        "source_quote": "An optical coherence tomography (OCT) scan confirmed neuroretinal thickening in the distribution of the cilioretinal artery of the right eye ().",
+        "explanation": "The OCT result and test linkage match the note."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Sudden visual loss in the right eye",
+        "source_quote": "He presented on the same day",
+        "explanation": "The note establishes a same-day presentation but gives no evidence of admission. The admission section asserts an event not established by the source.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Otherwise well with no other medical history",
+        "source_quote": "He admitted to smoking cannabis three times earlier in the day, before his vision loss.",
+        "explanation": "The physiological context omits the explicitly reported cannabis use before symptom onset, a material history detail.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label contains two material issues: an admission reason despite no admission evidence in the note, and omission of cannabis use before visual loss. The listed examination and investigation findings are source-supported."
+  }
+}

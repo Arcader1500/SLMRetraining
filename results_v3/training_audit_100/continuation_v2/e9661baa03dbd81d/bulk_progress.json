@@ -1,0 +1,10 @@
+{
+  "phase": "bulk",
+  "expected": 90,
+  "completed": 90,
+  "candidate_checkpointed": 0,
+  "remaining": 0,
+  "errors": 0,
+  "merged_supplemental": 2,
+  "status": "complete_candidate_and_source_reviews_validated"
+}

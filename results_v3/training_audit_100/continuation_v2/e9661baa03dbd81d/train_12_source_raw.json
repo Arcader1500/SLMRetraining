@@ -1,0 +1,37 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The label preserves the basic memory-gap distinction, but compresses exactly what she remembered before the episode and which witnessed events she could not recall. This is a possible material loss of chronology, not a contradiction.",
+        "source_quote": "she could remember having had the swab tested, then having paid for the test, having left the hospital, and reached the car after the procedure, but she could not remember the following events, including those witnessed by the by-standers",
+        "field_path": "/symptoms/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Mildly overweight (BMI 31.25), menopause at age 51",
+        "source_quote": "In particular, she did not smoke",
+        "explanation": "The label omits the explicitly stated non-smoking history, a clinically relevant risk-factor detail supported by the source.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "One hour after nasopharyngeal swab",
+        "source_quote": "This episode lasted for about two hours then reverted",
+        "explanation": "The symptom timing records onset after the swab but omits the episode's stated duration, a material course detail expressible in the symptom time field.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate identifies a plausible compression of the memory-gap boundaries. The label also omits the source-stated non-smoking history and the episode's approximately two-hour duration. The diagnosis-test projection drops are otherwise represented by the label's MRI finding and negative test results; no additional material omission is established."
+  }
+}

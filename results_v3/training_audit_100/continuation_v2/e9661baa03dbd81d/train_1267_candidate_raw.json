@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "Started approximately 1 month after chemotherapy, 2 years ago",
+        "source_quote": "gait disturbances that had started approximately 1 month after concluding a 4-cycle docetaxel-based chemotherapy for breast cancer 2 years ago",
+        "explanation": "The onset interval and two-year timing are supported."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Inconclusive, confirmed the presence of polyneuropathy",
+        "source_quote": "although inconclusive, confirmed the presence of polyneuropathy",
+        "explanation": "The result accurately preserves both the inconclusive nature and confirmation of polyneuropathy."
+      },
+      {
+        "field_path": "/medical examinations/1/result",
+        "label_excerpt": "Normal scores",
+        "source_quote": "Mini-Mental State Examination and verbal fluency tests revealed normal scores",
+        "explanation": "The normal cognitive test scores are supported."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms/1/time",
+        "label_excerpt": "Started almost at the same time as gait disturbances",
+        "source_quote": "Almost at the same time, the patient reported to have started with a light numbness of the extremities",
+        "explanation": "The note says numbness began almost at the same time as gait disturbance, but also says it was stable during the two years. The label omits this material course information.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Breast cancer treated with 4-cycle docetaxel-based chemotherapy 2 years ago",
+        "source_quote": "up to the present there had been no evidence of cancer relapse",
+        "explanation": "The relevant history omits the explicitly stated absence of cancer relapse to the present.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Two material omissions are identified: the stable two-year course of extremity numbness and the absence of cancer relapse to the present. Other sampled details are source-supported."
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "initial": {
+    "decision": "no_material_issue_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "68",
+        "source_quote": "A 68-year-old Caucasian woman",
+        "explanation": "The age matches the source."
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Hypertension, diabetes type 2",
+        "source_quote": "with hypertension and diabetes type 2",
+        "explanation": "Both conditions are explicitly stated."
+      },
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Re-resection had margins of more than 2 centimetres",
+        "source_quote": "a re-resection found place with margins of more than 2 centimetres",
+        "explanation": "The margin detail is supported."
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "No RLNM, no abnormalities in chest X-ray",
+        "source_quote": "Ultrasound of the right groin showed no regional lymph node metastasis (RLNM) and there were no abnormalities seen at the chest X-ray.",
+        "explanation": "Both negative examination results are stated."
+      }
+    ],
+    "findings": [],
+    "summary": "No material source-label discrepancy identified. The note ends mid-sentence and provides no explicit admission or discharge event."
+  }
+}

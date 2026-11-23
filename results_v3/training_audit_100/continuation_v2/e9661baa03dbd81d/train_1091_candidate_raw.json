@@ -1,0 +1,36 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Car accident",
+        "source_quote": "We report a 54-year old Caucasian female patient who was involved in a car accident.",
+        "explanation": "The stated visit motivation is supported by the note."
+      },
+      {
+        "field_path": "/diagnosis tests/2/result",
+        "label_excerpt": "Aneurysm of the infra-renal aorta with a dissection from the height of the second lumbar vertebral body to the iliac artery",
+        "source_quote": "the CT scan revealed an aneurysm of the infra-renal aorta with a dissection from the height of the second lumbar vertebral body to the iliac artery",
+        "explanation": "The CT result preserves the finding and its stated extent."
+      },
+      {
+        "field_path": "/treatments/1/reaction to treatment",
+        "label_excerpt": "Urine did not show any signs of macroscopic hematuria",
+        "source_quote": "At this time, urine did not show any signs of macroscopic hematuria.",
+        "explanation": "The label preserves the note's negative finding at catheter placement."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/patient medical history",
+        "label_excerpt": "",
+        "source_quote": "Both of the passengers were wearing their seatbelts correctly, and the female patient did not lose consciousness.",
+        "explanation": "The label omits the source-supported, clinically relevant negative that the patient did not lose consciousness. It could be retained in the existing physiological-context history field.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "One candidate material omission: the patient's explicitly documented absence of loss of consciousness is not represented. The finding remains a candidate for review."
+  }
+}

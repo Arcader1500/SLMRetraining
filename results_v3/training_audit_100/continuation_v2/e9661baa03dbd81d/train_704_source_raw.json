@@ -1,0 +1,55 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The label retains only “suspected prior myocardial infarction,” omitting that this was suggested by an abnormal ECG several years later and only retrospectively hypothesized to have occurred perioperatively. This is a possible loss of uncertainty and timing qualification.",
+        "source_quote": "An abnormal electrocardiogram noted several years later suggested a prior myocardial infarction, retrospectively hypothesized incurred perioperatively.",
+        "field_path": "/patient medical history/physiological context"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The increased T1 relaxation time is explicitly established before the note cuts off. The candidate itself says the label records only that supported fact and does not complete the unfinished measurement, so it identifies no discrepancy.",
+        "source_quote": "Native T1 mapping revealed an increased T1 relaxation time (",
+        "field_path": "/diagnosis tests/0/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "status-post gastric bypass surgery over ten years prior, hemodynamic instability postoperatively, acute kidney injury, improved renal function",
+        "source_quote": "Although her renal function improved, the underlying etiology of her postoperative complications remained unknown.",
+        "explanation": "The label omits that the cause of the postoperative hemodynamic instability and acute kidney injury remained unknown. This preserves a material qualification about the history and its complications.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "midcavity hypertrophy",
+        "source_quote": "maximal wall thickness 20 mm in the interventricular septum",
+        "explanation": "The CMR result omits the stated location and maximal thickness of the hypertrophy, a material structural measurement supported by the source.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "large mass in the aneurysmal apical segments consistent with thrombus",
+        "source_quote": "The aneurysmal apical segments contained a large (24 × 20 mm) mass",
+        "explanation": "The CMR result omits the stated mass dimensions (24 × 20 mm), a material measurement of the thrombus.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The suspected-infarction history loses its ECG, timing, and retrospective-hypothesis qualifications. The T1 candidate describes a source-supported label fact and is rejected as a finding. The label also omits the unknown etiology of the postoperative complications and material CMR measurements."
+  }
+}

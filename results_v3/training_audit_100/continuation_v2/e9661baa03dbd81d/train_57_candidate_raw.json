@@ -1,0 +1,74 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Presented with a low-grade fever and multiple episodes of vomiting and watery diarrhea for the past 3 days.",
+        "source_quote": "presented to the emergency department with a low-grade fever and multiple episodes of vomiting and watery diarrhea for the past 3 days.",
+        "explanation": "The visit motivation accurately captures the reason and duration of presentation."
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Systemic lupus erythematosus and lupus nephritis since 2002",
+        "source_quote": "underlying systemic lupus erythematosus and lupus nephritis since 2002",
+        "explanation": "The history is source-supported and correctly placed in physiological context."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Sinus bradycardia with the heart rate of 30 beats per minute, partial right bundle branch block, no evidence of coronary ischemia",
+        "source_quote": "sinus bradycardia with the heart rate of 30 beats per minute, partial right bundle branch blocked, and no evidence of coronary ischemia",
+        "explanation": "The label preserves the ECG findings; “block” is a grammatical normalization of the source’s “blocked.”"
+      },
+      {
+        "field_path": "/treatments/1/time",
+        "label_excerpt": "Over 24 h",
+        "source_quote": "four pints of IV 0.9% saline over 24 h",
+        "explanation": "The saline amount and duration are source-supported."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments/2/reaction to treatment",
+        "label_excerpt": "Developed severe sinus bradycardia",
+        "source_quote": "Shortly after the first dose of IV hydrocortisone, she developed severe sinus bradycardia with the heart rate of 30–40 beats per minute.",
+        "explanation": "The reaction field attributes the bradycardia to hydrocortisone. The note states a temporal sequence after the first dose, but does not establish that hydrocortisone caused the event; this upgrades sequence to causation.",
+        "category": "negation_uncertainty",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/treatments/3/reaction to treatment",
+        "label_excerpt": "Withheld due to treatment with IV hydrocortisone",
+        "source_quote": "The oral prednisolone was withheld, while her oral azathioprine and oral hydroxychloroquine were continued.",
+        "explanation": "The source establishes that prednisolone was withheld but does not state that IV hydrocortisone was the reason. The label supplies a rationale not present in the note.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/treatments/0/dosage",
+        "label_excerpt": "2 gm",
+        "source_quote": "IV ceftriaxone 2 gm once daily",
+        "explanation": "The dose is correct, but the label omits the stated once-daily frequency, a material treatment-course detail expressible in the dosage field.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/4/dosage",
+        "label_excerpt": "50 mg",
+        "source_quote": "oral azathioprine 50 mg once daily",
+        "explanation": "The label omits the stated once-daily frequency for this ongoing medication.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/5/dosage",
+        "label_excerpt": "250 mg",
+        "source_quote": "oral hydroxychloroquine 250 mg twice daily",
+        "explanation": "The label omits the stated twice-daily frequency for this ongoing medication.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate issues include an unsupported rationale for withholding prednisolone and omitted medication frequencies. The hydrocortisone reaction wording may overstate causation from temporal sequence and is flagged as policy ambiguity."
+  }
+}

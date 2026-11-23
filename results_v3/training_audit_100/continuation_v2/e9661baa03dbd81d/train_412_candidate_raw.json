@@ -1,0 +1,60 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/treatments/0/dosage",
+        "label_excerpt": "Methylprednisolone 500 mg daily, Cyclophosphamide 100 mg daily",
+        "source_quote": "intravenous methylprednisolone (500 mg daily) and oral cyclophosphamide (100 mg daily) for three days",
+        "explanation": "The dose and frequency are supported."
+      },
+      {
+        "field_path": "/medical examinations/2/result",
+        "label_excerpt": "Full thickness mucosal ulceration and inflammation throughout the terminal ileum and large bowel",
+        "source_quote": "Histopathology showed full thickness mucosal ulceration and inflammation throughout the terminal ileum and large bowel",
+        "explanation": "The histopathology result is accurately represented."
+      },
+      {
+        "field_path": "/treatments/3/reaction to treatment",
+        "label_excerpt": "Diarrhea persisted up to six liters daily despite treatment",
+        "source_quote": "His diarrhea persisted up to six liters daily despite empirical treatment with maximal doses of antidiarrheals, octreotide and cholestyramine.",
+        "explanation": "The stated persistence and volume despite treatment are supported."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Diagnosed with histologically confirmed glomerulonephritis secondary to ANCA-positive microscopic polyangiitis",
+        "source_quote": "A 60-year-old male was diagnosed with histologically confirmed glomerulonephritis secondary to anti-neutrophil cytoplasmic antibody -positive microscopic polyangiitis, following investigations for elevated creatinine on routine blood test.",
+        "explanation": "The note establishes the diagnosis but does not say this first hospital course was an admission; this reason may conflate diagnosis with admission evidence under the policy requiring evidence of admission.",
+        "category": "inappropriate_role",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "Cyclophosphamide was initially reduced to 50 mg daily and then ceased in setting of potential infectious pathology.",
+        "explanation": "The label omits the clinically material reduction and cessation of cyclophosphamide during the second course. This is a treatment course with explicit dose and status, expressible in the treatment schema.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/medical examinations/1/result",
+        "label_excerpt": "Denuded and erythematous mucosa in the duodenum, as well as from sigmoid colon to terminal ileum with no significant interval change in macroscopic appearance",
+        "source_quote": "The rectum was relatively spared.",
+        "explanation": "The examination result omits the source's material qualification that the rectum was relatively spared.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/medical examinations/2/result",
+        "label_excerpt": "Full thickness mucosal ulceration and inflammation throughout the terminal ileum and large bowel",
+        "source_quote": "There were no features of inflammatory bowel disease, vasculitis or viral inclusions.",
+        "explanation": "The label omits significant negative histopathology findings relevant to the reported evaluation.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate issues include a possible unsupported admission role for the first diagnosis and omitted material treatment-course and investigation details."
+  }
+}

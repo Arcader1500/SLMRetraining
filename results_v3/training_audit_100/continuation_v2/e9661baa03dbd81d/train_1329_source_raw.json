@@ -1,0 +1,65 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label records therapy after the new symptom but omits that physical therapy was maintained during later follow-up. This continuing treatment is source-supported and material.",
+        "source_quote": "She was maintained on physical therapy.",
+        "field_path": "/treatments"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The symptom details omit recurrent right-arm numbness and the reported pain-score range during follow-up. These are material symptom-course details.",
+        "source_quote": "The patient visited the outpatient clinic every two months, due to numbness of the right arm and a pain score of 3 to 8-points on NRS.",
+        "field_path": "/symptoms/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Infusion of hypertonic saline through the Racz catheter for 30 minutes",
+        "source_quote": "on the next day, after infusion of hypertonic saline through the Racz catheter for 30 minutes, the catheter was removed with no side effects.",
+        "explanation": "The surgery details capture the infusion but omit that the catheter was removed the next day and that no side effects were reported. This procedure outcome is source-supported and material.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Tingling sensation from the right axilla to the fingertips, tenderness to the right trapezius muscle, new symptom of tingling sensation on right arm without pain after two months",
+        "source_quote": "Twenty-eight months after the Racz neuroplasty, the patient still had pain in the neck and right arm, and the intensity and duration of the pain was progressive.",
+        "explanation": "The label omits the persistent neck and right-arm pain and its progressive intensity and duration 28 months after neuroplasty, a material worsening in the symptom course.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Tingling sensation from the right axilla to the fingertips, tenderness to the right trapezius muscle, new symptom of tingling sensation on right arm without pain after two months",
+        "source_quote": "There was tenderness to the right trapezius muscle with a pain score of 7-points on the numeric rating scale (NRS).",
+        "explanation": "The label includes the tenderness but omits the initial NRS pain score, a source-stated measure of symptom severity.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Tingling sensation from the right axilla to the fingertips, tenderness to the right trapezius muscle, new symptom of tingling sensation on right arm without pain after two months",
+        "source_quote": "Two weeks later, she still had a pain score of 4 to 6-points on NRS.",
+        "explanation": "The label omits the distinct pain-score range two weeks after the initial block, a material measure of symptom severity and response.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Both candidate omissions are supported. The label also omits the catheter removal and no-side-effects outcome, later progressive pain, and two source-stated pain scores."
+  }
+}

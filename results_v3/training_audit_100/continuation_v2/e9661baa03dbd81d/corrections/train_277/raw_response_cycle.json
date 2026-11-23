@@ -1,0 +1,45 @@
+{
+  "candidate_dispositions": [
+    {
+      "candidate_index": 1,
+      "disposition": "rejected",
+      "attribution": "uncertain",
+      "explanation": "The label’s timing is supported by the note. The candidate itself identifies no discrepancy, so it does not establish a finding.",
+      "source_quote": "The blood loss had amounted to about 500 ml, so 6% hydroxyethyl starch (HES) 500 ml (Salinhes®, Ilsung pharmaceuticals, Korea) was administrated in order to complement",
+      "field_path": "/treatments/4/time"
+    }
+  ],
+  "added_findings": [
+    {
+      "field_path": "/patient information",
+      "label_excerpt": "",
+      "source_quote": "A 12-year-old, 161 cm, 32 kg, female patient",
+      "explanation": "The label includes age and sex but omits the source-stated height and weight, clinically relevant anthropometric details for this pediatric surgical case.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/medical examinations",
+      "label_excerpt": "",
+      "source_quote": "However, the systolic blood pressure dropped from 90 to 40 mmHg while inserting an introducer needle after skin incision and muscle dissection.",
+      "explanation": "The label records the pre-anesthesia blood pressure but omits this substantial intraoperative systolic pressure drop during the procedure.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/patient medical history/physiological context",
+      "label_excerpt": "Idiopathic scoliosis in the thoracic vertebra",
+      "source_quote": "She had no significant medical issues and was not taking any medication.",
+      "explanation": "The label records scoliosis but omits the source’s relevant negative medical history and medication status.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    }
+  ],
+  "summary": "Rejected the sole candidate because its explanation confirms that the labeled treatment timing is supported. Added material omissions for pediatric height and weight, intraoperative hypotension, and the stated negative medical and medication history."
+}

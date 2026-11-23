@@ -1,0 +1,98 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label includes the episode duration but omits the regular interval between episodes, an important part of the recurring timing pattern.",
+        "source_quote": "1 to 2-week long episodes (with regular 4–5 week intervals)",
+        "field_path": "/symptoms/0/time"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label gives the dose but omits the stated twice-daily frequency. The source is cut off after “for a,” so duration is not established.",
+        "source_quote": "At first, lamotrigine was titrated up to 100 mg twice daily and maintained for a",
+        "field_path": "/treatments/0/dosage"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "excessive sleep",
+        "source_quote": "During the episodes, his parents had to wake him up to give him food. He went self to the bathroom, but otherwise he stayed in bed. ... slept for 14–20 h/day for 1–2 weeks.",
+        "explanation": "The label notes excessive sleep but omits the source’s quantified sleep duration, which conveys the severity and functional impact of the episodes.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Formerly healthy",
+        "source_quote": "There was no history of drug abuse. ... No relative has suffered from a similar condition.",
+        "explanation": "The physiological context omits relevant negative personal and family history stated in the note.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Both candidate omissions are confirmed. The label also omits the quantified sleep duration and relevant negative personal and family history."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label includes the episode duration but omits the stated regular interval between episodes.",
+        "source_quote": "began suffering from 1 to 2-week long episodes (with regular 4–5 week intervals)",
+        "field_path": "/symptoms/0/time"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label preserves the 100 mg dose but omits the stated twice-daily frequency. The sentence is cut off, so no duration is established.",
+        "source_quote": "At first, lamotrigine was titrated up to 100 mg twice daily and maintained for a",
+        "field_path": "/treatments/0/dosage"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Formerly healthy",
+        "source_quote": "There was no history of drug abuse.",
+        "explanation": "The label's brief health context omits the explicit negative drug-abuse history, which is relevant medical history.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Formerly healthy",
+        "source_quote": "No relative has suffered from a similar condition.",
+        "explanation": "The label omits the relevant negative family history of a similar condition.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Formerly healthy",
+        "source_quote": "Between the episodes, he was perfectly normal, attending school without difficulty, and playing golf at a high level.",
+        "explanation": "The label omits the substantial return to normal functioning between episodes, including school attendance and high-level golf, which provides important baseline context for the episodic impairment.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Both candidate omissions are supported. The label also omits relevant negative drug and family history and the patient's normal functioning between episodes."
+  }
+}

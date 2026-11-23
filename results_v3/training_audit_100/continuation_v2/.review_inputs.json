@@ -1,0 +1,803 @@
+[
+  {
+    "id": "train:539",
+    "note": "An 85-year-old male patient with conjunctival tumor in his right eye (uncertain onset) was referred to our department for a detailed examination. Initial evaluation showed best-corrected visual acuity was 30/60 in his right eye, with an intraocular pressure that was within the normal range. He has been receiving anti-VEGF treatment for age-related macular degeneration over the past 5 years. For the tumor, he underwent conjunctival tumor resection and amnion transplantation without mitomycin C in his right eye. The patient was then started on a topical treatment that consisted of 0.5% levofloxacin and 0.1% betamethasone four times daily. The postoperative course had been good until a scleral ulcer emerged at a nasal ischemic necrotizing lesion 4 months later (2 months after stopping the local steroid drop treatment). The postoperative examination at 4 months showed that scleral melting to the uvea had occurred on the center of the tumor-resected sclera. The conjunctival graft was avascular with the presence of ocular pain (Fig. ). Anterior slit-lamp examination revealed that there were no remarkable ﬁndings in the eye. Magnetic resonance imaging showed that there was no orbital lesion. After diagnosing SINS, 0.1% betamethasone was immediately restarted four times daily, preparing for an urgent scleral patch transplant surgery. The peripheral conjunctiva contact with the melting site was removed, and free conjunctival autograft transplantation was also performed. Histopathological analysis of the removed conjunctiva led to the current diagnosis and subsequent pathological search. After 2 weeks, there was complete and rapid regression of the scleral melting (Fig. ). Following this episode, only local steroid therapy was continued for treating the SINS, and at 6 months, there has been no recurrence. However, ultrasound biomicroscopy revealed local thinning of the uvea (Fig. ). Histopathological and immunohistochemical analysis additionally revealed infiltration of inflammatory cells during the acute phase, and TNF-α immune reactivity in the central part of the melting site near the resected conjunctiva (F",
+    "label": "{\"visit motivation\":\"Detailed examination for conjunctival tumor in right eye\",\"admission\":[{\"reason\":\"Conjunctival tumor resection and amnion transplantation\"}],\"patient information\":{\"age\":\"85\",\"sex\":\"Male\"},\"patient medical history\":{\"physiological context\":\"Receiving anti-VEGF treatment for age-related macular degeneration over the past 5 years\"},\"surgeries\":[{\"Type\":\"Conjunctival tumor resection and amnion transplantation without mitomycin C\",\"details\":\"Postoperative treatment included 0.5% levofloxacin and 0.1% betamethasone four times daily\"},{\"Type\":\"Urgent scleral patch transplant surgery and free conjunctival autograft transplantation\",\"time\":\"4 months after initial surgery\",\"details\":\"Histopathological analysis of the removed conjunctiva led to the diagnosis of SINS\"}],\"symptoms\":[{\"name of symptom\":\"Scleral ulcer\",\"location\":\"Nasal ischemic necrotizing lesion\",\"time\":\"4 months postoperative\",\"details\":\"Scleral melting to the uvea had occurred on the center of the tumor-resected sclera\"},{\"name of symptom\":\"Ocular pain\",\"location\":\"Eye\",\"time\":\"At the time of scleral ulcer emergence\",\"details\":\"Conjunctival graft was avascular\"}],\"medical examinations\":[{\"name\":\"Best-corrected visual acuity\",\"result\":\"30/60 in right eye\"},{\"name\":\"Intraocular pressure\",\"result\":\"Within the normal range\"},{\"name\":\"Anterior slit-lamp examination\",\"result\":\"No remarkable findings\"},{\"name\":\"Magnetic resonance imaging\",\"result\":\"No orbital lesion\"},{\"name\":\"Ultrasound biomicroscopy\",\"result\":\"Local thinning of the uvea\"}],\"diagnosis tests\":[{\"test\":\"Histopathological and immunohistochemical analysis\",\"result\":\"Infiltration of inflammatory cells during the acute phase, and TNF-α immune reactivity in the central part of the melting site near the resected conjunctiva\"}],\"treatments\":[{\"name\":\"0.5% levofloxacin and 0.1% betamethasone\",\"time\":\"Postoperative\",\"reaction to treatment\":\"Good postoperative course until scleral ulcer emerged\"},{\"name\":\"0.1% betamethasone\",\"time\":\"After diagnosing SINS\",\"reaction to treatment\":\"Complete and rapid regression of the scleral melting after 2 weeks\"}],\"discharge\":{}}",
+    "findings": [
+      {
+        "field_path": "/surgeries/1/Type",
+        "label_excerpt": "Urgent scleral patch transplant surgery and free conjunctival autograft transplantation",
+        "source_quote": "preparing for an urgent scleral patch transplant surgery. The peripheral conjunctiva contact with the melting site was removed, and free conjunctival autograft transplantation was also performed.",
+        "explanation": "The note says the patch transplant was being prepared for, but does not say it was performed; only the free conjunctival autograft is explicitly reported as performed. Listing the patch transplant as a surgery overstates its status.",
+        "category": "event_status",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/surgeries/1/time",
+        "label_excerpt": "4 months after initial surgery",
+        "source_quote": "The postoperative course had been good until a scleral ulcer emerged at a nasal ischemic necrotizing lesion 4 months later",
+        "explanation": "Four months anchors the ulcer emergence and postoperative examination, not the patch transplant. The patch transplant is described only as being prepared for, so this assigns a procedure timing not established by the note.",
+        "category": "chronology",
+        "classification": "clear_error"
+      }
+    ],
+    "source": {
+      "candidate_dispositions": [
+        {
+          "candidate_index": 1,
+          "disposition": "confirmed",
+          "attribution": "uncertain",
+          "explanation": "The label presents the scleral patch transplant as performed, although the note says preparations were being made for it. Only the free conjunctival autograft is explicitly described as performed.",
+          "source_quote": "preparing for an urgent scleral patch transplant surgery. The peripheral conjunctiva contact with the melting site was removed, and free conjunctival autograft transplantation was also performed.",
+          "field_path": "/surgeries/1/Type"
+        },
+        {
+          "candidate_index": 2,
+          "disposition": "confirmed",
+          "attribution": "uncertain",
+          "explanation": "The four-month timing explicitly anchors the ulcer emergence and postoperative examination; the note does not explicitly time the patch transplant. The label assigns this timing to a surgery entry that also combines the planned patch transplant with the performed autograft.",
+          "source_quote": "a scleral ulcer emerged at a nasal ischemic necrotizing lesion 4 months later",
+          "field_path": "/surgeries/1/time"
+        }
+      ],
+      "added_findings": [
+        {
+          "field_path": "/symptoms/0/time",
+          "label_excerpt": "4 months postoperative",
+          "source_quote": "4 months later (2 months after stopping the local steroid drop treatment)",
+          "explanation": "The symptom timing retains the four-month postoperative interval but omits that the ulcer emerged two months after local steroid drops were stopped. This is a material treatment-to-symptom timing relationship.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        },
+        {
+          "field_path": "/treatments/0/time",
+          "label_excerpt": "Postoperative",
+          "source_quote": "0.5% levofloxacin and 0.1% betamethasone four times daily",
+          "explanation": "The source states the initial topical treatment frequency, but the label records only that it was postoperative. The four-times-daily frequency is material treatment-course information that fits the treatment time/details field.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        },
+        {
+          "field_path": "/treatments/1/time",
+          "label_excerpt": "After diagnosing SINS",
+          "source_quote": "0.1% betamethasone was immediately restarted four times daily",
+          "explanation": "The label omits the source-stated four-times-daily frequency of restarted betamethasone, a material treatment detail.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        },
+        {
+          "field_path": "/treatments/1/reaction to treatment",
+          "label_excerpt": "Complete and rapid regression of the scleral melting after 2 weeks",
+          "source_quote": "at 6 months, there has been no recurrence",
+          "explanation": "The reaction records the two-week regression but omits the material follow-up outcome of no recurrence at six months while local steroid therapy continued.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        }
+      ],
+      "summary": "Both candidate findings are supported by the note. The label also omits the ulcer’s timing relative to stopping local steroids, both treatment frequencies, and the six-month no-recurrence outcome."
+    }
+  },
+  {
+    "id": "train:835",
+    "note": "A 21-year-old man from the Indian Subcontinent experienced right sided, painless, sudden visual loss. He presented on the same day and his best-corrected visual acuity (BCVA) was 6/60 in the right eye and 6/6 in the left. His anterior segment examination was unremarkable and his intraocular pressure was 17 OD and 15 OS. On fundoscopy, we found a recent cilioretinal artery occlusion on the right and a normal left fundus. White retinal oedema was present along the artery course leading into the fovea. No thrombi were seen within the artery lumen. The optic discs were healthy bilaterally and there were no other peripheral retinal or vascular lesions. No signs of inflammation were found in the anterior or posterior chamber.\nHe had normal eye movements and a neurological examination did not reveal any other signs of stroke. The patient was otherwise well with no other medical history. He was not taking any regular medication and there was no significant family history. He admitted to smoking cannabis three times earlier in the day, before his vision loss. He denied the use of tobacco and informed us that this was his first use of Skunk cannabis. He also denied using any other illicit substance, most pertinently, cocaine.\nOn general examination, his blood pressure, heart rate, and ECG were within normal limits. His full blood count, kidney, liver, and thyroid function tests were normal. Furthermore, inflammatory markers, glycosylated haemoglobin, plasma homocysteine, lipid panel, coagulation screen, and serum protein electrophoresis were also normal. His blood tests did not reveal any signs of dehydration.\nThe fundus photograph of the right eye showed neuroretinal thickening along the route of the cilioretinal artery (), while the left eye showed normal retinal layers. An optical coherence tomography (OCT) scan confirmed neuroretinal thickening in the distribution of the cilioretinal artery of the right eye (). He was treated with topical beta-blockers (timolol), prostaglandin analogues (lat",
+    "label": "{\"visit motivation\":\"Sudden visual loss in the right eye\",\"admission\":[{\"reason\":\"Sudden visual loss in the right eye\"}],\"patient information\":{\"age\":\"21\",\"sex\":\"Male\"},\"patient medical history\":{\"physiological context\":\"Otherwise well with no other medical history\"},\"surgeries\":[],\"symptoms\":[{\"name of symptom\":\"Visual loss\",\"location\":\"Right eye\",\"time\":\"Sudden onset\",\"details\":\"Best-corrected visual acuity (BCVA) was 6/60 in the right eye\"}],\"medical examinations\":[{\"name\":\"Anterior segment examination\",\"result\":\"Unremarkable\"},{\"name\":\"Intraocular pressure\",\"result\":\"17 OD and 15 OS\"},{\"name\":\"Fundoscopy\",\"result\":\"Recent cilioretinal artery occlusion on the right, normal left fundus, white retinal oedema along the artery course leading into the fovea, no thrombi within the artery lumen, healthy optic discs bilaterally, no other peripheral retinal or vascular lesions\"},{\"name\":\"Examination of anterior and posterior chamber\",\"result\":\"No signs of inflammation\"},{\"name\":\"Neurological examination\",\"result\":\"No signs of stroke\"},{\"name\":\"Eye movements\",\"result\":\"Normal\"}],\"diagnosis tests\":[{\"test\":\"Fundus photograph\",\"result\":\"Neuroretinal thickening along the route of the cilioretinal artery in the right eye, normal retinal layers in the left eye\"},{\"test\":\"Optical coherence tomography (OCT) scan\",\"result\":\"Confirmed neuroretinal thickening in the distribution of the cilioretinal artery of the right eye\"},{\"test\":\"Blood pressure, heart rate, and ECG\",\"result\":\"Within normal limits\"},{\"test\":\"Full blood count, kidney, liver, and thyroid function tests\",\"result\":\"Normal\"},{\"test\":\"Inflammatory markers, glycosylated haemoglobin, plasma homocysteine, lipid panel, coagulation screen, and serum protein electrophoresis\",\"result\":\"Normal\"}],\"treatments\":[{\"name\":\"Topical beta-blockers\"},{\"name\":\"Prostaglandin analogues\"}],\"discharge\":{}}",
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Sudden visual loss in the right eye",
+        "source_quote": "He presented on the same day",
+        "explanation": "The note establishes a same-day presentation but gives no evidence of admission. The admission section asserts an event not established by the source.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Otherwise well with no other medical history",
+        "source_quote": "He admitted to smoking cannabis three times earlier in the day, before his vision loss.",
+        "explanation": "The physiological context omits the explicitly reported cannabis use before symptom onset, a material history detail.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "source": {
+      "candidate_dispositions": [
+        {
+          "candidate_index": 1,
+          "disposition": "confirmed",
+          "attribution": "inherited",
+          "explanation": "Same-day presentation does not establish admission, so the label asserts an event not supported by the note.",
+          "source_quote": "He presented on the same day",
+          "field_path": "/admission/0/reason"
+        },
+        {
+          "candidate_index": 2,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The label omits the explicitly reported cannabis use before symptom onset, a material substance-use history detail.",
+          "source_quote": "He admitted to smoking cannabis three times earlier in the day, before his vision loss.",
+          "field_path": "/patient medical history/physiological context"
+        }
+      ],
+      "added_findings": [
+        {
+          "field_path": "/symptoms/0/details",
+          "label_excerpt": "Best-corrected visual acuity (BCVA) was 6/60 in the right eye",
+          "source_quote": "his best-corrected visual acuity (BCVA) was 6/60 in the right eye and 6/6 in the left.",
+          "explanation": "The label omits the documented left-eye acuity, which completes the bilateral visual-acuity findings.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        },
+        {
+          "field_path": "/symptoms/0/details",
+          "label_excerpt": "Best-corrected visual acuity (BCVA) was 6/60 in the right eye",
+          "source_quote": "experienced right sided, painless, sudden visual loss.",
+          "explanation": "The symptom details omit that the visual loss was painless, a source-stated symptom modifier.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        },
+        {
+          "field_path": "/patient medical history/physiological context",
+          "label_excerpt": "Otherwise well with no other medical history",
+          "source_quote": "He denied the use of tobacco and informed us that this was his first use of Skunk cannabis. He also denied using any other illicit substance, most pertinently, cocaine.",
+          "explanation": "The physiological context omits the reported first-use context and relevant denials of tobacco and other illicit substances.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        }
+      ],
+      "summary": "The unsupported admission and cannabis-history omission are confirmed. The label also omits the left-eye acuity, painless quality of the symptom, and relevant substance-use context. The other candidate checks are source-supported."
+    }
+  },
+  {
+    "id": "train:1464",
+    "note": "A 40-year-old obese lady presented with a severe holocranial headache for 10 days. She had associated nausea, vomiting, and rapid onset of painless loss of vision in both the eyes which progressed over 2 days.\nShe was a known case of schizophrenia on treatment under psychiatry for the past 10 years. She was treated with olanzapine and later with fluphenazine decanoate when she was irregular with medications. This was subsequently changed to risperidone after symptomatic improvement. She was only on 4 mg of risperidone for the past 1-year. She has had associated history of weight gain over the last 4 years which had rapidly worsened after starting risperidone. She did not have any other comorbidity.\nOn examination, she was obese with a body mass index of 32.4 kg/m2. Her general and systemic examinations were normal. On ophthalmological evaluation, the pupils were equal but nonreactive bilaterally. There was the perception of light in the right eye and none at all in the left. Bilateral papilledema with primary optic atrophy in the left eye was noticed on fundus examination. On testing eye movements, she had bilateral restriction of lateral gaze. She was unable to do formal visual field testing due to the poor vision.\nDifferential diagnosis considered included meningitis, cortical venous thrombosis, demyelinating illness with optic neuritis, and idiopathic intracranial hypertension. Magnetic resonance imaging (MRI) of the brain revealed increased diameter of the optic nerve sheath with flattening of the posterior sclera margin with prominent perioptic halo []. There was also a partially empty sella [] and narrowing of the junction of the transverse-sigmoid sinuses [] which were all suggestive of intracranial hypertension. The subsequent CSF study was normal except for the elevated opening pressure of 35 cm of water. A magnetic resonance venogram was also done to rule out cortical venous thrombosis. Visual evoked potential testing showed absent waveform in the left optic nerve.\nA diagnosis of BIH was made based on the modified Dandy's diagnostic criteria. She",
+    "label": "{\"visit motivation\":\"Severe holocranial headache, nausea, vomiting, and rapid onset of painless loss of vision in both eyes\",\"admission\":[],\"patient information\":{\"age\":\"40 years old\",\"sex\":\"Female\"},\"patient medical history\":{\"physiological context\":\"Obesity, weight gain over the last 4 years, worsened after starting risperidone\"},\"surgeries\":[],\"symptoms\":[{\"name of symptom\":\"Headache\",\"location\":\"Holocranial\",\"time\":\"For 10 days\",\"details\":\"Associated with nausea and vomiting\"},{\"name of symptom\":\"Loss of vision\",\"location\":\"Both eyes\",\"time\":\"Progressed over 2 days\",\"details\":\"Perception of light in the right eye and none at all in the left\"}],\"medical examinations\":[{\"name\":\"Ophthalmological evaluation\",\"result\":\"Pupils equal but nonreactive bilaterally, perception of light in the right eye and none in the left, bilateral papilledema with primary optic atrophy in the left eye, bilateral restriction of lateral gaze\"},{\"name\":\"Body mass index\",\"result\":\"32.4 kg/m2\"}],\"diagnosis tests\":[{\"test\":\"MRI of the brain\",\"result\":\"Increased diameter of the optic nerve sheath, flattening of the posterior sclera margin with prominent perioptic halo, partially empty sella, narrowing of the junction of the transverse-sigmoid sinuses\"},{\"test\":\"CSF study\",\"result\":\"Elevated opening pressure of 35 cm of water\"},{\"test\":\"Magnetic resonance venogram\",\"result\":\"To rule out cortical venous thrombosis\"},{\"test\":\"Visual evoked potential testing\",\"result\":\"Absent waveform in the left optic nerve\"}],\"treatments\":[{\"name\":\"Olanzapine\",\"reaction to treatment\":\"Irregular with medications\"},{\"name\":\"Fluphenazine decanoate\"},{\"name\":\"Risperidone\",\"dosage\":\"4 mg\",\"time\":\"For the past 1-year\",\"reaction to treatment\":\"Associated history of weight gain, rapidly worsened after starting risperidone\"}],\"discharge\":{}}",
+    "findings": [
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Irregular with medications",
+        "source_quote": "She was treated with olanzapine and later with fluphenazine decanoate when she was irregular with medications.",
+        "explanation": "The note associates medication irregularity with the later fluphenazine decanoate course; it does not state that irregularity was a reaction to olanzapine. This treatment-response linkage is unsupported.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "She was a known case of schizophrenia on treatment under psychiatry for the past 10 years.",
+        "explanation": "The treatment history spans 10 years, but the label omits that she was being treated for schizophrenia under psychiatry. This material indication/history is expressible in the treatment or medical-history schema.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Elevated opening pressure of 35 cm of water",
+        "source_quote": "The subsequent CSF study was normal except for the elevated opening pressure of 35 cm of water.",
+        "explanation": "The label omits that the CSF study was otherwise normal, a material qualifying result of the investigation.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/diagnosis tests",
+        "label_excerpt": "",
+        "source_quote": "Differential diagnosis considered included meningitis, cortical venous thrombosis, demyelinating illness with optic neuritis, and idiopathic intracranial hypertension.",
+        "explanation": "The note identifies several considered differential diagnoses, but the label leaves them out. These are material diagnostic considerations expressible as diagnosis-test or diagnosis information.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "source": {
+      "candidate_dispositions": [
+        {
+          "candidate_index": 1,
+          "disposition": "confirmed",
+          "attribution": "uncertain",
+          "explanation": "The source ties medication irregularity to the later fluphenazine decanoate treatment; it does not describe irregularity as a reaction to olanzapine.",
+          "source_quote": "She was treated with olanzapine and later with fluphenazine decanoate when she was irregular with medications.",
+          "field_path": "/treatments/0/reaction to treatment"
+        },
+        {
+          "candidate_index": 2,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The note establishes longstanding psychiatric treatment for schizophrenia, a material history fact that can be recorded under physiological context. The candidate path is retained as requested.",
+          "source_quote": "She was a known case of schizophrenia on treatment under psychiatry for the past 10 years.",
+          "field_path": "/treatments"
+        },
+        {
+          "candidate_index": 3,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The label records the elevated pressure but omits the source’s qualifying statement that the rest of the CSF study was normal.",
+          "source_quote": "The subsequent CSF study was normal except for the elevated opening pressure of 35 cm of water.",
+          "field_path": "/diagnosis tests/1/result"
+        },
+        {
+          "candidate_index": 4,
+          "disposition": "rejected",
+          "attribution": "uncertain",
+          "explanation": "The differential diagnoses are documented, but the existing diagnosis-test paths do not provide an appropriate place for differential diagnoses. The candidate’s proposed mapping to diagnosis-test information would misstate their role.",
+          "source_quote": "Differential diagnosis considered included meningitis, cortical venous thrombosis, demyelinating illness with optic neuritis, and idiopathic intracranial hypertension.",
+          "field_path": "/diagnosis tests"
+        }
+      ],
+      "added_findings": [],
+      "summary": "Confirmed the unsupported medication linkage and the omissions of schizophrenia history and the qualifying CSF result. Rejected the differential-diagnosis omission because no appropriate existing schema path represents it."
+    }
+  },
+  {
+    "id": "train:365",
+    "note": "A 51-year-old Bedouin Arabic man with a dominant right hand noticed a small nodule on the proximal dorsal side of his right forearm that had persisted for 18 months. He had not sought any medical advice. He is a known smoker and works as a security guard, has no prior history of alcohol consumption or radiation exposure, was previously diagnosed with depression and receiving oral risperidone 4 mg, and has a positive family history of ocular and breast cancer. When first noticed, the painless nodule was 1.0 × 1.0 cm, but it started to grow slowly over the course of 18 months. It was excised at an outside facility when it reached roughly 4.0 × 4.0 cm because it was thought to be a benign mass. It was removed in pieces using a transverse incision, and pathological examination showed a spindle-cell tumor with features suggestive of MPNST. The patient presented to King Hussein Cancer Center 4 months after the initial excision with an oval-shaped, large, exophytic, fungating, hemorrhagic, firm, and painful mass measuring 10.0 × 15.0 cm at the same site of the previously excised nodule (Fig. ). At presentation, his vital signs were unremarkable, with a temperature of 36.6 °C, pulse rate of 72 beats/minute, respiratory rate of 18 breaths/minute, blood pressure of 114/76 mmHg, oxygen saturation of 96%, and a pain score of 7/10. His physical checkup revealed power of 3+/5 in his fingers and wrist extension, an intact sensation at the dorsum of the hand with intact median and ulnar nerve function, full range of motion in the elbow and shoulder joints with an intact vascular examination, and no evidence of local lymph node enlargement. Magnetic resonance imaging (MRI) demonstrated a predominantly subcutaneous soft tissue mass at the proximal ulnar aspect of the right forearm with evidence of surrounding muscular fascial involvement and irregularity of the overlying skin,",
+    "label": "{\"visit motivation\":\"Large, exophytic, fungating, hemorrhagic, firm, and painful mass on the right forearm\",\"admission\":[{\"reason\":\"Excision of a nodule suspected to be a benign mass\"}],\"patient information\":{\"age\":\"51\",\"sex\":\"Male\"},\"patient medical history\":{},\"surgeries\":[{\"Type\":\"Excision\",\"time\":\"18 months after the nodule was first noticed\",\"details\":\"Nodule was excised in pieces using a transverse incision\"}],\"symptoms\":[{\"name of symptom\":\"Painless nodule\",\"location\":\"Proximal dorsal side of the right forearm\",\"time\":\"Noticed 18 months prior to excision\",\"details\":\"Initially 1.0 × 1.0 cm, grew to 4.0 × 4.0 cm at the time of excision\"},{\"name of symptom\":\"Painful mass\",\"location\":\"Same site of the previously excised nodule on the right forearm\",\"time\":\"Presented 4 months after the initial excision\",\"details\":\"Oval-shaped, large, exophytic, fungating, hemorrhagic, firm, and painful mass measuring 10.0 × 15.0 cm\"}],\"medical examinations\":[{\"name\":\"Physical checkup\"},{\"name\":\"Vital signs\",\"result\":\"Temperature of 36.6 °C, pulse rate of 72 beats/minute, respiratory rate of 18 breaths/minute, blood pressure of 114/76 mmHg, oxygen saturation of 96%\"}],\"diagnosis tests\":[{\"test\":\"MRI\",\"result\":\"Predominantly subcutaneous soft tissue mass at the proximal ulnar aspect of the right forearm with evidence of surrounding muscular fascial involvement and irregularity of the overlying skin\"}],\"treatments\":[{\"name\":\"Oral risperidone\",\"dosage\":\"4 mg\"}],\"discharge\":{}}",
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Excision of a nodule suspected to be a benign mass",
+        "source_quote": "He had not sought any medical advice.",
+        "explanation": "The label presents the outside excision as an admission reason, but the note says it occurred at an outside facility and does not establish an admission for that excision.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/diagnosis tests",
+        "label_excerpt": "",
+        "source_quote": "pathological examination showed a spindle-cell tumor with features suggestive of MPNST.",
+        "explanation": "The label includes the MRI finding but omits the source's material pathology result, which is expressible under diagnosis tests.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/medical examinations",
+        "label_excerpt": "",
+        "source_quote": "His physical checkup revealed power of 3+/5 in his fingers and wrist extension, an intact sensation at the dorsum of the hand with intact median and ulnar nerve function, full range of motion in the elbow and shoulder joints with an intact vascular examination, and no evidence of local lymph node enlargement.",
+        "explanation": "The label records a physical checkup without its material findings, including weakness, intact nerve and vascular findings, range of motion, and absence of local lymph node enlargement.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/patient medical history",
+        "label_excerpt": "",
+        "source_quote": "He is a known smoker and works as a security guard, has no prior history of alcohol consumption or radiation exposure, was previously diagnosed with depression and receiving oral risperidone 4 mg, and has a positive family history of ocular and breast cancer.",
+        "explanation": "The history section is empty despite source-stated smoking, relevant exposure negatives, depression, and family cancer history. The medication is recorded separately, but these history facts are omitted.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "source": {
+      "candidate_dispositions": [
+        {
+          "candidate_index": 1,
+          "disposition": "confirmed",
+          "attribution": "inherited",
+          "explanation": "The note says the excision occurred at an outside facility and does not state that it was an admission. The label incorrectly gives that excision as an admission reason.",
+          "source_quote": "It was excised at an outside facility when it reached roughly 4.0 × 4.0 cm because it was thought to be a benign mass.",
+          "field_path": "/admission/0/reason"
+        },
+        {
+          "candidate_index": 2,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The outside excision’s pathology result is absent from the label and is a material diagnostic finding expressible under diagnosis tests.",
+          "source_quote": "pathological examination showed a spindle-cell tumor with features suggestive of MPNST.",
+          "field_path": "/diagnosis tests"
+        },
+        {
+          "candidate_index": 3,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The label names the physical checkup but omits its material findings, including finger and wrist weakness, intact nerve and vascular findings, range of motion, and absent local lymph node enlargement.",
+          "source_quote": "His physical checkup revealed power of 3+/5 in his fingers and wrist extension, an intact sensation at the dorsum of the hand with intact median and ulnar nerve function, full range of motion in the elbow and shoulder joints with an intact vascular examination, and no evidence of local lymph node enlargement.",
+          "field_path": "/medical examinations"
+        },
+        {
+          "candidate_index": 4,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The history section is empty despite source-stated smoking, alcohol and radiation exposure history, depression, and family cancer history. Risperidone is listed separately, but that does not supply these history facts.",
+          "source_quote": "He is a known smoker and works as a security guard, has no prior history of alcohol consumption or radiation exposure, was previously diagnosed with depression and receiving oral risperidone 4 mg, and has a positive family history of ocular and breast cancer.",
+          "field_path": "/patient medical history"
+        }
+      ],
+      "added_findings": [
+        {
+          "field_path": "/symptoms/1/details",
+          "label_excerpt": "Oval-shaped, large, exophytic, fungating, hemorrhagic, firm, and painful mass measuring 10.0 × 15.0 cm",
+          "source_quote": "At presentation, his vital signs were unremarkable, with a temperature of 36.6 °C, pulse rate of 72 beats/minute, respiratory rate of 18 breaths/minute, blood pressure of 114/76 mmHg, oxygen saturation of 96%, and a pain score of 7/10.",
+          "explanation": "The label describes the painful mass but omits the source-stated pain score, a material symptom severity detail.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        }
+      ],
+      "summary": "The outside excision is incorrectly labeled as an admission reason. The label also omits the excision pathology, material physical-checkup findings, relevant medical history, and the pain score."
+    }
+  },
+  {
+    "id": "train:251",
+    "note": "A 42-year-old man experienced decreased visual acuity in the right eye before 2 years, but did not seek treatment. Later, he became aware of severely decreased visual acuity in the right eye several months ago and visited our hospital. The patient was born at 37 weeks of gestation with a weight of 2,300 g and had neonatal asphyxia at birth and had severe jaundice in neonatal period. The patient has a high arched palate, webbed neck, short neck, ocular hypertelorism, exophthalmos, and dilated cardiomyopathy. These factors led to a clinical diagnosis of NS at the age of 1 year (Figure ). Cardiac disease is controlled through the use of oral drugs. Without receiving growth hormone treatments, his final body height was 154 cm, which is below the potential average height of Japanese men. Initial eye examination suggested that his corrected visual acuity was 0.06 in the right eye and 0.9 in the left with normal intraocular pressure. His corneas and irises showed no abnormalities and no anterior chamber inflammation was observed. Both eyes showed cataracts, and mature cataract was observed in the right eye (Figure A, B). The patient had no history of traumatic eye injuries or self-injurious behavior. The left eye fundus showed no abnormal findings (Figure A, B). Although the right eye fundus could not be seen, B-mode ultrasonography showed no abnormal findings. No abnormal pupillary light reflexes were observed. In addition to the mature cataract in the right eye, the cataract in the left eye progressed rapidly during the follow-up period, leading to decreased visual acuity. Cataract surgery was indicated for both eyes, and it was performed with no intraoperative complications (Figure C, D). He experienced no postoperative intraocular pressure elevation, infection, or delayed inflammation and there were no postoperative abnormalities in the right eye fundus (Figure C, D). Genetic analysis revealed a mutation in the PTPN11 gene. The identified PTPN",
+    "label": "{\"visit motivation\":\"Severely decreased visual acuity in the right eye\",\"admission\":[{\"reason\":\"Decreased visual acuity and mature cataract in the right eye\"}],\"patient information\":{\"age\":\"42 years old\",\"sex\":\"Male\"},\"patient medical history\":{\"physiological context\":\"Born at 37 weeks of gestation with a weight of 2,300 g, had neonatal asphyxia at birth, had severe jaundice in neonatal period, diagnosed with NS at the age of 1 year, has a high arched palate, webbed neck, short neck, ocular hypertelorism, exophthalmos, and dilated cardiomyopathy\"},\"surgeries\":[{\"Type\":\"Cataract surgery\",\"details\":\"Performed with no intraoperative complications\"}],\"symptoms\":[{\"name of symptom\":\"Decreased visual acuity\",\"location\":\"Right eye\",\"time\":\"Several months ago\",\"details\":\"Initial eye examination suggested corrected visual acuity was 0.06 in the right eye\"}],\"medical examinations\":[{\"name\":\"Eye examination\",\"result\":\"Corrected visual acuity was 0.06 in the right eye and 0.9 in the left eye, normal intraocular pressure, no corneal or iris abnormalities, no anterior chamber inflammation, both eyes showed cataracts, mature cataract in the right eye, left eye fundus showed no abnormal findings, B-mode ultrasonography showed no abnormal findings in the right eye, no abnormal pupillary light reflexes\"}],\"diagnosis tests\":[{\"test\":\"Genetic analysis\",\"result\":\"Mutation in the PTPN11 gene\"}],\"treatments\":[{\"name\":\"Oral drugs\"}],\"discharge\":{}}",
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Decreased visual acuity and mature cataract in the right eye",
+        "source_quote": "Later, he became aware of severely decreased visual acuity in the right eye several months ago and visited our hospital.",
+        "explanation": "The note describes a hospital visit but does not establish an admission. The admission entry asserts an event the source does not document.",
+        "category": "event_status",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "Several months ago",
+        "source_quote": "A 42-year-old man experienced decreased visual acuity in the right eye before 2 years, but did not seek treatment.",
+        "explanation": "The label records the later worsening/presentation timing but omits the earlier onset and lack of treatment, which materially distinguish the symptom chronology.",
+        "category": "chronology",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/medical examinations",
+        "label_excerpt": "",
+        "source_quote": "He experienced no postoperative intraocular pressure elevation, infection, or delayed inflammation and there were no postoperative abnormalities in the right eye fundus",
+        "explanation": "The label captures examination findings and intraoperative status but omits the stated postoperative course, including important negative outcomes.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/0/name",
+        "label_excerpt": "Oral drugs",
+        "source_quote": "Cardiac disease is controlled through the use of oral drugs.",
+        "explanation": "The treatment entry omits that the oral drugs control the patient's cardiac disease, losing the source-stated treatment purpose and response.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "source": {
+      "candidate_dispositions": [
+        {
+          "candidate_index": 1,
+          "disposition": "confirmed",
+          "attribution": "uncertain",
+          "explanation": "The source documents a hospital visit, not an admission. The reason is supported, but its placement under admission asserts an undocumented admission event.",
+          "source_quote": "Later, he became aware of severely decreased visual acuity in the right eye several months ago and visited our hospital.",
+          "field_path": "/admission/0/reason"
+        },
+        {
+          "candidate_index": 2,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The label records the later worsening timing but omits the earlier onset and that he did not seek treatment, which materially distinguishes the symptom chronology.",
+          "source_quote": "A 42-year-old man experienced decreased visual acuity in the right eye before 2 years, but did not seek treatment.",
+          "field_path": "/symptoms/0/time"
+        },
+        {
+          "candidate_index": 3,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The examination result omits the explicitly stated postoperative course and important negative outcomes.",
+          "source_quote": "He experienced no postoperative intraocular pressure elevation, infection, or delayed inflammation and there were no postoperative abnormalities in the right eye fundus",
+          "field_path": "/medical examinations"
+        },
+        {
+          "candidate_index": 4,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The treatment entry names oral drugs but omits their stated purpose of controlling the patient's cardiac disease.",
+          "source_quote": "Cardiac disease is controlled through the use of oral drugs.",
+          "field_path": "/treatments/0/name"
+        }
+      ],
+      "added_findings": [
+        {
+          "field_path": "/surgeries/0/details",
+          "label_excerpt": "Performed with no intraoperative complications",
+          "source_quote": "In addition to the mature cataract in the right eye, the cataract in the left eye progressed rapidly during the follow-up period, leading to decreased visual acuity. Cataract surgery was indicated for both eyes, and it was performed with no intraoperative complications",
+          "explanation": "The surgery details omit that surgery was indicated for both eyes, including due to rapidly progressing left-eye cataract with decreased visual acuity.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        }
+      ],
+      "summary": "The admission placement asserts an undocumented event. The label also omits material symptom chronology, postoperative outcomes, treatment purpose, and the stated reason surgery was indicated for both eyes."
+    }
+  },
+  {
+    "id": "train:57",
+    "note": "A 40-year-old lady with an underlying systemic lupus erythematosus and lupus nephritis since 2002 currently under control with oral prednisolone 10 mg once daily, oral azathioprine 50 mg once daily, and oral hydroxychloroquine 250 mg twice daily presented to the emergency department with a low-grade fever and multiple episodes of vomiting and watery diarrhea for the past 3 days. There was no joint pain, no alopecia, no rash, no oral ulcers, and no heart failure symptoms. On physical examinations, she was febrile with the temperature of 38.2°C and mildly dehydrated, but otherwise comfortable, not tachypneic, and not in distress. Her blood pressure was 128/86 mmHg, and her pulse rate was 110 beats per minute. Her abdomen was soft, not tender, and no palpable organomegaly. Examination of the cardiorespiratory and neurological system was also revealed no abnormal finding. Initial blood investigation was done (as shown in Table ). Her white blood cells and C-reactive protein (CRP) were elevated, and there was mild hypoalbuminemia, acute kidney injury, and minimal proteinuria. She was treated as infective acute gastroenteritis with mild degree of acute kidney injury secondary to dehydration and was started on intravenous (IV) ceftriaxone 2 gm once daily. She was also given four pints of IV 0.9% saline over 24 h. In view of the presence of proteinuria, early reactivation of lupus nephritis was suspected. She was given IV hydrocortisone 200 mg three times a day (total dose of 600 mg per day). The oral prednisolone was withheld, while her oral azathioprine and oral hydroxychloroquine were continued. Shortly after the first dose of IV hydrocortisone, she developed severe sinus bradycardia with the heart rate of 30–40 beats per minute. Her blood pressure was 140/70 mmHg. Electrocardiogram (ECG) which was done immediately showed sinus bradycardia with the heart rate of 30 beats per minute, partial right bundle branch blocked, and no evidence of coronary ischemia (as shown in",
+    "label": "{\"visit motivation\":\"Presented with a low-grade fever and multiple episodes of vomiting and watery diarrhea for the past 3 days.\",\"admission\":[{\"reason\":\"Infective acute gastroenteritis with mild degree of acute kidney injury secondary to dehydration\"}],\"patient information\":{\"age\":\"40\",\"sex\":\"Female\"},\"patient medical history\":{\"physiological context\":\"Systemic lupus erythematosus and lupus nephritis since 2002\"},\"surgeries\":[],\"symptoms\":[{\"name of symptom\":\"Low-grade fever\",\"time\":\"Past 3 days\"},{\"name of symptom\":\"Vomiting\",\"time\":\"Past 3 days\"},{\"name of symptom\":\"Watery diarrhea\",\"time\":\"Past 3 days\"}],\"medical examinations\":[{\"name\":\"Physical examination\",\"result\":\"Febrile with a temperature of 38.2°C, mildly dehydrated, comfortable, not tachypneic, not in distress, blood pressure 128/86 mmHg, pulse rate 110 beats per minute, soft abdomen, not tender, no palpable organomegaly, no abnormal findings in cardiorespiratory and neurological examination\"}],\"diagnosis tests\":[{\"test\":\"Initial blood investigation\",\"result\":\"Elevated white blood cells and C-reactive protein (CRP), mild hypoalbuminemia, acute kidney injury, and minimal proteinuria\"},{\"test\":\"Electrocardiogram (ECG)\",\"result\":\"Sinus bradycardia with the heart rate of 30 beats per minute, partial right bundle branch block, no evidence of coronary ischemia\"}],\"treatments\":[{\"name\":\"IV ceftriaxone\",\"dosage\":\"2 gm\"},{\"name\":\"IV 0.9% saline\",\"dosage\":\"Four pints\",\"time\":\"Over 24 h\"},{\"name\":\"IV hydrocortisone\",\"dosage\":\"200 mg\",\"reaction to treatment\":\"Developed severe sinus bradycardia\"},{\"name\":\"Oral prednisolone\",\"dosage\":\"10 mg\",\"reaction to treatment\":\"Withheld due to treatment with IV hydrocortisone\"},{\"name\":\"Oral azathioprine\",\"dosage\":\"50 mg\"},{\"name\":\"Oral hydroxychloroquine\",\"dosage\":\"250 mg\"}],\"discharge\":{}}",
+    "findings": [
+      {
+        "field_path": "/treatments/2/reaction to treatment",
+        "label_excerpt": "Developed severe sinus bradycardia",
+        "source_quote": "Shortly after the first dose of IV hydrocortisone, she developed severe sinus bradycardia with the heart rate of 30–40 beats per minute.",
+        "explanation": "The reaction field attributes the bradycardia to hydrocortisone. The note states a temporal sequence after the first dose, but does not establish that hydrocortisone caused the event; this upgrades sequence to causation.",
+        "category": "negation_uncertainty",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/treatments/3/reaction to treatment",
+        "label_excerpt": "Withheld due to treatment with IV hydrocortisone",
+        "source_quote": "The oral prednisolone was withheld, while her oral azathioprine and oral hydroxychloroquine were continued.",
+        "explanation": "The source establishes that prednisolone was withheld but does not state that IV hydrocortisone was the reason. The label supplies a rationale not present in the note.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/treatments/0/dosage",
+        "label_excerpt": "2 gm",
+        "source_quote": "(IV) ceftriaxone 2 gm once daily",
+        "explanation": "The dose is correct, but the label omits the stated once-daily frequency, a material treatment-course detail expressible in the dosage field.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/4/dosage",
+        "label_excerpt": "50 mg",
+        "source_quote": "oral azathioprine 50 mg once daily",
+        "explanation": "The label omits the stated once-daily frequency for this ongoing medication.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/5/dosage",
+        "label_excerpt": "250 mg",
+        "source_quote": "oral hydroxychloroquine 250 mg twice daily",
+        "explanation": "The label omits the stated twice-daily frequency for this ongoing medication.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "source": {
+      "candidate_dispositions": [
+        {
+          "candidate_index": 1,
+          "disposition": "confirmed",
+          "attribution": "uncertain",
+          "explanation": "The note establishes that bradycardia developed shortly after hydrocortisone, but not that hydrocortisone caused it. Placing the event in the reaction field can imply causation.",
+          "source_quote": "Shortly after the first dose of IV hydrocortisone, she developed severe sinus bradycardia with the heart rate of 30–40 beats per minute.",
+          "field_path": "/treatments/2/reaction to treatment"
+        },
+        {
+          "candidate_index": 2,
+          "disposition": "confirmed",
+          "attribution": "inherited",
+          "explanation": "The label gives a reason for withholding prednisolone that the source does not state.",
+          "source_quote": "The oral prednisolone was withheld, while her oral azathioprine and oral hydroxychloroquine were continued.",
+          "field_path": "/treatments/3/reaction to treatment"
+        },
+        {
+          "candidate_index": 3,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The stated once-daily frequency is missing from the dosage field.",
+          "source_quote": "intravenous (IV) ceftriaxone 2 gm once daily",
+          "field_path": "/treatments/0/dosage"
+        },
+        {
+          "candidate_index": 4,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The stated once-daily frequency is missing from the dosage field.",
+          "source_quote": "oral azathioprine 50 mg once daily",
+          "field_path": "/treatments/4/dosage"
+        },
+        {
+          "candidate_index": 5,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The stated twice-daily frequency is missing from the dosage field.",
+          "source_quote": "oral hydroxychloroquine 250 mg twice daily",
+          "field_path": "/treatments/5/dosage"
+        }
+      ],
+      "added_findings": [
+        {
+          "field_path": "/treatments/2/dosage",
+          "label_excerpt": "200 mg",
+          "source_quote": "IV hydrocortisone 200 mg three times a day (total dose of 600 mg per day)",
+          "explanation": "The label omits the stated three-times-daily frequency and total daily dose for hydrocortisone.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        },
+        {
+          "field_path": "/diagnosis tests/0/result",
+          "label_excerpt": "Elevated white blood cells and C-reactive protein (CRP), mild hypoalbuminemia, acute kidney injury, and minimal proteinuria",
+          "source_quote": "In view of the presence of proteinuria, early reactivation of lupus nephritis was suspected.",
+          "explanation": "The label records minimal proteinuria but omits the clinically relevant suspected early lupus nephritis reactivation, including its uncertain status.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        }
+      ],
+      "summary": "The source supports the candidate findings about the unsupported prednisolone rationale and omitted medication frequencies. The hydrocortisone reaction wording may imply causation beyond the source’s temporal sequence. The label also omits hydrocortisone frequency and total daily dose, and the documented suspected lupus nephritis reactivation."
+    }
+  },
+  {
+    "id": "train:380",
+    "note": "A 64-year-old female presented to the emergency department with a chief complaint of epigastric pain and nausea lasting 24 h. Relevant medical history includes congestive heart failure, interstitial lung disease, chronic obstructive pulmonary disease and prior open cholecystectomy. Home medications included a course of methylprednisolone for acute exacerbation of lung disease. On exam, her abdomen was tender and distended. Labs showed leukocytosis with normal lactate level. Figures and show abdominal computed tomography (CT) without contrast, significant for small bowel obstruction with intramural small bowel pneumatosis and extensive portal venous gas (PVG) within the left hepatic lobe. Emergent laparotomy was performed for acute abdomen. Exploration of the abdominal viscera revealed no evidence of inflammation, necrosis or perforation. The patient continued to have pain after surgery. Upper endoscopy was performed, revealing a non-perforated gastric ulcer which was treated with medical management until the pain resolved.\nOne year later, the patient was brought to the emergency department by her family for altered mental status. They reported 2 days of abnormal behavior and confusion culminating in an episode of bowel incontinence. The patient had difficulty following commands and was complaining of abdominal pain. Initial workup showed tachycardia, hypotension, leukocytosis and elevated creatinine which was treated per sepsis protocol. Her toxicology screen was positive for cocaine. Serum lactate was also elevated. CT brain without contrast showed no acute intracranial process. CT without contrast of the abdomen and pelvis, shown in Figs and , revealed dilated small bowel with gas in the bowel wall. Emergent damage control surgery was performed. There were no signs of gastrointestinal perforation but two segments of necrotic small bowel, 5 feet in total, were removed and the abdomen was sealed with Abthera. Two days later, her abdomen was re-explored and another 40 cm of non-viable small bowel was removed, leaving her with two small bowel anastomosis. Her abdomen was re-explored and closed after another 2 days. She",
+    "label": "{\"visit motivation\":\"Epigastric pain and nausea; altered mental status, abnormal behavior, confusion, and bowel incontinence\",\"admission\":[{\"reason\":\"Small bowel obstruction with intramural small bowel pneumatosis and extensive portal venous gas; altered mental status and sepsis\"}],\"patient information\":{\"age\":\"64\",\"sex\":\"Female\"},\"patient medical history\":{\"physiological context\":\"Congestive heart failure, interstitial lung disease, chronic obstructive pulmonary disease, prior open cholecystectomy\"},\"surgeries\":[{\"Type\":\"Emergent laparotomy\"},{\"Type\":\"Emergent damage control surgery\",\"time\":\"One year after the first surgery\",\"details\":\"Another 40 cm of non-viable small bowel removed in a subsequent surgery, leaving the patient with two small bowel anastomosis\"}],\"symptoms\":[{\"name of symptom\":\"Epigastric pain\",\"location\":\"Epigastric region\",\"time\":\"Lasting 24 h\",\"details\":\"Patient continued to have pain after surgery\"},{\"name of symptom\":\"Nausea\",\"time\":\"Lasting 24 h\"},{\"name of symptom\":\"Altered mental status\",\"time\":\"2 days of abnormal behavior and confusion\",\"details\":\"Culminating in an episode of bowel incontinence\"},{\"name of symptom\":\"Abdominal pain\",\"details\":\"Complaining of abdominal pain during second emergency department visit\"}],\"medical examinations\":[{\"name\":\"Physical exam\",\"result\":\"Abdomen was tender and distended\"},{\"name\":\"Upper endoscopy\",\"result\":\"Revealed a non-perforated gastric ulcer\"}],\"diagnosis tests\":[{\"test\":\"Labs\",\"result\":\"Leukocytosis with normal lactate level\"},{\"test\":\"Abdominal CT without contrast\",\"result\":\"Small bowel obstruction with intramural small bowel pneumatosis and extensive portal venous gas within the left hepatic lobe\"},{\"test\":\"Toxicology screen\",\"result\":\"Positive for cocaine\"},{\"test\":\"CT brain without contrast\",\"result\":\"No acute intracranial process\"},{\"test\":\"CT without contrast of the abdomen and pelvis\",\"result\":\"Dilated small bowel with gas in the bowel wall\"}],\"treatments\":[{\"name\":\"Methylprednisolone\"},{\"name\":\"Medical management\"},{\"name\":\"Sepsis protocol\",\"time\":\"One year later\"}],\"discharge\":{}}",
+    "findings": [
+      {
+        "field_path": "/surgeries/1/time",
+        "label_excerpt": "One year after the first surgery",
+        "source_quote": "One year later, the patient was brought to the emergency department by her family for altered mental status.",
+        "explanation": "The note dates the second emergency presentation one year later, but does not establish that the damage control surgery itself occurred exactly one year after the first surgery. The timing may be inherited from the encounter context, so this is a policy ambiguity.",
+        "category": "chronology",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "altered mental status and sepsis",
+        "source_quote": "Initial workup showed tachycardia, hypotension, leukocytosis and elevated creatinine which was treated per sepsis protocol.",
+        "explanation": "The note reports altered mental status and treatment per sepsis protocol, but does not explicitly state a sepsis diagnosis or inpatient admission. Adding sepsis as an admission reason is unsupported by the provided note.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/surgeries/1/details",
+        "label_excerpt": "Another 40 cm of non-viable small bowel removed in a subsequent surgery, leaving the patient with two small bowel anastomosis",
+        "source_quote": "Two days later, her abdomen was re-explored and another 40 cm of non-viable small bowel was removed, leaving her with two small bowel anastomosis.",
+        "explanation": "The note separately describes an initial damage control operation removing two segments totaling 5 feet, followed by the later 40 cm resection. The surgery Type does not preserve the initial operation's bowel removal or Abthera closure details, a potentially material loss across the surgery entries.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "Home medications included a course of methylprednisolone for acute exacerbation of lung disease.",
+        "explanation": "The treatment entry names methylprednisolone but omits the source-supported course for an acute exacerbation of lung disease. That indication/context is material to the treatment record.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "source": {
+      "candidate_dispositions": [
+        {
+          "candidate_index": 1,
+          "disposition": "confirmed",
+          "attribution": "uncertain",
+          "explanation": "The note anchors “One year later” to the second emergency presentation, and does not explicitly date the damage control surgery relative to the first surgery. The label assigns that interval to the surgery, so this is a chronology ambiguity.",
+          "source_quote": "One year later, the patient was brought to the emergency department by her family for altered mental status.",
+          "field_path": "/surgeries/1/time"
+        },
+        {
+          "candidate_index": 2,
+          "disposition": "confirmed",
+          "attribution": "inherited",
+          "explanation": "The label states “sepsis” as an admission reason, but the note only says the initial workup “was treated per sepsis protocol”; it does not explicitly diagnose sepsis or establish an inpatient admission.",
+          "source_quote": "Initial workup showed tachycardia, hypotension, leukocytosis and elevated creatinine which was treated per sepsis protocol.",
+          "field_path": "/admission/0/reason"
+        },
+        {
+          "candidate_index": 3,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The surgery details omit material facts from the first damage control operation: two necrotic bowel segments totaling 5 feet were removed and the abdomen was sealed with Abthera. The label’s existing surgery details path can capture those facts.",
+          "source_quote": "There were no signs of gastrointestinal perforation but two segments of necrotic small bowel, 5 feet in total, were removed and the abdomen was sealed with Abthera.",
+          "field_path": "/surgeries/1/details"
+        },
+        {
+          "candidate_index": 4,
+          "disposition": "downgraded",
+          "attribution": "projection_loss",
+          "explanation": "The label omits that methylprednisolone was a home medication course for an acute lung disease exacerbation. The note does not state that the medication was prescribed specifically to treat that exacerbation, so the omission is limited to its stated context.",
+          "source_quote": "Home medications included a course of methylprednisolone for acute exacerbation of lung disease.",
+          "field_path": "/treatments"
+        }
+      ],
+      "added_findings": [
+        {
+          "field_path": "/surgeries/0/Type",
+          "label_excerpt": "Emergent laparotomy",
+          "source_quote": "Exploration of the abdominal viscera revealed no evidence of inflammation, necrosis or perforation.",
+          "explanation": "The label records the laparotomy but omits the material operative finding that exploration revealed no inflammation, necrosis, or perforation. The existing surgery Type/details fields can carry this outcome.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        },
+        {
+          "field_path": "/medical examinations/1/result",
+          "label_excerpt": "Revealed a non-perforated gastric ulcer",
+          "source_quote": "Upper endoscopy was performed, revealing a non-perforated gastric ulcer which was treated with medical management until the pain resolved.",
+          "explanation": "The label records the ulcer finding and medical management, but omits that treatment continued until the pain resolved, a material treatment response and endpoint expressible in the existing treatment entry.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        },
+        {
+          "field_path": "/treatments/1/name",
+          "label_excerpt": "Medical management",
+          "source_quote": "Upper endoscopy was performed, revealing a non-perforated gastric ulcer which was treated with medical management until the pain resolved.",
+          "explanation": "The treatment entry omits the source-stated association between medical management and the non-perforated gastric ulcer, including that it continued until pain resolved. This is material treatment context expressible in existing treatment fields.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        },
+        {
+          "field_path": "/treatments/2/name",
+          "label_excerpt": "Sepsis protocol",
+          "source_quote": "Initial workup showed tachycardia, hypotension, leukocytosis and elevated creatinine which was treated per sepsis protocol.",
+          "explanation": "The label names the sepsis protocol but omits the associated initial workup findings of tachycardia, hypotension, leukocytosis, and elevated creatinine. These findings are material context for the treatment entry and fit existing treatment details.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        }
+      ],
+      "summary": "The label adds sepsis as an admission reason without an explicit diagnosis or evidence of inpatient admission, and assigns the one-year interval to surgery although the note anchors it to the later emergency presentation. It also omits material operative and treatment context; the methylprednisolone finding is narrowed because the note does not explicitly state its prescribing purpose."
+    }
+  },
+  {
+    "id": "train:217",
+    "note": "An otherwise healthy 22-year-old caucasian woman consulted for an initial orthopedic examination due to an accelerated growth of a large mass over the posterior aspect of her right buttock and lower lumbar region. The mass had been present for over 5 years and had gradually enlarged during this time. Recently, the lesion had increased in size rather rapidly.\nAt another treatment facility, when the patient was 18 years of age, she underwent debulking of a tumor from the right buttock, which was complicated with a very profuse intraoperative hemorrhage resulting in a severe hypotension and acute kidney failure requiring 8 units of blood for stabilization. The patient was later discharged and did not continue followup at that treatment facility. In spite of this, the mass in the right buttock and lumbar region continued undergoing slow growth until it limited her daily activities. Upon arriving at our center, physical examination revealed a large, firm, amorphous, fluctuant, soft tissue mass measuring 60 × 50 × 30 cm. that originated from the lumbar region and extended to the gluteal fold and overhanging from the posterior aspect of her thigh ().\nMRI was technically difficult due to the dimensions of the tumor. The extension of the mass was unable to be determined with certainty because portions of it remained outside of the field of view. The mass exhibited intermediate signal on both T1- and T2-weighted images, and several fluid collections were identified (). The images demonstrated multiple serpiginous flow voids in keeping with prominent vasculature. The mass did not infiltrate the underlying gluteal musculature. Core needle biopsy was performed and the results were consistent with PNF; there was no evidence of malignancy in the tissue sample.\nThe case was reviewed at our multidisciplinary musculoskeletal tumor committee. The treatment consensus opted for preoperative embolization, as this would potentially reduce the perioperative blood loss considering the vascularity and size of the lesion. Surgical resection of the bulk of the lesion would then be undertaken and closure achieved with local tissue advancement or free flap transfer",
+    "label": "{\"visit motivation\":\"Accelerated growth of a large mass over the posterior aspect of her right buttock and lower lumbar region\",\"admission\":[{\"reason\":\"Debulking of a tumor from the right buttock\"}],\"patient information\":{\"age\":\"22 years old\",\"sex\":\"Woman\"},\"patient medical history\":{\"physiological context\":\"Mass present for over 5 years, gradually enlarged, recently increased in size rapidly\"},\"surgeries\":[{\"Type\":\"Debulking of a tumor\",\"time\":\"When the patient was 18 years old\",\"details\":\"Required 8 units of blood for stabilization, no followup at that treatment facility\"}],\"symptoms\":[{\"name of symptom\":\"Growth of a large mass\",\"location\":\"Posterior aspect of her right buttock and lower lumbar region\",\"time\":\"Over 5 years\",\"details\":\"Limited her daily activities\"}],\"medical examinations\":[{\"name\":\"Physical examination\",\"result\":\"Large, firm, amorphous, fluctuant, soft tissue mass measuring 60 × 50 × 30 cm\"}],\"diagnosis tests\":[{\"test\":\"MRI\",\"result\":\"Intermediate signal on both T1- and T2-weighted images, several fluid collections, multiple serpiginous flow voids, mass did not infiltrate the underlying gluteal musculature\"},{\"test\":\"Core needle biopsy\",\"result\":\"Consistent with PNF; no evidence of malignancy in the tissue sample\"}],\"treatments\":[{\"name\":\"Preoperative embolization followed by surgical resection\"}],\"discharge\":{}}",
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Debulking of a tumor from the right buttock",
+        "source_quote": "At another treatment facility, when the patient was 18 years of age, she underwent debulking of a tumor from the right buttock",
+        "explanation": "This identifies a historical procedure at another facility as the reason for an admission, while the note describes the current visit as an initial orthopedic examination and gives no evidence of current admission. Clear unsupported admission linkage.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Required 8 units of blood for stabilization, no followup at that treatment facility",
+        "source_quote": "which was complicated with a very profuse intraoperative hemorrhage resulting in a severe hypotension and acute kidney failure requiring 8 units of blood for stabilization. The patient was later discharged and did not continue followup at that treatment facility.",
+        "explanation": "The details omit the material hemorrhage, severe hypotension, and acute kidney failure that led to transfusion. The follow-up detail is supported, but does not cover these serious complications.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/0/name",
+        "label_excerpt": "Preoperative embolization followed by surgical resection",
+        "source_quote": "The treatment consensus opted for preoperative embolization, as this would potentially reduce the perioperative blood loss considering the vascularity and size of the lesion. Surgical resection of the bulk of the lesion would then be undertaken",
+        "explanation": "These are consensus-selected future treatments, not documented as performed. The label omits that they were planned, making the treatment status materially ambiguous.",
+        "category": "event_status",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "source": {
+      "candidate_dispositions": [
+        {
+          "candidate_index": 1,
+          "disposition": "confirmed",
+          "attribution": "inherited",
+          "explanation": "The cited tumor debulking was historical and occurred at another facility when she was 18; the source identifies the current encounter as an initial orthopedic examination and does not establish an admission. The admission reason therefore mislinks the historical procedure to an admission.",
+          "source_quote": "At another treatment facility, when the patient was 18 years of age, she underwent debulking of a tumor from the right buttock",
+          "field_path": "/admission/0/reason"
+        },
+        {
+          "candidate_index": 2,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The surgery details retain transfusion and follow-up information but omit the serious intraoperative hemorrhage, hypotension, and acute kidney failure that led to the transfusion. These complications are material source-supported history.",
+          "source_quote": "which was complicated with a very profuse intraoperative hemorrhage resulting in a severe hypotension and acute kidney failure requiring 8 units of blood for stabilization.",
+          "field_path": "/surgeries/0/details"
+        },
+        {
+          "candidate_index": 3,
+          "disposition": "confirmed",
+          "attribution": "inherited",
+          "explanation": "The source describes committee consensus for preoperative embolization and a future resection, but the treatment name does not preserve that these procedures were selected as the planned course. The status qualification is material.",
+          "source_quote": "The treatment consensus opted for preoperative embolization",
+          "field_path": "/treatments/0/name"
+        }
+      ],
+      "added_findings": [
+        {
+          "field_path": "/medical examinations/0/result",
+          "label_excerpt": "Large, firm, amorphous, fluctuant, soft tissue mass measuring 60 × 50 × 30 cm",
+          "source_quote": "that originated from the lumbar region and extended to the gluteal fold and overhanging from the posterior aspect of her thigh",
+          "explanation": "The examination result omits the mass's substantial extent and origin, which help characterize the unusually large lesion and are expressible in the existing result field.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        },
+        {
+          "field_path": "/diagnosis tests/0/result",
+          "label_excerpt": "Intermediate signal on both T1- and T2-weighted images, several fluid collections, multiple serpiginous flow voids, mass did not infiltrate the underlying gluteal musculature",
+          "source_quote": "The extension of the mass was unable to be determined with certainty because portions of it remained outside of the field of view.",
+          "explanation": "The MRI result omits the material uncertainty about the lesion's extent caused by portions lying outside the field of view.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        }
+      ],
+      "summary": "All three candidate findings are supported. The label also omits material examination detail about the mass's extent and MRI uncertainty about its full extension."
+    }
+  },
+  {
+    "id": "train:1209",
+    "note": "A 37-year-old woman visited the Division of Cardiology, Department of Internal Medicine with an incidental finding of cardiomegaly during a routine screening test at her workplace. The vital signs were stable with a heart rate of 80/min, systolic blood pressure of 100 mmHg, respiratory rate of 18/min, body temperature of 37.0℃. Echocardiography showed an ejection fraction of 76.4% with normal cardiac structures including valves. However, it showed a moderate pericardial effusion, and the pericardial effusion size was measured at five different points. The diameters were 0.9 cm at the anterior site of the right ventricle, 1.5 cm at the posterior site of the left ventricle, 0.4 cm at the lateral site of the left ventricle, 0.6 cm at the right atrial site, 1.7 cm at the apex site which was the largest. Other laboratory examination findings were within their normal ranges. The initial diagnosis was pericarditis with pericardial effusion. It was decided to treat the patient with oral diuretics. After 3 months, chest X-ray did not show any improvement in cardiac size, and hence chest X-ray was followed by chest CT (computed tomography). A cystic mass in the right cardiophrenic angle having homogeneous low attenuation and pericardial effusion without definite pericardial thickening or enhancement were detected (). The woman was transferred to the Department of Cardiothoracic Surgery for surgical resection of the cystic mass and confirmation of the diagnosis. The operation was performed by videoscopically assisted right thoracotomy through three trocar holes. The cystic mass was removed and pericardiotomy and pericardial biopsy were performed. After pericardiotomy, massive amount of milky fluid about 950 cc was drained. A sample of the milky fluid was sent for laboratory examination, and pericardial tissue sample was obtained for pathologic examination. After sampling and biopsy, the pericardial sac was cleansed with normal saline irrigation. Wounds due to trocar insertion were closed layer by layer, after positioning one chest tube into the pericardial",
+    "label": "{\"visit motivation\":\"Incidental finding of cardiomegaly during a routine screening test at her workplace\",\"admission\":[{\"reason\":\"Pericarditis with pericardial effusion\"}],\"patient information\":{\"age\":\"37\",\"sex\":\"Woman\"},\"patient medical history\":{},\"surgeries\":[{\"Type\":\"Videoscopically assisted right thoracotomy through three trocar holes\",\"details\":\"Pericardial sac was cleansed with normal saline irrigation; wounds due to trocar insertion were closed layer by layer, after positioning one chest tube into the pericardial\"}],\"symptoms\":[{\"name of symptom\":\"Cardiomegaly\",\"details\":\"Incidental finding during a routine screening test\"}],\"medical examinations\":[{\"name\":\"Vital signs\",\"result\":\"Heart rate of 80/min, systolic blood pressure of 100 mmHg, respiratory rate of 18/min, body temperature of 37.0℃\"},{\"name\":\"Echocardiography\",\"result\":\"Ejection fraction of 76.4% with normal cardiac structures including valves\"},{\"name\":\"Chest X-ray\",\"result\":\"No improvement in cardiac size after 3 months\"},{\"name\":\"Chest CT\",\"result\":\"A cystic mass in the right cardiophrenic angle with homogeneous low attenuation and pericardial effusion without definite pericardial thickening or enhancement\"}],\"diagnosis tests\":[{\"test\":\"Laboratory examination\",\"result\":\"Within normal ranges\"},{\"test\":\"Pericardial biopsy\"},{\"test\":\"Laboratory examination of milky fluid\"}],\"treatments\":[{\"name\":\"Oral diuretics\",\"reaction to treatment\":\"No improvement in cardiac size after 3 months\"}],\"discharge\":{}}",
+    "findings": [
+      {
+        "field_path": "/medical examinations",
+        "label_excerpt": "",
+        "source_quote": "However, it showed a moderate pericardial effusion, and the pericardial effusion size was measured at five different points.",
+        "explanation": "The label omits the material echocardiography finding of moderate effusion and its measured dimensions, including the largest measurement. These findings are expressible under medical examinations.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/surgeries",
+        "label_excerpt": "",
+        "source_quote": "The cystic mass was removed and pericardiotomy and pericardial biopsy were performed. After pericardiotomy, massive amount of milky fluid about 950 cc was drained.",
+        "explanation": "The surgery entry includes the thoracotomy and closure details but omits the mass removal, pericardiotomy, biopsy, and substantial fluid drainage, which are material procedure details.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "No improvement in cardiac size after 3 months",
+        "source_quote": "It was decided to treat the patient with oral diuretics. After 3 months, chest X-ray did not show any improvement in cardiac size",
+        "explanation": "The note establishes the treatment followed by an unchanged X-ray, but does not explicitly attribute that result to the diuretics. The reaction field may imply a treatment response, so this is a temporal and causal attribution ambiguity.",
+        "category": "negation_uncertainty",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "source": {
+      "candidate_dispositions": [
+        {
+          "candidate_index": 1,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The label omits the echocardiogram’s moderate pericardial effusion and its measurements, including the largest measurement of 1.7 cm.",
+          "source_quote": "However, it showed a moderate pericardial effusion, and the pericardial effusion size was measured at five different points. The diameters were 0.9 cm at the anterior site of the right ventricle, 1.5 cm at the posterior site of the left ventricle, 0.4 cm at the lateral site of the left ventricle, 0.6 cm at the right atrial site, 1.7 cm at the apex site which was the largest.",
+          "field_path": "/medical examinations"
+        },
+        {
+          "candidate_index": 2,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The surgery entry omits the mass removal, pericardiotomy, biopsy, and drainage of about 950 cc of milky fluid.",
+          "source_quote": "The cystic mass was removed and pericardiotomy and pericardial biopsy were performed. After pericardiotomy, massive amount of milky fluid about 950 cc was drained.",
+          "field_path": "/surgeries"
+        },
+        {
+          "candidate_index": 3,
+          "disposition": "downgraded",
+          "attribution": "uncertain",
+          "explanation": "The label places the unchanged X-ray result in the treatment-reaction field, which can imply a response to diuretics. The note gives the treatment and subsequent X-ray result, but does not explicitly attribute the result to the treatment; temporal sequence alone does not establish causation.",
+          "source_quote": "It was decided to treat the patient with oral diuretics. After 3 months, chest X-ray did not show any improvement in cardiac size",
+          "field_path": "/treatments/0/reaction to treatment"
+        }
+      ],
+      "added_findings": [
+        {
+          "field_path": "/admission/0/reason",
+          "label_excerpt": "Pericarditis with pericardial effusion",
+          "source_quote": "The initial diagnosis was pericarditis with pericardial effusion. It was decided to treat the patient with oral diuretics.",
+          "explanation": "The note establishes a visit and an initial diagnosis but does not establish inpatient admission. Representing the diagnosis under admission asserts an event not supported by the note.",
+          "category": "inappropriate_role",
+          "classification": "clear_error",
+          "disposition": "confirmed",
+          "attribution": "inherited"
+        }
+      ],
+      "summary": "The echocardiography and operative omissions are material. The treatment-reaction wording is temporally supported but leaves causation unclear. The label also represents the initial diagnosis as an admission without evidence that an admission occurred."
+    }
+  }
+]

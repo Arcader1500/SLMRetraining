@@ -1,0 +1,58 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Chest pain and shortness of breath",
+        "source_quote": "presented to the emergency department at 10 am in the morning with chest pain and shortness of breath of approximately 12 hours duration.",
+        "explanation": "The visit motivation matches the stated reason for presentation."
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Postmenopausal, right breast invasive ductal carcinoma with bilateral mastectomies in 2015",
+        "source_quote": "Her medical history included right breast invasive ductal carcinoma with bilateral mastectomies in 2015",
+        "explanation": "This accurately captures the supported cancer and mastectomy history."
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Sharp pleuritic chest pain, also experiencing a less prominent pressure like sensation",
+        "source_quote": "She did endorse that she was also experiencing a less prominent pressure like sensation in addition to the sharp pleuritic type of pain.",
+        "explanation": "The symptom description preserves both pain qualities and their relative prominence."
+      },
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Reduced the intensity of pain",
+        "source_quote": "She said that she had taken some ibuprofen which had reduced the intensity of pain.",
+        "explanation": "The source supports the recorded ibuprofen response."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Chest pain and shortness of breath",
+        "source_quote": "presented to the emergency department at 10 am in the morning with chest pain and shortness of breath of approximately 12 hours duration.",
+        "explanation": "The note establishes an emergency department presentation, but does not state that the patient was admitted. Recording an admission reason may therefore assert an unsupported event status.",
+        "category": "event_status",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Sharp pleuritic chest pain, also experiencing a less prominent pressure like sensation",
+        "source_quote": "The patient reported that her chest pain was located in the substernal region, radiating to the back, aggravated by deep breaths and by lying down, and alleviated by sitting up and leaning forward.",
+        "explanation": "The details omit material, source-stated aggravating and alleviating factors for the chest pain.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/symptoms/1/details",
+        "label_excerpt": "Developed shortness of breath while lying in bed",
+        "source_quote": "She denied fevers, chills, cough, diaphoresis, palpitations, dizziness, abdominal pain, heartburn, nausea or vomiting, flu-like symptoms, recent illnesses, or any history of chest pain in the past.",
+        "explanation": "The label omits the material denial of associated symptoms and prior chest pain. These negatives are expressly recorded in the note and can be represented in symptom details.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label is mostly consistent with the note, but it records an admission without evidence of admission and omits material chest-pain characteristics and negative history."
+  }
+}

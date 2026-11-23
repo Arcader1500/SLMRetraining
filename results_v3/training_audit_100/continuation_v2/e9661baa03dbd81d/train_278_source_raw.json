@@ -1,0 +1,83 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The note reports outside-hospital treatment and suspected osteomyelitis, but does not say the patient was admitted. The admission entry asserts an unsupported event.",
+        "source_quote": "The patient initially took treatment at outside hospital where he was suspected to have right distal humerus osteomyelitis",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The note gives conflicting location information: it describes right-elbow complaints but says the pain began over the left elbow. The label’s right-elbow location is supported for the presenting complaint, so this is an ambiguity rather than a clear error.",
+        "source_quote": "A 27-year-old male came with complaints of the right elbow pain and stiffness for 3 years. The patient was apparently normal 3 years back. He started developing pain over the left elbow following a trivial trauma",
+        "field_path": "/symptoms/0/location"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label omits the reported biopsy result, a material diagnostic conclusion expressible in the diagnosis-test result field.",
+        "source_quote": "Surprisingly, the biopsy was reported as an intraosseous arteriovenous malformation",
+        "field_path": "/diagnosis tests"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Started after a trivial trauma",
+        "source_quote": "The pain was dull aching and aggravated on lifting heavy weights and relieved partially by medications.",
+        "explanation": "The symptom details omit the pain quality and important aggravating and relieving factors.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "For 3 years",
+        "source_quote": "which was gradually progressive",
+        "explanation": "The symptom entry omits the documented progressive course, a material temporal feature.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Attempted through a lateral approach; lesion probably not reached",
+        "source_quote": "and hence, he had persistent pain even after the surgery",
+        "explanation": "The first surgery entry omits the documented persistence of pain afterward, a material outcome of the procedure.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Healed longitudinal surgical scar, swelling, tenderness, restricted range of movement, full forearm rotations, no distal neurovascular deficit",
+        "source_quote": "healed longitudinal surgical scar of length 6 cm present over the lateral aspect of the distal humerus and elbow",
+        "explanation": "The examination result omits the scar’s documented length and location, which add material specificity to the prior surgical finding.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "restricted range of movement",
+        "source_quote": "Range of movement of the right elbow was 10–90° (active and passive) further restricted due to pain.",
+        "explanation": "The examination entry omits the measured range of motion and that both active and passive movement were limited, material detail about the restriction.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The unsupported admission assertion and omitted biopsy result are confirmed. The symptom-location concern is downgraded because the note itself gives conflicting locations. Material omitted symptom, procedure-outcome, and examination details are identified."
+  }
+}

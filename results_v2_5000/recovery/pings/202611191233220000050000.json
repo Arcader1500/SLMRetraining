@@ -1,0 +1,55 @@
+{
+  "ping_utc": "2026-11-19T12:33:22.000005+00:00",
+  "pipeline": {
+    "stage": "02_finetune",
+    "status": "running",
+    "completed": [
+      "00_prepare_dataset",
+      "01_baseline_eval"
+    ],
+    "updated_at_utc": "2026-11-19T11:12:21.668063+00:00"
+  },
+  "processes": "1498 /usr/bin/python3 -u scripts/run_v2_5000_pipeline.py\n1503 /usr/bin/python3 -u scripts/run_colab_notebook.py notebooks/v2_5000/02_finetune.ipynb\n",
+  "last_training_log": {
+    "loss": 0.4011,
+    "grad_norm": 0.8124778270721436,
+    "learning_rate": 0.000016108154305103684,
+    "epoch": 2.496,
+    "step": 1560
+  },
+  "epoch_evals": [
+    {
+      "epoch": 1,
+      "eval_loss": 0.49792587757110596,
+      "eval_runtime": 25.5713,
+      "eval_samples_per_second": 3.911,
+      "eval_steps_per_second": 3.911,
+      "step": 625
+    },
+    {
+      "eval_loss": 0.4614775776863098,
+      "eval_runtime": 27.2972,
+      "eval_samples_per_second": 3.663,
+      "eval_steps_per_second": 3.663,
+      "epoch": 2,
+      "step": 1250
+    }
+  ],
+  "complete_checkpoints": [
+    "checkpoint-1250",
+    "checkpoint-625"
+  ],
+  "finetuned_generations": 0,
+  "training_notebook": {
+    "notebook": "02_finetune.ipynb",
+    "state": "running",
+    "started": 1795086743.1391547,
+    "completed_code_cells": [
+      2,
+      4,
+      6
+    ],
+    "current_cell": 8
+  },
+  "adapter_saved": false
+}

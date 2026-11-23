@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "68",
+        "source_quote": "A 68-year-old female",
+        "explanation": "The age matches the source."
+      },
+      {
+        "field_path": "/medical examinations/1/result",
+        "label_excerpt": "No bacteria cultured",
+        "source_quote": "No bacteria were cultured from blood.",
+        "explanation": "The blood culture result is supported."
+      },
+      {
+        "field_path": "/symptoms/3/details",
+        "label_excerpt": "No change in body weight",
+        "source_quote": "but no change in body weight.",
+        "explanation": "The weight detail is supported."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "The fever did not subside after 1 month and she was admitted to another hospital.",
+        "explanation": "The note also states she was observed with prescribed antipyretics and later received appropriate antibiotics, but the treatments section is empty. Omitting these treatment events loses material treatment history.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/medical examinations/3/result",
+        "label_excerpt": "Diffuse thickening of the aortic wall; abdomen normal",
+        "source_quote": "diffuse thickening of the aortic wall, without significant narrowing or occlusion of vessels, was evident.",
+        "explanation": "The CT result omits the source's material qualification that there was no significant vessel narrowing or occlusion.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label has two material omissions: treatment history and the CT finding's explicit vascular qualification."
+  }
+}

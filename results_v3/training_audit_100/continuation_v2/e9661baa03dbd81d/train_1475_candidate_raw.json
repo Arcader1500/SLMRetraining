@@ -1,0 +1,36 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/symptoms/1/details",
+        "label_excerpt": "Small melanocytic lesions on the skin of his left leg",
+        "source_quote": "small melanocytic lesions on the skin of his left leg",
+        "explanation": "The lesions are source-supported. Their placement as symptom details is reasonable, so no discrepancy is identified."
+      },
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Reduction of the nodes and resolution of the skin metastases, stopped due to side effects",
+        "source_quote": "with reduction of the nodes and resolution of the skin metastases. Interferon was stopped after 9 mo due to side effects.",
+        "explanation": "The treatment response and stop due to side effects are both stated in the note."
+      },
+      {
+        "field_path": "/medical examinations/2/result",
+        "label_excerpt": "No evidence of distant metastases",
+        "source_quote": "revealed no evidence of distant metastases.",
+        "explanation": "The CT result matches the source."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments/1/name",
+        "label_excerpt": "Oral natural anti-cancer agents",
+        "source_quote": "began therapy with the following oral natural anti-cancer agents: Active hexose correlated compound or AHCC (mushroom extract)[], dandelion root[], curcumin[], and astragalus root[].",
+        "explanation": "The label omits the named agents from the oral treatment entry, losing material treatment details expressly stated in the source.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "One material omission: the four named oral agents are absent from the treatment label. Other checked facts are source-supported."
+  }
+}

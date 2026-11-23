@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Persisting pain in her left leg without a clear diagnosis",
+        "source_quote": "persisting pain in her left leg without a clear diagnosis",
+        "explanation": "The stated visit motivation is supported by the note."
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Rheumatoid arthritis since 1985",
+        "source_quote": "Her medical history showed rheumatoid arthritis since 1985.",
+        "explanation": "The history and onset year match the source."
+      },
+      {
+        "field_path": "/medical examinations/3/result",
+        "label_excerpt": "No signs of osteoporosis or osteopenia (T-score 0.1)",
+        "source_quote": "showed no signs of osteoporosis or osteopenia (T-score 0.1).",
+        "explanation": "The DEXA result is accurately represented."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "A biopsy taken intraoperatively showed blood and fat with a normal haematopoiesis microscopically.\nAdditional immunohistochemical investigation showed no signs of malignancy or osteoporosis.",
+        "source_quote": "A biopsy taken intraoperatively showed blood and fat with a normal haematopoiesis microscopically. Additional immunohistochemical investigation showed no signs of malignancy or osteoporosis.",
+        "explanation": "Material fracture information is omitted: the source says the patient heard a crack while attempting to sit, followed by a transverse subtrochanteric fracture through the cortical thickening with a medial spike. The label captures the operation but not the fracture event.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/0/dosage",
+        "label_excerpt": "5 mg",
+        "source_quote": "prednisone 5 mg o.d. for 9 years",
+        "explanation": "The dose is retained, but the source-stated frequency and duration for this medication course are omitted; course timing is material under the annotation policy.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/5/dosage",
+        "label_excerpt": "200 mg",
+        "source_quote": "infliximab infusion 200 mg once per 8 weeks for 3 years.",
+        "explanation": "The dose is retained, but the source-stated frequency and duration for this medication course are omitted; course timing is material under the annotation policy.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate findings: the label omits the fracture event and material frequency/duration details for medication courses. Three supported checks confirm selected label content against the note."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "69-year-old",
+        "source_quote": "She was a 69-year-old found to be suffering from Alzheimer's disease.",
+        "explanation": "The age is explicitly supported by the note."
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "She had no problems identifying others in the mirror",
+        "source_quote": "she had no problems with identification of others in the mirror.",
+        "explanation": "The label preserves this explicitly stated ability."
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "she recognized them by voice or in a reflected image.",
+        "source_quote": "she declared that they were trying to cheat her by putting on the appearance of her children but could recognize them when they spoke to her from the next room or when their reflected images where shown.",
+        "explanation": "The note supports recognition by voice from the next room and by reflected images."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "mistaking it for an old friend.",
+        "source_quote": "The patient did feel her old friend next to the image of the children.",
+        "explanation": "The note says she felt her old friend was next to the children's image; it does not say she mistook her own image for that old friend. The label assigns the old-friend identification to the wrong image.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      }
+    ],
+    "summary": "One clear source-label discrepancy: the label links the old-friend identification to the patient's own image, while the note's qualification places the old friend next to the image of the children. The remaining checked details are supported."
+  }
+}

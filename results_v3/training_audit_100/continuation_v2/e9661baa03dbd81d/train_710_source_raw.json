@@ -1,0 +1,84 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The source says the anastomosis closed the colostomy, but the surgery Type omits that procedural purpose.",
+        "source_quote": "Three months later the colostomy was closed by termino-terminal manual anastomosis.",
+        "field_path": "/surgeries/8/Type"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The note anchors symptom onset to age 16, but says irrigation followed bowel disimpaction; it does not establish that treatment began at age 16.",
+        "source_quote": "After bowel disimpaction, the condition was treated with daily BM with Peristeen® transanal irrigation.",
+        "field_path": "/treatments/0/time"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The candidate itself says the procedure description is source-supported and identifies no discrepancy.",
+        "source_quote": "The patient underwent a laparoscopic left emicolectomy with primary reanastomosis and temporary loop colostomy.",
+        "field_path": "/surgeries/9/Type"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/1/details",
+        "label_excerpt": "",
+        "source_quote": "After 3 years, for lack of symptoms improvement, a new barium enema was done () which demonstrated the persistence of dilation of the rectum and the distal colon",
+        "explanation": "The label records the second barium enema result but omits that it occurred after three years of irrigation without symptom improvement, a material chronology linking treatment failure to reassessment.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      }
+    ],
+    "summary": "Confirmed the omitted colostomy-closure detail and unsupported treatment start time; rejected the third candidate because it identifies no discrepancy. Added the missing timing and treatment-failure context for the second barium enema."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The source says the anastomosis closed the colostomy, a material procedural detail omitted from the label.",
+        "source_quote": "Three months later the colostomy was closed by termino-terminal manual anastomosis.",
+        "field_path": "/surgeries/8/Type"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The source places treatment after bowel disimpaction and does not state that it began at age 16; the label assigns it the symptom-onset anchor.",
+        "source_quote": "After bowel disimpaction, the condition was treated with daily BM with Peristeen® transanal irrigation.",
+        "field_path": "/treatments/0/time"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The candidate itself states that the procedure description is source-supported and identifies no discrepancy.",
+        "source_quote": "The patient underwent a laparoscopic left emicolectomy with primary reanastomosis and temporary loop colostomy.",
+        "field_path": "/surgeries/9/Type"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/treatments/0/time",
+        "label_excerpt": "Since age 16",
+        "source_quote": "After 3 years, for lack of symptoms improvement, a new barium enema was done () which demonstrated the persistence of dilation of the rectum and the distal colon",
+        "explanation": "The label gives an age anchor but omits the source-stated three-year treatment interval before the follow-up enema, a material course-timing detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The colostomy-closure detail and unsupported treatment onset at age 16 are confirmed discrepancies. The procedure finding is rejected because it identifies no discrepancy. The label also omits the three-year treatment interval before follow-up imaging."
+  }
+}

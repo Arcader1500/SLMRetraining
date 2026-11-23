@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Abdominal pain",
+        "source_quote": "A 52-year-old male patient with abdominal pain was admitted to the Wonju Severance Christian Hospital.",
+        "explanation": "The visit motivation is directly supported."
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Cured pulmonary tuberculosis 6 months earlier",
+        "source_quote": "except for pulmonary tuberculosis, which had been cured with medication 6 months earlier.",
+        "explanation": "The history and its timing are supported."
+      },
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Excision of the entire cyst",
+        "source_quote": "The entire cyst was excised without disturb",
+        "explanation": "The note explicitly states that the cyst was excised; it does not establish further details beyond the cutoff."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "No specific findings such as weight loss",
+        "source_quote": "Upon system review, there were no specific findings such as weight loss.",
+        "explanation": "This is supported as a review-of-systems negative, but is placed under symptom details. The semantic content is valid; whether this role is acceptable is a schema projection ambiguity.",
+        "category": "inappropriate_role",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Unremarkable",
+        "source_quote": "Findings of the physical examination were unremarkable and did not reveal a palpable mass or abdominal tenderness.",
+        "explanation": "The label omits the clinically relevant explicit negatives (no palpable mass or abdominal tenderness) from the physical examination result.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/medical examinations/4/result",
+        "label_excerpt": "Cystic feature with an internally mixed echoic pattern, inner smooth hyperechoic mucosal layer, outer hypoechoic muscular layer",
+        "source_quote": "On EUS, the mass was found to be in the extra-gastric area and presented as a cystic feature with an internally mixed echoic pattern, and the cystic mass wall had both an inner smooth hyperechoic mucosal layer (, arrow a) and an outer hypoechoic muscular layer (, arrow b).",
+        "explanation": "The EUS result omits the source-supported finding that the mass was in the extra-gastric area, a material localization detail.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label contains source-supported history and surgery, but omits material physical-examination negatives and the EUS localization. The symptom-details placement of a review-of-systems negative is a policy ambiguity."
+  }
+}

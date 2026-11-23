@@ -1,0 +1,57 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The label detail is explicitly supported by the note, so this is a false-positive finding.",
+        "source_quote": "There was no pain radiating to her arms or legs.",
+        "field_path": "/symptoms/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "No pain radiating to arms or legs",
+        "source_quote": "The pain arose each night 2 h after she went to sleep, and it was described as unbearable. Our patient would wake up every night because of the pain.",
+        "explanation": "The label omits the severe intensity and sleep-disrupting nightly pattern, which materially characterize the symptom.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "No pain radiating to arms or legs",
+        "source_quote": "The pain was not correlated with breathing.",
+        "explanation": "This pertinent negative is absent from the symptom details and helps characterize the presenting pain.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "Started in the sixth month of pregnancy, persists mainly at night but sometimes also during the day",
+        "source_quote": "After childbirth, she presented to the outpatient clinic. The pain had spontaneously decreased.",
+        "explanation": "The label captures the later pain pattern but omits the material change after childbirth: spontaneous decrease.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Previously healthy, in the last trimester of her first pregnancy",
+        "source_quote": "Because she was breastfeeding her newborn baby, she did not take any pain medication.",
+        "explanation": "Breastfeeding and avoiding pain medication are relevant context for the ongoing pain and are omitted from the history.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The sole candidate finding is rejected because the label accurately records an explicitly stated negative. The label omits several material details about pain severity and timing, its change after childbirth, and breastfeeding-related avoidance of pain medication."
+  }
+}

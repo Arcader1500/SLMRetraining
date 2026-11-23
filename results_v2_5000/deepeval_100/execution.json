@@ -1,0 +1,5 @@
+{
+  "resume_command": ".venv/deepeval-tools/Scripts/python.exe -u -m scripts.evaluate_v2_5000 --run --backend gemini --model gemini-4-hydrogen",
+  "runner": "scripts/evaluate_v2_5000.py",
+  "source_sha256": "3acc607c43fb32259c2ac3131aee382d360e3b6a131a8bda53bce6a251b798b3"
+}

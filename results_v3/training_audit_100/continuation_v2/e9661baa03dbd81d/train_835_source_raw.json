@@ -1,0 +1,55 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "Same-day presentation does not establish admission, so the label asserts an event not supported by the note.",
+        "source_quote": "He presented on the same day",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label omits the explicitly reported cannabis use before symptom onset, a material substance-use history detail.",
+        "source_quote": "He admitted to smoking cannabis three times earlier in the day, before his vision loss.",
+        "field_path": "/patient medical history/physiological context"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Best-corrected visual acuity (BCVA) was 6/60 in the right eye",
+        "source_quote": "his best-corrected visual acuity (BCVA) was 6/60 in the right eye and 6/6 in the left.",
+        "explanation": "The label omits the documented left-eye acuity, which completes the bilateral visual-acuity findings.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Best-corrected visual acuity (BCVA) was 6/60 in the right eye",
+        "source_quote": "experienced right sided, painless, sudden visual loss.",
+        "explanation": "The symptom details omit that the visual loss was painless, a source-stated symptom modifier.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Otherwise well with no other medical history",
+        "source_quote": "He denied the use of tobacco and informed us that this was his first use of Skunk cannabis. He also denied using any other illicit substance, most pertinently, cocaine.",
+        "explanation": "The physiological context omits the reported first-use context and relevant denials of tobacco and other illicit substances.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The unsupported admission and cannabis-history omission are confirmed. The label also omits the left-eye acuity, painless quality of the symptom, and relevant substance-use context. The other candidate checks are source-supported."
+  }
+}

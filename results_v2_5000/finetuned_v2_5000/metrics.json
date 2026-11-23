@@ -1,0 +1,19 @@
+{
+  "train": {
+    "train_runtime": 6355.4833,
+    "train_samples_per_second": 2.36,
+    "train_steps_per_second": 0.295,
+    "total_flos": 9898034139797760.0,
+    "train_loss": 0.2950577579498291,
+    "epoch": 3.0
+  },
+  "best_model_checkpoint": "results_v2_5000/finetuned_v2_5000/checkpoints/checkpoint-1875",
+  "best_eval_loss": 0.4552387595176697,
+  "final_eval": {
+    "eval_loss": 0.4552387595176697,
+    "eval_runtime": 27.2945,
+    "eval_samples_per_second": 3.664,
+    "eval_steps_per_second": 3.664,
+    "epoch": 3.0
+  }
+}

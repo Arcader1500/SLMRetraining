@@ -1,0 +1,8 @@
+{
+  "requested_at_utc": "2026-11-19T11:51:59.099457+00:00",
+  "stop_after": "02_finetune",
+  "parent_pipeline_pid": 1498,
+  "parent_held_with_sigstop": true,
+  "training_child_continues": true,
+  "reason": "User requested stop after training, adapter and training results saved; hold automatic generation stage"
+}

@@ -1,0 +1,36 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/symptoms/0/name of symptom",
+        "label_excerpt": "Depression",
+        "source_quote": "was diagnosed as having a clinical depression",
+        "explanation": "The diagnosis and the documented depressive symptoms support this symptom entry."
+      },
+      {
+        "field_path": "/symptoms/4/time",
+        "label_excerpt": "After eating a piece of chocolate cake",
+        "source_quote": "after eating a piece of chocolate cake",
+        "explanation": "The note explicitly links the itching sensation to this timing."
+      },
+      {
+        "field_path": "/treatments/1/dosage",
+        "label_excerpt": "2 mg clemastine and 6 mg betametasone orally",
+        "source_quote": "treated with 2 mg clemastine and 6 mg betametasone orally",
+        "explanation": "Both medications, doses, and oral route match the note."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms/4/time",
+        "label_excerpt": "After eating a piece of chocolate cake",
+        "source_quote": "After approximately two weeks of sertraline treatment he noted an intense itching sensation in his scalp after eating a piece of chocolate cake.",
+        "explanation": "The source establishes the cake as the temporal context, but the label omits the material anchor that this episode occurred after approximately two weeks of sertraline treatment.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "One material timing omission is identified: the itching episode is not anchored to the approximate two-week sertraline course. The remaining reviewed entries are source-supported."
+  }
+}

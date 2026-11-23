@@ -1,0 +1,46 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label records both heparin treatments and their shared response but omits the source-stated durations and sequence.",
+        "source_quote": "The patient was treated with intravenous heparin for 1 week followed by subcutaneous heparin for 3 weeks.",
+        "field_path": "/treatments"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label includes the initial MRV result but omits the repeat MRV at one month showing that the thrombosis had resolved.",
+        "source_quote": "MRV was repeated at 1 month after the initiation of treatment and showed resolved cerebral venous sinus thrombosis",
+        "field_path": "/diagnosis tests"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/admission/0/time",
+        "label_excerpt": "",
+        "source_quote": "After 3 days in the ward, she developed sudden onset of diplopia",
+        "explanation": "The label omits the three-day ward interval before the new neurological symptoms, a material chronology detail expressible as admission timing.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Gravida 3 para 2 at 8 weeks of pregnancy",
+        "source_quote": "She had never experienced similar symptoms during her previous pregnancy and there was no family history of similar conditions noted.",
+        "explanation": "The label preserves pregnancy context but omits the relevant history of no similar symptoms in a previous pregnancy and no family history of similar conditions.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Both candidate omissions are supported: the label lacks heparin course durations and sequence and the follow-up MRV resolution. The label also omits the three-day ward interval before symptom onset and relevant negative personal and family history."
+  },
+  "error": ""
+}

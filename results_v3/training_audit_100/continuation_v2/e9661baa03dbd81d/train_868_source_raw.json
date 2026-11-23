@@ -1,0 +1,118 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The note explicitly reports sclerodactyly, which is absent from the symptom entries. This is a material clinical finding that could be represented as a symptom.",
+        "source_quote": "Due to the persistent musculoskeletal pain in the arms and the sclerodactyly, Anti-centromere antibodies (ACAs) test was conducted",
+        "field_path": "/symptoms"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The CT entry omits the reported prior contrast allergy and the absence of intravenous contrast, which materially qualifies how the scan was performed. The label need not repeat that the duct dilation was later confirmed sonographically; that is an additional confirmation rather than a missing CT result.",
+        "source_quote": "A CT scan was performed without intravenous contrast medium due to patient-reported previous allergy. The CT scan did not demonstrate any pathological finding of the liver apart from dilation of intrahepatic bile ducts that was later confirmed sonographically.",
+        "field_path": "/medical examinations/3/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient information",
+        "label_excerpt": "",
+        "source_quote": "A 67 year old Caucasian female",
+        "explanation": "The source states the patient's ethnicity, but the existing patient information label contains only age and sex. The schema has no ethnicity leaf, so the information cannot be represented at this path; do not add a schema key.",
+        "category": "omission",
+        "classification": "policy_ambiguity",
+        "disposition": "rejected",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/diagnosis tests/2/test",
+        "label_excerpt": "ANA and AMA tests",
+        "source_quote": "ANA and AMA tests) were requested that proved positive (), thus confirming the diagnosis of PBC.",
+        "explanation": "The source states that the tests confirmed PBC, but the label's diagnosis-test test field names the tests rather than a separate diagnosis. No diagnosis leaf is present in this schema path, so this is not an omission here.",
+        "category": "omission",
+        "classification": "policy_ambiguity",
+        "disposition": "rejected",
+        "attribution": "uncertain"
+      }
+    ],
+    "summary": "The sclerodactyly omission is supported. The CT finding is downgraded because the scan limitation is material while later sonographic confirmation need not be repeated. Projection leads about ethnicity and PBC do not establish material omissions at valid schema paths."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The note reports sclerodactyly as the reason for an ACA test, but does not explicitly identify it as a symptom. The label has no specific sclerodactyly symptom entry, and there is no supported symptom leaf to add it to with certainty.",
+        "source_quote": "Due to the persistent musculoskeletal pain in the arms and the sclerodactyly, Anti-centromere antibodies (ACAs) test was conducted",
+        "field_path": "/symptoms"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The label records the CT finding. The scan's lack of intravenous contrast and the later sonographic confirmation are source-supported context, but whether they are material omissions from this result is ambiguous; the separate sonographic confirmation is not itself listed as a medical examination.",
+        "source_quote": "A CT scan was performed without intravenous contrast medium due to patient-reported previous allergy. The CT scan did not demonstrate any pathological finding of the liver apart from dilation of intrahepatic bile ducts that was later confirmed sonographically.",
+        "field_path": "/medical examinations/3/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Chronic obstructive pulmonary disorder (COPD) due to long-term smoking, arterial hypertension, chronic musculoskeletal pain, acrocyanosis",
+        "source_quote": "A 67 year old Caucasian female presented to the emergency department of our hospital complaining of dysphagia, pruritus and musculoskeletal pain of the arms.",
+        "explanation": "The label omits the patient's source-stated ethnicity. However, the existing schema has no ethnicity leaf, so this is not an omission that can be mapped to a valid schema path.",
+        "category": "omission",
+        "classification": "policy_ambiguity",
+        "disposition": "rejected",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Chronic obstructive pulmonary disorder (COPD) due to long-term smoking, arterial hypertension, chronic musculoskeletal pain, acrocyanosis",
+        "source_quote": "A CT scan was performed without intravenous contrast medium due to patient-reported previous allergy.",
+        "explanation": "The patient's reported previous allergy to intravenous contrast is not represented in the history. It is material context for the CT, and the existing physiological-context history path can carry this patient history.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/2/name of symptom",
+        "label_excerpt": "Musculoskeletal pain",
+        "source_quote": "The patient also mentioned chronic musculoskeletal pain and acrocyanosis for which she never sought medical attention.",
+        "explanation": "The label captures chronic musculoskeletal pain in history and arms as the location of the presenting pain, but omits that the reported chronic musculoskeletal pain was never medically evaluated. This detail is source-supported but its materiality is uncertain.",
+        "category": "omission",
+        "classification": "policy_ambiguity",
+        "disposition": "downgraded",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/diagnosis tests/2/result",
+        "label_excerpt": "Positive",
+        "source_quote": "ANA and AMA tests) were requested that proved positive (), thus confirming the diagnosis of PBC.",
+        "explanation": "No omission: the positive results and their source-stated diagnostic conclusion are conveyed by the label's positive result and source statement. No separate diagnosis leaf exists for PBC.",
+        "category": "omission",
+        "classification": "policy_ambiguity",
+        "disposition": "rejected",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/diagnosis tests/3/test",
+        "label_excerpt": "Anti-centromere antibodies (ACAs) test",
+        "source_quote": "Due to the persistent musculoskeletal pain in the arms and the sclerodactyly, Anti-centromere antibodies (ACAs) test was conducted which proved positive.",
+        "explanation": "The source provides the reason for conducting this test, including sclerodactyly. The existing test path does not provide a details field, and the source does not explicitly classify sclerodactyly as a symptom, so a separate omission finding cannot be confidently assigned to another valid path.",
+        "category": "omission",
+        "classification": "policy_ambiguity",
+        "disposition": "rejected",
+        "attribution": "uncertain"
+      }
+    ],
+    "summary": "The candidate CT finding is a policy ambiguity: the label includes the CT result, while the omitted context may belong in details. Sclerodactyly is reported as the reason for ACA testing, but is not explicitly classified as a symptom. The material omission confirmed is the patient's reported prior intravenous-contrast allergy, which is supported in physiological context."
+  }
+}

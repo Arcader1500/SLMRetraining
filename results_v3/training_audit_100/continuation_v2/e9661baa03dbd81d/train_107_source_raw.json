@@ -1,0 +1,138 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The note explicitly records the absence of personal and family history of neurological or mental disorders, with OCD as an exception. The history section is empty.",
+        "source_quote": "She reported no personal or family history of neither neurological nor mental disorders, other than OCD.",
+        "field_path": "/patient medical history"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The label records dermatitis as a detail and does not say that dermatitis itself is the obsessive-compulsive symptom or its severity qualifier. This is consistent with the source, which describes dermatitis as evidence of severe symptoms.",
+        "source_quote": "These symptoms were severe, as evidenced by the fact that she was diagnosed as having a severe dermatitis at both hands and genitals.",
+        "field_path": "/symptoms/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "",
+        "source_quote": "Her history dated to almost five years previously when she insidiously started to experience obsessive-compulsive symptoms",
+        "explanation": "The label omits the stated onset history of the patient's obsessive-compulsive symptoms, a relevant clinical timeline detail expressible in physiological context.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "",
+        "source_quote": "She was diagnosed with OCD at the age of 21, during her first visit to a private psychiatrist.",
+        "explanation": "The label omits the patient's prior OCD diagnosis and age at diagnosis, relevant history expressible in physiological context.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Severe dermatitis at both hands and genitals, difficulty of sleeping due to the need to perform washing during night at scheduled times",
+        "source_quote": "At time of our first consultation, her symptoms included ritual washing of hands and genitals in response to contamination obsessions as well as checking compulsions.",
+        "explanation": "The label omits the described ritual washing in response to contamination obsessions and checking compulsions, which are material manifestations of the presenting symptoms.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Severe dermatitis at both hands and genitals, difficulty of sleeping due to the need to perform washing during night at scheduled times",
+        "source_quote": "These obsessive-compulsive behaviors caused her to spend considerable time and energy that severely interfered with her daily activities and working status.",
+        "explanation": "The label omits the substantial daily and work interference attributed to the obsessive-compulsive behaviors, a material impact detail expressible in symptom details.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      }
+    ],
+    "summary": "The history omission candidate is supported. The proposed symptom-to-dermatitis ambiguity is not supported by the label wording. Material omissions include prior OCD history, core compulsive behaviors, and their functional impact."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label leaves patient medical history empty, omitting the stated personal and family history, including the OCD exception.",
+        "source_quote": "She reported no personal or family history of neither neurological nor mental disorders, other than OCD.",
+        "field_path": "/patient medical history"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The source says dermatitis evidenced the severity of the obsessive-compulsive symptoms, and the label preserves that relationship without asserting that the dermatitis itself was an obsessive-compulsive symptom.",
+        "source_quote": "These symptoms were severe, as evidenced by the fact that she was diagnosed as having a severe dermatitis at both hands and genitals.",
+        "field_path": "/symptoms/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "",
+        "source_quote": "She was diagnosed with OCD at the age of 21, during her first visit to a private psychiatrist.",
+        "explanation": "The label omits the patient's prior OCD diagnosis and its age, a material part of her medical history.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "",
+        "source_quote": "She had not been misusing alcohol or illicit drugs and did not smoke.",
+        "explanation": "The label omits the explicitly stated substance-use and smoking history.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Severe dermatitis at both hands and genitals, difficulty of sleeping due to the need to perform washing during night at scheduled times",
+        "source_quote": "At time of our first consultation, her symptoms included ritual washing of hands and genitals in response to contamination obsessions as well as checking compulsions.",
+        "explanation": "The symptom details omit the specified ritual washing and checking behaviors that characterize the reported symptoms.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "",
+        "source_quote": "These obsessive-compulsive behaviors caused her to spend considerable time and energy that severely interfered with her daily activities and working status.",
+        "explanation": "The label omits the reported severe interference with daily activities and working status, which conveys material functional impact.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "",
+        "source_quote": "Her history dated to almost five years previously when she insidiously started to experience obsessive-compulsive symptoms (mainly the fear of contamination from touching various things she considered dirty).",
+        "explanation": "The label omits the reported symptom onset and contamination-fear context, which materially describe the course and content of the symptoms.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The history omission is confirmed, and the symptom-to-dermatitis linkage concern is rejected. The label also omits material prior OCD history, substance and smoking history, symptom behaviors, functional impact, and symptom onset/context."
+  }
+}

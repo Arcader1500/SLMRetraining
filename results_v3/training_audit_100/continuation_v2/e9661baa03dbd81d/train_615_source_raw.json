@@ -1,0 +1,102 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The symptom timing includes the cake but omits the source’s approximate two-week sertraline-course anchor, which is relevant context for this episode.",
+        "source_quote": "After approximately two weeks of sertraline treatment he noted an intense itching sensation in his scalp after eating a piece of chocolate cake.",
+        "field_path": "/symptoms/4/time"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "",
+        "source_quote": "The patient did not have any history of allergy or dermatological diseases.",
+        "explanation": "The label omits relevant negative allergy and dermatological history in a case involving a suspected medication-related rash.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "",
+        "source_quote": "However, he sometimes suffered from vasomotor rhinitis after drinking red wine.",
+        "explanation": "This source-stated history is relevant context for the subsequent hypersensitivity-type symptoms and is absent from the label.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Initially slight nausea and insomnia, then an itching rash leading to discontinuation",
+        "source_quote": "At the revisit three weeks later the patient was very pleased with the fluoxetine treatment and reported that he \"had not felt better in 20 years\" although he initially had experienced slight nausea and insomnia.",
+        "explanation": "The label records early side effects and the later rash but omits the substantial positive response to fluoxetine, a material part of the treatment course.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/4/details",
+        "label_excerpt": "",
+        "source_quote": "he noted an intense itching sensation in his scalp",
+        "explanation": "The label captures the symptom and its location but omits its explicitly stated intensity, which is material symptom characterization.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate identifies a supported timing omission. The label also omits relevant allergy-type history, the positive fluoxetine response, and the intensity of the later itching episode."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The label records the cake timing, while the source also says the episode occurred after approximately two weeks of sertraline treatment. The added course anchor is a relevant detail, but its omission is not established as material because the label preserves the immediate temporal context.",
+        "source_quote": "After approximately two weeks of sertraline treatment he noted an intense itching sensation in his scalp after eating a piece of chocolate cake.",
+        "field_path": "/symptoms/4/time"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "",
+        "source_quote": "He did not take any medication and had no regular medical contact. The patient did not have any history of allergy or dermatological diseases. However, he sometimes suffered from vasomotor rhinitis after drinking red wine.",
+        "explanation": "Material medical and allergy history, including vasomotor rhinitis after red wine, is absent from the label’s physiological context.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/4/details",
+        "label_excerpt": "",
+        "source_quote": "he noted an intense itching sensation in his scalp",
+        "explanation": "The label omits the source-stated intensity of the itching episode, which materially describes the symptom.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Initially slight nausea and insomnia, then an itching rash leading to discontinuation",
+        "source_quote": "At the revisit three weeks later the patient was very pleased with the fluoxetine treatment and reported that he \"had not felt better in 20 years\"",
+        "explanation": "The label omits the patient's marked early benefit from fluoxetine, a material treatment response.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate timing finding is downgraded because the label retains the immediate cake-related timing. Material omissions include medical history, itching intensity, and the reported early benefit from fluoxetine."
+  }
+}

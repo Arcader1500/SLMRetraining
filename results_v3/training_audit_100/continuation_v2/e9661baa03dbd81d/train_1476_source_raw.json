@@ -1,0 +1,78 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The history leaf includes good health and full-term delivery but omits the stated negative history of hepatitis or tuberculosis, trauma surgery, and food or drug allergy. These are source-supported history facts.",
+        "source_quote": "no history of hepatitis or tuberculosis, no history of trauma surgery, no history of food or drug allergy",
+        "field_path": "/patient medical history/physiological context"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The source identifies the infusion therapy as cephalosporins, but the treatment name retains only “Infusion therapy.”",
+        "source_quote": "no improvement after infusion therapy (cephalosporins) at the local clinic",
+        "field_path": "/treatments/0/name"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Always been in good health, full-term delivery",
+        "source_quote": "no history of exposure to toxic substances, full-term delivery, and no family history",
+        "explanation": "The history leaf omits the stated absence of toxic-substance exposure and family history, which belong in physiological context under the schema.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      },
+      {
+        "field_path": "/medical examinations/1/details",
+        "label_excerpt": "Neurological examination",
+        "source_quote": "Neurological examination revealed that somnolence; poor memory; the right side of the eye fissure was small; the pupils of both sides were unequal with the diameter of the right side 5mm, insensitive to light reflection, and the diameter of the left side 4mm, slow to light reflection",
+        "explanation": "The label records the neurological examination but omits significant findings, including somnolence, poor memory, and unequal pupils with abnormal light responses.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      }
+    ],
+    "summary": "Both candidate omissions are supported by the note. The label also omits relevant exposure and family-history negatives and material abnormal neurological examination findings."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The history mentions good health and full-term delivery but omits the stated hepatitis, tuberculosis, trauma/surgery, and food or drug allergy negatives.",
+        "source_quote": "no history of hepatitis or tuberculosis, no history of trauma surgery, no history of food or drug allergy",
+        "field_path": "/patient medical history/physiological context"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The source identifies the infusion therapy as cephalosporins; the treatment entry omits that drug class.",
+        "source_quote": "no improvement after infusion therapy (cephalosporins) at the local clinic",
+        "field_path": "/treatments/0/name"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/1/details",
+        "label_excerpt": "",
+        "source_quote": "Neurological examination revealed that somnolence; poor memory; the right side of the eye fissure was small; the pupils of both sides were unequal with the diameter of the right side 5mm, insensitive to light reflection, and the diameter of the left side 4mm, slow to light reflection",
+        "explanation": "The neurological examination entry names the examination but omits documented somnolence, poor memory, and unequal, poorly reactive pupils, which are material abnormal findings.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      }
+    ],
+    "summary": "Both candidate omissions are supported by the note. The label also omits material abnormal neurological examination findings."
+  }
+}

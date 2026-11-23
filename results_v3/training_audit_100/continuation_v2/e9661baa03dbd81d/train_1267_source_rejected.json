@@ -1,0 +1,56 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label records when numbness began but omits its stable course over the two years, a material symptom detail.",
+        "source_quote": "a symptom that had remained stable during those 2 years",
+        "field_path": "/symptoms/1/time"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label omits the explicit current status of the breast cancer, which is relevant to the patient's cancer history.",
+        "source_quote": "up to the present there had been no evidence of cancer relapse",
+        "field_path": "/patient medical history/physiological context"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Patient was able to walk normally prior to chemotherapy",
+        "source_quote": "despite the clinical stability of the sensory deficits, the patient had experienced a continuous and dramatic progression of her gait disturbance",
+        "explanation": "The label records the gait disorder's onset and prior normal walking but omits its continuous, dramatic progression, a material feature of the presenting symptom.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/1/location",
+        "label_excerpt": "Extremities, accentuated distally",
+        "source_quote": "a light numbness of the extremities, accentuated distally",
+        "explanation": "The label captures the location and distal accentuation but omits that the numbness was light, a source-stated symptom modifier.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Neurological examination findings",
+        "source_quote": "a gait disorder characterized by small steps, rotation instability, and an increment in sustentation base",
+        "explanation": "The neurological examination result omits the specific gait characteristics observed at consultation, which materially describe the presenting disorder.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Both candidate omissions are supported by the note. The label also omits the gait disorder's progression, the light intensity of the numbness, and the specific gait characteristics observed on examination."
+  },
+  "error": ""
+}

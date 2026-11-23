@@ -1,0 +1,65 @@
+{
+  "candidate_dispositions": [
+    {
+      "candidate_index": 1,
+      "disposition": "confirmed",
+      "attribution": "inherited",
+      "explanation": "The note says the crisis was suspected, while the label states its development as an established admission reason.",
+      "source_quote": "The development of a myasthenic crisis was suspected and she was admitted to our hospital the next day.",
+      "field_path": "/admission/0/reason"
+    },
+    {
+      "candidate_index": 2,
+      "disposition": "rejected",
+      "attribution": "uncertain",
+      "explanation": "The two-day interval is from the initial complaint to worsening; admission occurred the next day, so the label’s claim that dyspnea began at least two days before admission is consistent with the sequence.",
+      "source_quote": "Two days later her dyspnea worsened",
+      "field_path": "/symptoms/0/time"
+    },
+    {
+      "candidate_index": 3,
+      "disposition": "rejected",
+      "attribution": "uncertain",
+      "explanation": "The note states admission before describing these therapies, supporting the label’s timing.",
+      "source_quote": "The development of a myasthenic crisis was suspected and she was admitted to our hospital the next day. Steroid pulse therapy and an immunoadsorbent technique were performed.",
+      "field_path": "/treatments/1/time"
+    },
+    {
+      "candidate_index": 4,
+      "disposition": "rejected",
+      "attribution": "uncertain",
+      "explanation": "The note states admission before describing these therapies, supporting the label’s timing.",
+      "source_quote": "The development of a myasthenic crisis was suspected and she was admitted to our hospital the next day. Steroid pulse therapy and an immunoadsorbent technique were performed.",
+      "field_path": "/treatments/2/time"
+    },
+    {
+      "candidate_index": 5,
+      "disposition": "rejected",
+      "attribution": "uncertain",
+      "explanation": "The note says CAE was diagnosed before she received oxygen inhalation and edaravone, so the timing is supported.",
+      "source_quote": "CAE was diagnosed and she was treated with oxygen inhalation and intravenous injections of edaravone.",
+      "field_path": "/treatments/3/time"
+    },
+    {
+      "candidate_index": 6,
+      "disposition": "rejected",
+      "attribution": "uncertain",
+      "explanation": "The note says CAE was diagnosed before she received oxygen inhalation and edaravone, so the timing is supported.",
+      "source_quote": "CAE was diagnosed and she was treated with oxygen inhalation and intravenous injections of edaravone.",
+      "field_path": "/treatments/4/time"
+    }
+  ],
+  "added_findings": [
+    {
+      "field_path": "/surgeries/0/Type",
+      "label_excerpt": "Tracheal intubation and placement of a central venous catheter",
+      "source_quote": "Her respiratory condition was stable on the 9th hospital day and she was extubated.",
+      "explanation": "The label records intubation but omits the subsequent extubation, a material change in respiratory support and procedure status.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    }
+  ],
+  "summary": "The admission reason loses the source’s uncertainty. The chronology and treatment-time candidate findings are unsupported; the source supports those label values. The label also omits the material extubation event."
+}

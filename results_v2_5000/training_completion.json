@@ -1,0 +1,11 @@
+{
+  "completed_at_utc": "2026-11-19T13:02:11.065028+00:00",
+  "training_complete": true,
+  "epochs": 3,
+  "global_step": 1875,
+  "best_model_checkpoint": "results_v2_5000/finetuned_v2_5000/checkpoints/checkpoint-1875",
+  "best_eval_loss": 0.4552387595176697,
+  "stopped_after_training_by_user": true,
+  "finetuned_generation_cases": 0,
+  "luna_judgments": 0
+}

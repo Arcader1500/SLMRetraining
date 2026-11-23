@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Hyperemesis gravidarum",
+        "source_quote": "was diagnosed as hyperemesis gravidarum",
+        "explanation": "The source supports the stated admission reason."
+      },
+      {
+        "field_path": "/medical examinations/1/result",
+        "label_excerpt": "Bilateral sixth cranial nerve palsy",
+        "source_quote": "Extraocular muscle examination showed bilateral sixth cranial nerve palsy.",
+        "explanation": "The examination result matches the source."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Right transverse sinus and superior sagittal sinus thrombosis",
+        "source_quote": "Magnetic resonance venography (MRV) revealed right transverse sinus and superior sagittal sinus thrombosis",
+        "explanation": "The MRV finding matches the source."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "The patient was treated with intravenous heparin for 1 week followed by subcutaneous heparin for 3 weeks.",
+        "explanation": "The treatment entries omit the source-stated one-week intravenous course followed by three weeks of subcutaneous heparin. These durations and sequence are material course details expressible in the treatment fields.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/diagnosis tests",
+        "label_excerpt": "",
+        "source_quote": "MRV was repeated at 1 month after the initiation of treatment and showed resolved cerebral venous sinus thrombosis",
+        "explanation": "The label omits the follow-up MRV result showing resolution, a material investigation outcome that could be represented in the diagnosis tests section.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label captures the major presenting symptoms, examination findings, and initial MRV result, but omits the heparin course durations and sequence and the follow-up MRV result."
+  }
+}

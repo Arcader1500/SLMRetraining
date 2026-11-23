@@ -1,0 +1,84 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "70",
+        "source_quote": "70-year-old Native American man",
+        "explanation": "The label's age matches the note."
+      },
+      {
+        "field_path": "/patient information/sex",
+        "label_excerpt": "Male",
+        "source_quote": "70-year-old Native American man",
+        "explanation": "The label's sex matches the note."
+      },
+      {
+        "field_path": "/medical examinations/2/result",
+        "label_excerpt": "166/119 mm Hg",
+        "source_quote": "his BP was 166/119 mm Hg",
+        "explanation": "The recorded blood pressure matches the note."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Aspartate aminotransferase level of 104 U/L and alanine aminotransferase level of 90 U/L",
+        "source_quote": "aspartate aminotransferase level of 104 U/L and alanine aminotransferase level of 90 U/L",
+        "explanation": "Both enzyme results and values match the note."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms",
+        "label_excerpt": "",
+        "source_quote": "The symptoms had worsened, and he noticed some difficulty with walking.",
+        "explanation": "The symptoms section records the complaints and their duration but omits the reported worsening and difficulty walking, which are material symptom details.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "",
+        "source_quote": "He was a former tobacco smoker and stopped smoking approximately 20 years ago",
+        "explanation": "The history leaf includes HCC but omits the stated former smoking history and quit interval, a material history detail expressible in this context leaf.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label captures several source facts accurately but omits material symptom progression/function and former smoking history."
+  },
+  "retry": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "70",
+        "source_quote": "70-year-old",
+        "explanation": "The age matches the source."
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "For approximately 10 days",
+        "source_quote": "for approximately 10 days",
+        "explanation": "The duration of upper back pain is supported."
+      },
+      {
+        "field_path": "/medical examinations/2/result",
+        "label_excerpt": "166/119 mm Hg",
+        "source_quote": "his BP was 166/119 mm Hg",
+        "explanation": "The blood pressure matches the source."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Diagnosed with HCC",
+        "source_quote": "He was never on medications until he was diagnosed as having HCC.",
+        "explanation": "This history entry is supported by the source.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      }
+    ],
+    "summary": "The HCC history is explicitly stated in the note, so it is not a source discrepancy. No material issue is established by the supplied text."
+  }
+}

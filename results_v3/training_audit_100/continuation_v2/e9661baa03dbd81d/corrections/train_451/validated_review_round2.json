@@ -1,0 +1,55 @@
+{
+  "case_id": "train:451",
+  "source_review": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The symptoms listed began after the medication switch: the switch was two weeks before admission, while the listed symptoms began five days before presentation or during the later visit. The grouped wording is imprecise but does not establish a wrong linkage.",
+        "source_quote": "Two weeks prior to this admission the patient's hypertensive medication had been switched in a tapered fashion from clonidine to lisinopril",
+        "field_path": "/symptoms/0/details"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The label groups symptoms with two time anchors, which is imprecise because the first anchor concerns the initial symptoms and the later anchor concerns recurrent severe headaches. The source supports both anchors, so this is an ambiguity rather than a clear chronology error.",
+        "source_quote": "Five days before presentation she had developed generalized headache, blurred vision and nausea",
+        "field_path": "/symptoms/0/time"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The label records confusion during combined treatment without explicitly claiming that the medications caused it. The source supports the event and its timing.",
+        "source_quote": "while being treated, she developed confusion",
+        "field_path": "/treatments/3/reaction to treatment"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "hypertension, systemic lupus erythematosus (SLE), end-stage renal disease (ESRD) secondary to lupus nephritis on daily ambulatory intermittent peritoneal dialysis, mechanical aortic valve replacement, chronic anticoagulation treatment",
+        "source_quote": "Her most recent peritoneal dialysis treatment had been the day preceding admission.",
+        "explanation": "The label omits the timing of her most recent dialysis, a source-supported and potentially relevant detail in the context of ESRD and daily peritoneal dialysis.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "260/160 mmHg; 194/115 mmHg",
+        "source_quote": "Her blood pressure recorded at that time was 260/160 mmHg.",
+        "explanation": "The result retains both blood pressure values but omits that 260/160 mmHg was recorded at the outside ED and 194/115 mmHg was the admission pressure, leaving the measurements' clinical timing and setting unclear.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate concerns are either unsupported as errors or reflect ambiguity in grouped timing. Added findings identify omitted dialysis timing and blood pressure measurement context."
+  },
+  "source_evidence_span_repairs": []
+}

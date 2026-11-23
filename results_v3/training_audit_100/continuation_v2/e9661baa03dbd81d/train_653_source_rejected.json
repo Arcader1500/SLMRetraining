@@ -1,0 +1,54 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The note states the diagnosis but does not establish admission. Treating the diagnosis as an admission reason is a role ambiguity, not a definite source contradiction.",
+        "source_quote": "Diagnosis of stroke with left frontal bleed was made.",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The source specifies twice-daily amlodipine, but the label records only the dose.",
+        "source_quote": "oral amlodipine (5 mg) twice a day",
+        "field_path": "/treatments/0/dosage"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The source specifies once-daily losartan, but the label records only the dose.",
+        "source_quote": "losartan (50 mg) once a day",
+        "field_path": "/treatments/1/dosage"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient information/weight",
+        "label_excerpt": "",
+        "source_quote": "A 55-years-old male weighing 60 kg",
+        "explanation": "The source documents the patient's weight, which is absent from the patient information label and is relevant in this perioperative context.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/2/details",
+        "label_excerpt": "",
+        "source_quote": "sudden onset headache associated with vomiting and subsequently loss of consciousness",
+        "explanation": "The label captures the sudden headache but omits its associated vomiting and subsequent loss of consciousness, clinically significant symptom context.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The two medication frequency omissions are confirmed. The admission role is ambiguous because the note gives no separate evidence of admission. The label also omits the patient's documented weight and important associated symptoms."
+  },
+  "error": ""
+}

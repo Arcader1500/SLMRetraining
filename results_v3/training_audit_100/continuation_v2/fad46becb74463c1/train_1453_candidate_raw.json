@@ -1,0 +1,60 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "35",
+        "source_quote": "A 35-year-old man suffered from immunoglobulin-A nephropathy 2 years before admission",
+        "explanation": "The patient's age matches the note."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Diagnosis of gastric cancer (signet cells)",
+        "source_quote": "gastric cancer (signet cells) was diagnosed by biopsy.",
+        "explanation": "The biopsy result is supported by the note."
+      },
+      {
+        "field_path": "/medical examinations/4/result",
+        "label_excerpt": "No free air or niveau",
+        "source_quote": "There was no free air or niveau on the abdominal X-ray.",
+        "explanation": "The X-ray result matches the note."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms/2/time",
+        "label_excerpt": "Continued to report general fatigue and went to hospital 1 week before his admission",
+        "source_quote": "He continued to report appetite loss and went to hospital 1 week before his admission.",
+        "explanation": "The note places appetite loss at the earlier hospital visit, but does not say general fatigue was reported then. Fatigue is mentioned later as aggravated when he consulted the emergency room.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/medical examinations",
+        "label_excerpt": "",
+        "source_quote": "He also took a blood examination after the consultation and his serum creatinine had increased to 683.33 μmol/l.",
+        "explanation": "The label includes the later creatinine of 1919.16 μmol/l but omits this earlier, materially relevant elevated result and its timing after the consultation.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "He started taking S-1 50 mg, twice daily for 3 consecutive weeks, followed by a 2-week rest period 8 months ago.",
+        "explanation": "The label records the S-1 dose and start timing but omits its twice-daily frequency and the three-week-on, two-week-rest schedule, which are material treatment-course details.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/2/reaction to treatment",
+        "label_excerpt": "Partial clinical remission",
+        "source_quote": "He received six cycles of chemotherapy and showed a partial clinical remission.",
+        "explanation": "The note attributes remission to the chemotherapy course overall. Assigning it specifically to cisplatin may imply an individual drug response that the source does not establish; this is an attribution ambiguity.",
+        "category": "wrong_linkage_value",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "The label contains a timing overstatement for general fatigue, omits a materially elevated earlier creatinine result and the S-1 schedule, and may over-attribute the overall chemotherapy response to cisplatin."
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The two-year interval modifies the surveillance scan that detected lung metastases. The label places that interval on the later wedge resection.",
+        "source_quote": "Two years after the completion of adjuvant chemotherapy a surveillance scan detected lung metastases () and she subsequently underwent a left thoracoscopic wedge resection",
+        "field_path": "/surgeries/2/time"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The note describes presentation, referral, and treatment but does not establish an admission. The admission reason therefore asserts unsupported admission status.",
+        "source_quote": "She was then referred to our institution and underwent an exploratory laparotomy, extensive lysis of adhesions and left radical parametrectomy and omentectomy.",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The source reports progression after temozolamide but does not identify a CT as the source of that result. Grouping it under CT results may mislink the finding, though the label does not explicitly state that a particular CT showed progression.",
+        "source_quote": "She received 5 cycles of temozolamide with disease progression.",
+        "field_path": "/medical examinations/2/result"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The timing is supported by the source, which says she continued single-agent bevacizumab following six cycles of gemcitabine and docetaxel.",
+        "source_quote": "Following 6 cycles of gemcitabine and doceatexl she continued on single agent bevacizumab, with durable stable disease.",
+        "field_path": "/treatments/8/time"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/treatments/0/frequency",
+        "label_excerpt": "Adjuvant gemcitabine and docetaxel",
+        "source_quote": "She subsequently received 6 cycles of adjuvant gemcitabine and docetaxel followed by adjuvant radiation.",
+        "explanation": "The label omits the explicitly stated six-cycle course for adjuvant gemcitabine and docetaxel. Cycle counts are material treatment-course details expressible in the treatment frequency field.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/2/frequency",
+        "label_excerpt": "Doxorubicin",
+        "source_quote": "she subsequently underwent a left thoracoscopic wedge resection followed by 6 cycles of doxorubicin.",
+        "explanation": "The label omits the explicitly stated six cycles of doxorubicin, a material treatment-course detail expressible in the treatment frequency field.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/4/frequency",
+        "label_excerpt": "Liposomal doxorubicin",
+        "source_quote": "She then underwent a right thoracoscopic wedge resection and was treated with 4 cycles of liposomal doxorubicin.",
+        "explanation": "The label omits the explicitly stated four cycles of liposomal doxorubicin, a material treatment-course detail expressible in the treatment frequency field.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/5/frequency",
+        "label_excerpt": "Trabectedin",
+        "source_quote": "Four cycles of trabectedin were then administered but she tolerated these poorly with grade 3 fatigue.",
+        "explanation": "The label preserves the adverse reaction but omits the explicitly stated four-cycle trabectedin course.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/6/frequency",
+        "label_excerpt": "Temozolamide",
+        "source_quote": "She received 5 cycles of temozolamide with disease progression.",
+        "explanation": "The label preserves progression but omits the explicitly stated five-cycle temozolamide course.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/7/frequency",
+        "label_excerpt": "Gemcitabine and docetaxel with bevacizumab",
+        "source_quote": "She then underwent a left video-assisted thoracoscopic surgery resection and right thoracotomy wedge resection and was subsequently commenced on gemcitabine and docetaxel with bevacizumab. Following 6 cycles of gemcitabine and doceatexl she continued on single agent bevacizumab, with durable stable disease.",
+        "explanation": "The label omits the explicitly stated six-cycle combination course before transition to single-agent bevacizumab. The cycle count is material to distinguishing the treatment courses.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Confirmed the unsupported admission assertion and the shifted timing linkage; downgraded the possible CT-result mislinkage and rejected the supported bevacizumab timing claim. Added omitted explicit cycle counts for material treatment courses."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The interval directly precedes the scan finding, but the note then says she subsequently underwent the resection; it does not explicitly say whether the interval anchors only the scan or also the resection. The label's surgery timing is therefore ambiguous, not a clear temporal error.",
+        "source_quote": "Two years after the completion of adjuvant chemotherapy a surveillance scan detected lung metastases () and she subsequently underwent a left thoracoscopic wedge resection",
+        "field_path": "/surgeries/2/time"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "rejected",
+        "attribution": "inherited",
+        "explanation": "The label has an admission reason, but the note describes presentation and subsequent care without stating an inpatient admission. The candidate correctly identifies the unsupported admission assertion; however, this is not a label discrepancy under the schema, which has an admission field and the note does not establish an admission event. No admission-related label claim is source-supported.",
+        "source_quote": "A 41-year-old woman presented with vaginal bleeding and was found to have uterine fibroids on ultrasound.",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The label groups the CT findings into one examination result and does not explicitly state that CT showed the disease progression after the 5 temozolamide cycles. The note supplies the progression as a treatment-course outcome; the grouping does not establish a false test-result linkage.",
+        "source_quote": "She received 5 cycles of temozolamide with disease progression.",
+        "field_path": "/medical examinations/2/result"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "rejected",
+        "attribution": "inherited",
+        "explanation": "The timing is supported: single-agent bevacizumab continued following the six-cycle gemcitabine and docetaxel course. The candidate itself recognizes the timing as supported, so it is not a finding.",
+        "source_quote": "Following 6 cycles of gemcitabine and doceatexl she continued on single agent bevacizumab, with durable stable disease.",
+        "field_path": "/treatments/8/time"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Uterine leiomyosarcoma measuring 9 cm",
+        "source_quote": "the pathology was reported as high-grade uterine leiomyosarcoma measuring 9 cm",
+        "explanation": "The label omits the source-stated high-grade severity of the primary uterine leiomyosarcoma, a material diagnostic detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/0/name",
+        "label_excerpt": "Adjuvant gemcitabine and docetaxel",
+        "source_quote": "She subsequently received 6 cycles of adjuvant gemcitabine and docetaxel",
+        "explanation": "The treatment entry omits the explicitly stated six-cycle course, a material treatment-course detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/2/name",
+        "label_excerpt": "Doxorubicin",
+        "source_quote": "she subsequently underwent a left thoracoscopic wedge resection followed by 6 cycles of doxorubicin",
+        "explanation": "The label omits the six-cycle dose-course detail for doxorubicin.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/4/name",
+        "label_excerpt": "Liposomal doxorubicin",
+        "source_quote": "was treated with 4 cycles of liposomal doxorubicin",
+        "explanation": "The label omits the explicitly stated four-cycle course.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/6/name",
+        "label_excerpt": "Temozolamide",
+        "source_quote": "She received 5 cycles of temozolamide with disease progression.",
+        "explanation": "The label omits the explicitly stated five-cycle course.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/7/name",
+        "label_excerpt": "Gemcitabine and docetaxel with bevacizumab",
+        "source_quote": "She then underwent a left video-assisted thoracoscopic surgery resection and right thoracotomy wedge resection and was subsequently commenced on gemcitabine and docetaxel with bevacizumab. Following 6 cycles of gemcitabine and doceatexl she continued on single agent bevacizumab, with durable stable disease.",
+        "explanation": "The label omits the source-stated six-cycle combination course and the transition to single-agent bevacizumab with durable stable disease from this treatment entry; the later bevacizumab entry captures the continuation and response but the combination course duration is absent.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "One candidate timing concern is ambiguous; the unsupported admission assertion is not treated as a valid discrepancy, and the other two candidates do not establish errors. Material omissions include the primary tumor's high-grade status and several explicitly stated treatment-course lengths."
+  }
+}

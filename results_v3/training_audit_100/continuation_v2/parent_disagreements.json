@@ -1,0 +1,59 @@
+{
+  "reviewer": "parent assistant full-source review; not clinician adjudication",
+  "raw_records_preserved": true,
+  "scope": "Selected semantic disagreements; not an exhaustive re-adjudication of continuation flags",
+  "raw_summary_policy": "Keep Luna descriptive counts separate; these dispositions supersede the specified raw classifications for parent interpretation.",
+  "records": [
+    {
+      "case_id": "train:1220",
+      "origin": "candidate",
+      "candidate_index": 2,
+      "disposition": "reject_redundant_coverage_flag",
+      "field_path": "/medical examinations/1/result",
+      "source_quotes": [
+        "Physical examination revealed splenomegaly, although the patient was asymptomatic."
+      ],
+      "label_excerpt": "Hypoechogenic mass involving the spleen",
+      "explanation": "Splenomegaly already appears in symptoms and physical examination. Failure to repeat it in the imaging leaf alone is not established as a material case-level omission."
+    },
+    {
+      "case_id": "train:877",
+      "origin": "candidate",
+      "candidate_index": 3,
+      "disposition": "downgrade_policy_ambiguity",
+      "field_path": "/treatments/0/time",
+      "source_quotes": [
+        "Patient was discharged same day and aspirin and Plavix were resumed."
+      ],
+      "label_excerpt": "Resumed after discharge",
+      "explanation": "After-discharge wording is more precise than the source, but a conjunction and sentence order make that sequence plausible. Preserve uncertainty about timing instead of counting a definite discrepancy."
+    },
+    {
+      "case_id": "train:710",
+      "origin": "candidate",
+      "candidate_index": 2,
+      "disposition": "downgrade_policy_ambiguity",
+      "field_path": "/treatments/0/time",
+      "source_quotes": [
+        "From the age of 16 the boy",
+        "After bowel disimpaction, the condition was treated with daily BM with Peristeen® transanal irrigation.",
+        "After 3 years, for lack of symptoms improvement"
+      ],
+      "label_excerpt": "Since age 16",
+      "explanation": "The current age19 and three-year treatment course support an approximate age16 start. Exact onset is not explicit, but this is plausible chronology, not an established transferred-time error."
+    },
+    {
+      "case_id": "train:1065",
+      "origin": "parent_added",
+      "candidate_index": null,
+      "disposition": "policy_ambiguity",
+      "field_path": "/diagnosis tests/1/result",
+      "source_quotes": [
+        "There was no cancer invasion on both sides and metastatic carcinoma in the mesenteric lymph nodes.",
+        "The clinical stage was T3N2"
+      ],
+      "label_excerpt": "no metastatic carcinoma in the mesenteric lymph nodes",
+      "explanation": "Source negation scope is awkward and ambiguous, whereas the label decisively negates nodal metastasis. Preserve ambiguity and flag for clinical adjudication; do not use outside staging knowledge to silently rewrite it."
+    }
+  ]
+}

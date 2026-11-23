@@ -1,0 +1,60 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "9-year-old",
+        "source_quote": "The patient is a 9-year-old male child",
+        "explanation": "The label's age matches the source."
+      },
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Placement of myringotomy tubes",
+        "source_quote": "Recurrent acute otitis media led to the placement of myringotomy tubes at 10 months.",
+        "explanation": "The source explicitly describes the procedure and its timing."
+      },
+      {
+        "field_path": "/symptoms/3/details",
+        "label_excerpt": "Delays in receptive and expressive language with an equivalency of 16 months",
+        "source_quote": "significant delays in receptive and expressive language were present, with an equivalency of 16 months.",
+        "explanation": "The label preserves the source's language-delay finding and equivalency."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Developmental delay diagnosed due to failure to roll over or sit unaided.",
+        "source_quote": "The patient was unable to roll over until 7 months of age and did not sit or raise to his knees independently until 15 months.",
+        "explanation": "The label omits material motor-development milestones that the source specifies; these are relevant history beyond the general developmental-delay diagnosis.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Developmental delay diagnosed due to failure to roll over or sit unaided.",
+        "source_quote": "By 2 years, he could transfer objects between hands but retained difficulty in reaching for smaller objects.",
+        "explanation": "The label omits the source's specific hand-transfer ability and difficulty reaching for smaller objects, which add material detail about developmental function.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Developmental delay diagnosed due to failure to roll over or sit unaided.",
+        "source_quote": "He could crawl and cruise unassisted by 18 months but did not walk independently until he was 3 years of age.",
+        "explanation": "The label omits distinct mobility milestones and the timing of independent walking, material details of the developmental history.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "Diagnosed at 6 months",
+        "source_quote": "At 6 months, the patient was diagnosed with failure to thrive. Failure to roll over or sit unaided led to a diagnosis of developmental delay.",
+        "explanation": "The source explicitly dates the failure-to-thrive diagnosis at 6 months but does not explicitly date the developmental-delay diagnosis there. Assigning that age may reflect proximity in the narrative, so this is a chronology ambiguity.",
+        "category": "chronology",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "The label captures several source-supported facts but omits multiple material developmental milestones and assigns a potentially unsupported age to the developmental-delay diagnosis."
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "candidate_dispositions": [
+    {
+      "candidate_index": 1,
+      "disposition": "confirmed",
+      "attribution": "projection_loss",
+      "explanation": "The label gives when numbness began but omits that it remained stable over the following two years.",
+      "source_quote": "a symptom that had remained stable during those 2 years",
+      "field_path": "/symptoms/1/time"
+    },
+    {
+      "candidate_index": 2,
+      "disposition": "confirmed",
+      "attribution": "projection_loss",
+      "explanation": "The note explicitly reports no cancer relapse to the present, a relevant update to the breast cancer history.",
+      "source_quote": "up to the present there had been no evidence of cancer relapse",
+      "field_path": "/patient medical history/physiological context"
+    }
+  ],
+  "added_findings": [
+    {
+      "field_path": "/symptoms/0/details",
+      "label_excerpt": "Patient was able to walk normally prior to chemotherapy",
+      "source_quote": "a continuous and dramatic progression of her gait disturbance",
+      "explanation": "The label records the initial gait onset and prior normal walking but omits the dramatic, continuous progression that prompted referral.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/medical examinations/0/result",
+      "label_excerpt": "Negative Romberg test, light impairment of deep and superficial sensory input in both feet and hands, normal cranial nerve function and deep muscular reflexes, no signs of pyramidal tract affection, urinary or bowel sphincter function retained, no evidence of tremor, freezing or cogwheel phenomenon",
+      "source_quote": "small steps, rotation instability, and an increment in sustentation base",
+      "explanation": "The examination result omits the specific gait pattern documented at consultation, a material characterization of the presenting disorder.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/discharge",
+      "label_excerpt": "",
+      "source_quote": "referred to a neurologist",
+      "explanation": "The note states a referral to a neurologist, but the discharge section is empty. This is a documented care transition and does not establish inpatient admission.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    }
+  ],
+  "summary": "Both candidate omissions are supported. The label also omits the marked progression of gait disturbance, its specific observed pattern, and the documented neurologist referral."
+}

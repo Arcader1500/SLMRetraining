@@ -1,0 +1,49 @@
+{
+  "case_id": "train:593",
+  "source_review": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The label reports only the established operative facts and does not complete the cut-off phrase. The candidate itself correctly identifies no discrepancy.",
+        "source_quote": "Operatively, the diseased gallbladder was found to be perforated with severe adhesion to",
+        "field_path": "/surgeries/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Mild tenderness of the right upper abdominal quadrant",
+        "source_quote": "He was afebrile",
+        "explanation": "The label omits the patient's explicitly reported afebrile status. This is a material examination detail expressible in the existing result field.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Mild tenderness of the right upper abdominal quadrant",
+        "source_quote": "Leukocytosis was absent.",
+        "explanation": "The label omits the explicitly reported absence of leukocytosis, a relevant examination/laboratory finding.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Heterogeneously enhanced and markedly thickened walls of the gallbladder body and fundus with an impacted gallstone and subtle, disrupted luminal surface enhancement, a second gallstone, intramural calcification, direct hepatic involvement, perihepatic extension, infiltration to the neighboring transversus abdominis muscle and gastric antrum, fatty infiltration around the gallbladder and in the greater omentum, pericholecystic lymph node enlargement, hepatic parenchymal enhancement adjacent to the gallbladder",
+        "source_quote": "this was followed by isoattenuation, relative to the normal liver, during the portal phase.",
+        "explanation": "The CT result omits the portal-phase follow-up finding that adjacent hepatic parenchymal enhancement became isoattenuating relative to normal liver. This is a source-stated imaging detail relevant to interpretation of the CT finding.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate's cut-off concern identifies no discrepancy. The label omits afebrile status, absent leukocytosis, and the portal-phase CT finding of relative isoattenuation."
+  },
+  "source_evidence_span_repairs": []
+}

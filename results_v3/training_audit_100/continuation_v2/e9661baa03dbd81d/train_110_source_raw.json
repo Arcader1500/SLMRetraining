@@ -1,0 +1,43 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The note lists OCD and ADHD alongside mild mental retardation as the patient's past medical history; the label retains only the latter.",
+        "source_quote": "past medical history significant for mild mental retardation, obsessive compulsive disorder, and attention deficit hyperactivity disorder",
+        "field_path": "/patient medical history/physiological context"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label records tachycardia but omits its stated range, which materially characterizes this presentation.",
+        "source_quote": "patient was tachycardic from 120 s to 140 s on presentation",
+        "field_path": "/symptoms/1/name of symptom"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The note states a purpose, but the sentence ends mid-phrase and the candidate points to the treatment time field, which already preserves the stated timing. The incomplete purpose does not support a clear discrepancy at that path.",
+        "source_quote": "recently started on fluoxetine (Prozac) couple of months ago to help him with the “tic",
+        "field_path": "/treatments/1/time"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "mild mental retardation",
+        "source_quote": "Of note, patient's intake has always been good and rather he enjoys drinking plenty of fluids.",
+        "explanation": "The note gives relevant intake and fluid-drinking context alongside the orthostatic hypotension, but this context is absent from the physiological history leaf.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      }
+    ],
+    "summary": "The psychiatric history and tachycardia range omissions are confirmed. The fluoxetine purpose is unfinished and the cited time path does not represent that purpose, so that candidate is downgraded. The note also provides relevant fluid-intake context absent from the label."
+  }
+}

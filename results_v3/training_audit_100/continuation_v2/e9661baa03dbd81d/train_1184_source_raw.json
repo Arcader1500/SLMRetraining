@@ -1,0 +1,83 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The note says she “presented for a laparoscopic sleeve gastrectomy” and does not establish inpatient admission. However, the field may record the reason for a visit rather than assert an admission event, so this is a policy ambiguity rather than a clear error.",
+        "source_quote": "presented for a laparoscopic sleeve gastrectomy",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The source specifically attributes the exercise limitation to degenerative joint disease. Attaching that detail to the morbid-obesity symptom mislinks the stated cause.",
+        "source_quote": "degenerative joint disease which significantly impacted her ability to exercise",
+        "field_path": "/symptoms/0/details"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "Situs inversus totalis is an explicit, potentially material condition absent from physiological context.",
+        "source_quote": "with situs inversus totalis",
+        "field_path": "/patient medical history/physiological context"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Morbid obesity, obstructive sleep apnea requiring CPAP machine, elevated hemoglobin A1c (5.8), fasting blood glucose indicating risk of diabetes mellitus, degenerative joint disease",
+        "source_quote": "Family history is positive for obesity, diabetes, hypertension, coronary artery disease and hypercholesterolemia.",
+        "explanation": "The relevant family history of metabolic and cardiovascular conditions is absent from the history context.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Morbid obesity, obstructive sleep apnea requiring CPAP machine, elevated hemoglobin A1c (5.8), fasting blood glucose indicating risk of diabetes mellitus, degenerative joint disease",
+        "source_quote": "She was a former smoker, quitting over 25 years ago, and has no other history of substance or alcohol use.",
+        "explanation": "The patient's former smoking status and stated absence of other substance or alcohol use are relevant history omitted from the label.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "38",
+        "source_quote": "Her BMI was 38 (height 4 ft 11.5 inches, weight 188.2 pounds)",
+        "explanation": "The height and weight supporting the recorded BMI are omitted from the examination entry.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/1/dosage",
+        "label_excerpt": "800 mg",
+        "source_quote": "Ibuprofen 800 mg 1–3/daily for musculoskeletal pain",
+        "explanation": "The label records the dose but omits the source-stated frequency and indication for this medication.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Morbid obesity, obstructive sleep apnea requiring CPAP machine, elevated hemoglobin A1c (5.8), fasting blood glucose indicating risk of diabetes mellitus, degenerative joint disease",
+        "source_quote": "The patient also completed a six-month medically supervised diet through her primary care provider, which also included working closely with a bariatric registered dietician, following a strict diet of about 1800 calories/day and performing modified exercise, about 120 minutes/week.",
+        "explanation": "The six-month supervised weight-loss program, including its diet and exercise regimen, is relevant bariatric history and is not represented in the label.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate identifies a possible admission-role ambiguity, a supported symptom-detail mislinkage, and an omitted condition. The label also omits relevant family and social history, BMI supporting measurements, medication frequency and indication, and the supervised weight-loss regimen."
+  }
+}

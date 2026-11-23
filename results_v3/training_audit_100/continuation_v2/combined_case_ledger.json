@@ -1,0 +1,1002 @@
+[
+  {
+    "case_id": "train:983",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "pilot_v1",
+    "review_kind": "saved assistant source review",
+    "diagnostic_issues": 1,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1239",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "pilot_v1",
+    "review_kind": "saved assistant source review",
+    "diagnostic_issues": 1,
+    "ambiguity_records": 2,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1052",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "pilot_v1",
+    "review_kind": "saved assistant source review",
+    "diagnostic_issues": 2,
+    "ambiguity_records": 0,
+    "rejected_records": 2
+  },
+  {
+    "case_id": "train:24",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "pilot_v1",
+    "review_kind": "saved assistant source review",
+    "diagnostic_issues": 2,
+    "ambiguity_records": 0,
+    "rejected_records": 2
+  },
+  {
+    "case_id": "train:177",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "pilot_v1",
+    "review_kind": "saved assistant source review",
+    "diagnostic_issues": 1,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1480",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 1,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:1298",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 5,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1220",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:783",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna Codex CLI supplemental source review; exact evidence validated",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1184",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 7,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:877",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 5,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:538",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 11,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:107",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna Codex CLI supplemental source review; exact evidence validated",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 0,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:1065",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1200",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna Codex CLI supplemental source review; exact evidence validated",
+    "diagnostic_issues": 2,
+    "ambiguity_records": 0,
+    "rejected_records": 5
+  },
+  {
+    "case_id": "train:1470",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 5,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:150",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna Codex CLI supplemental source review; exact evidence validated",
+    "diagnostic_issues": 2,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:704",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 1,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:901",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna Codex CLI supplemental source review; exact evidence validated",
+    "diagnostic_issues": 6,
+    "ambiguity_records": 0,
+    "rejected_records": 2
+  },
+  {
+    "case_id": "train:1056",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 1,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:815",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 1,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:1427",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna Codex CLI supplemental source review; exact evidence validated",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:531",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1475",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:593",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna Codex CLI supplemental source review; exact evidence validated",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 0,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:874",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 0,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:248",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "Luna collaboration subagent source review with file tools; not CodexJudge output or clinician review",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 0,
+    "rejected_records": 2
+  },
+  {
+    "case_id": "train:1010",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 6,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:134",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 1,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:539",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 6,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:373",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 2,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1330",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna Codex CLI supplemental source review; exact evidence validated",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1464",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 0,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:365",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 5,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:12",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 2,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:451",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna Codex CLI supplemental source review; exact evidence validated",
+    "diagnostic_issues": 2,
+    "ambiguity_records": 1,
+    "rejected_records": 2
+  },
+  {
+    "case_id": "train:1209",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:412",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 6,
+    "ambiguity_records": 0,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:380",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 6,
+    "ambiguity_records": 2,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:905",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 2,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:217",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1091",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 2,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:611",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:767",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 6,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1267",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna Codex CLI supplemental source review; exact evidence validated",
+    "diagnostic_issues": 5,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:449",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 0,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:1167",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:798",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 5,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:278",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 7,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:960",
+    "group": "random",
+    "selection_reason": "seed_42_simple_random_sample",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 5,
+    "ambiguity_records": 1,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:119",
+    "group": "targeted",
+    "selection_reason": "drug_dose",
+    "protocol": "pilot_v1",
+    "review_kind": "saved assistant source review",
+    "diagnostic_issues": 1,
+    "ambiguity_records": 0,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:1045",
+    "group": "targeted",
+    "selection_reason": "investigations",
+    "protocol": "pilot_v1",
+    "review_kind": "saved assistant source review",
+    "diagnostic_issues": 0,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1453",
+    "group": "targeted",
+    "selection_reason": "chronology",
+    "protocol": "pilot_v1",
+    "review_kind": "saved assistant source review",
+    "diagnostic_issues": 2,
+    "ambiguity_records": 2,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1108",
+    "group": "targeted",
+    "selection_reason": "negation_status",
+    "protocol": "pilot_v1",
+    "review_kind": "saved assistant source review",
+    "diagnostic_issues": 0,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:676",
+    "group": "targeted",
+    "selection_reason": "long_target",
+    "protocol": "pilot_v1",
+    "review_kind": "saved assistant source review",
+    "diagnostic_issues": 1,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:263",
+    "group": "targeted",
+    "selection_reason": "drug_dose",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 1,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:149",
+    "group": "targeted",
+    "selection_reason": "investigations",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 1,
+    "rejected_records": 2
+  },
+  {
+    "case_id": "train:333",
+    "group": "targeted",
+    "selection_reason": "chronology",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 7,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:725",
+    "group": "targeted",
+    "selection_reason": "negation_status",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 0,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:940",
+    "group": "targeted",
+    "selection_reason": "long_target",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna Codex CLI supplemental source review; exact evidence validated",
+    "diagnostic_issues": 6,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:653",
+    "group": "targeted",
+    "selection_reason": "drug_dose",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna Codex CLI supplemental source review; exact evidence validated",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:543",
+    "group": "targeted",
+    "selection_reason": "investigations",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:68",
+    "group": "targeted",
+    "selection_reason": "chronology",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 2,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1476",
+    "group": "targeted",
+    "selection_reason": "negation_status",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna Codex CLI supplemental source review; exact evidence validated",
+    "diagnostic_issues": 6,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:64",
+    "group": "targeted",
+    "selection_reason": "long_target",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 6,
+    "ambiguity_records": 1,
+    "rejected_records": 3
+  },
+  {
+    "case_id": "train:624",
+    "group": "targeted",
+    "selection_reason": "drug_dose",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 8,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:868",
+    "group": "targeted",
+    "selection_reason": "investigations",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 1,
+    "ambiguity_records": 3,
+    "rejected_records": 3
+  },
+  {
+    "case_id": "train:710",
+    "group": "targeted",
+    "selection_reason": "chronology",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 0,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:770",
+    "group": "targeted",
+    "selection_reason": "negation_status",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 0,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:898",
+    "group": "targeted",
+    "selection_reason": "long_target",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 2,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:825",
+    "group": "targeted",
+    "selection_reason": "drug_dose",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 8,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1110",
+    "group": "targeted",
+    "selection_reason": "investigations",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1329",
+    "group": "targeted",
+    "selection_reason": "chronology",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 6,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1393",
+    "group": "targeted",
+    "selection_reason": "negation_status",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 0,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:370",
+    "group": "targeted",
+    "selection_reason": "long_target",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna Codex CLI supplemental source review; exact evidence validated",
+    "diagnostic_issues": 2,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:867",
+    "group": "targeted",
+    "selection_reason": "drug_dose",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:148",
+    "group": "targeted",
+    "selection_reason": "investigations",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 5,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1407",
+    "group": "targeted",
+    "selection_reason": "chronology",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1477",
+    "group": "targeted",
+    "selection_reason": "negation_status",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 2,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:549",
+    "group": "targeted",
+    "selection_reason": "long_target",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 0,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:277",
+    "group": "targeted",
+    "selection_reason": "drug_dose",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna Codex CLI supplemental source review; exact evidence validated",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 0,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:835",
+    "group": "targeted",
+    "selection_reason": "investigations",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 5,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:615",
+    "group": "targeted",
+    "selection_reason": "chronology",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna Codex CLI supplemental source review; exact evidence validated",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:251",
+    "group": "targeted",
+    "selection_reason": "negation_status",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 5,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:540",
+    "group": "targeted",
+    "selection_reason": "long_target",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:57",
+    "group": "targeted",
+    "selection_reason": "drug_dose",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 6,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:853",
+    "group": "targeted",
+    "selection_reason": "investigations",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 0,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:1029",
+    "group": "targeted",
+    "selection_reason": "chronology",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:533",
+    "group": "targeted",
+    "selection_reason": "negation_status",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 0,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:116",
+    "group": "targeted",
+    "selection_reason": "long_target",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 0,
+    "rejected_records": 2
+  },
+  {
+    "case_id": "train:751",
+    "group": "targeted",
+    "selection_reason": "drug_dose",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 4,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1015",
+    "group": "targeted",
+    "selection_reason": "investigations",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 2,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1285",
+    "group": "targeted",
+    "selection_reason": "chronology",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 5,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:834",
+    "group": "targeted",
+    "selection_reason": "negation_status",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 5,
+    "ambiguity_records": 0,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:347",
+    "group": "targeted",
+    "selection_reason": "long_target",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 0,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:1387",
+    "group": "targeted",
+    "selection_reason": "drug_dose",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna Codex CLI supplemental source review; exact evidence validated",
+    "diagnostic_issues": 2,
+    "ambiguity_records": 0,
+    "rejected_records": 1
+  },
+  {
+    "case_id": "train:1086",
+    "group": "targeted",
+    "selection_reason": "investigations",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 2,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:1339",
+    "group": "targeted",
+    "selection_reason": "chronology",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 5,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:110",
+    "group": "targeted",
+    "selection_reason": "negation_status",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 1,
+    "rejected_records": 0
+  },
+  {
+    "case_id": "train:582",
+    "group": "targeted",
+    "selection_reason": "long_target",
+    "protocol": "continuation_v2",
+    "review_kind": "gpt-6-luna via authenticated Codex CLI; independent source review",
+    "diagnostic_issues": 3,
+    "ambiguity_records": 1,
+    "rejected_records": 1
+  }
+]

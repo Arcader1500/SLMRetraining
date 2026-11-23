@@ -1,0 +1,58 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Chest pain and shortness of breath",
+        "source_quote": "presented to the emergency department at 10 am in the morning with chest pain and shortness of breath",
+        "explanation": "The presentation reason is supported."
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "type 2 diabetes mellitus, hypertension, obstructive sleep apnea, chronic obstructive pulmonary disease, and prothrombin G20210A mutation",
+        "source_quote": "type 2 diabetes mellitus, hypertension, obstructive sleep apnea, chronic obstructive pulmonary disease, and prothrombin G20210A mutation",
+        "explanation": "These conditions are included in the source medical history."
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Sharp pleuritic chest pain, also experiencing a less prominent pressure like sensation",
+        "source_quote": "She did endorse that she was also experiencing a less prominent pressure like sensation in addition to the sharp pleuritic type of pain.",
+        "explanation": "The label preserves both the sharp pleuritic pain and the less prominent pressure sensation."
+      },
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Reduced the intensity of pain",
+        "source_quote": "She said that she had taken some ibuprofen which had reduced the intensity of pain.",
+        "explanation": "The source explicitly attributes reduced pain intensity to ibuprofen."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Chest pain and shortness of breath",
+        "source_quote": "presented to the emergency department at 10 am in the morning with chest pain and shortness of breath",
+        "explanation": "The note establishes an emergency department presentation but does not state that she was admitted. Labeling this as an admission reason asserts an event the source does not establish.",
+        "category": "event_status",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Sharp pleuritic chest pain, also experiencing a less prominent pressure like sensation",
+        "source_quote": "aggravated by deep breaths and by lying down, and alleviated by sitting up and leaning forward.",
+        "explanation": "The label omits material pain modifiers and positional relief that are explicitly described in the symptom account.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/symptoms/1/details",
+        "label_excerpt": "Developed shortness of breath while lying in bed",
+        "source_quote": "with chest pain and shortness of breath of approximately 12 hours duration.",
+        "explanation": "The label omits the source-stated duration of shortness of breath, a material symptom timing detail.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label contains supported presentation, history, symptom, and treatment details, but it asserts admission without source evidence and omits material symptom modifiers and duration."
+  }
+}

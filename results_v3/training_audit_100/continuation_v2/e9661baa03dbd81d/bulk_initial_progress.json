@@ -1,0 +1,8 @@
+{
+  "phase": "bulk",
+  "expected": 90,
+  "completed": 69,
+  "candidate_checkpointed": 20,
+  "remaining": 21,
+  "errors": 21
+}

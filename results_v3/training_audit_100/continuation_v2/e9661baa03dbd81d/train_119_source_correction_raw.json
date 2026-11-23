@@ -1,0 +1,71 @@
+{
+  "candidate_dispositions": [
+    {
+      "candidate_index": 1,
+      "disposition": "confirmed",
+      "attribution": "inherited",
+      "explanation": "The note explicitly reports negative family history for autoimmune disease, while the physiological-context value contains only no comorbidities. This is a relevant history omission.",
+      "source_quote": "negative family history for any autoimmune disease",
+      "field_path": "/patient medical history/physiological context"
+    },
+    {
+      "candidate_index": 2,
+      "disposition": "confirmed",
+      "attribution": "inherited",
+      "explanation": "The examination result records arterial narrowing but omits the source's explicit negative retinal arteritis finding, which is material examination information.",
+      "source_quote": "no sign of arteritis was observed in the retina",
+      "field_path": "/medical examinations/0/result"
+    },
+    {
+      "candidate_index": 3,
+      "disposition": "confirmed",
+      "attribution": "inherited",
+      "explanation": "The treatment entries preserve doses and the general response but omit the documented route, schedules, and methylprednisolone course duration. These details can be retained in the existing treatment dosage or reaction fields.",
+      "source_quote": "methylprednisolone 500 mg IV for 3 days, tablet prednisone 25mg BD, tablet aspirin 75 mg OD, tablet methotrexate 20g weekly, capsule gabapentin 75 mg BD, tablet folic acid 5 mg OD, and tablet atorvastatin 20 mg HS",
+      "field_path": "/treatments"
+    }
+  ],
+  "added_findings": [
+    {
+      "field_path": "/admission/0/reason",
+      "label_excerpt": "Weak and impalpable brachial and radial pulses, non-recordable BP",
+      "source_quote": "In October of 2020, the patient noticed that her radial pulses were weak and she was admitted.",
+      "explanation": "The admission reason captures the pulse and blood-pressure findings but omits the explicit October 2020 admission timing, a material chronology anchor for the admission.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "inherited"
+    },
+    {
+      "field_path": "/symptoms/0/time",
+      "label_excerpt": "3 months starting in August 2019",
+      "source_quote": "which was continuous",
+      "explanation": "The label retains the fever duration and start date but omits that it was continuous, a meaningful temporal characteristic of the symptom.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "inherited"
+    },
+    {
+      "field_path": "/symptoms/1/time",
+      "label_excerpt": "Lasted 30 days and reoccurred 10 months later",
+      "source_quote": "This lasted 30 days and was relieved on its own, only to reoccur 10 months later.",
+      "explanation": "The symptom timing records duration and recurrence but omits the stated spontaneous relief between episodes, a material course detail.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "inherited"
+    },
+    {
+      "field_path": "/diagnosis tests/0/result",
+      "label_excerpt": "Narrowing in right ICA and left CCA, a segment of the right subclavian artery narrowed distal to its origin from brachiocephalic artery, short segment narrowing in the celiac trunk, narrowing at origin of SMA, left superficial and deep femoral arteries markedly attenuated with collateral formation",
+      "source_quote": "narrowing at origin of SMA as can be appreciated in Figure",
+      "explanation": "The source's figure reference is incidental and does not add a material diagnostic result beyond the vascular findings already represented.",
+      "category": "omission",
+      "classification": "policy_ambiguity",
+      "disposition": "rejected",
+      "attribution": "uncertain"
+    }
+  ],
+  "summary": "Confirmed the three candidate omissions. Added material omissions for admission timing, continuous fever, and spontaneous relief of claudication; the dropped figure reference is not a material finding."
+}

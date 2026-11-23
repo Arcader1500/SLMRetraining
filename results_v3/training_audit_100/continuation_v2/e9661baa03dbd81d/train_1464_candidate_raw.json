@@ -1,0 +1,60 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Elevated opening pressure of 35 cm of water",
+        "source_quote": "The subsequent CSF study was normal except for the elevated opening pressure of 35 cm of water.",
+        "explanation": "The reported pressure and its value match the note."
+      },
+      {
+        "field_path": "/treatments/2/time",
+        "label_excerpt": "For the past 1-year",
+        "source_quote": "She was only on 4 mg of risperidone for the past 1-year.",
+        "explanation": "The label preserves the stated risperidone duration."
+      },
+      {
+        "field_path": "/symptoms/1/time",
+        "label_excerpt": "Progressed over 2 days",
+        "source_quote": "rapid onset of painless loss of vision in both the eyes which progressed over 2 days.",
+        "explanation": "The label preserves the stated progression interval."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Irregular with medications",
+        "source_quote": "She was treated with olanzapine and later with fluphenazine decanoate when she was irregular with medications.",
+        "explanation": "The note associates medication irregularity with the later fluphenazine decanoate course; it does not state that irregularity was a reaction to olanzapine. This treatment-response linkage is unsupported.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "She was a known case of schizophrenia on treatment under psychiatry for the past 10 years.",
+        "explanation": "The treatment history spans 10 years, but the label omits that she was being treated for schizophrenia under psychiatry. This material indication/history is expressible in the treatment or medical-history schema.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Elevated opening pressure of 35 cm of water",
+        "source_quote": "The subsequent CSF study was normal except for the elevated opening pressure of 35 cm of water.",
+        "explanation": "The label omits that the CSF study was otherwise normal, a material qualifying result of the investigation.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/diagnosis tests",
+        "label_excerpt": "",
+        "source_quote": "Differential diagnosis considered included meningitis, cortical venous thrombosis, demyelinating illness with optic neuritis, and idiopathic intracranial hypertension.",
+        "explanation": "The note identifies several considered differential diagnoses, but the label leaves them out. These are material diagnostic considerations expressible as diagnosis-test or diagnosis information.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate findings include an unsupported medication-response linkage and omissions of treatment context, a qualifying CSF result, and the documented differential diagnoses."
+  }
+}

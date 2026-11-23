@@ -1,0 +1,102 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "downgraded",
+        "attribution": "projection_loss",
+        "explanation": "The note supports omitted ophthalmic findings, but these belong in medical examination details, not the visual-acuity symptom details. The omission is addressed under the examination path.",
+        "source_quote": "Relative afferent pupillary defect (RAPD) was present in the right eye. Both eyes anterior segment examination findings were normal. Grade 1 vitritis was noted in the right eye. Funduscopic examination of the right eye revealed a pale optic disc and pigmented scar over the macula with salt and pepper appearance. Intense retinitis with focal areas of haemorrhage was present nasally (). There was mild pallor of the left optic disc with macula and peripheral granular retinitis ().",
+        "field_path": "/symptoms/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/0/details",
+        "label_excerpt": "Ophthalmic assessment",
+        "source_quote": "Relative afferent pupillary defect (RAPD) was present in the right eye. Both eyes anterior segment examination findings were normal. Grade 1 vitritis was noted in the right eye. Funduscopic examination of the right eye revealed a pale optic disc and pigmented scar over the macula with salt and pepper appearance. Intense retinitis with focal areas of haemorrhage was present nasally (). There was mild pallor of the left optic disc with macula and peripheral granular retinitis ().",
+        "explanation": "The label names the ophthalmic assessment but omits the documented RAPD and substantial bilateral retinal examination findings, which are material to the assessment.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Diagnosed with combined T and B cell deficiencies at the age of 11",
+        "source_quote": "A 13-year-old child with learning disability was referred for ophthalmic assessment",
+        "explanation": "The label omits the patient's learning disability, a relevant element of her medical context.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "CMV inclusion bodies",
+        "source_quote": "We diagnosed the child of having bilateral eye CMV retinitis based on typical fundus features and history of treated CMV colitis.",
+        "explanation": "The label records the prior colon pathology result but omits the documented bilateral CMV retinitis diagnosis. The diagnosis is clinically material and can be represented as a diagnostic result.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/5/time",
+        "label_excerpt": "Started after presentation of ophthalmic symptoms",
+        "source_quote": "The treatment was continued for 8",
+        "explanation": "The note states that the treatment continued for 8, but the unit and completion status are cut off. The label omits this established continuation detail; no unit or completed duration can be inferred.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate correctly identifies omitted ophthalmic findings but assigns them to the symptom details path instead of medical examination details. Other material omissions include the patient's learning disability, the bilateral CMV retinitis diagnosis, and the established but incomplete treatment-continuation statement."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The acuity is correctly represented in symptom details. The omitted RAPD and retinal examination findings belong under medical examination details, so this finding points to the wrong field path.",
+        "source_quote": "At presentation, her visual acuity was 1/60 in the right eye and 6/18 in the left eye.",
+        "field_path": "/symptoms/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/0/details",
+        "label_excerpt": "Ophthalmic assessment",
+        "source_quote": "Relative afferent pupillary defect (RAPD) was present in the right eye. Both eyes anterior segment examination findings were normal. Grade 1 vitritis was noted in the right eye. Funduscopic examination of the right eye revealed a pale optic disc and pigmented scar over the macula with salt and pepper appearance. Intense retinitis with focal areas of haemorrhage was present nasally (). There was mild pallor of the left optic disc with macula and peripheral granular retinitis ().",
+        "explanation": "The label identifies the ophthalmic assessment but omits its substantial abnormal findings, which are material to the documented eye presentation.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Diagnosed with combined T and B cell deficiencies at the age of 11",
+        "source_quote": "A 13-year-old child with learning disability was referred for ophthalmic assessment as she complained of bilateral blurring of vision.",
+        "explanation": "The source documents the patient's learning disability, which is absent from the physiological context entry.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Diagnosed with combined T and B cell deficiencies at the age of 11",
+        "source_quote": "At that time, she presented with high fever, recurrent episodes of diarrhoea, oral thrush, and failure to thrive, with the weight of only 12kg.",
+        "explanation": "The label omits the documented history of failure to thrive and weight of 12kg at age 11, relevant context for the patient's immunodeficiency history.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      }
+    ],
+    "summary": "The candidate points to the wrong field for the omitted eye examination findings. Material omissions include those examination findings and relevant patient history."
+  }
+}

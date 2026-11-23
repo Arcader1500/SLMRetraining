@@ -1,0 +1,53 @@
+{
+  "response": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "17",
+        "source_quote": "The patient was a 17-year-old female",
+        "explanation": "The label’s age matches the note."
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Left hip was slightly flexed, could not move the hip joint actively or passively",
+        "source_quote": "An examination revealed that her left hip was slightly flexed, and she could not move the hip joint actively or passively.",
+        "explanation": "The physical examination result is supported."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Femoral neck fracture",
+        "source_quote": "Anteroposterior X-rays of the left hip showed a femoral neck fracture",
+        "explanation": "The diagnosis-test result is supported."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms/0/location",
+        "label_excerpt": "Left hip",
+        "source_quote": "She developed pain in the anterior part of the left thigh while training nine days before a prefectural track meet",
+        "explanation": "This symptom is identified as anterior left-thigh pain in the note, but the label links it to the left hip. The later severe hip pain is a separate event.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "",
+        "source_quote": "Her coaches had placed her on a strict diet to keep her weight low since she was 12 years old. In particular, she had never eaten dinner for two weeks before any track meets.",
+        "explanation": "The label omits the prolonged restrictive diet and skipped dinners, material context for this presentation that fits the physiological-context field.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Femoral neck fracture",
+        "source_quote": "The Devas classification of the fracture was a displaced type []. The femoral head was adducted, and the shaft had been displaced upward by 2.5 cm. There was no continuity between the proximal and distal fragments.",
+        "explanation": "The result records the fracture but omits its explicitly described displaced classification and substantial displacement details, which characterize the finding.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label has a symptom-location linkage error and omits material diet history and fracture displacement details."
+  },
+  "error": "('label_excerpt', '/patient medical history/physiological context', '')"
+}

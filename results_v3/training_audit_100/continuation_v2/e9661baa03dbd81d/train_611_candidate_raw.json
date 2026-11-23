@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Parkinson's disease, severe dementia, atrial fibrillation, coronary artery disease, hypertension, glaucoma",
+        "source_quote": "Her past medical history includes Parkinson's disease, severe dementia, atrial fibrillation, coronary artery disease, coronary artery bypass surgery, permanent pacemaker placement, mitral valve replacement, hypertension, and glaucoma.",
+        "explanation": "The listed conditions are explicitly supported as past medical history."
+      },
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Coronary artery bypass surgery",
+        "source_quote": "coronary artery bypass surgery",
+        "explanation": "This is explicitly stated as the patient's past procedure."
+      },
+      {
+        "field_path": "/symptoms/4/details",
+        "label_excerpt": "Various sizes distributed across the skin of the affected right forearm and significant swelling of the soft tissue",
+        "source_quote": "serous blistering of various sizes distributed across the skin of the affected right forearm and significant swelling of the soft tissue was noted.",
+        "explanation": "The label's blistering and swelling details match the examination description."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Suspected ACS of the forearm",
+        "source_quote": "Surgical team was notified for suspected ACS of the forearm and the compartment pressures were measured with a Stryker (Kal",
+        "explanation": "The note states that ACS was suspected and that pressures were measured, but the truncated note does not establish that the pressure measurement produced the suspected ACS result. This result assignment is uncertain because the source cuts off before giving the measurement result.",
+        "category": "wrong_linkage_value",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/treatments/0/name",
+        "label_excerpt": "Fluid hydration",
+        "source_quote": "The patient was then found to have large blisters on the ventral side of her forearm.",
+        "explanation": "The label records fluid hydration but omits the explicitly specified infusion details: 5% dextrose-0.45% saline at 100 mL/hour, started at 10 p.m. on the second day. Those course details are material under the policy.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/medical examinations",
+        "label_excerpt": "",
+        "source_quote": "Patient's sensory exam was indeterminate due to her baseline dementia. Her radial pulse was palpable.",
+        "explanation": "The label omits the source-supported palpable radial pulse, an important limb examination finding in the context of the suspected forearm compartment syndrome.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Two material omissions are identified. The pressure measurement result is also uncertain because the source note is cut off before giving its result."
+  }
+}

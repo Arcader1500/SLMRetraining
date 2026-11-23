@@ -1,0 +1,84 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The timing makes the grouped symptoms follow the medication switch, but the label does not clearly assert that the switch caused them. The concern about grouping and linkage is interpretive.",
+        "source_quote": "Two weeks prior to this admission the patient's hypertensive medication had been switched in a tapered fashion from clonidine to lisinopril",
+        "field_path": "/symptoms/0/details"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The label groups symptoms with distinct onset anchors, which can blur which symptoms occurred at each time. Both anchors are source-supported, so this is a grouping ambiguity rather than a clear chronology error.",
+        "source_quote": "Five days before presentation she had developed generalized headache, blurred vision and nausea",
+        "field_path": "/symptoms/0/time"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "Confusion is accurately recorded as occurring during treatment. This does not by itself establish that the combined treatment caused it.",
+        "source_quote": "while being treated, she developed confusion",
+        "field_path": "/treatments/3/reaction to treatment"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "daily ambulatory intermittent peritoneal dialysis",
+        "source_quote": "with a history of good dialysis compliance and blood pressure control. Her most recent peritoneal dialysis treatment had been the day preceding admission.",
+        "explanation": "The label omits the documented good dialysis compliance and the timing of the most recent dialysis, both relevant context for her ESRD and admission.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/surgeries/0/reason",
+        "label_excerpt": "mechanical aortic valve replacement",
+        "source_quote": "a mechanical aortic valve replacement for a history of aortic stenosis",
+        "explanation": "The label records the valve replacement but omits the source-stated reason, aortic stenosis.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/1/temporalisation",
+        "label_excerpt": "tonic-clonic seizure activity",
+        "source_quote": "an episode of tonic-clonic seizure activity lasting three to four minutes",
+        "explanation": "The label omits the documented seizure duration, a clinically relevant symptom detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/admission/0/care center details",
+        "label_excerpt": "uncontrolled hypertension, new-onset seizures, and confusion",
+        "source_quote": "the decision was made to transfer the patient to our hospital",
+        "explanation": "The label omits the documented transfer to our hospital from the outside facility, a material care-transition detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "No treatment entry for the clonidine-to-lisinopril switch",
+        "source_quote": "the patient's hypertensive medication had been switched in a tapered fashion from clonidine to lisinopril because of a reported intolerance in the form of general malaise, sinus headache and non-productive cough",
+        "explanation": "The label omits the medication change and its reported reason, a material treatment history detail. The source does not specify doses, so none should be inferred.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The three candidate concerns are policy-sensitive grouping or causality ambiguities, not clear source discrepancies. Material omissions include relevant dialysis context, the reason for valve replacement, seizure duration, the transfer, and the documented antihypertensive medication change."
+  },
+  "error": ""
+}

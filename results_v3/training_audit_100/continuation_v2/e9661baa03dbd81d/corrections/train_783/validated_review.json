@@ -1,0 +1,39 @@
+{
+  "case_id": "train:783",
+  "source_review": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The MRI result records the mass and location but omits the stated radiologic conclusion, which is expressible in this result field.",
+        "source_quote": "Radiologic features were consistent with glomus vagale.",
+        "field_path": "/diagnosis tests/0/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "well-defined mass in the left parapharyngeal space",
+        "source_quote": "T\n1 weighted sequences demonstrated low signal intensity with multiple voids. On T\n2 weighted sequences the mass was of high signal intensity and revealed extensive enhancement following administration of gadolinium.",
+        "explanation": "The label omits material MRI signal and enhancement findings stated in the note.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/treatments/0/time",
+        "label_excerpt": "over a period of 7.4 years since 2006",
+        "source_quote": "The tumor was observed with 8 serial MRI scans over a period of 7.4 years since 2006.",
+        "explanation": "The label preserves the observation duration but omits that it involved 8 serial MRI scans, a material measure of the follow-up course.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      }
+    ],
+    "summary": "The candidate correctly identifies the omitted radiologic conclusion. The label also omits material MRI characteristics and the number of serial scans; the other projection-drop leads do not establish additional material omissions expressible at the listed paths."
+  },
+  "source_evidence_span_repairs": []
+}

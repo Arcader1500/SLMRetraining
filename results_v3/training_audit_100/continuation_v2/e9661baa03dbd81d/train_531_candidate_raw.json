@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Fasciotomy of right lower limb",
+        "source_quote": "quickly underwent a fasciotomy of his right lower limb",
+        "explanation": "The label accurately records the procedure and its site."
+      },
+      {
+        "field_path": "/treatments/0/time",
+        "label_excerpt": "At least for 4 days",
+        "source_quote": "made manageable by opioid treatment for at least for 4 days",
+        "explanation": "The label preserves the source-stated opioid treatment duration."
+      },
+      {
+        "field_path": "/treatments/1/time",
+        "label_excerpt": "Temporarily for 5 days",
+        "source_quote": "temporarily required hemodialysis for 5 days",
+        "explanation": "The label preserves the source-stated hemodialysis duration."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/diagnosis tests",
+        "label_excerpt": "",
+        "source_quote": "Based on these findings, he was diagnosed as having ACS",
+        "explanation": "The note explicitly establishes acute compartment syndrome (ACS), but the label records the pressure measurements without the resulting diagnosis. This is a material diagnostic omission.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/diagnosis tests",
+        "label_excerpt": "",
+        "source_quote": "He exhibited rhabdomyolysis with increased levels of serum creatine phosphokinase (CPK) and acute renal failure",
+        "explanation": "The label includes hemodialysis and recovery but omits the source-stated rhabdomyolysis and acute renal failure diagnoses, which are material complications.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label accurately captures several procedures and treatment details, but omits the source-stated ACS diagnosis and the material complications of rhabdomyolysis and acute renal failure."
+  }
+}

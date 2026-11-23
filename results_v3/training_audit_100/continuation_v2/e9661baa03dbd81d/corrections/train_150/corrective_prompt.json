@@ -1,0 +1,4 @@
+{
+  "instruction": "\n\nSUPPLEMENTAL CORRECTION: Prior response failed exact evidence validation. Preserve candidate_index1..N exactly once and original paths. For added findings use exact paths from these existing leaves: [\"/visit motivation\", \"/patient information/age\", \"/patient information/sex\", \"/symptoms/0/name of symptom\", \"/symptoms/0/details\"]. If an omission has no valid child, use a section path only from [\"/visit motivation\", \"/admission\", \"/patient information\", \"/patient medical history\", \"/surgeries\", \"/symptoms\", \"/medical examinations\", \"/diagnosis tests\", \"/treatments\", \"/discharge\"] with empty label_excerpt. Do not invent a path; recheck every quote.",
+  "sha256": "1c5f819f5ce692f61052ffcf47f9d7ce473fc7108e9933c17f238c3dd5ae8d07"
+}

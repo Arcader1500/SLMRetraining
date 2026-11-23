@@ -1,0 +1,78 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The note says the crisis was suspected; the label states it as established and omits that uncertainty.",
+        "source_quote": "The development of a myasthenic crisis was suspected and she was admitted to our hospital the next day.",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The label's timing is consistent with the sequence: dyspnea was reported, worsened two days later, and admission followed the next day.",
+        "source_quote": "Two days later her dyspnea worsened (PaO2 76.3 mmHg, PaCO2 99.1 mmHg). The development of a myasthenic crisis was suspected and she was admitted to our hospital the next day.",
+        "field_path": "/symptoms/0/time"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The treatments are described after the admission event in the note, supporting the label's timing.",
+        "source_quote": "The development of a myasthenic crisis was suspected and she was admitted to our hospital the next day. Steroid pulse therapy and an immunoadsorbent technique were performed.",
+        "field_path": "/treatments/1/time"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The treatments are described after the admission event in the note, supporting the label's timing.",
+        "source_quote": "The development of a myasthenic crisis was suspected and she was admitted to our hospital the next day. Steroid pulse therapy and an immunoadsorbent technique were performed.",
+        "field_path": "/treatments/2/time"
+      },
+      {
+        "candidate_index": 5,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The note directly states that oxygen inhalation was given after CAE was diagnosed.",
+        "source_quote": "CAE was diagnosed and she was treated with oxygen inhalation and intravenous injections of edaravone.",
+        "field_path": "/treatments/3/time"
+      },
+      {
+        "candidate_index": 6,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The note directly states that intravenous edaravone was given after CAE was diagnosed.",
+        "source_quote": "CAE was diagnosed and she was treated with oxygen inhalation and intravenous injections of edaravone.",
+        "field_path": "/treatments/4/time"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/surgeries/1/Type",
+        "label_excerpt": "",
+        "source_quote": "Her respiratory condition was stable on the 9th hospital day and she was extubated.",
+        "explanation": "The label includes intubation but omits the subsequent extubation, a material change in respiratory support and procedure status.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/5/name",
+        "label_excerpt": "",
+        "source_quote": "Hyperbaric oxygen therapy could not be delivered because she showed a deterioration of consciousness and was too unstable for transfer to a facility with a hyperbaric chamber.",
+        "explanation": "The note records that hyperbaric oxygen therapy was considered but could not be delivered because of her condition and instability. This material treatment-status fact is absent from the label.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The admission-reason finding is supported because the label drops the stated uncertainty. The other candidate claims do not identify discrepancies: the dyspnea timing and treatment times are supported by the note. The label omits the subsequent extubation and the fact that hyperbaric oxygen therapy could not be delivered."
+  },
+  "error": ""
+}

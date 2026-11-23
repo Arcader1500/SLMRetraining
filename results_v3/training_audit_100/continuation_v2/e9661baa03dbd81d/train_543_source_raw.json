@@ -1,0 +1,35 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The source explicitly states that a primary cardiac tumor or probable metastasis was suspected. This diagnostic conclusion is absent from the echocardiography result.",
+        "source_quote": "A primary cardiac tumor or probable metastasis was suspected.",
+        "field_path": "/diagnosis tests/4/result"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The severe TIA included transient respiratory failure, which is not captured in the symptom details.",
+        "source_quote": "the patient experienced a severe transient ischemic attack under anticoagulant therapy with a transient total loss of consciousness and transient respiratory failure.",
+        "field_path": "/symptoms/3/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/discharge/discharge summary",
+        "label_excerpt": "Urgent decision to operate was taken",
+        "source_quote": "The patient was referred to neurologists and surgeons, and an urgent decision to operate was taken",
+        "explanation": "The label records the urgent decision to operate but omits the explicit referral to neurologists and surgeons, a material disposition event.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      }
+    ],
+    "summary": "Both candidate omissions are supported by the source. The label also omits the patient's referral to neurologists and surgeons."
+  }
+}

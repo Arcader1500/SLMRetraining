@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Noticeable puncture wound, progressive swelling, and erythema to the right leg",
+        "source_quote": "noticeable puncture wound, progressive swelling, and erythema to the right leg",
+        "explanation": "The label captures the presenting wound and symptoms at the stated location."
+      },
+      {
+        "field_path": "/surgeries/0/time",
+        "label_excerpt": "Over the span of 1 week",
+        "source_quote": "over the span of 1 week",
+        "explanation": "The stated duration matches the source's timing for the surgical debridement."
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Palpable dorsalis pedis and posterior tibial vessels",
+        "source_quote": "Examination of the foot revealed palpable dorsalis pedis and posterior tibial vessels",
+        "explanation": "The examination result is directly supported by the note."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/diagnosis tests",
+        "label_excerpt": "",
+        "source_quote": "Diagnosis and confirmation of necrotizing fasciitis by polymicrobial group A streptococcal organisms was made.",
+        "explanation": "The note explicitly establishes necrotizing fasciitis and its polymicrobial group A streptococcal confirmation, but the diagnosis tests section is empty. This omits a material diagnostic conclusion.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/surgeries",
+        "label_excerpt": "",
+        "source_quote": "The resultant surgical debridement of the right posterior leg over the span of 1 week resulted in an open wound extending from the right popliteal fossa to about 8 cm from his right ankle ().",
+        "explanation": "The label records the debridement and its duration but omits the resulting wound's extent, a material detail of the wound being reconstructed.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "History of Hodgkin's lymphoma, currently in remission, and ureteral stone causing hydronephrosis",
+        "source_quote": "The patient was a habitual smoker with history of drug abuse.",
+        "explanation": "The note records habitual smoking and a history of drug abuse, but the physiological-context history includes neither. These are relevant history details omitted from the label.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label captures the presentation, debridement timing, and foot vessel examination, but omits the confirmed diagnosis, the resulting wound extent, and relevant smoking and drug-use history."
+  }
+}

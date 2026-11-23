@@ -1,0 +1,265 @@
+{
+  "run_id": "e9661baa03dbd81d",
+  "reviewer": "Luna subagent source review, not parent or clinician adjudication",
+  "review_scope": "Every clear_error candidate classified confirmed by the source pass, plus every clear_error confirmed added finding in the current bulk checkpoint; reassessed against complete available note and label.",
+  "cases": [
+    {
+      "case_id": "train:1184",
+      "candidate_index": 2,
+      "disposition": "agree_clear_error",
+      "field_path": "/symptoms/0/details",
+      "source_quote": "degenerative joint disease which significantly impacted her ability to exercise",
+      "label_excerpt": "Significantly impacted ability to exercise",
+      "rationale": "The full source attributes the exercise limitation to degenerative joint disease, while the only label placement is under the morbid-obesity symptom. The label separately retains degenerative joint disease in history but does not preserve this relationship there; the symptom placement changes the stated linkage."
+    },
+    {
+      "case_id": "train:877",
+      "candidate_index": 3,
+      "disposition": "agree_clear_error",
+      "field_path": "/treatments/0/time",
+      "source_quote": "Patient was discharged same day and aspirin and Plavix were resumed.",
+      "label_excerpt": "Resumed after discharge",
+      "rationale": "The complete note states same-day discharge and medication resumption in one sentence, without ordering resumption after discharge. The treatment time adds that sequence; the discharge summary repeats the same unsupported ordering.",
+      "independent_disposition_prior_to_parent_review": "agree_clear_error",
+      "parent_disagreement_ref": "parent_disagreements.json",
+      "current_parent_interpretation": "downgrade_policy_ambiguity"
+    },
+    {
+      "case_id": "train:1065",
+      "candidate_index": 1,
+      "disposition": "agree_clear_error",
+      "field_path": "/symptoms/0/location",
+      "source_quote": "and pain in the lower left abdomen",
+      "label_excerpt": "Lower left abdomen",
+      "rationale": "The full opening sentence distinguishes intermittent diarrhea from pain in the lower left abdomen. The symptom entry names intermittent diarrhea and assigns that pain location to it, changing which symptom the note locates."
+    },
+    {
+      "case_id": "train:710",
+      "candidate_index": 2,
+      "disposition": "agree_clear_error",
+      "field_path": "/treatments/0/time",
+      "source_quote": "After bowel disimpaction, the condition was treated with daily BM with Peristeen\u00ae transanal irrigation.",
+      "label_excerpt": "Since age 16",
+      "rationale": "The complete note places constipation complaints from age 16, then describes disimpaction followed by daily irrigation. The label transfers the symptom-onset anchor to treatment onset, which the note does not establish.",
+      "independent_disposition_prior_to_parent_review": "agree_clear_error",
+      "parent_disagreement_ref": "parent_disagreements.json",
+      "current_parent_interpretation": "downgrade_policy_ambiguity"
+    },
+    {
+      "case_id": "train:867",
+      "candidate_index": 1,
+      "disposition": "agree_clear_error",
+      "field_path": "/admission/0/reason",
+      "source_quote": "entered the emergency department at the State University of Ponta Grossa",
+      "label_excerpt": "Diagnosis and treatment of endodontic abscess",
+      "rationale": "ED presentation and procedures are documented; inpatient admission is not."
+    },
+    {
+      "case_id": "train:1010",
+      "candidate_index": 1,
+      "disposition": "agree_clear_error",
+      "field_path": "/admission/0/reason",
+      "source_quote": "She was taken to the hospital (Department of Orthopaedic Surgery, Kyoto Interdisciplinary Institute Hospital of Community Medicine, Kyoto, Japan) by ambulance.",
+      "label_excerpt": "Unable to walk or run due to severe pain in the left hip",
+      "rationale": "Hospital ambulance transport and examination are documented; inpatient admission is not."
+    },
+    {
+      "case_id": "train:1010",
+      "candidate_index": 2,
+      "disposition": "agree_clear_error",
+      "field_path": "/symptoms/0/location",
+      "source_quote": "She developed pain in the anterior part of the left thigh while training nine days before a prefectural track meet",
+      "label_excerpt": "Left hip",
+      "rationale": "Earlier symptom is anterior thigh pain; hip pain arises seven days later. Label assigns hip location to earlier symptom."
+    },
+    {
+      "case_id": "train:1010",
+      "candidate_index": 3,
+      "disposition": "agree_clear_error",
+      "field_path": "/symptoms/0/details",
+      "source_quote": "Seven days later, she suddenly developed severe pain in the left hip while running, and she was thereafter unable to walk or run.",
+      "label_excerpt": "severe pain led to inability to walk or run",
+      "rationale": "Label folds later severe hip pain and inability to walk/run into earlier thigh-pain entry despite explicit seven-day interval."
+    },
+    {
+      "case_id": "train:539",
+      "candidate_index": 1,
+      "disposition": "agree_clear_error",
+      "field_path": "/surgeries/1/Type",
+      "source_quote": "preparing for an urgent scleral patch transplant surgery. The peripheral conjunctiva contact with the melting site was removed, and free conjunctival autograft transplantation was also performed.",
+      "label_excerpt": "Urgent scleral patch transplant surgery and free conjunctival autograft transplantation",
+      "rationale": "Patch transplant was being prepared; free conjunctival autograft was explicitly performed. Combined type asserts planned patch occurred."
+    },
+    {
+      "case_id": "train:539",
+      "candidate_index": 2,
+      "disposition": "downgrade_policy_ambiguity",
+      "field_path": "/surgeries/1/time",
+      "source_quote": "a scleral ulcer emerged at a nasal ischemic necrotizing lesion 4 months later",
+      "label_excerpt": "4 months after initial surgery",
+      "rationale": "Four months explicitly times ulcer emergence and postoperative exam; timing attachment to combined surgery remains scope ambiguity."
+    },
+    {
+      "case_id": "train:835",
+      "candidate_index": 1,
+      "disposition": "agree_clear_error",
+      "field_path": "/admission/0/reason",
+      "source_quote": "He presented on the same day",
+      "label_excerpt": "Sudden visual loss in the right eye",
+      "rationale": "Presentation and assessment are documented, but no inpatient admission is stated."
+    },
+    {
+      "case_id": "train:1464",
+      "candidate_index": 1,
+      "disposition": "agree_clear_error",
+      "field_path": "/treatments/0/reaction to treatment",
+      "source_quote": "She was treated with olanzapine and later with fluphenazine decanoate when she was irregular with medications.",
+      "label_excerpt": "Irregular with medications",
+      "rationale": "Irregular medication use is linked to fluphenazine, but label attaches it to olanzapine reaction."
+    },
+    {
+      "case_id": "train:365",
+      "candidate_index": 1,
+      "disposition": "agree_clear_error",
+      "field_path": "/admission/0/reason",
+      "source_quote": "It was excised at an outside facility when it reached roughly 4.0 \u00d7 4.0 cm because it was thought to be a benign mass.",
+      "label_excerpt": "Excision of a nodule suspected to be a benign mass",
+      "rationale": "Excision is historical at an outside facility age 18; current presentation is four months later."
+    },
+    {
+      "case_id": "train:251",
+      "candidate_index": 1,
+      "disposition": "agree_clear_error",
+      "field_path": "/admission/0/reason",
+      "source_quote": "Later, he became aware of severely decreased visual acuity in the right eye several months ago and visited our hospital.",
+      "label_excerpt": "Decreased visual acuity and mature cataract in the right eye",
+      "rationale": "Hospital visit is documented, not admission."
+    },
+    {
+      "case_id": "train:57",
+      "candidate_index": 2,
+      "disposition": "agree_clear_error",
+      "field_path": "/treatments/3/reaction to treatment",
+      "source_quote": "The oral prednisolone was withheld, while her oral azathioprine and oral hydroxychloroquine were continued.",
+      "label_excerpt": "Withheld due to treatment with IV hydrocortisone",
+      "rationale": "Prednisolone was withheld while IV hydrocortisone was administered; source does not state it was the reason."
+    },
+    {
+      "case_id": "train:380",
+      "candidate_index": 2,
+      "disposition": "agree_clear_error",
+      "field_path": "/admission/0/reason",
+      "source_quote": "Initial workup showed tachycardia, hypotension, leukocytosis and elevated creatinine which was treated per sepsis protocol.",
+      "label_excerpt": "altered mental status and sepsis",
+      "rationale": "Workup was treated per sepsis protocol; source does not state sepsis diagnosis."
+    },
+    {
+      "case_id": "train:217",
+      "candidate_index": 1,
+      "disposition": "agree_clear_error",
+      "field_path": "/admission/0/reason",
+      "source_quote": "At another treatment facility, when the patient was 18 years of age, she underwent debulking of a tumor from the right buttock",
+      "label_excerpt": "Debulking of a tumor from the right buttock",
+      "rationale": "Debulking occurred at another facility age 18; current encounter is initial orthopedic examination."
+    },
+    {
+      "case_id": "train:1209",
+      "disposition": "agree_clear_error",
+      "field_path": "/admission/0/reason",
+      "source_quote": "The initial diagnosis was pericarditis with pericardial effusion. It was decided to treat the patient with oral diuretics.",
+      "label_excerpt": "Pericarditis with pericardial effusion",
+      "rationale": "Clinic visit and later surgical transfer are stated, no admission.",
+      "origin": "second_pass_added"
+    },
+    {
+      "case_id": "train:1086",
+      "candidate_index": 1,
+      "disposition": "agree_clear_error",
+      "field_path": "/admission/0/reason",
+      "source_quote": "was admitted to the emergency service of a community hospital with shortness of breath and mild chest pain. The clinical workup revealed deep vein thrombosis in her right leg and bilateral massive PTE.",
+      "label_excerpt": "Deep vein thrombosis and bilateral massive PTE",
+      "rationale": "Admission was for dyspnea and chest pain; DVT/PTE were subsequent workup findings."
+    },
+    {
+      "case_id": "train:1285",
+      "candidate_index": 2,
+      "disposition": "agree_clear_error",
+      "field_path": "/diagnosis tests/3/result",
+      "source_quote": "Five years later, repeated brain CT has revealed complete resolution of",
+      "label_excerpt": "Complete resolution of hydrocephalus",
+      "rationale": "Stored note ends ?complete resolution of? without identifying resolved finding; label completes it as hydrocephalus."
+    },
+    {
+      "case_id": "train:1285",
+      "candidate_index": 3,
+      "disposition": "agree_clear_error",
+      "field_path": "/admission/0/reason",
+      "source_quote": "was sent and treated to our hospital in two hours after the injury",
+      "label_excerpt": "Treatment after TBI",
+      "rationale": "Sent to and treated at hospital is stated, not admission."
+    },
+    {
+      "case_id": "train:278",
+      "candidate_index": 1,
+      "disposition": "agree_clear_error",
+      "field_path": "/admission/0/reason",
+      "source_quote": "The patient initially took treatment at outside hospital where he was suspected to have right distal humerus osteomyelitis",
+      "label_excerpt": "Suspected right distal humerus osteomyelitis",
+      "rationale": "Initial outside treatment and suspected osteomyelitis are stated; no admission is explicit."
+    },
+    {
+      "case_id": "train:533",
+      "candidate_index": 1,
+      "disposition": "agree_clear_error",
+      "field_path": "/treatments/0/name",
+      "source_quote": "Therefore, the patient did not undergo a further operation and was planned to return for follow-up in 2 months.",
+      "label_excerpt": "Transurethral resection of the bladder lesions",
+      "rationale": "The source says she planned a further resection but then explicitly states no further operation was performed. The label lists the planned procedure as treatment without its unperformed status."
+    },
+    {
+      "case_id": "train:533",
+      "candidate_index": 2,
+      "disposition": "agree_clear_error",
+      "field_path": "/treatments/0/reaction to treatment",
+      "source_quote": "During the operation, the intravesical lesions were found to have significantly improved.",
+      "label_excerpt": "Significant improvement of intravesical lesions",
+      "rationale": "The source says improvement was observed during the operation, then says no further operation occurred. Labeling the improvement as reaction to that unperformed later resection mislinks the observation."
+    },
+    {
+      "case_id": "train:1200",
+      "candidate_index": 1,
+      "disposition": "agree_clear_error",
+      "field_path": "/admission/0/reason",
+      "source_quote": "The development of a myasthenic crisis was suspected and she was admitted to our hospital the next day.",
+      "label_excerpt": "Development of a myasthenic crisis",
+      "rationale": "The note explicitly marks myasthenic crisis as suspected; label states its development as fact, losing uncertainty."
+    },
+    {
+      "case_id": "train:150",
+      "candidate_index": 1,
+      "disposition": "downgrade_policy_ambiguity",
+      "field_path": "/symptoms/0/details",
+      "source_quote": "The patient did feel her old friend next to the image of the children.",
+      "label_excerpt": "mistaking it for an old friend.",
+      "rationale": "The note first says she identified an image as her old friend, then says the old friend was next to the children?s image. These source statements conflict about image linkage, so the discrepancy is unresolved."
+    },
+    {
+      "case_id": "train:370",
+      "candidate_index": 1,
+      "disposition": "agree_clear_error",
+      "field_path": "/diagnosis tests/1/result",
+      "source_quote": "a colloid scan was advised that confirmed",
+      "label_excerpt": "Confirmed the presence of an accessory spleen",
+      "rationale": "The stored note ends after ?a colloid scan was advised that confirmed? and does not name the confirmed result; the label fills it in as accessory spleen."
+    }
+  ],
+  "validation_status": "passed_exact_source_quote_and_label_excerpt_against_complete_note_and_label",
+  "snapshot": {
+    "run_id": "e9661baa03dbd81d",
+    "bulk_rows": 90,
+    "source_review_rows": 90,
+    "qualifying_clear_error_records": 27,
+    "reviewed_records": 27,
+    "coverage": "all qualifying records in final 90-case checkpoint reviewed"
+  }
+}

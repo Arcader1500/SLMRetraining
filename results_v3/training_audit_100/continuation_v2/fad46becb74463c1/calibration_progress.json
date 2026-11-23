@@ -1,0 +1,8 @@
+{
+  "phase": "calibration",
+  "expected": 4,
+  "completed": 0,
+  "candidate_checkpointed": 4,
+  "remaining": 4,
+  "errors": 4
+}

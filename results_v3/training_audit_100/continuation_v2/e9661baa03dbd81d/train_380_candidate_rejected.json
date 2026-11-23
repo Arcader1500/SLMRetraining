@@ -1,0 +1,53 @@
+{
+  "response": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "prior open cholecystectomy",
+        "source_quote": "prior open cholecystectomy",
+        "explanation": "The label correctly records the prior procedure as medical history."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Small bowel obstruction with intramural small bowel pneumatosis and extensive portal venous gas within the left hepatic lobe",
+        "source_quote": "significant for small bowel obstruction with intramural small bowel pneumatosis and extensive portal venous gas (PVG) within the left hepatic lobe.",
+        "explanation": "The first abdominal CT result is supported by the note."
+      },
+      {
+        "field_path": "/symptoms/2/details",
+        "label_excerpt": "Culminating in an episode of bowel incontinence",
+        "source_quote": "They reported 2 days of abnormal behavior and confusion culminating in an episode of bowel incontinence.",
+        "explanation": "The label preserves the reported symptom sequence."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/surgeries/1/details",
+        "label_excerpt": "Another 40 cm of non-viable small bowel removed in a subsequent surgery, leaving the patient with two small bowel anastomosis",
+        "source_quote": "Two days later, her abdomen was re-explored and another 40 cm of non-viable small bowel was removed, leaving her with two small bowel anastomosis.",
+        "explanation": "This detail describes a re-exploration two days after the damage-control surgery, but it is nested under that initial surgery entry. The label therefore links the 40 cm resection to the wrong surgery event.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/surgeries",
+        "label_excerpt": "",
+        "source_quote": "There were no signs of gastrointestinal perforation but two segments of necrotic small bowel, 5 feet in total, were removed and the abdomen was sealed with Abthera.",
+        "explanation": "The label omits the initial operation's removal of 5 feet of necrotic bowel and the abdomen being sealed with Abthera, both material details of the damage-control surgery.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "Medical management",
+        "source_quote": "Upper endoscopy was performed, revealing a non-perforated gastric ulcer which was treated with medical management until the pain resolved.",
+        "explanation": "The label records medical management but omits the stated treatment outcome that the pain resolved.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label contains supported history, symptom, and test facts, but it mislinks a later resection to the initial surgery and omits material surgical details and the documented resolution of pain."
+  },
+  "error": "('omission_path', '/treatments')"
+}

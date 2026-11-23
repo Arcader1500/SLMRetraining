@@ -1,0 +1,67 @@
+{
+  "response": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Severe anemia and symptoms of a chest infection",
+        "source_quote": "discovered to have severe anemia (hemoglobin level of 61 g/L, packed cell volume of 0.191 L/L, mean cell volume of 94.6 fl) while on oral anticoagulant therapy (prothrombin time ratio of 3.7).",
+        "explanation": "The severe anemia is explicitly given as the reason she was discovered to need hospital care."
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Hypothyroidism, systemic lupus erythematosus (SLE), previous cranial vasculitis, thromboembolic episodes",
+        "source_quote": "The patient’s past medical history consisted of hypothyroidism for which she took levothyroxine 125 µg daily and systemic lupus erythematosus (SLE) for which she took warfarin tablets 3 mg daily for previous cranial vasculitis and thromboembolic episodes.",
+        "explanation": "The history and prior conditions are explicitly source-supported."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "No source of upper gastrointestinal bleeding or abnormality",
+        "source_quote": "which did not reveal any source of upper gastrointestinal bleeding or abnormality.",
+        "explanation": "The endoscopy result matches the note."
+      },
+      {
+        "field_path": "/treatments/2/reaction to treatment",
+        "label_excerpt": "Did not respond",
+        "source_quote": "which did not respond to intravenous antibiotics and intravenous fluids.",
+        "explanation": "The note explicitly states no response to the antibiotics and fluids."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "symptoms of a chest infection",
+        "source_quote": "while on oral anticoagulant therapy",
+        "explanation": "The label frames chest infection symptoms as part of the visit motivation, though the note says they arose four days after admission. The motivation should reflect the initial presentation; this later event is already separately represented in the symptoms and admission fields.",
+        "category": "chronology",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Severe anemia and later symptoms of a chest infection",
+        "source_quote": "Four days later while an inpatient, she became acutely confused and unwell with symptoms and signs of a chest infection",
+        "explanation": "The label includes the later inpatient chest infection symptoms as part of the admission reason, conflating a subsequent event with the initial reason for admission.",
+        "category": "chronology",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/symptoms/0/name of symptom",
+        "label_excerpt": "severe hypotension",
+        "source_quote": "severe hypotension",
+        "explanation": "The source describes severe hypotension as a sign accompanying the later chest infection and also records a blood pressure of 75/50; including it among symptoms may misclassify a clinical sign, though the schema does not clarify the symptom/sign boundary.",
+        "category": "inappropriate_role",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "",
+        "source_quote": "She had been tried on hydroxychloroquine in the past but this was stopped because of visual side effects",
+        "explanation": "The omitted prior medication discontinuation due to visual side effects is relevant treatment history expressible in physiological context.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate findings include chronology problems in visit motivation and admission reason, an ambiguous symptom/sign classification, and omitted relevant medication history."
+  },
+  "error": "('label_excerpt', '/patient medical history/physiological context', '')"
+}

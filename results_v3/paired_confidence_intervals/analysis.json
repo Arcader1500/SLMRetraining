@@ -1,0 +1,150 @@
+{
+  "method": "Paired case-level BCa bootstrap of mean(finetuned-baseline)",
+  "confidence_level": 0.95,
+  "resamples": 100000,
+  "seed": 42,
+  "bootstrap_unit": "case, with baseline/fine-tuned pairing intact",
+  "cross_metric_resampling": "Same seed and sorted case IDs use the same resampled case indices for both metrics within each subset.",
+  "multiplicity": "Main 95% intervals are marginal. Supplementary 97.5% per-metric BCa intervals apply Bonferroni for the two metrics within each subset.",
+  "versions": {
+    "python": "3.13.9",
+    "numpy": "2.5.5",
+    "scipy": "1.18.1"
+  },
+  "input_sha256": {
+    "results_v3/deepeval_remaining80/judgments/16727c1bd7aaf775/combined_scores_100.json": "0bcf0abffcd8ce325d558c2d60cb586196813ed9179d70e37c326f417e0debe4",
+    "results_v3/deepeval_remaining80/judgments/16727c1bd7aaf775/completion_checks.json": "17ddf2437f14b4dc215f1dab937f9e5e4c6055a1a713ead2bc65546baa182ac4",
+    "results_v3/deepeval_remaining80/selection_manifest.json": "80fe8b7d75c53a22fd165fd6319967f3dc295b862b1a96a1b2df8d74ff464e00",
+    "results_v3/deepeval_remaining80/judgments/16727c1bd7aaf775/combined_summary_100.json": "0609691132c60ea39fb1465ad5057cfc02c65d7ce4e65e5f8593f6b2174484fb",
+    "results_v3/deepeval_remaining80/judgments/16727c1bd7aaf775/combined_paired_comparison_100.csv": "fa5cdb5aacd4dd55198343a9a58177016041f0ffc8c486f422c592e1e97286e2"
+  },
+  "results": {
+    "all_100": {
+      "Source fidelity": {
+        "cases": 100,
+        "baseline_mean": 0.3859999999999999,
+        "finetuned_mean": 0.516,
+        "mean_paired_gain": 0.12999999999999998,
+        "ci95_bca": [
+          0.1,
+          0.15599999999999997
+        ],
+        "ci95_percentile": [
+          0.10199999999999998,
+          0.157
+        ],
+        "ci95_paired_t": [
+          0.10186816273399071,
+          0.15813183726600924
+        ],
+        "ci975_bca_bonferroni_two_metrics": [
+          0.09599999999999997,
+          0.159
+        ],
+        "method": "paired BCa bootstrap",
+        "median_paired_gain": 0.10000000000000003,
+        "wins": 76,
+        "ties": 15,
+        "losses": 9,
+        "win_fraction_all_cases": 0.76,
+        "positive_gain_interval": true
+      },
+      "Source coverage": {
+        "cases": 100,
+        "baseline_mean": 0.40699999999999986,
+        "finetuned_mean": 0.502,
+        "mean_paired_gain": 0.09499999999999999,
+        "ci95_bca": [
+          0.06499999999999999,
+          0.12199999999999997
+        ],
+        "ci95_percentile": [
+          0.06599999999999999,
+          0.12299999999999997
+        ],
+        "ci95_paired_t": [
+          0.06604954791816095,
+          0.12395045208183902
+        ],
+        "ci975_bca_bonferroni_two_metrics": [
+          0.05999999999999999,
+          0.12599999999999997
+        ],
+        "method": "paired BCa bootstrap",
+        "median_paired_gain": 0.09999999999999998,
+        "wins": 65,
+        "ties": 25,
+        "losses": 10,
+        "win_fraction_all_cases": 0.65,
+        "positive_gain_interval": true
+      }
+    },
+    "remaining_80": {
+      "Source fidelity": {
+        "cases": 80,
+        "baseline_mean": 0.39374999999999993,
+        "finetuned_mean": 0.53,
+        "mean_paired_gain": 0.13624999999999998,
+        "ci95_bca": [
+          0.10499999999999998,
+          0.16499999999999998
+        ],
+        "ci95_percentile": [
+          0.10625,
+          0.16624999999999995
+        ],
+        "ci95_paired_t": [
+          0.10574031477180766,
+          0.1667596852281923
+        ],
+        "ci975_bca_bonferroni_two_metrics": [
+          0.10124999999999998,
+          0.16875
+        ],
+        "method": "paired BCa bootstrap",
+        "median_paired_gain": 0.10000000000000003,
+        "wins": 63,
+        "ties": 9,
+        "losses": 8,
+        "win_fraction_all_cases": 0.7875,
+        "positive_gain_interval": true
+      },
+      "Source coverage": {
+        "cases": 80,
+        "baseline_mean": 0.41624999999999995,
+        "finetuned_mean": 0.51,
+        "mean_paired_gain": 0.09375,
+        "ci95_bca": [
+          0.06375,
+          0.12375
+        ],
+        "ci95_percentile": [
+          0.06375,
+          0.12374999999999999
+        ],
+        "ci95_paired_t": [
+          0.06342580136275827,
+          0.12407419863724173
+        ],
+        "ci975_bca_bonferroni_two_metrics": [
+          0.059999999999999984,
+          0.1275
+        ],
+        "method": "paired BCa bootstrap",
+        "median_paired_gain": 0.09999999999999998,
+        "wins": 52,
+        "ties": 19,
+        "losses": 9,
+        "win_fraction_all_cases": 0.65,
+        "positive_gain_interval": true
+      }
+    }
+  },
+  "limitations": [
+    "Conditional on the saved judge scores; does not estimate judge rerun variance or systematic judge bias.",
+    "Case bootstrap assumes independent, comparable cases; patient/near-duplicate clustering has not been established.",
+    "For these fixed 100 cases the mean is exact. Intervals concern hypothetical resampling of comparable cases, not uncertainty in the arithmetic.",
+    "All cases are development data. The original 20 informed the rubric; the remaining 80 are a sensitivity analysis, not a new clinical test set.",
+    "No clinical accuracy, clinician calibration or training-seed uncertainty is inferred."
+  ]
+}

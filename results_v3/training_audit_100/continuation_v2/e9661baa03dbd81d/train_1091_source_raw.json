@@ -1,0 +1,88 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label omits the patient's relevant negative history of loss of consciousness; this belongs in physiological context.",
+        "source_quote": "the female patient did not lose consciousness.",
+        "field_path": "/patient medical history"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label preserves the source's CT finding and stated extent.",
+        "source_quote": "the CT scan revealed an aneurysm of the infra-renal aorta with a dissection from the height of the second lumbar vertebral body to the iliac artery",
+        "field_path": "/diagnosis tests/2/result"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label preserves the negative finding recorded when the catheter was placed.",
+        "source_quote": "At this time, urine did not show any signs of macroscopic hematuria.",
+        "field_path": "/treatments/1/reaction to treatment"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient information/ethnicity",
+        "label_excerpt": "",
+        "source_quote": "We report a 54-year old Caucasian female patient",
+        "explanation": "The source explicitly states the patient's ethnicity, which is absent from the label and supported by an existing patient-information path.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/surgeries/1/Type",
+        "label_excerpt": "Open reduction and internal fixation",
+        "source_quote": "Nine days postoperatively, the open reduction and internal fixation of the acetabular fracture was performed without any incidence.",
+        "explanation": "The label omits the explicitly stated uneventful outcome of the second surgery; the existing Type/details field can retain this material procedure qualification.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate omission of loss of consciousness is supported. The other candidates describe source-supported label content, not discrepancies. The label also omits the stated ethnicity and the uneventful outcome of the acetabular fixation."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The note explicitly states that the patient did not lose consciousness, and this clinically relevant negative is absent from the label. The existing physiological-context field is appropriate for it.",
+        "source_quote": "Both of the passengers were wearing their seatbelts correctly, and the female patient did not lose consciousness.",
+        "field_path": "/patient medical history"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient information/ethnicity",
+        "label_excerpt": "",
+        "source_quote": "We report a 54-year old Caucasian female patient",
+        "explanation": "The source identifies the patient's ethnicity as Caucasian, but it is absent from the label. This is a supported patient-information detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/surgeries/1/details",
+        "label_excerpt": "",
+        "source_quote": "Nine days postoperatively, the open reduction and internal fixation of the acetabular fracture was performed without any incidence.",
+        "explanation": "The label records the procedure and timing but omits the source-stated outcome that it was performed without any incidence.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Confirmed the candidate omission of the patient's loss-of-consciousness status. Added two material omissions supported by the note: ethnicity and the outcome of the acetabular fracture fixation."
+  }
+}

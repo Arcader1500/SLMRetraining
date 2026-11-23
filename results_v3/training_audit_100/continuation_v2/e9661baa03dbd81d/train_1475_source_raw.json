@@ -1,0 +1,37 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The treatment entry omits the four named oral agents, which are expressly stated in the source.",
+        "source_quote": "began therapy with the following oral natural anti-cancer agents: Active hexose correlated compound or AHCC (mushroom extract)[], dandelion root[], curcumin[], and astragalus root[].",
+        "field_path": "/treatments/1/name"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/treatments/0/time",
+        "label_excerpt": "2007",
+        "source_quote": "Interferon was stopped after 9 mo due to side effects.",
+        "explanation": "The label records the treatment year but omits its stated nine-month duration, a material course-timing detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/2/name",
+        "label_excerpt": "Parenteral therapy",
+        "source_quote": "Parenteral therapy was also started, which consisted of intravenous vitamin C twice",
+        "explanation": "The label leaves the stated therapy unspecified as intravenous vitamin C, omitting a material treatment detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate oral-agent omission is confirmed. The label also omits the interferon duration and identifies the parenteral therapy only generically, despite the source specifying intravenous vitamin C."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "27",
+        "source_quote": "A 27-year-old male",
+        "explanation": "The age matches the note."
+      },
+      {
+        "field_path": "/surgeries/0/time",
+        "label_excerpt": "June 2017",
+        "source_quote": "underwent curettage and biopsy in June 2017",
+        "explanation": "The date is supported."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Features of osteolytic lesion involving right lateral humeral condyle adjacent to olecranon fossa",
+        "source_quote": "X-ray and computed tomography right elbow showed features of osteolytic lesion involving right lateral humeral condyle just adjacent to olecranon fossa",
+        "explanation": "The imaging finding and location are supported."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Suspected right distal humerus osteomyelitis",
+        "source_quote": "The patient initially took treatment at outside hospital where he was suspected to have right distal humerus osteomyelitis",
+        "explanation": "The note documents an outside-hospital treatment and suspected diagnosis, but does not establish that the patient was admitted. Recording this under admission asserts an unsupported event.",
+        "category": "event_status",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/symptoms/0/location",
+        "label_excerpt": "Right elbow",
+        "source_quote": "He started developing pain over the left elbow following a trivial trauma",
+        "explanation": "The note says the pain began over the left elbow, while the label assigns it to the right. Because the note also describes right elbow complaints, this location discrepancy may reflect inconsistent source wording.",
+        "category": "wrong_linkage_value",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/diagnosis tests",
+        "label_excerpt": "",
+        "source_quote": "Surprisingly, the biopsy was reported as an intraosseous arteriovenous malformation",
+        "explanation": "The label omits the material biopsy result, which is expressible as a diagnostic test result.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate issues: admission is asserted without evidence of admission, the symptom location conflicts with inconsistent source wording, and the reported biopsy result is omitted."
+  }
+}

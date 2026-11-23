@@ -1,0 +1,9 @@
+{
+  "stage": "02_finetune",
+  "status": "running",
+  "completed": [
+    "00_prepare_dataset",
+    "01_baseline_eval"
+  ],
+  "updated_at_utc": "2026-11-19T11:12:21.668063+00:00"
+}

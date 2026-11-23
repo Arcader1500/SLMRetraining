@@ -1,0 +1,71 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The note refers to “this admission” when describing the second hospital presentation, and says the first course was treated in hospital and followed by discharge home. The candidate’s claim that the first course lacks admission evidence is not supported.",
+        "source_quote": "He was treated in hospital with intravenous methylprednisolone (500 mg daily) and oral cyclophosphamide (100 mg daily) for three days. He was discharged home on a weaning course of prednisolone and cyclophosphamide, with normalisation of his renal function. Two weeks following this admission, the patient was admitted to a regional hospital",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The source states that cyclophosphamide was reduced and then stopped during the second course; neither change appears in the label. This is a material treatment-course omission.",
+        "source_quote": "Cyclophosphamide was initially reduced to 50 mg daily and then ceased in setting of potential infectious pathology.",
+        "field_path": "/treatments"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The endoscopic result omits the source’s material qualification that the rectum was relatively spared.",
+        "source_quote": "The rectum was relatively spared.",
+        "field_path": "/medical examinations/1/result"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The histopathology result omits the reported negative findings for inflammatory bowel disease, vasculitis, and viral inclusions.",
+        "source_quote": "There were no features of inflammatory bowel disease, vasculitis or viral inclusions.",
+        "field_path": "/medical examinations/2/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "The patient's wife had had similar symptoms recently",
+        "source_quote": "The patient developed large volume watery diarrhea, up to eight liters per day.",
+        "explanation": "The label records watery diarrhea but omits its source-stated peak volume, a material symptom severity detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/admission/1/reason",
+        "label_excerpt": "Nausea, vomiting, diarrhea with intolerance of oral intake",
+        "source_quote": "He required transfer to a tertiary hospital intensive care unit where he received hemofiltration for hypovolemic acute kidney injury.",
+        "explanation": "The second admission reason omits the material complication of hypovolemic acute kidney injury that required ICU transfer and hemofiltration.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/0/time",
+        "label_excerpt": "During initial hospital admission",
+        "source_quote": "He was treated in hospital with intravenous methylprednisolone (500 mg daily) and oral cyclophosphamide (100 mg daily) for three days.",
+        "explanation": "The treatment time indicates only the hospital admission and omits the explicitly stated three-day course duration.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Three candidate omissions are confirmed, while the proposed admission-role issue is rejected because the note supports the first hospital admission. Material omissions also include diarrhea severity, hypovolemic acute kidney injury, and the initial treatment duration."
+  }
+}

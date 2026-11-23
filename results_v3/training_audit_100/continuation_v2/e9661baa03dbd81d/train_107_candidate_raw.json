@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Compulsive washing leading to vulvar pruritus and dermatitis",
+        "source_quote": "after a consultation at the local emergency room due to a vulvar pruritus and dermatitis as a consequence of compulsive washing",
+        "explanation": "The motivation reflects the stated reason for the outpatient observation."
+      },
+      {
+        "field_path": "/symptoms/0/name of symptom",
+        "label_excerpt": "Obsessive-compulsive symptoms",
+        "source_quote": "her symptoms included ritual washing of hands and genitals in response to contamination obsessions as well as checking compulsions",
+        "explanation": "The symptom label is supported by the described obsessions and compulsions."
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "difficulty of sleeping due to the need to perform washing during night at scheduled times",
+        "source_quote": "she reported difficulty of sleeping as a consequence to the need to perform washing during night at scheduled times",
+        "explanation": "The sleep difficulty and its stated association with scheduled washing are represented."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/patient medical history",
+        "label_excerpt": "",
+        "source_quote": "She reported no personal or family history of neither neurological nor mental disorders, other than OCD.",
+        "explanation": "The label omits the explicit personal and family history (including the stated OCD exception), which is material history expressible in this section.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Severe dermatitis at both hands and genitals",
+        "source_quote": "These symptoms were severe, as evidenced by the fact that she was diagnosed as having a severe dermatitis at both hands and genitals.",
+        "explanation": "The source distinguishes severe obsessive-compulsive symptoms from the dermatitis that evidences severity; the label’s phrasing may imply the dermatitis itself is the severity qualifier for the symptom entry. This is a projection/role ambiguity.",
+        "category": "wrong_linkage_value",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "The label is largely supported, but it omits relevant personal and family history and has a possible symptom-to-dermatitis linkage ambiguity."
+  }
+}

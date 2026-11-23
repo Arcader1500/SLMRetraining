@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Asymptomatic in nature",
+        "source_quote": "It was asymptomatic in nature, with complaints of occasional pruritus and slight restriction of movement of small joints of hands.",
+        "explanation": "The source also records occasional pruritus and slight restriction of movement, which are omitted from the symptom details."
+      },
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Symptoms resolved temporarily, recurred, and then resolved without further recurrence after treatment",
+        "source_quote": "which resolved temporarily after symptomatic treatment by the physician, only to recur after a gap of 3 days, and was subsequently resolved by symptomatic treatment without further recurrence.",
+        "explanation": "The summary preserves the outcome sequence but omits the explicit three-day gap before recurrence."
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Sclerodermoid changes over face, extremities and abdomen",
+        "source_quote": "deepening of the furrows over forehead, infiltration over ears. [], multiple grouped papular lesions over the lower back [], taut shiny skin over the shins, and a prominence of follicular ostia over forearms [].",
+        "explanation": "The examination result omits several described cutaneous findings; these are material examination details."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Asymptomatic in nature",
+        "source_quote": "It was asymptomatic in nature, with complaints of occasional pruritus and slight restriction of movement of small joints of hands.",
+        "explanation": "The symptom details omit the source-stated occasional pruritus and slight restriction of movement of the hand joints, both relevant qualifiers of the skin complaint.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Symptoms resolved temporarily, recurred, and then resolved without further recurrence after treatment",
+        "source_quote": "which resolved temporarily after symptomatic treatment by the physician, only to recur after a gap of 3 days, and was subsequently resolved by symptomatic treatment without further recurrence.",
+        "explanation": "The response sequence is present, but the specific three-day interval between temporary resolution and recurrence is missing, obscuring the timing of the course.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Sclerodermoid changes over face, extremities and abdomen",
+        "source_quote": "deepening of the furrows over forehead, infiltration over ears. [], multiple grouped papular lesions over the lower back [], taut shiny skin over the shins, and a prominence of follicular ostia over forearms [].",
+        "explanation": "The broad summary omits the source's specific skin examination findings, including grouped papular lesions and taut shiny skin, which provide clinically relevant examination detail.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label is largely source-consistent, but it omits material symptom qualifiers, examination findings, and the three-day interval in the treatment response sequence."
+  }
+}

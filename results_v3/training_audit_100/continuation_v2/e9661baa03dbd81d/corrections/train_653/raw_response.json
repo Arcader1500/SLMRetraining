@@ -1,0 +1,51 @@
+{
+  "candidate_dispositions": [
+    {
+      "candidate_index": 1,
+      "disposition": "downgraded",
+      "attribution": "uncertain",
+      "explanation": "The note states a stroke diagnosis but does not establish admission. The role may be inappropriate, but the schema's admission-reason field could be used for the diagnosis that prompted care.",
+      "source_quote": "Diagnosis of stroke with left frontal bleed was made.",
+      "field_path": "/admission/0/reason"
+    },
+    {
+      "candidate_index": 2,
+      "disposition": "confirmed",
+      "attribution": "projection_loss",
+      "explanation": "The source states amlodipine was taken twice a day, but the treatment entry records only its dose.",
+      "source_quote": "oral amlodipine (5 mg) twice a day",
+      "field_path": "/treatments/0/dosage"
+    },
+    {
+      "candidate_index": 3,
+      "disposition": "confirmed",
+      "attribution": "projection_loss",
+      "explanation": "The source states losartan was taken once a day, but the treatment entry records only its dose.",
+      "source_quote": "losartan (50 mg) once a day",
+      "field_path": "/treatments/1/dosage"
+    }
+  ],
+  "added_findings": [
+    {
+      "field_path": "/symptoms",
+      "label_excerpt": "",
+      "source_quote": "sudden onset headache associated with vomiting and subsequently loss of consciousness",
+      "explanation": "The label records the sudden headache but omits the associated vomiting and subsequent loss of consciousness, material symptom context not represented by an existing child leaf for this symptom.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/diagnosis tests",
+      "label_excerpt": "",
+      "source_quote": "On further evaluation, it revealed hypertensive bleed in the eye",
+      "explanation": "The source identifies a hypertensive eye bleed on further evaluation, but this diagnosis is absent from the label. No existing diagnosis leaf represents this standalone finding.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    }
+  ],
+  "summary": "The two antihypertensive frequency omissions are supported. The admission-role concern remains ambiguous because the note gives a diagnosis without explicit admission evidence. Material omissions include the vomiting and loss of consciousness accompanying the headache and the hypertensive bleed in the eye."
+}

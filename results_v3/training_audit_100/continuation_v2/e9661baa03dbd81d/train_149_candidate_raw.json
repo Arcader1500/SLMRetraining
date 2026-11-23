@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Bicornuate uterus discovered on dating scan",
+        "source_quote": "because a bicornuate uterus was discovered on the dating scan () of her spontaneously conceived first pregnancy",
+        "explanation": "The stated reason for referral is captured accurately."
+      },
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Unprovoked episode of a minor antepartum hemorrhage",
+        "source_quote": "At 21 weeks when Miss A. was hospitalized for an unprovoked episode of a minor antepartum hemorrhage",
+        "explanation": "The note explicitly says she was hospitalized for this event."
+      },
+      {
+        "field_path": "/diagnosis tests/6/result",
+        "label_excerpt": "Hyperuricemia (0.37 mmol/L) and hypomagnesaemia (0.4 mmol/L)",
+        "source_quote": "confirmed the presence of hyperuricemia (0.37 mmol/L) and a hypomagnesaemia of 0.4 mmol/L was discovered",
+        "explanation": "Both abnormal results and their values are supported."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/diagnosis tests",
+        "label_excerpt": "",
+        "source_quote": "She had persistent hyperglycemia and investigations to exclude type I diabetes were performed.",
+        "explanation": "The label omits the material finding of persistent hyperglycemia, an expressible diagnosis-test result relevant to the diabetes investigation.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/diagnosis tests",
+        "label_excerpt": "",
+        "source_quote": "MODY-5 was suspected for the first time given her unexplained early onset diabetes and uterine malformation.",
+        "explanation": "The label omits the material suspected diagnosis, which is stated in the note and belongs among diagnosis-related facts.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "She was started on insulin treatment as blood sugars were higher than 8 mmol/l on regular testing.",
+        "explanation": "The treatment entry omits the source-stated initiation context and threshold; these details distinguish the treatment course and its indication.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Three material omissions are present: persistent hyperglycemia, suspected MODY-5, and the insulin initiation context. The provided checks confirm that referral motivation, hospitalization reason, and renal-function abnormalities are supported."
+  }
+}

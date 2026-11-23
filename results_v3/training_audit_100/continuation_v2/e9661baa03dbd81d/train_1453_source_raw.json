@@ -1,0 +1,45 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The label assigns general fatigue the one-week timing stated for appetite loss and the hospital visit. The note first mentions fatigue later, when both symptoms worsened and he went to the emergency room.",
+        "source_quote": "He continued to report appetite loss and went to hospital 1 week before his admission.",
+        "field_path": "/symptoms/2/time"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The time field preserves the start anchor but omits the stated frequency and treatment/rest schedule, which are material course details expressible in the treatment time field.",
+        "source_quote": "He started taking S-1 50 mg, twice daily for 3 consecutive weeks, followed by a 2-week rest period 8 months ago.",
+        "field_path": "/treatments/1/time"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/5/result",
+        "label_excerpt": "1919.16 μmol/l",
+        "source_quote": "his serum creatinine had increased to 683.33 μmol/l",
+        "explanation": "The substantial creatinine result from the blood examination after consultation is absent. It is a material renal finding; the note also specifies that the doctor learned of it only after admission.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/treatments/2/time",
+        "label_excerpt": "Every 5 weeks, last time about 1 month before admission",
+        "source_quote": "He received six cycles of chemotherapy",
+        "explanation": "The label gives cisplatin frequency and the last-treatment anchor but omits the stated six-cycle course, a material treatment-duration detail expressible in the time field.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The fatigue timing and missing S-1 schedule are supported findings. The label also omits the post-consultation creatinine result and the six-cycle chemotherapy course."
+  }
+}

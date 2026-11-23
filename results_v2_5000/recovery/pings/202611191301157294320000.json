@@ -1,0 +1,74 @@
+{
+  "ping_utc": "2026-11-19T13:01:15.729432+00:00",
+  "pipeline": {
+    "stage": "02_finetune",
+    "status": "running",
+    "completed": [
+      "00_prepare_dataset",
+      "01_baseline_eval"
+    ],
+    "updated_at_utc": "2026-11-19T11:12:21.668063+00:00"
+  },
+  "processes": "1498 /usr/bin/python3 -u scripts/run_v2_5000_pipeline.py\n",
+  "last_training_log": {
+    "eval_loss": 0.4552387595176697,
+    "eval_runtime": 27.2945,
+    "eval_samples_per_second": 3.664,
+    "eval_steps_per_second": 3.664,
+    "epoch": 3,
+    "step": 1875
+  },
+  "epoch_evals": [
+    {
+      "epoch": 1,
+      "eval_loss": 0.49792587757110596,
+      "eval_runtime": 25.5713,
+      "eval_samples_per_second": 3.911,
+      "eval_steps_per_second": 3.911,
+      "step": 625
+    },
+    {
+      "eval_loss": 0.4614775776863098,
+      "eval_runtime": 27.2972,
+      "eval_samples_per_second": 3.663,
+      "eval_steps_per_second": 3.663,
+      "epoch": 2,
+      "step": 1250
+    },
+    {
+      "eval_loss": 0.4552387595176697,
+      "eval_runtime": 27.353,
+      "eval_samples_per_second": 3.656,
+      "eval_steps_per_second": 3.656,
+      "epoch": 3,
+      "step": 1875
+    },
+    {
+      "eval_loss": 0.4552387595176697,
+      "eval_runtime": 27.2945,
+      "eval_samples_per_second": 3.664,
+      "eval_steps_per_second": 3.664,
+      "epoch": 3,
+      "step": 1875
+    }
+  ],
+  "complete_checkpoints": [
+    "checkpoint-1875",
+    "checkpoint-1250"
+  ],
+  "finetuned_generations": 0,
+  "training_notebook": {
+    "notebook": "02_finetune.ipynb",
+    "state": "complete",
+    "started": 1795086743.1391547,
+    "completed_code_cells": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "current_cell": 8,
+    "finished": 1795093221.0497897
+  },
+  "adapter_saved": true
+}

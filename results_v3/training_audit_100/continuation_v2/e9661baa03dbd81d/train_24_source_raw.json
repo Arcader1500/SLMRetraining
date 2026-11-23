@@ -1,0 +1,53 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The source establishes an emergency department presentation but does not state that the patient was admitted; the label asserts an admission reason.",
+        "source_quote": "presented to the emergency department at 10 am in the morning with chest pain and shortness of breath",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The symptom details omit the explicitly stated triggers and positional relief.",
+        "source_quote": "aggravated by deep breaths and by lying down, and alleviated by sitting up and leaning forward.",
+        "field_path": "/symptoms/0/details"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The source gives approximately 12 hours as the duration of the chest pain and shortness of breath, but the symptom entry preserves onset time without duration.",
+        "source_quote": "chest pain and shortness of breath of approximately 12 hours duration.",
+        "field_path": "/symptoms/1/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Postmenopausal, right breast invasive ductal carcinoma with bilateral mastectomies in 2015, recently diagnosed bladder cancer with TURBT and intravesical mitomycin C instillation three days prior to current presentation, type 2 diabetes mellitus, hypertension, obstructive sleep apnea, chronic obstructive pulmonary disease, and prothrombin G20210A mutation",
+        "source_quote": "She had quit smoking 5 years ago, prior to that she had smoked 2 packs per day for 45 years.",
+        "explanation": "The label omits the substantial former smoking history, a material risk factor stated in the source.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Postmenopausal, right breast invasive ductal carcinoma with bilateral mastectomies in 2015, recently diagnosed bladder cancer with TURBT and intravesical mitomycin C instillation three days prior to current presentation, type 2 diabetes mellitus, hypertension, obstructive sleep apnea, chronic obstructive pulmonary disease, and prothrombin G20210A mutation",
+        "source_quote": "Her family history was significant for her brother having an episode of myocardial infarction at age 55.",
+        "explanation": "The label omits the stated family history of premature myocardial infarction, which is material cardiovascular context.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The admission assertion is unsupported because the note only establishes an emergency department presentation. The symptom-modifier and duration omissions are supported, and the label also omits material smoking and family histories."
+  }
+}

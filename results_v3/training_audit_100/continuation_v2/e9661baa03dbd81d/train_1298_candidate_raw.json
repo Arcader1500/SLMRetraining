@@ -1,0 +1,94 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "HIV, epilepsy",
+        "source_quote": "a past medical history of HIV, bipolar disorder, and epilepsy",
+        "explanation": "The label includes two of the three explicitly stated history items."
+      },
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Temporary pacemaker placement, followed by permanent dual chamber MRI-compatible pacemaker placement",
+        "source_quote": "He was transferred to the cardiac care unit for close monitoring and temporary pacemaker placement. ... The patient underwent permanent dual chamber MRI-compatible pacemaker placement",
+        "explanation": "Both pacemaker procedures and their sequence are stated in the note."
+      },
+      {
+        "field_path": "/discharge/discharge summary",
+        "label_excerpt": "Patient underwent permanent dual chamber MRI-compatible pacemaker placement for his heart block during the admission and was discharged with plans for outpatient follow-up",
+        "source_quote": "The patient underwent permanent dual chamber MRI-compatible pacemaker placement for his heart block during the admission and was discharged with plans for outpatient follow-up.",
+        "explanation": "The summary reflects the stated procedure and disposition."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "HIV, epilepsy",
+        "source_quote": "a past medical history of HIV, bipolar disorder, and epilepsy",
+        "explanation": "Bipolar disorder is explicitly stated in the source but omitted from the patient's medical history; it is a material history omission.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "Neurosurgery declined surgical intervention, recommending Lamotrigine as seizure prophylaxis and serial MRIs to examine progression of the mass.",
+        "explanation": "The label records Lamotrigine but omits the recommended serial MRI monitoring plan, a material management plan expressible under treatments.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label captures most major events but omits bipolar disorder from the stated medical history and the serial MRI recommendation."
+  },
+  "retry": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Characterize syncopal episodes",
+        "source_quote": "was admitted to the neurology service for a video electroencephalogram (vEEG) to characterize syncopal episodes",
+        "explanation": "The visit motivation is supported by the stated reason for the vEEG."
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Pauses of up to six seconds, reflecting a transient symptomatic high degree AV block",
+        "source_quote": "his cardiac telemetry demonstrated pauses of up to six seconds (), reflecting a transient symptomatic high degree AV block.",
+        "explanation": "The telemetry result matches the source."
+      },
+      {
+        "field_path": "/discharge/discharge summary",
+        "label_excerpt": "Patient underwent permanent dual chamber MRI-compatible pacemaker placement for his heart block during the admission and was discharged with plans for outpatient follow-up",
+        "source_quote": "The patient underwent permanent dual chamber MRI-compatible pacemaker placement for his heart block during the admission and was discharged with plans for outpatient follow-up.",
+        "explanation": "The label accurately records the permanent pacemaker placement and discharge plan."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/patient medical history",
+        "label_excerpt": "",
+        "source_quote": "A 43-year-old man with a past medical history of HIV, bipolar disorder, and epilepsy",
+        "explanation": "The physiological context includes HIV and epilepsy but omits the source-stated bipolar disorder, a material history item.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "He had been on multiple antiepileptic medications without resolution of his episodes.",
+        "explanation": "The label omits the material history of multiple antiepileptic medication courses without resolution. Lamotrigine is separately recommended in the note.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Mass in the left posterior carotid space at the skull base",
+        "source_quote": "The differential of this mass included a left vagal schwannoma or a lymph node in proximity to the vagus nerve.",
+        "explanation": "The MRI result omits the source-stated differential for the mass, which is material diagnostic-test context.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label is mostly source-supported but has material omissions in medical history, prior medication response, and the mass differential."
+  }
+}

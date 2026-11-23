@@ -1,0 +1,53 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The note records speech impairment after sclerotherapy, but does not establish that the treatment caused it. The label’s reaction field can imply causation, though the temporal association alone leaves this ambiguous.",
+        "source_quote": "Less than 1 hour after leaving hospital, impairment of speech capacity was observed.",
+        "field_path": "/treatments/0/reaction to treatment"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The prednisone dosage omits both the stated daily frequency and the five-day duration.",
+        "source_quote": "20 mg prednisone was prescribed per day for 5 days.",
+        "field_path": "/treatments/2/dosage"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The route is already preserved in the treatment name, “Hydrocortisone IV”; the dosage leaf need not repeat it.",
+        "source_quote": "One gram of hydrocortisone IV was infused",
+        "field_path": "/treatments/1/dosage"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "No history of migraine headaches, cardiac diseases, high blood pressure, or being overweight",
+        "source_quote": "She had never smoked cigarettes, never had high blood pressure, and never been overweight.",
+        "explanation": "The label omits the source-stated negative smoking history, a relevant physiological-context fact.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "No history of migraine headaches, cardiac diseases, high blood pressure, or being overweight",
+        "source_quote": "The patient had never been treated before because she was afraid of surgery.",
+        "explanation": "The label omits the relevant history that she had not previously been treated because of fear of surgery.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The prednisone course details are materially incomplete. The hydrocortisone route is preserved in its name, while the sclerotherapy reaction wording remains causally ambiguous. The label also omits relevant smoking and prior-treatment history."
+  }
+}

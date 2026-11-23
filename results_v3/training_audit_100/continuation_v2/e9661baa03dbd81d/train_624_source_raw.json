@@ -1,0 +1,83 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label records the operation and biopsy findings but omits the fracture event and its defining details.",
+        "source_quote": "This turned out to be a transverse subtrochanteric fracture through the cortical thickening with a medial spike (). Closed reduction and internal fixation took place.",
+        "field_path": "/surgeries/0/details"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label retains the dose but omits the stated daily frequency and nine-year duration.",
+        "source_quote": "prednisone 5 mg o.d. for 9 years",
+        "field_path": "/treatments/0/dosage"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label retains the dose but omits the stated frequency and three-year duration.",
+        "source_quote": "infliximab infusion 200 mg once per 8 weeks for 3 years.",
+        "field_path": "/treatments/5/dosage"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "No preceding trauma",
+        "source_quote": "Since the start of the leg complaints, she had not been able to walk more than a few steps at a time.",
+        "explanation": "The label omits the substantial walking limitation associated with the pain, a material functional symptom detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/1/dosage",
+        "label_excerpt": "20 mg",
+        "source_quote": "omeprazole 20 mg o.d.",
+        "explanation": "The label omits the source-stated daily frequency.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/2/dosage",
+        "label_excerpt": "70 mg",
+        "source_quote": "alendronate sodium 70 mg o.w. for 12 years",
+        "explanation": "The label omits the source-stated weekly frequency and twelve-year duration.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/3/dosage",
+        "label_excerpt": "15 mg",
+        "source_quote": "methotrexate 15 mg o.w. for 8 years",
+        "explanation": "The label omits the source-stated weekly frequency and eight-year duration.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/4/dosage",
+        "label_excerpt": "5 mg",
+        "source_quote": "folic acid 5 mg o.w.",
+        "explanation": "The label omits the source-stated weekly frequency.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "All three candidate findings are confirmed. The label also omits a material walking limitation and source-stated frequency or duration details for the other listed medication courses."
+  }
+}

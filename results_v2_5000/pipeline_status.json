@@ -1,0 +1,13 @@
+{
+  "status": "training_complete_stopped_before_generation",
+  "completed": [
+    "00_prepare_dataset",
+    "01_baseline_eval",
+    "02_finetune"
+  ],
+  "held_stages": [
+    "03_eval_and_compare",
+    "local_luna_evaluation"
+  ],
+  "parent_intentionally_held": true
+}

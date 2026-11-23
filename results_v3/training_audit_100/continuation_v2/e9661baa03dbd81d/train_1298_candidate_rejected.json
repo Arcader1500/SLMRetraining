@@ -1,0 +1,45 @@
+{
+  "response": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "HIV, epilepsy",
+        "source_quote": "a past medical history of HIV, bipolar disorder, and epilepsy",
+        "explanation": "The label includes two of the three explicitly stated history items."
+      },
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Temporary pacemaker placement, followed by permanent dual chamber MRI-compatible pacemaker placement",
+        "source_quote": "He was transferred to the cardiac care unit for close monitoring and temporary pacemaker placement. ... The patient underwent permanent dual chamber MRI-compatible pacemaker placement",
+        "explanation": "Both pacemaker procedures and their sequence are stated in the note."
+      },
+      {
+        "field_path": "/discharge/discharge summary",
+        "label_excerpt": "Patient underwent permanent dual chamber MRI-compatible pacemaker placement for his heart block during the admission and was discharged with plans for outpatient follow-up",
+        "source_quote": "The patient underwent permanent dual chamber MRI-compatible pacemaker placement for his heart block during the admission and was discharged with plans for outpatient follow-up.",
+        "explanation": "The summary reflects the stated procedure and disposition."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "HIV, epilepsy",
+        "source_quote": "a past medical history of HIV, bipolar disorder, and epilepsy",
+        "explanation": "Bipolar disorder is explicitly stated in the source but omitted from the patient's medical history; it is a material history omission.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "Neurosurgery declined surgical intervention, recommending Lamotrigine as seizure prophylaxis and serial MRIs to examine progression of the mass.",
+        "explanation": "The label records Lamotrigine but omits the recommended serial MRI monitoring plan, a material management plan expressible under treatments.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label captures most major events but omits bipolar disorder from the stated medical history and the serial MRI recommendation."
+  },
+  "error": "('source_quote', 'He was transferred to the cardiac care unit for close monitoring and temporary pacemaker placement. ... The patient underwent permanent dual chamber MRI-compatible pacemaker placement')"
+}

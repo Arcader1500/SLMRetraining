@@ -1,0 +1,64 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 0,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The source establishes an emergency department presentation but does not establish admission. The admission entry therefore asserts an unsupported event status.",
+        "source_quote": "presented to the emergency department at 10 am in the morning with chest pain and shortness of breath of approximately 12 hours duration.",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The symptom details omit the stated aggravating and relieving factors, which are material chest-pain characteristics.",
+        "source_quote": "aggravated by deep breaths and by lying down, and alleviated by sitting up and leaning forward.",
+        "field_path": "/symptoms/0/details"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The source records these negatives, but treating the entire broad list as a material omission in the shortness-of-breath details is a policy judgment. The history of prior chest pain is especially relevant; the full set of negatives is less clearly material as a group.",
+        "source_quote": "She denied fevers, chills, cough, diaphoresis, palpitations, dizziness, abdominal pain, heartburn, nausea or vomiting, flu-like symptoms, recent illnesses, or any history of chest pain in the past.",
+        "field_path": "/symptoms/1/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient information",
+        "label_excerpt": "",
+        "source_quote": "Her family history was significant for her brother having an episode of myocardial infarction at age 55.",
+        "explanation": "The label omits the stated family history of premature myocardial infarction, a relevant history item for this chest-pain presentation.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history",
+        "label_excerpt": "",
+        "source_quote": "She had quit smoking 5 years ago, prior to that she had smoked 2 packs per day for 45 years.",
+        "explanation": "The label omits the substantial smoking history, which is relevant context given the documented COPD and current respiratory symptoms.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "About 10 pm the night before presentation",
+        "source_quote": "chest pain and shortness of breath of approximately 12 hours duration.",
+        "explanation": "The label gives symptom onset but omits the explicitly stated approximate duration, a distinct timing detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The unsupported admission entry and omitted chest-pain aggravating and relieving factors are confirmed issues. The broad negative-history omission is less clearly material. The label also omits relevant family history, smoking history, and symptom duration."
+  },
+  "error": ""
+}

@@ -1,0 +1,18 @@
+{
+  "initial": {
+    "candidate_dispositions": [],
+    "added_findings": [
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "high grade sarcoma NOS",
+        "source_quote": "a high grade sarcoma not otherwise specified (NOS), grade III",
+        "explanation": "The diagnosis result omits the explicitly stated Grade III severity, a material descriptor of the sarcoma.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      }
+    ],
+    "summary": "No candidate findings were supplied. The label omits the explicitly stated Grade III severity of the high-grade sarcoma."
+  }
+}

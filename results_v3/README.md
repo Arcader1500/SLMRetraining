@@ -1,6 +1,6 @@
 # V3 result artifacts
 
-The 1,325-example reduced-schema run and all 100 source-rubric case evaluations are complete. The training audit remains partial. See the [run catalog](../docs/experiments/RUN_CATALOG.md).
+The 1,325-example reduced-schema run and all 100 source-rubric case evaluations are complete. The frozen 100-case training-label source audit is complete. See the [run catalog](../docs/experiments/RUN_CATALOG.md).
 
 | Category | Artifacts |
 | --- | --- |
@@ -11,7 +11,7 @@ The 1,325-example reduced-schema run and all 100 source-rubric case evaluations 
 | Source judge, first 20 | [d44ef976ae8d9310](deepeval_20/judgments/d44ef976ae8d9310/): 80 measurements, source rubric, quality notes |
 | Source judge, remaining 80 / combined 100 | [16727c1bd7aaf775](deepeval_remaining80/judgments/16727c1bd7aaf775/): 320 new measurements, combined 400-measurement summary |
 | Source consistency audit | [source_audit_20/REPORT.md](source_audit_20/REPORT.md): complete diagnostic review |
-| Training-label audit | [training_audit_100/REPORT.md](training_audit_100/REPORT.md): all-row structural/projection checks, 10 of 100 semantic reviews |
+| Training-label audit | [completion report](training_audit_100/continuation_v2/REPORT.md): all-row structural/projection checks and 100 sampled source reviews; raw model findings and parent disagreements kept separate |
 | Execution evidence | Root progress/status JSON, runner logs, stage-local provenance |
 | Transfer snapshots | Root ZIP files, including `clinical_v3_paused.zip`; historical downloads |
 

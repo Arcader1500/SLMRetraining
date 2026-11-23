@@ -1,0 +1,50 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Uncontrolled hypertension despite receiving medications",
+        "source_quote": "Despite this treatment and care, her blood pressure remained high at 175/110 mmHg",
+        "explanation": "The note supports uncontrolled hypertension despite treatment as the referral context."
+      },
+      {
+        "field_path": "/symptoms/0/name of symptom",
+        "label_excerpt": "Severe headache and fatigue",
+        "source_quote": "Initially, the patient presented with severe headache and fatigue.",
+        "explanation": "The label accurately records the initial presenting symptoms."
+      },
+      {
+        "field_path": "/medical examinations/1/result",
+        "label_excerpt": "Normal complete blood count, serum cholesterol, lipid profile, and renal function (serum creatinine 119 μmol/L)",
+        "source_quote": "Laboratory investigations revealed normal complete blood count, serum cholesterol, lipid profile, and renal function (serum creatinine 119 μmol/L).",
+        "explanation": "The label preserves the stated laboratory findings and creatinine value."
+      },
+      {
+        "field_path": "/treatments/0/time",
+        "label_excerpt": "Past 8 months",
+        "source_quote": "The patient had been attending a hypertension clinic and receiving antihypertensive drugs for the past 8 months on a regular basis under close observation.",
+        "explanation": "The treatment duration is supported by the note."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Initial balloon angioplasty did not change the stenosis percentage; success was achieved after the second ballooning and stenting procedure.",
+        "source_quote": "The percentage of renal artery stenosis in the two branches of the left renal artery was 70% and 75%, respectively , before the first balloon angioplasty; after the first balloon angioplasty, these percentages remained the same.",
+        "explanation": "The details omit the material quantitative findings that the two left renal artery branches had 70% and 75% stenosis before the first angioplasty and remained at those percentages afterward.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Uncontrolled hypertension, no history of atherosclerosis",
+        "source_quote": "She had no history of smoking or drinking alcohol, was not diabetic, and had no history of diabetes in her family.",
+        "explanation": "The physiological context omits the explicitly stated relevant history of no smoking or alcohol use, no diabetes, and no family history of diabetes.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate material omissions: the quantified stenosis in both branches before and after the first angioplasty, and the stated negative personal and family history. The listed supported checks are source-consistent."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The note documents a stage 1 hepatic encephalopathy diagnosis, but the label records it nowhere. The existing diagnosis-tests section is a reasonable schema location for this diagnosis.",
+        "source_quote": "A diagnosis of stage 1 hepatic encephalopathy was made",
+        "field_path": "/diagnosis tests"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The label omits the source-stated 14-hour interval between poisoning and hospital presentation. This timing can be retained in the admission reason.",
+        "source_quote": "She was then brought to the hospital 14 hours after poisoning due to persistent vomiting.",
+        "field_path": "/admission"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The note says the child progressed despite initiation of antihepatic failure therapy. Repeating that subsequent course outcome across the combination's therapies does not establish that each drug independently caused or failed to prevent the progression.",
+        "source_quote": "Despite initiation of antihepatic failure therapy, the child progressed to stage 3 encephalopathy on day 3",
+        "field_path": "/treatments/1/reaction to treatment"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Accidental consumption of rodenticide paste",
+        "source_quote": "alleged history of accidental consumption of an unknown quantity of rodenticide paste (Ratol, containing 3% yellow phosphorus)",
+        "explanation": "The visit motivation omits the explicitly unknown quantity and the named product and concentration, all relevant to the reported poisoning exposure.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      }
+    ],
+    "summary": "Confirmed the missing stage 1 diagnosis and 14-hour presentation interval. Added the omitted exposure details as a material omission. Rejected the claim that repeating the progression outcome across combination-therapy entries necessarily asserts independent drug effects."
+  }
+}

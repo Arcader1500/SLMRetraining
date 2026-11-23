@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Intermittent diarrhea with little bloody mucosanguineous feces and pain in the lower left abdomen",
+        "source_quote": "presented with intermittent diarrhea with little bloody mucosanguineous feces, 4 to 6 times a day, and pain in the lower left abdomen",
+        "explanation": "The visit motivation reflects the presenting symptoms and abdominal pain described in the note."
+      },
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Total colectomy and ileostomy",
+        "source_quote": "a total colectomy and ileostomy were performed",
+        "explanation": "The note explicitly states that both procedures were performed."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Rectal adenocarcinoma",
+        "source_quote": "the pathologic biopsy revealed rectal adenocarcinoma",
+        "explanation": "The diagnosis test result matches the biopsy finding."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms/0/location",
+        "label_excerpt": "Lower left abdomen",
+        "source_quote": "and pain in the lower left abdomen",
+        "explanation": "The note locates the pain in the lower left abdomen; it does not say the intermittent diarrhea is located there. This attaches the location of one symptom to another.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/surgeries",
+        "label_excerpt": "",
+        "source_quote": "An endoscopic polypectomy was performed in 2010, and postoperative pathology revealed inflammatory polyps.",
+        "explanation": "The label omits the prior endoscopic polypectomy in 2010, a source-stated procedure with a pathology result that is relevant to the patient's clinical history.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label contains a clear symptom-location linkage error and omits a relevant prior polypectomy."
+  }
+}

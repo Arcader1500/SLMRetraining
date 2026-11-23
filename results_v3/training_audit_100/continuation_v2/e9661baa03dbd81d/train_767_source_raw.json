@@ -1,0 +1,73 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The negative is source-supported, and symptom details can preserve symptom context; placing a review-of-systems negative there is only a role ambiguity.",
+        "source_quote": "Upon system review, there were no specific findings such as weight loss.",
+        "field_path": "/symptoms/0/details"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The broad label wording omits two explicit physical-examination negatives that are material to the reported mass evaluation.",
+        "source_quote": "Findings of the physical examination were unremarkable and did not reveal a palpable mass or abdominal tenderness.",
+        "field_path": "/medical examinations/0/result"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The EUS result omits the explicit extra-gastric location of the mass, a relevant localization finding.",
+        "source_quote": "On EUS, the mass was found to be in the extra-gastric area and presented as a cystic feature with an internally mixed echoic pattern",
+        "field_path": "/medical examinations/4/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "No specific findings such as weight loss",
+        "source_quote": "The patient had mild abdominal pain in the middle of his abdomen that was not associated with food intake or positional change.",
+        "explanation": "The symptom details omit the source-stated absence of association with food intake or positional change, which characterizes the reported pain.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/2/result",
+        "label_excerpt": "Improved pulmonary tuberculosis, 4.3-cm-sized cystic mass in the sub-gastric area with enhanced density and partially calcified region",
+        "source_quote": "The mass contained a partially calcified region and was not attached to an adjacent organ such as the stomach or small intestine.",
+        "explanation": "The chest CT result omits the source's finding that the mass was unattached to adjacent organs, a relevant feature of the mass evaluation.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/3/result",
+        "label_excerpt": "Chronic superficial gastritis",
+        "source_quote": "There was no visible mass or mass effect lesion.",
+        "explanation": "The endoscopy result omits the explicit absence of a visible mass or mass effect, relevant to the investigation of the known mass.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Intraperitoneal mass, improved pulmonary tuberculosis, chronic superficial gastritis, cystic mass with mixed echoic pattern",
+        "source_quote": "On the basis of these findings, we diagnosed this case as a malignant gastrointestinal tumor or malignant lymph node and performed surgery.",
+        "explanation": "The diagnosis-test result omits the source-stated malignant gastrointestinal tumor or malignant lymph node diagnostic conclusion.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The three candidate findings are supported, with the symptom-details role concern downgraded to an ambiguity. Material omissions include the pain context, CT organ attachment finding, endoscopic absence of a visible mass, and stated diagnostic conclusion."
+  }
+}

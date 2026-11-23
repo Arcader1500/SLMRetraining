@@ -1,0 +1,344 @@
+[
+  {
+    "case_id": "train:119",
+    "group": "targeted",
+    "review": {
+      "decision": "issues_found",
+      "supported_checks": [
+        {
+          "field_path": "/patient information/age",
+          "label_excerpt": "21",
+          "source_quote": "A 21-year-old female with no comorbidities and negative family history for any autoimmune disease started experiencing low-grade undocumented fever for 3 months in August 2019 which was continuous, non-radiating, and shooting in nature with no aggravating or relieving factors.",
+          "explanation": "The age matches the source."
+        },
+        {
+          "field_path": "/symptoms/0/time",
+          "label_excerpt": "3 months starting in August 2019",
+          "source_quote": "started experiencing low-grade undocumented fever for 3 months in August 2019",
+          "explanation": "The fever duration and start time are supported."
+        },
+        {
+          "field_path": "/diagnosis tests/2/result",
+          "label_excerpt": "Negative",
+          "source_quote": "The rest of the investigations including ANA and anti-ENA screens were negative.",
+          "explanation": "The negative screen result is supported."
+        }
+      ],
+      "findings": [
+        {
+          "field_path": "/patient medical history/physiological context",
+          "label_excerpt": "No comorbidities",
+          "source_quote": "A 21-year-old female with no comorbidities and negative family history for any autoimmune disease",
+          "explanation": "The appropriate physiological-context leaf omits the source-stated negative family history for autoimmune disease, a relevant history fact.",
+          "category": "omission",
+          "classification": "material_omission"
+        },
+        {
+          "field_path": "/medical examinations/0/result",
+          "label_excerpt": "Bilateral narrowing of arterioles in both eyes",
+          "source_quote": "Ophthalmic examination revealed bilateral narrowing of arterioles in both eyes. However, no sign of arteritis was observed in the retina.",
+          "explanation": "The examination result omits the explicit negative retinal finding, which is material to the documented examination.",
+          "category": "omission",
+          "classification": "material_omission"
+        },
+        {
+          "field_path": "/treatments",
+          "label_excerpt": "",
+          "source_quote": "The patient was started on methylprednisolone 500 mg IV for 3 days, tablet prednisone 25mg BD, tablet aspirin 75 mg OD, tablet methotrexate 20g weekly, capsule gabapentin 75 mg BD, tablet folic acid 5 mg OD, and tablet atorvastatin 20 mg HS.",
+          "explanation": "The treatment entries retain doses but omit the source-stated route, frequency, and course duration, including methylprednisolone IV for 3 days and the schedules for the other drugs. These course details are expressible in the treatment schema and are material to the treatment record.",
+          "category": "omission",
+          "classification": "material_omission"
+        }
+      ],
+      "summary": "Candidate material omissions: negative autoimmune family history, the negative retinal arteritis finding, and treatment route, frequency, and duration details."
+    },
+    "evidence_span_repairs": []
+  },
+  {
+    "case_id": "train:24",
+    "group": "random",
+    "review": {
+      "decision": "issues_found",
+      "supported_checks": [
+        {
+          "field_path": "/visit motivation",
+          "label_excerpt": "Chest pain and shortness of breath",
+          "source_quote": "presented to the emergency department at 10 am in the morning with chest pain and shortness of breath",
+          "explanation": "The presentation reason is supported."
+        },
+        {
+          "field_path": "/patient medical history/physiological context",
+          "label_excerpt": "type 2 diabetes mellitus, hypertension, obstructive sleep apnea, chronic obstructive pulmonary disease, and prothrombin G20210A mutation",
+          "source_quote": "type 2 diabetes mellitus, hypertension, obstructive sleep apnea, chronic obstructive pulmonary disease, and prothrombin G20210A mutation",
+          "explanation": "These conditions are included in the source medical history."
+        },
+        {
+          "field_path": "/symptoms/0/details",
+          "label_excerpt": "Sharp pleuritic chest pain, also experiencing a less prominent pressure like sensation",
+          "source_quote": "She did endorse that she was also experiencing a less prominent pressure like sensation in addition to the sharp pleuritic type of pain.",
+          "explanation": "The label preserves both the sharp pleuritic pain and the less prominent pressure sensation."
+        },
+        {
+          "field_path": "/treatments/0/reaction to treatment",
+          "label_excerpt": "Reduced the intensity of pain",
+          "source_quote": "She said that she had taken some ibuprofen which had reduced the intensity of pain.",
+          "explanation": "The source explicitly attributes reduced pain intensity to ibuprofen."
+        }
+      ],
+      "findings": [
+        {
+          "field_path": "/admission/0/reason",
+          "label_excerpt": "Chest pain and shortness of breath",
+          "source_quote": "presented to the emergency department at 10 am in the morning with chest pain and shortness of breath",
+          "explanation": "The note establishes an emergency department presentation but does not state that she was admitted. Labeling this as an admission reason asserts an event the source does not establish.",
+          "category": "event_status",
+          "classification": "clear_error"
+        },
+        {
+          "field_path": "/symptoms/0/details",
+          "label_excerpt": "Sharp pleuritic chest pain, also experiencing a less prominent pressure like sensation",
+          "source_quote": "aggravated by deep breaths and by lying down, and alleviated by sitting up and leaning forward.",
+          "explanation": "The label omits material pain modifiers and positional relief that are explicitly described in the symptom account.",
+          "category": "omission",
+          "classification": "material_omission"
+        },
+        {
+          "field_path": "/symptoms/1/details",
+          "label_excerpt": "Developed shortness of breath while lying in bed",
+          "source_quote": "with chest pain and shortness of breath of approximately 12 hours duration.",
+          "explanation": "The label omits the source-stated duration of shortness of breath, a material symptom timing detail.",
+          "category": "omission",
+          "classification": "material_omission"
+        }
+      ],
+      "summary": "The label contains supported presentation, history, symptom, and treatment details, but it asserts admission without source evidence and omits material symptom modifiers and duration."
+    },
+    "evidence_span_repairs": [],
+    "source_review": {
+      "candidate_dispositions": [
+        {
+          "candidate_index": 1,
+          "disposition": "confirmed",
+          "attribution": "inherited",
+          "explanation": "The source establishes an emergency department presentation but does not state that the patient was admitted; the label asserts an admission reason.",
+          "source_quote": "presented to the emergency department at 10 am in the morning with chest pain and shortness of breath",
+          "field_path": "/admission/0/reason"
+        },
+        {
+          "candidate_index": 2,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The symptom details omit the explicitly stated triggers and positional relief.",
+          "source_quote": "aggravated by deep breaths and by lying down, and alleviated by sitting up and leaning forward.",
+          "field_path": "/symptoms/0/details"
+        },
+        {
+          "candidate_index": 3,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The source gives approximately 12 hours as the duration of the chest pain and shortness of breath, but the symptom entry preserves onset time without duration.",
+          "source_quote": "chest pain and shortness of breath of approximately 12 hours duration.",
+          "field_path": "/symptoms/1/details"
+        }
+      ],
+      "added_findings": [
+        {
+          "field_path": "/patient medical history/physiological context",
+          "label_excerpt": "Postmenopausal, right breast invasive ductal carcinoma with bilateral mastectomies in 2015, recently diagnosed bladder cancer with TURBT and intravesical mitomycin C instillation three days prior to current presentation, type 2 diabetes mellitus, hypertension, obstructive sleep apnea, chronic obstructive pulmonary disease, and prothrombin G20210A mutation",
+          "source_quote": "She had quit smoking 5 years ago, prior to that she had smoked 2 packs per day for 45 years.",
+          "explanation": "The label omits the substantial former smoking history, a material risk factor stated in the source.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        },
+        {
+          "field_path": "/patient medical history/physiological context",
+          "label_excerpt": "Postmenopausal, right breast invasive ductal carcinoma with bilateral mastectomies in 2015, recently diagnosed bladder cancer with TURBT and intravesical mitomycin C instillation three days prior to current presentation, type 2 diabetes mellitus, hypertension, obstructive sleep apnea, chronic obstructive pulmonary disease, and prothrombin G20210A mutation",
+          "source_quote": "Her family history was significant for her brother having an episode of myocardial infarction at age 55.",
+          "explanation": "The label omits the stated family history of premature myocardial infarction, which is material cardiovascular context.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        }
+      ],
+      "summary": "The admission assertion is unsupported because the note only establishes an emergency department presentation. The symptom-modifier and duration omissions are supported, and the label also omits material smoking and family histories."
+    },
+    "source_evidence_span_repairs": []
+  },
+  {
+    "case_id": "train:1052",
+    "group": "random",
+    "review": {
+      "decision": "issues_found",
+      "supported_checks": [
+        {
+          "field_path": "/visit motivation",
+          "label_excerpt": "Complaint of facial and intraoral swelling on the posterior buccal aspect of the left-side mandible",
+          "source_quote": "with a complaint of facial and intraoral swelling on the posterior buccal aspect the left-side mandible.",
+          "explanation": "The label accurately captures the reason for referral."
+        },
+        {
+          "field_path": "/surgeries/0/Type",
+          "label_excerpt": "Removal of the lesion using a chisel and rotary instruments via an intraoral approach, and curettage of the cavity",
+          "source_quote": "the lesion was totally removed using a chisel and rotary instruments via an intraoral approach, and curettage of the cavity was undertaken ().",
+          "explanation": "The label preserves the performed procedure and curettage."
+        },
+        {
+          "field_path": "/diagnosis tests/0/result",
+          "label_excerpt": "Solitary, round, 3 × 3 cm well-defined radio-opaque lesion without a radiolucent rim of mandible",
+          "source_quote": "A solitary, round, 3 × 3 cm well-defined radio-opaque lesion without a radiolucent rim of mandible was detected with panoramic radiography and computed tomography (CT).",
+          "explanation": "The result accurately captures the imaging finding."
+        }
+      ],
+      "findings": [
+        {
+          "field_path": "/patient medical history/physiological context",
+          "label_excerpt": "No previous facial trauma",
+          "source_quote": "her medical history was not contributory.",
+          "explanation": "The label omits the explicitly stated noncontributory medical history, a material history fact for this schema field.",
+          "category": "omission",
+          "classification": "material_omission"
+        },
+        {
+          "field_path": "/surgeries",
+          "label_excerpt": "",
+          "source_quote": "the lesion was totally removed using a chisel and rotary instruments via an intraoral approach, and curettage of the cavity was undertaken ().",
+          "explanation": "Prior extraction of the mandibular first molar is omitted from the surgeries section. The note describes it as previously extracted, a relevant prior procedure that can be represented in this section.",
+          "category": "omission",
+          "classification": "material_omission"
+        },
+        {
+          "field_path": "/treatments/0/time",
+          "label_excerpt": "Postoperatively",
+          "source_quote": "Postoperatively, the patient received systemic antibiotic, analgesic, and mouthwash for 7 days.",
+          "explanation": "The label omits the explicitly stated 7-day treatment duration, which is material course timing.",
+          "category": "omission",
+          "classification": "material_omission"
+        }
+      ],
+      "summary": "Candidate findings are omissions of medical history, a relevant prior extraction, and the postoperative treatment duration."
+    },
+    "evidence_span_repairs": [],
+    "source_review": {
+      "candidate_dispositions": [
+        {
+          "candidate_index": 1,
+          "disposition": "rejected",
+          "attribution": "uncertain",
+          "explanation": "The label records the specific negative history of no previous facial trauma. The broader statement that the medical history was noncontributory adds no distinct material fact to this field.",
+          "source_quote": "She had no previous facial trauma, and her medical history was not contributory.",
+          "field_path": "/patient medical history/physiological context"
+        },
+        {
+          "candidate_index": 2,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The prior extraction is an explicit, clinically relevant procedure omitted from the label. The candidate path is a valid place to represent it.",
+          "source_quote": "The mandibular first molar had been extracted previously.",
+          "field_path": "/surgeries"
+        },
+        {
+          "candidate_index": 3,
+          "disposition": "confirmed",
+          "attribution": "projection_loss",
+          "explanation": "The source gives a seven-day duration for the postoperative medications and mouthwash; the label preserves only that they were given postoperatively.",
+          "source_quote": "Postoperatively, the patient received systemic antibiotic, analgesic, and mouthwash for 7 days.",
+          "field_path": "/treatments/0/time"
+        }
+      ],
+      "added_findings": [
+        {
+          "field_path": "/symptoms/0/details",
+          "label_excerpt": "Not associated with pain, no problem with mouth-opening or chewing",
+          "source_quote": "She had been aware of the slow but steady increase in the size of the lesion over the past six years.",
+          "explanation": "The label records the six-year duration but omits the explicitly described growth pattern, a material change in the symptom over time.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        },
+        {
+          "field_path": "/diagnosis tests/0/result",
+          "label_excerpt": "Solitary, round, 3 × 3 cm well-defined radio-opaque lesion without a radiolucent rim of mandible, large, pedunculated mass attached to the buccal surface of the left mandibular body",
+          "source_quote": "These clinical and radiographic features were sufficiently supportive of the working diagnosis of peripheral osteoma.",
+          "explanation": "The label includes imaging findings but omits the source-stated working diagnosis, which is a material diagnostic conclusion expressible in the existing result path.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        },
+        {
+          "field_path": "/diagnosis tests/0/result",
+          "label_excerpt": "Solitary, round, 3 × 3 cm well-defined radio-opaque lesion without a radiolucent rim of mandible, large, pedunculated mass attached to the buccal surface of the left mandibular body",
+          "source_quote": "There were no features of Gardner's syndrome.",
+          "explanation": "This explicit negative diagnostic finding is omitted from the diagnosis-test result and is relevant to the documented diagnostic assessment.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        },
+        {
+          "field_path": "/medical examinations/0/result",
+          "label_excerpt": "Extraoral swelling on the left side, nonpalpable regional lymph nodes, well-defined, round, immobile mass on the buccal plate of the left posterior mandible and buccal expansion, bony-hard lesion on palpation, normal overlying oral mucosa, no pain, tenderness, or paresthesia",
+          "source_quote": "All of the posterior teeth were vital (positive responses to electric pulp testing).",
+          "explanation": "The label omits the documented vitality test result for the posterior teeth, a relevant examination finding in the assessment of this mandibular lesion.",
+          "category": "omission",
+          "classification": "material_omission",
+          "disposition": "confirmed",
+          "attribution": "projection_loss"
+        }
+      ],
+      "summary": "The treatment duration, prior molar extraction, symptom growth pattern, working diagnosis, Gardner's syndrome negative, and posterior-tooth vitality are material source-supported omissions. The broader noncontributory-history statement is not a distinct material omission given the recorded trauma history."
+    },
+    "source_evidence_span_repairs": []
+  },
+  {
+    "case_id": "train:1453",
+    "group": "targeted",
+    "review": {
+      "decision": "issues_found",
+      "supported_checks": [
+        {
+          "field_path": "/patient information/age",
+          "label_excerpt": "35",
+          "source_quote": "A 35-year-old man",
+          "explanation": "The patient's age is supported by the note."
+        },
+        {
+          "field_path": "/diagnosis tests/2/result",
+          "label_excerpt": "Tumours in the abdominal cavity with enlarged para-aortic lymph nodes",
+          "source_quote": "The abdominal CT scan showed that there were tumours in the abdominal cavity with enlarged para-aortic lymph nodes.",
+          "explanation": "The CT result matches the source."
+        },
+        {
+          "field_path": "/medical examinations/4/result",
+          "label_excerpt": "No free air or niveau",
+          "source_quote": "There was no free air or niveau on the abdominal X-ray.",
+          "explanation": "The X-ray result preserves the source's negative findings."
+        }
+      ],
+      "findings": [
+        {
+          "field_path": "/symptoms/2/time",
+          "label_excerpt": "Continued to report general fatigue and went to hospital 1 week before his admission",
+          "source_quote": "He continued to report appetite loss and went to hospital 1 week before his admission.",
+          "explanation": "The note places appetite loss and the hospital visit one week before admission. General fatigue is first mentioned later, when appetite loss and fatigue were aggravated and he consulted the emergency room. The label assigns the earlier timing and visit to general fatigue without source support.",
+          "category": "chronology",
+          "classification": "clear_error"
+        },
+        {
+          "field_path": "/treatments/1/time",
+          "label_excerpt": "Started 8 months ago",
+          "source_quote": "He started taking S-1 50 mg, twice daily for 3 consecutive weeks, followed by a 2-week rest period 8 months ago.",
+          "explanation": "The label retains the start anchor but omits the source-stated dosing schedule and 3-week-on, 2-week-rest course. These details are material treatment attributes expressible in the existing treatment fields.",
+          "category": "omission",
+          "classification": "material_omission"
+        }
+      ],
+      "summary": "The label has a chronology error for general fatigue and omits the stated S-1 schedule and course timing."
+    },
+    "evidence_span_repairs": []
+  }
+]

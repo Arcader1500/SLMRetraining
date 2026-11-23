@@ -1,0 +1,69 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The note establishes that bradycardia developed shortly after hydrocortisone, but not that hydrocortisone caused it. Placing the event in the reaction field can imply causation.",
+        "source_quote": "Shortly after the first dose of IV hydrocortisone, she developed severe sinus bradycardia with the heart rate of 30–40 beats per minute.",
+        "field_path": "/treatments/2/reaction to treatment"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The label gives a reason for withholding prednisolone that the source does not state.",
+        "source_quote": "The oral prednisolone was withheld, while her oral azathioprine and oral hydroxychloroquine were continued.",
+        "field_path": "/treatments/3/reaction to treatment"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The stated once-daily frequency is missing from the dosage field.",
+        "source_quote": "intravenous (IV) ceftriaxone 2 gm once daily",
+        "field_path": "/treatments/0/dosage"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The stated once-daily frequency is missing from the dosage field.",
+        "source_quote": "oral azathioprine 50 mg once daily",
+        "field_path": "/treatments/4/dosage"
+      },
+      {
+        "candidate_index": 5,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The stated twice-daily frequency is missing from the dosage field.",
+        "source_quote": "oral hydroxychloroquine 250 mg twice daily",
+        "field_path": "/treatments/5/dosage"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/treatments/2/dosage",
+        "label_excerpt": "200 mg",
+        "source_quote": "IV hydrocortisone 200 mg three times a day (total dose of 600 mg per day)",
+        "explanation": "The label omits the stated three-times-daily frequency and total daily dose for hydrocortisone.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Elevated white blood cells and C-reactive protein (CRP), mild hypoalbuminemia, acute kidney injury, and minimal proteinuria",
+        "source_quote": "In view of the presence of proteinuria, early reactivation of lupus nephritis was suspected.",
+        "explanation": "The label records minimal proteinuria but omits the clinically relevant suspected early lupus nephritis reactivation, including its uncertain status.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The source supports the candidate findings about the unsupported prednisolone rationale and omitted medication frequencies. The hydrocortisone reaction wording may imply causation beyond the source’s temporal sequence. The label also omits hydrocortisone frequency and total daily dose, and the documented suspected lupus nephritis reactivation."
+  }
+}

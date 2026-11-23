@@ -1,0 +1,24 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label gives the troponin result but omits that it was measured approximately 30 hours after chest-pain onset, a clinically relevant timing anchor.",
+        "source_quote": "The troponin I level (taken approximately 30 hours after the onset of chest pain) was 10,801.",
+        "field_path": "/diagnosis tests/0/result"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The symptom details omit the stated inspiratory worsening and the negatives for positional pain and pain exacerbated by movement.",
+        "source_quote": "The chest pain was worse on deep inspiration but was not positional or exacerbated by movement.",
+        "field_path": "/symptoms/0/details"
+      }
+    ],
+    "added_findings": [],
+    "summary": "Both candidate findings identify material omissions supported by the source note. No additional material omissions were identified."
+  }
+}

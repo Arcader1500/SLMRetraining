@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "21",
+        "source_quote": "A 21-year-old female with no comorbidities and negative family history for any autoimmune disease started experiencing low-grade undocumented fever for 3 months in August 2019 which was continuous, non-radiating, and shooting in nature with no aggravating or relieving factors.",
+        "explanation": "The age matches the source."
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "3 months starting in August 2019",
+        "source_quote": "started experiencing low-grade undocumented fever for 3 months in August 2019",
+        "explanation": "The fever duration and start time are supported."
+      },
+      {
+        "field_path": "/diagnosis tests/2/result",
+        "label_excerpt": "Negative",
+        "source_quote": "The rest of the investigations including ANA and anti-ENA screens were negative.",
+        "explanation": "The negative screen result is supported."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "No comorbidities",
+        "source_quote": "A 21-year-old female with no comorbidities and negative family history for any autoimmune disease",
+        "explanation": "The appropriate physiological-context leaf omits the source-stated negative family history for autoimmune disease, a relevant history fact.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Bilateral narrowing of arterioles in both eyes",
+        "source_quote": "Ophthalmic examination revealed bilateral narrowing of arterioles in both eyes. However, no sign of arteritis was observed in the retina.",
+        "explanation": "The examination result omits the explicit negative retinal finding, which is material to the documented examination.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "The patient was started on methylprednisolone 500 mg IV for 3 days, tablet prednisone 25mg BD, tablet aspirin 75 mg OD, tablet methotrexate 20g weekly, capsule gabapentin 75 mg BD, tablet folic acid 5 mg OD, and tablet atorvastatin 20 mg HS.",
+        "explanation": "The treatment entries retain doses but omit the source-stated route, frequency, and course duration, including methylprednisolone IV for 3 days and the schedules for the other drugs. These course details are expressible in the treatment schema and are material to the treatment record.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate material omissions: negative autoimmune family history, the negative retinal arteritis finding, and treatment route, frequency, and duration details."
+  }
+}

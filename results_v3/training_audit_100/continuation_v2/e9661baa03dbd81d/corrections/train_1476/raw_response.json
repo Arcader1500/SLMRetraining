@@ -1,0 +1,63 @@
+{
+  "candidate_dispositions": [
+    {
+      "candidate_index": 1,
+      "disposition": "confirmed",
+      "attribution": "inherited",
+      "explanation": "The history entry omits the stated hepatitis and tuberculosis negatives, lack of trauma surgery, food or drug allergies, toxic-substance exposure, and no family history. These are source-supported history facts appropriate to the physiological context leaf.",
+      "source_quote": "no history of hepatitis or tuberculosis, no history of trauma surgery, no history of food or drug allergy, no history of exposure to toxic substances",
+      "field_path": "/patient medical history/physiological context"
+    },
+    {
+      "candidate_index": 2,
+      "disposition": "confirmed",
+      "attribution": "inherited",
+      "explanation": "The treatment entry does not identify the drug class specified for the local-clinic infusion course.",
+      "source_quote": "no improvement after infusion therapy (cephalosporins) at the local clinic",
+      "field_path": "/treatments/0/name"
+    }
+  ],
+  "added_findings": [
+    {
+      "field_path": "/admission/0/reason",
+      "label_excerpt": "Headache, nausea, vomiting, no fever, no obvious cause, and no improvement after infusion therapy at the local clinic; frequent vomiting and poor appetite; blurred vision and progressive vision loss, accompanied by unconsciousness",
+      "source_quote": "She went to the gastroenterology department for treatment, but her symptoms still aggravated after symptomatic treatment.",
+      "explanation": "The admission narrative omits the intervening gastroenterology-department treatment and worsening after that treatment, a material part of the care-seeking chronology.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "inherited"
+    },
+    {
+      "field_path": "/medical examinations/0/name",
+      "label_excerpt": "Physical examination",
+      "source_quote": "There was no yellow staining or bleeding spots on the skin mucosa, no swelling of superficial lymph nodes, and no positive signs on cardiopulmonary and abdominal examination.",
+      "explanation": "The physical examination entry omits the documented absence of skin/mucosal findings, superficial lymph-node swelling, and positive cardiopulmonary or abdominal signs. These examination findings are supported by this existing examination leaf.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "inherited"
+    },
+    {
+      "field_path": "/medical examinations/1/name",
+      "label_excerpt": "Neurological examination",
+      "source_quote": "Neurological examination revealed that somnolence; poor memory; the right side of the eye fissure was small; the pupils of both sides were unequal with the diameter of the right side 5mm, insensitive to light reflection, and the diameter of the left side 4mm, slow to light reflection",
+      "explanation": "The neurological examination entry omits prominent altered alertness and memory, eyelid asymmetry, and unequal pupils with abnormal light responses, all documented in the source.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "inherited"
+    },
+    {
+      "field_path": "/patient medical history/physiological context",
+      "label_excerpt": "Always been in good health, full-term delivery",
+      "source_quote": "no family history",
+      "explanation": "The source explicitly records no family history, but the history leaf does not include it.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "inherited"
+    }
+  ],
+  "summary": "Both candidate omissions are supported. The label also omits material intervening care chronology and examination findings, plus the stated absence of family history."
+}

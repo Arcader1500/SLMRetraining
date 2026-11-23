@@ -1,0 +1,48 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The negative rectal examination is source-supported and materially relevant to the bleeding evaluation, but it is an examination finding rather than symptom detail. The omission belongs under medical examinations, so the candidate’s specified field path does not match the source fact.",
+        "source_quote": "The rectal examination did not reveal any source of bleeding.",
+        "field_path": "/symptoms/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/0/details",
+        "label_excerpt": "",
+        "source_quote": "The rectal examination did not reveal any source of bleeding.",
+        "explanation": "The label omits this negative examination result, which is relevant to the documented evaluation for bleeding.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Hypothyroidism, systemic lupus erythematosus (SLE), previous cranial vasculitis, thromboembolic episodes",
+        "source_quote": "She had been tried on hydroxychloroquine in the past but this was stopped because of visual side effects, and her SLE was under control.",
+        "explanation": "The label omits the prior hydroxychloroquine trial and its visual side effects, a relevant medication history detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Hypothyroidism, systemic lupus erythematosus (SLE), previous cranial vasculitis, thromboembolic episodes",
+        "source_quote": "There was no past history of prolonged high-dose corticosteroid usage, but she had received a short course (prednisolone 10 mg daily for one week) two years prior to this presentation.",
+        "explanation": "The label omits the explicitly documented corticosteroid history, including the short course and absence of prolonged high-dose use, which is relevant clinical history.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      }
+    ],
+    "summary": "The candidate identifies a material negative examination result but assigns it to the wrong field; it is captured as an omission under medical examinations. The label also omits relevant medication and corticosteroid history."
+  },
+  "error": ""
+}

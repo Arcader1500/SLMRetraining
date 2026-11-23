@@ -1,0 +1,84 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The initial echocardiogram explicitly reports severe aortic regurgitation and moderate mitral regurgitation, neither of which appears in this result field.",
+        "source_quote": "Initial transthoracic echocardiography showed severe aortic regurgitation with vegetation attached to the noncoronary cusp of the aortic valve, moderate mitral regurgitation with prolapse of AML with LVEF of 65%.",
+        "field_path": "/diagnosis tests/0/result"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The repeat echocardiogram explicitly reports severe aortic regurgitation, which is absent from this result field. Its presence in the admission reason does not link it to the test result.",
+        "source_quote": "Repeat Echocardiography showed severe aortic regurgitation with vegetations and perforation on the noncoronary cusp",
+        "field_path": "/diagnosis tests/2/result"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The note says the operation was planned and gives intraoperative findings, so surgery was underway. The available text does not establish that the planned procedure was completed; the unqualified Type is therefore a status ambiguity, not a confirmed error.",
+        "source_quote": "Therefore, the patient was planned for Aortic root replacement/Ross procedure with mitral and tricuspid valve repair. After induction, Transesophageal echocardiography also confirmed the preoperative transthoracic echocardiographic findings. Intraoperatively there was vegetation attached to the noncoronary cusp of the aortic valve",
+        "field_path": "/surgeries/0/Type"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/1/details",
+        "label_excerpt": "Associated with chills and myalgia",
+        "source_quote": "he developed a fever on and off which was of high grade and associated with chills and myalgia.",
+        "explanation": "The symptom details omit the source-stated high-grade severity of the fever, a clinically meaningful modifier.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Both echocardiography result fields omit source-stated regurgitation findings. The surgery Type has an unresolved completion-status ambiguity. The fever details also omit its stated high-grade severity."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The initial echocardiogram also reported severe aortic regurgitation and moderate mitral regurgitation; neither appears in this result field.",
+        "source_quote": "Initial transthoracic echocardiography showed severe aortic regurgitation with vegetation attached to the noncoronary cusp of the aortic valve, moderate mitral regurgitation with prolapse of AML with LVEF of 65%.",
+        "field_path": "/diagnosis tests/0/result"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "Severe aortic regurgitation is part of the repeat echocardiography findings but is absent from this test result. Its mention in the admission reason does not preserve its linkage to this test.",
+        "source_quote": "Repeat Echocardiography showed severe aortic regurgitation with vegetations and perforation on the noncoronary cusp, severe mitral regurgitation with perforation of AML with aneurysm formation [Figures and ], severe tricuspid regurgitation, severe PAH with RVSP of 75 + RAP, LVEF of 40-45%.",
+        "field_path": "/diagnosis tests/2/result"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The note explicitly says the procedure was planned and then gives intraoperative findings, supporting that surgery was underway. The supplied text does not establish that the planned procedure was completed, so the unqualified surgery entry raises a status ambiguity rather than a clear error.",
+        "source_quote": "Therefore, the patient was planned for Aortic root replacement/Ross procedure with mitral and tricuspid valve repair. After induction, Transesophageal echocardiography also confirmed the preoperative transthoracic echocardiographic findings [Videos and ]. Intraoperatively there was vegetation attached to the noncoronary cusp of the aortic valve with perforation and destruction of the noncoronary and right coronary cusp and an aneurysm of size 1 × 1 cm was seen arising from AML with a perforation at its summit.",
+        "field_path": "/surgeries/0/Type"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/1/details",
+        "label_excerpt": "Associated with chills and myalgia",
+        "source_quote": "following which he developed a fever on and off which was of high grade and associated with chills and myalgia.",
+        "explanation": "The fever's high-grade severity is an explicit symptom modifier omitted from the fever details; it is not retained elsewhere in the label.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Both echocardiography result fields omit source-reported regurgitation findings. The fever details also omit its high-grade severity. The procedure status concern is an ambiguity because the note describes a plan and intraoperative findings without establishing completion."
+  }
+}

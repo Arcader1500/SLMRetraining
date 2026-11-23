@@ -1,0 +1,75 @@
+{
+  "candidate_dispositions": [
+    {
+      "candidate_index": 1,
+      "disposition": "confirmed",
+      "attribution": "uncertain",
+      "explanation": "The label places fluid-resuscitation refractoriness under hypotension, while the source wording follows the combined phrase “hypotension and oliguria” and does not clearly assign it to either symptom. This is an attribution ambiguity, not a definite linkage error.",
+      "source_quote": "he developed acute abdominal pain refractory to analgesia with hypotension and oliguria refractory to fluid resuscitation.",
+      "field_path": "/symptoms/4/details"
+    }
+  ],
+  "added_findings": [
+    {
+      "field_path": "/medical examinations/2/result",
+      "label_excerpt": "Bilirubin 113, ALP 136",
+      "source_quote": "serum amylase of 1824 U/L with liver panel suggestive of obstructive jaundice (Bilirubin 113, ALP 136).",
+      "explanation": "The label omits the source-stated diagnostic interpretation that the liver panel was suggestive of obstructive jaundice. This is material context for the abnormal liver panel.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/diagnosis tests/0/result",
+      "label_excerpt": "Common bile duct stone with upstream dilatation, pancreatic neck suggestive of acute necrotising pancreatitis, no collections",
+      "source_quote": "CT of his abdomen and pelvis showed a common bile duct stone with upstream dilatation and a pancreatic neck suggestive of acute necrotising pancreatitis.",
+      "explanation": "The CT label captures the other findings but omits the source's explicit finding that there were no collections at that point, a material negative tied to the initial CT.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/diagnosis tests/1/result",
+      "label_excerpt": "Development of a pseudocyst up to 11 cm in maximal diameter",
+      "source_quote": "He subsequently developed recurrent bouts of pancreatitis, where interval CT showed development of a pseudocyst of up to 11 cm in maximal diameter.",
+      "explanation": "The label records pseudocyst development and size but omits the source-stated recurrent bouts of pancreatitis, material context for the interval CT finding.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/surgeries/0/details",
+      "label_excerpt": "Unable to dissect the pancreas safely beyond the celiac axis due to dense adhesions.",
+      "source_quote": "We were unable to dissect the pancreas safely beyond the celiac axis due to dense adhesions, especially of the common hepatic artery to the pancreatic body and neck.",
+      "explanation": "The operative details omit the specifically described dense adhesions of the common hepatic artery to the pancreatic body and neck, which explain the limit of dissection and are material operative detail.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/surgeries/0/details",
+      "label_excerpt": "Dense adhesions encountered requiring extensive adhesiolysis.",
+      "source_quote": "On entry into the abdomen, gross pancreatic ascites of 2.2 l was drained.",
+      "explanation": "The surgery details omit drainage of 2.2 liters of gross pancreatic ascites, a material operative event.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/surgeries/0/details",
+      "label_excerpt": "Dense adhesions encountered requiring extensive adhesiolysis.",
+      "source_quote": "Findings included a ruptured PP and necrosis in the retroperitoneal tissue.",
+      "explanation": "The operative details omit the source-stated necrosis in retroperitoneal tissue, a material finding during the operation.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    }
+  ],
+  "summary": "The candidate is an attribution ambiguity because the source does not clearly distinguish whether hypotension, oliguria, or both were refractory to fluid resuscitation. Material omissions include obstructive-jaundice interpretation, the initial CT negative for collections, recurrent pancreatitis, and key operative findings and events."
+}

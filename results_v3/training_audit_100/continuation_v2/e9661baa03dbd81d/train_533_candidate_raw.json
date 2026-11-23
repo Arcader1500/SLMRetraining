@@ -1,0 +1,58 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Transurethral resection of an isolated lesion",
+        "source_quote": "Transurethral resection of an isolated lesion ( and , area A) was performed to achieve a diagnosis.",
+        "explanation": "The label accurately captures the performed diagnostic resection."
+      },
+      {
+        "field_path": "/medical examinations/4/result",
+        "label_excerpt": "Urothelial tissue hyperplasia and interstitial degeneration with edema",
+        "source_quote": "Tissue biopsy demonstrated urothelial tissue hyperplasia and interstitial degeneration with edema.",
+        "explanation": "The biopsy result is accurately represented."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Amyloid depositions in the subcutaneous interstitium of the urothelium, Congo red staining was positive",
+        "source_quote": "Pathologic examination showed amyloid depositions in the subcutaneous interstitium of the urothelium, and Congo red staining was positive ().",
+        "explanation": "The pathology and stain result are accurately represented."
+      },
+      {
+        "field_path": "/discharge/discharge summary",
+        "label_excerpt": "patient did not take any medication during this period and was still undergoing follow-up with no hematuria",
+        "source_quote": "The patient did not take any medication during this period. At the time of this writing, she was still undergoing follow-up and had no hematuria.",
+        "explanation": "Medication status, follow-up, and hematuria status are supported by the note."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments/0/name",
+        "label_excerpt": "Transurethral resection of the bladder lesions",
+        "source_quote": "After consideration, the patient decided to undergo transurethral resection of the bladder lesions 1 month later.",
+        "explanation": "The note says the patient decided to undergo this later resection, but during the operation the lesions had improved and she did not undergo a further operation. Labeling the planned resection as a treatment event omits its non-performance status.",
+        "category": "event_status",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Significant improvement of intravesical lesions",
+        "source_quote": "During the operation, the intravesical lesions were found to have significantly improved.",
+        "explanation": "The improvement was observed before the planned further resection was withheld. Linking it as a reaction to that treatment implies an outcome from a procedure that was not performed.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/medical examinations/3/result",
+        "label_excerpt": "Multiple lesions and obvious vessel engorgement on the anterior and posterior walls of the bladder, the largest diameter of the base was about 3.0 cm",
+        "source_quote": "The base was wide and bulging, showing a crater-like appearance. The largest diameter of the base was about 3.0 cm (, area B), and the bilateral ureteral orifices were not involved.",
+        "explanation": "The source establishes the 3.0 cm measurement as the largest diameter of the base, not the lesions generally. The label's phrasing attaches the measurement to the multiple lesions and vessel engorgement, a material linkage distortion.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      }
+    ],
+    "summary": "The label accurately captures several core findings, but it records the planned later resection as performed and links the observed improvement to that unperformed procedure. It also misattaches the 3.0 cm measurement to the lesions rather than the base."
+  }
+}

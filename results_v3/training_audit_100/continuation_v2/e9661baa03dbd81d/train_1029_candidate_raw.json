@@ -1,0 +1,36 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "manic episode",
+        "source_quote": "was admitted to a psychiatric hospital for manic episode",
+        "explanation": "The admission reason is explicitly supported."
+      },
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "30 years",
+        "source_quote": "A 30-year-old Japanese man",
+        "explanation": "The stated age matches."
+      },
+      {
+        "field_path": "/patient information/sex",
+        "label_excerpt": "Male",
+        "source_quote": "Japanese man",
+        "explanation": "The stated sex is supported."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "head trauma by traffic accident at the age of 6 years",
+        "source_quote": "His medical history included head trauma by traffic accident at the age of 6 years. He experienced severe impaired consciousness for 2 weeks after the head trauma. After discharge he showed a flat affect, which resolved after 3 months.",
+        "explanation": "The label omits material source-supported consequences and course of the childhood head trauma, including severe impaired consciousness lasting two weeks and a flat affect that resolved after three months.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label correctly captures admission, age, sex, and the childhood head trauma, but omits material details of the trauma’s immediate and subsequent effects."
+  }
+}

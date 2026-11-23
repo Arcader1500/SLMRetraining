@@ -1,0 +1,80 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "51",
+        "source_quote": "A 51-year-old Brazilian woman",
+        "explanation": "The label's age matches the source."
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Rheumatoid arthritis diagnosed several years before, history of cutaneous leishmaniasis during childhood",
+        "source_quote": "rheumatoid arthritis, diagnosed several years before",
+        "explanation": "The rheumatoid arthritis history is source-supported."
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Painful, foul smelling, and edematous 8 cm-diameter ulcer in the fibular malleolus region, which showed fibrin but without infiltrated edges",
+        "source_quote": "a painful, foul smelling, and edematous 8 cm-diameter ulcer in the fibular malleolus region, which showed fibrin but without infiltrated edges",
+        "explanation": "The ulcer details match the source."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Positive",
+        "source_quote": "Leishmania PCR analysis from the aspirate of the lesion was positive",
+        "explanation": "The PCR result is source-supported."
+      },
+      {
+        "field_path": "/treatments/4/reaction to treatment",
+        "label_excerpt": "Improvement in the patient’s condition and renal function",
+        "source_quote": "resulting in improvement in the patient’s condition and renal function",
+        "explanation": "The stated response to imipenem matches the source."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments/0/dosage",
+        "label_excerpt": "25 mg",
+        "source_quote": "25 mg of methotrexate intramuscularly once a week for two years",
+        "explanation": "The label records the amount but omits the route, weekly frequency, and two-year course, which are material regimen details.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/1/dosage",
+        "label_excerpt": "5 mg",
+        "source_quote": "5 mg of prednisone orally and daily for five years",
+        "explanation": "The label records the amount but omits the oral route, daily frequency, and five-year course, which are material regimen details.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/2/dosage",
+        "label_excerpt": "400 mg",
+        "source_quote": "chloroquine 400 mg orally and daily for two years",
+        "explanation": "The label records the amount but omits the oral route, daily frequency, and two-year course, which are material regimen details.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/4/dosage",
+        "label_excerpt": "500 mg/day",
+        "source_quote": "imipenem 500 mg/ day for 7 days",
+        "explanation": "The label omits the stated seven-day treatment duration.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/5/reaction to treatment",
+        "label_excerpt": "Worsening of the renal function, treatment was completed after dose adjustments",
+        "source_quote": "During the last few doses, amphotericin treatment was discontinued due to worsening of the renal function, but the treatment was completed after dose adjustments",
+        "explanation": "The label includes worsening renal function and eventual completion, but omits that treatment was discontinued during the last few doses before completion after adjustment; this interruption is a material course detail.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label is broadly source-consistent, but it omits multiple material treatment-course details, including routes, frequencies, durations, and the amphotericin interruption."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "initial": {
+    "candidate_dispositions": [],
+    "added_findings": [
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "No obvious transition points observed during exploratory laparotomy, small bowel appeared friable and hemorrhagic, profuse bleeding from within the lumen (EBL 2L), diffuse mucosal sloughing and bleeding from the duodenal mucosa, dilated loops of small bowel and multiple serosal tears noted during gastrostomy tube placement",
+        "source_quote": "Subsequent take-backs to the OR revealed improvement and subsequently the abdomen was closed.",
+        "explanation": "The surgery details omit the improvement observed during subsequent take-backs and that the abdomen was subsequently closed, a material operative outcome.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "No candidate findings were supplied to disposition. The label materially omits the improvement and subsequent abdominal closure after the take-backs."
+  }
+}

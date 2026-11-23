@@ -1,0 +1,82 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The MRI result records the mass and its location but omits the source’s radiologic conclusion, which is material and expressible in this field.",
+        "source_quote": "Radiologic features were consistent with glomus vagale.",
+        "field_path": "/diagnosis tests/0/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "well-defined mass in the left parapharyngeal space",
+        "source_quote": "T\n1 weighted sequences demonstrated low signal intensity with multiple voids. On T\n2 weighted sequences the mass was of high signal intensity and revealed extensive enhancement following administration of gadolinium.",
+        "explanation": "The MRI result omits the source’s material signal and enhancement characteristics, which further describe the diagnostic imaging finding.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      },
+      {
+        "field_path": "/treatments/0/reason for taking",
+        "label_excerpt": "wait and rescan",
+        "source_quote": "In light of her minimally disabling symptoms and the tumor being located on the side of her only seeing eye, the patient underwent a conservative “wait and rescan” plan of management.",
+        "explanation": "The treatment entry omits the stated clinical rationale for conservative management, including the tumor’s location relative to the patient’s only seeing eye.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      },
+      {
+        "field_path": "/treatments/0/frequency",
+        "label_excerpt": "wait and rescan",
+        "source_quote": "The tumor was observed with 8 serial MRI scans over a period of 7.4 years since 2006.",
+        "explanation": "The treatment entry omits the stated count of serial MRI scans documenting the observation course.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      }
+    ],
+    "summary": "The candidate correctly identifies the omitted radiologic conclusion. The label also omits material MRI characteristics, the rationale for conservative management, and the number of scans in the observation course."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The MRI result records the mass and location but omits the source-stated radiologic conclusion.",
+        "source_quote": "Radiologic features were consistent with glomus vagale.",
+        "field_path": "/diagnosis tests/0/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "well-defined mass in the left parapharyngeal space",
+        "source_quote": "T 1 weighted sequences demonstrated low signal intensity with multiple voids. On T 2 weighted sequences the mass was of high signal intensity and revealed extensive enhancement following administration of gadolinium.",
+        "explanation": "The diagnosis-test result omits the MRI signal and enhancement characteristics, material findings reported for the mass.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/symptoms/0/intensity of symptom",
+        "label_excerpt": "pharyngeal discomfort",
+        "source_quote": "A 71-year-old female presented with mild pharyngeal discomfort.",
+        "explanation": "The symptom entry omits the source-stated mild intensity, a relevant symptom modifier.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate omission is supported. The label also omits MRI signal and enhancement findings and the symptom’s stated mild intensity."
+  }
+}

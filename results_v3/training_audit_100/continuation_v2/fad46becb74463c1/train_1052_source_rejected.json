@@ -1,0 +1,54 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 0,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The postoperative course duration is stated explicitly and is absent from the treatment time leaf.",
+        "source_quote": "Postoperatively, the patient received systemic antibiotic, analgesic, and mouthwash for 7 days.",
+        "field_path": "/treatments/0/time"
+      },
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The note explicitly gives active growth and facial swelling as reasons for preparing for surgery; this indication is missing from the surgery entry.",
+        "source_quote": "Because the lesion was actively growing and caused facial swelling, the patient was prepared for surgery.",
+        "field_path": "/surgeries"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The source gives a specific anatomic extent that is absent from the imaging result, a material detail of the lesion's location.",
+        "source_quote": "The lesion extended distally of the second premolar to the mesial aspect of the second molar distal root",
+        "field_path": "/diagnosis tests/0/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Solitary, round, 3 × 3 cm well-defined radio-opaque lesion without a radiolucent rim of mandible, large, pedunculated mass attached to the buccal surface of the left mandibular body",
+        "source_quote": "These clinical and radiographic features were sufficiently supportive of the working diagnosis of peripheral osteoma.",
+        "explanation": "The note states the working diagnosis, but the diagnosis test result does not capture it. This is a material source-supported diagnostic interpretation.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Extraoral swelling on the left side, nonpalpable regional lymph nodes, well-defined, round, immobile mass on the buccal plate of the left posterior mandible and buccal expansion, bony-hard lesion on palpation, normal overlying oral mucosa, no pain, tenderness, or paresthesia",
+        "source_quote": "All of the posterior teeth were vital (positive responses to electric pulp testing).",
+        "explanation": "The examination result omits the documented vitality testing of the posterior teeth, a clinically relevant finding in the context of this mandibular lesion.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The three candidate omissions are supported. The label also omits the stated working diagnosis and posterior-tooth vitality findings. Other projection drops do not establish additional material omissions: the note describes referral and postoperative follow-up but does not establish admission or discharge, and the suggested treatment rationale is not stated."
+  },
+  "error": ""
+}

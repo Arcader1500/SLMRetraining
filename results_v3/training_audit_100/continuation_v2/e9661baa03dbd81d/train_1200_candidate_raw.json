@@ -1,0 +1,76 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Development of a myasthenic crisis",
+        "source_quote": "The development of a myasthenic crisis was suspected and she was admitted to our hospital the next day.",
+        "explanation": "The label records a suspected crisis as the admission reason; the note supports that reason while explicitly marking the crisis as suspected."
+      },
+      {
+        "field_path": "/symptoms/1/time",
+        "label_excerpt": "On the 10th hospital day",
+        "source_quote": "On the 10th hospital day the attending physician who had come to exchange the central venous catheter noticed a decline in her consciousness.",
+        "explanation": "The symptom and its timing are supported."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "DWI showed multiple areas of restricted diffusion affecting predominantly the cortical areas in the bilateral hemispheres adjacent to air, the corpus callosum, and the cerebellum",
+        "source_quote": "DWI showed multiple areas of restricted diffusion affecting predominantly the cortical areas in the bilateral hemispheres adjacent to air, the corpus callosum, and the cerebellum ().",
+        "explanation": "The MRI finding is accurately represented."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Development of a myasthenic crisis",
+        "source_quote": "The development of a myasthenic crisis was suspected and she was admitted to our hospital the next day.",
+        "explanation": "The wording drops the source’s uncertainty and presents the crisis as established. This is a clear negation/uncertainty discrepancy.",
+        "category": "negation_uncertainty",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "Started at least two days before hospital admission",
+        "source_quote": "Two days later her dyspnea worsened",
+        "explanation": "The label assigns the two-day interval to onset before admission, but the note anchors it to worsening after the initial complaint. The source does not specify when dyspnea began relative to admission.",
+        "category": "chronology",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/treatments/1/time",
+        "label_excerpt": "After admission to the hospital",
+        "source_quote": "Steroid pulse therapy and an immunoadsorbent technique were performed.",
+        "explanation": "These treatments are stated, but the note does not establish that they occurred after admission. The timing is unsupported by the supplied note.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/treatments/2/time",
+        "label_excerpt": "After admission to the hospital",
+        "source_quote": "Steroid pulse therapy and an immunoadsorbent technique were performed.",
+        "explanation": "These treatments are stated, but the note does not establish that they occurred after admission. The timing is unsupported by the supplied note.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/treatments/3/time",
+        "label_excerpt": "After diagnosis of CAE",
+        "source_quote": "CAE was diagnosed and she was treated with oxygen inhalation and intravenous injections of edaravone.",
+        "explanation": "The source supports treatment following the CAE diagnosis.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/treatments/4/time",
+        "label_excerpt": "After diagnosis of CAE",
+        "source_quote": "CAE was diagnosed and she was treated with oxygen inhalation and intravenous injections of edaravone.",
+        "explanation": "The source supports treatment following the CAE diagnosis.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      }
+    ],
+    "summary": "Material discrepancies include loss of uncertainty in the suspected admission diagnosis and shifting the two-day interval from dyspnea worsening to symptom onset. The note supports CAE treatment after diagnosis; no finding is warranted for those treatment times."
+  }
+}

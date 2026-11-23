@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Complaining of dysphagia, pruritus and musculoskeletal pain of the arms",
+        "source_quote": "complaining of dysphagia, pruritus and musculoskeletal pain of the arms",
+        "explanation": "The visit motivation accurately captures the presenting complaints."
+      },
+      {
+        "field_path": "/medical examinations/7/result",
+        "label_excerpt": "Gastritis and esophageal veins dilation",
+        "source_quote": "gastroscopy () that revealed gastritis and esophageal veins dilation[]",
+        "explanation": "The recorded gastroscopy findings match the note."
+      },
+      {
+        "field_path": "/diagnosis tests/2/result",
+        "label_excerpt": "Positive",
+        "source_quote": "ANA and AMA tests) were requested that proved positive (), thus confirming the diagnosis of PBC.",
+        "explanation": "The label preserves the positive ANA and AMA result."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms",
+        "label_excerpt": "",
+        "source_quote": "Due to the persistent musculoskeletal pain in the arms and the sclerodactyly, Anti-centromere antibodies (ACAs) test was conducted",
+        "explanation": "The note explicitly reports sclerodactyly, a material clinical finding relevant to the subsequent ACA investigation, but it is absent from the symptoms section.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/medical examinations/3/result",
+        "label_excerpt": "Dilation of intrahepatic bile ducts",
+        "source_quote": "A CT scan was performed without intravenous contrast medium due to patient-reported previous allergy. The CT scan did not demonstrate any pathological finding of the liver apart from dilation of intrahepatic bile ducts that was later confirmed sonographically.",
+        "explanation": "The result omits that the CT was performed without intravenous contrast because of a reported prior allergy and that the bile duct dilation was later confirmed by ultrasound. These qualifications materially contextualize the investigation and its finding.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate issues: sclerodactyly is omitted, and the CT result leaves out the contrast limitation and later sonographic confirmation."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "15 days duration",
+        "source_quote": "intermittent right upper quadrant abdominal pain of 15 days duration.",
+        "explanation": "The symptom duration is explicitly supported."
+      },
+      {
+        "field_path": "/medical examinations/1/result",
+        "label_excerpt": "elevated γ-glutamyl transferase level (101 U/L)",
+        "source_quote": "an elevated γ-glutamyl transferase level (101 U/L).",
+        "explanation": "The label preserves the reported elevated enzyme and value."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "pericholecystic lymph node enlargement",
+        "source_quote": "Pericholecystic lymph node enlargement was noted.",
+        "explanation": "The CT result includes this source finding."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "The diseased gallbladder was found to be perforated with severe adhesion",
+        "source_quote": "Operatively, the diseased gallbladder was found to be perforated with severe adhesion to",
+        "explanation": "The note cuts off mid-description after “to”; the label extends the text only through the established facts and does not complete the unfinished detail. No discrepancy is supported here, so this is not a finding.",
+        "category": "chronology",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "No material issue found. The surgery detail stops at facts established before the note’s cutoff; the dangling “to” does not justify inferring what the gallbladder was adherent to."
+  }
+}

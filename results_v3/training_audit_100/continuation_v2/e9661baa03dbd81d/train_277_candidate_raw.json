@@ -1,0 +1,36 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/treatments/4/name",
+        "label_excerpt": "6% hydroxyethyl starch (HES) 500 ml (Salinhes®, Ilsung pharmaceuticals, Korea)",
+        "source_quote": "so 6% hydroxyethyl starch (HES) 500 ml (Salinhes®, Ilsung pharmaceuticals, Korea) was administrated in order to complement",
+        "explanation": "The named fluid and stated volume are directly supported; its administration purpose is also stated."
+      },
+      {
+        "field_path": "/medical examinations/4/result",
+        "label_excerpt": "Performed to check collateral circulation in the left hand",
+        "source_quote": "To check collateral circulation in the left hand before the induction of anesthesia, Allen's test was performed",
+        "explanation": "The test and its stated purpose are supported."
+      },
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "shoulder joints abducted at 120° and elbow joints flexed at 70° while the neck was maintained in neutral position.",
+        "source_quote": "then her shoulder joints were abducted at 120° and the elbow joints were flexed at 70° while the neck was maintained in neutral position.",
+        "explanation": "The listed positioning details are directly supported."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments/4/time",
+        "label_excerpt": "During surgery after blood loss",
+        "source_quote": "The blood loss had amounted to about 500 ml, so 6% hydroxyethyl starch (HES) 500 ml (Salinhes®, Ilsung pharmaceuticals, Korea) was administrated in order to complement",
+        "explanation": "The source establishes that HES was administered after blood loss had reached about 500 ml, but the note is cut off before specifying what it was intended to complement. This time description is supported; the unfinished purpose is not included as a claim in the label.",
+        "category": "chronology",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "No clear source discrepancy is established. The source note ends mid-sentence after the HES administration, so the treatment's time is supported. The candidate concern about the truncated purpose does not amount to a label error."
+  }
+}

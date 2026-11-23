@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "54",
+        "source_quote": "a 54-year-old white woman",
+        "explanation": "The label’s age matches the note."
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Has hypertension, treated with 5 mg ramipril, and adiposity.",
+        "source_quote": "She has hypertension, which is treated with 5 mg ramipril, and adiposity.",
+        "explanation": "The history and ramipril dose are supported."
+      },
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "SRE events noticed during nights with intake of doxepin",
+        "source_quote": "During these nights with intake of doxepin she noticed SRE events.",
+        "explanation": "The label preserves the reported timing of SRE events during doxepin-use nights without asserting certain causation."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Nightly eating of large amounts of unusual foods, bringing food into bed, no recall of SRE events in the morning",
+        "source_quote": "and gained approximately 20 kg in the last years.",
+        "explanation": "The symptom details omit the substantial weight gain explicitly linked to the nighttime eating. This is a material consequence of the reported episodes.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Nightly eating of large amounts of unusual foods, bringing food into bed, no recall of SRE events in the morning",
+        "source_quote": "Observed by her husband approximately once or twice a week she had nightly eating and SRE, mostly without any recall in the morning.",
+        "explanation": "The label includes the lack of recall but omits that her husband observed the episodes approximately once or twice a week, an important detail about their frequency and corroboration.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label is largely source-supported, but it omits the reported 20 kg weight gain and the husband’s observation of episodes approximately once or twice weekly."
+  }
+}

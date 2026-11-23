@@ -1,0 +1,36 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "mild pharyngeal discomfort",
+        "source_quote": "A 71-year-old female presented with mild pharyngeal discomfort.",
+        "explanation": "The stated visit motivation matches the presentation."
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "medial displacement of the left tonsil associated with transmitted pulsation of the surrounding pharyngeal wall",
+        "source_quote": "Clinical examination revealed medial displacement of the left tonsil associated with transmitted pulsation of the surrounding pharyngeal wall.",
+        "explanation": "The symptom details preserve the source-described finding."
+      },
+      {
+        "field_path": "/treatments/0/time",
+        "label_excerpt": "over a period of 7.4 years since 2006",
+        "source_quote": "The tumor was observed with 8 serial MRI scans over a period of 7.4 years since 2006.",
+        "explanation": "The treatment time matches the observation period stated in the note."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "well-defined mass in the left parapharyngeal space",
+        "source_quote": "Radiologic features were consistent with glomus vagale.",
+        "explanation": "The MRI result includes the mass location but omits the source's stated radiologic conclusion, a material diagnostic-test finding expressible in this result field.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label is largely source-supported, but the diagnosis-test result omits the source-stated radiologic conclusion."
+  }
+}

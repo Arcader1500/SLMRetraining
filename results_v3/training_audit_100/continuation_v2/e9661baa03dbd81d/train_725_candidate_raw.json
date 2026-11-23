@@ -1,0 +1,36 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Pain between the shoulder blades in the last trimester of pregnancy",
+        "source_quote": "She was admitted to the obstetrics department because of this pain",
+        "explanation": "The label correctly captures the pain as the reason for an explicit admission."
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "Started in the sixth month of pregnancy, persists mainly at night but sometimes also during the day",
+        "source_quote": "The pain had started in the sixth month of her pregnancy with her first child.",
+        "explanation": "The onset during pregnancy is supported; the label also captures the later pattern described after childbirth."
+      },
+      {
+        "field_path": "/medical examinations/1/result",
+        "label_excerpt": "slight decrease in vital sensibility in arms and legs suspected",
+        "source_quote": "a slight decrease in vital sensibility in her arms and legs was suspected",
+        "explanation": "The label preserves the source's uncertainty about this suspected finding."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "No pain radiating to arms or legs",
+        "source_quote": "There was no pain radiating to her arms or legs.",
+        "explanation": "Supported by the note; no discrepancy identified.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      }
+    ],
+    "summary": "The candidate finding is a false positive: the quoted symptom detail is explicitly supported by the note. The supplied label otherwise has material source-supported content."
+  }
+}

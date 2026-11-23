@@ -1,0 +1,53 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The note explicitly states that the lobectomy was performed. The sentence cuts off while introducing what followed the procedure; it does not negate the stated procedure.",
+        "source_quote": "A left hepatic lobectomy was performed with",
+        "field_path": "/surgeries/0/Type"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The symptom time records the duration but omits the source's description of the episodes as occasional and intermittent.",
+        "source_quote": "approximately 18 months of occasional and intermittent episodes of epigastric discomfort",
+        "field_path": "/symptoms/0/time"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label reports elevated levels but omits the stated degree of elevation.",
+        "source_quote": "Laboratory evaluation was remarkable for moderate elevations of alkaline phosphatase and alpha fetoprotein.",
+        "field_path": "/diagnosis tests/1/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/diagnosis tests/3/result",
+        "label_excerpt": "Single heterogeneously enhancing 15 × 10 × 13.8 cm lobulated mass inseparable from the left lobe of the liver, 5-cm area of signal hypointensity with multiple hypointense non-enhancing linear areas throughout the mass consistent with areas of calcification, small amount of intraperitoneal free fluid",
+        "source_quote": "The left portal vein was not visualized and there was no biliary dilatation.",
+        "explanation": "The MRI result omits the reported nonvisualization of the left portal vein and absence of biliary dilatation, which are material imaging findings.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/3/result",
+        "label_excerpt": "Single heterogeneously enhancing 15 × 10 × 13.8 cm lobulated mass inseparable from the left lobe of the liver, 5-cm area of signal hypointensity with multiple hypointense non-enhancing linear areas throughout the mass consistent with areas of calcification, small amount of intraperitoneal free fluid",
+        "source_quote": "The radiologic differential diagnosis includes sarcoma, including metastatic osteosarcoma, and fibrolamellar hepatocellular carcinoma.",
+        "explanation": "The label omits the radiologic differential diagnosis, a material diagnostic conclusion stated in the source.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Two candidate omissions are supported: the symptom pattern qualifiers and the degree of laboratory elevation. The operative-status finding is rejected because the note explicitly says the lobectomy was performed. The MRI findings and radiologic differential are additional material omissions."
+  }
+}

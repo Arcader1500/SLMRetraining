@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "To undergo a laparoscopic sleeve gastrectomy",
+        "source_quote": "presented for a laparoscopic sleeve gastrectomy",
+        "explanation": "The stated visit motivation is supported by the note."
+      },
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "59",
+        "source_quote": "59-year-old",
+        "explanation": "The age matches the source."
+      },
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Cesarean section, evacuation of ectopic pregnancy",
+        "source_quote": "The patient’s surgical history included cesarean section and evacuation of an ectopic pregnancy.",
+        "explanation": "These are explicitly listed as prior surgical history."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Laparoscopic sleeve gastrectomy",
+        "source_quote": "presented for a laparoscopic sleeve gastrectomy.",
+        "explanation": "The note establishes presentation for the procedure, but does not explicitly establish an admission. Under the policy, treating this as an admission reason is a policy ambiguity.",
+        "category": "event_status",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Significantly impacted ability to exercise",
+        "source_quote": "degenerative joint disease which significantly impacted her ability to exercise.",
+        "explanation": "The source attributes the exercise limitation to degenerative joint disease, while this detail is attached to the morbid-obesity symptom. The label may therefore mislink the limitation to obesity.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Morbid obesity, obstructive sleep apnea requiring CPAP machine, elevated hemoglobin A1c (5.8), fasting blood glucose indicating risk of diabetes mellitus, degenerative joint disease",
+        "source_quote": "with situs inversus totalis",
+        "explanation": "The label omits situs inversus totalis, an explicit and potentially material condition that fits the physiological-context history field.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate issues: a possible unsupported admission inference, a likely mislinking of the exercise limitation to obesity rather than degenerative joint disease, and omission of situs inversus totalis from medical history."
+  }
+}

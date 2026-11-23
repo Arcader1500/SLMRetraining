@@ -1,0 +1,102 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The label’s timing is supported: HES was administered after blood loss had reached about 500 ml. The unfinished purpose is not asserted in the label.",
+        "source_quote": "The blood loss had amounted to about 500 ml, so 6% hydroxyethyl starch (HES) 500 ml (Salinhes®, Ilsung pharmaceuticals, Korea) was administrated in order to complement",
+        "field_path": "/treatments/4/time"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/7/result",
+        "label_excerpt": "",
+        "source_quote": "the systolic blood pressure dropped from 90 to 40 mmHg",
+        "explanation": "The label omits a substantial intraoperative systolic blood pressure drop, a material measurement expressible as a medical examination result.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      },
+      {
+        "field_path": "/medical examinations/8/result",
+        "label_excerpt": "",
+        "source_quote": "We suspected damage in great vessels and checked the operative field after consulting the surgeon, but not a significant bleeding was observed.",
+        "explanation": "The label omits the suspected great-vessel injury and the subsequent finding of no significant bleeding. This uncertainty and operative assessment are material context for the blood pressure drop.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      }
+    ],
+    "summary": "The candidate concern is unsupported because the HES timing matches the source. The label materially omits the intraoperative blood pressure drop and the documented assessment for suspected great-vessel injury."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The candidate identifies no discrepancy: the label’s timing is supported by the note, and it does not state the unfinished purpose.",
+        "source_quote": "The blood loss had amounted to about 500 ml, so 6% hydroxyethyl starch (HES) 500 ml (Salinhes®, Ilsung pharmaceuticals, Korea) was administrated in order to complement",
+        "field_path": "/treatments/4/time"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient information/weight",
+        "label_excerpt": "",
+        "source_quote": "A 12-year-old, 161 cm, 32 kg, female patient",
+        "explanation": "The source states the patient’s weight, but the label omits it. This is a material patient measurement.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient information/height",
+        "label_excerpt": "",
+        "source_quote": "A 12-year-old, 161 cm, 32 kg, female patient",
+        "explanation": "The source states the patient’s height, but the label omits it. This is a material patient measurement.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Patient was turned from a supine position to a prone position, with shoulder joints abducted at 120° and elbow joints flexed at 70° while the neck was maintained in neutral position.",
+        "source_quote": "After the transition in position, the blood pressure indicated 100/60 mmHg and the central venous pressure was 10 mmHg, showing no change.",
+        "explanation": "The label omits the post-positioning blood pressure and unchanged central venous pressure, material perioperative measurements and context.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/6/result",
+        "label_excerpt": "10 mmHg",
+        "source_quote": "When a monitoring catheter was inserted into the right internal jugular vein, the central venous pressure was 10 mmHg.",
+        "explanation": "The label records the central venous pressure value but omits that it was measured during insertion of a monitoring catheter into the right internal jugular vein, relevant procedural context.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/4/time",
+        "label_excerpt": "During surgery after blood loss",
+        "source_quote": "The systolic blood pressure dropped from 90 to 40 mmHg while inserting an introducer needle after skin incision and muscle dissection.",
+        "explanation": "The treatment timing omits the acute systolic blood pressure drop during introducer needle insertion, a material event preceding the stated blood loss and HES administration.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate concern is not a discrepancy. Material omissions include the patient’s height and weight and perioperative measurements and event context."
+  }
+}

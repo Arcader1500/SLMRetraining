@@ -1,0 +1,130 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label gives the general developmental-delay diagnosis but omits the specified motor milestones, which materially describe the child’s developmental history.",
+        "source_quote": "The patient was unable to roll over until 7 months of age and did not sit or raise to his knees independently until 15 months.",
+        "field_path": "/patient medical history/physiological context"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The hand-transfer ability and difficulty reaching for smaller objects add specific developmental-function information absent from the history.",
+        "source_quote": "By 2 years, he could transfer objects between hands but retained difficulty in reaching for smaller objects.",
+        "field_path": "/patient medical history/physiological context"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label omits distinct mobility milestones and the age at which independent walking began, which materially detail the developmental history.",
+        "source_quote": "He could crawl and cruise unassisted by 18 months but did not walk independently until he was 3 years of age.",
+        "field_path": "/patient medical history/physiological context"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The source dates failure to thrive at 6 months, then says the motor delays led to a developmental-delay diagnosis without explicitly dating that diagnosis. The label’s timing may carry over the nearby age, making this a chronology ambiguity.",
+        "source_quote": "At 6 months, the patient was diagnosed with failure to thrive. Failure to roll over or sit unaided led to a diagnosis of developmental delay.",
+        "field_path": "/symptoms/0/time"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Followed the tenth percentile for weight and height for the first two months of life, before dropping off the curve below the third percentile while remaining normocephalic.",
+        "source_quote": "Birthweight was 6lbs 12oz",
+        "explanation": "Birthweight is relevant context for the subsequent growth and failure-to-thrive history and is omitted from the label.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Diagnosed with failure to thrive at 6 months.",
+        "source_quote": "The patient made slow gains while remaining close to the third percentile of the growth chart.",
+        "explanation": "The post-gastrostomy growth course is material to the documented failure-to-thrive history and is not captured in the label.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/3/details",
+        "label_excerpt": "Delays in receptive and expressive language with an equivalency of 16 months",
+        "source_quote": "significant delays in receptive and expressive language were present, with an equivalency of 16 months.",
+        "explanation": "The label preserves the type and equivalency of the language delays but omits the source’s material severity modifier, “significant.”",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The four candidate findings are supported: three identify omitted developmental milestones and one flags ambiguity in the developmental-delay diagnosis timing. The label also omits birthweight, the post-gastrostomy growth course, and the severity modifier for language delays."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The history records the general developmental-delay diagnosis but omits the specified early motor milestones.",
+        "source_quote": "The patient was unable to roll over until 7 months of age and did not sit or raise to his knees independently until 15 months.",
+        "field_path": "/patient medical history/physiological context"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The label omits the documented hand-transfer ability and difficulty reaching for smaller objects, which add specific developmental-function detail.",
+        "source_quote": "By 2 years, he could transfer objects between hands but retained difficulty in reaching for smaller objects.",
+        "field_path": "/patient medical history/physiological context"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The label omits the crawling, cruising, and independent-walking milestones and their timing.",
+        "source_quote": "He could crawl and cruise unassisted by 18 months but did not walk independently until he was 3 years of age.",
+        "field_path": "/patient medical history/physiological context"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The source dates failure to thrive at 6 months, then states that failure to roll or sit unaided led to a developmental-delay diagnosis without explicitly dating that diagnosis. The label's timing may reflect the nearby chronology, but it is not directly established.",
+        "source_quote": "At 6 months, the patient was diagnosed with failure to thrive. Failure to roll over or sit unaided led to a diagnosis of developmental delay.",
+        "field_path": "/symptoms/0/time"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Born at full term following an uncomplicated pregnancy and planned caesarian section.",
+        "source_quote": "Birthweight was 6lbs 12oz",
+        "explanation": "The history omits the stated birthweight, a specific birth and growth-context fact.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      },
+      {
+        "field_path": "/surgeries/1/Type",
+        "label_excerpt": "Gastrostomy",
+        "source_quote": "A gastrostomy was performed at the age of 13 months and the patient made slow gains while remaining close to the third percentile of the growth chart.",
+        "explanation": "The label records the gastrostomy and its timing but omits the documented subsequent growth outcome, which is relevant to the procedure's context and course.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      }
+    ],
+    "summary": "The three developmental-history omissions are supported. The diagnosis-age concern is a chronology ambiguity because the source does not explicitly date the developmental-delay diagnosis. The label also omits the stated birthweight and post-gastrostomy growth course."
+  }
+}

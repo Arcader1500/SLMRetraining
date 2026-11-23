@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "13-year-old",
+        "source_quote": "A 13-year-old male child",
+        "explanation": "The age is supported by the note."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Positive for Streptococcus viridans",
+        "source_quote": "Blood culture was positive for Streptococcus viridans.",
+        "explanation": "The culture result and organism are supported."
+      },
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Symptoms resolved",
+        "source_quote": "following which the symptoms resolved.",
+        "explanation": "The note explicitly reports symptom resolution after the antibiotic course."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Vegetation attached to the noncoronary cusp of the aortic valve, prolapse of AML, LVEF of 65%",
+        "source_quote": "Initial transthoracic echocardiography showed severe aortic regurgitation with vegetation attached to the noncoronary cusp of the aortic valve, moderate mitral regurgitation with prolapse of AML with LVEF of 65%.",
+        "explanation": "The result omits the initial echocardiogram's severe aortic regurgitation and moderate mitral regurgitation, material findings reported with this test.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/diagnosis tests/2/result",
+        "label_excerpt": "Vegetations and perforation on the noncoronary cusp, severe mitral regurgitation with perforation of AML with aneurysm formation, severe tricuspid regurgitation, severe PAH with RVSP of 75 + RAP, LVEF of 40-45%, aortic annulus measured at 17 mm",
+        "source_quote": "Repeat Echocardiography showed severe aortic regurgitation with vegetations and perforation on the noncoronary cusp, severe mitral regurgitation with perforation of AML with aneurysm formation [Figures and ], severe tricuspid regurgitation, severe PAH with RVSP of 75 + RAP, LVEF of 40-45%.",
+        "explanation": "The repeat echocardiography result omits the reported severe aortic regurgitation. Although that finding appears in the admission reason, it is not linked to this test result.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Aortic root replacement/Ross procedure with mitral and tricuspid valve repair",
+        "source_quote": "Therefore, the patient was planned for Aortic root replacement/Ross procedure with mitral and tricuspid valve repair.",
+        "explanation": "The note states that this procedure was planned, while the label's Type leaves its status unqualified. Intraoperative findings suggest an operation was underway, so whether the label implies completion is a status-projection ambiguity.",
+        "category": "event_status",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "The label omits material findings from both echocardiography result fields. The procedure status is ambiguous because the note records a plan and intraoperative findings but does not establish completion in the available text."
+  }
+}

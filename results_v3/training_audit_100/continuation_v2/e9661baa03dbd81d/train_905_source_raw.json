@@ -1,0 +1,24 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label says the first angioplasty did not change the stenosis percentage but omits the source-stated values for both branches before and after that procedure.",
+        "source_quote": "The percentage of renal artery stenosis in the two branches of the left renal artery was 70% and 75%, respectively , before the first balloon angioplasty; after the first balloon angioplasty, these percentages remained the same.",
+        "field_path": "/surgeries/0/details"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The source explicitly records relevant negative personal and family history that is absent from the physiological context.",
+        "source_quote": "She had no history of smoking or drinking alcohol, was not diabetic, and had no history of diabetes in her family.",
+        "field_path": "/patient medical history/physiological context"
+      }
+    ],
+    "added_findings": [],
+    "summary": "Both candidate omissions are supported by the source and are material. The projection-drop leads do not establish any additional material omission."
+  }
+}

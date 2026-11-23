@@ -1,0 +1,39 @@
+{
+  "case_id": "train:1387",
+  "source_review": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The omitted RAPD and retinal findings are examination findings, not symptom details. The symptoms entry already records bilateral blurring and visual acuity; the omission belongs under medical examinations.",
+        "source_quote": "Relative afferent pupillary defect (RAPD) was present in the right eye.",
+        "field_path": "/symptoms/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations",
+        "label_excerpt": "",
+        "source_quote": "Grade 1 vitritis was noted in the right eye.",
+        "explanation": "The label names the ophthalmic assessment but omits material examination findings, including vitritis and bilateral retinal abnormalities. These belong to the medical examinations section.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Diagnosed with combined T and B cell deficiencies at the age of 11",
+        "source_quote": "A 13-year-old child with learning disability",
+        "explanation": "The physiological context omits the documented learning disability, relevant patient history for this ophthalmic assessment.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate identifies a real omission but assigns examination findings to the symptom-details path. Material ophthalmic examination findings and the documented learning disability are absent from the label."
+  },
+  "source_evidence_span_repairs": []
+}

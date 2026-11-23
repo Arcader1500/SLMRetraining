@@ -1,0 +1,92 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The candidate itself states that the label stops at established facts and identifies no discrepancy, so it is not an error finding. The source ends mid-description, but confirms perforation and severe adhesion.",
+        "source_quote": "Operatively, the diseased gallbladder was found to be perforated with severe adhesion to",
+        "field_path": "/surgeries/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Mild tenderness of the right upper abdominal quadrant",
+        "source_quote": "He was afebrile",
+        "explanation": "The label omits the patient's afebrile status, an explicit clinical examination finding.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Mild tenderness of the right upper abdominal quadrant",
+        "source_quote": "Leukocytosis was absent.",
+        "explanation": "The label omits the explicitly reported absence of leukocytosis, a relevant investigation finding.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "... hepatic parenchymal enhancement adjacent to the gallbladder",
+        "source_quote": "this was followed by isoattenuation, relative to the normal liver, during the portal phase.",
+        "explanation": "The CT result includes arterial-phase adjacent hepatic enhancement but omits its subsequent portal-phase isoattenuation, a material phase-specific imaging detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The sole candidate is not a discrepancy finding. Material omissions include afebrile status, absent leukocytosis, and the portal-phase CT finding. The projection-drop leads for procedure reason, diagnostic impression, and CT phases are already represented or are not separate material omissions in the label."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The label detail repeats only facts established before the note cuts off. Its unfinished source phrase does not support naming the object of the adhesion.",
+        "source_quote": "Operatively, the diseased gallbladder was found to be perforated with severe adhesion to",
+        "field_path": "/surgeries/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Mild tenderness of the right upper abdominal quadrant",
+        "source_quote": "He was afebrile",
+        "explanation": "The label omits the explicitly reported afebrile status, a clinically relevant examination finding.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Mild tenderness of the right upper abdominal quadrant",
+        "source_quote": "Leukocytosis was absent.",
+        "explanation": "The label omits the explicitly reported absence of leukocytosis, a relevant examination/laboratory finding.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Hepatic parenchymal enhancement adjacent to the gallbladder",
+        "source_quote": "and this was followed by isoattenuation, relative to the normal liver, during the portal phase.",
+        "explanation": "The CT result includes arterial-phase hepatic enhancement but omits the subsequent portal-phase isoattenuation that characterizes this finding.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate surgery finding is not a discrepancy: its label preserves only facts established before the cutoff. Material omissions include afebrile status, absent leukocytosis, and the portal-phase isoattenuation following adjacent hepatic enhancement."
+  }
+}

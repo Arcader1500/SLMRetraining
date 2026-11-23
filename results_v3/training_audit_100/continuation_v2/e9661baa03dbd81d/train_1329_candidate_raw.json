@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "41",
+        "source_quote": "A 41-year-old female patient",
+        "explanation": "The age matches the source."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Broad central disc protrusion at the C5-6 and C6-7 levels",
+        "source_quote": "Findings in the cervical spine magnetic resonance imaging (MRI) showed broad central disc protrusion at the C5-6 and C6-7 levels.",
+        "explanation": "The MRI result is represented accurately."
+      },
+      {
+        "field_path": "/treatments/2/dosage",
+        "label_excerpt": "225 mg",
+        "source_quote": "She was prescribed 225 mg of pregabalin",
+        "explanation": "The stated pregabalin dose is preserved."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "She was maintained on physical therapy.",
+        "explanation": "The label records physical therapy after the new symptom, but omits that physical therapy continued during follow-up. This is a source-supported ongoing treatment and may be material.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Tingling sensation from the right axilla to the fingertips, tenderness to the right trapezius muscle, new symptom of tingling sensation on right arm without pain after two months",
+        "source_quote": "The patient visited the outpatient clinic every two months, due to numbness of the right arm and a pain score of 3 to 8-points on NRS.",
+        "explanation": "The symptom details omit the recurrent right-arm numbness and its reported pain-score range during follow-up, which are material symptom-course details.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label is largely consistent with the source, but it omits ongoing physical therapy and material follow-up symptom severity details."
+  }
+}

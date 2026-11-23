@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Patient was planned for pars plana vitrectomy",
+        "source_quote": "He was planned for pars plana viterectomy.",
+        "explanation": "The label preserves the procedure's planned status; no performed vitrectomy is asserted."
+      },
+      {
+        "field_path": "/treatments/3/time",
+        "label_excerpt": "Night before the surgery and in the morning after the surgery",
+        "source_quote": "He was also administered oral ranitidine (150 mg) night before the surgery and in the morning after the surgery.",
+        "explanation": "The ranitidine timing and dose match the note, including both administrations."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Could not rule out aneurysmal bleed",
+        "source_quote": "magnetic resonance angiography was done which could not rule out aneurysmal bleed.",
+        "explanation": "The label preserves the uncertainty of the angiography finding."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Diagnosed with stroke with left frontal bleed",
+        "source_quote": "Diagnosis of stroke with left frontal bleed was made.",
+        "explanation": "The diagnosis is stated, but the note does not establish that the patient was admitted. The label places it under admission without separate admission evidence; this may depend on whether the schema permits diagnosis as the admission reason.",
+        "category": "inappropriate_role",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/treatments/0/dosage",
+        "label_excerpt": "5 mg",
+        "source_quote": "oral amlodipine (5 mg) twice a day and losartan (50 mg) once a day.",
+        "explanation": "The label omits the twice-daily frequency for amlodipine, a material part of the treatment course.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/1/dosage",
+        "label_excerpt": "50 mg",
+        "source_quote": "oral amlodipine (5 mg) twice a day and losartan (50 mg) once a day.",
+        "explanation": "The label omits the once-daily frequency for losartan, a material part of the treatment course.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate findings: the antihypertensive treatment entries omit their stated frequencies, and the admission role is uncertain because the note states a diagnosis but does not establish admission. The planned procedure, ranitidine timing, and angiography uncertainty are supported."
+  }
+}

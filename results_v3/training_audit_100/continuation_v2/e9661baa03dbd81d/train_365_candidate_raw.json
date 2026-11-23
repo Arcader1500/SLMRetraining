@@ -1,0 +1,66 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "51",
+        "source_quote": "A 51-year-old Bedouin Arabic man",
+        "explanation": "The age matches the source."
+      },
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Nodule was excised in pieces using a transverse incision",
+        "source_quote": "It was removed in pieces using a transverse incision",
+        "explanation": "The details of the outside excision are supported."
+      },
+      {
+        "field_path": "/symptoms/1/time",
+        "label_excerpt": "Presented 4 months after the initial excision",
+        "source_quote": "The patient presented to King Hussein Cancer Center 4 months after the initial excision",
+        "explanation": "The presentation timing matches the source."
+      },
+      {
+        "field_path": "/diagnosis tests/0/test",
+        "label_excerpt": "MRI",
+        "source_quote": "Magnetic resonance imaging (MRI) demonstrated a predominantly subcutaneous soft tissue mass",
+        "explanation": "The source identifies MRI as the test producing the reported result."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Excision of a nodule suspected to be a benign mass",
+        "source_quote": "He had not sought any medical advice.",
+        "explanation": "The label presents the outside excision as an admission reason, but the note says it occurred at an outside facility and does not establish an admission for that excision.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/diagnosis tests",
+        "label_excerpt": "",
+        "source_quote": "pathological examination showed a spindle-cell tumor with features suggestive of MPNST.",
+        "explanation": "The label includes the MRI finding but omits the source's material pathology result, which is expressible under diagnosis tests.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/medical examinations",
+        "label_excerpt": "",
+        "source_quote": "His physical checkup revealed power of 3+/5 in his fingers and wrist extension, an intact sensation at the dorsum of the hand with intact median and ulnar nerve function, full range of motion in the elbow and shoulder joints with an intact vascular examination, and no evidence of local lymph node enlargement.",
+        "explanation": "The label records a physical checkup without its material findings, including weakness, intact nerve and vascular findings, range of motion, and absence of local lymph node enlargement.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/patient medical history",
+        "label_excerpt": "",
+        "source_quote": "He is a known smoker and works as a security guard, has no prior history of alcohol consumption or radiation exposure, was previously diagnosed with depression and receiving oral risperidone 4 mg, and has a positive family history of ocular and breast cancer.",
+        "explanation": "The history section is empty despite source-stated smoking, relevant exposure negatives, depression, and family cancer history. The medication is recorded separately, but these history facts are omitted.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate issues: the label assigns the outside excision as an admission reason and omits material pathology, physical examination, and medical history information."
+  }
+}

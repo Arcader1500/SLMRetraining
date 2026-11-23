@@ -1,0 +1,92 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The note identifies the first course as an admission: it says the patient was treated in hospital, discharged home, and later refers to the event as “this admission.”",
+        "source_quote": "Two weeks following this admission, the patient was admitted to a regional hospital",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The label omits the explicit reduction and subsequent cessation of cyclophosphamide during the second admission.",
+        "source_quote": "Cyclophosphamide was initially reduced to 50 mg daily and then ceased in setting of potential infectious pathology.",
+        "field_path": "/treatments"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The examination result omits the source's qualification that the rectum was relatively spared.",
+        "source_quote": "The rectum was relatively spared.",
+        "field_path": "/medical examinations/1/result"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The histopathology result omits the explicit negative findings from the evaluation.",
+        "source_quote": "There were no features of inflammatory bowel disease, vasculitis or viral inclusions.",
+        "field_path": "/medical examinations/2/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/treatments/0/time",
+        "label_excerpt": "During initial hospital admission",
+        "source_quote": "He was treated in hospital with intravenous methylprednisolone (500 mg daily) and oral cyclophosphamide (100 mg daily) for three days.",
+        "explanation": "The treatment time omits the source-stated three-day duration of this initial treatment course.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      },
+      {
+        "field_path": "/symptoms/0/intensity of symptom",
+        "label_excerpt": "Large volume watery diarrhea",
+        "source_quote": "The patient developed large volume watery diarrhea, up to eight liters per day.",
+        "explanation": "The symptom entry omits the stated peak volume, a material severity detail distinct from the later persistence of diarrhea up to six liters daily.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      },
+      {
+        "field_path": "/admission/1/date",
+        "label_excerpt": "Nausea, vomiting, diarrhea with intolerance of oral intake",
+        "source_quote": "Two weeks following this admission, the patient was admitted to a regional hospital",
+        "explanation": "The second admission entry omits its explicit timing relative to the first admission.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      },
+      {
+        "field_path": "/admission/1/care center details",
+        "label_excerpt": "Nausea, vomiting, diarrhea with intolerance of oral intake",
+        "source_quote": "The patient required transfer to a tertiary hospital intensive care unit",
+        "explanation": "The admission entry omits the material transfer to a tertiary hospital ICU.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      },
+      {
+        "field_path": "/treatments/0/details",
+        "label_excerpt": "Intravenous methylprednisolone and oral cyclophosphamide",
+        "source_quote": "He was discharged home on a weaning course of prednisolone and cyclophosphamide",
+        "explanation": "The treatment entry omits the explicitly stated continuation on a weaning course after discharge.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      }
+    ],
+    "summary": "The first candidate is rejected because the note supports the initial admission. The remaining candidates identify material omissions. Additional omissions include the initial treatment duration, peak diarrhea volume, second-admission timing and transfer, and the post-discharge weaning course."
+  },
+  "error": ""
+}

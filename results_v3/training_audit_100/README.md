@@ -1,11 +1,10 @@
-# Training-label audit: initial pilot completed
+# Training-label audit: 100-case source review complete
 
-The full 100-case semantic audit is **not complete**. A frozen training-only
-sample contains 50 random cases and 50 targeted cases. The initial ten cases
-(five from each arm) have model candidate reviews plus assistant source review.
-No audit process is currently running; 90 cases remain for semantic review.
+All 100 frozen training cases now have source-consistency reviews: 50 random and 50 targeted. The original ten-case pilot is preserved; 90 continuation cases have Luna candidate/source reviews, with reviewer provenance recorded. No audit process is active and no labels or training changed.
 
-Read [REPORT.md](REPORT.md) for the findings and next priorities.
+Read the [completion report](continuation_v2/REPORT.md), [case ledger](continuation_v2/combined_case_ledger.json), [findings CSV](continuation_v2/findings.csv), [parent disagreements](continuation_v2/parent_disagreements.json) and [independent verification](continuation_v2/verification.json). All 22 integrity checks and eight focused tests passed. Raw model-retained findings are not clinical adjudication or prevalence estimates.
+
+The [initial report](REPORT.md) and files below preserve the pilot and dataset-wide checks.
 
 - `structural_scan.json`: all 1,325 training examples, schema/mask/duplicate and
   exact train/development overlap checks.

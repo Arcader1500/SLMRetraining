@@ -1,0 +1,50 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "73",
+        "source_quote": "a 73 year old man",
+        "explanation": "The age matches the source."
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "4 weeks",
+        "source_quote": "for 4 weeks",
+        "explanation": "The wound duration matches the source."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Positive to acriflavine, negative to other allergens",
+        "source_quote": "The result showed a positive reaction (2+) to acriflavine while the rest were negative.",
+        "explanation": "The result preserves the positive acriflavine reaction and negative results for the other allergens."
+      },
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Improvement after one week, complete resolution after two weeks",
+        "source_quote": "At the end of two weeks, there was complete resolution of the ulcer",
+        "explanation": "The label captures the two-week resolution timeline."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Started from an insect bite",
+        "source_quote": "Further inquiry revealed history of self treatment with a yellow solution to clean his wound for 3 weeks.",
+        "explanation": "The label omits the material history of using an unidentified yellow solution to clean the wound for three weeks; the full note establishes this exposure before the current visit.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "Acriflavine usage was stopped",
+        "explanation": "The treatment section records the saline dressing but omits that acriflavine use was stopped, a source-stated treatment action relevant to the lesion's course.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label is generally consistent with the source but omits the prior topical exposure and the cessation of acriflavine use."
+  }
+}

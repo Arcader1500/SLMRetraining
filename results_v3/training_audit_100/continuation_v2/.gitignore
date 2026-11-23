@@ -1,0 +1,3 @@
+# Failed temporary directories from the first sandboxed CLI launch are not evidence.
+/tmp/
+*/run.lock

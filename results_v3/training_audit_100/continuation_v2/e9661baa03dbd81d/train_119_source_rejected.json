@@ -1,0 +1,64 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The source explicitly records negative autoimmune family history, but the physiological-context value contains only the absence of comorbidities.",
+        "source_quote": "negative family history for any autoimmune disease",
+        "field_path": "/patient medical history/physiological context"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The result includes the arterial narrowing but omits the separate negative retinal finding.",
+        "source_quote": "However, no sign of arteritis was observed in the retina.",
+        "field_path": "/medical examinations/0/result"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The treatment entries preserve doses but omit the source-stated route, schedules, and methylprednisolone course duration.",
+        "source_quote": "The patient was started on methylprednisolone 500 mg IV for 3 days, tablet prednisone 25mg BD, tablet aspirin 75 mg OD, tablet methotrexate 20g weekly, capsule gabapentin 75 mg BD, tablet folic acid 5 mg OD, and tablet atorvastatin 20 mg HS.",
+        "field_path": "/treatments"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/admission/0/date",
+        "label_excerpt": "",
+        "source_quote": "In October of 2020, the patient noticed that her radial pulses were weak and she was admitted.",
+        "explanation": "The admission has no date in the label, although the source dates it to October 2020.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "3 months starting in August 2019",
+        "source_quote": "started experiencing low-grade undocumented fever for 3 months in August 2019 which was continuous",
+        "explanation": "The label records the fever duration and start time but omits that it was continuous.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/1/details",
+        "label_excerpt": "",
+        "source_quote": "This lasted 30 days and was relieved on its own",
+        "explanation": "The label records the claudication duration and recurrence but omits that the initial episode resolved on its own, a material course detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "All three candidate omissions are supported. Additional material omissions are the admission date, the fever's continuous course, and the claudication episode's spontaneous resolution."
+  },
+  "error": ""
+}

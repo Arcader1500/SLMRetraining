@@ -1,0 +1,58 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "mild mental retardation",
+        "source_quote": "past medical history significant for mild mental retardation, obsessive compulsive disorder, and attention deficit hyperactivity disorder",
+        "explanation": "The label includes one history item; the complete note also identifies OCD and ADHD as patient history."
+      },
+      {
+        "field_path": "/symptoms/1/name of symptom",
+        "label_excerpt": "tachycardia",
+        "source_quote": "patient was tachycardic from 120 s to 140 s on presentation",
+        "explanation": "The symptom is represented, but its stated range and severity are omitted."
+      },
+      {
+        "field_path": "/symptoms/2/name of symptom",
+        "label_excerpt": "orthostatic hypotension",
+        "source_quote": "was also noted to have orthostatic hypotension, despite IV hydration in the ED",
+        "explanation": "The symptom is represented, but the label's shared details attach the hydration qualification without retaining that it occurred despite IV hydration for this symptom specifically; this is a potential association loss."
+      },
+      {
+        "field_path": "/treatments/1/name",
+        "label_excerpt": "fluoxetine (Prozac)",
+        "source_quote": "the patient was recently started on fluoxetine (Prozac) couple of months ago to help him with the “tic",
+        "explanation": "The source gives a treatment purpose, but the label omits it. The note is cut off mid-phrase, so the precise purpose wording is incomplete."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "mild mental retardation",
+        "source_quote": "past medical history significant for mild mental retardation, obsessive compulsive disorder, and attention deficit hyperactivity disorder",
+        "explanation": "OCD and ADHD are explicit patient history items absent from the history leaf; these are material relevant-history omissions.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/symptoms/1/name of symptom",
+        "label_excerpt": "tachycardia",
+        "source_quote": "patient was tachycardic from 120 s to 140 s on presentation",
+        "explanation": "The label omits the explicit 120–140 range, a material measurement characterizing the tachycardia.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/1/time",
+        "label_excerpt": "couple of months ago",
+        "source_quote": "recently started on fluoxetine (Prozac) couple of months ago to help him with the “tic",
+        "explanation": "The source explicitly states the medication was started to help with a tic, while the label omits this treatment purpose; because the note cuts off mid-phrase, details beyond that are uncertain.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate findings: relevant psychiatric history and tachycardia range are omitted. The fluoxetine purpose is stated only in an unfinished sentence, so only the stated purpose can be considered. The represented admission, symptoms, examinations, tests, and atomoxetine course are otherwise supported."
+  }
+}

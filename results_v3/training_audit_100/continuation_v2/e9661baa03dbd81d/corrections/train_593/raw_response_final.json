@@ -1,0 +1,45 @@
+{
+  "candidate_dispositions": [
+    {
+      "candidate_index": 1,
+      "disposition": "rejected",
+      "attribution": "uncertain",
+      "explanation": "The label ends at the last complete operative fact, “severe adhesion.” The unfinished “to” does not establish what the gallbladder was adherent to, so the label does not add unsupported detail.",
+      "source_quote": "severe adhesion to",
+      "field_path": "/surgeries/0/details"
+    }
+  ],
+  "added_findings": [
+    {
+      "field_path": "/medical examinations/0/result",
+      "label_excerpt": "",
+      "source_quote": "He was afebrile",
+      "explanation": "The label omits the explicit afebrile finding, a relevant negative from the presentation.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/medical examinations/0/result",
+      "label_excerpt": "",
+      "source_quote": "Leukocytosis was absent.",
+      "explanation": "The label omits the explicit absence of leukocytosis, a relevant negative finding.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/diagnosis tests/1/result",
+      "label_excerpt": "",
+      "source_quote": "our impression was of gallbladder carcinoma with direct involvement of adjacent structures with omental seeding.",
+      "explanation": "The CT result lists the observed findings but omits the source’s clinically material radiologic impression of gallbladder carcinoma with adjacent-structure involvement and omental seeding.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    }
+  ],
+  "summary": "The candidate’s proposed surgery-detail issue is unsupported because the label does not complete the cut-off phrase. The label omits relevant negative findings and the stated radiologic impression."
+}

@@ -1,0 +1,7 @@
+# Source spot checks: first ten remaining cases
+
+These are direct assistant source checks of the next ten interleaved sample IDs. They are not Luna inference, parent adjudication, clinician review, or claims about clinical truth. Frozen notes are cut off mid-sentence; no missing continuation was inferred. Projection evidence is recorded separately from source-to-label findings.
+
+The review found likely omissions in the en-route vital signs (1480), prednisone course duration (263), fetal anatomy finding (149), qualified radiology impression (783), symptom timing/severity (725), and ibuprofen frequency (1184). Train:1298's Lamotrigine purpose and serial MRI recommendation merits a coverage check. Train:1220's splenomegaly already appears elsewhere, so omission from imaging is a cross-section duplication ambiguity. In train:333, treatment chronology needs careful review: the note says planned radiation was not received after the first surgery, then later says he was kept in hospital to initiate radiation after the third; do not collapse the two events. Train:940 labels cystgastrostomy as planned but not completed in its treatment entry, so the surgery type alone is not a whole-label error.
+
+The JSON contains exact source spans, label pointers/excerpts or section paths, explanations, and projection provenance. Projection drops do not independently establish a defect. Findings remain provisional source-review observations pending parent review.

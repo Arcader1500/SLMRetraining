@@ -1,0 +1,61 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "Ambulance transport to a hospital is documented, but the note does not establish inpatient admission; the label also places the inability to walk or run under an admission event.",
+        "source_quote": "She was taken to the hospital (Department of Orthopaedic Surgery, Kyoto Interdisciplinary Institute Hospital of Community Medicine, Kyoto, Japan) by ambulance.",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The symptom entry names the earlier thigh pain, so its location should remain the anterior left thigh. The left hip is the location of a later, distinct pain episode.",
+        "source_quote": "She developed pain in the anterior part of the left thigh while training nine days before a prefectural track meet",
+        "field_path": "/symptoms/0/location"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "These details describe the later severe hip pain and resulting inability to walk or run, not the earlier thigh pain represented by this symptom entry.",
+        "source_quote": "Seven days later, she suddenly developed severe pain in the left hip while running, and she was thereafter unable to walk or run.",
+        "field_path": "/symptoms/0/details"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The diagnosis test result omits material details describing the fracture displacement and lack of continuity between fragments.",
+        "source_quote": "The Devas classification of the fracture was a displaced type []. The femoral head was adducted, and the shaft had been displaced upward by 2.5 cm. There was no continuity between the proximal and distal fragments.",
+        "field_path": "/diagnosis tests"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Had not reached menarche",
+        "source_quote": "Her coaches had placed her on a strict diet to keep her weight low since she was 12 years old. In particular, she had never eaten dinner for two weeks before any track meets.",
+        "explanation": "The label omits sustained restrictive eating and the pre-meet dinner restriction, material physiological context alongside the documented lack of menarche.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Had not reached menarche",
+        "source_quote": "She had run about 210 km a week during her junior high school years and 140 km a week during her high school years on a tartan track.",
+        "explanation": "The label omits the unusually high weekly running volume, relevant physiological and training context for the presentation.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The four candidate findings are supported. The label also omits material dietary restriction and high-volume running history."
+  }
+}

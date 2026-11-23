@@ -1,0 +1,3 @@
+# Isolated analysis environment; does not change training/judging environments.
+numpy==2.5.5
+scipy==1.18.1

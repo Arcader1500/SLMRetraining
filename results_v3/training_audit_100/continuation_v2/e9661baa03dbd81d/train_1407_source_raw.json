@@ -1,0 +1,45 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label does not represent this unsuccessful treatment attempt or its reason for failure.",
+        "source_quote": "Attempts at treating her effusion with frequent hemodialysis and ultrafiltration were unsuccessful as she had frequent and symptomatic hypotension.",
+        "field_path": "/treatments"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label names the antiviral regimen and says it was tolerated, but omits the stated 24-week course duration.",
+        "source_quote": "A 24-week course of ombitasvir, paritaprevir, and ritonavir plus dasabuvir was started and was well tolerated.",
+        "field_path": "/treatments/1/name"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Right pleural effusion",
+        "source_quote": "Chest X-ray [] showed massive right pleural effusion.",
+        "explanation": "The X-ray result omits the source's material severity descriptor, “massive.”",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Dyspnea and large right-sided pleural effusion",
+        "source_quote": "presented to the emergency department (ED) with dyspnea for 4 days.",
+        "explanation": "The first presentation is explicitly to the ED, but that care setting is omitted from the admission reason. This does not imply inpatient admission.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Both candidate treatment omissions are supported. The label also omits the massive severity of the initial X-ray finding and the ED setting of the initial presentation."
+  }
+}

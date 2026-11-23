@@ -1,0 +1,38 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The label’s HCC history is supported by the note; the candidate itself also states that no discrepancy is established.",
+        "source_quote": "He was never on medications until he was diagnosed as having HCC.",
+        "field_path": "/patient medical history/physiological context"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Diagnosed with HCC",
+        "source_quote": "He did not have any past medical or surgical history. He was a former tobacco smoker and stopped smoking approximately 20 years ago... He drank alcohol very rarely and not significantly. He did not have family history of any significance. ... He has no known environmental or drug allergies.",
+        "explanation": "The physiological context includes HCC but omits the source-stated negative medical and surgical history, former smoking history, rare alcohol use, negative family history, and absence of known allergies. These are material history details expressible in this schema field.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/name of symptom",
+        "label_excerpt": "Upper back pain",
+        "source_quote": "The symptoms had worsened, and he noticed some difficulty with walking.",
+        "explanation": "The symptom entry omits worsening and difficulty walking, clinically relevant context for the presenting symptoms. The source separately reports no gait disturbance on examination; that does not erase the reported walking difficulty.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The sole candidate finding is rejected because the HCC history is explicitly supported. The label omits material history and symptom context documented in the note."
+  },
+  "error": ""
+}

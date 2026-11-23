@@ -1,0 +1,140 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The note places the second emergency presentation one year after the first surgery, but does not explicitly date the damage control surgery itself. The label’s timing is plausible from the encounter sequence, though not established for the operation.",
+        "source_quote": "One year later, the patient was brought to the emergency department by her family for altered mental status.",
+        "field_path": "/surgeries/1/time"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The note says the patient was treated per sepsis protocol but does not explicitly diagnose sepsis or establish an admission. Including sepsis as an admission reason goes beyond the stated facts.",
+        "source_quote": "Initial workup showed tachycardia, hypotension, leukocytosis and elevated creatinine which was treated per sepsis protocol.",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label records the later 40 cm resection but omits the initial damage control operation’s removal of two necrotic bowel segments totaling 5 feet and the Abthera closure. These are material operative details expressible in the surgery details field.",
+        "source_quote": "There were no signs of gastrointestinal perforation but two segments of necrotic small bowel, 5 feet in total, were removed and the abdomen was sealed with Abthera.",
+        "field_path": "/surgeries/1/details"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label names methylprednisolone but omits the stated course and its relation to the acute lung disease exacerbation. This context is supported by the source and relevant to the treatment entry.",
+        "source_quote": "Home medications included a course of methylprednisolone for acute exacerbation of lung disease.",
+        "field_path": "/treatments"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Leukocytosis with normal lactate level",
+        "source_quote": "Initial workup showed tachycardia, hypotension, leukocytosis and elevated creatinine which was treated per sepsis protocol. ... Serum lactate was also elevated.",
+        "explanation": "The label’s labs result captures the first presentation’s normal lactate but omits the materially different second-presentation findings of elevated creatinine and elevated lactate. The two encounters should not be conflated.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/surgeries/1/details",
+        "label_excerpt": "Another 40 cm of non-viable small bowel removed in a subsequent surgery, leaving the patient with two small bowel anastomosis",
+        "source_quote": "Her abdomen was re-explored and closed after another 2 days.",
+        "explanation": "The label records the later 40 cm resection but omits the subsequent abdominal re-exploration and closure, a material operative event supported by the note.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidates identify a plausible timing ambiguity, an unsupported sepsis admission reason, and material omissions in the operative and treatment records. The label also omits significant second-presentation laboratory findings and the later abdominal closure."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The note anchors “One year later” to the second emergency presentation, and does not explicitly date the damage control surgery relative to the first surgery. The label assigns that interval to the surgery, so this is a chronology ambiguity.",
+        "source_quote": "One year later, the patient was brought to the emergency department by her family for altered mental status.",
+        "field_path": "/surgeries/1/time"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The label states “sepsis” as an admission reason, but the note only says the initial workup “was treated per sepsis protocol”; it does not explicitly diagnose sepsis or establish an inpatient admission.",
+        "source_quote": "Initial workup showed tachycardia, hypotension, leukocytosis and elevated creatinine which was treated per sepsis protocol.",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The surgery details omit material facts from the first damage control operation: two necrotic bowel segments totaling 5 feet were removed and the abdomen was sealed with Abthera. The label’s existing surgery details path can capture those facts.",
+        "source_quote": "There were no signs of gastrointestinal perforation but two segments of necrotic small bowel, 5 feet in total, were removed and the abdomen was sealed with Abthera.",
+        "field_path": "/surgeries/1/details"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "downgraded",
+        "attribution": "projection_loss",
+        "explanation": "The label omits that methylprednisolone was a home medication course for an acute lung disease exacerbation. The note does not state that the medication was prescribed specifically to treat that exacerbation, so the omission is limited to its stated context.",
+        "source_quote": "Home medications included a course of methylprednisolone for acute exacerbation of lung disease.",
+        "field_path": "/treatments"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Emergent laparotomy",
+        "source_quote": "Exploration of the abdominal viscera revealed no evidence of inflammation, necrosis or perforation.",
+        "explanation": "The label records the laparotomy but omits the material operative finding that exploration revealed no inflammation, necrosis, or perforation. The existing surgery Type/details fields can carry this outcome.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/1/result",
+        "label_excerpt": "Revealed a non-perforated gastric ulcer",
+        "source_quote": "Upper endoscopy was performed, revealing a non-perforated gastric ulcer which was treated with medical management until the pain resolved.",
+        "explanation": "The label records the ulcer finding and medical management, but omits that treatment continued until the pain resolved, a material treatment response and endpoint expressible in the existing treatment entry.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/1/name",
+        "label_excerpt": "Medical management",
+        "source_quote": "Upper endoscopy was performed, revealing a non-perforated gastric ulcer which was treated with medical management until the pain resolved.",
+        "explanation": "The treatment entry omits the source-stated association between medical management and the non-perforated gastric ulcer, including that it continued until pain resolved. This is material treatment context expressible in existing treatment fields.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/2/name",
+        "label_excerpt": "Sepsis protocol",
+        "source_quote": "Initial workup showed tachycardia, hypotension, leukocytosis and elevated creatinine which was treated per sepsis protocol.",
+        "explanation": "The label names the sepsis protocol but omits the associated initial workup findings of tachycardia, hypotension, leukocytosis, and elevated creatinine. These findings are material context for the treatment entry and fit existing treatment details.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The label adds sepsis as an admission reason without an explicit diagnosis or evidence of inpatient admission, and assigns the one-year interval to surgery although the note anchors it to the later emergency presentation. It also omits material operative and treatment context; the methylprednisolone finding is narrowed because the note does not explicitly state its prescribing purpose."
+  }
+}

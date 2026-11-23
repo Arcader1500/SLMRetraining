@@ -1,0 +1,33 @@
+{
+  "candidate_dispositions": [
+    {
+      "candidate_index": 1,
+      "disposition": "confirmed",
+      "attribution": "inherited",
+      "explanation": "The treatments section is empty even though the note documents prescribed antipyretics and later appropriate antibiotics. These are source-supported treatment events omitted from the label.",
+      "source_quote": "with prescription of antipyretics",
+      "field_path": "/treatments"
+    },
+    {
+      "candidate_index": 2,
+      "disposition": "confirmed",
+      "attribution": "inherited",
+      "explanation": "The CT result omits the explicit qualification that there was no significant vessel narrowing or occlusion.",
+      "source_quote": "without significant narrowing or occlusion of vessels",
+      "field_path": "/medical examinations/3/result"
+    }
+  ],
+  "added_findings": [
+    {
+      "field_path": "/symptoms/0/details",
+      "label_excerpt": "Accompanying chills and headache",
+      "source_quote": "spiked 2-3 times per day",
+      "explanation": "The label omits the documented daily frequency of the fever spikes, a material symptom detail.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "inherited"
+    }
+  ],
+  "summary": "Both candidate omissions are supported by the note. The label also omits the fever’s documented spike frequency."
+}

@@ -1,0 +1,32 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The note says she was admitted with shortness of breath and mild chest pain, then says the workup revealed DVT and PTE. The label assigns the workup findings as the admission reason.",
+        "source_quote": "was admitted to the emergency service of a community hospital with shortness of breath and mild chest pain. The clinical workup revealed deep vein thrombosis in her right leg and bilateral massive PTE.",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label preserves the dose but omits the explicitly stated twice-daily frequency, which can be captured with the treatment dosage.",
+        "source_quote": "she was scheduled for surgery under enoxaparin 0.8 mL b.i.d.",
+        "field_path": "/treatments/1/dosage"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The note specifically reports worsening of the neurological examination; “condition worsened” is broader, but may be a shorthand for that reported deterioration rather than a distinct claim about overall condition.",
+        "source_quote": "Despite IV heparin treatment for almost 48 hours, her neurological examination did not improve and got worsened.",
+        "field_path": "/treatments/2/reaction to treatment"
+      }
+    ],
+    "added_findings": [],
+    "summary": "Confirmed the admission-reason role discrepancy and omitted enoxaparin frequency. Downgraded the heparin-response wording as a scope ambiguity. No additional material omissions were identified."
+  }
+}

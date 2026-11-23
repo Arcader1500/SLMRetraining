@@ -1,0 +1,130 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The first tamoxifen course is explicitly stated to last 5 years; the treatment time leaf omits that duration.",
+        "source_quote": "she was prescribed adjuvant tamoxifen for 5 years.",
+        "field_path": "/treatments/0/time"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "This entry accurately records the second tamoxifen course. The source gives weak ER positivity as context, but omission of that rationale or the word “again” does not make the treatment name materially incomplete.",
+        "source_quote": "In view of the albeit weak ER positivity, she was started again on tamoxifen.",
+        "field_path": "/treatments/2/name"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The cited passage states the 2-year duration for bisphosphonate therapy with zoledronic acid, represented by treatments/6. It does not establish that duration for the docetaxel course at treatments/4.",
+        "source_quote": "a 2-year course of bisphosphonate therapy with zoledronic acid infusions.",
+        "field_path": "/treatments/4/time"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The source says the overall response was maintained for 2 years during ongoing trastuzumab, but does not attribute that response specifically to trastuzumab. The label’s placement is potentially ambiguous; the excerpt does not establish a clear error.",
+        "source_quote": "She continued indefinitely on the three weekly infusions of trastuzumab.\nThe response was maintained for 2 years",
+        "field_path": "/treatments/7/reaction to treatment"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/treatments/6/time",
+        "label_excerpt": "Post-August 2004",
+        "source_quote": "a 2-year course of bisphosphonate therapy with zoledronic acid infusions.",
+        "explanation": "The existing treatment time leaf omits the explicitly stated 2-year course duration for bisphosphonate therapy with zoledronic acid.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/7/time",
+        "label_excerpt": "Indefinitely from post-August 2004",
+        "source_quote": "She continued indefinitely on the three weekly infusions of trastuzumab.",
+        "explanation": "The label preserves the indefinite course but omits the source-stated three-weekly infusion frequency from this treatment entry.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The 5-year tamoxifen duration is omitted. The 2-year zoledronic-acid course belongs to treatments/6, and trastuzumab’s three-weekly frequency is also missing. The cited tamoxifen-context concern is not a material defect; the response linkage to trastuzumab remains ambiguous."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label gives the post-surgery timing but omits the stated five-year duration of this treatment course.",
+        "source_quote": "she was prescribed adjuvant tamoxifen for 5 years.",
+        "field_path": "/treatments/0/time"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The label names the second tamoxifen course, and the surrounding label records the tumor receptor findings. Weak ER positivity is stated as rationale, but the claim that a switch from the earlier course was omitted is not established: the source says treatment was started again on tamoxifen, while the earlier course was prescribed for five years.",
+        "source_quote": "The carcinoma was only focally ER positive and PR negative, but c-erbB2 strongly positive. She received adjuvant chemotherapy [6 cycles FEC] and chest wall radiotherapy, and in view of the albeit weak ER positivity, she was started again on tamoxifen.",
+        "field_path": "/treatments/2/name"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "This omission is attributed to the wrong treatment entry. The two-year course refers to zoledronic acid infusions, not the docetaxel and trastuzumab entry at this path.",
+        "source_quote": "a 2-year course of bisphosphonate therapy with zoledronic acid infusions.",
+        "field_path": "/treatments/4/time"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The source says the response was maintained for two years after describing several treatments. It does not expressly attribute that response to trastuzumab alone, but the temporal sequence does not establish an erroneous causal claim in the label.",
+        "source_quote": "The response was maintained for 2 years, but slight nausea and newly abnormal liver function biochemistry led to a CT scan in August 2006.",
+        "field_path": "/treatments/7/reaction to treatment"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/treatments/6/time",
+        "label_excerpt": "Post-August 2004",
+        "source_quote": "a 2-year course of bisphosphonate therapy with zoledronic acid infusions.",
+        "explanation": "The existing time leaf omits the source-stated duration of the zoledronic acid course, a material treatment-course detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/7/time",
+        "label_excerpt": "Indefinitely from post-August 2004",
+        "source_quote": "She continued indefinitely on the three weekly infusions of trastuzumab.",
+        "explanation": "The label preserves indefinite continuation but omits the source-stated three-weekly infusion frequency from the existing treatment time leaf.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/8/time",
+        "label_excerpt": "Post-August 2006",
+        "source_quote": "It was decided to continue with trastuzumab but to treat again with docetaxel chemotherapy. She received another 6 cycles and the diameter of the metastasis reduced by more than 50%. It was then considered operable and following an extended right hepatectomy in March 2007, she made an",
+        "explanation": "The note states that the metastasis became operable before the hepatectomy, but the label's surgery entry records only its type and date. The source is cut off before the patient's postoperative outcome, so no outcome is inferred.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The first-course tamoxifen duration is omitted. The two-year zoledronic-acid duration is missing from treatment 6, while the candidate placed that omission at the docetaxel/trastuzumab time path. The later trastuzumab frequency is also omitted. The note says the liver metastasis was considered operable before hepatectomy; its postoperative outcome is cut off."
+  }
+}

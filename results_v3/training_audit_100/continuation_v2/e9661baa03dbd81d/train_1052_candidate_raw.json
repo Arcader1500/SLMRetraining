@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Complaint of facial and intraoral swelling on the posterior buccal aspect of the left-side mandible",
+        "source_quote": "with a complaint of facial and intraoral swelling on the posterior buccal aspect the left-side mandible.",
+        "explanation": "The label accurately captures the reason for referral."
+      },
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Removal of the lesion using a chisel and rotary instruments via an intraoral approach, and curettage of the cavity",
+        "source_quote": "the lesion was totally removed using a chisel and rotary instruments via an intraoral approach, and curettage of the cavity was undertaken ().",
+        "explanation": "The label preserves the performed procedure and curettage."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Solitary, round, 3 × 3 cm well-defined radio-opaque lesion without a radiolucent rim of mandible",
+        "source_quote": "A solitary, round, 3 × 3 cm well-defined radio-opaque lesion without a radiolucent rim of mandible was detected with panoramic radiography and computed tomography (CT).",
+        "explanation": "The result accurately captures the imaging finding."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "No previous facial trauma",
+        "source_quote": "her medical history was not contributory.",
+        "explanation": "The label omits the explicitly stated noncontributory medical history, a material history fact for this schema field.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/surgeries",
+        "label_excerpt": "",
+        "source_quote": "the lesion was totally removed using a chisel and rotary instruments via an intraoral approach, and curettage of the cavity was undertaken ().",
+        "explanation": "Prior extraction of the mandibular first molar is omitted from the surgeries section. The note describes it as previously extracted, a relevant prior procedure that can be represented in this section.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/0/time",
+        "label_excerpt": "Postoperatively",
+        "source_quote": "Postoperatively, the patient received systemic antibiotic, analgesic, and mouthwash for 7 days.",
+        "explanation": "The label omits the explicitly stated 7-day treatment duration, which is material course timing.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate findings are omissions of medical history, a relevant prior extraction, and the postoperative treatment duration."
+  }
+}

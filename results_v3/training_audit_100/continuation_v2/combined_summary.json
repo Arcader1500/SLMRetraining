@@ -1,0 +1,63 @@
+{
+  "status": "100_case_source_consistency_audit_complete",
+  "selected_cases": 100,
+  "pilot_cases": 10,
+  "continuation_cases": 90,
+  "continuation_run_id": "e9661baa03dbd81d",
+  "continuation_review_methods": {
+    "gpt-6-luna via authenticated Codex CLI; independent source review": 72,
+    "gpt-6-luna Codex CLI supplemental source review; exact evidence validated": 17,
+    "Luna collaboration subagent source review with file tools; not CodexJudge output or clinician review": 1
+  },
+  "interpretation": "Descriptive diagnostic findings; protocols and reviewer types differ. No pooled training-set prevalence or clinical validity claim.",
+  "by_group": {
+    "random": {
+      "cases": 50,
+      "cases_with_diagnostic_issue": 50,
+      "diagnostic_findings": 185,
+      "classifications": {
+        "material_omission": 168,
+        "clear_error": 17
+      },
+      "candidate_dispositions": {
+        "confirmed": 79,
+        "downgraded": 17,
+        "rejected": 25
+      },
+      "diagnostic_attributions": {
+        "not_recoded": 5,
+        "v2 treatments.duration dropped by projection": 1,
+        "v2 diagnosis tests.condition dropped by projection": 1,
+        "projection_loss": 131,
+        "inherited": 21,
+        "uncertain": 26
+      },
+      "ambiguity_records": 21,
+      "rejected_records": 25
+    },
+    "targeted": {
+      "cases": 50,
+      "cases_with_diagnostic_issue": 48,
+      "diagnostic_findings": 185,
+      "classifications": {
+        "material_omission": 174,
+        "clear_error": 11
+      },
+      "candidate_dispositions": {
+        "rejected": 19,
+        "downgraded": 19,
+        "confirmed": 84
+      },
+      "diagnostic_attributions": {
+        "not_recoded": 1,
+        "v2 treatments.frequency dropped by projection": 2,
+        "v2 treatments.details dropped by projection": 1,
+        "projection_loss": 134,
+        "inherited": 36,
+        "uncertain": 11
+      },
+      "ambiguity_records": 23,
+      "rejected_records": 24
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The label assigns the lower-left-abdomen location to intermittent diarrhea, but the note locates the pain there. This is a symptom-location linkage error.",
+        "source_quote": "and pain in the lower left abdomen",
+        "field_path": "/symptoms/0/location"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The label omits the prior endoscopic polypectomy, a clinically relevant procedure with a stated pathology result. The existing surgeries path can represent it.",
+        "source_quote": "An endoscopic polypectomy was performed in 2010, and postoperative pathology revealed inflammatory polyps.",
+        "field_path": "/surgeries"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "4 to 6 times a day",
+        "source_quote": "The symptom could relieve for 10 years.",
+        "explanation": "The label records episode frequency but omits the source-stated 10-year symptom course, a material duration detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "4 to 6 times a day",
+        "source_quote": "The patient experienced aggravated symptoms from 2013.",
+        "explanation": "The label omits the source-stated worsening from 2013, a material change in symptom chronology.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      }
+    ],
+    "summary": "Both candidate findings are supported by the note. The label also omits the stated 10-year symptom course and worsening from 2013."
+  }
+}

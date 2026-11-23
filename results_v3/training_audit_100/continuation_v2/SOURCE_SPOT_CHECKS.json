@@ -1,0 +1,167 @@
+{
+  "version": "continuation_v2_source_spot_checks",
+  "reviewer": "assistant source review; not parent adjudication or clinician review",
+  "cases": [
+    {
+      "case_id": "train:1480",
+      "findings": [
+        {
+          "category": "omission",
+          "classification": "material_omission",
+          "field_path": "/medical examinations/0/result",
+          "label_excerpt": "Blood pressure of 79/35, pulse of 47, oral temperature of 35.3\u00b0C, respiratory rate of 18, oxygen saturation of 100 percent",
+          "source_quote": "En route to the ED via ambulance, the patient was noted to have a pulse in the thirties and a systolic blood pressure of 50 mmHg.",
+          "explanation": "The label records arrival vitals but omits the materially more severe en-route bradycardia and hypotension, which can be retained as a separate measurement/result.",
+          "projection_provenance": {
+            "section": "patient information",
+            "dropped_key": "weight",
+            "value": "87.3 kg",
+            "interpretation": "Mechanical projection loss only; not independently counted."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "train:263",
+      "findings": [
+        {
+          "category": "omission",
+          "classification": "material_omission",
+          "field_path": "/treatments",
+          "label_excerpt": "",
+          "source_quote": "One gram of hydrocortisone IV was infused and 20 mg prednisone was prescribed per day for 5 days.",
+          "explanation": "The prednisone duration is absent; distinguish the infusion from the prescribed five-day course. The precise dosage strings may carry course timing without new paths.",
+          "projection_provenance": {
+            "section": "patient medical history",
+            "dropped_key": "smoking status",
+            "value": "Never smoked cigarettes",
+            "interpretation": "Mechanical projection loss only; not independently counted."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "train:1298",
+      "findings": [
+        {
+          "category": "omission",
+          "classification": "material_omission",
+          "field_path": "/treatments",
+          "label_excerpt": "",
+          "source_quote": "Neurosurgery declined surgical intervention, recommending Lamotrigine as seizure prophylaxis and serial MRIs to examine progression of the mass.",
+          "explanation": "The label includes Lamotrigine but omits its explicit prophylactic purpose and the serial MRI monitoring recommendation; assess whether both are material under the current coverage rule.",
+          "projection_provenance": {
+            "section": "admission",
+            "dropped_key": "care center details",
+            "value": "Neurology service for a video electroencephalogram (vEEG)",
+            "interpretation": "Mechanical projection loss only; not independently counted."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "train:149",
+      "findings": [
+        {
+          "category": "omission",
+          "classification": "material_omission",
+          "field_path": "/diagnosis tests",
+          "label_excerpt": "",
+          "source_quote": "The anatomy scan however showed a right multicystic dysplastic kidney in the fetus with no other abnormality ().",
+          "explanation": "The fetal right kidney abnormality is explicit and material but absent from the diagnosis-test array. Preserve that the finding concerns the fetus, not the mother.",
+          "projection_provenance": {
+            "section": "patient medical history",
+            "dropped_key": "exercise frequency",
+            "value": "Fit and well",
+            "interpretation": "Mechanical projection loss only; not independently counted."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "train:1220",
+      "findings": []
+    },
+    {
+      "case_id": "train:333",
+      "findings": [
+        {
+          "category": "chronology",
+          "classification": "policy_ambiguity",
+          "field_path": "/treatments/0/time",
+          "label_excerpt": "After the third craniotomy",
+          "source_quote": "His hemiparesis improved and he did not receive brain radiation to the cavity or other intracranial lesions as planned.",
+          "explanation": "The quote concerns the first surgery; later the note says he was kept in hospital to initiate radiation after the third. The treatment time is consistent with that later event, so no clear error is established.",
+          "projection_provenance": {
+            "section": "admission",
+            "dropped_key": "date",
+            "value": "1 month after primary surgery",
+            "interpretation": "Mechanical projection loss only; not independently counted."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "train:783",
+      "findings": [
+        {
+          "category": "omission",
+          "classification": "material_omission",
+          "field_path": "/diagnosis tests/0/result",
+          "label_excerpt": "well-defined mass in the left parapharyngeal space",
+          "source_quote": "Radiologic features were consistent with glomus vagale.",
+          "explanation": "The imaging result omits the source-qualified radiologic impression; preserve it as consistent with, not definitive histology.",
+          "projection_provenance": {
+            "section": "symptoms",
+            "dropped_key": "intensity of symptom",
+            "value": "mild",
+            "interpretation": "Mechanical projection loss only; not independently counted."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "train:725",
+      "findings": [
+        {
+          "category": "omission",
+          "classification": "material_omission",
+          "field_path": "/symptoms/0/details",
+          "label_excerpt": "No pain radiating to arms or legs",
+          "source_quote": "The pain arose each night 2 h after she went to sleep, and it was described as unbearable.",
+          "explanation": "The label omits the explicit nightly timing relative to sleep and severe intensity. A retained later time description does not capture this earlier pattern; preserve both periods distinctly.",
+          "projection_provenance": {
+            "section": "admission",
+            "dropped_key": "care center details",
+            "value": "Obstetrics department",
+            "interpretation": "Mechanical projection loss only; not independently counted."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "train:1184",
+      "findings": [
+        {
+          "category": "omission",
+          "classification": "material_omission",
+          "field_path": "/treatments/1/dosage",
+          "label_excerpt": "800 mg",
+          "source_quote": "Ibuprofen 800 mg 1\u20133/daily for musculoskeletal pain.",
+          "explanation": "The retained dose omits the source frequency range (1\u20133 daily) and treatment purpose. Frequency is material medication context; keep the range as stated.",
+          "projection_provenance": {
+            "section": "patient information",
+            "dropped_key": "weight",
+            "value": "188.2 pounds",
+            "interpretation": "Mechanical projection loss only; not independently counted."
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "train:940",
+      "findings": []
+    }
+  ],
+  "validation_status": "passed_exact_note_quote_leaf_path_and_projection_drop_checks"
+}

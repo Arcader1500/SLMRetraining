@@ -1,0 +1,79 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label retains the dose but omits the stated intramuscular route, weekly frequency, and two-year duration.",
+        "source_quote": "25 mg of methotrexate intramuscularly once a week for two years",
+        "field_path": "/treatments/0/dosage"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label retains the dose but omits the stated oral route, daily frequency, and five-year duration.",
+        "source_quote": "5 mg of prednisone orally and daily for five years",
+        "field_path": "/treatments/1/dosage"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label retains the dose but omits the stated oral route, daily frequency, and two-year duration.",
+        "source_quote": "chloroquine 400 mg orally and daily for two years",
+        "field_path": "/treatments/2/dosage"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label records the daily dose but omits the stated seven-day course duration.",
+        "source_quote": "imipenem 500 mg/ day for 7 days",
+        "field_path": "/treatments/4/dosage"
+      },
+      {
+        "candidate_index": 5,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label records worsening renal function and completion after adjustment but omits that amphotericin was discontinued during the last few doses before it was completed after dose adjustments.",
+        "source_quote": "During the last few doses, amphotericin treatment was discontinued due to worsening of the renal function, but the treatment was completed after dose adjustments",
+        "field_path": "/treatments/5/reaction to treatment"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "history of cutaneous leishmaniasis during childhood",
+        "source_quote": "During her childhood, the patient used to live in an endemic county for cutaneous leishmaniasis (São Lourenço da Serra - São Paulo) and described the presence of a long-lived skin ulcer, which had appeared at that time and diagnosed as cutaneous leishmaniasis.",
+        "explanation": "The history captures childhood cutaneous leishmaniasis but omits the clinically relevant history of residence in an endemic county and the long-lived ulcer at that time.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Positive",
+        "source_quote": "Leishmania PCR analysis from the aspirate of the lesion was positive",
+        "explanation": "The positive result is recorded, but the label omits that the PCR sample was an aspirate from the lesion, a material detail linking the result to the lesion under investigation.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/5/dosage",
+        "label_excerpt": "3 mg/kg/day",
+        "source_quote": "3 mg/kg/day of a liposomal amphotericin protocol for ten days (total cumulative dose of 35 mg)",
+        "explanation": "The label retains the daily dose but omits the stated ten-day course and total cumulative dose of 35 mg, material treatment-course details.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "All five candidate omissions are supported by the source. Additional material omissions include contextual details of the childhood leishmaniasis history, the aspirate source for the positive PCR, and the amphotericin course duration and cumulative dose."
+  }
+}

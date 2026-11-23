@@ -1,0 +1,7 @@
+{
+  "command": ".venv/deepeval-tools/Scripts/python.exe -m unittest tests.test_training_audit tests.test_training_audit_continuation -v",
+  "tests": 8,
+  "result": "passed",
+  "runtime_seconds": 11.386,
+  "scope": "Frozen sampling, quote evidence, restricted span recovery, calibration appendix, interleaved resume and candidate disposition coverage; no model inference from tests."
+}

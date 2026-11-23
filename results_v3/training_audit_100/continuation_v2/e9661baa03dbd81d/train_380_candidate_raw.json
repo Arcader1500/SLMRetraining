@@ -1,0 +1,110 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "prior open cholecystectomy",
+        "source_quote": "prior open cholecystectomy",
+        "explanation": "The label correctly records the prior procedure as medical history."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Small bowel obstruction with intramural small bowel pneumatosis and extensive portal venous gas within the left hepatic lobe",
+        "source_quote": "significant for small bowel obstruction with intramural small bowel pneumatosis and extensive portal venous gas (PVG) within the left hepatic lobe.",
+        "explanation": "The first abdominal CT result is supported by the note."
+      },
+      {
+        "field_path": "/symptoms/2/details",
+        "label_excerpt": "Culminating in an episode of bowel incontinence",
+        "source_quote": "They reported 2 days of abnormal behavior and confusion culminating in an episode of bowel incontinence.",
+        "explanation": "The label preserves the reported symptom sequence."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/surgeries/1/details",
+        "label_excerpt": "Another 40 cm of non-viable small bowel removed in a subsequent surgery, leaving the patient with two small bowel anastomosis",
+        "source_quote": "Two days later, her abdomen was re-explored and another 40 cm of non-viable small bowel was removed, leaving her with two small bowel anastomosis.",
+        "explanation": "This detail describes a re-exploration two days after the damage-control surgery, but it is nested under that initial surgery entry. The label therefore links the 40 cm resection to the wrong surgery event.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/surgeries",
+        "label_excerpt": "",
+        "source_quote": "There were no signs of gastrointestinal perforation but two segments of necrotic small bowel, 5 feet in total, were removed and the abdomen was sealed with Abthera.",
+        "explanation": "The label omits the initial operation's removal of 5 feet of necrotic bowel and the abdomen being sealed with Abthera, both material details of the damage-control surgery.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "Medical management",
+        "source_quote": "Upper endoscopy was performed, revealing a non-perforated gastric ulcer which was treated with medical management until the pain resolved.",
+        "explanation": "The label records medical management but omits the stated treatment outcome that the pain resolved.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label contains supported history, symptom, and test facts, but it mislinks a later resection to the initial surgery and omits material surgical details and the documented resolution of pain."
+  },
+  "retry": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Congestive heart failure, interstitial lung disease, chronic obstructive pulmonary disease, prior open cholecystectomy",
+        "source_quote": "Relevant medical history includes congestive heart failure, interstitial lung disease, chronic obstructive pulmonary disease and prior open cholecystectomy.",
+        "explanation": "The historical conditions and prior surgery are supported."
+      },
+      {
+        "field_path": "/surgeries/1/details",
+        "label_excerpt": "Another 40 cm of non-viable small bowel removed in a subsequent surgery, leaving the patient with two small bowel anastomosis",
+        "source_quote": "Two days later, her abdomen was re-explored and another 40 cm of non-viable small bowel was removed, leaving her with two small bowel anastomosis.",
+        "explanation": "The resection amount and resulting anastomoses are stated in the note."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Leukocytosis with normal lactate level",
+        "source_quote": "Labs showed leukocytosis with normal lactate level.",
+        "explanation": "This result is supported for the first presentation."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/surgeries/1/time",
+        "label_excerpt": "One year after the first surgery",
+        "source_quote": "One year later, the patient was brought to the emergency department by her family for altered mental status.",
+        "explanation": "The note dates the second emergency presentation one year later, but does not establish that the damage control surgery itself occurred exactly one year after the first surgery. The timing may be inherited from the encounter context, so this is a policy ambiguity.",
+        "category": "chronology",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "altered mental status and sepsis",
+        "source_quote": "Initial workup showed tachycardia, hypotension, leukocytosis and elevated creatinine which was treated per sepsis protocol.",
+        "explanation": "The note reports altered mental status and treatment per sepsis protocol, but does not explicitly state a sepsis diagnosis or inpatient admission. Adding sepsis as an admission reason is unsupported by the provided note.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/surgeries/1/details",
+        "label_excerpt": "Another 40 cm of non-viable small bowel removed in a subsequent surgery, leaving the patient with two small bowel anastomosis",
+        "source_quote": "Two days later, her abdomen was re-explored and another 40 cm of non-viable small bowel was removed, leaving her with two small bowel anastomosis.",
+        "explanation": "The note separately describes an initial damage control operation removing two segments totaling 5 feet, followed by the later 40 cm resection. The surgery Type does not preserve the initial operation's bowel removal or Abthera closure details, a potentially material loss across the surgery entries.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "Home medications included a course of methylprednisolone for acute exacerbation of lung disease.",
+        "explanation": "The treatment entry names methylprednisolone but omits the source-supported course for an acute exacerbation of lung disease. That indication/context is material to the treatment record.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate issues include unsupported sepsis as an admission reason, uncertainty in assigning the one-year interval to the operation, and omitted treatment context and operative details. The quoted checks support the reviewed label content."
+  }
+}

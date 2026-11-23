@@ -1,0 +1,29 @@
+{
+  "case_id": "train:370",
+  "source_review": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The source ends before stating what the colloid scan confirmed, so the label’s specific result is unsupported by the available note.",
+        "source_quote": "a colloid scan was advised that confirmed",
+        "field_path": "/diagnosis tests/1/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/treatments/1/dosage",
+        "label_excerpt": "25 mg/day initially, increased to 30 mg/day after relapse",
+        "source_quote": "a short course of steroid (Prednisone 25 mg/day)",
+        "explanation": "The label omits the source-stated 25 mg/day prednisone dose for the December 2015 course, a material treatment detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The colloid scan result extends beyond the cut-off source, and the label omits the stated prednisone dose for the December 2015 course."
+  },
+  "source_evidence_span_repairs": []
+}

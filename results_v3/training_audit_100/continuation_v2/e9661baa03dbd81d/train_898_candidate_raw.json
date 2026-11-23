@@ -1,0 +1,60 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "46 at initial diagnosis, current age not specified",
+        "source_quote": "A 46-year-old premenopausal woman underwent mastectomy and axillary clearance in 1993",
+        "explanation": "The label correctly retains the stated age and avoids inferring a current age."
+      },
+      {
+        "field_path": "/treatments/3/reaction to treatment",
+        "label_excerpt": "Good symptomatic response",
+        "source_quote": "A good symptomatic response followed palliative radiotherapy to the upper thoracic spine",
+        "explanation": "The documented response is attributed to the radiotherapy."
+      },
+      {
+        "field_path": "/treatments/8/reaction to treatment",
+        "label_excerpt": "Metastasis reduced by more than 50%",
+        "source_quote": "She received another 6 cycles and the diameter of the metastasis reduced by more than 50%.",
+        "explanation": "The label retains the response to the later docetaxel course."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments/0/time",
+        "label_excerpt": "Post-1993 surgery",
+        "source_quote": "she was prescribed adjuvant tamoxifen for 5 years.",
+        "explanation": "The label omits the material stated duration of the first tamoxifen course; it can be retained in the existing time leaf.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/2/name",
+        "label_excerpt": "Tamoxifen",
+        "source_quote": "she was started again on tamoxifen.",
+        "explanation": "The label omits the source-stated weak ER positivity rationale and the switch from the earlier course; the separate treatment entry is therefore not fully anchored to its source context.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/4/time",
+        "label_excerpt": "Post-August 2004",
+        "source_quote": "this was followed by 6 cycles of docetaxel chemotherapy in combination with trastuzumab, a change in her hormonal treatment from tamoxifen to letrozole, and a 2-year course of bisphosphonate therapy with zoledronic acid infusions.",
+        "explanation": "The label does not preserve the stated 2-year duration of the zoledronic acid course in its existing treatment time leaf.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/7/reaction to treatment",
+        "label_excerpt": "Response maintained for 2 years",
+        "source_quote": "The response was maintained for 2 years, but slight nausea and newly abnormal liver function biochemistry led to a CT scan in August 2006.",
+        "explanation": "This reports duration of the overall response, not a trastuzumab-specific response. Assigning it to the trastuzumab entry risks implying an individual drug response not established by the source.",
+        "category": "wrong_linkage_value",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "Several material treatment-course details are omitted or potentially misattributed. Candidate findings remain subject to review."
+  }
+}

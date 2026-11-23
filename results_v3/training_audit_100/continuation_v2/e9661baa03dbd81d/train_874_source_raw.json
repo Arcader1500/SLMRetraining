@@ -1,0 +1,45 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label gives the sequence but omits the explicitly stated three-day duration of low molecular weight heparin.",
+        "source_quote": "followed by low molecular weight heparin for the next three days",
+        "field_path": "/treatments/1/time"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The source states this dose and frequency for the olanzapine regimen that was discontinued. The label preserves that source-stated regimen detail, and the schema provides no separate leaf for the prior regimen.",
+        "source_quote": "the patient had been taking olanzapine 2.5 mg daily for the previous two years for her insomnia. Olanzapine was then discontinued on the first day of hospitalization.",
+        "field_path": "/treatments/2/dosage"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "No prior cardiovascular condition",
+        "source_quote": "Retrospectively, we found that the patient had been taking olanzapine 2.5 mg daily for the previous two years for her insomnia.",
+        "explanation": "The physiological context omits the relevant two-year olanzapine history, including its stated use for insomnia.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Ruled out coronary artery disease but revealed a pulmonary embolism",
+        "source_quote": "Multiple emboli were noted, causing a subtotal occlusion of the distal segment of the right pulmonary artery (). The left pulmonary artery was also partially occluded ().",
+        "explanation": "The diagnosis-test result identifies pulmonary embolism but omits the reported multiple emboli and substantial right and partial left pulmonary artery occlusions, which materially characterize the finding.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The heparin course duration is materially omitted, while the olanzapine dose is supported as a source-stated regimen detail. The label also omits relevant olanzapine history and material detail about the pulmonary emboli."
+  }
+}

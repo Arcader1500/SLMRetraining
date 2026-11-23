@@ -1,0 +1,208 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The label records increased weight as a symptom but omits the explicitly reported approximately 20 kg gain associated with the nighttime eating. This consequential detail fits the existing symptom details path.",
+        "source_quote": "During these episodes, she ate large amounts of unusual foods (glass jars of marmalade, several bars of chocolate, and so on), brought food into her bed, and gained approximately 20 kg in the last years.",
+        "field_path": "/symptoms/0/details"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The episodes’ frequency is materially described elsewhere in the label’s symptom time field as approximately once a week, so it is not wholly omitted. The husband’s corroborating observation is supported but is not independently a material omission.",
+        "source_quote": "Observed by her husband approximately once or twice a week she had nightly eating and SRE, mostly without any recall in the morning.",
+        "field_path": "/symptoms/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient information",
+        "label_excerpt": "\"age\":\"54\",\"sex\":\"Female\"",
+        "source_quote": "In June 2016 a 54-year-old white woman was admitted",
+        "explanation": "The note identifies the patient as white, but the label has no ethnicity field or other existing patient-information leaf that can represent it. Omission is source-supported but cannot be mapped to a valid existing leaf, so no finding is emitted.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "rejected",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "Current depressive syndrome began approximately 5 years before admission, SRE started with a frequency of approximately once a week",
+        "source_quote": "Her first episode occurred 36 years ago at the age of 18.",
+        "explanation": "The first depressive episode’s timing is explicit and clinically relevant history. The existing symptoms time leaf can retain it, but the current label omits this distinct chronology.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "Current depressive syndrome began approximately 5 years before admission, SRE started with a frequency of approximately once a week",
+        "source_quote": "Moreover, she had spontaneous and situationally induced panic attacks with severe avoiding behavior that did not allow her to leave the house by herself for at least 2 years.",
+        "explanation": "The symptom label captures panic attacks and avoiding behavior but omits the severity/context and at-least-two-year duration. This is material symptom chronology and context expressible in the existing details or time leaf.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Has hypertension, treated with 5 mg ramipril, and adiposity. Sleepwalked once a month between the age of 10 and 16.",
+        "source_quote": "The current depressive syndrome began approximately 5 years before admission. Her first episode occurred 36 years ago at the age of 18.",
+        "explanation": "Relevant psychiatric history is absent from physiological context; the diagnosis and current episode are captured elsewhere, but the first episode and longstanding course are not.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Has hypertension, treated with 5 mg ramipril, and adiposity. Sleepwalked once a month between the age of 10 and 16.",
+        "source_quote": "Episodes of dysfunctional eating at nighttime made their first appearance in the course of this treatment.",
+        "explanation": "The onset of the nighttime eating/SRE during the earlier treatment course is clinically relevant history and absent from the physiological context; the label only includes the current symptom description and a treatment response.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/0/time",
+        "label_excerpt": "Ramipril current, doxepin started 10 years ago and taken occasionally from 2015 to 2016",
+        "source_quote": "Ten years ago a therapy with doxepin, venlafaxine, and lithium was started.",
+        "explanation": "The label’s treatment time says doxepin started 10 years ago, but does not preserve that venlafaxine and lithium were part of the same earlier therapy. Their names are present in the treatment name; the missing course linkage is material.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/0/dosage",
+        "label_excerpt": "Ramipril 5 mg, doxepin dosage not specified",
+        "source_quote": "From 2015 to 2016 she took doxepin once or twice a week when she felt sleepless.",
+        "explanation": "Frequency is specified for the intermittent doxepin course but is absent from the dosage field and the treatment time field only says occasionally. The existing treatment dosage field may preserve frequency.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidates identify the substantial weight gain omission; the husband’s corroboration is downgraded because episode frequency is already represented. Additional material omissions include first-episode chronology, panic/avoidance duration and context, onset of nighttime eating during the earlier therapy, and course details. The projection’s ethnicity lead cannot be mapped to an existing patient-information leaf."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The details omit the approximately 20 kg gain that the note links to the nighttime episodes. This is a material consequence of those episodes.",
+        "source_quote": "and gained approximately 20 kg in the last years.",
+        "field_path": "/symptoms/0/details"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label omits the reported observation frequency and the husband's corroboration of the nighttime eating and SRE.",
+        "source_quote": "Observed by her husband approximately once or twice a week she had nightly eating and SRE, mostly without any recall in the morning.",
+        "field_path": "/symptoms/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Has hypertension, treated with 5 mg ramipril, and adiposity.\nSleepwalked once a month between the age of 10 and 16.",
+        "source_quote": "In June 2016 a 54-year-old white woman was admitted for treatment of her chronic major depressive episode in the course of a major depressive disorder as well as panic disorder.",
+        "explanation": "The physiological context omits the stated chronic major depressive episode and panic disorder, material history that belongs in this existing history path.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Has hypertension, treated with 5 mg ramipril, and adiposity.\nSleepwalked once a month between the age of 10 and 16.",
+        "source_quote": "Her first episode occurred 36 years ago at the age of 18.",
+        "explanation": "The physiological context omits the timing of her first depressive episode, a material historical detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Has hypertension, treated with 5 mg ramipril, and adiposity.\nSleepwalked once a month between the age of 10 and 16.",
+        "source_quote": "Moreover, she had spontaneous and situationally induced panic attacks with severe avoiding behavior that did not allow her to leave the house by herself for at least 2 years.",
+        "explanation": "The physiological context omits the prolonged panic-related avoidance that prevented her from leaving home alone, a material historical detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Has hypertension, treated with 5 mg ramipril, and adiposity.\nSleepwalked once a month between the age of 10 and 16.",
+        "source_quote": "Episodes of dysfunctional eating at nighttime made their first appearance in the course of this treatment.",
+        "explanation": "The history omits the onset of nighttime dysfunctional eating during the earlier treatment course, a material context for these episodes.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/name of symptom",
+        "label_excerpt": "Depressed mood, loss of pleasure and interest, loss of drive and energy, disturbed sleep, increased weight, panic attacks, avoiding behavior, SRE, and dysfunctional eating at nighttime",
+        "source_quote": "She complained of severely depressed mood, loss of pleasure and interest, loss of drive and energy, disturbed sleep, and increased weight.",
+        "explanation": "The symptom label drops the stated severity of depressed mood, a source-supported symptom modifier.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "Current depressive syndrome began approximately 5 years before admission, SRE started with a frequency of approximately once a week",
+        "source_quote": "Her first episode occurred 36 years ago at the age of 18.",
+        "explanation": "The symptom time omits the onset timing of her first depressive episode, a material chronology detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "Current depressive syndrome began approximately 5 years before admission, SRE started with a frequency of approximately once a week",
+        "source_quote": "Moreover, she had spontaneous and situationally induced panic attacks with severe avoiding behavior that did not allow her to leave the house by herself for at least 2 years.",
+        "explanation": "The symptom time omits the stated duration of the panic-related avoidance, a material chronology detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/0/dosage",
+        "label_excerpt": "Ramipril 5 mg, doxepin dosage not specified",
+        "source_quote": "From 2015 to 2016 she took doxepin once or twice a week when she felt sleepless.",
+        "explanation": "The dosage field omits doxepin's source-stated frequency, which is part of the treatment regimen.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/0/name",
+        "label_excerpt": "Ramipril, doxepin, venlafaxine, lithium",
+        "source_quote": "From 2015 to 2016 she took doxepin once or twice a week when she felt sleepless.",
+        "explanation": "The treatment entry does not represent the reason for the 2015–2016 doxepin use, namely sleeplessness, in an existing treatment field. The treatment time identifies when it was used but not why.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Both candidate omissions are confirmed. The label also omits material history and symptom chronology, depressed-mood severity, and the frequency and reason for the 2015–2016 doxepin use. Projection drops were treated as leads and included only when supported by the source and mappable to an existing path."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "46",
+        "source_quote": "A 46 year old Caucasian man",
+        "explanation": "The age matches the source."
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "5 hemorrhagic metastatic brain lesions",
+        "source_quote": "Magnetic resonance imaging (MRI) demonstrated 5 hemorrhagic metastatic brain lesions.",
+        "explanation": "The MRI result is supported."
+      },
+      {
+        "field_path": "/treatments/2/dosage",
+        "label_excerpt": "30 Gy",
+        "source_quote": "Salvage whole brain radiation (30 Gy) was initiated the following month",
+        "explanation": "The dosage is stated in the source."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "His hemiparesis improved and he did not receive brain radiation to the cavity or other intracranial lesions as planned.",
+        "explanation": "The label omits the material fact that planned brain radiation was not received after the first surgery. The source also says radiation was not received after the second surgery: “He had surgery for removal of this metastasis and again due to poor social support did not receive radiation.”",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/surgeries/2/details",
+        "label_excerpt": "Progression of intracranial lesions with compression of the fourth ventricle",
+        "source_quote": "Imaging again demonstrated progression of his intracranial lesions with compression of the fourth ventricle causing hydrocephalus by the left cerebellar lesion.",
+        "explanation": "The details omit the consequential hydrocephalus caused by the left cerebellar lesion, a material part of the finding that led to the third craniotomy.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/discharge/discharge summary",
+        "label_excerpt": "Overall survival from primary diagnosis was 18 months and survival from MBM diagnosis was not specified",
+        "source_quote": "Three months later the patient expired (Fig. a).",
+        "explanation": "The label gives overall survival but omits the patient's death, a material outcome expressly stated in the source.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label has several source-supported entries but omits the nonreceipt of planned radiation, hydrocephalus associated with the third lesion, and the patient's death."
+  }
+}

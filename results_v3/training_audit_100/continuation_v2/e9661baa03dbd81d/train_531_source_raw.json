@@ -1,0 +1,35 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The label records the compartment pressure but omits the source-stated ACS diagnosis, a material diagnostic finding.",
+        "source_quote": "Based on these findings, he was diagnosed as having ACS",
+        "field_path": "/diagnosis tests"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The label records hemodialysis and recovery but omits the material source-stated complications of rhabdomyolysis and acute renal failure.",
+        "source_quote": "He exhibited rhabdomyolysis with increased levels of serum creatine phosphokinase (CPK) and acute renal failure",
+        "field_path": "/diagnosis tests"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Fasciotomy wounds were left open, cleaned daily, and wrapped in a dressing containing an antibiotic ointment",
+        "source_quote": "After the fasciotomy, the neurological deficits of his right limb were gradually restored",
+        "explanation": "The label gives wound care details but omits the material post-fasciotomy improvement in neurological deficits.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      }
+    ],
+    "summary": "Both candidate omissions are supported by the note. The label also omits the reported gradual restoration of neurological deficits after fasciotomy."
+  }
+}

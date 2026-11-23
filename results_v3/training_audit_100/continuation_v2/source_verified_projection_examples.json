@@ -1,0 +1,132 @@
+{
+  "reviewer": "parent assistant source check",
+  "status": "diagnostic examples; no labels changed",
+  "examples": [
+    {
+      "case_id": "train:1480",
+      "source_quote": "En route to the ED via ambulance, the patient was noted to have a pulse in the thirties and a systolic blood pressure of 50 mmHg.",
+      "v2_dropped_field": {
+        "case_id": "train:1480",
+        "section": "medical examinations",
+        "entry_index": 0,
+        "dropped_key": "details",
+        "value": "Pulse in the thirties and a systolic blood pressure of 50 mmHg en route to ED",
+        "not_found_verbatim_in_retained_values": true
+      },
+      "proposed_existing_section": "/medical examinations",
+      "explanation": "Preserve en-route measurements separately from arrival vitals."
+    },
+    {
+      "case_id": "train:263",
+      "source_quote": "One gram of hydrocortisone IV was infused and 20 mg prednisone was prescribed per day for 5 days.",
+      "v2_dropped_field": {
+        "case_id": "train:263",
+        "section": "treatments",
+        "entry_index": 2,
+        "dropped_key": "frequency",
+        "value": "Per day",
+        "not_found_verbatim_in_retained_values": true
+      },
+      "proposed_existing_section": "/treatments",
+      "explanation": "Preserve prednisone daily frequency with its dosage."
+    },
+    {
+      "case_id": "train:263",
+      "source_quote": "One gram of hydrocortisone IV was infused and 20 mg prednisone was prescribed per day for 5 days.",
+      "v2_dropped_field": {
+        "case_id": "train:263",
+        "section": "treatments",
+        "entry_index": 2,
+        "dropped_key": "duration",
+        "value": "5 days",
+        "not_found_verbatim_in_retained_values": true
+      },
+      "proposed_existing_section": "/treatments",
+      "explanation": "Preserve prednisone five-day course with time."
+    },
+    {
+      "case_id": "train:1298",
+      "source_quote": "The differential of this mass included a left vagal schwannoma or a lymph node in proximity to the vagus nerve.",
+      "v2_dropped_field": {
+        "case_id": "train:1298",
+        "section": "diagnosis tests",
+        "entry_index": 0,
+        "dropped_key": "condition",
+        "value": "Possible left vagal schwannoma or a lymph node in proximity to the vagus nerve",
+        "not_found_verbatim_in_retained_values": true
+      },
+      "proposed_existing_section": "/diagnosis tests",
+      "explanation": "Preserve uncertain MRI differential status."
+    },
+    {
+      "case_id": "train:333",
+      "source_quote": "Three months later the patient expired (Fig. a).",
+      "v2_dropped_field": {
+        "case_id": "train:333",
+        "section": "discharge",
+        "entry_index": 0,
+        "dropped_key": "reason",
+        "value": "Expired",
+        "not_found_verbatim_in_retained_values": true
+      },
+      "proposed_existing_section": "/discharge",
+      "explanation": "Preserve death as course outcome without inventing discharge."
+    },
+    {
+      "case_id": "train:783",
+      "source_quote": "Radiologic features were consistent with glomus vagale.",
+      "v2_dropped_field": {
+        "case_id": "train:783",
+        "section": "diagnosis tests",
+        "entry_index": 0,
+        "dropped_key": "condition",
+        "value": "glomus vagale",
+        "not_found_verbatim_in_retained_values": true
+      },
+      "proposed_existing_section": "/diagnosis tests",
+      "explanation": "Preserve source qualification consistent with glomus vagale."
+    },
+    {
+      "case_id": "train:725",
+      "source_quote": "The pain arose each night 2 h after she went to sleep, and it was described as unbearable.",
+      "v2_dropped_field": {
+        "case_id": "train:725",
+        "section": "symptoms",
+        "entry_index": 0,
+        "dropped_key": "intensity of symptom",
+        "value": "Unbearable",
+        "not_found_verbatim_in_retained_values": true
+      },
+      "proposed_existing_section": "/symptoms",
+      "explanation": "Preserve unbearable symptom severity."
+    },
+    {
+      "case_id": "train:725",
+      "source_quote": "The pain arose each night 2 h after she went to sleep, and it was described as unbearable.",
+      "v2_dropped_field": {
+        "case_id": "train:725",
+        "section": "symptoms",
+        "entry_index": 0,
+        "dropped_key": "temporalisation",
+        "value": "Each night 2 hours after going to sleep",
+        "not_found_verbatim_in_retained_values": true
+      },
+      "proposed_existing_section": "/symptoms",
+      "explanation": "Preserve earlier nightly timing separately from postpartum course."
+    },
+    {
+      "case_id": "train:1184",
+      "source_quote": "Ibuprofen 800 mg 1–3/daily for musculoskeletal pain.",
+      "v2_dropped_field": {
+        "case_id": "train:1184",
+        "section": "treatments",
+        "entry_index": 1,
+        "dropped_key": "frequency",
+        "value": "1–3/daily",
+        "not_found_verbatim_in_retained_values": true
+      },
+      "proposed_existing_section": "/treatments",
+      "explanation": "Preserve source frequency range alongside 800 mg dosage."
+    }
+  ]
+}

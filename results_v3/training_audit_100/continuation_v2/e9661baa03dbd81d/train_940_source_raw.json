@@ -1,0 +1,82 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The source wording does not clearly establish whether fluid-resuscitation refractoriness applies to hypotension, oliguria, or both, so the label’s linkage is ambiguous rather than demonstrably wrong.",
+        "source_quote": "he developed acute abdominal pain refractory to analgesia with hypotension and oliguria refractory to fluid resuscitation.",
+        "field_path": "/symptoms/4/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Operative details omit the pancreatic ascites drained on entry.",
+        "source_quote": "On entry into the abdomen, gross pancreatic ascites of 2.2 l was drained.",
+        "explanation": "The label includes several operative findings and details but omits the substantial 2.2 L of pancreatic ascites drained during the procedure.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate’s concern is a source wording ambiguity, not a confirmed symptom-linkage error. The label also omits the substantial volume of pancreatic ascites drained during surgery."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The note says the patient developed hypotension and oliguria “refractory to fluid resuscitation,” but does not unambiguously assign that modifier to only one symptom. The label's association with hypotension is therefore ambiguous, not a clear mismatch.",
+        "source_quote": "he developed acute abdominal pain refractory to analgesia with hypotension and oliguria refractory to fluid resuscitation.",
+        "field_path": "/symptoms/4/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/2/details",
+        "label_excerpt": "",
+        "source_quote": "serum amylase of 1824 U/L with liver panel suggestive of obstructive jaundice (Bilirubin 113, ALP 136).",
+        "explanation": "The source states that the liver panel was suggestive of obstructive jaundice, a material interpretation omitted from the liver-panel examination details.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/1/details",
+        "label_excerpt": "",
+        "source_quote": "He subsequently developed recurrent bouts of pancreatitis, where interval CT showed development of a pseudocyst of up to 11 cm in maximal diameter.",
+        "explanation": "The label records the interval CT pseudocyst and its size but omits the recurrent bouts of pancreatitis preceding that finding, which are material clinical context for the interval imaging.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/2/details",
+        "label_excerpt": "",
+        "source_quote": "On entry into the abdomen, gross pancreatic ascites of 2.2 l was drained.",
+        "explanation": "The label records the emergent operation but omits the source-described drainage of 2.2 liters of gross pancreatic ascites, a material operative event.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/2/related condition",
+        "label_excerpt": "",
+        "source_quote": "He was diagnosed to have a ruptured pseudocyst and underwent emergent laparoscopic washout, necrosectomy distal pancreaticosplenectomy with cholecystectomy.",
+        "explanation": "The emergent treatment entry omits the explicitly stated ruptured pseudocyst that prompted the operation. The schema path is supported by the source's explicit diagnosis and treatment sequence.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate association concern is ambiguous in the source wording and is downgraded. Material omissions include the obstructive-jaundice interpretation of the liver panel, recurrent pancreatitis context, drainage of 2.2 liters of pancreatic ascites, and the ruptured pseudocyst associated with the emergent operation."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "initial": {
+    "decision": "no_material_issue_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Fatigue, bright red blood per rectum, weight loss and poor appetite",
+        "source_quote": "fatigue, bright red blood per rectum, weight loss and poor appetite for 1 day",
+        "explanation": "The label captures the stated reasons for presentation."
+      },
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Small bowel obstruction noted on CT, proteinemia, and an M spike on laboratory work",
+        "source_quote": "noted to have a small bowel obstruction on CT. A nasogastric tube was placed. Hematology was consulted secondary to proteinemia and an M spike on the laboratory work.",
+        "explanation": "All listed findings appear in the note; the hospital-day context supports an admission setting."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Confirmed diagnosis of multiple myeloma, amyloid deposition in the lamina propria and submucosal tissue of duodenum consistent with amyloidosis",
+        "source_quote": "A diagnosis of multiple myeloma was entertained. He underwent a bone marrow biopsy, which confirmed the diagnosis.",
+        "explanation": "The multiple myeloma result is explicitly tied to the bone marrow biopsy; the amyloid finding is also described in the note."
+      },
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Despite declining IgG levels, patient remained with an unresolving ileus",
+        "source_quote": "Despite declining IgG levels, he remained with an unresolving ileus.",
+        "explanation": "The label preserves the stated course without assigning the improvement in IgG to a particular treatment."
+      },
+      {
+        "field_path": "/discharge/discharge summary",
+        "label_excerpt": "Patient underwent an open venting gastrostomy tube placement in hope for discharge to hospice",
+        "source_quote": "he underwent an open venting gastrostomy tube placement in hope for discharge to hospice.",
+        "explanation": "The label retains the note's stated hope for hospice discharge without claiming that discharge occurred."
+      }
+    ],
+    "findings": [],
+    "summary": "No material source-consistency issue found. The label captures the major stated presentation, findings, procedures, test results, treatment course, and qualified hospice-discharge plan."
+  }
+}

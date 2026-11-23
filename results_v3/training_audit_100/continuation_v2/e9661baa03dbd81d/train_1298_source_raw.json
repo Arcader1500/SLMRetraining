@@ -1,0 +1,53 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label omits bipolar disorder from the patient's stated medical history.",
+        "source_quote": "A 43-year-old man with a past medical history of HIV, bipolar disorder, and epilepsy",
+        "field_path": "/patient medical history"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label lists Lamotrigine but omits the prior multiple antiepileptic medications and their lack of effect, a material treatment history.",
+        "source_quote": "He had been on multiple antiepileptic medications without resolution of his episodes.",
+        "field_path": "/treatments"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The MRI result records the mass but omits the source-stated differential diagnosis.",
+        "source_quote": "The differential of this mass included a left vagal schwannoma or a lymph node in proximity to the vagus nerve.",
+        "field_path": "/diagnosis tests/0/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/diagnosis tests/1/test",
+        "label_excerpt": "Follow-up MRI",
+        "source_quote": "Follow-up MRI after 4 months revealed a stable left carotid space mass.",
+        "explanation": "The label omits the four-month interval for the follow-up MRI, a material timing anchor for the mass surveillance.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Pauses of up to six seconds, reflecting a transient symptomatic high degree AV block",
+        "source_quote": "During the vEEG, he experienced symptoms of his typical aura. Concurrently, his vEEG activity was normal, but his cardiac telemetry demonstrated pauses of up to six seconds (), reflecting a transient symptomatic high degree AV block.",
+        "explanation": "The label omits that the telemetry pauses occurred concurrently with the patient's typical aura during vEEG, an important clinical association in the evaluation of the episodes.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The three candidate omissions are supported by the note. The label also omits the timing of the follow-up MRI and the concurrence of the typical aura with telemetry pauses during vEEG."
+  }
+}

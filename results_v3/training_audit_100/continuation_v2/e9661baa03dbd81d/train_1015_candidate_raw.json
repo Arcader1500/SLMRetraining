@@ -1,0 +1,36 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Painless swelling of the left lower eyelid for one year",
+        "source_quote": "painless swelling of the left lower eyelid for one year",
+        "explanation": "The presenting complaint is represented accurately."
+      },
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "histopathologic examination demonstrated non-caseating granulomas consisting of epitheloid histiocytes in the orbital fat, most likely caused by sarcoidosis",
+        "source_quote": "the histopathologic examination demonstrated non-caseating granulomas consisting of epitheloid histiocytes in the orbital fat, most likely caused by sarcoidosis",
+        "explanation": "The pathology and its qualified attribution are preserved."
+      },
+      {
+        "field_path": "/diagnosis tests/5/result",
+        "label_excerpt": "Hilar lymphadenopathy",
+        "source_quote": "noted hilar lymphadenopathy on the chest CT",
+        "explanation": "The chest CT finding is correctly represented."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Symptoms completely resolved within one month",
+        "source_quote": "The symptoms completely resolved within one month",
+        "explanation": "The note reports resolution after starting prednisolone but explicitly says prednisolone was started in consideration of improvement after surgical debulking. Attributing the later resolution as a reaction to prednisolone is not established as a causal response; this treatment-response linkage is uncertain under the source and policy.",
+        "category": "wrong_linkage_value",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "One candidate ambiguity: the label links symptom resolution to prednisolone, though the note does not clearly attribute the resolution to the drug. Other checked entries are supported."
+  }
+}

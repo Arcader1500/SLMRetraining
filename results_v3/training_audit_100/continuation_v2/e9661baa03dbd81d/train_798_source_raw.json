@@ -1,0 +1,55 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The label's symptom details omit the source-stated three-week self-treatment with a yellow solution to clean the wound. This exposure is material context; the source does not explicitly identify the solution as acriflavine.",
+        "source_quote": "Further inquiry revealed history of self treatment with a yellow solution to clean his wound for 3 weeks.",
+        "field_path": "/symptoms/0/details"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The label records saline dressing but omits that acriflavine use was stopped, a source-stated treatment action relevant to the case.",
+        "source_quote": "Acriflavine usage was stopped and the ulcer was treated with daily non-occlusive saline dressing.",
+        "field_path": "/treatments"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Started from an insect bite, increasing pruritus and burning sensation, ill-defined ulcer with surrounding erythema and erosion, yellow crust overlying the center of the ulcer, scaly periphery",
+        "source_quote": "The wound started from an insect bite and progressively enlarged with increasing pruritus and burning sensation.",
+        "explanation": "The symptom details omit the source-stated progressive enlargement, a change in the wound over its four-week course.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Positive to acriflavine, negative to other allergens",
+        "source_quote": "The result showed a positive reaction (2+) to acriflavine while the rest were negative.",
+        "explanation": "The result omits the source-stated 2+ severity of the positive patch-test reaction.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/0/test",
+        "label_excerpt": "Patch test using Standard European series containing 28 different allergens and acriflavine",
+        "source_quote": "A patch test using Standard European series (Chemotechnique) containing 28 different allergens and acriflavine was done seven months later.",
+        "explanation": "The test entry omits that the patch test occurred seven months after the initial presentation, an explicit timing anchor.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Both candidate omissions are supported. The label also omits progressive wound enlargement, patch-test reaction severity, and the patch test's seven-month timing. The other projection-drop leads are represented elsewhere, are incidental, or do not establish an additional material omission."
+  }
+}

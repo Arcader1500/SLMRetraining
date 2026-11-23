@@ -1,0 +1,242 @@
+[
+  {
+    "case_id": "train:1052",
+    "group": "random",
+    "review": {
+      "decision": "issues_found",
+      "supported_checks": [
+        {
+          "field_path": "/patient information/age",
+          "label_excerpt": "37",
+          "source_quote": "A 37-year-old woman",
+          "explanation": "Age is explicitly supported."
+        },
+        {
+          "field_path": "/surgeries/0/Type",
+          "label_excerpt": "Removal of the lesion using a chisel and rotary instruments via an intraoral approach, and curettage of the cavity",
+          "source_quote": "the lesion was totally removed using a chisel and rotary instruments via an intraoral approach, and curettage of the cavity was undertaken",
+          "explanation": "The note supports the procedure as performed."
+        },
+        {
+          "field_path": "/surgeries/0/details",
+          "label_excerpt": "Inferior alveolar nerve was determined and preserved during surgery",
+          "source_quote": "the inferior alveolar nerve was determined and preserved",
+          "explanation": "The note explicitly states the nerve was identified and preserved."
+        },
+        {
+          "field_path": "/symptoms/0/time",
+          "label_excerpt": "Past six years",
+          "source_quote": "over the past six years",
+          "explanation": "The swelling's duration is stated directly."
+        }
+      ],
+      "findings": [
+        {
+          "field_path": "/treatments/0/time",
+          "label_excerpt": "Postoperatively",
+          "source_quote": "Postoperatively, the patient received systemic antibiotic, analgesic, and mouthwash for 7 days.",
+          "explanation": "The label omits the stated seven-day duration of the postoperative medication and mouthwash course, a material treatment timing detail.",
+          "category": "omission",
+          "classification": "material_omission"
+        },
+        {
+          "field_path": "/surgeries",
+          "label_excerpt": "",
+          "source_quote": "Because the lesion was actively growing and caused facial swelling, the patient was prepared for surgery.",
+          "explanation": "The label does not capture the clinically relevant indication that the lesion was actively growing and causing facial swelling, which motivated surgery.",
+          "category": "omission",
+          "classification": "material_omission"
+        },
+        {
+          "field_path": "/diagnosis tests/0/result",
+          "label_excerpt": "Solitary, round, 3 × 3 cm well-defined radio-opaque lesion without a radiolucent rim of mandible, large, pedunculated mass attached to the buccal surface of the left mandibular body",
+          "source_quote": "The lesion extended distally of the second premolar to the mesial aspect of the second molar distal root",
+          "explanation": "The result omits the stated anatomic extent of the lesion, a potentially material imaging detail.",
+          "category": "omission",
+          "classification": "material_omission"
+        }
+      ],
+      "summary": "Candidate material omissions: the seven-day postoperative course, the stated reason for surgery, and the lesion's described anatomic extent."
+    },
+    "evidence_span_repairs": []
+  },
+  {
+    "case_id": "train:24",
+    "group": "random",
+    "review": {
+      "decision": "issues_found",
+      "supported_checks": [
+        {
+          "field_path": "/visit motivation",
+          "label_excerpt": "Chest pain and shortness of breath",
+          "source_quote": "presented to the emergency department at 10 am in the morning with chest pain and shortness of breath of approximately 12 hours duration.",
+          "explanation": "The visit motivation matches the stated reason for presentation."
+        },
+        {
+          "field_path": "/patient medical history/physiological context",
+          "label_excerpt": "Postmenopausal, right breast invasive ductal carcinoma with bilateral mastectomies in 2015",
+          "source_quote": "Her medical history included right breast invasive ductal carcinoma with bilateral mastectomies in 2015",
+          "explanation": "This accurately captures the supported cancer and mastectomy history."
+        },
+        {
+          "field_path": "/symptoms/0/details",
+          "label_excerpt": "Sharp pleuritic chest pain, also experiencing a less prominent pressure like sensation",
+          "source_quote": "She did endorse that she was also experiencing a less prominent pressure like sensation in addition to the sharp pleuritic type of pain.",
+          "explanation": "The symptom description preserves both pain qualities and their relative prominence."
+        },
+        {
+          "field_path": "/treatments/0/reaction to treatment",
+          "label_excerpt": "Reduced the intensity of pain",
+          "source_quote": "She said that she had taken some ibuprofen which had reduced the intensity of pain.",
+          "explanation": "The source supports the recorded ibuprofen response."
+        }
+      ],
+      "findings": [
+        {
+          "field_path": "/admission/0/reason",
+          "label_excerpt": "Chest pain and shortness of breath",
+          "source_quote": "presented to the emergency department at 10 am in the morning with chest pain and shortness of breath of approximately 12 hours duration.",
+          "explanation": "The note establishes an emergency department presentation, but does not state that the patient was admitted. Recording an admission reason may therefore assert an unsupported event status.",
+          "category": "event_status",
+          "classification": "clear_error"
+        },
+        {
+          "field_path": "/symptoms/0/details",
+          "label_excerpt": "Sharp pleuritic chest pain, also experiencing a less prominent pressure like sensation",
+          "source_quote": "The patient reported that her chest pain was located in the substernal region, radiating to the back, aggravated by deep breaths and by lying down, and alleviated by sitting up and leaning forward.",
+          "explanation": "The details omit material, source-stated aggravating and alleviating factors for the chest pain.",
+          "category": "omission",
+          "classification": "material_omission"
+        },
+        {
+          "field_path": "/symptoms/1/details",
+          "label_excerpt": "Developed shortness of breath while lying in bed",
+          "source_quote": "She denied fevers, chills, cough, diaphoresis, palpitations, dizziness, abdominal pain, heartburn, nausea or vomiting, flu-like symptoms, recent illnesses, or any history of chest pain in the past.",
+          "explanation": "The label omits the material denial of associated symptoms and prior chest pain. These negatives are expressly recorded in the note and can be represented in symptom details.",
+          "category": "omission",
+          "classification": "material_omission"
+        }
+      ],
+      "summary": "The label is mostly consistent with the note, but it records an admission without evidence of admission and omits material chest-pain characteristics and negative history."
+    },
+    "evidence_span_repairs": []
+  },
+  {
+    "case_id": "train:119",
+    "group": "targeted",
+    "review": {
+      "decision": "issues_found",
+      "supported_checks": [
+        {
+          "field_path": "/admission/0/reason",
+          "label_excerpt": "Weak and impalpable brachial and radial pulses, non-recordable BP",
+          "source_quote": "On examination, her brachial and radial pulses were weak, impalpable bilaterally and her BP was non-recordable manually.",
+          "explanation": "The admission reason matches the documented examination findings."
+        },
+        {
+          "field_path": "/medical examinations/0/result",
+          "label_excerpt": "Bilateral narrowing of arterioles in both eyes",
+          "source_quote": "Ophthalmic examination revealed bilateral narrowing of arterioles in both eyes.",
+          "explanation": "The examination result is directly supported."
+        },
+        {
+          "field_path": "/treatments/3/dosage",
+          "label_excerpt": "20g",
+          "source_quote": "tablet methotrexate 20g weekly",
+          "explanation": "The source specifies this dose; it is preserved as written."
+        }
+      ],
+      "findings": [
+        {
+          "field_path": "/medical examinations/0/result",
+          "label_excerpt": "Bilateral narrowing of arterioles in both eyes",
+          "source_quote": "However, no sign of arteritis was observed in the retina.",
+          "explanation": "The label captures the ocular narrowing but omits the accompanying explicit negative retinal finding, which is relevant to the same ophthalmic examination.",
+          "category": "omission",
+          "classification": "material_omission"
+        },
+        {
+          "field_path": "/treatments",
+          "label_excerpt": "",
+          "source_quote": "The patient was started on methylprednisolone 500 mg IV for 3 days, tablet prednisone 25mg BD, tablet aspirin 75 mg OD, tablet methotrexate 20g weekly, capsule gabapentin 75 mg BD, tablet folic acid 5 mg OD, and tablet atorvastatin 20 mg HS.",
+          "explanation": "The treatment entries retain doses but omit documented routes, frequencies, and the methylprednisolone duration. These are material course details expressly present in the source.",
+          "category": "omission",
+          "classification": "material_omission"
+        },
+        {
+          "field_path": "/treatments/0/reaction to treatment",
+          "label_excerpt": "Patient responded well",
+          "source_quote": "The patient responded well to the treatment given",
+          "explanation": "The note reports response to the treatment overall. Assigning that response separately to each listed medication may imply individual causation, which the source does not establish.",
+          "category": "negation_uncertainty",
+          "classification": "policy_ambiguity"
+        }
+      ],
+      "summary": "The label is largely source-supported, but it omits a relevant negative ophthalmic finding and medication-course details. Its per-medication response attribution is ambiguous because the source states only an overall response."
+    },
+    "evidence_span_repairs": []
+  },
+  {
+    "case_id": "train:1453",
+    "group": "targeted",
+    "review": {
+      "decision": "issues_found",
+      "supported_checks": [
+        {
+          "field_path": "/patient information/age",
+          "label_excerpt": "35",
+          "source_quote": "A 35-year-old man suffered from immunoglobulin-A nephropathy 2 years before admission",
+          "explanation": "The patient's age matches the note."
+        },
+        {
+          "field_path": "/diagnosis tests/1/result",
+          "label_excerpt": "Diagnosis of gastric cancer (signet cells)",
+          "source_quote": "gastric cancer (signet cells) was diagnosed by biopsy.",
+          "explanation": "The biopsy result is supported by the note."
+        },
+        {
+          "field_path": "/medical examinations/4/result",
+          "label_excerpt": "No free air or niveau",
+          "source_quote": "There was no free air or niveau on the abdominal X-ray.",
+          "explanation": "The X-ray result matches the note."
+        }
+      ],
+      "findings": [
+        {
+          "field_path": "/symptoms/2/time",
+          "label_excerpt": "Continued to report general fatigue and went to hospital 1 week before his admission",
+          "source_quote": "He continued to report appetite loss and went to hospital 1 week before his admission.",
+          "explanation": "The note places appetite loss at the earlier hospital visit, but does not say general fatigue was reported then. Fatigue is mentioned later as aggravated when he consulted the emergency room.",
+          "category": "unsupported_addition",
+          "classification": "clear_error"
+        },
+        {
+          "field_path": "/medical examinations",
+          "label_excerpt": "",
+          "source_quote": "He also took a blood examination after the consultation and his serum creatinine had increased to 683.33 μmol/l.",
+          "explanation": "The label includes the later creatinine of 1919.16 μmol/l but omits this earlier, materially relevant elevated result and its timing after the consultation.",
+          "category": "omission",
+          "classification": "material_omission"
+        },
+        {
+          "field_path": "/treatments",
+          "label_excerpt": "",
+          "source_quote": "He started taking S-1 50 mg, twice daily for 3 consecutive weeks, followed by a 2-week rest period 8 months ago.",
+          "explanation": "The label records the S-1 dose and start timing but omits its twice-daily frequency and the three-week-on, two-week-rest schedule, which are material treatment-course details.",
+          "category": "omission",
+          "classification": "material_omission"
+        },
+        {
+          "field_path": "/treatments/2/reaction to treatment",
+          "label_excerpt": "Partial clinical remission",
+          "source_quote": "He received six cycles of chemotherapy and showed a partial clinical remission.",
+          "explanation": "The note attributes remission to the chemotherapy course overall. Assigning it specifically to cisplatin may imply an individual drug response that the source does not establish; this is an attribution ambiguity.",
+          "category": "wrong_linkage_value",
+          "classification": "policy_ambiguity"
+        }
+      ],
+      "summary": "The label contains a timing overstatement for general fatigue, omits a materially elevated earlier creatinine result and the S-1 schedule, and may over-attribute the overall chemotherapy response to cisplatin."
+    },
+    "evidence_span_repairs": []
+  }
+]

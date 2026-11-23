@@ -1,0 +1,51 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The source documents a hospital visit, not an admission. The reason is supported, but its placement under admission asserts an undocumented admission event.",
+        "source_quote": "Later, he became aware of severely decreased visual acuity in the right eye several months ago and visited our hospital.",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label records the later worsening timing but omits the earlier onset and that he did not seek treatment, which materially distinguishes the symptom chronology.",
+        "source_quote": "A 42-year-old man experienced decreased visual acuity in the right eye before 2 years, but did not seek treatment.",
+        "field_path": "/symptoms/0/time"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The examination result omits the explicitly stated postoperative course and important negative outcomes.",
+        "source_quote": "He experienced no postoperative intraocular pressure elevation, infection, or delayed inflammation and there were no postoperative abnormalities in the right eye fundus",
+        "field_path": "/medical examinations"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The treatment entry names oral drugs but omits their stated purpose of controlling the patient's cardiac disease.",
+        "source_quote": "Cardiac disease is controlled through the use of oral drugs.",
+        "field_path": "/treatments/0/name"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Performed with no intraoperative complications",
+        "source_quote": "In addition to the mature cataract in the right eye, the cataract in the left eye progressed rapidly during the follow-up period, leading to decreased visual acuity. Cataract surgery was indicated for both eyes, and it was performed with no intraoperative complications",
+        "explanation": "The surgery details omit that surgery was indicated for both eyes, including due to rapidly progressing left-eye cataract with decreased visual acuity.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The admission placement asserts an undocumented event. The label also omits material symptom chronology, postoperative outcomes, treatment purpose, and the stated reason surgery was indicated for both eyes."
+  }
+}

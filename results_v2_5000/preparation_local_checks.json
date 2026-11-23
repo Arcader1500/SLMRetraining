@@ -1,0 +1,9 @@
+{
+  "original_1325_rows_unchanged": true,
+  "frozen_100_notes_and_order_unchanged": true,
+  "unique_training_notes": 5000,
+  "normalized_train_validation_overlap": 0,
+  "all_5100_label_masks_valid": true,
+  "supervised_tokens_per_epoch": 2441794,
+  "supervised_tokens_three_epochs": 7325382
+}

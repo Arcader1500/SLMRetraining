@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Large painless mass in the right neck",
+        "source_quote": "referred to Korea University Anam Hospital with a large painless mass in the right neck",
+        "explanation": "The stated visit motivation is supported."
+      },
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "70 years old",
+        "source_quote": "A 70-year-old man",
+        "explanation": "The age matches the source."
+      },
+      {
+        "field_path": "/medical examinations/3/result",
+        "label_excerpt": "The mass was a spindle cell tumor",
+        "source_quote": "An ultrasound-guided biopsy revealed that the mass was a spindle cell tumor.",
+        "explanation": "The biopsy result is accurately represented."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/medical examinations/1/result",
+        "label_excerpt": "two solid nodules in the right and left lower lobes of the lungs",
+        "source_quote": "The lung nodules were considered to be possible metastatic lesions.",
+        "explanation": "The CT result omits the source's material uncertainty that the pulmonary nodules might represent metastases.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/0/name",
+        "label_excerpt": "Medication for hypertension",
+        "source_quote": "He was taking medication for hypertension",
+        "explanation": "The label places an existing medication under treatments without retaining that it was already being taken; this risks presenting historical medication as a treatment initiated during the encounter.",
+        "category": "inappropriate_role",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Totally encapsulated neoplasm with a biphasic pattern composed of predominantly solid dense groups of spindle cells and small quantities of intermixed epithelial components",
+        "source_quote": "The tumor had a biphasic pattern which was composed of predominantly solid dense groups of spindle cells and small quantities of intermixed epithelial components.",
+        "explanation": "The label says the neoplasm was totally encapsulated, but this specific histology sentence only states the biphasic pattern. The source does state encapsulation in the preceding sentence, so this is supported by the full note and not an error.",
+        "category": "unsupported_addition",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "Candidate issues include omission of the stated possible metastatic interpretation of the lung nodules and ambiguity about categorizing pre-existing hypertension medication as treatment. The encapsulation detail is supported elsewhere in the note; it is not a discrepancy."
+  }
+}

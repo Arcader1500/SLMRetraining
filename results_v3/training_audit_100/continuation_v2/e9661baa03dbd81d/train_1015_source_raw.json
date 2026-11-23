@@ -1,0 +1,37 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The note places complete resolution after prednisolone was started, but does not explicitly attribute resolution to the drug. The label’s reaction field preserves the timing while leaving causal interpretation uncertain.",
+        "source_quote": "The patient was diagnosed with orbital sarcoidosis, and started on prednisolone (10 mg/day) in consideration of the significant improvement in eyelid swelling after surgical debulking (). The symptoms completely resolved within one month",
+        "field_path": "/treatments/0/reaction to treatment"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/1/details",
+        "label_excerpt": "3-mm ptosis with 10-mm levator function, without swelling",
+        "source_quote": "the ptosis resolved after administration of 2.5% phenylephrine in the left eye",
+        "explanation": "The label omits the documented response of the ptosis to phenylephrine, a clinically relevant symptom modifier.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      },
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Operative findings showed stiff and coarse orbital fat particles; histopathologic examination demonstrated non-caseating granulomas consisting of epitheloid histiocytes in the orbital fat, most likely caused by sarcoidosis",
+        "source_quote": "surgical debulking of the swollen lower eyelid via an inferior conjunctival fornical approach for diagnosis and treatment was performed, as well as a conjunctivo-mullerectomy for ptosis correction",
+        "explanation": "The label describes the procedures but omits their stated purposes: diagnosis and treatment of the swelling, and correction of ptosis.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      }
+    ],
+    "summary": "The treatment-response finding is a valid uncertainty about causal linkage. The label also omits the ptosis response to phenylephrine and the procedures’ stated purposes."
+  }
+}

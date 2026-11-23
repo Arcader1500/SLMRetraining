@@ -1,0 +1,58 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Accidental consumption of rodenticide paste",
+        "source_quote": "alleged history of accidental consumption of an unknown quantity of rodenticide paste (Ratol, containing 3% yellow phosphorus)",
+        "explanation": "The label captures the ingestion but omits the stated unknown quantity, product, and concentration."
+      },
+      {
+        "field_path": "/symptoms/2/details",
+        "label_excerpt": "Developed fever on the second hospital day",
+        "source_quote": "On the second hospital day, the child developed fever",
+        "explanation": "The fever and its timing are supported."
+      },
+      {
+        "field_path": "/medical examinations/4/result",
+        "label_excerpt": "Mild hepatomegaly",
+        "source_quote": "Abdominal sonography done on day 2 showed mild hepatomegaly.",
+        "explanation": "The sonography result is supported."
+      },
+      {
+        "field_path": "/treatments/0/name",
+        "label_excerpt": "Gastric lavage",
+        "source_quote": "The child was admitted and gastric lavage done.",
+        "explanation": "Gastric lavage is documented as performed."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/diagnosis tests",
+        "label_excerpt": "",
+        "source_quote": "A diagnosis of stage 1 hepatic encephalopathy was made",
+        "explanation": "The note establishes a material diagnosis, but the diagnosis tests section is empty and no other label leaf records stage 1 hepatic encephalopathy.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/admission",
+        "label_excerpt": "",
+        "source_quote": "She was then brought to the hospital 14 hours after poisoning due to persistent vomiting.",
+        "explanation": "The label records persistent vomiting as the admission reason but omits the source's material 14-hour interval from poisoning to hospital presentation.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/1/reaction to treatment",
+        "label_excerpt": "Progressed to stage 3 encephalopathy on day 3",
+        "source_quote": "Despite initiation of antihepatic failure therapy, the child progressed to stage 3 encephalopathy on day 3",
+        "explanation": "The source reports progression after therapy was initiated, but the label repeats it as a reaction for each of six therapies. The note does not attribute the progression independently to each treatment, so this association is uncertain under the annotation policy.",
+        "category": "wrong_linkage_value",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "The label captures several source-supported events, but omits the documented stage 1 hepatic encephalopathy diagnosis and the 14-hour presentation interval. It also links subsequent progression to each listed treatment, an association not individually established by the note."
+  }
+}

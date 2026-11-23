@@ -1,0 +1,140 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 0,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "Fatigue is first stated together with appetite loss worsening at the later emergency-room consultation; the earlier visit is explicitly tied to appetite loss. The label extends the earlier timing to fatigue.",
+        "source_quote": "He continued to report appetite loss and went to hospital 1 week before his admission.",
+        "field_path": "/symptoms/2/time"
+      },
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label omits the earlier markedly elevated creatinine result and its timing after the consultation, a material finding given the subsequent renal insufficiency.",
+        "source_quote": "He also took a blood examination after the consultation and his serum creatinine had increased to 683.33 μmol/l.",
+        "field_path": "/medical examinations"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The S-1 schedule is explicitly stated and materially describes the treatment course, but is absent from the treatment leaves.",
+        "source_quote": "He started taking S-1 50 mg, twice daily for 3 consecutive weeks, followed by a 2-week rest period 8 months ago.",
+        "field_path": "/treatments"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The note attributes partial remission to six cycles of chemotherapy overall. Linking that response specifically to cisplatin is insufficiently established, so this is a policy ambiguity rather than a clear source error.",
+        "source_quote": "He received six cycles of chemotherapy and showed a partial clinical remission.",
+        "field_path": "/treatments/2/reaction to treatment"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations",
+        "label_excerpt": "",
+        "source_quote": "His serum creatinine increased slightly (from 95.47 to 114.92 μmol/l) 1 week after receiving cisplatin.",
+        "explanation": "The label omits this earlier creatinine increase following cisplatin, a material treatment-associated renal finding relevant to the later renal insufficiency.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations",
+        "label_excerpt": "",
+        "source_quote": "He was drowsy and on the Glasgow Coma Scale his score was 13 of 15.",
+        "explanation": "The examination records drowsiness, but the label retains only the Glasgow Coma Scale score. Drowsiness is a distinct material finding expressible in the examination section.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history",
+        "label_excerpt": "",
+        "source_quote": "A 35-year-old man suffered from immunoglobulin-A nephropathy 2 years before admission and was treated with steroid therapy.",
+        "explanation": "The label records the nephropathy history and lists steroid therapy separately, but omits that the steroid therapy treated the nephropathy. This relationship is explicit and material context for the prior treatment.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Confirmed the timing overstatement for fatigue and material omissions of earlier creatinine findings and the S-1 schedule. The cisplatin response linkage is ambiguous because the source reports remission for the chemotherapy course overall. Additional material omissions include drowsiness and the stated relationship between steroid therapy and nephropathy."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 0,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The note ties the earlier hospital visit to appetite loss only; fatigue is described as aggravated later when he consulted the emergency room. The label's time field places fatigue at the earlier visit.",
+        "source_quote": "He continued to report appetite loss and went to hospital 1 week before his admission.",
+        "field_path": "/symptoms/2/time"
+      },
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label omits a materially elevated creatinine result measured after the consultation, distinct from the later admission result.",
+        "source_quote": "He also took a blood examination after the consultation and his serum creatinine had increased to 683.33 μmol/l.",
+        "field_path": "/medical examinations"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The S-1 schedule is explicitly stated and absent from the treatment entry; it is material course information.",
+        "source_quote": "He started taking S-1 50 mg, twice daily for 3 consecutive weeks, followed by a 2-week rest period 8 months ago.",
+        "field_path": "/treatments"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The note reports remission for the overall chemotherapy course, so the drug-specific linkage is not established. Because treatment reaction roles can be ambiguous, this is not a clear error.",
+        "source_quote": "He received six cycles of chemotherapy and showed a partial clinical remission.",
+        "field_path": "/treatments/2/reaction to treatment"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations",
+        "label_excerpt": "",
+        "source_quote": "He was drowsy and on the Glasgow Coma Scale his score was 13 of 15.",
+        "explanation": "The medical examinations section records the GCS but omits the separately stated drowsiness, a material examination finding.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations",
+        "label_excerpt": "",
+        "source_quote": "His serum creatinine and blood urea nitrogen were elevated to 1919.16 μmol/l and 32.49",
+        "explanation": "The label includes both values but omits that they were elevated, which is clinically material context explicitly stated in the note.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/1",
+        "label_excerpt": "",
+        "source_quote": "He continued to take S-1 and the other drugs for about 1 week from the start of the renal insufficiency.",
+        "explanation": "The S-1 entry omits that it continued for about a week after renal insufficiency began, a distinct treatment-course detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Confirmed the fatigue timing discrepancy and material omissions of the earlier creatinine result and S-1 schedule. The chemotherapy-response linkage remains ambiguous. Also identified omitted drowsiness, elevated-result context, and continued S-1 use after renal insufficiency began."
+  }
+}

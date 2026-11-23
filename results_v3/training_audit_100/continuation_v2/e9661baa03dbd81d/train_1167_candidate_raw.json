@@ -1,0 +1,36 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "51",
+        "source_quote": "A 51-year-old man presented to us",
+        "explanation": "The age matches the source."
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Aortic valve replacement with a metallic valve a few years ago",
+        "source_quote": "He had an aortic valve replacement with a metallic valve a few years ago",
+        "explanation": "The history and timing are source-supported."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Positive at three minutes post nitrate provocation with a cardio-inhibitory response",
+        "source_quote": "positive at three minutes post nitrate provocation with a cardio-inhibitory response",
+        "explanation": "The recorded test result and timing match the source."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/diagnosis tests",
+        "label_excerpt": "",
+        "source_quote": "where the ECG showed severe sinus bradycardia and sinoatrial (SA) exit block. He reproduced and confirmed all the clinical symptoms of an abdominal gripe, nausea, and sweating.",
+        "explanation": "The label omits the material HUT findings of severe sinus bradycardia and SA exit block, as well as reproduction of the clinical symptoms. These are expressible in the existing diagnosis test result field.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "One candidate material omission: the HUT test’s specific ECG findings and symptom reproduction are not captured."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Complaints of arthralgias and headache triggered by coughing",
+        "source_quote": "with complaints of arthralgias, most notably in her right knee, left shoulder, and bilateral thighs that made it difficult for her to ambulate.",
+        "explanation": "The visit motivation captures the main complaints; the note also specifies their impact on ambulation."
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "No significant past medical history",
+        "source_quote": "with no significant past medical history",
+        "explanation": "The history entry matches the source."
+      },
+      {
+        "field_path": "/medical examinations/2/result",
+        "label_excerpt": "Positive for small intraretinal hemorrhages, less likely positive for Roth's spots",
+        "source_quote": "positive for small intraretinal hemorrhages that were deemed to be secondary to the patient's hypertension and less likely positive for Roth's spots.",
+        "explanation": "The result preserves both the finding and the source's qualification."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "20.4 cells/mm3",
+        "source_quote": "neutrophilic leukocytosis, with white blood cell count at 20.4 cells/mm3 and neutrophils at 17.4 bil/L.",
+        "explanation": "The result omits the separately reported neutrophil count, a material finding expressible with this test result.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/diagnosis tests/4/result",
+        "label_excerpt": "Multiple small punctate bilateral areas of acute or subacute infarctions, hemorrhagic area in the right occipital lobe with subtle surrounding enhancement",
+        "source_quote": "the differential diagnosis consisted of neoplasm, vascular malformation, or embolic infarction with hemorrhagic conversion.",
+        "explanation": "The MRI result omits the stated differential for the hemorrhagic occipital lesion, leaving out material diagnostic uncertainty.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Pain was relieved",
+        "source_quote": "this was deemed to be noncardiac in nature as the patient's pain was relieved with ibuprofen and her EKG showed no acute findings.",
+        "explanation": "The label records pain relief but omits that the source explicitly characterizes the troponin elevation as noncardiac and cites the ECG context; this is clinically material contextual information, though the reaction leaf may not encode it fully.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label is largely source-supported, but it omits the reported neutrophil count and the MRI differential. The pain-relief entry also leaves out the source's interpretation and ECG context."
+  }
+}

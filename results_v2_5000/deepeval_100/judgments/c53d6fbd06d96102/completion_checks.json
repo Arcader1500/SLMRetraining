@@ -1,0 +1,27 @@
+{
+  "run_id": "c53d6fbd06d96102",
+  "cases": 100,
+  "unique_measurements": 400,
+  "paired_csv_rows": 200,
+  "frozen_inputs_verified": true,
+  "score_records_verified": true,
+  "summary_recomputed": true,
+  "metrics": {
+    "Source fidelity": {
+      "baseline": 0.409,
+      "finetuned": 0.517,
+      "paired_delta": 0.108,
+      "wins": 63,
+      "ties": 24,
+      "losses": 13
+    },
+    "Source coverage": {
+      "baseline": 0.45,
+      "finetuned": 0.526,
+      "paired_delta": 0.076,
+      "wins": 57,
+      "ties": 20,
+      "losses": 23
+    }
+  }
+}

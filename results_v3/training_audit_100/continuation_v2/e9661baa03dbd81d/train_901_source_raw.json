@@ -1,0 +1,134 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The source does state that she denied asbestos exposure, but this item is not a supported finding that the label omitted it: the supplied schema and calibration place relevant history in physiological context, and the candidate’s existence is confirmed only as a possible omission, not its materiality. The note does not otherwise establish asbestos exposure as a material fact to retain.",
+        "source_quote": "The patient had a history of tubal ligation and denied asbestos exposure.",
+        "field_path": "/patient medical history/physiological context"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The candidate explanation itself says the combined procedure entry is supported by the note, so it identifies no discrepancy.",
+        "source_quote": "Therefore, the patient underwent exploratory laparotomy. ... We treated her with a total hysterectomy and bilateral adnexectomy.",
+        "field_path": "/surgeries/0/Type"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The candidate explanation says the ultrasound result matches the source, so it identifies no discrepancy.",
+        "source_quote": "One month ago, she developed abdominal pain and ultrasonography showed a 12 × 11.4 × 9.8 cm heterogeneous mass behind the uterus, with a cystic dark area of 3.4 × 2.3 cm (Fig. ).",
+        "field_path": "/medical examinations/0/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "48",
+        "source_quote": "A 48- year-old Chinese woman, gravida 4, para 2, was admitted to our hospital due to abdominal pain for 1 month.",
+        "explanation": "The label omits the patient's explicitly stated Chinese ethnicity. Ethnicity is represented in the patient information section in the projection drops and is directly stated in the source.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "12 × 11.4 × 9.8 cm heterogeneous mass behind the uterus, with a cystic dark area of 3.4 × 2.3 cm",
+        "source_quote": "Ultrasound suspected as degeneration of uterine myoma.",
+        "explanation": "The ultrasound's diagnostic impression is omitted from the examination result, which records only the imaging measurements. The source explicitly gives this interpretation and it is material to the diagnostic course.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Localized well-differentiated benign mesothelioma",
+        "source_quote": "The results of immunohistochemistry showed that the 3 molecules Calretinin, D2–40, CK were positive, while p53, EMA were negative (Table ).",
+        "explanation": "The label includes the final pathology diagnosis but omits the source-reported immunohistochemistry results, which are material diagnostic findings.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Localized well-differentiated benign mesothelioma",
+        "source_quote": "The tiny neoplasm on the surface of the ovary was also thought to be mesothelioma involvement.",
+        "explanation": "The label omits the source's qualified interpretation of the ovarian surface neoplasm as possible mesothelioma involvement. This is a material diagnostic detail; the source's uncertainty must be retained.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The three candidates do not identify label errors: one is an omission claim whose materiality is not established, and the other two explicitly describe source-supported label content. Material omissions include ethnicity, the ultrasound impression, immunohistochemistry findings, and the qualified interpretation of ovarian involvement."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The source documents a relevant negative history item that is absent from the physiological context.",
+        "source_quote": "The patient had a history of tubal ligation and denied asbestos exposure.",
+        "field_path": "/patient medical history/physiological context"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The label combines procedures stated in the note: exploratory laparotomy was performed, followed by total hysterectomy and bilateral adnexectomy.",
+        "source_quote": "Therefore, the patient underwent exploratory laparotomy. | We treated her with a total hysterectomy and bilateral adnexectomy.",
+        "field_path": "/surgeries/0/Type"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The ultrasound result preserves the source measurements and finding.",
+        "source_quote": "ultrasonography showed a 12 × 11.4 × 9.8 cm heterogeneous mass behind the uterus, with a cystic dark area of 3.4 × 2.3 cm",
+        "field_path": "/medical examinations/0/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "12 × 11.4 × 9.8 cm heterogeneous mass behind the uterus, with a cystic dark area of 3.4 × 2.3 cm",
+        "source_quote": "Ultrasound suspected as degeneration of uterine myoma.",
+        "explanation": "The label omits the ultrasound's stated diagnostic impression, a relevant qualification of the examination result.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Localized well-differentiated benign mesothelioma",
+        "source_quote": "The results of immunohistochemistry showed that the 3 molecules Calretinin, D2–40, CK were positive, while p53, EMA were negative (Table ).",
+        "explanation": "The label includes the final pathology diagnosis but omits the stated immunohistochemistry results supporting the diagnostic workup.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Localized well-differentiated benign mesothelioma",
+        "source_quote": "The tiny neoplasm on the surface of the ovary was also thought to be mesothelioma involvement.",
+        "explanation": "The label omits the source's qualified interpretation of the ovarian-surface neoplasm as possible mesothelioma involvement.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The asbestos-exposure denial is a supported omission. The combined surgery entry and ultrasound measurements are source-supported. The label also omits the ultrasound impression, immunohistochemistry results, and the qualified interpretation of the ovarian-surface neoplasm."
+  }
+}

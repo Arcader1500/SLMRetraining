@@ -1,0 +1,29 @@
+{
+  "error": "AssertionError",
+  "detail": "",
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The note contains conflicting descriptions: it first says she declared her own image to be an old friend, then says she felt her old friend next to the image of the children. The candidate identifies the conflict, but the source does not support treating the label’s linkage as a clear error.",
+        "source_quote": "When asked, she declared the image as an old friend ... The patient did feel her old friend next to the image of the children.",
+        "field_path": "/symptoms/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history",
+        "label_excerpt": "",
+        "source_quote": "She was a 69-year-old found to be suffering from Alzheimer's disease.",
+        "explanation": "The source explicitly identifies Alzheimer's disease, a material patient-history fact that is absent from the label. The existing patient medical history section can represent it.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate’s linkage concern is an ambiguity because the source describes the old-friend identification in two conflicting ways. The label also omits the explicitly stated Alzheimer’s disease from patient medical history."
+  }
+}

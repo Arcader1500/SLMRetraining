@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Large varicose veins, CEAP C2s, in the left lower limb",
+        "source_quote": "A 64-year-old woman presented with large varicose veins, CEAP C2s, in the left lower limb.",
+        "explanation": "Visit motivation matches the reason for presentation."
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "Less than 1 hour after leaving hospital",
+        "source_quote": "Less than 1 hour after leaving hospital, impairment of speech capacity was observed.",
+        "explanation": "The label preserves the stated symptom timing."
+      },
+      {
+        "field_path": "/medical examinations/1/result",
+        "label_excerpt": "No foam in the deep venous system",
+        "source_quote": "Ultrasound scanning showed no foam in the deep venous system.",
+        "explanation": "The examination result matches the source."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Impairment of speech capacity",
+        "source_quote": "Less than 1 hour after leaving hospital, impairment of speech capacity was observed.",
+        "explanation": "The label assigns the later speech impairment as a reaction to sclerotherapy. The note establishes that it occurred after treatment, but does not establish that treatment caused it; preserve the temporal sequence without asserting a causal reaction.",
+        "category": "negation_uncertainty",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/treatments/2/dosage",
+        "label_excerpt": "20 mg",
+        "source_quote": "20 mg prednisone was prescribed per day for 5 days.",
+        "explanation": "The treatment leaf omits the stated daily frequency and five-day duration, which are material course details.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/1/dosage",
+        "label_excerpt": "One gram",
+        "source_quote": "One gram of hydrocortisone IV was infused",
+        "explanation": "The treatment leaf preserves the amount but omits the stated IV route, a source-stated treatment detail.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label is largely source-supported, but it omits material details of the hydrocortisone and prednisone courses and presents a temporal association as a treatment reaction."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Possible diagnosis of hemangioma of the spleen",
+        "source_quote": "Preoperative evaluation led to the possible diagnosis of hemangioma of the spleen.",
+        "explanation": "The possible diagnosis is supported, though this does not itself establish an admission."
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Patient was asymptomatic",
+        "source_quote": "although the patient was asymptomatic.",
+        "explanation": "The note explicitly states the patient was asymptomatic."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Capillary hemangioma",
+        "source_quote": "Histologic examination showed a capillary hemangioma",
+        "explanation": "The histology result supports this diagnosis."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Possible diagnosis of hemangioma of the spleen",
+        "source_quote": "An 18-year-old Greek male student presented for screening test in order to get a health certificate.",
+        "explanation": "The note describes a screening presentation and preoperative evaluation, but does not state that the patient was admitted. Labeling the event as an admission is unsupported by the note; ED or outpatient presentation alone would not establish admission.",
+        "category": "inappropriate_role",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/medical examinations/1/result",
+        "label_excerpt": "Hypoechogenic mass involving the spleen",
+        "source_quote": "Ultrasonography and Magnetic resonance imaging (MRI) showed a hypoechogenic mass involving the spleen and the splenomegaly",
+        "explanation": "The label omits the separately reported splenomegaly on imaging, a material finding in the workup.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label is mostly consistent with the note. Candidate issues: the screening presentation is encoded as an admission without explicit admission evidence, and the imaging result omits the reported splenomegaly."
+  }
+}

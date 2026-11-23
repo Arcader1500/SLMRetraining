@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/symptoms/0/name of symptom",
+        "label_excerpt": "Shortness of breath",
+        "source_quote": "with shortness of breath and mild chest pain",
+        "explanation": "The presenting symptom is stated in the source."
+      },
+      {
+        "field_path": "/diagnosis tests/3/result",
+        "label_excerpt": "Multiple lesions at the border zones and a huge acute infarct at right temporal zone",
+        "source_quote": "there were multiple lesions at the border zones and there was a huge acute infarct at right temporal zone",
+        "explanation": "The MRI result is supported by the note."
+      },
+      {
+        "field_path": "/diagnosis tests/4/result",
+        "label_excerpt": "7 × 2 mm vegetation on the mitral cusp",
+        "source_quote": "TEE showed 7 × 2 mm vegetation on the mitral cusp",
+        "explanation": "The TEE finding is supported by the note."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Deep vein thrombosis and bilateral massive PTE",
+        "source_quote": "was admitted to the emergency service of a community hospital with shortness of breath and mild chest pain. The clinical workup revealed deep vein thrombosis in her right leg and bilateral massive PTE.",
+        "explanation": "The note says admission was for shortness of breath and chest pain, with DVT and PTE found during workup. Assigning those findings as the admission reason changes their role.",
+        "category": "inappropriate_role",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/treatments/1/dosage",
+        "label_excerpt": "0.8 mL",
+        "source_quote": "she was scheduled for surgery under enoxaparin 0.8 mL b.i.d.",
+        "explanation": "The dosage leaf omits the stated twice-daily frequency, which is material treatment-course information expressible in the schema.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/2/reaction to treatment",
+        "label_excerpt": "No improvement, condition worsened",
+        "source_quote": "Despite IV heparin treatment for almost 48 hours, her neurological examination did not improve and got worsened.",
+        "explanation": "The note attributes the lack of improvement and worsening to the neurological examination. The label broadens this to the patient's overall condition, making the reaction less precise.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      }
+    ],
+    "summary": "Candidate discrepancies concern the admission reason, omitted enoxaparin frequency, and the scope of the reported heparin response."
+  }
+}

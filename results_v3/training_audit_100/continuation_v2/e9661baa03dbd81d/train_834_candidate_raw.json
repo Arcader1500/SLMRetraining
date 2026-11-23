@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "19",
+        "source_quote": "A former healthy 19-year-old male",
+        "explanation": "The age is explicitly stated in the note."
+      },
+      {
+        "field_path": "/medical examinations/1/result",
+        "label_excerpt": "Normal",
+        "source_quote": "Somatic and neurologic examination was normal.",
+        "explanation": "The examination result matches the source."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Some hypoactivity in the frontal-lobes, but no signs of epilepsy",
+        "source_quote": "EEG showed some hypoactivity in the frontal-lobes, but no signs of epilepsy.",
+        "explanation": "The EEG result is represented accurately."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "1 to 2-week long episodes",
+        "source_quote": "began suffering from 1 to 2-week long episodes (with regular 4–5 week intervals)",
+        "explanation": "The label records episode duration but omits the regular 4–5 week intervals, a material part of the recurring timing pattern.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/0/dosage",
+        "label_excerpt": "100 mg",
+        "source_quote": "At first, lamotrigine was titrated up to 100 mg twice daily and maintained for a",
+        "explanation": "The source specifies titration to 100 mg twice daily; the label omits the frequency. The sentence is cut off after “for a,” so no treatment duration can be inferred.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Two material omissions are present: the episode interval and lamotrigine frequency. The supplied checks are directly supported by the note."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/symptoms/3/location",
+        "label_excerpt": "Right visual field",
+        "source_quote": "the patient experienced mild right homonymous hemianopsia",
+        "explanation": "The note identifies the symptom but does not specify its location as the right visual field; that label detail is not established by the quoted source text."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Irregular aneurysm at the origin of the left PICA, 5.7 mm in size, with a wide neck",
+        "source_quote": "with a wide neck (greater than 3.75 mm)",
+        "explanation": "The label omits the source-stated neck measurement, a material detail of the angiogram finding."
+      },
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Resolved the nausea",
+        "source_quote": "She also developed significant nausea which resolved with meclizine.",
+        "explanation": "Supported: the note explicitly attributes nausea resolution to meclizine."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms/3/location",
+        "label_excerpt": "Right visual field",
+        "source_quote": "the patient experienced mild right homonymous hemianopsia",
+        "explanation": "The source does not state that the hemianopsia was located in the right visual field. The label adds a specific location not established by this note.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Irregular aneurysm at the origin of the left PICA, 5.7 mm in size, with a wide neck",
+        "source_quote": "with a wide neck (greater than 3.75 mm)",
+        "explanation": "The result omits the explicitly reported neck measurement, a material angiographic detail.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label has one unsupported symptom-location detail and omits the angiogram’s stated neck measurement. The other supported check confirms meclizine is linked to nausea resolution in the source."
+  }
+}

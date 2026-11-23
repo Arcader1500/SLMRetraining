@@ -1,0 +1,60 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Severely decreased visual acuity in the right eye",
+        "source_quote": "Later, he became aware of severely decreased visual acuity in the right eye several months ago and visited our hospital.",
+        "explanation": "The visit motivation matches the stated reason for the hospital visit."
+      },
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Performed with no intraoperative complications",
+        "source_quote": "Cataract surgery was indicated for both eyes, and it was performed with no intraoperative complications",
+        "explanation": "The note confirms cataract surgery was performed without intraoperative complications."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Mutation in the PTPN11 gene",
+        "source_quote": "Genetic analysis revealed a mutation in the PTPN11 gene.",
+        "explanation": "The genetic analysis result is source-supported."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Decreased visual acuity and mature cataract in the right eye",
+        "source_quote": "Later, he became aware of severely decreased visual acuity in the right eye several months ago and visited our hospital.",
+        "explanation": "The note describes a hospital visit but does not establish an admission. The admission entry asserts an event the source does not document.",
+        "category": "event_status",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "Several months ago",
+        "source_quote": "A 42-year-old man experienced decreased visual acuity in the right eye before 2 years, but did not seek treatment.",
+        "explanation": "The label records the later worsening/presentation timing but omits the earlier onset and lack of treatment, which materially distinguish the symptom chronology.",
+        "category": "chronology",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/medical examinations",
+        "label_excerpt": "",
+        "source_quote": "He experienced no postoperative intraocular pressure elevation, infection, or delayed inflammation and there were no postoperative abnormalities in the right eye fundus",
+        "explanation": "The label captures examination findings and intraoperative status but omits the stated postoperative course, including important negative outcomes.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/0/name",
+        "label_excerpt": "Oral drugs",
+        "source_quote": "Cardiac disease is controlled through the use of oral drugs.",
+        "explanation": "The treatment entry omits that the oral drugs control the patient's cardiac disease, losing the source-stated treatment purpose and response.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label contains supported visit, surgery, and genetic-result details, but asserts an undocumented admission and omits material symptom chronology and treatment/postoperative information."
+  }
+}

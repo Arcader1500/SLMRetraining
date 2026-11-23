@@ -1,0 +1,58 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Primary hypertension, type-2 diabetes mellitus, coronary artery disease, end-stage renal disease with a renal transplant five years ago",
+        "source_quote": "The patient's past medical history was significant for primary hypertension, type-2 diabetes mellitus, coronary artery disease, and end-stage renal disease resulting in a renal transplant five years ago.",
+        "explanation": "The label accurately captures the stated medical history and transplant timing."
+      },
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Renal transplant",
+        "source_quote": "end-stage renal disease resulting in a renal transplant five years ago.",
+        "explanation": "The source supports a prior renal transplant; its placement under surgeries does not make it a false positive procedure."
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "Acute onset approximately one hour after ingesting medications",
+        "source_quote": "Approximately one hour after ingesting his medications the patient became acutely ill and presented to the ED as described.",
+        "explanation": "The timing is supported by the note."
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Blood pressure of 79/35, pulse of 47, oral temperature of 35.3°C, respiratory rate of 18, oxygen saturation of 100 percent",
+        "source_quote": "Upon arrival, the patient vitals were as follows: blood pressure of 79/35, pulse of 47, oral temperature of 35.3°C, and respiratory rate of 18 with an oxygen saturation of 100 percent.",
+        "explanation": "The arrival vital signs match the source."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Became acutely ill",
+        "source_quote": "Approximately one hour after ingesting his medications the patient became acutely ill and presented to the ED as described.",
+        "explanation": "The note links becoming acutely ill to ingesting multiple medications, not specifically to nifedipine. The individual drug-to-reaction attribution is uncertain.",
+        "category": "wrong_linkage_value",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "The patient filled his new prescription and took all of the medications that afternoon except for metoprolol which he believed he was supposed to discontinue.",
+        "explanation": "The treatment list records nifedipine but omits the other medications he took (doxazosin, hydralazine, and metolazone). These are distinct, source-stated medication exposures relevant to the acute episode.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/medical examinations",
+        "label_excerpt": "",
+        "source_quote": "En route to the ED via ambulance, the patient was noted to have a pulse in the thirties and a systolic blood pressure of 50 mmHg.",
+        "explanation": "The label includes arrival vital signs but omits the markedly abnormal pre-arrival pulse and systolic pressure, a material examination finding.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label captures several source-supported facts, but it attributes the acute illness to nifedipine without drug-specific support and omits other reported medication exposures and severe pre-arrival vital signs."
+  }
+}

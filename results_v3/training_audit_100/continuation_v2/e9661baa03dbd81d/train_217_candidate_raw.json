@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "22 years old",
+        "source_quote": "An otherwise healthy 22-year-old caucasian woman consulted for an initial orthopedic examination",
+        "explanation": "Age is directly supported."
+      },
+      {
+        "field_path": "/patient information/sex",
+        "label_excerpt": "Woman",
+        "source_quote": "An otherwise healthy 22-year-old caucasian woman consulted for an initial orthopedic examination",
+        "explanation": "Sex is directly supported."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Consistent with PNF; no evidence of malignancy in the tissue sample",
+        "source_quote": "Core needle biopsy was performed and the results were consistent with PNF; there was no evidence of malignancy in the tissue sample.",
+        "explanation": "The biopsy result and negative malignancy finding match the note."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Debulking of a tumor from the right buttock",
+        "source_quote": "At another treatment facility, when the patient was 18 years of age, she underwent debulking of a tumor from the right buttock",
+        "explanation": "This identifies a historical procedure at another facility as the reason for an admission, while the note describes the current visit as an initial orthopedic examination and gives no evidence of current admission. Clear unsupported admission linkage.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Required 8 units of blood for stabilization, no followup at that treatment facility",
+        "source_quote": "which was complicated with a very profuse intraoperative hemorrhage resulting in a severe hypotension and acute kidney failure requiring 8 units of blood for stabilization. The patient was later discharged and did not continue followup at that treatment facility.",
+        "explanation": "The details omit the material hemorrhage, severe hypotension, and acute kidney failure that led to transfusion. The follow-up detail is supported, but does not cover these serious complications.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/0/name",
+        "label_excerpt": "Preoperative embolization followed by surgical resection",
+        "source_quote": "The treatment consensus opted for preoperative embolization, as this would potentially reduce the perioperative blood loss considering the vascularity and size of the lesion. Surgical resection of the bulk of the lesion would then be undertaken",
+        "explanation": "These are consensus-selected future treatments, not documented as performed. The label omits that they were planned, making the treatment status materially ambiguous.",
+        "category": "event_status",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "The label is mostly source-supported, but it misuses the historical debulking as an admission reason, omits serious complications from the prior surgery details, and does not preserve the planned status of the consensus treatments."
+  }
+}

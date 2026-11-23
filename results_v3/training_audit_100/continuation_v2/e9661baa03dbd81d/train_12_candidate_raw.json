@@ -1,0 +1,42 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Evaluation following a transient episode of amnesia",
+        "source_quote": "the day after, she was conducted to our attention for evaluation.",
+        "explanation": "The label captures the evaluation visit."
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Mildly overweight (BMI 31.25), menopause at age 51",
+        "source_quote": "with the only exception of being mildly overweight (BMI 31.25)",
+        "explanation": "The note supports the weight context; age at menopause is also explicitly stated."
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Patient was disoriented, unable to find the right direction",
+        "source_quote": "she was unable to find the right direction; when she was asked where she was going, she answered she did not remember",
+        "explanation": "The label summarizes reported symptoms, though the account attributes them to bystanders."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Revealed a hippocampal punctate area of DWI restriction",
+        "source_quote": "Brain MRI, performed one day after TGA, revealed a hippocampal punctate area of DWI restriction",
+        "explanation": "The MRI finding is accurately represented."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "She could remember personal information and the swab test but not the events during the episode.",
+        "source_quote": "she could remember having had the swab tested, then having paid for the test, having left the hospital, and reached the car after the procedure, but she could not remember the following events, including those witnessed by the by-standers",
+        "explanation": "Material chronology/detail is compressed in a way that may suggest she remembered the swab test generally, while the note specifically says she remembered the swab being tested and subsequent steps up to reaching the car, but not the events thereafter. This is a projection loss/ambiguity, not a clear contradiction.",
+        "category": "omission",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "One candidate issue: symptom details omit the more precise boundaries of the episode-related memory gap. The evidence supports possible projection loss, but the label’s concise summary leaves room for interpretation."
+  }
+}

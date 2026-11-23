@@ -821,6 +821,55 @@
       background: var(--teal);
       transform: translateX(-50%);
     }
+    .ci-interval.terra {
+      background: var(--terracotta-soft);
+      border-color: var(--terracotta);
+    }
+    .ci-point.terra {
+      background: var(--terracotta);
+    }
+    .ci-tabs {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      background: var(--bg-band);
+      padding: 4px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      margin-bottom: 12px;
+    }
+    .ci-tab {
+      appearance: none;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--ink-muted);
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 5px 13px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.16s ease, color 0.16s ease, box-shadow 0.16s ease;
+    }
+    .ci-tab:hover {
+      color: var(--ink);
+    }
+    .ci-tab:focus-visible {
+      outline: 2px solid var(--teal);
+      outline-offset: 2px;
+    }
+    .ci-tab[aria-selected="true"] {
+      background: var(--surface);
+      color: var(--ink);
+      border-color: var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .ci-tab[data-ci-tab="v2_5000"][aria-selected="true"] {
+      color: var(--terracotta);
+    }
+    .ci-tab[data-ci-tab="v3_1325"][aria-selected="true"] {
+      color: var(--teal-dark);
+    }
 
     /* Tables */
     .table-wrap {
@@ -955,7 +1004,7 @@
       <div class="meta-row">
         <span class="meta-chip">Gemma 3 270M IT</span>
         <span class="meta-chip">FP32 LoRA · Tesla T4</span>
-        <span class="meta-chip">Static Checks + GPT-6 Luna Judge</span>
+        <span class="meta-chip">Static Checks + GPT-6 Luna / Gemini 4 Hydrogen Judges</span>
         <span class="meta-chip">20 Nov 2026</span>
       </div>
 
@@ -972,13 +1021,13 @@
         </div>
         <div class="kpi-card">
           <div class="kpi-label">LLM Source Fidelity</div>
-          <div class="kpi-value">0.39–0.41 <span class="arrow">→</span> 0.52</div>
-          <div class="kpi-sub">+0.130 (Reduced · 1,325) and +0.108 (Full · 5,000).</div>
+          <div class="kpi-value">0.39 <span class="arrow">→</span> 0.52–0.54</div>
+          <div class="kpi-sub">+0.130 (Reduced · 1,325) and +0.153 (Full · 5,000).</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-label">LLM Source Coverage</div>
-          <div class="kpi-value">0.41–0.45 <span class="arrow">→</span> 0.50–0.53</div>
-          <div class="kpi-sub">65W/10L on Reduced · 1,325; 57W/23L on Full · 5,000.</div>
+          <div class="kpi-value">0.41 <span class="arrow">→</span> 0.50–0.55</div>
+          <div class="kpi-sub">65W/10L on Reduced · 1,325; 69W/14L on Full · 5,000.</div>
         </div>
       </div>
 
@@ -1049,7 +1098,7 @@
             <h3>Phase 4 — Scaling Full Schema to 5,000 Notes</h3>
             <span class="run-badge badge-terra">Full · 5,000 (v2 scaled)</span>
           </div>
-          <p>Scaled full schema to 5,000 notes (1,875 steps, 7.33M supervised tokens) on the exact same 100 frozen notes. Resumed cleanly from step 625 after a Colab drop; completed all 400 Luna judgments.</p>
+          <p>Scaled full schema to 5,000 notes (1,875 steps, 7.33M supervised tokens) on the exact same 100 frozen notes. Resumed cleanly from step 625 after a Colab drop; completed all 400 Gemini 4 Hydrogen judgments.</p>
         </div>
       </div>
     </section>
@@ -1174,7 +1223,7 @@
         Training and generation run on cloud Tesla T4 GPUs; all scoring, LLM judging, bootstrap CIs, and audits run locally on hash-verified exports.
       </p>
 
-      <div class="diagram-frame" style="margin-bottom: 18px;" role="img" aria-label="Two-track pipeline: Cloud GPU data cleaning, baseline, FP32 LoRA training, and adapter generation feeding into Local static scoring, GPT-6 Luna LLM judging, bootstrap CIs, and audits.">
+      <div class="diagram-frame" style="margin-bottom: 18px;" role="img" aria-label="Two-track pipeline: Cloud GPU data cleaning, baseline, FP32 LoRA training, and adapter generation feeding into Local static scoring, GPT-6 Luna and Gemini 4 Hydrogen LLM judging, bootstrap CIs, and audits.">
         <svg viewBox="0 0 920 264" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
@@ -1220,7 +1269,7 @@
 
           <rect x="250" y="182" width="196" height="58" rx="10" fill="#faeee9" stroke="#b55734" stroke-width="1.8"/>
           <text x="348" y="206" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12.5" font-weight="700" fill="#8c3d20">6. Local LLM Judge</text>
-          <text x="348" y="224" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#8c3d20">400 GPT-6 Luna scores</text>
+          <text x="348" y="224" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#8c3d20">400 LLM scores / run</text>
           <line x1="446" y1="211" x2="478" y2="211" stroke="#b55734" stroke-width="1.8" marker-end="url(#arrow-terra)"/>
 
           <rect x="484" y="182" width="190" height="58" rx="10" fill="#fff" stroke="#b55734" stroke-width="1.5"/>
@@ -1458,17 +1507,17 @@
       <!-- SUB-BLOCK 5B -->
       <div class="subblock-header">
         <h3 style="margin:0;">5B. LLM-as-a-Judge &amp; Paired Confidence Intervals</h3>
-        <span class="subblock-tag">Source-grounded rubric · 400 GPT-6 Luna judgments / run</span>
+        <span class="subblock-tag">Source-grounded rubric · 400 judgments / run</span>
       </div>
       <p style="font-size: 0.92rem;">
-        Local DeepEval with <strong>GPT-6 Luna</strong> judges every output directly against the <strong>source clinical note</strong> (treating synthetic references as secondary) on <strong>Source Fidelity</strong> and <strong>Source Coverage</strong>.
+        Local DeepEval judges every output directly against the <strong>source clinical note</strong> (treating synthetic references as secondary) on <strong>Source Fidelity</strong> and <strong>Source Coverage</strong> — using <strong>GPT-6 Luna</strong> for <em>Reduced · 1,325</em> and <strong>Gemini 4 Hydrogen</strong> for <em>Full · 5,000</em>.
       </p>
 
       <div class="grid-2" style="margin-bottom: 18px;">
         <div class="card">
           <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:10px;">
             <h3 style="margin:0;">Reduced · 1,325</h3>
-            <span class="run-badge badge-teal">400 Judgments · 100 Cases</span>
+            <span class="run-badge badge-teal">GPT-6 Luna · 400 Judgments</span>
           </div>
           <div class="metric-row">
             <div class="metric-head"><span class="metric-name">Source Fidelity</span><span class="metric-nums">0.386 → <strong>0.516</strong> (+0.130)</span></div>
@@ -1499,30 +1548,30 @@
         <div class="card">
           <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:10px;">
             <h3 style="margin:0;">Full · 5,000</h3>
-            <span class="run-badge badge-terra">400 Judgments · Same 100</span>
+            <span class="run-badge badge-terra">Gemini 4 Hydrogen · 400 Judgments</span>
           </div>
           <div class="metric-row">
-            <div class="metric-head"><span class="metric-name">Source Fidelity</span><span class="metric-nums">0.409 → <strong>0.517</strong> (+0.108)</span></div>
+            <div class="metric-head"><span class="metric-name">Source Fidelity</span><span class="metric-nums">0.386 → <strong>0.539</strong> (+0.153)</span></div>
             <div class="bar-stack">
-              <div class="bar-track"><div class="bar-fill bar-base" style="width: 40.9%;"></div></div>
-              <div class="bar-track"><div class="bar-fill bar-ft-terra" style="width: 51.7%;"></div></div>
+              <div class="bar-track"><div class="bar-fill bar-base" style="width: 38.6%;"></div></div>
+              <div class="bar-track"><div class="bar-fill bar-ft-terra" style="width: 53.9%;"></div></div>
             </div>
           </div>
           <div class="metric-row">
-            <div class="metric-head"><span class="metric-name">Source Coverage</span><span class="metric-nums">0.450 → <strong>0.526</strong> (+0.076)</span></div>
+            <div class="metric-head"><span class="metric-name">Source Coverage</span><span class="metric-nums">0.412 → <strong>0.550</strong> (+0.138)</span></div>
             <div class="bar-stack">
-              <div class="bar-track"><div class="bar-fill bar-base" style="width: 45.0%;"></div></div>
-              <div class="bar-track"><div class="bar-fill bar-ft-terra" style="width: 52.6%;"></div></div>
+              <div class="bar-track"><div class="bar-fill bar-base" style="width: 41.2%;"></div></div>
+              <div class="bar-track"><div class="bar-fill bar-ft-terra" style="width: 55.0%;"></div></div>
             </div>
           </div>
           <div class="wtl-block">
             <div class="wtl-row">
-              <div class="wtl-head"><span>Fidelity W / T / L</span><span><strong>63W</strong> · 24T · 13L</span></div>
-              <div class="wtl-bar"><div class="wtl-win-terra" style="width: 63%;"></div><div class="wtl-tie" style="width: 24%;"></div><div class="wtl-loss" style="width: 13%;"></div></div>
+              <div class="wtl-head"><span>Fidelity W / T / L</span><span><strong>68W</strong> · 21T · 11L</span></div>
+              <div class="wtl-bar"><div class="wtl-win-terra" style="width: 68%;"></div><div class="wtl-tie" style="width: 21%;"></div><div class="wtl-loss" style="width: 11%;"></div></div>
             </div>
             <div class="wtl-row">
-              <div class="wtl-head"><span>Coverage W / T / L</span><span><strong>57W</strong> · 20T · 23L</span></div>
-              <div class="wtl-bar"><div class="wtl-win-terra" style="width: 57%;"></div><div class="wtl-tie" style="width: 20%;"></div><div class="wtl-loss" style="width: 23%;"></div></div>
+              <div class="wtl-head"><span>Coverage W / T / L</span><span><strong>69W</strong> · 17T · 14L</span></div>
+              <div class="wtl-bar"><div class="wtl-win-terra" style="width: 69%;"></div><div class="wtl-tie" style="width: 17%;"></div><div class="wtl-loss" style="width: 14%;"></div></div>
             </div>
           </div>
         </div>
@@ -1575,33 +1624,48 @@
       </div>
 
       <div class="card">
-        <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:8px; margin-bottom: 8px;">
-          <h3 style="margin:0;">Paired Bootstrap 95% CIs (Reduced · 1,325)</h3>
+        <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:8px; margin-bottom: 10px;">
+          <h3 style="margin:0;">Paired Bootstrap 95% CIs</h3>
           <span class="run-badge badge-teal">100,000 BCa Resamples</span>
         </div>
-        <p style="font-size: 0.87rem; margin-bottom: 12px;">
-          Every lower bound stays well above zero on both all 100 cases and the 80 held-out cases never used to tune the rubric.
-        </p>
 
-        <div class="ci-row tabular">
-          <div><strong>All 100 · Fidelity</strong></div>
-          <div class="ci-axis"><div class="ci-zero"></div><div class="ci-interval" style="left: 50%; width: 28%;"></div><div class="ci-point" style="left: 65%;"></div></div>
-          <div style="text-align:right;"><strong>+0.130</strong> [+0.100, +0.156]</div>
+        <div class="ci-tabs" role="tablist" aria-label="Paired bootstrap run selector">
+          <button type="button" class="ci-tab" role="tab" id="ci-tab-v3" data-ci-tab="v3_1325" aria-selected="true" aria-controls="ci-panel-v3">Reduced · 1,325 (GPT-6 Luna)</button>
+          <button type="button" class="ci-tab" role="tab" id="ci-tab-v2" data-ci-tab="v2_5000" aria-selected="false" aria-controls="ci-panel-v2">Full · 5,000 (Gemini 4 Hydrogen)</button>
         </div>
-        <div class="ci-row tabular">
-          <div><strong>All 100 · Coverage</strong></div>
-          <div class="ci-axis"><div class="ci-zero"></div><div class="ci-interval" style="left: 32.5%; width: 28.5%;"></div><div class="ci-point" style="left: 47.5%;"></div></div>
-          <div style="text-align:right;"><strong>+0.095</strong> [+0.065, +0.122]</div>
+
+        <div id="ci-panel-v3" role="tabpanel" aria-labelledby="ci-tab-v3">
+          <p style="font-size: 0.87rem; margin-bottom: 12px;">
+            Every lower bound stays well above zero across all 100 frozen validation cases (axis: 0.00 to +0.20).
+          </p>
+
+          <div class="ci-row tabular">
+            <div><strong>All 100 · Source Fidelity</strong></div>
+            <div class="ci-axis"><div class="ci-zero"></div><div class="ci-interval" style="left: 50%; width: 28%;"></div><div class="ci-point" style="left: 65%;"></div></div>
+            <div style="text-align:right;"><strong>+0.130</strong> [+0.100, +0.156]</div>
+          </div>
+          <div class="ci-row tabular">
+            <div><strong>All 100 · Source Coverage</strong></div>
+            <div class="ci-axis"><div class="ci-zero"></div><div class="ci-interval" style="left: 32.5%; width: 28.5%;"></div><div class="ci-point" style="left: 47.5%;"></div></div>
+            <div style="text-align:right;"><strong>+0.095</strong> [+0.065, +0.122]</div>
+          </div>
         </div>
-        <div class="ci-row tabular">
-          <div>Remaining 80 · Fidelity</div>
-          <div class="ci-axis"><div class="ci-zero"></div><div class="ci-interval" style="left: 52.5%; width: 30%;"></div><div class="ci-point" style="left: 68%;"></div></div>
-          <div style="text-align:right;"><strong>+0.136</strong> [+0.105, +0.165]</div>
-        </div>
-        <div class="ci-row tabular">
-          <div>Remaining 80 · Coverage</div>
-          <div class="ci-axis"><div class="ci-zero"></div><div class="ci-interval" style="left: 32%; width: 30%;"></div><div class="ci-point" style="left: 47%;"></div></div>
-          <div style="text-align:right;"><strong>+0.094</strong> [+0.064, +0.124]</div>
+
+        <div id="ci-panel-v2" role="tabpanel" aria-labelledby="ci-tab-v2" hidden>
+          <p style="font-size: 0.87rem; margin-bottom: 12px;">
+            Every lower bound stays well above zero across all 100 frozen validation cases (axis: 0.00 to +0.20).
+          </p>
+
+          <div class="ci-row tabular">
+            <div><strong>All 100 · Source Fidelity</strong></div>
+            <div class="ci-axis"><div class="ci-zero"></div><div class="ci-interval terra" style="left: 57.5%; width: 37.5%;"></div><div class="ci-point terra" style="left: 76.5%;"></div></div>
+            <div style="text-align:right;"><strong>+0.153</strong> [+0.115, +0.190]</div>
+          </div>
+          <div class="ci-row tabular">
+            <div><strong>All 100 · Source Coverage</strong></div>
+            <div class="ci-axis"><div class="ci-zero"></div><div class="ci-interval terra" style="left: 50.5%; width: 37.0%;"></div><div class="ci-point terra" style="left: 69.0%;"></div></div>
+            <div style="text-align:right;"><strong>+0.138</strong> [+0.101, +0.175]</div>
+          </div>
         </div>
 
         <details class="tech-details" style="margin-top: 14px;">
@@ -1781,6 +1845,24 @@
         renderOutput(selector.value);
         selector.addEventListener("change", (e) => renderOutput(e.target.value));
       }
+
+      /* Paired Bootstrap CI tabs */
+      const ciTabs = Array.from(document.querySelectorAll(".ci-tab[data-ci-tab]"));
+      const ciPanels = Array.from(document.querySelectorAll('[role="tabpanel"][id^="ci-panel-"]'));
+
+      ciTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const targetId = tab.getAttribute("aria-controls");
+          ciTabs.forEach((t) => t.setAttribute("aria-selected", String(t === tab)));
+          ciPanels.forEach((p) => {
+            if (p.id === targetId) {
+              p.removeAttribute("hidden");
+            } else {
+              p.setAttribute("hidden", "");
+            }
+          });
+        });
+      });
 
       /* Scrollspy for right pill rail & mobile top nav */
       const sections = Array.from(document.querySelectorAll("section.doc-section[id]"));

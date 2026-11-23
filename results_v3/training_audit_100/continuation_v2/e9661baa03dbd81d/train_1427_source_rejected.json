@@ -1,0 +1,46 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label omits source-described antipyretics and antibiotics, which are material treatment events. The cited quote only establishes the later admission; the treatment omission is supported elsewhere in the note.",
+        "source_quote": "She was observed for some time with prescription of antipyretics. ... the fever did not subside after administration of appropriate antibiotics",
+        "field_path": "/treatments"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The CT result leaves out the explicit vascular qualification, a material part of the finding.",
+        "source_quote": "diffuse thickening of the aortic wall, without significant narrowing or occlusion of vessels, was evident.",
+        "field_path": "/medical examinations/3/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Accompanying chills and headache",
+        "source_quote": "The fever had developed 2 months prior, was persistent, over 38℃, and spiked 2-3 times per day",
+        "explanation": "The fever's persistent pattern and daily spike frequency are material symptom characteristics not represented in the label.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Antihypertensive medication for 5 years",
+        "source_quote": "She had taken antihypertensive medication commencing 5 years prior and had no known drug or food allergies.",
+        "explanation": "The label preserves the medication history but omits the explicitly stated absence of known drug or food allergies, relevant history expressible in this existing context field.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Both candidate omissions are supported. The label also omits material fever-pattern details and the stated allergy history; other projection-drop leads are not material omissions or lack a suitable schema path."
+  },
+  "error": ""
+}

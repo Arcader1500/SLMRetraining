@@ -1,0 +1,60 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Vaginal bleeding",
+        "source_quote": "A 41-year-old woman presented with vaginal bleeding",
+        "explanation": "The visit motivation matches the presenting complaint."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "metastatic leiomyosarcoma in the gallbladder (6.5 cm)",
+        "source_quote": "Pathology confirmed metastatic leiomyosarcoma in the gallbladder (6.5 cm)",
+        "explanation": "The label accurately captures the gallbladder pathology result and size."
+      },
+      {
+        "field_path": "/treatments/5/reaction to treatment",
+        "label_excerpt": "Poorly tolerated with grade 3 fatigue",
+        "source_quote": "Four cycles of trabectedin were then administered but she tolerated these poorly with grade 3 fatigue.",
+        "explanation": "The label preserves the stated tolerance and severity."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/surgeries/2/time",
+        "label_excerpt": "Two years after the completion of adjuvant chemotherapy",
+        "source_quote": "Two years after the completion of adjuvant chemotherapy a surveillance scan detected lung metastases () and she subsequently underwent a left thoracoscopic wedge resection",
+        "explanation": "The interval anchors the surveillance scan that detected lung metastases; placing it as the surgery time shifts that timing to the later resection. This is a temporal linkage discrepancy.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Uterine fibroids, high-grade uterine leiomyosarcoma, lung metastases, gallbladder mass",
+        "source_quote": "A 41-year-old woman presented with vaginal bleeding and was found to have uterine fibroids on ultrasound.",
+        "explanation": "The note describes presentation and subsequent referral and treatment, but does not state that she was admitted for these conditions. The label asserts an admission reason without explicit admission evidence.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/medical examinations/2/result",
+        "label_excerpt": "disease progression after 5 cycles of temozolamide",
+        "source_quote": "She received 5 cycles of temozolamide with disease progression.",
+        "explanation": "The note reports disease progression during/after the treatment course but does not attribute that result to a CT scan. The label groups it as a CT result, potentially mislinking the finding to an investigation.",
+        "category": "wrong_linkage_value",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/treatments/8/time",
+        "label_excerpt": "After 6 cycles of gemcitabine and docetaxel",
+        "source_quote": "Following 6 cycles of gemcitabine and doceatexl she continued on single agent bevacizumab, with durable stable disease.",
+        "explanation": "The note states that bevacizumab monotherapy continued after the combination course; this timing is supported, though the label's abbreviated wording leaves some course-boundary ambiguity.",
+        "category": "wrong_linkage_value",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "Candidate issues concern unsupported admission status and timing/result linkages. Supported checks confirm the presenting symptom, pathology result, and trabectedin reaction."
+  }
+}

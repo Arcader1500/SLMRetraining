@@ -20,4 +20,6 @@ scripts/prepare_v3_dataset.py -text
 scripts/run_colab_notebook.py -text
 scripts/run_deepeval.py -text
 scripts/source_grounded_rubric.py -text
+scripts/calculate_paired_confidence_intervals.py -text
+scripts/continue_training_audit.py -text
 "archive/docs/v2/Clinical JSON Extraction_ Fine-Tuning Process and Results.html" -text

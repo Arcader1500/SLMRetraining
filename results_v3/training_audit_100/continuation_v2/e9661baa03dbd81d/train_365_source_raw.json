@@ -1,0 +1,110 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The note describes an excision at an outside facility; it does not say the patient was admitted for it. The label incorrectly places that event under admission.",
+        "source_quote": "It was excised at an outside facility when it reached roughly 4.0 × 4.0 cm because it was thought to be a benign mass.",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label includes the MRI result but omits the distinct pathology result from the outside excision.",
+        "source_quote": "pathological examination showed a spindle-cell tumor with features suggestive of MPNST.",
+        "field_path": "/diagnosis tests"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label names the physical checkup but omits its material findings, including measured weakness and intact nerve, vascular, and joint findings, as well as the absence of local lymph node enlargement.",
+        "source_quote": "His physical checkup revealed power of 3+/5 in his fingers and wrist extension, an intact sensation at the dorsum of the hand with intact median and ulnar nerve function, full range of motion in the elbow and shoulder joints with an intact vascular examination, and no evidence of local lymph node enlargement.",
+        "field_path": "/medical examinations"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The history section is empty despite source-stated smoking, alcohol and radiation exposure history, depression, and family cancer history. Risperidone is recorded separately, but the other history facts are absent.",
+        "source_quote": "He is a known smoker and works as a security guard, has no prior history of alcohol consumption or radiation exposure, was previously diagnosed with depression and receiving oral risperidone 4 mg, and has a positive family history of ocular and breast cancer.",
+        "field_path": "/patient medical history/physiological context"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Initially 1.0 × 1.0 cm, grew to 4.0 × 4.0 cm at the time of excision",
+        "source_quote": "When first noticed, the painless nodule was 1.0 × 1.0 cm, but it started to grow slowly over the course of 18 months.",
+        "explanation": "The label gives the initial and excision sizes but omits the source-stated slow growth over 18 months, a material symptom-course detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/1/details",
+        "label_excerpt": "Oval-shaped, large, exophytic, fungating, hemorrhagic, firm, and painful mass measuring 10.0 × 15.0 cm",
+        "source_quote": "At presentation, his vital signs were unremarkable, with a temperature of 36.6 °C, pulse rate of 72 beats/minute, respiratory rate of 18 breaths/minute, blood pressure of 114/76 mmHg, oxygen saturation of 96%, and a pain score of 7/10.",
+        "explanation": "The label describes the painful mass but omits the source-stated pain score, a material symptom-severity detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Confirmed the unsupported admission linkage and material omissions in pathology, examination findings, and medical history. Also identified omitted symptom growth timing and pain severity."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The note says the excision occurred at an outside facility and does not state that it was an admission. The label incorrectly gives that excision as an admission reason.",
+        "source_quote": "It was excised at an outside facility when it reached roughly 4.0 × 4.0 cm because it was thought to be a benign mass.",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The outside excision’s pathology result is absent from the label and is a material diagnostic finding expressible under diagnosis tests.",
+        "source_quote": "pathological examination showed a spindle-cell tumor with features suggestive of MPNST.",
+        "field_path": "/diagnosis tests"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label names the physical checkup but omits its material findings, including finger and wrist weakness, intact nerve and vascular findings, range of motion, and absent local lymph node enlargement.",
+        "source_quote": "His physical checkup revealed power of 3+/5 in his fingers and wrist extension, an intact sensation at the dorsum of the hand with intact median and ulnar nerve function, full range of motion in the elbow and shoulder joints with an intact vascular examination, and no evidence of local lymph node enlargement.",
+        "field_path": "/medical examinations"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The history section is empty despite source-stated smoking, alcohol and radiation exposure history, depression, and family cancer history. Risperidone is listed separately, but that does not supply these history facts.",
+        "source_quote": "He is a known smoker and works as a security guard, has no prior history of alcohol consumption or radiation exposure, was previously diagnosed with depression and receiving oral risperidone 4 mg, and has a positive family history of ocular and breast cancer.",
+        "field_path": "/patient medical history"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/1/details",
+        "label_excerpt": "Oval-shaped, large, exophytic, fungating, hemorrhagic, firm, and painful mass measuring 10.0 × 15.0 cm",
+        "source_quote": "At presentation, his vital signs were unremarkable, with a temperature of 36.6 °C, pulse rate of 72 beats/minute, respiratory rate of 18 breaths/minute, blood pressure of 114/76 mmHg, oxygen saturation of 96%, and a pain score of 7/10.",
+        "explanation": "The label describes the painful mass but omits the source-stated pain score, a material symptom severity detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The outside excision is incorrectly labeled as an admission reason. The label also omits the excision pathology, material physical-checkup findings, relevant medical history, and the pain score."
+  }
+}

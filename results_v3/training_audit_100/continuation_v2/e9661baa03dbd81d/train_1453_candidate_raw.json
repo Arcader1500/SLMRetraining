@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "35",
+        "source_quote": "A 35-year-old man",
+        "explanation": "The patient's age is supported by the note."
+      },
+      {
+        "field_path": "/diagnosis tests/2/result",
+        "label_excerpt": "Tumours in the abdominal cavity with enlarged para-aortic lymph nodes",
+        "source_quote": "The abdominal CT scan showed that there were tumours in the abdominal cavity with enlarged para-aortic lymph nodes.",
+        "explanation": "The CT result matches the source."
+      },
+      {
+        "field_path": "/medical examinations/4/result",
+        "label_excerpt": "No free air or niveau",
+        "source_quote": "There was no free air or niveau on the abdominal X-ray.",
+        "explanation": "The X-ray result preserves the source's negative findings."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms/2/time",
+        "label_excerpt": "Continued to report general fatigue and went to hospital 1 week before his admission",
+        "source_quote": "He continued to report appetite loss and went to hospital 1 week before his admission.",
+        "explanation": "The note places appetite loss and the hospital visit one week before admission. General fatigue is first mentioned later, when appetite loss and fatigue were aggravated and he consulted the emergency room. The label assigns the earlier timing and visit to general fatigue without source support.",
+        "category": "chronology",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/treatments/1/time",
+        "label_excerpt": "Started 8 months ago",
+        "source_quote": "He started taking S-1 50 mg, twice daily for 3 consecutive weeks, followed by a 2-week rest period 8 months ago.",
+        "explanation": "The label retains the start anchor but omits the source-stated dosing schedule and 3-week-on, 2-week-rest course. These details are material treatment attributes expressible in the existing treatment fields.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label has a chronology error for general fatigue and omits the stated S-1 schedule and course timing."
+  }
+}

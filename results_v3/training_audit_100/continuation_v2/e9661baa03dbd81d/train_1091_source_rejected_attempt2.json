@@ -1,0 +1,38 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The label omits the patient's explicit negative history of loss of consciousness, which is clinically relevant after a car accident and fits the existing physiological-context history field.",
+        "source_quote": "the female patient did not lose consciousness",
+        "field_path": "/patient medical history"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/surgeries/0/reason",
+        "label_excerpt": "",
+        "source_quote": "Because of the aneurysm, the patient required operative vascular surgical intervention on the day of admission.",
+        "explanation": "The source explicitly links the vascular operation to the aneurysm, but the label records the operation and aneurysm separately without preserving that relationship.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      },
+      {
+        "field_path": "/surgeries/1/reason",
+        "label_excerpt": "",
+        "source_quote": "Nine days postoperatively, the open reduction and internal fixation of the acetabular fracture was performed without any incidence.",
+        "explanation": "The source explicitly identifies the acetabular fracture as the reason for the fixation, but the label records the procedure and fracture separately without preserving that relationship.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      }
+    ],
+    "summary": "The candidate omission is supported. The label also omits the source-stated reasons linking each operation to its condition."
+  },
+  "error": ""
+}

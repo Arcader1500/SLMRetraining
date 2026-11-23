@@ -1,0 +1,65 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The label presents the scleral patch transplant as performed, although the note says preparations were being made for it. Only the free conjunctival autograft is explicitly described as performed.",
+        "source_quote": "preparing for an urgent scleral patch transplant surgery. The peripheral conjunctiva contact with the melting site was removed, and free conjunctival autograft transplantation was also performed.",
+        "field_path": "/surgeries/1/Type"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The four-month timing explicitly anchors the ulcer emergence and postoperative examination; the note does not explicitly time the patch transplant. The label assigns this timing to a surgery entry that also combines the planned patch transplant with the performed autograft.",
+        "source_quote": "a scleral ulcer emerged at a nasal ischemic necrotizing lesion 4 months later",
+        "field_path": "/surgeries/1/time"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "4 months postoperative",
+        "source_quote": "4 months later (2 months after stopping the local steroid drop treatment)",
+        "explanation": "The symptom timing retains the four-month postoperative interval but omits that the ulcer emerged two months after local steroid drops were stopped. This is a material treatment-to-symptom timing relationship.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/0/time",
+        "label_excerpt": "Postoperative",
+        "source_quote": "0.5% levofloxacin and 0.1% betamethasone four times daily",
+        "explanation": "The source states the initial topical treatment frequency, but the label records only that it was postoperative. The four-times-daily frequency is material treatment-course information that fits the treatment time/details field.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/1/time",
+        "label_excerpt": "After diagnosing SINS",
+        "source_quote": "0.1% betamethasone was immediately restarted four times daily",
+        "explanation": "The label omits the source-stated four-times-daily frequency of restarted betamethasone, a material treatment detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/1/reaction to treatment",
+        "label_excerpt": "Complete and rapid regression of the scleral melting after 2 weeks",
+        "source_quote": "at 6 months, there has been no recurrence",
+        "explanation": "The reaction records the two-week regression but omits the material follow-up outcome of no recurrence at six months while local steroid therapy continued.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Both candidate findings are supported by the note. The label also omits the ulcer’s timing relative to stopping local steroids, both treatment frequencies, and the six-month no-recurrence outcome."
+  }
+}

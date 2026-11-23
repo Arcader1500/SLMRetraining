@@ -1,0 +1,73 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The label records the specific negative history of no previous facial trauma. The broader statement that the medical history was noncontributory adds no distinct material fact to this field.",
+        "source_quote": "She had no previous facial trauma, and her medical history was not contributory.",
+        "field_path": "/patient medical history/physiological context"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The prior extraction is an explicit, clinically relevant procedure omitted from the label. The candidate path is a valid place to represent it.",
+        "source_quote": "The mandibular first molar had been extracted previously.",
+        "field_path": "/surgeries"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The source gives a seven-day duration for the postoperative medications and mouthwash; the label preserves only that they were given postoperatively.",
+        "source_quote": "Postoperatively, the patient received systemic antibiotic, analgesic, and mouthwash for 7 days.",
+        "field_path": "/treatments/0/time"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Not associated with pain, no problem with mouth-opening or chewing",
+        "source_quote": "She had been aware of the slow but steady increase in the size of the lesion over the past six years.",
+        "explanation": "The label records the six-year duration but omits the explicitly described growth pattern, a material change in the symptom over time.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Solitary, round, 3 × 3 cm well-defined radio-opaque lesion without a radiolucent rim of mandible, large, pedunculated mass attached to the buccal surface of the left mandibular body",
+        "source_quote": "These clinical and radiographic features were sufficiently supportive of the working diagnosis of peripheral osteoma.",
+        "explanation": "The label includes imaging findings but omits the source-stated working diagnosis, which is a material diagnostic conclusion expressible in the existing result path.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Solitary, round, 3 × 3 cm well-defined radio-opaque lesion without a radiolucent rim of mandible, large, pedunculated mass attached to the buccal surface of the left mandibular body",
+        "source_quote": "There were no features of Gardner's syndrome.",
+        "explanation": "This explicit negative diagnostic finding is omitted from the diagnosis-test result and is relevant to the documented diagnostic assessment.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Extraoral swelling on the left side, nonpalpable regional lymph nodes, well-defined, round, immobile mass on the buccal plate of the left posterior mandible and buccal expansion, bony-hard lesion on palpation, normal overlying oral mucosa, no pain, tenderness, or paresthesia",
+        "source_quote": "All of the posterior teeth were vital (positive responses to electric pulp testing).",
+        "explanation": "The label omits the documented vitality test result for the posterior teeth, a relevant examination finding in the assessment of this mandibular lesion.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The treatment duration, prior molar extraction, symptom growth pattern, working diagnosis, Gardner's syndrome negative, and posterior-tooth vitality are material source-supported omissions. The broader noncontributory-history statement is not a distinct material omission given the recorded trauma history."
+  }
+}

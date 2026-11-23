@@ -1,0 +1,63 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The source gives an explicit diagnosis and microbial confirmation, which are absent from the label. The note states a diagnostic conclusion but does not identify a specific test, so placing this under diagnosis tests is not clearly the only valid schema role.",
+        "source_quote": "Diagnosis and confirmation of necrotizing fasciitis by polymicrobial group A streptococcal organisms was made.",
+        "field_path": "/diagnosis tests"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The label records the debridement and its duration but omits the resulting wound extent, a material detail of the wound referred for reconstruction. The extent could be included in surgery details.",
+        "source_quote": "The resultant surgical debridement of the right posterior leg over the span of 1 week resulted in an open wound extending from the right popliteal fossa to about 8 cm from his right ankle ().",
+        "field_path": "/surgeries"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The patient's habitual smoking and history of drug abuse are source-supported history facts and are omitted from the physiological-context history.",
+        "source_quote": "The patient was a habitual smoker with history of drug abuse.",
+        "field_path": "/patient medical history/physiological context"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "History of Hodgkin's lymphoma, currently in remission, and ureteral stone causing hydronephrosis",
+        "source_quote": "He had no history of diabetes, alcoholism, or other general medical condition.",
+        "explanation": "The label omits the explicitly stated absence of diabetes and alcoholism, relevant negative medical history.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Sustained injury from falling against the metal pedal of his bicycle and subsequent diagnosis of necrotizing fasciitis",
+        "source_quote": "After 3 days of hospitalization and multiple courses of antibiotic, a surgical team was consulted for operative debridement of the wound.",
+        "explanation": "The source states three days of hospitalization before surgical consultation; the admission reason retains the injury and diagnosis but omits this material hospitalization duration.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Palpable dorsalis pedis and posterior tibial vessels",
+        "source_quote": "Examination of the foot revealed palpable dorsalis pedis and posterior tibial vessels and a normal modified lower",
+        "explanation": "The source also records a normal modified lower finding, but the sentence is cut off and does not establish what was normal. The candidate's result does not include it; the fragment cannot be safely completed into a specific finding.",
+        "category": "omission",
+        "classification": "policy_ambiguity",
+        "disposition": "downgraded",
+        "attribution": "uncertain"
+      }
+    ],
+    "summary": "The three candidate omissions are supported, though the diagnosis-tests placement is uncertain because the note names no specific test. The label also omits relevant negative history and the stated three-day hospitalization. The cut-off examination fragment does not establish a complete finding."
+  }
+}

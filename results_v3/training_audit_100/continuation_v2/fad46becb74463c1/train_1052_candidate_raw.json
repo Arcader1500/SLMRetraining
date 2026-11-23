@@ -1,0 +1,58 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "37",
+        "source_quote": "A 37-year-old woman",
+        "explanation": "Age is explicitly supported."
+      },
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Removal of the lesion using a chisel and rotary instruments via an intraoral approach, and curettage of the cavity",
+        "source_quote": "the lesion was totally removed using a chisel and rotary instruments via an intraoral approach, and curettage of the cavity was undertaken",
+        "explanation": "The note supports the procedure as performed."
+      },
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Inferior alveolar nerve was determined and preserved during surgery",
+        "source_quote": "the inferior alveolar nerve was determined and preserved",
+        "explanation": "The note explicitly states the nerve was identified and preserved."
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "Past six years",
+        "source_quote": "over the past six years",
+        "explanation": "The swelling's duration is stated directly."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments/0/time",
+        "label_excerpt": "Postoperatively",
+        "source_quote": "Postoperatively, the patient received systemic antibiotic, analgesic, and mouthwash for 7 days.",
+        "explanation": "The label omits the stated seven-day duration of the postoperative medication and mouthwash course, a material treatment timing detail.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/surgeries",
+        "label_excerpt": "",
+        "source_quote": "Because the lesion was actively growing and caused facial swelling, the patient was prepared for surgery.",
+        "explanation": "The label does not capture the clinically relevant indication that the lesion was actively growing and causing facial swelling, which motivated surgery.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Solitary, round, 3 × 3 cm well-defined radio-opaque lesion without a radiolucent rim of mandible, large, pedunculated mass attached to the buccal surface of the left mandibular body",
+        "source_quote": "The lesion extended distally of the second premolar to the mesial aspect of the second molar distal root",
+        "explanation": "The result omits the stated anatomic extent of the lesion, a potentially material imaging detail.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate material omissions: the seven-day postoperative course, the stated reason for surgery, and the lesion's described anatomic extent."
+  }
+}

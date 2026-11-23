@@ -1,0 +1,54 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The illness followed ingestion of several medications, including nifedipine, but the note does not establish that nifedipine alone caused the reaction. The label records the episode timing without explicitly claiming independent causation by nifedipine.",
+        "source_quote": "Approximately one hour after ingesting his medications the patient became acutely ill and presented to the ED as described.",
+        "field_path": "/treatments/0/reaction to treatment"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label lists nifedipine but omits other medications the patient explicitly took that afternoon. These medication exposures are relevant to the acute episode.",
+        "source_quote": "The patient filled his new prescription and took all of the medications that afternoon except for metoprolol which he believed he was supposed to discontinue.",
+        "field_path": "/treatments"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label records arrival vital signs but omits the markedly abnormal pulse and systolic pressure measured during ambulance transport.",
+        "source_quote": "En route to the ED via ambulance, the patient was noted to have a pulse in the thirties and a systolic blood pressure of 50 mmHg.",
+        "field_path": "/medical examinations"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient information/weight",
+        "label_excerpt": "",
+        "source_quote": "His body weight was 87.3 kg, nearly 10 kg above his baseline weight.",
+        "explanation": "The label omits the patient's stated weight and substantial increase above baseline, a material finding in the context of his renal disease and recent pulmonary edema.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Primary hypertension, type-2 diabetes mellitus, coronary artery disease, end-stage renal disease with a renal transplant five years ago",
+        "source_quote": "A review of the records revealed that the patient was recently hospitalized for a hypertensive emergency and pulmonary edema resultant from declining renal function.",
+        "explanation": "The physiological context omits a recent hospitalization for hypertensive emergency and pulmonary edema associated with declining renal function, which is material to this ED presentation.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The label captures the arrival vital signs and core history, but omits the severe pre-arrival measurements, other medications taken, the substantial weight increase, and recent hypertensive emergency with pulmonary edema. The recorded treatment reaction is temporally associated with the medication ingestion, but the source does not establish nifedipine as the individual cause."
+  },
+  "error": ""
+}

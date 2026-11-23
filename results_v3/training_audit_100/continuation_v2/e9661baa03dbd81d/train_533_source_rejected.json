@@ -1,0 +1,64 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The label presents the later resection as a treatment event, but the note says the patient did not undergo a further operation.",
+        "source_quote": "Therefore, the patient did not undergo a further operation",
+        "field_path": "/treatments/0/name"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The improvement was observed during the planned operation, which was not performed, so linking it as a reaction to that procedure misstates the event.",
+        "source_quote": "During the operation, the intravesical lesions were found to have significantly improved. ... Therefore, the patient did not undergo a further operation",
+        "field_path": "/treatments/0/reaction to treatment"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The label explicitly identifies the 3.0 cm measurement as the diameter of the base; it does not say that this is the size of the lesions generally.",
+        "source_quote": "The largest diameter of the base was about 3.0 cm",
+        "field_path": "/medical examinations/3/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/3/result",
+        "label_excerpt": "Multiple lesions and obvious vessel engorgement on the anterior and posterior walls of the bladder, the largest diameter of the base was about 3.0 cm",
+        "source_quote": "The base was wide and bulging, showing a crater-like appearance. ... the bilateral ureteral orifices were not involved.",
+        "explanation": "The cystoscopy result omits the distinctive crater-like base morphology and the explicit negative finding that the ureteral orifices were not involved.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Other lesions were not treated during the surgery",
+        "source_quote": "Transurethral resection of an isolated lesion ... was performed to achieve a diagnosis.",
+        "explanation": "The surgery details capture that other lesions were untreated but omit the material stated purpose of the performed resection: achieving a diagnosis.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/discharge/discharge summary",
+        "label_excerpt": "Lesions nearly disappeared 3 months after resection biopsy, no lesion recurrence or new lesions found 9 months later, patient did not take any medication during this period and was still undergoing follow-up with no hematuria",
+        "source_quote": "Therefore, the patient did not undergo a further operation and was planned to return for follow-up in 2 months.",
+        "explanation": "The discharge summary omits the decision not to proceed with the further operation and the planned 2-month follow-up, both material disposition and follow-up details.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The later bladder-lesion resection was not performed, so the treatment entry and its linked reaction are misleading. The cystoscopy label correctly ties the 3.0 cm measurement to the base, but omits important morphology and a negative finding; the label also omits the diagnostic purpose of the biopsy resection and the immediate follow-up plan."
+  },
+  "error": ""
+}

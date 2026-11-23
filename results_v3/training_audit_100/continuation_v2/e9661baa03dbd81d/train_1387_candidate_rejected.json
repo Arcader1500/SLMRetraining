@@ -1,0 +1,51 @@
+{
+  "response": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Complained of bilateral blurring of vision",
+        "source_quote": "she complained of bilateral blurring of vision",
+        "explanation": "The visit motivation matches the reason for referral."
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Diagnosed with combined T and B cell deficiencies at the age of 11",
+        "source_quote": "she was diagnosed with combined T and B cell deficiencies by the immunologist at the age of 11",
+        "explanation": "The history preserves the diagnosis and its timing."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "CMV inclusion bodies",
+        "source_quote": "HPE of the colon showed CMV inclusion bodies",
+        "explanation": "The colon histopathology result is supported."
+      },
+      {
+        "field_path": "/treatments/4/time",
+        "label_excerpt": "Completed 6 weeks of treatment 3 months prior to presentation of ophthalmic symptoms",
+        "source_quote": "She completed 6 weeks of intravenous ganciclovir 3 months prior to presentation of her ophthalmic symptoms.",
+        "explanation": "The label preserves the completed course and its timing."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "She was planned for right eye intravitreal ganciclovir injection in view of poor visual function with posterior pole involvement.",
+        "explanation": "The note describes a planned intravitreal injection, but no treatment entry represents this planned procedure or its status. This material omission loses the treatment plan.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/5",
+        "label_excerpt": "IV ganciclovir",
+        "source_quote": "The treatment was continued for 8",
+        "explanation": "The source ends mid-sentence after saying treatment continued for 8; the label leaves its duration unspecified. This is appropriate under the cutoff rule, so no finding is warranted.",
+        "category": "chronology",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "The label is largely supported but omits the planned right-eye intravitreal ganciclovir injection. The cutoff fragment does not support completing the current IV ganciclovir duration."
+  },
+  "error": ""
+}

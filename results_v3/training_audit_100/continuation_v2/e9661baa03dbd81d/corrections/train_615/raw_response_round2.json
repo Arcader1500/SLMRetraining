@@ -1,0 +1,45 @@
+{
+  "candidate_dispositions": [
+    {
+      "candidate_index": 1,
+      "disposition": "confirmed",
+      "attribution": "projection_loss",
+      "explanation": "The label records the cake timing but omits that the itching episode occurred after approximately two weeks of sertraline treatment.",
+      "source_quote": "After approximately two weeks of sertraline treatment",
+      "field_path": "/symptoms/4/time"
+    }
+  ],
+  "added_findings": [
+    {
+      "field_path": "/patient medical history",
+      "label_excerpt": "",
+      "source_quote": "did not have any history of allergy or dermatological diseases",
+      "explanation": "The empty history section omits the explicitly documented negative allergy and dermatological history, which is relevant to the suspected medication reaction.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/patient medical history",
+      "label_excerpt": "",
+      "source_quote": "vasomotor rhinitis after drinking red wine",
+      "explanation": "The empty history section omits the patient's reported rhinitis after red wine, a relevant prior reaction history.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/treatments/0/reaction to treatment",
+      "label_excerpt": "Initially slight nausea and insomnia, then an itching rash leading to discontinuation",
+      "source_quote": "had not felt better in 20 years",
+      "explanation": "The treatment response records early side effects and the later rash but omits the patient's marked positive response to fluoxetine.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    }
+  ],
+  "summary": "The candidate's omitted sertraline-course timing is supported. The label also omits relevant history and the patient's marked initial response to fluoxetine."
+}

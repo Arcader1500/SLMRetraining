@@ -1,0 +1,22 @@
+{
+  "selected_cases": 100,
+  "evaluated_cases": 100,
+  "empty_cases": 0,
+  "raw_json_object_valid_cases": 96,
+  "json_object_valid_after_fence_removal_cases": 96,
+  "exact_top_level_keys_cases": 96,
+  "exact_key_match_cases": 0,
+  "placeholder_only_cases": 0,
+  "reached_budget_cases": 3,
+  "mean_value_precision": 0.25499670722510026,
+  "mean_value_recall": 0.2473755886921248,
+  "mean_value_f1": 0.24790892455559244,
+  "mean_soft_value_precision": 0.4166415471955179,
+  "mean_soft_value_recall": 0.40791492504751753,
+  "mean_soft_value_f1": 0.4067051615223918,
+  "matched_values": 920,
+  "reference_values": 3763,
+  "generated_values": 3560,
+  "mean_generated_tokens": 545.61,
+  "max_5gram_repeat_ge_3_cases": 47
+}

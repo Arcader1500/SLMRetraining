@@ -1,0 +1,62 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The source ends after saying the advised colloid scan “confirmed” and does not state what it confirmed, so the specific accessory-spleen result is not established by the supplied note.",
+        "source_quote": "a colloid scan was advised that confirmed",
+        "field_path": "/diagnosis tests/1/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/admission/0/care center details",
+        "label_excerpt": "",
+        "source_quote": "which required ICU admission",
+        "explanation": "The label omits the explicitly stated ICU admission associated with the initial severe thrombocytopenia and pulmonary hemorrhage.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      }
+    ],
+    "summary": "The colloid scan result exceeds what the cut-off note establishes. The initial ICU admission is also omitted."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The note ends after “confirmed” and does not identify what the colloid scan confirmed. The label adds a specific result that the source does not establish.",
+        "source_quote": "a colloid scan was advised that confirmed",
+        "field_path": "/diagnosis tests/1/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Severe thrombocytopenia complicated by pulmonary hemorrhage",
+        "source_quote": "pulmonary hemorrhage which required ICU admission",
+        "explanation": "The label omits the source-stated ICU admission associated with the initial presentation, a material care-setting detail that can be recorded with this admission reason.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/1/dosage",
+        "label_excerpt": "25 mg/day initially, increased to 30 mg/day after relapse",
+        "source_quote": "he was admitted as a case of chronic relapsing ITP with platelets of 6 × 10 9/L, which increased to 96 × 10 9/L after a short course of steroid (Prednisone 25 mg/day), and IVIG",
+        "explanation": "The label does not preserve the source-stated Prednisone 25 mg/day dose for the December 2015 short course, despite representing that course in the treatment time.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The colloid scan result is unsupported because the note cuts off before stating what it confirmed. The label also omits the initial ICU admission and the December 2015 Prednisone dose."
+  }
+}

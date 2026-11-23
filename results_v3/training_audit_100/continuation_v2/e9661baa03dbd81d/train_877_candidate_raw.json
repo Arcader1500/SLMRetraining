@@ -1,0 +1,60 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Bilateral lower extremities angiograms via a transfemoral approach, balloon angioplasty of the left and right superficial femoral artery and left proximal popliteal artery",
+        "source_quote": "Decision was made to perform bilateral lower extremities angiograms via a transfemoral approach with possible revascularization of the right lower extremity (LE) first and then the left side on two different procedures one week apart. Both procedures were accessed through a transfemoral approach that involved balloon angioplasty of the left (L) and right (R) superficial femoral artery (SFA) and left proximal popliteal artery.",
+        "explanation": "The note supports the listed procedures and angioplasty sites."
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "The following day after the right transfemoral access approach",
+        "source_quote": "On the following day after the right transfemoral access approach, patient presents to ED with R groin and scrotal pain.",
+        "explanation": "The timing and symptom presentation are supported."
+      },
+      {
+        "field_path": "/medical examinations/3/result",
+        "label_excerpt": "Pseudo-aneurysm on the R groin originating from the common femoral artery measuring 2.5 × 1.4 cm and extending into the R inguinal canal, filled with hemorrhage and extension into the R scrotum that measures 13.7 × 6.4 × 6.6 cm",
+        "source_quote": "CT of the pelvis revealed a pseudo-aneurysm on the R groin originating from the common femoral artery (CFA) measuring 2.5 × 1.4 cm and extending into the R inguinal canal, filled with hemorrhage and extension into the R scrotum that measures 13.7 × 6.4 × 6.6 cm (Fig. ).",
+        "explanation": "The recorded CT result matches the source description."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "severe peripheral vascular disease",
+        "source_quote": "severe peripheral vascular disease with extensive smoking history",
+        "explanation": "Material smoking history is omitted from the relevant history leaf, though it is explicitly stated in the source.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Stenosis of superficial femoral artery of both lower extremities",
+        "source_quote": "CT angiography of the lower extremities showed critical stenosis of superficial femoral artery of both lower extremities",
+        "explanation": "The label omits the material severity qualifier “critical” from the angiographic finding.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/0/time",
+        "label_excerpt": "Resumed after discharge",
+        "source_quote": "Patient was discharged same day and aspirin and Plavix were resumed.",
+        "explanation": "The source says the medications were resumed, but does not specify that resumption occurred after discharge; that timing is added by the label.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/discharge/discharge summary",
+        "label_excerpt": "Patient was discharged the same day with resumed aspirin and Plavix",
+        "source_quote": "Patient was discharged same day and aspirin and Plavix were resumed.",
+        "explanation": "The note establishes same-day discharge and medication resumption but does not state they were resumed with or after discharge; the label links the two events more tightly than the source does.",
+        "category": "wrong_linkage_value",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "Most checked details are supported. Findings concern omitted smoking history and angiographic severity, plus unsupported timing/linkage of medication resumption to discharge."
+  }
+}

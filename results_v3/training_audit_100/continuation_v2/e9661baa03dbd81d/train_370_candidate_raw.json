@@ -1,0 +1,36 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "33",
+        "source_quote": "The patient is a 33-year-old male",
+        "explanation": "The label’s age matches the source."
+      },
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Laparoscopic splenectomy",
+        "source_quote": "Laparoscopic splenectomy was done in October 2012",
+        "explanation": "The source explicitly states that the splenectomy was performed."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "1 × 10 9/L at diagnosis, 62 × 10 9/L after initial treatment, 2 × 10 9/L at relapse, 6 × 10 9/L in December 2015, 96 × 10 9/L after treatment in December 2015, 3 × 10 9/L in March",
+        "source_quote": "he relapsed with platelets of 3 × 10 9/L",
+        "explanation": "The label includes the March platelet count stated in the source."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Confirmed the presence of an accessory spleen",
+        "source_quote": "a colloid scan was advised that confirmed",
+        "explanation": "The note cuts off after “confirmed” and does not state what the scan confirmed. The label supplies a specific result that is not established by the available source text.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      }
+    ],
+    "summary": "One candidate finding: the colloid scan result is completed beyond what the cut-off source establishes."
+  }
+}

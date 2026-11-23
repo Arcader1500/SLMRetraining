@@ -1,0 +1,57 @@
+{
+  "case_id": "train:1330",
+  "source_review": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The note reports gasping, bradycardia, and severe metabolic acidosis on admission; those material findings are absent from the symptoms entries. The omission is supported, though the admission reason also records the presenting symptoms.",
+        "source_quote": "On admission, she was gasping with bradycardia and severe metabolic acidosis.",
+        "field_path": "/symptoms"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The note confirms a right pulmonary vein stent was placed, but the label’s plural treatment name can describe the planned overall procedure; its reaction specifies the right-sided placement. This does not establish that the label claims left-sided stenting occurred.",
+        "source_quote": "Initially, a 7 x 12-mm Palmaz Blue balloon-expandable peripheral stent (Cordis Endovascular, Warren, NJ) was placed across the stenosis on the right pulmonary vein",
+        "field_path": "/treatments/3/name"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient information",
+        "label_excerpt": "",
+        "source_quote": "An 8-month-old girl weighing 6 kg",
+        "explanation": "The patient’s explicitly stated weight is absent from the patient information section; weight is a material patient attribute expressible there.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Pressure gradients gathered, selective right and left pulmonary angiography and direct injection of contrast to the proximal segment of the pulmonary veins showed narrowing at the junction of the collector sac and pulmonary veins",
+        "source_quote": "The narrowest parts were 4 mm and its proximal side was 7 mm on the right pulmonary vein",
+        "explanation": "The diagnosis-test result omits the source’s measured stenosis dimensions, including the right-sided measurements; these characterize the catheterization findings and are material details.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Pressure gradients gathered, selective right and left pulmonary angiography and direct injection of contrast to the proximal segment of the pulmonary veins showed narrowing at the junction of the collector sac and pulmonary veins",
+        "source_quote": "measurements were 1.5 mm and 4.2 mm, on the left pulmonary vein",
+        "explanation": "The diagnosis-test result also omits the stated left pulmonary vein measurements, material details of the documented catheterization findings.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The serious admission findings are omitted from symptoms, and the label omits the stated patient weight and catheterization measurements. The plural stenting name is ambiguous because only right-sided placement is established in the available note."
+  },
+  "source_evidence_span_repairs": []
+}

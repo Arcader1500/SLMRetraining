@@ -1,0 +1,75 @@
+{
+  "candidate_dispositions": [
+    {
+      "candidate_index": 1,
+      "disposition": "confirmed",
+      "attribution": "projection_loss",
+      "explanation": "The itching began after about two weeks of sertraline treatment, an important timing anchor omitted from the symptom entry.",
+      "source_quote": "After approximately two weeks of sertraline treatment",
+      "field_path": "/symptoms/4/time"
+    }
+  ],
+  "added_findings": [
+    {
+      "field_path": "/patient medical history",
+      "label_excerpt": "",
+      "source_quote": "He did not take any medication and had no regular medical contact.",
+      "explanation": "The label omits relevant baseline medication and medical-contact history, which belongs in the physiological-context history section.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/patient medical history",
+      "label_excerpt": "",
+      "source_quote": "The patient did not have any history of allergy or dermatological diseases.",
+      "explanation": "Relevant negative allergy and dermatological history is absent from the patient's medical history.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/patient medical history",
+      "label_excerpt": "",
+      "source_quote": "he sometimes suffered from vasomotor rhinitis after drinking red wine.",
+      "explanation": "This relevant history linking red wine to vasomotor rhinitis is omitted from the patient's medical history.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/symptoms/4/details",
+      "label_excerpt": "",
+      "source_quote": "an intense itching sensation",
+      "explanation": "The symptom entry omits the source-stated intensity of the itching episode.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/treatments/0/reaction to treatment",
+      "label_excerpt": "Initially slight nausea and insomnia, then an itching rash leading to discontinuation",
+      "source_quote": "had not felt better in 20 years",
+      "explanation": "The label omits the patient's marked initial improvement on fluoxetine, a material response distinct from the later adverse symptoms.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/treatments/2/reaction to treatment",
+      "label_excerpt": "Improved depression, no urticarial symptoms, but not full recovery",
+      "source_quote": "full recovery was not achieved this time",
+      "explanation": "The label captures the incomplete recovery but omits that it was this time, distinguishing the sertraline outcome from the earlier fluoxetine response.",
+      "category": "omission",
+      "classification": "policy_ambiguity",
+      "disposition": "downgraded",
+      "attribution": "uncertain"
+    }
+  ],
+  "summary": "The candidate timing omission is supported. Material omissions include relevant baseline history and the marked initial fluoxetine response; the intensity omission is also supported. The sertraline response detail is already substantially represented, so that potential omission is downgraded."
+}

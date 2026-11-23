@@ -1,0 +1,134 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The stated reason is consistent with both the admission for worsening dyspnea and the note’s statement that the patient was preoperatively diagnosed with an aneurysm and pulmonary stenosis before urgent repair was scheduled. The label does not clearly assert that treatment was the admission reason.",
+        "source_quote": "The patient was preoperatively diagnosed with a large saccular aortic arch aneurysm that caused the pulmonary stenosis.",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The note establishes that repair was scheduled, and the label’s surgery type does not explicitly say the repair was completed. However, the cutoff says a median sternotomy was performed during surgery, leaving the repair’s status ambiguous rather than clearly unsupported.",
+        "source_quote": "An urgent aortic repair was scheduled on day 6 of hospitalization. During the surgery, transesophageal echocardiography showed no intracardiac or extracardiac left-to-right shunt flow. A median sternotomy was performed, and",
+        "field_path": "/surgeries/0/Type"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The source explicitly characterizes the pressure finding as profound pulmonary hypertension; that diagnostic characterization is absent from the echocardiography result.",
+        "source_quote": "profound pulmonary hypertension characterized by a right ventricular systolic pressure of 95.9 mmHg",
+        "field_path": "/diagnosis tests/2/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "No hoarseness or symptoms of airway obstruction",
+        "source_quote": "The dyspnea had started 2 weeks before admission and gradually worsened until provoked by light exercise.",
+        "explanation": "The symptom detail omits the source’s progression and exertional provocation, which materially describe the worsening dyspnea.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "oxygen saturation of 95%",
+        "source_quote": "After light exercise, her oxygen saturation decreased to 90%.",
+        "explanation": "The examination result includes the resting oxygen saturation but omits the exertional decrease to 90%, a material abnormal measurement.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Large 70-mm diameter saccular aortic arch aneurysm had substantially compressed the periphery of the pulmonary artery and a large thrombus had protruded into the main trunk of the pulmonary artery",
+        "source_quote": "No other CT findings of chronic pulmonary thromboembolism, including abrupt narrowing, obstruction, or calcified thrombi, were found in the pulmonary artery branches ().",
+        "explanation": "The CT result omits the explicit negative finding that there were no other CT signs of chronic pulmonary thromboembolism in the pulmonary artery branches.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The pulmonary hypertension characterization and three material omissions are source-supported. The admission linkage is not a clear error, and the repair’s completion status remains ambiguous at the cutoff."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The admission reason is supported by the note: it states admission for worsening dyspnea and separately describes the aneurysm and associated symptoms. The label does not claim aneurysm treatment was the reason for admission.",
+        "source_quote": "A 76-year-old woman diagnosed with an aortic arch aneurysm was admitted to our hospital for worsening dyspnea on exertion.",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The source confirms that repair was scheduled, but the note ends after a median sternotomy was performed and does not establish whether the repair occurred. The label's surgery entry includes the scheduled procedure and its timing, while its details preserve that a sternotomy was performed; the event status is ambiguous rather than definitively erroneous.",
+        "source_quote": "An urgent aortic repair was scheduled on day 6 of hospitalization.",
+        "field_path": "/surgeries/0/Type"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The echocardiography result includes the pressure measurement but omits the source's diagnostic characterization as profound pulmonary hypertension, which is material.",
+        "source_quote": "profound pulmonary hypertension characterized by a right ventricular systolic pressure of 95.9 mmHg",
+        "field_path": "/diagnosis tests/2/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "No hoarseness or symptoms of airway obstruction",
+        "source_quote": "The dyspnea had started 2 weeks before admission and gradually worsened until provoked by light exercise.",
+        "explanation": "The symptom details omit the material course that dyspnea gradually worsened and was provoked by light exercise.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Blood pressure of 95/70 mmHg, heart rate of 100 beats/min, oxygen saturation of 95%",
+        "source_quote": "After light exercise, her oxygen saturation decreased to 90%.",
+        "explanation": "The examination result omits the source's exertional oxygen desaturation, a material abnormal measurement.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Large 70-mm diameter saccular aortic arch aneurysm had substantially compressed the periphery of the pulmonary artery and a large thrombus had protruded into the main trunk of the pulmonary artery",
+        "source_quote": "No other CT findings of chronic pulmonary thromboembolism, including abrupt narrowing, obstruction, or calcified thrombi, were found in the pulmonary artery branches ().",
+        "explanation": "The CT result omits the explicit negative finding of no other CT findings of chronic pulmonary thromboembolism in the pulmonary artery branches.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/2/result",
+        "label_excerpt": "Preserved left ventricular ejection fraction of 61.5%; decreased left ventricular dimension of 26.6 and 18.2 mm in diastole and systole, respectively; right ventricular systolic pressure of 95.9 mmHg; moderate to severe tricuspid regurgitation; pulmonary stenosis with a peak velocity of 3.84 m/s and a peak pressure gradient of 59.2 mmHg",
+        "source_quote": "Echocardiography did not show intracardiac or extracardiac left-to-right shunt flow.",
+        "explanation": "The echocardiography result omits the explicit negative finding of no intracardiac or extracardiac left-to-right shunt flow.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The admission-reason concern is unsupported. The scheduled repair's completion status is ambiguous at the note cutoff. The echocardiography result omits the source's pulmonary hypertension characterization. Material omissions also include the worsening, exertion-provoked dyspnea course, exertional desaturation, negative CT finding, and negative echocardiographic shunt finding."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "candidate_dispositions": [
+    {
+      "candidate_index": 1,
+      "disposition": "confirmed",
+      "attribution": "uncertain",
+      "explanation": "The label links the old-friend identification to her own image, but the note later says the old friend was next to the children's image. The note also initially says she declared the image an old friend, so the source is internally inconsistent.",
+      "source_quote": "The patient did feel her old friend next to the image of the children.",
+      "field_path": "/symptoms/0/details"
+    }
+  ],
+  "added_findings": [
+    {
+      "field_path": "/patient medical history",
+      "label_excerpt": "",
+      "source_quote": "She was a 69-year-old found to be suffering from Alzheimer's disease.",
+      "explanation": "The note states that the patient had Alzheimer's disease, but the label omits this material history.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    }
+  ],
+  "summary": "The old-friend linkage is discrepant with the note's later qualification, though the note itself also contains an earlier conflicting statement. Alzheimer's disease is a material history omission."
+}

@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "51",
+        "source_quote": "A 51-year-old healthy female arrived at the emergency center",
+        "explanation": "Age matches the source."
+      },
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "acute cerebrovascular accident (CVA) in the cerebellum",
+        "source_quote": "the patient was admitted into the hospital diagnosed with an acute cerebrovascular accident (CVA) in the cerebellum.",
+        "explanation": "The stated admission reason is supported."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "acute ischemia of the left cerebellum mainly in the PICA distribution",
+        "source_quote": "a repeat head CT demonstrated acute ischemia of the left cerebellum mainly in the PICA distribution.",
+        "explanation": "The repeat CT result matches the source."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "patent foramen ovale, two superficial venous thrombi",
+        "source_quote": "Her health history included a patent foramen ovale, two superficial venous thrombi, and a history of depression.",
+        "explanation": "History of depression is omitted from the physiological context despite being explicitly stated as part of the patient's health history.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "suddenly unable to lift herself up",
+        "source_quote": "The patient reported that she had been doing pushups during a televised total body workout and was suddenly unable to lift herself up.",
+        "explanation": "The detail omits the workout/pushups context, which explains what she was doing when the sudden inability occurred; this is a material contextual loss for this symptom.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Two candidate omissions: depression from the stated health history and the activity context for the sudden inability to lift herself. The remaining checks are directly supported."
+  }
+}

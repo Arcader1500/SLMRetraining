@@ -1,0 +1,50 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Recurrent major depressive disorder symptoms not responding to treatment",
+        "source_quote": "was sent to our outpatient department by her family physician due to recurrent major depressive disorder symptoms that were not responding to treatment with paroxetine 20 mg/day for 2 months.",
+        "explanation": "The referral motivation is supported by the note."
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "3 months of evolution",
+        "source_quote": "More recently, the patient presented a recurrence of depressive symptoms with 3 months of evolution",
+        "explanation": "The symptom duration matches the source."
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Depressed mood without suicidal ideation, psychomotor retardation, no hallucinatory activity, no formal or content thought disorder",
+        "source_quote": "She presented depressed mood without suicidal ideation. Psychomotor retardation was present. No hallucinatory activity and formal or content thought disorder was detected",
+        "explanation": "The mental state findings are represented, including the stated negative findings."
+      },
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "No response",
+        "source_quote": "Due to the absence of treatment response, the patient was oriented to our outpatient department.",
+        "explanation": "The lack of response to the recent paroxetine course is supported."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments/0/time",
+        "label_excerpt": "Previous 8 weeks",
+        "source_quote": "Patient has resumed treatment with paroxetine 20 mg/day in the previous 8 weeks by her family physician.",
+        "explanation": "The label reports only the recent 8-week course and omits the distinct earlier paroxetine course: 20 mg/day for 9 months, with full remission after 2 months, followed by a further 6 months of treatment. This material prior treatment and response history is expressible in the treatments section.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/patient medical history",
+        "label_excerpt": "",
+        "source_quote": "Two years before, she suffered a major depressive disorder episode, moderate-to-severe, comorbid with panic disorder",
+        "explanation": "The label omits the prior moderate-to-severe depressive episode and comorbid panic disorder, material history supported by the note and assignable to the medical-history section.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label captures the current referral, symptoms, examination, and recent treatment but omits the distinct prior episode and prior paroxetine course with remission."
+  }
+}

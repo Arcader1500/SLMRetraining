@@ -1,0 +1,47 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label records the childhood head trauma but omits its significant acute and psychological course, which is relevant medical history.",
+        "source_quote": "He experienced severe impaired consciousness for 2 weeks after the head trauma. After discharge he showed a flat affect, which resolved after 3 months.",
+        "field_path": "/patient medical history/physiological context"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "head trauma by traffic accident at the age of 6 years",
+        "source_quote": "A 30-year-old Japanese man with no personal or familial psychiatric history",
+        "explanation": "The label omits the explicitly stated absence of personal and familial psychiatric history, a material psychiatric-history detail.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "head trauma by traffic accident at the age of 6 years",
+        "source_quote": "At 29 years, he experienced a problem with his relationship with his sister and became estranged from his family.",
+        "explanation": "The label omits the significant family estrangement described in the patient's history.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "head trauma by traffic accident at the age of 6 years",
+        "source_quote": "Thus, his behaviors from the ages of 12 to 21 could be interpreted as showing a disinhibited tendency.",
+        "explanation": "The source explicitly characterizes a prolonged period of behavior as potentially disinhibited, a material historical psychiatric-context detail absent from the label.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      }
+    ],
+    "summary": "The label captures the admission reason, age, sex, and childhood head-trauma event, but omits its significant consequences and other material psychiatric and psychosocial history."
+  }
+}

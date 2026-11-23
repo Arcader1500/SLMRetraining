@@ -1,0 +1,38 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The label’s timing is supported: HES was administered after blood loss had reached about 500 ml. The unfinished purpose is not asserted in the label.",
+        "source_quote": "The blood loss had amounted to about 500 ml, so 6% hydroxyethyl starch (HES) 500 ml (Salinhes®, Ilsung pharmaceuticals, Korea) was administrated in order to complement",
+        "field_path": "/treatments/4/time"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/7/result",
+        "label_excerpt": "",
+        "source_quote": "the systolic blood pressure dropped from 90 to 40 mmHg",
+        "explanation": "The label omits a substantial intraoperative systolic blood pressure drop, a material measurement expressible as a medical examination result.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      },
+      {
+        "field_path": "/medical examinations/8/result",
+        "label_excerpt": "",
+        "source_quote": "We suspected damage in great vessels and checked the operative field after consulting the surgeon, but not a significant bleeding was observed.",
+        "explanation": "The label omits the suspected great-vessel injury and the subsequent finding of no significant bleeding. This uncertainty and operative assessment are material context for the blood pressure drop.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      }
+    ],
+    "summary": "The candidate concern is unsupported because the HES timing matches the source. The label materially omits the intraoperative blood pressure drop and the documented assessment for suspected great-vessel injury."
+  },
+  "error": ""
+}

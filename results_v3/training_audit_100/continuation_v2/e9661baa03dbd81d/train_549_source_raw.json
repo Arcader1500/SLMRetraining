@@ -1,0 +1,43 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The posaconazole entry omits that it immediately replaced amphotericin B after the side effects began.",
+        "source_quote": "she was given intravenous amphotericin B to which posaconazole (POS) was immediately replaced, due to the onset of side effects such as hyperglycemia, marked hypothermia and profuse sweating.",
+        "field_path": "/treatments/3/name"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label omits the follow-up MRI finding of disease progression with significant intracranial extension.",
+        "source_quote": "The follow-up magnetic resonance images showed progression of the disease with significant intracranial extension.",
+        "field_path": "/medical examinations"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The label explicitly attributes the severe VII nerve damage to electromyography, so this result is not missing its test attribution.",
+        "source_quote": "The electromyography showed a severe VII nerve damage.",
+        "field_path": "/medical examinations"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Inflammatory tissue was excised from the sinuses for three times",
+        "source_quote": "For three times inflammatory tissue was excised from the sinuses through an Endoscopic Sinus Surgery for microbial eradication and histopathologic examination.",
+        "explanation": "The surgery details omit the stated purposes of microbial eradication and histopathologic examination.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Confirmed the posaconazole sequence and follow-up MRI omissions, and identified the omitted purpose of sinus surgery. Rejected the claim that the electromyography attribution is missing because the label includes it."
+  }
+}

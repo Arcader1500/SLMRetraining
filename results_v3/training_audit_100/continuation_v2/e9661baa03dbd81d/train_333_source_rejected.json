@@ -1,0 +1,64 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label records brain radiation only after the third craniotomy, but omits that the planned radiation was not received after the first and second surgeries.",
+        "source_quote": "His hemiparesis improved and he did not receive brain radiation to the cavity or other intracranial lesions as planned. ... He had surgery for removal of this metastasis and again due to poor social support did not receive radiation.",
+        "field_path": "/treatments"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The surgery details omit the stated hydrocephalus caused by the left cerebellar lesion.",
+        "source_quote": "Imaging again demonstrated progression of his intracranial lesions with compression of the fourth ventricle causing hydrocephalus by the left cerebellar lesion.",
+        "field_path": "/surgeries/2/details"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The discharge summary gives survival duration but omits the expressly stated death.",
+        "source_quote": "Three months later the patient expired (Fig. a).",
+        "field_path": "/discharge/discharge summary"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/treatments/1/reaction to treatment",
+        "label_excerpt": "Significant improvement at 2 month follow up",
+        "source_quote": "At his 2 month follow up, his MRI showed significant improvement in previously resected and previously radiated intracranial masses and no new intracranial masses.",
+        "explanation": "The response is recorded after both brain radiation had been initiated and dabrafenib and trametinib had begun. Assigning the improvement specifically to the latter treatment overstates the source's treatment-response linkage.",
+        "category": "wrong_linkage_value",
+        "classification": "policy_ambiguity",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Pathology confirmed the lesion to represent MBM",
+        "source_quote": "Given his subacute hemiparesis and the presence of a metastatic lesion in the right motor strip, he had an awake craniotomy for removal of this lesion, which was confirmed to represent MBM by pathology. His hemiparesis improved",
+        "explanation": "The label omits the first craniotomy's stated indication and the subsequent improvement in hemiparesis, both material context for this surgery and its outcome.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/treatments/1/details",
+        "label_excerpt": "",
+        "source_quote": "The patient was also evaluated by oncology and it was determined he was not taking his chemotherapeutics as directed.",
+        "explanation": "The label omits the documented nonadherence to chemotherapeutics, which is material context for the later increase in lesion size and salvage treatment.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The three candidate omissions are supported. Additional material omissions include the first surgery's indication and hemiparesis improvement, and later documented chemotherapy nonadherence. The treatment-response linkage is ambiguous because improvement followed both radiation initiation and targeted therapy."
+  },
+  "error": ""
+}

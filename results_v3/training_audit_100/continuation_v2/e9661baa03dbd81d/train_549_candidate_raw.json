@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/treatments/2/reaction to treatment",
+        "label_excerpt": "Side effects such as hyperglycemia, marked hypothermia and profuse sweating",
+        "source_quote": "she was given intravenous amphotericin B to which posaconazole (POS) was immediately replaced, due to the onset of side effects such as hyperglycemia, marked hypothermia and profuse sweating.",
+        "explanation": "The note explicitly links the side effects to amphotericin B and says posaconazole replaced it; the label associates the reaction with amphotericin B."
+      },
+      {
+        "field_path": "/medical examinations/4/result",
+        "label_excerpt": "Marked mucosal thickening of the left maxillary sinus extended to the sphenoid, ethmoid and frontal sinus with moderate inflammatory effusion",
+        "source_quote": "Magnetic resonance imaging of her head revealed a marked mucosal thickening of the left maxillary sinus extended to the sphenoid, ethmoid and frontal sinus with moderate inflammatory effusion",
+        "explanation": "The MRI result preserves the stated extent and inflammatory effusion."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Fragments of mucosa lined by respiratory epithelium with chronic aspecific inflammatory infiltrate and growed fungal species belonging to the Zygomycetes",
+        "source_quote": "The tissue biopsy showed fragments of mucosa lined by respiratory epithelium with chronic aspecific inflammatory infiltrate and growed fungal species belonging to the Zygomycetes.",
+        "explanation": "The biopsy result matches the note's histopathology and fungal finding."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments/3/name",
+        "label_excerpt": "Posaconazole (POS)",
+        "source_quote": "she was given intravenous amphotericin B to which posaconazole (POS) was immediately replaced, due to the onset of side effects such as hyperglycemia, marked hypothermia and profuse sweating.",
+        "explanation": "The label lists posaconazole as a treatment but omits that it replaced amphotericin B immediately due to side effects. The existing treatment entry does not retain this material sequence and rationale.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/medical examinations",
+        "label_excerpt": "",
+        "source_quote": "The follow-up magnetic resonance images showed progression of the disease with significant intracranial extension.",
+        "explanation": "The label includes initial MRI and angiography findings but omits the follow-up MRI finding of disease progression with significant intracranial extension.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/medical examinations",
+        "label_excerpt": "",
+        "source_quote": "The electromyography showed a severe VII nerve damage.",
+        "explanation": "Although the label records severe VII nerve damage, it omits the note's explicit electromyography test attribution; the result is present without its source test.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate material omissions include the posaconazole substitution context and follow-up MRI progression. The label otherwise preserves the quoted test and biopsy findings."
+  }
+}

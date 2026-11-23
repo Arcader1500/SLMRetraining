@@ -1,0 +1,76 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The candidate treats the label’s admission section as asserting an admission. Its reason field states the possible diagnosis, which the note supports; the source does not establish that admission occurred, but this label value alone does not claim it did.",
+        "source_quote": "Preoperative evaluation led to the possible diagnosis of hemangioma of the spleen.",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The imaging result omits the separately stated splenomegaly. This is a material imaging finding in the workup.",
+        "source_quote": "Ultrasonography and Magnetic resonance imaging (MRI) showed a hypoechogenic mass involving the spleen and the splenomegaly",
+        "field_path": "/medical examinations/1/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient information",
+        "label_excerpt": "Patient information records age and sex only.",
+        "source_quote": "An 18-year-old Greek male student presented for screening test in order to get a health certificate.",
+        "explanation": "The source identifies the patient as Greek and a student, but these material demographic details are absent from the label. No existing leaf path is provided for them, so this omission cannot be mapped to a valid schema path.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "rejected",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "four ports were used for the laparoscopy",
+        "source_quote": "Four ports were used: the first 10-mm trocar was inserted at the left margin of the umbilicus. The other three 5-mm operating trocars were positioned as follows: the first trocar was on the median line, 8 cm above the umbilicus, a second operating trocar in a left subcostal position on the axillary line to enable gastroepiploic mobilization,",
+        "explanation": "The details correctly record that four ports were used; the source passage ends mid-description, so no further port placement or completion details can be inferred.",
+        "category": "omission",
+        "classification": "policy_ambiguity",
+        "disposition": "rejected",
+        "attribution": "uncertain"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Capillary hemangioma",
+        "source_quote": "Histologic examination showed a capillary hemangioma of a spleen weighing 850 gr.",
+        "explanation": "The label captures the diagnostic result; the spleen weight is an incidental specimen detail and is not a material omission.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "rejected",
+        "attribution": "inherited"
+      },
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "four ports were used for the laparoscopy",
+        "source_quote": "Pneumoperitoneum was established using a Veress needle to a pressure of 12 mm Hg.",
+        "explanation": "The label already preserves this source-supported operative detail; no finding is warranted.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "rejected",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/discharge/discharge summary",
+        "label_excerpt": "The drain was removed on the second postoperative day and the patient was discharged on the same day",
+        "source_quote": "The patient remains asymptomatic 6 months after the operation.",
+        "explanation": "The label includes the discharge event. The follow-up status is clinically relevant, but no follow-up leaf exists in the supplied schema paths, so it cannot be mapped to a valid existing path.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "rejected",
+        "attribution": "uncertain"
+      }
+    ],
+    "summary": "The first candidate is rejected because the admission reason records a source-supported possible diagnosis and does not itself assert that admission occurred. The imaging omission is confirmed. Projection-drop leads do not establish additional material omissions that can be reported at a valid existing schema path."
+  },
+  "error": ""
+}

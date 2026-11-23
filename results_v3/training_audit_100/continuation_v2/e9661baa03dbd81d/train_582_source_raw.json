@@ -1,0 +1,110 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The label’s normal result is supported for the admission examination; the emergency examination’s abnormal findings are separately represented.",
+        "source_quote": "On neurological examination, she was normal.",
+        "field_path": "/medical examinations/0/result"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "downgraded",
+        "attribution": "projection_loss",
+        "explanation": "The reading belongs to the emergency-room presentation, and that timing is omitted. The projection-drop lead identifies the missing context, but the schema’s available detail field makes this a context-loss ambiguity rather than a clear error.",
+        "source_quote": "Blood pressure had risen to 190/110 mm Hg.",
+        "field_path": "/medical examinations/1/result"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label records the individual test findings but omits the source’s diagnostic interpretation. This conclusion is material and can be represented with the diagnosis-test result.",
+        "source_quote": "Thees findings were compatible with CHS presenting vasogenic edematous change with symptomatic epilepsy.",
+        "field_path": "/diagnosis tests/3/result"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The source explicitly reports discharge without complications after one week of observation, while the discharge section is empty.",
+        "source_quote": "After close observation for one week, she was discharged without any complications.",
+        "field_path": "/discharge"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/admission/0/duration",
+        "label_excerpt": "",
+        "source_quote": "After close observation for one week, she was discharged without any complications.",
+        "explanation": "The initial admission lasted one week before discharge, and that duration is absent from the admission entry. The projection-drop lead is supported by the source.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Pre-treated with aspirin and clopidogrel for 5 days before surgery, performed via a transfemoral approach under local anesthesia, no transient hypotension or bradycardia during the periprocedural period",
+        "source_quote": "Digital subtraction angiography demonstrated total occlusion of the right proximal ICA, 73% stenosis of the left proximal ICA and more than 70% stenosis of both VA orifices (). The patient was pre-treated with aspirin and clopidogrel for 5 days before undergoing stenting at the left proximal ICA and right VA orifices",
+        "explanation": "The label describes the stenting procedure but omits its material indication: severe carotid and vertebral artery disease, including right ICA occlusion. This belongs in the procedure details; it is supported by the angiography findings cited as the reason in the projection-drop lead.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Rejected the supported admission examination finding, downgraded the blood-pressure timing issue to a projection-context ambiguity, and confirmed the omitted diagnostic interpretation and discharge. Added the supported admission duration and material stenting indication."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The normal result is supported for the initial admission examination; the later emergency examination has separately represented abnormal findings.",
+        "source_quote": "On neurological examination, she was normal.",
+        "field_path": "/medical examinations/0/result"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The label does not preserve when this measurement occurred, but it remains a supported blood pressure result. The timing loss is ambiguous in this schema.",
+        "source_quote": "Blood pressure had risen to 190/110 mm Hg.",
+        "field_path": "/medical examinations/1/result"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label records the MRI finding but omits the note's interpretive conclusion, which can be included in an existing diagnosis-test result.",
+        "source_quote": "Thees findings were compatible with CHS presenting vasogenic edematous change with symptomatic epilepsy.",
+        "field_path": "/diagnosis tests/3/result"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label's discharge section is empty despite an explicit discharge after the stenting admission.",
+        "source_quote": "After close observation for one week, she was discharged without any complications.",
+        "field_path": "/discharge"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/diagnosis tests/5/result",
+        "label_excerpt": "Slower waves on the left than on the right hemisphere, no epileptiform discharge",
+        "source_quote": "Thees findings were compatible with CHS presenting vasogenic edematous change with symptomatic epilepsy.",
+        "explanation": "The note's diagnostic interpretation is not included in the EEG result or elsewhere in the label. This interpretation is material and expressible in an existing diagnosis-test result.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The normal examination is supported; the emergency blood pressure timing is an ambiguous context loss. The label omits the stated CHS interpretation and the explicit initial discharge without complications."
+  }
+}

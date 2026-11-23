@@ -1,0 +1,47 @@
+{
+  "case_id": "train:107",
+  "source_review": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The history section is empty, while the source explicitly reports personal and family history relevant to neurological and mental disorders, with OCD as the exception.",
+        "source_quote": "She reported no personal or family history of neither neurological nor mental disorders, other than OCD.",
+        "field_path": "/patient medical history"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The details preserve the severe dermatitis as evidence of the severity of the obsessive-compulsive symptoms; the source does not establish a material linkage error in this wording.",
+        "source_quote": "These symptoms were severe, as evidenced by the fact that she was diagnosed as having a severe dermatitis at both hands and genitals.",
+        "field_path": "/symptoms/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Severe dermatitis at both hands and genitals, difficulty of sleeping due to the need to perform washing during night at scheduled times",
+        "source_quote": "These obsessive-compulsive behaviors caused her to spend considerable time and energy that severely interfered with her daily activities and working status.",
+        "explanation": "The symptom details omit the stated severe interference with daily activities and working status, a material functional impact of the obsessive-compulsive behaviors.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history",
+        "label_excerpt": "",
+        "source_quote": "She did not report a conflictual relationship with her parents and older sister and said that “they always help me to face up my problems.”",
+        "explanation": "The label omits the explicitly described supportive family relationship, relevant psychosocial context that fits the history section.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The history omission is confirmed. The symptom-to-dermatitis linkage concern is rejected because the label reflects the source's stated evidence of severity. The label also omits material functional impact and supportive family context."
+  },
+  "source_evidence_span_repairs": []
+}

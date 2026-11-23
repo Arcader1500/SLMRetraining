@@ -1,0 +1,50 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Headache and vomiting for 20 days, aggravated with decreased vision for 3 days",
+        "source_quote": "because of headache and vomiting for 20 days, which aggravated with decreased vision for 3 days",
+        "explanation": "The label preserves the presenting symptoms and their time course."
+      },
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "16",
+        "source_quote": "A 16-year-old girl",
+        "explanation": "The patient's age is supported."
+      },
+      {
+        "field_path": "/patient information/sex",
+        "label_excerpt": "Female",
+        "source_quote": "A 16-year-old girl",
+        "explanation": "The patient's sex is supported."
+      },
+      {
+        "field_path": "/treatments/1/reaction to treatment",
+        "label_excerpt": "Symptoms still aggravated",
+        "source_quote": "her symptoms still aggravated after symptomatic treatment",
+        "explanation": "The recorded reaction to symptomatic treatment matches the note."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Always been in good health, full-term delivery",
+        "source_quote": "no history of hepatitis or tuberculosis, no history of trauma surgery, no history of food or drug allergy",
+        "explanation": "The history leaf omits several source-stated medical and allergy history negatives that are relevant and fit this history field.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/0/name",
+        "label_excerpt": "Infusion therapy",
+        "source_quote": "no improvement after infusion therapy (cephalosporins) at the local clinic",
+        "explanation": "The treatment entry omits the source-specified cephalosporins, which materially identifies the infusion course.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label is broadly consistent with the presenting symptoms and treatment responses, but it omits relevant medical history negatives and the stated cephalosporin treatment."
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "run_dir": "C:\\Users\\atharva.bedekar\\PycharmProjects\\SLMRetraining\\results_v3\\training_audit_100\\continuation_v2\\e9661baa03dbd81d",
+  "passed": true,
+  "checks": [
+    {
+      "check": "preserved_hashes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "frozen_sample_digest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "frozen_100_unique_and_arms",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "pilot_10_unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "final_run_path",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "run_contract_present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contract_input_sha256",
+      "passed": true,
+      "detail": "input_sha256"
+    },
+    {
+      "check": "contract_prompt_sha256",
+      "passed": true,
+      "detail": "prompt_sha256"
+    },
+    {
+      "check": "contract_schema_sha256",
+      "passed": true,
+      "detail": "schema_sha256"
+    },
+    {
+      "check": "contract_projection_drops_sha256",
+      "passed": true,
+      "detail": "projection_drops_sha256"
+    },
+    {
+      "check": "contract_selection_sha256",
+      "passed": true,
+      "detail": "selection_sha256"
+    },
+    {
+      "check": "contract_run_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "contract_response_schema",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_90_nonpilot_ids",
+      "passed": true,
+      "detail": "rows=90, candidate=90, source=90, expected=90"
+    },
+    {
+      "check": "candidate_schema_and_quotes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "source_review_validation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "unique_complete_dispositions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_evidence_quotes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "ledger_100_ids",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "pilot_csv_record_counts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "findings_csv_consistency",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "combined_summary_run_id",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "optional_artifacts_not_checked": [],
+  "errors": []
+}

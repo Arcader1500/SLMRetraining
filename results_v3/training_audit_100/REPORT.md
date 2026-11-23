@@ -1,5 +1,7 @@
 # Initial training-data audit, 18 November 2026
 
+> Historical pilot report. The [completed 100-case audit](continuation_v2/REPORT.md) supersedes the partial status and next-work list below. Original pilot evidence remains unchanged.
+
 The first training-audit stage is complete: structural and projection checks on
 all 1,325 saved training examples, a frozen 100-case sample, and ten cases with
 both candidate model review and assistant review against the source. **Ninety

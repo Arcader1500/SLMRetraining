@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Elective tracheostomy placement",
+        "source_quote": "presented for elective tracheostomy placement in the setting of supra- and infraglottic stenosis",
+        "explanation": "The stated visit motivation is supported."
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Long history of tracheal stenosis, upper airway obstruction, hypothyroidism, morbid obesity, obstructive sleep apnea requiring CPAP, and hypertension",
+        "source_quote": "Her past medical history was also significant for hypothyroidism, morbid obesity, obstructive sleep apnea requiring continuous positive airway pressure (CPAP), and hypertension.",
+        "explanation": "The listed medical history is supported across the note."
+      },
+      {
+        "field_path": "/symptoms/0/name of symptom",
+        "label_excerpt": "Chronic shortness of breath",
+        "source_quote": "Review of symptoms was significant for chronic shortness of breath",
+        "explanation": "The symptom is explicitly reported."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Emergency tracheostomy",
+        "source_quote": "An emergency tracheostomy was performed to secure her airway.",
+        "explanation": "The procedure occurred two days after discharge from the earlier hospitalization, but is labeled as occurring eight years previously. The note supports the emergency tracheostomy and the eight-year historical period generally, but does not clearly link that timing to the emergency procedure; this may be a chronology/linkage projection error.",
+        "category": "wrong_linkage_value",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/treatments/0/name",
+        "label_excerpt": "Levothyroxine sodium, furoate monohydrate by nasal inhalation, esomeprazole",
+        "source_quote": "Medications included levothyroxine sodium, furoate monohydrate by nasal inhalation and esomeprazole.",
+        "explanation": "The medication list is supported, but combining three medications into one treatment entry may lose distinct drug-course associations; the note does not state a treatment course for these medicines.",
+        "category": "repetition",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/discharge",
+        "label_excerpt": "",
+        "source_quote": "Finally, she was weaned off support and discharged home.",
+        "explanation": "The note explicitly reports discharge home after the two-week ICU stay. The empty discharge section omits this disposition event.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate issues include a potentially mislinked historical time for the emergency tracheostomy and an omitted discharge destination. The bundled medication entry is uncertain because the note supplies a medication list without separate treatment-course details."
+  }
+}

@@ -20,7 +20,12 @@ Source: `AmareshHebbar/clinical-summarizer-sft`, revision `4ca20e0a38cc9235045c9
 
 ## Quality and provenance
 
-Cleaning fixes representation; it does not certify clinical facts or reconstruct cut-off notes. Current labels match literal v2 projection, which can lose supported schedules and diagnoses. The [training audit](../../results_v3/training_audit_100/REPORT.md) separates mechanical drops from verified omissions. No semantic label repair has occurred.
+The frozen 100-case source-consistency audit is complete. Read the
+[completion report](../../results_v3/training_audit_100/continuation_v2/REPORT.md) and
+[parent disagreements](../../results_v3/training_audit_100/continuation_v2/parent_disagreements.json).
+The [earlier handoff](TRAINING_LABEL_AUDIT_HANDOFF.md) preserves continuation history.
+
+Cleaning fixes representation; it does not certify clinical facts or reconstruct cut-off notes. Current labels match literal v2 projection, which can lose supported schedules and diagnoses. The [training audit](../../results_v3/training_audit_100/continuation_v2/REPORT.md) separates mechanical drops from verified omissions. No semantic label repair has occurred.
 
 Exact normalized-note train/development overlap is zero; near duplicates, patient overlap and official-test separation are not established. Keep audited development cases out of training. Corrections require new versioned labels/contracts.
 

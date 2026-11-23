@@ -1,0 +1,66 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Stenting at the left proximal internal carotid artery and right vertebral artery orifices",
+        "source_quote": "undergoing stenting at the left proximal ICA and right VA orifices via a transfemoral approach under local anesthesia",
+        "explanation": "The procedure type and sites are supported."
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Seizure lasted for 40 minutes with stuporous mentality",
+        "source_quote": "generalized tonic-clonic seizure for 40 minutes and stuporous mentality",
+        "explanation": "Duration and associated mental status are supported."
+      },
+      {
+        "field_path": "/diagnosis tests/3/result",
+        "label_excerpt": "High signal intensities in the left hemispheric white matter on FLAIR, without diffusion restriction",
+        "source_quote": "Brain MRI showed high signal intensities in the left hemispheric white matter on FLAIR, without diffusion restriction",
+        "explanation": "The MRI result matches the note."
+      },
+      {
+        "field_path": "/treatments/2/name",
+        "label_excerpt": "Antiepileptics",
+        "source_quote": "After administration of antiepileptics",
+        "explanation": "The note establishes administration, though it is cut off before giving further details."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Normal",
+        "source_quote": "On neurological examination, she was normal.",
+        "explanation": "This result is supported for the initial admission examination; the later emergency examination has abnormal findings separately represented.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/medical examinations/1/result",
+        "label_excerpt": "190/110 mm Hg",
+        "source_quote": "Blood pressure had risen to 190/110 mm Hg.",
+        "explanation": "This reading occurred at the emergency presentation, but the label places it in medical examinations without retaining that timing. Since the schema has no explicit examination-time key, whether this placement loses material context is a projection ambiguity.",
+        "category": "chronology",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/diagnosis tests/3/result",
+        "label_excerpt": "High signal intensities in the left hemispheric white matter on FLAIR, without diffusion restriction",
+        "source_quote": "Thees findings were compatible with CHS presenting vasogenic edematous change with symptomatic epilepsy.",
+        "explanation": "The label omits the source's interpretive conclusion linking these findings to CHS with vasogenic edema and symptomatic epilepsy; this appears material and expressible as a diagnosis test result.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/discharge",
+        "label_excerpt": "",
+        "source_quote": "After close observation for one week, she was discharged without any complications.",
+        "explanation": "The label leaves the discharge section empty despite explicit discharge without complications after one week of observation.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate findings: the normal examination may be incorrectly represented without its admission timing, and the label omits the stated CHS interpretation and initial discharge outcome. The emergency blood pressure's timing is ambiguous in this schema."
+  }
+}

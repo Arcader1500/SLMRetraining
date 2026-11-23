@@ -1,0 +1,107 @@
+[
+  {
+    "case_id": "train:783",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:940",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:653",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:107",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:1476",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:1200",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:150",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:901",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:1427",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:593",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:370",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:248",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:1330",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:277",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:615",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:451",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:412",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:533",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:1091",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:1267",
+    "error": "AssertionError",
+    "detail": ""
+  },
+  {
+    "case_id": "train:1387",
+    "error": "AssertionError",
+    "detail": "('omission_path', '/diagnosis')"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "response": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The source wording does not clearly establish whether fluid-resuscitation refractoriness applies to hypotension, oliguria, or both, so the label’s linkage is ambiguous rather than demonstrably wrong.",
+        "source_quote": "he developed acute abdominal pain refractory to analgesia with hypotension and oliguria refractory to fluid resuscitation.",
+        "field_path": "/symptoms/4/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Operative details omit the pancreatic ascites drained on entry.",
+        "source_quote": "On entry into the abdomen, gross pancreatic ascites of 2.2 l was drained.",
+        "explanation": "The label includes several operative findings and details but omits the substantial 2.2 L of pancreatic ascites drained during the procedure.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate’s concern is a source wording ambiguity, not a confirmed symptom-linkage error. The label also omits the substantial volume of pancreatic ascites drained during surgery."
+  },
+  "error": ""
+}

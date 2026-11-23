@@ -1,0 +1,94 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "two failed kidney transplants",
+        "source_quote": "two failed kidney transplants",
+        "explanation": "The history entry matches the source."
+      },
+      {
+        "field_path": "/medical examinations/1/result",
+        "label_excerpt": "Normal left ventricular ejection fraction with mild left ventricular hypertrophy and diastolic dysfunction",
+        "source_quote": "normal left ventricular ejection fraction with mild left ventricular hypertrophy and diastolic dysfunction",
+        "explanation": "The echocardiogram findings are source-supported."
+      },
+      {
+        "field_path": "/admission/2/reason",
+        "label_excerpt": "Worsening right pleural effusion and severe dyspnea",
+        "source_quote": "worsening right pleural effusion and severe dyspnea",
+        "explanation": "The reason given for the later readmission matches the source."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "Attempts at treating her effusion with frequent hemodialysis and ultrafiltration were unsuccessful as she had frequent and symptomatic hypotension.",
+        "explanation": "The treatment section omits a material attempted treatment and its unsuccessful outcome and limiting hypotension.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "A 24-week course of ombitasvir, paritaprevir, and ritonavir plus dasabuvir was started and was well tolerated. HCV-RNA became negative 2 weeks after discharge. After 2 more weeks, she still had a moderately large effusion on X-ray and was mildly symptomatic. Her dyspnea progressively improved and resolved. Three months after DAA initiation, the right pleural effusion had diminished and completely resolved over the following 6 months [].",
+        "explanation": "The label includes tolerability and HCV-RNA response but omits the stated 24-week course and the subsequent symptom and effusion course, including eventual resolution.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "Insertion of pigtail pleural catheter and intermittent drainage",
+        "source_quote": "A pleural catheter was reinserted, again with repeated drainage of the pleural fluid for the following 3 weeks.",
+        "explanation": "The treatment entry captures the initial catheter but does not represent the later reinsertion and repeated drainage course.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label is largely source-supported, but it omits material treatment attempts and later treatment-course details."
+  },
+  "retry": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "End-stage renal disease (ESRD) secondary to amyloidosis, cirrhosis secondary to HCV genotype 1a infection, two failed kidney transplants, posttransplant diabetes mellitus",
+        "source_quote": "Her medical history included cirrhosis secondary to HCV genotype 1a infection, two failed kidney transplants, and posttransplant diabetes mellitus.",
+        "explanation": "The listed history is supported; ESRD secondary to amyloidosis is also stated in the note’s opening sentence."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Small ascites and splenomegaly but no evidence of parenchymal lung pathology",
+        "source_quote": "Computed tomography scan of the chest and abdomen revealed small ascites and splenomegaly but no evidence of parenchymal lung pathology.",
+        "explanation": "The CT result matches the source."
+      },
+      {
+        "field_path": "/medical examinations/1/result",
+        "label_excerpt": "Normal left ventricular ejection fraction with mild left ventricular hypertrophy and diastolic dysfunction",
+        "source_quote": "Echocardiogram revealed normal left ventricular ejection fraction with mild left ventricular hypertrophy and diastolic dysfunction.",
+        "explanation": "The echocardiogram result matches the source."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "Attempts at treating her effusion with frequent hemodialysis and ultrafiltration were unsuccessful as she had frequent and symptomatic hypotension.",
+        "explanation": "The treatments section omits an important attempted treatment and its reason for failure, both stated in the note.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/1/name",
+        "label_excerpt": "Ombitasvir, paritaprevir, and ritonavir plus dasabuvir",
+        "source_quote": "A 24-week course of ombitasvir, paritaprevir, and ritonavir plus dasabuvir was started and was well tolerated.",
+        "explanation": "The label records the regimen and tolerability but omits the explicitly stated 24-week course duration, a material treatment detail.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label has material treatment omissions: unsuccessful frequent hemodialysis and ultrafiltration due to symptomatic hypotension, and the 24-week duration of the antiviral course."
+  }
+}

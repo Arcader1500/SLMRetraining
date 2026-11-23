@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Incidental finding of cardiomegaly during a routine screening test at her workplace",
+        "source_quote": "with an incidental finding of cardiomegaly during a routine screening test at her workplace",
+        "explanation": "The label accurately captures why she visited."
+      },
+      {
+        "field_path": "/medical examinations/1/result",
+        "label_excerpt": "Ejection fraction of 76.4% with normal cardiac structures including valves",
+        "source_quote": "an ejection fraction of 76.4% with normal cardiac structures including valves",
+        "explanation": "The echocardiography result is supported."
+      },
+      {
+        "field_path": "/medical examinations/3/result",
+        "label_excerpt": "A cystic mass in the right cardiophrenic angle with homogeneous low attenuation and pericardial effusion without definite pericardial thickening or enhancement",
+        "source_quote": "A cystic mass in the right cardiophrenic angle having homogeneous low attenuation and pericardial effusion without definite pericardial thickening or enhancement",
+        "explanation": "The CT findings are accurately represented."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/medical examinations",
+        "label_excerpt": "",
+        "source_quote": "However, it showed a moderate pericardial effusion, and the pericardial effusion size was measured at five different points.",
+        "explanation": "The label omits the material echocardiography finding of moderate effusion and its measured dimensions, including the largest measurement. These findings are expressible under medical examinations.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/surgeries",
+        "label_excerpt": "",
+        "source_quote": "The cystic mass was removed and pericardiotomy and pericardial biopsy were performed. After pericardiotomy, massive amount of milky fluid about 950 cc was drained.",
+        "explanation": "The surgery entry includes the thoracotomy and closure details but omits the mass removal, pericardiotomy, biopsy, and substantial fluid drainage, which are material procedure details.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "No improvement in cardiac size after 3 months",
+        "source_quote": "It was decided to treat the patient with oral diuretics. After 3 months, chest X-ray did not show any improvement in cardiac size",
+        "explanation": "The note establishes the treatment followed by an unchanged X-ray, but does not explicitly attribute that result to the diuretics. The reaction field may imply a treatment response, so this is a temporal and causal attribution ambiguity.",
+        "category": "negation_uncertainty",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "The label contains supported visit and examination facts, but omits important echocardiography and operative details. Its treatment reaction wording may also imply a causal response the note does not explicitly establish."
+  }
+}

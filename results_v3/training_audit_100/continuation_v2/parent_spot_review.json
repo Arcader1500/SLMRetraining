@@ -1,0 +1,88 @@
+{
+  "reviewer": "parent assistant source-consistency spot review; not clinician adjudication",
+  "cases_reviewed": 10,
+  "coverage": "Full note and label read for first ten remaining interleaved cases; observations are not exhaustive.",
+  "validation": "All quoted source spans and provided label excerpts/section paths checked exactly.",
+  "observations": [
+    {
+      "case_id": "train:1480",
+      "assessment": "material_omission",
+      "field_path": "/medical examinations",
+      "label_excerpt": "",
+      "source_quote": "En route to the ED via ambulance, the patient was noted to have a pulse in the thirties and a systolic blood pressure of 50 mmHg.",
+      "explanation": "Arrival vital signs do not retain these earlier severe measurements. Medication-context coverage also needs review; current label only names nifedipine."
+    },
+    {
+      "case_id": "train:263",
+      "assessment": "material_omission",
+      "field_path": "/treatments",
+      "label_excerpt": "",
+      "source_quote": "One gram of hydrocortisone IV was infused and 20 mg prednisone was prescribed per day for 5 days.",
+      "explanation": "Prednisone frequency and five-day duration are absent. Chronic sinvastatin treatment is also absent; preserve source spelling rather than medical correction."
+    },
+    {
+      "case_id": "train:1298",
+      "assessment": "material_omission",
+      "field_path": "/diagnosis tests",
+      "label_excerpt": "",
+      "source_quote": "The differential of this mass included a left vagal schwannoma or a lymph node in proximity to the vagus nerve.",
+      "explanation": "MRI differential is absent; preserve differential status. Bipolar disorder is also absent from broad history; serial MRI advice and declined surgery require coverage review."
+    },
+    {
+      "case_id": "train:149",
+      "assessment": "rejected_subagent_flag",
+      "field_path": "/diagnosis tests/4/result",
+      "label_excerpt": "Right multicystic dysplastic kidney in the fetus with no other abnormality",
+      "source_quote": "The anatomy scan however showed a right multicystic dysplastic kidney in the fetus with no other abnormality ().",
+      "explanation": "The subagent claimed this was absent, but the full label retains it verbatim. Reject the omission flag. Source-qualified suspected MODY-5 is a separate possible coverage omission."
+    },
+    {
+      "case_id": "train:1220",
+      "assessment": "represented_elsewhere",
+      "field_path": "/medical examinations/0/result",
+      "label_excerpt": "Splenomegaly detected",
+      "source_quote": "Physical examination revealed splenomegaly, although the patient was asymptomatic.",
+      "explanation": "Splenomegaly is retained in examination and symptoms; do not count its absence from the imaging result alone. Six-month asymptomatic follow-up is a separate possible omission."
+    },
+    {
+      "case_id": "train:333",
+      "assessment": "supported_later_event",
+      "field_path": "/treatments/0/time",
+      "label_excerpt": "After the third craniotomy",
+      "source_quote": "At his 2 month follow up, his MRI showed significant improvement in previously resected and previously radiated intracranial masses and no new intracranial masses.",
+      "explanation": "Later imaging confirms previously radiated lesions, so earlier nonreceipt does not prove third-craniotomy radiation was never performed. Omission of earlier nonreceipt/nonadherence and death is a separate issue."
+    },
+    {
+      "case_id": "train:783",
+      "assessment": "material_omission",
+      "field_path": "/diagnosis tests/0/result",
+      "label_excerpt": "well-defined mass in the left parapharyngeal space",
+      "source_quote": "Radiologic features were consistent with glomus vagale.",
+      "explanation": "Qualified radiologic impression is missing; do not upgrade to definitive tissue diagnosis."
+    },
+    {
+      "case_id": "train:725",
+      "assessment": "material_omission",
+      "field_path": "/symptoms/0/details",
+      "label_excerpt": "No pain radiating to arms or legs",
+      "source_quote": "The pain arose each night 2 h after she went to sleep, and it was described as unbearable.",
+      "explanation": "Early nightly timing and severity are absent. Later mainly-at-night wording does not fully preserve the earlier pattern."
+    },
+    {
+      "case_id": "train:1184",
+      "assessment": "material_omission",
+      "field_path": "/treatments/1/dosage",
+      "label_excerpt": "800 mg",
+      "source_quote": "Ibuprofen 800 mg 1–3/daily for musculoskeletal pain.",
+      "explanation": "Ibuprofen frequency is absent. Prior conservative weight-loss course and situs inversus also warrant coverage review; do not infer completed sleeve surgery beyond cutoff."
+    },
+    {
+      "case_id": "train:940",
+      "assessment": "rejected_subagent_flag",
+      "field_path": "/treatments/1/time",
+      "label_excerpt": "Planned but not completed due to acute presentation",
+      "source_quote": "plans were made to proceed with laparoscopic cystgastrostomy.",
+      "explanation": "Whole-label treatment entry explicitly preserves noncompletion; surgery array does not list cystgastrostomy. Reject the invented surgery-path allegation."
+    }
+  ]
+}

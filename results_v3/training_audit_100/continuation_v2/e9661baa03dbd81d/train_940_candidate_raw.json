@@ -1,0 +1,36 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/symptoms/4/details",
+        "label_excerpt": "Refractory to fluid resuscitation",
+        "source_quote": "hypotension and oliguria refractory to fluid resuscitation.",
+        "explanation": "The source attaches fluid-resuscitation refractoriness to oliguria, while the label attaches it to hypotension. This is a material association mismatch."
+      },
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "laparoscopic washout, necrosectomy, distal pancreaticosplenectomy, cholecystectomy",
+        "source_quote": "underwent emergent laparoscopic washout, necrosectomy distal pancreaticosplenectomy with cholecystectomy.",
+        "explanation": "The source reports these procedures as performed; the label represents them as surgery, consistent with the operative narrative."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Development of a pseudocyst up to 11 cm in maximal diameter",
+        "source_quote": "interval CT showed development of a pseudocyst of up to 11 cm in maximal diameter.",
+        "explanation": "The interval CT result and its size are accurately represented."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms/4/details",
+        "label_excerpt": "Refractory to fluid resuscitation",
+        "source_quote": "hypotension and oliguria refractory to fluid resuscitation.",
+        "explanation": "The label associates refractory fluid resuscitation with hypotension, but the note places “refractory to fluid resuscitation” after the combined phrase “hypotension and oliguria,” leaving the specific association unclear. Treat as an attribution ambiguity rather than a certain error.",
+        "category": "wrong_linkage_value",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "One material candidate finding: the fluid-resuscitation refractoriness may be linked to the wrong symptom, though the source wording is ambiguous. The operative procedures and interval CT result are supported."
+  }
+}

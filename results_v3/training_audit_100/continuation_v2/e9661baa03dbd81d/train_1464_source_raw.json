@@ -1,0 +1,40 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The source ties medication irregularity to the later fluphenazine decanoate treatment; it does not describe irregularity as a reaction to olanzapine.",
+        "source_quote": "She was treated with olanzapine and later with fluphenazine decanoate when she was irregular with medications.",
+        "field_path": "/treatments/0/reaction to treatment"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The note establishes longstanding psychiatric treatment for schizophrenia, a material history fact that can be recorded under physiological context. The candidate path is retained as requested.",
+        "source_quote": "She was a known case of schizophrenia on treatment under psychiatry for the past 10 years.",
+        "field_path": "/treatments"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label records the elevated pressure but omits the source’s qualifying statement that the rest of the CSF study was normal.",
+        "source_quote": "The subsequent CSF study was normal except for the elevated opening pressure of 35 cm of water.",
+        "field_path": "/diagnosis tests/1/result"
+      },
+      {
+        "candidate_index": 4,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The differential diagnoses are documented, but the existing diagnosis-test paths do not provide an appropriate place for differential diagnoses. The candidate’s proposed mapping to diagnosis-test information would misstate their role.",
+        "source_quote": "Differential diagnosis considered included meningitis, cortical venous thrombosis, demyelinating illness with optic neuritis, and idiopathic intracranial hypertension.",
+        "field_path": "/diagnosis tests"
+      }
+    ],
+    "added_findings": [],
+    "summary": "Confirmed the unsupported medication linkage and the omissions of schizophrenia history and the qualifying CSF result. Rejected the differential-diagnosis omission because no appropriate existing schema path represents it."
+  }
+}

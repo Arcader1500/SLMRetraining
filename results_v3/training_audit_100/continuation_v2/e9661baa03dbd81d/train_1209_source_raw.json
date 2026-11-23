@@ -1,0 +1,43 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label omits the echocardiogram’s moderate pericardial effusion and its measurements, including the largest measurement of 1.7 cm.",
+        "source_quote": "However, it showed a moderate pericardial effusion, and the pericardial effusion size was measured at five different points. The diameters were 0.9 cm at the anterior site of the right ventricle, 1.5 cm at the posterior site of the left ventricle, 0.4 cm at the lateral site of the left ventricle, 0.6 cm at the right atrial site, 1.7 cm at the apex site which was the largest.",
+        "field_path": "/medical examinations"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The surgery entry omits the mass removal, pericardiotomy, biopsy, and drainage of about 950 cc of milky fluid.",
+        "source_quote": "The cystic mass was removed and pericardiotomy and pericardial biopsy were performed. After pericardiotomy, massive amount of milky fluid about 950 cc was drained.",
+        "field_path": "/surgeries"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The label places the unchanged X-ray result in the treatment-reaction field, which can imply a response to diuretics. The note gives the treatment and subsequent X-ray result, but does not explicitly attribute the result to the treatment; temporal sequence alone does not establish causation.",
+        "source_quote": "It was decided to treat the patient with oral diuretics. After 3 months, chest X-ray did not show any improvement in cardiac size",
+        "field_path": "/treatments/0/reaction to treatment"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Pericarditis with pericardial effusion",
+        "source_quote": "The initial diagnosis was pericarditis with pericardial effusion. It was decided to treat the patient with oral diuretics.",
+        "explanation": "The note establishes a visit and an initial diagnosis but does not establish inpatient admission. Representing the diagnosis under admission asserts an event not supported by the note.",
+        "category": "inappropriate_role",
+        "classification": "clear_error",
+        "disposition": "confirmed",
+        "attribution": "inherited"
+      }
+    ],
+    "summary": "The echocardiography and operative omissions are material. The treatment-reaction wording is temporally supported but leaves causation unclear. The label also represents the initial diagnosis as an admission without evidence that an admission occurred."
+  }
+}

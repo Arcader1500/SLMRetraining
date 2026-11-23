@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Detailed examination for conjunctival tumor in right eye",
+        "source_quote": "was referred to our department for a detailed examination.",
+        "explanation": "The examination referral is supported."
+      },
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Conjunctival tumor resection and amnion transplantation",
+        "source_quote": "he underwent conjunctival tumor resection and amnion transplantation without mitomycin C in his right eye.",
+        "explanation": "The stated reason is a source-supported procedure, although admission itself is not explicitly established."
+      },
+      {
+        "field_path": "/treatments/1/reaction to treatment",
+        "label_excerpt": "Complete and rapid regression of the scleral melting after 2 weeks",
+        "source_quote": "After 2 weeks, there was complete and rapid regression of the scleral melting",
+        "explanation": "The reported response and timing are supported."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/surgeries/1/Type",
+        "label_excerpt": "Urgent scleral patch transplant surgery and free conjunctival autograft transplantation",
+        "source_quote": "preparing for an urgent scleral patch transplant surgery. The peripheral conjunctiva contact with the melting site was removed, and free conjunctival autograft transplantation was also performed.",
+        "explanation": "The note says the patch transplant was being prepared for, but does not say it was performed; only the free conjunctival autograft is explicitly reported as performed. Listing the patch transplant as a surgery overstates its status.",
+        "category": "event_status",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/surgeries/1/time",
+        "label_excerpt": "4 months after initial surgery",
+        "source_quote": "The postoperative course had been good until a scleral ulcer emerged at a nasal ischemic necrotizing lesion 4 months later",
+        "explanation": "Four months anchors the ulcer emergence and postoperative examination, not the patch transplant. The patch transplant is described only as being prepared for, so this assigns a procedure timing not established by the note.",
+        "category": "chronology",
+        "classification": "clear_error"
+      }
+    ],
+    "summary": "The label is mostly supported, but it states an urgent scleral patch transplant as performed and assigns it a time that the note does not establish."
+  }
+}

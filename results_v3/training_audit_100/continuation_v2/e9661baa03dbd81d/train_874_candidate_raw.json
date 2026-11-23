@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Sudden collapse and unconsciousness",
+        "source_quote": "suddenly experienced a collapse for the first time and was reportedly unconscious for around 10 minutes.",
+        "explanation": "The visit motivation captures the presenting collapse and loss of consciousness."
+      },
+      {
+        "field_path": "/medical examinations/1/result",
+        "label_excerpt": "87% on room air",
+        "source_quote": "Her oxygen saturation was 87% on room air.",
+        "explanation": "The examination leaf preserves the reported oxygen saturation."
+      },
+      {
+        "field_path": "/diagnosis tests/2/result",
+        "label_excerpt": "No venous clot",
+        "source_quote": "A venous duplex scanning for proximal deep vein thrombosis was performed that revealed no venous clot.",
+        "explanation": "The result matches the duplex finding."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments/1/time",
+        "label_excerpt": "Following the initial two days of continuous intravenous heparin",
+        "source_quote": "followed by low molecular weight heparin for the next three days",
+        "explanation": "The note specifies that low molecular weight heparin continued for the next three days; the label omits this material duration.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/2/dosage",
+        "label_excerpt": "2.5 mg daily",
+        "source_quote": "Retrospectively, we found that the patient had been taking olanzapine 2.5 mg daily for the previous two years for her insomnia. Olanzapine was then discontinued on the first day of hospitalization.",
+        "explanation": "The dose and frequency describe the prior olanzapine regimen, not the discontinuation action. Assigning them to that treatment leaf makes the treatment-dose linkage misleading.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      }
+    ],
+    "summary": "The label is broadly supported but omits the stated three-day duration for low molecular weight heparin and links olanzapine's prior dose to its discontinuation."
+  }
+}

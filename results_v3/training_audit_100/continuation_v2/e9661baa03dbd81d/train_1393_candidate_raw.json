@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "44",
+        "source_quote": "A 44-year-old Japanese male",
+        "explanation": "The age matches the source."
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Pain occasionally radiated to the inside of ipsilateral ear and lower jaw, not made worse by swallowing",
+        "source_quote": "The pain was not made worse by swallowing, but it was exacerbated when he rotated his neck and opened his mouth widely.",
+        "explanation": "The label preserves the swallowing qualifier and radiation is also source-supported elsewhere in the note."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Hypoechoic change of the outside wall of the carotid artery, slight outward extension of the vessel, mild thickening of the carotid wall, and mild narrowing of the vessel lumen",
+        "source_quote": "An ultrasound revealed a hypoechoic change of the outside wall of the carotid artery (Fig. ), slight outward extension of the vessel, mild thickening of the carotid wall, and mild narrowing of the vessel lumen (Fig. ).",
+        "explanation": "The ultrasound findings listed in the label are stated in the source."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments/0/dosage",
+        "label_excerpt": "60 mg",
+        "source_quote": "60 mg of loxoprofen sodium taken three times a day.",
+        "explanation": "The label retains the dose but omits the source-stated frequency for this treatment course, which is material treatment detail.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Pain occasionally radiated to the inside of ipsilateral ear and lower jaw, not made worse by swallowing",
+        "source_quote": "The pain was constant and moderate in intensity and occasionally radiated to the inside of his ipsilateral ear and lower jaw. The pain was not made worse by swallowing, but it was exacerbated when he rotated his neck and opened his mouth widely.",
+        "explanation": "The symptom details omit the pain's constant, moderate character and its exacerbation with neck rotation and wide mouth opening; these are material symptom qualifiers.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Migraines",
+        "source_quote": "He had had six episodes of this neck pain in the previous 5 years but had not visited his doctor because it had disappeared within a week each time.",
+        "explanation": "The physiological context captures migraines but omits the history of six prior episodes of the same neck pain over five years, a relevant recurrent symptom history.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate material omissions include the medication frequency, symptom qualifiers, and recurrent neck-pain history."
+  }
+}

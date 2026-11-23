@@ -1,0 +1,61 @@
+{
+  "candidate_dispositions": [
+    {
+      "candidate_index": 1,
+      "disposition": "rejected",
+      "attribution": "uncertain",
+      "explanation": "The emergency tracheostomy followed the earlier hospitalization described as occurring eight years previously, so the label’s timing is supported by the note’s sequence.",
+      "source_quote": "Eight years previously, the patient presented for an elective bilateral tubal ligation.",
+      "field_path": "/surgeries/0/Type"
+    },
+    {
+      "candidate_index": 2,
+      "disposition": "rejected",
+      "attribution": "uncertain",
+      "explanation": "The source gives a medication list without separate treatment courses; grouping those listed medicines in one entry does not establish a source inconsistency.",
+      "source_quote": "Medications included levothyroxine sodium, furoate monohydrate by nasal inhalation and esomeprazole.",
+      "field_path": "/treatments/0/name"
+    },
+    {
+      "candidate_index": 3,
+      "disposition": "confirmed",
+      "attribution": "projection_loss",
+      "explanation": "The note explicitly states that she was discharged home after the ICU stay, and the label has no discharge information.",
+      "source_quote": "Finally, she was weaned off support and discharged home.",
+      "field_path": "/discharge"
+    }
+  ],
+  "added_findings": [
+    {
+      "field_path": "/patient medical history/physiological context",
+      "label_excerpt": "",
+      "source_quote": "Allergies to latex and cephalosporins were reported.",
+      "explanation": "The label omits the explicitly reported allergies, which are material history.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/surgeries",
+      "label_excerpt": "",
+      "source_quote": "The patient remained with the tracheostomy for the next 7 months before she was successfully decannulated.",
+      "explanation": "The label omits the duration and outcome of the emergency tracheostomy, a material part of that procedure’s course.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    },
+    {
+      "field_path": "/diagnosis tests",
+      "label_excerpt": "",
+      "source_quote": "in the setting of supra- and infraglottic stenosis",
+      "explanation": "The note identifies supra- and infraglottic stenosis as the setting for the current elective tracheostomy, but the diagnosis tests section is empty.",
+      "category": "omission",
+      "classification": "material_omission",
+      "disposition": "confirmed",
+      "attribution": "projection_loss"
+    }
+  ],
+  "summary": "The chronology and grouped medication-list concerns are unsupported. The explicit home discharge omission is confirmed. Material omissions include reported allergies, the emergency tracheostomy’s seven-month course and decannulation, and the stenosis associated with the current procedure."
+}

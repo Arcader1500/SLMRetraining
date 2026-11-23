@@ -1,0 +1,94 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The note explicitly says ACS was suspected and compartment pressures were measured, but ends before stating the pressure result. The label's wording can preserve the stated diagnostic conclusion; assigning it as the measurement result is ambiguous rather than a clear error.",
+        "source_quote": "Surgical team was notified for suspected ACS of the forearm and the compartment pressures were measured with a Stryker (Kal",
+        "field_path": "/diagnosis tests/1/result"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The source specifies the infusion solution, start time, and rate, none of which appear in the treatment entry. These are material course details.",
+        "source_quote": "A 5% dextrose-0.45% saline infusion was started at 10 p.m. that evening at a rate of 100 mL/hour.",
+        "field_path": "/treatments/0/name"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The source records a palpable radial pulse during the limb examination, but the label omits it. This is material in the context of suspected forearm ACS.",
+        "source_quote": "Her radial pulse was palpable.",
+        "field_path": "/medical examinations"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/3/result",
+        "label_excerpt": "Indeterminate",
+        "source_quote": "Patient's sensory exam was indeterminate due to her baseline dementia.",
+        "explanation": "The label retains the indeterminate sensory result but omits its stated reason, baseline dementia, which qualifies interpretation of the examination.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/0/time",
+        "label_excerpt": "",
+        "source_quote": "On the second day of admission, patient failed a dysphagia screening",
+        "explanation": "The source anchors the failed screening to the second day of admission, but the diagnosis-test entry omits that timing.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The infusion-course and radial-pulse omissions are supported. The sensory-exam qualification and screening time are additional source-supported omissions. The suspected ACS wording is supported by the note, though its linkage specifically to the pressure measurement remains ambiguous."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The note states that ACS was suspected and compartment pressures were measured, but it cuts off before giving any measurement result. The label states the suspected diagnosis as the result, so that linkage is ambiguous rather than disproven.",
+        "source_quote": "Surgical team was notified for suspected ACS of the forearm and the compartment pressures were measured with a Stryker (Kal",
+        "field_path": "/diagnosis tests/1/result"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label records fluid hydration but omits the explicitly stated infusion solution, start time, and rate. These are material treatment course details.",
+        "source_quote": "A 5% dextrose-0.45% saline infusion was started at 10 p.m. that evening at a rate of 100 mL/hour.",
+        "field_path": "/treatments/0/name"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The source reports a palpable radial pulse during the examination of the affected forearm; this material examination finding is absent from the label.",
+        "source_quote": "Her radial pulse was palpable.",
+        "field_path": "/medical examinations"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/3/result",
+        "label_excerpt": "Indeterminate",
+        "source_quote": "Patient's sensory exam was indeterminate due to her baseline dementia.",
+        "explanation": "The label omits the stated reason the sensory exam was indeterminate. This qualification is material context for interpreting the examination.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Confirmed material omissions include the infusion details, the palpable radial pulse, and the stated reason for the indeterminate sensory exam. The diagnosis-test result linkage is ambiguous because the source cuts off before reporting the pressure measurement result."
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Patient fell into a coma after lumbar puncture",
+        "source_quote": "Two hours later after 30 ml CSF release, the man had complained of progressively worsening dizziness and headache, and then he fell into a coma",
+        "explanation": "The note supports the coma after lumbar puncture, with dizziness and headache occurring first; the label’s separate symptom entry records this sequence."
+      },
+      {
+        "field_path": "/treatments/2/reaction to treatment",
+        "label_excerpt": "Gradual restoration of consciousness",
+        "source_quote": "By then, the patient’s consciousness had been gradually restored",
+        "explanation": "The label captures the documented improvement after Trendelenburg positioning and hydration."
+      },
+      {
+        "field_path": "/diagnosis tests/2/result",
+        "label_excerpt": "Skin flap sank, no obvious midline shift",
+        "source_quote": "A following brain CT in three days had showed skin flap sank, but no obvious midline shift had been found",
+        "explanation": "Both CT findings are represented in the result."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/treatments/0/reaction to treatment",
+        "label_excerpt": "Six months later, GOS of 5, ADL of 18",
+        "source_quote": "Six months later, the young man got a Glasgow Outcome Scale (GOS) of 5, Activity of Daily Living Scale (ADL) of 18",
+        "explanation": "The source reports the outcome measures six months later, but does not attribute them as a reaction to the emergent hematoma exclusion. The label places them in the treatment-reaction field, creating an unsupported causal linkage.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/diagnosis tests/3/result",
+        "label_excerpt": "Complete resolution of hydrocephalus",
+        "source_quote": "Five years later, repeated brain CT has revealed complete resolution of",
+        "explanation": "The note is cut off after “of” and does not establish what was completely resolved. Naming hydrocephalus as the resolved finding completes the truncated result without source support.",
+        "category": "unsupported_addition",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Treatment after TBI",
+        "source_quote": "was sent and treated to our hospital in two hours after the injury",
+        "explanation": "This supports hospital presentation and treatment, but does not establish admission. The label asserts an admission reason without explicit admission evidence.",
+        "category": "event_status",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Progressive hydrocephalus",
+        "source_quote": "the CT had disclosed a progressive hydrocephalus compared with three months ago",
+        "explanation": "The source supports the hydrocephalus finding, but the label omits that it was progressive compared with the CT three months earlier. This loses a material temporal comparison.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/2/time",
+        "label_excerpt": "After lumbar puncture",
+        "source_quote": "Thus, the patient was placed in the Trendelenburg position and given sufficient hydration immediately",
+        "explanation": "The label gives only a broad relation to the lumbar puncture and omits that both interventions were given immediately after the suspected paradoxical herniation symptoms. That timing is material to the documented treatment course.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate findings include an unsupported outcome-to-treatment linkage, completion of a cut-off CT result, an admission assertion without explicit admission evidence, and omitted source-supported qualifiers. The note’s truncation makes the final CT result incomplete."
+  }
+}

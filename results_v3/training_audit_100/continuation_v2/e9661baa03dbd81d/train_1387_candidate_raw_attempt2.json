@@ -1,0 +1,42 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Diagnosed with combined T and B cell deficiencies at the age of 11",
+        "source_quote": "Systematically, she was diagnosed with combined T and B cell deficiencies by the immunologist at the age of 11.",
+        "explanation": "The history entry is directly supported."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "CMV inclusion bodies",
+        "source_quote": "HPE of the colon showed CMV inclusion bodies.",
+        "explanation": "The pathology result is attributed to the colon HPE, as in the note."
+      },
+      {
+        "field_path": "/treatments/4/time",
+        "label_excerpt": "Completed 6 weeks of treatment 3 months prior to presentation of ophthalmic symptoms",
+        "source_quote": "She completed 6 weeks of intravenous ganciclovir 3 months prior to presentation of her ophthalmic symptoms.",
+        "explanation": "The course duration and timing are supported."
+      },
+      {
+        "field_path": "/treatments/5/reaction to treatment",
+        "label_excerpt": "Good response noted after 2 weeks",
+        "source_quote": "IV ganciclovir 75mg (6mg/kg) 12 hourly was started and good response was noted after 2 weeks of therapy ().",
+        "explanation": "The response is explicitly reported after the IV ganciclovir was started."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Visual acuity was 1/60 in the right eye and 6/18 in the left eye",
+        "source_quote": "At presentation, her visual acuity was 1/60 in the right eye and 6/18 in the left eye.",
+        "explanation": "This details leaf includes the acuity, but omits the separately reported right-eye RAPD and the material bilateral retinal examination findings (vitritis, optic-disc pallor, macular scar/retinitis, and left-eye granular retinitis). Those findings are present in the note and fit the schema's symptom/examination representation; the omission is material to the documented ophthalmic presentation.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "One material omission candidate: the label captures visual acuity but leaves out the documented RAPD and substantial retinal examination findings."
+  }
+}

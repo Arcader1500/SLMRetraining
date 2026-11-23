@@ -1,0 +1,50 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Upper gastrointestinal bleed",
+        "source_quote": "was admitted for evaluation of an upper gastrointestinal bleed",
+        "explanation": "The admission reason is explicitly stated."
+      },
+      {
+        "field_path": "/medical examinations/1/result",
+        "label_excerpt": "midventricular hypertrophy measuring 20 mm in the interventricular septum",
+        "source_quote": "midventricular hypertrophy measuring 20 mm in the interventricular septum",
+        "explanation": "The echocardiography result matches the note."
+      },
+      {
+        "field_path": "/medical examinations/2/result",
+        "label_excerpt": "systolic midcavity gradient of 41 mmHg",
+        "source_quote": "a systolic midcavity gradient of 41 mmHg",
+        "explanation": "The Doppler result matches the note."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "transmural myocardial infarction of the apical segments",
+        "source_quote": "a transmural myocardial infarction of the apical segments",
+        "explanation": "The CMR finding is explicitly reported."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "suspected prior myocardial infarction",
+        "source_quote": "An abnormal electrocardiogram noted several years later suggested a prior myocardial infarction, retrospectively hypothesized incurred perioperatively.",
+        "explanation": "The source identifies the infarction as suggested by a later ECG and retrospectively hypothesized to have occurred perioperatively. “Suspected prior myocardial infarction” loses both the evidentiary and temporal qualification, making this a possible projection loss.",
+        "category": "negation_uncertainty",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "increased T1 relaxation time",
+        "source_quote": "Native T1 mapping revealed an increased T1 relaxation time (",
+        "explanation": "The note ends mid-parenthesis after this result; the label records only the fact established before the cutoff and does not complete the unfinished measurement.",
+        "category": "chronology",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "One possible projection loss is the label's shortened qualification of the suspected prior infarction. The T1 result is supported before the cutoff; no unsupported completion is evident."
+  }
+}

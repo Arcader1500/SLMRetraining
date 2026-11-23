@@ -1,0 +1,53 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The cited tumor debulking was historical and occurred at another facility when she was 18; the source identifies the current encounter as an initial orthopedic examination and does not establish an admission. The admission reason therefore mislinks the historical procedure to an admission.",
+        "source_quote": "At another treatment facility, when the patient was 18 years of age, she underwent debulking of a tumor from the right buttock",
+        "field_path": "/admission/0/reason"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The surgery details retain transfusion and follow-up information but omit the serious intraoperative hemorrhage, hypotension, and acute kidney failure that led to the transfusion. These complications are material source-supported history.",
+        "source_quote": "which was complicated with a very profuse intraoperative hemorrhage resulting in a severe hypotension and acute kidney failure requiring 8 units of blood for stabilization.",
+        "field_path": "/surgeries/0/details"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "inherited",
+        "explanation": "The source describes committee consensus for preoperative embolization and a future resection, but the treatment name does not preserve that these procedures were selected as the planned course. The status qualification is material.",
+        "source_quote": "The treatment consensus opted for preoperative embolization",
+        "field_path": "/treatments/0/name"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Large, firm, amorphous, fluctuant, soft tissue mass measuring 60 × 50 × 30 cm",
+        "source_quote": "that originated from the lumbar region and extended to the gluteal fold and overhanging from the posterior aspect of her thigh",
+        "explanation": "The examination result omits the mass's substantial extent and origin, which help characterize the unusually large lesion and are expressible in the existing result field.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Intermediate signal on both T1- and T2-weighted images, several fluid collections, multiple serpiginous flow voids, mass did not infiltrate the underlying gluteal musculature",
+        "source_quote": "The extension of the mass was unable to be determined with certainty because portions of it remained outside of the field of view.",
+        "explanation": "The MRI result omits the material uncertainty about the lesion's extent caused by portions lying outside the field of view.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "All three candidate findings are supported. The label also omits material examination detail about the mass's extent and MRI uncertainty about its full extension."
+  }
+}

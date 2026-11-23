@@ -1,0 +1,94 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Chest pain and associated symptoms",
+        "source_quote": "The patient was admitted from the ED to the CF ward",
+        "explanation": "The note explicitly confirms admission, and the label's reason is consistent with the presentation."
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "CF (Cystic Fibrosis), heart and lung transplantation in 1997",
+        "source_quote": "A 19 year old female with CF who had a heart and lung transplantation in 1997",
+        "explanation": "The label accurately records the stated medical history and transplant year."
+      },
+      {
+        "field_path": "/medical examinations/2/result",
+        "label_excerpt": "Repeat ECG showed sinus tachycardia with T wave inversion in leads I, aVL, V2-V4, but no ST changes or Q waves.",
+        "source_quote": "The repeat ECG showed sinus tachycardia with T wave inversion in leads I, aVL, V2-V4, but no ST changes or Q waves.",
+        "explanation": "The repeat ECG result is accurately represented."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/diagnosis tests",
+        "label_excerpt": "",
+        "source_quote": "The troponin I level (taken approximately 30 hours after the onset of chest pain) was 10,801.",
+        "explanation": "The label records the troponin value but omits the source's clinically relevant timing anchor linking the test to chest-pain onset.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Associated with intermittent paraesthesia, pallor and coldness in left hand",
+        "source_quote": "The chest pain was worse on deep inspiration but was not positional or exacerbated by movement.",
+        "explanation": "The symptom details omit the stated inspiratory aggravation and the explicit absence of positional or movement aggravation. These modifiers may be material to the symptom description.",
+        "category": "omission",
+        "classification": "policy_ambiguity"
+      },
+      {
+        "field_path": "/diagnosis tests",
+        "label_excerpt": "",
+        "source_quote": "A coronary multi-slice computed tomography (MSCT) was not performed as it is not used as an investigation of acute MI in inpatients at St James’s University Hospital.",
+        "explanation": "The label lists completed diagnostic tests but omits the explicitly documented non-performance of coronary MSCT and its stated reason, which may be relevant to the diagnostic workup. The source note ends mid-sentence, so later course details cannot be assessed.",
+        "category": "omission",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "The label is consistent with the supplied source for the checks shown. Candidate omissions concern troponin timing, chest-pain modifiers, and the documented non-performance of coronary MSCT."
+  },
+  "retry": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "CF (Cystic Fibrosis), heart and lung transplantation in 1997",
+        "source_quote": "A 19 year old female with CF who had a heart and lung transplantation in 1997",
+        "explanation": "The label preserves the stated CF history and transplant year."
+      },
+      {
+        "field_path": "/medical examinations/2/result",
+        "label_excerpt": "Repeat ECG showed sinus tachycardia with T wave inversion in leads I, aVL, V2-V4, but no ST changes or Q waves.",
+        "source_quote": "The repeat ECG showed sinus tachycardia with T wave inversion in leads I, aVL, V2-V4, but no ST changes or Q waves.",
+        "explanation": "The label accurately represents the repeat ECG findings."
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "No pulmonary embolus (PE) and no vascular abnormalities",
+        "source_quote": "A computed tomography pulmonary angiogram (CTPA) the following day showed no pulmonary embolus (PE) and no vascular abnormalities.",
+        "explanation": "The CTPA result is supported by the note."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "10,801",
+        "source_quote": "The troponin I level (taken approximately 30 hours after the onset of chest pain) was 10,801.",
+        "explanation": "The label omits the stated timing of this clinically important test result relative to symptom onset.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Associated with intermittent paraesthesia, pallor and coldness in left hand",
+        "source_quote": "The chest pain was worse on deep inspiration but was not positional or exacerbated by movement.",
+        "explanation": "The symptom details omit the note's explicit pain modifiers and negatives, which are material characterizations of the chest pain.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label is largely supported, but it omits the troponin timing and explicit chest-pain modifiers."
+  }
+}

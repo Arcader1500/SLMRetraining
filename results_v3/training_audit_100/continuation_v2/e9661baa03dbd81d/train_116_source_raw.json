@@ -1,0 +1,65 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The label’s location is supported by the source’s specific term “right homonymous hemianopsia”; the candidate quote does not include that directional detail.",
+        "source_quote": "the patient experienced mild right homonymous hemianopsia",
+        "field_path": "/symptoms/3/location"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The cited source states the neck measurement, but the diagnosis-test result may summarize the angiogram finding without preserving every measurement. This is not a material omission under the supplied calibration.",
+        "source_quote": "with a wide neck (greater than 3.75 mm)",
+        "field_path": "/diagnosis tests/1/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/surgeries/0/details",
+        "label_excerpt": "Stent size 4 mm x 14 mm placed in the PICA",
+        "source_quote": "A neurvas pipeline flex stent 4 mm x 14 mm was placed in the PICA to divert flow from the left PICA aneurysm.",
+        "explanation": "The source explicitly states the stent was placed to divert flow from the aneurysm; that treatment purpose is material and absent from the surgery details.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "No acute abnormalities",
+        "source_quote": "A noncontrast CT scan of the brain was performed in the ED to rule out stroke and found no acute abnormalities.",
+        "explanation": "The label preserves the result but omits that the CT was performed in the ED to rule out stroke. The test context is material to interpreting the investigation.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/1/test",
+        "label_excerpt": "Cerebral angiogram",
+        "source_quote": "The cerebral angiogram was scheduled and took place a month later.",
+        "explanation": "The source anchors the angiogram about a month after the MRI/MRA, a material sequence and timing detail omitted from the diagnosis-test entry.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/discharge/discharge summary",
+        "label_excerpt": "Discharged with complaints of seeing dark shadows in her right visual field in both eyes on post procedure day two",
+        "source_quote": "and was referred for follow up with ophthalmology",
+        "explanation": "The source explicitly documents an ophthalmology follow-up referral at discharge, a material disposition detail missing from the discharge summary.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Both candidate findings are rejected: the right-sided hemianopsia supports the label’s location, and omitting the exact neck measurement from the test result is not material. Added four source-supported omissions concerning the stent purpose, CT indication, angiogram timing, and ophthalmology referral."
+  }
+}

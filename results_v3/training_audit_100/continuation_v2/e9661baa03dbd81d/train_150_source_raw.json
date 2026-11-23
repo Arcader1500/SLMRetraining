@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The label attributes the old-friend identification to her own image, while the note says the patient felt her old friend next to the image of the children. This is a mismatched linkage.",
+        "source_quote": "The patient did feel her old friend next to the image of the children.",
+        "field_path": "/symptoms/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "",
+        "source_quote": "She was a 69-year-old found to be suffering from Alzheimer's disease.",
+        "explanation": "The note explicitly identifies Alzheimer's disease as part of the patient's context, but the label omits it from the appropriate medical history field. The diagnosis and treatment projection drops are not independently supported by the note as specific tests or treatments.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate's linkage error is confirmed. Alzheimer's disease is a material source-supported omission from the patient's physiological context."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "uncertain",
+        "explanation": "The label links the old-friend identification to her own image, but the note says only that she felt her old friend next to the image of the children; the note does not establish that she mistook her own image for the old friend.",
+        "source_quote": "The patient did feel her old friend next to the image of the children.",
+        "field_path": "/symptoms/0/details"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "{}",
+        "source_quote": "She was a 69-year-old found to be suffering from Alzheimer's disease.",
+        "explanation": "The note identifies Alzheimer's disease as the patient's condition, but the label omits this material history.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "uncertain"
+      }
+    ],
+    "summary": "Confirmed the candidate's wrong linkage. Added the omitted Alzheimer's disease under physiological context, the schema path for patient history."
+  }
+}

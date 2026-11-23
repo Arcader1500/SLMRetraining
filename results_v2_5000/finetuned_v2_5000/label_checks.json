@@ -1,0 +1,12 @@
+{
+  "train": {
+    "rows": 5000,
+    "min_supervised_tokens": 54,
+    "max_total_tokens": 1651
+  },
+  "validation": {
+    "rows": 100,
+    "min_supervised_tokens": 245,
+    "max_total_tokens": 1355
+  }
+}

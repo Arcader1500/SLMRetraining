@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Surgical evaluation of a newly diagnosed hepatic mass",
+        "source_quote": "presented for a surgical evaluation of a newly diagnosed hepatic mass",
+        "explanation": "The visit motivation matches the stated reason for presentation."
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Recently developed symptoms of early satiety and anorexia",
+        "source_quote": "Recently, she had developed symptoms of early satiety and anorexia.",
+        "explanation": "The label preserves the recent symptoms stated in the note."
+      },
+      {
+        "field_path": "/diagnosis tests/4/result",
+        "label_excerpt": "No evidence for metastatic disease",
+        "source_quote": "Staging chest and brain CT demonstrated no evidence for metastatic disease.",
+        "explanation": "The result is supported by the staging CT description."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Left hepatic lobectomy",
+        "source_quote": "A left hepatic lobectomy was performed with",
+        "explanation": "The note ends mid-sentence after “with,” so completion of the lobectomy is not established; labeling it as performed goes beyond the cutoff.",
+        "category": "event_status",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/symptoms/0/time",
+        "label_excerpt": "18 months",
+        "source_quote": "approximately 18 months of occasional and intermittent episodes of epigastric discomfort",
+        "explanation": "The duration is captured, but the label omits that the discomfort was occasional and intermittent, material qualifiers of the reported symptom pattern.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Elevated alkaline phosphatase and alpha fetoprotein",
+        "source_quote": "Laboratory evaluation was remarkable for moderate elevations of alkaline phosphatase and alpha fetoprotein.",
+        "explanation": "The label omits the stated degree of elevation (“moderate”), which qualifies both laboratory findings.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "Candidate issues concern the cutoff at the operative statement and omitted qualifiers for the symptom pattern and laboratory elevations."
+  }
+}

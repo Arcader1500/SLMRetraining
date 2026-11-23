@@ -1,0 +1,19 @@
+{
+  "checked_at_utc": "2026-11-19T06:36:09.326075+00:00",
+  "session": "clinical-v2-5000",
+  "remote_root": "/content/clinical_v2_5000",
+  "pipeline_pid": 1939,
+  "pipeline_exit_code": null,
+  "pipeline_status": {
+    "stage": "01_baseline_eval",
+    "status": "running",
+    "completed": [
+      "00_prepare_dataset"
+    ],
+    "updated_at_utc": "2026-11-19T06:24:51.424331+00:00"
+  },
+  "temporary_remote_token_removed": true,
+  "baseline_generations": 19,
+  "finetuned_generations": 0,
+  "processes": "1939 /usr/bin/python3 -u scripts/run_v2_5000_pipeline.py\n2442 /usr/bin/python3 -u scripts/run_colab_notebook.py notebooks/v2_5000/01_baseline_eval.ipynb\n"
+}

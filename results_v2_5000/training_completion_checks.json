@@ -1,0 +1,19 @@
+{
+  "training_complete": true,
+  "epochs": 3,
+  "global_step": 1875,
+  "train_examples": 5000,
+  "validation_examples": 100,
+  "downloaded_artifact_hashes_verified": 39,
+  "final_archive_sha256": "4e16de32dbc03d7fca72ef16d628c1eefb69fab3f4080e672550a27e5ff86e89",
+  "selected_adapter_tensors": 252,
+  "adapter_tensors_finite": true,
+  "adapter_matches_selected_checkpoint_exactly": true,
+  "executed_training_code_cells": 4,
+  "notebook_errors": 0,
+  "baseline_cases_preserved": 100,
+  "fresh_finetuned_generations": 0,
+  "luna_calls": 0,
+  "best_eval_loss": 0.4552387595176697,
+  "note": "No extraction generation or judge evaluation; stopped after training per latest user instruction. train_runtime is the resumed segment; raw train_loss uses Trainer resume accounting and is not a full-run average."
+}

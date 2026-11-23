@@ -1,0 +1,44 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "8 months old",
+        "source_quote": "An 8-month-old girl weighing 6 kg",
+        "explanation": "The label’s age matches the referral age stated in the note."
+      },
+      {
+        "field_path": "/surgeries/0/time",
+        "label_excerpt": "When the patient was 9 months old",
+        "source_quote": "She underwent Glenn anastomosis with TAPVC repair when she was 9 months old.",
+        "explanation": "The procedure timing matches the note."
+      },
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Pulmonary venous obstruction, Glenn dysfunction, and pulmonary hypertension",
+        "source_quote": "Her echocardiography revealed pulmonary venous obstruction, Glenn dysfunction, and pulmonary hypertension.",
+        "explanation": "The result is attributed to the same examination and matches the note."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/symptoms",
+        "label_excerpt": "",
+        "source_quote": "On admission, she was gasping with bradycardia and severe metabolic acidosis.",
+        "explanation": "The symptoms section omits these serious admission findings, which are material clinical facts expressible in the schema.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments/3/name",
+        "label_excerpt": "Stenting the pulmonary veins",
+        "source_quote": "Initially, a 7 x 12-mm Palmaz Blue balloon-expandable peripheral stent (Cordis Endovascular, Warren, NJ) was placed across the stenosis on the right pulmonary vein",
+        "explanation": "The source establishes right pulmonary vein stenting, while left-sided stenting was still being considered in the cut-off note. The plural name may imply that both veins were stented; because the reaction text specifies the right-sided placement and the source first describes a plan to stent the pulmonary veins, this is a status/wording ambiguity.",
+        "category": "event_status",
+        "classification": "policy_ambiguity"
+      }
+    ],
+    "summary": "The label matches several source details but omits serious admission findings and uses an ambiguous plural description for stenting when only right-sided placement is established."
+  }
+}

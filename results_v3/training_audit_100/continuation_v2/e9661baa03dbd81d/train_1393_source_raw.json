@@ -1,0 +1,53 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label records the dose but omits the stated frequency for loxoprofen.",
+        "source_quote": "60 mg of loxoprofen sodium taken three times a day.",
+        "field_path": "/treatments/0/dosage"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The symptom details omit the pain's constant, moderate character and its exacerbation with neck rotation and wide mouth opening.",
+        "source_quote": "The pain was constant and moderate in intensity and occasionally radiated to the inside of his ipsilateral ear and lower jaw. The pain was not made worse by swallowing, but it was exacerbated when he rotated his neck and opened his mouth widely.",
+        "field_path": "/symptoms/0/details"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The history of recurrent neck pain is relevant, but physiological context is intended for personal and family history. This is symptom history and belongs with symptom details.",
+        "source_quote": "He had had six episodes of this neck pain in the previous 5 years but had not visited his doctor because it had disappeared within a week each time.",
+        "field_path": "/patient medical history/physiological context"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Pain occasionally radiated to the inside of ipsilateral ear and lower jaw, not made worse by swallowing",
+        "source_quote": "He had had six episodes of this neck pain in the previous 5 years but had not visited his doctor because it had disappeared within a week each time.",
+        "explanation": "The label omits the history of six prior episodes of the same neck pain, which is material recurrent-symptom context.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/1/result",
+        "label_excerpt": "Hypoechoic change of the outside wall of the carotid artery, slight outward extension of the vessel, mild thickening of the carotid wall, and mild narrowing of the vessel lumen",
+        "source_quote": "The maximum intima-media thickness of the right carotid bifurcation decreased in 2 weeks (",
+        "explanation": "The source establishes a decrease in maximum intima-media thickness over two weeks, but the label omits this material ultrasound follow-up result. The note cuts off after the opening parenthesis, so no further detail is inferred.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The medication frequency and symptom qualifiers are material omissions. The recurrent pain history is also omitted but belongs under symptom details, not medical history. The source establishes a two-week decrease in carotid intima-media thickness that is absent from the ultrasound result."
+  }
+}

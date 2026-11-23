@@ -1,0 +1,114 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The illness followed ingestion of several medications, including nifedipine, but the note does not establish that nifedipine alone caused the reaction. The label records the episode timing without explicitly claiming independent causation by nifedipine.",
+        "source_quote": "Approximately one hour after ingesting his medications the patient became acutely ill and presented to the ED as described.",
+        "field_path": "/treatments/0/reaction to treatment"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label lists nifedipine but omits other medications the patient explicitly took that afternoon. These medication exposures are relevant to the acute episode.",
+        "source_quote": "The patient filled his new prescription and took all of the medications that afternoon except for metoprolol which he believed he was supposed to discontinue.",
+        "field_path": "/treatments"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label records arrival vital signs but omits the markedly abnormal pulse and systolic pressure measured during ambulance transport.",
+        "source_quote": "En route to the ED via ambulance, the patient was noted to have a pulse in the thirties and a systolic blood pressure of 50 mmHg.",
+        "field_path": "/medical examinations"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient information/weight",
+        "label_excerpt": "",
+        "source_quote": "His body weight was 87.3 kg, nearly 10 kg above his baseline weight.",
+        "explanation": "The label omits the patient's stated weight and substantial increase above baseline, a material finding in the context of his renal disease and recent pulmonary edema.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Primary hypertension, type-2 diabetes mellitus, coronary artery disease, end-stage renal disease with a renal transplant five years ago",
+        "source_quote": "A review of the records revealed that the patient was recently hospitalized for a hypertensive emergency and pulmonary edema resultant from declining renal function.",
+        "explanation": "The physiological context omits a recent hospitalization for hypertensive emergency and pulmonary edema associated with declining renal function, which is material to this ED presentation.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The label captures the arrival vital signs and core history, but omits the severe pre-arrival measurements, other medications taken, the substantial weight increase, and recent hypertensive emergency with pulmonary edema. The recorded treatment reaction is temporally associated with the medication ingestion, but the source does not establish nifedipine as the individual cause."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The note places acute illness after ingesting multiple medications but does not attribute it specifically to nifedipine. The label’s reaction is therefore insufficiently drug-specific, though temporal association supports retaining it with uncertainty.",
+        "source_quote": "Approximately one hour after ingesting his medications the patient became acutely ill and presented to the ED as described.",
+        "field_path": "/treatments/0/reaction to treatment"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "rejected",
+        "attribution": "uncertain",
+        "explanation": "The source does not establish that the patient took doxazosin, hydralazine, or metolazone that afternoon. It says they were his current regimen and that he took all of the medications except metoprolol; it does not identify which medications were included in that statement. The asserted additional exposures are not sufficiently established as material omissions.",
+        "source_quote": "The patient filled his new prescription and took all of the medications that afternoon except for metoprolol which he believed he was supposed to discontinue.",
+        "field_path": "/treatments"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The label has arrival vital signs but omits the markedly abnormal pre-arrival pulse and systolic pressure documented en route by ambulance.",
+        "source_quote": "En route to the ED via ambulance, the patient was noted to have a pulse in the thirties and a systolic blood pressure of 50 mmHg.",
+        "field_path": "/medical examinations"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/medical examinations/0/result",
+        "label_excerpt": "Blood pressure of 79/35, pulse of 47, oral temperature of 35.3°C, respiratory rate of 18, oxygen saturation of 100 percent",
+        "source_quote": "His body weight was 87.3 kg, nearly 10 kg above his baseline weight.",
+        "explanation": "The label omits the substantially elevated weight relative to baseline, a material measurement relevant to the described presentation.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Patient felt he 'was going to die'",
+        "source_quote": "The patient was alert and oriented with a GCS of 15 but had difficulty communicating his symptoms secondary to his dizziness and feeling profoundly ill",
+        "explanation": "The label retains the patient's quoted statement but omits the source's description that he felt profoundly ill, a material severity detail of the acute symptoms.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/discharge",
+        "label_excerpt": "",
+        "source_quote": "Upon discharge, the patient was told to follow up with his nephrologist to redress his hypertension.",
+        "explanation": "The label omits the documented follow-up instruction after the patient's recent hospitalization. This is a source-supported disposition-related detail expressible in the existing discharge section.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate correctly identifies the uncertain drug-specific reaction and the omitted pre-arrival vital signs. The asserted additional medication exposures are not individually established by the note. Material omissions include the elevated weight, profound-illness symptom detail, and the nephrology follow-up instruction after the recent hospitalization."
+  }
+}

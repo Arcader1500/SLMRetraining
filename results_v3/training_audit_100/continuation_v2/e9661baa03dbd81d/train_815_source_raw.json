@@ -1,0 +1,53 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The CT result includes the lung nodules but omits the source's material interpretation that they might be metastases.",
+        "source_quote": "The lung nodules were considered to be possible metastatic lesions.",
+        "field_path": "/medical examinations/1/result"
+      },
+      {
+        "candidate_index": 2,
+        "disposition": "downgraded",
+        "attribution": "uncertain",
+        "explanation": "The source describes medication the patient was already taking, while the label also records hypertension in medical history. Listing the medication under treatments is a role ambiguity; the label does not explicitly say it was initiated during this encounter.",
+        "source_quote": "He was taking medication for hypertension",
+        "field_path": "/treatments/0/name"
+      },
+      {
+        "candidate_index": 3,
+        "disposition": "rejected",
+        "attribution": "inherited",
+        "explanation": "The label's encapsulation detail is supported by the preceding histology sentence, so this is not an unsupported addition.",
+        "source_quote": "Histological examination showed a totally encapsulated neoplasm traversed by an irregular thin or thick band-like fibrotic tissue.",
+        "field_path": "/diagnosis tests/0/result"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Hypertension",
+        "source_quote": "He was taking medication for hypertension and had no history of thyroid disease, or family history of thyroid disease.",
+        "explanation": "The label omits the patient's negative thyroid history and negative family history of thyroid disease, both source-stated history relevant to the thyroid mass.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Totally encapsulated neoplasm with a biphasic pattern composed of predominantly solid dense groups of spindle cells and small quantities of intermixed epithelial components",
+        "source_quote": "The uniform plump spindle cells were arranged in tight streaming short fascicular patterns with occasional microcystic changes",
+        "explanation": "The diagnosis-test result omits the source's specific spindle-cell morphology and microcystic changes, which are material histological findings.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The pulmonary nodule interpretation is materially omitted, and the medication's treatment role is ambiguous. The encapsulation detail is supported elsewhere in the note. Material omissions include the negative thyroid and family history and additional histological morphology."
+  }
+}

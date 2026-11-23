@@ -1,0 +1,52 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/visit motivation",
+        "label_excerpt": "Worsening dyspnea on exertion",
+        "source_quote": "for worsening dyspnea on exertion",
+        "explanation": "The visit motivation is supported by the note."
+      },
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Treatment for aortic arch aneurysm and associated symptoms",
+        "source_quote": "was admitted to our hospital for worsening dyspnea on exertion",
+        "explanation": "Admission for worsening dyspnea is supported; treatment for the aneurysm is separately described."
+      },
+      {
+        "field_path": "/surgeries/0/time",
+        "label_excerpt": "Day 6 of hospitalization",
+        "source_quote": "scheduled on day 6 of hospitalization",
+        "explanation": "The timing is supported, and the label preserves that repair was scheduled."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Treatment for aortic arch aneurysm and associated symptoms",
+        "source_quote": "was admitted to our hospital for worsening dyspnea on exertion",
+        "explanation": "The source states admission for worsening dyspnea, not admission for aneurysm treatment. The treatment plan is described separately, so the stated admission reason adds an unsupported linkage.",
+        "category": "wrong_linkage_value",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/surgeries/0/Type",
+        "label_excerpt": "Urgent aortic repair",
+        "source_quote": "An urgent aortic repair was scheduled on day 6 of hospitalization.",
+        "explanation": "The note establishes that repair was scheduled, but the cutoff only reaches “A median sternotomy was performed, and” and does not establish that the repair itself occurred. Calling it a surgery without preserving its scheduled status overstates event status.",
+        "category": "event_status",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/diagnosis tests/2/result",
+        "label_excerpt": "right ventricular systolic pressure of 95.9 mmHg",
+        "source_quote": "profound pulmonary hypertension characterized by a right ventricular systolic pressure of 95.9 mmHg",
+        "explanation": "The result omits the source’s characterization of the pressure as profound pulmonary hypertension, a material diagnostic finding.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label is mostly source-supported, but the admission reason links the admission to treatment rather than the stated symptom, and the scheduled repair is presented without preserving its unconfirmed status. The echocardiography result also omits the stated pulmonary hypertension characterization."
+  }
+}

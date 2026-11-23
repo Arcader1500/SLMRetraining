@@ -1,0 +1,72 @@
+{
+  "initial": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The HUT test’s specific ECG findings and reproduction of symptoms are absent from the label, though the existing diagnosis-test result field can express them.",
+        "source_quote": "where the ECG showed severe sinus bradycardia and sinoatrial (SA) exit block. He reproduced and confirmed all the clinical symptoms of an abdominal gripe, nausea, and sweating.",
+        "field_path": "/diagnosis tests"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Felt nauseous and dizzy before the first episode, had unheralded fall, experienced abdominal gripe and nausea before the second episode, and had myoclonic jerks during the third episode",
+        "source_quote": "The day of the admission, he has been out the whole day and had not eaten or taken the usual amount of liquids",
+        "explanation": "The label omits the substantially reduced food and liquid intake on the day of the episodes, a potentially relevant precipitating context for the loss of consciousness.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Aortic valve replacement with a metallic valve a few years ago",
+        "source_quote": "He did not have any other cardiac risk factors and was fairly active.",
+        "explanation": "The label omits the source’s relevant cardiac-risk context and activity level, which fit the existing physiological-context field.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "The candidate HUT omission is confirmed. The label also omits the source-stated reduced intake on the day of the episodes and relevant cardiac-risk/activity context."
+  },
+  "retry": {
+    "candidate_dispositions": [
+      {
+        "candidate_index": 1,
+        "disposition": "confirmed",
+        "attribution": "projection_loss",
+        "explanation": "The diagnosis-test result omits the HUT-associated ECG findings and reproduction of the clinical symptoms, both stated in the source and expressible in that result field.",
+        "source_quote": "where the ECG showed severe sinus bradycardia and sinoatrial (SA) exit block. He reproduced and confirmed all the clinical symptoms of an abdominal gripe, nausea, and sweating.",
+        "field_path": "/diagnosis tests"
+      }
+    ],
+    "added_findings": [
+      {
+        "field_path": "/patient medical history/physiological context",
+        "label_excerpt": "Aortic valve replacement with a metallic valve a few years ago",
+        "source_quote": "did not have any other cardiac risk factors and was fairly active",
+        "explanation": "The label omits the source's relevant statement that he had no other cardiac risk factors and was fairly active.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      },
+      {
+        "field_path": "/symptoms/0/details",
+        "label_excerpt": "Felt nauseous and dizzy before the first episode, had unheralded fall, experienced abdominal gripe and nausea before the second episode, and had myoclonic jerks during the third episode",
+        "source_quote": "At night, he went to operate the water pump and had an unheralded fall and recovered spontaneously.",
+        "explanation": "The symptom details omit the water-pump context and spontaneous recovery after the unheralded fall, which are source-supported contextual details of an episode.",
+        "category": "omission",
+        "classification": "material_omission",
+        "disposition": "confirmed",
+        "attribution": "projection_loss"
+      }
+    ],
+    "summary": "Confirmed the HUT-result omission and identified two additional source-supported omissions: relevant activity/cardiac-risk history and episode context and recovery."
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "initial": {
+    "decision": "issues_found",
+    "supported_checks": [
+      {
+        "field_path": "/patient information/age",
+        "label_excerpt": "39",
+        "source_quote": "39-year-old male",
+        "explanation": "The age matches the source."
+      },
+      {
+        "field_path": "/diagnosis tests/0/result",
+        "label_excerpt": "Apical periodontitis in teeth 14 and 15 compatible with an abscess",
+        "source_quote": "there was apical periodontitis in teeth 14 and 15 that was compatible with an abscess.",
+        "explanation": "The radiographic finding and teeth match."
+      },
+      {
+        "field_path": "/treatments/4/dosage",
+        "label_excerpt": "Amoxicillin (875 mg) and clavulanate potassium (125 mg)",
+        "source_quote": "amoxicillin (875 mg) and clavulanate potassium (125 mg) for 7 days",
+        "explanation": "The stated doses match the later prescription."
+      }
+    ],
+    "findings": [
+      {
+        "field_path": "/admission/0/reason",
+        "label_excerpt": "Diagnosis and treatment of endodontic abscess",
+        "source_quote": "The patient, a Caucasian, 39-year-old male, entered the emergency department at the State University of Ponta Grossa",
+        "explanation": "The note establishes an emergency-department presentation, but does not establish admission. The admission entry therefore assigns an unsupported inpatient role.",
+        "category": "inappropriate_role",
+        "classification": "clear_error"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "diclofenac potassium (50 mg for 2 days) and amoxicillin (500 mg for 7 days)",
+        "explanation": "The label records the first two medication doses but omits their source-stated course durations, material treatment details expressible in the treatment schema.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "amoxicillin (875 mg) and clavulanate potassium (125 mg) for 7 days and dipyrone sodium (500 mg) for 2 days.",
+        "explanation": "The later medication entries preserve doses but omit the stated 7-day and 2-day durations.",
+        "category": "omission",
+        "classification": "material_omission"
+      },
+      {
+        "field_path": "/treatments",
+        "label_excerpt": "",
+        "source_quote": "After 8 days, as no decrease in the lesion was observed and the patient complained of pain, another exchange of intracanal medication was carried out.",
+        "explanation": "The label omits the lack of lesion decrease and continued pain after the initial treatment, a material treatment-course response and reason for further care.",
+        "category": "omission",
+        "classification": "material_omission"
+      }
+    ],
+    "summary": "The label contains supported demographic, diagnostic, and medication-dose details, but it asserts admission without source evidence and omits medication durations and a material treatment response."
+  }
+}
